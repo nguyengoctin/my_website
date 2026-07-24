@@ -1,0 +1,13 @@
+// ==========================================================
+// Phối màu Bổ túc (Complementary): Xanh Hải Quân & Cam San Hô
+// ==========================================================
+
+// 1. Cam San Hô (#FF6B5B) - Thay thế cho màu Xanh dương gốc (#2d96bd)
+$global-link-hover-color: #FF6B5B;
+$single-link-color: #FF6B5B;
+$single-link-color-dark: #FF6B5B;
+$pagination-link-color: #FF6B5B;
+
+// 2. Xanh Hải Quân (#1A2B4C) - Thay thế cho màu Hồng gốc (#ef3982)
+$single-link-hover-color: #1A2B4C;
+$single-link-hover-color-dark: #64b5f6; // Biến thể sáng của Navy khi hover ở Dark Mode

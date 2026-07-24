@@ -1,0 +1,128 @@
+/* Replicating Exact Typography & Layout Alignment from huyenchip.com */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap");
+
+/* 1. Header Navigation Alignment - Căn thẳng hàng 850px cho tất cả các trang */
+#header-desktop .header-wrapper {
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* 2. Container chính cho tất cả các trang (.page) bao gồm Home, Post (Single), Tags, Categories */
+.page {
+    max-width: 850px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+}
+
+.page.home .home-profile.chip-huyen-style {
+    text-align: left !important;
+    padding: 30px 0 10px 0 !important;
+    font-family: "Lora", Georgia, serif !important;
+}
+
+/* Container chứa cả Avatar lẫn Text */
+.chip-huyen-style .profile-container {
+    display: block !important; /* Dùng block để float: right hoạt động đúng dòng chữ */
+    width: 100% !important;
+}
+
+/* 3. Avatar Float Right ôm sát bên phải các đoạn văn */
+.chip-huyen-style .profile-avatar-wrapper {
+    float: right !important;
+    width: 32% !important;
+    max-width: 250px !important;
+    margin: 0 0 1rem 2rem !important;
+}
+
+.page.home .home-profile .home-avatar {
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+.page.home .home-profile .home-avatar img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+    display: block !important;
+}
+
+/* 4. Font chữ Lora và khoảng cách chuẩn 100% Jekyll/HuyenChip */
+.chip-huyen-style .profile-text {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: var(--global-font-color, #111111) !important;
+}
+
+.chip-huyen-style .bio-content p {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: var(--global-font-color, #111111) !important;
+    margin-bottom: 15px !important;
+}
+
+[theme=dark] .chip-huyen-style .profile-text,
+[theme=dark] .chip-huyen-style .bio-content p {
+    color: #ffffff !important;
+}
+
+.chip-huyen-style .bio-content strong {
+    font-weight: 700 !important;
+}
+
+.chip-huyen-style .bio-content a {
+    color: #4d74eb !important;
+    text-decoration: none !important;
+}
+
+.chip-huyen-style .bio-content a:hover {
+    color: var(--global-font-color, #111111) !important;
+    text-decoration: underline !important;
+}
+
+[theme=dark] .chip-huyen-style .bio-content a:hover {
+    color: #ffffff !important;
+}
+
+.chip-huyen-style .bio-content a:visited {
+    color: #1337a6 !important;
+}
+
+.chip-huyen-style .social-links {
+    margin-top: 20px !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    clear: both !important;
+}
+
+/* Responsive khi màn hình nhỏ (mobile) */
+@media screen and (max-width: 600px) {
+    .chip-huyen-style .profile-avatar-wrapper {
+        float: none !important;
+        max-width: 60% !important;
+        margin: 0 auto 1.5rem auto !important;
+        display: block !important;
+    }
+}
+
+/* 6. Tự động xuống dòng (Word Wrap) cho các thẻ codeblock dạng text (Prompt), 
+   giữ nguyên cuộn ngang cho code lập trình (Python, JS, SQL, HTML...) */
+.highlight .language-text pre,
+.highlight .language-text code,
+.code-block pre.language-text,
+.code-block code.language-text {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: auto !important;
+}

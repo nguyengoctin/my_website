@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình - Nguyen Ngoc Tin</title><meta name="Description" content="Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách Web Dev with an AI Sidekick."><meta property="og:url" content="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/">
+  <meta property="og:site_name" content="Nguyen Ngoc Tin">
+  <meta property="og:title" content="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình">
+  <meta property="og:description" content="Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách Web Dev with an AI Sidekick.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-24T00:00:00+00:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Prompt Engineering">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Cheat Sheet">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình">
+  <meta name="twitter:description" content="Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách Web Dev with an AI Sidekick.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" /><link rel="prev" href="http://localhost:1313/posts/theme-documentation-basics.vi/" /><link rel="next" href="http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/prompts-and-mindset-web-dev-with-ai-sidekick\/"
+        },"genre": "posts","keywords": "AI, Prompt Engineering, Web Development, Cheat Sheet","wordcount":  2419 ,
+        "url": "http:\/\/localhost:1313\/posts\/prompts-and-mindset-web-dev-with-ai-sidekick\/","datePublished": "2026-07-24T00:00:00+00:00","dateModified": "2026-07-24T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Nguyen Ngoc Tin"
+            },"description": "Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách Web Dev with an AI Sidekick."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Nguyen Ngoc Tin">Nguyen Ngoc Tin</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="Blog Posts"> Blog </a><a class="menu-item" href="/tags/" title="All Tags"> Tags </a><a class="menu-item" href="/categories/" title="All Categories"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Nguyen Ngoc Tin">Nguyen Ngoc Tin</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="Blog Posts">Blog</a><a class="menu-item" href="/tags/" title="All Tags">Tags</a><a class="menu-item" href="/categories/" title="All Categories">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ngoctinn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Nguyen Ngoc Tin</a></span>&nbsp;<span class="post-category">included in <a href="/categories/technology/"><i class="far fa-folder" aria-hidden="true"></i>Technology</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-07-24">2026-07-24</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;2419 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#phần-1-tư-duy-nền-tảng--ai-là-hệ-số-nhân-năng-suất">PHẦN 1: TƯ DUY NỀN TẢNG — AI LÀ HỆ SỐ NHÂN NĂNG SUẤT</a>
+      <ul>
+        <li><a href="#1-bản-chất-của-trí-tuệ-nhân-tạo-trong-lập-trình">1. Bản chất của trí tuệ nhân tạo trong lập trình</a></li>
+        <li><a href="#2-quy-trình-học-tập-và-lập-trình-4-bước">2. Quy trình học tập và lập trình 4 bước</a></li>
+        <li><a href="#3-quy-trình-phát-triển-dựa-trên-đặc-tả">3. Quy trình phát triển dựa trên đặc tả</a></li>
+      </ul>
+    </li>
+    <li><a href="#phần-2-bộ-câu-lệnh-mẫu-thực-chiến-từ-sách-web-dev-with-an-ai-sidekick">PHẦN 2: BỘ CÂU LỆNH MẪU THỰC CHIẾN TỪ SÁCH WEB DEV WITH AN AI SIDEKICK</a>
+      <ul>
+        <li><a href="#1-đánh-giá-tư-duy-cấu-hình-nền-tảng-và-hợp-đồng-học-tập">1. Đánh giá tư duy, cấu hình nền tảng và hợp đồng học tập</a></li>
+        <li><a href="#2-giai-đoạn-phát-triển-giao-diện-người-dùng">2. Giai đoạn phát triển giao diện người dùng</a>
+          <ul>
+            <li><a href="#html--cấu-trúc-dữ-liệu">HTML — Cấu trúc dữ liệu</a></li>
+            <li><a href="#css--giao-diện-và-độ-đặc-hiệu">CSS — Giao diện và Độ đặc hiệu</a></li>
+            <li><a href="#svg--đồ-họa-mã-nguồn">SVG — Đồ họa mã nguồn</a></li>
+            <li><a href="#javascript-và-typescript--xử-lý-tương-tác-và-an-toàn-mã-nguồn">JavaScript và TypeScript — Xử lý tương tác và An toàn mã nguồn</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-giai-đoạn-phát-triển-máy-chủ-và-cơ-sở-dữ-liệu">3. Giai đoạn phát triển máy chủ và cơ sở dữ liệu</a>
+          <ul>
+            <li><a href="#sql--quản-trị-và-gỡ-lỗi-cơ-sở-dữ-liệu">SQL — Quản trị và Gỡ lỗi cơ sở dữ liệu</a></li>
+            <li><a href="#python-và-django--logic-máy-chủ-và-orm">Python và Django — Logic máy chủ và ORM</a></li>
+            <li><a href="#bash-và-shell--tự-động-hóa-dòng-lệnh">Bash và Shell — Tự động hóa dòng lệnh</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-giai-đoạn-xây-dựng-dự-án-tổng-hợp-kiểm-thử-và-triển-khai">4. Giai đoạn xây dựng dự án tổng hợp, kiểm thử và triển khai</a>
+          <ul>
+            <li><a href="#quản-lý-dự-án-dựa-trên-đặc-tả">Quản lý dự án dựa trên đặc tả</a></li>
+            <li><a href="#chiến-lược-kiểm-thử-toàn-diện">Chiến lược kiểm thử toàn diện</a></li>
+            <li><a href="#triển-khai-máy-chủ-thực-tế">Triển khai máy chủ thực tế</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#kết-luận">KẾT LUẬN</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><strong>Về bài viết này</strong></p>
+<p>Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách <em>Web Dev with an AI Sidekick</em> của tác giả Mark J. Price. Đây là kim chỉ nam giúp lập trình viên chuyển dịch từ tư duy sao chép thụ động sang vai trò kỹ sư trưởng làm chủ hoàn toàn công nghệ.</p>
+<p>Trong kỷ nguyên của các trợ lý lập trình tự động, câu hỏi lớn nhất của một nhà phát triển phần mềm không còn là viết cú pháp này như thế nào, mà là làm sao để làm chủ dòng chảy tư duy và kiểm soát chất lượng mã nguồn do trí tuệ nhân tạo tạo ra.</p>
+<hr>
+<h2 id="phần-1-tư-duy-nền-tảng--ai-là-hệ-số-nhân-năng-suất">PHẦN 1: TƯ DUY NỀN TẢNG — AI LÀ HỆ SỐ NHÂN NĂNG SUẤT</h2>
+<h3 id="1-bản-chất-của-trí-tuệ-nhân-tạo-trong-lập-trình">1. Bản chất của trí tuệ nhân tạo trong lập trình</h3>
+<p>Trí tuệ nhân tạo không thay thế lập trình viên, nó đóng vai trò là một hệ số nhân năng suất:</p>
+<p><strong>Hiệu suất thực tế = Nền tảng kỹ thuật vững chắc × Năng lực điều khiển công cụ</strong></p>
+<ul>
+<li><strong>Nếu bạn nắm chắc kiến thức nền tảng</strong>, công cụ sẽ nhân bản hiệu suất công việc lên gấp nhiều lần. Nhưng nếu bạn hời hợt với nền tảng, công cụ sẽ nhân bản sự bối rối và tích tụ vô số lỗi tiềm ẩn trong dự án của bạn.</li>
+<li><strong>Sự dịch chuyển kỹ năng:</strong> Giá trị cốt lõi đang dịch chuyển mạnh mẽ từ việc gõ mã nguồn đơn thuần sang năng lực đánh giá và tư duy hệ thống. Kỹ năng quan trọng nhất hiện nay là thấu hiểu kiến trúc phần mềm, nhận biết các sự đánh đổi và phát hiện ngay lập tức khi mã nguồn tự động bị hổng bảo mật hoặc không tối ưu.</li>
+<li><strong>Hiện tượng ủy thác nhận thức:</strong> Các nghiên cứu kỹ thuật chỉ ra rằng lập trình viên quá phụ thuộc vào công cụ tự động có thể tốn nhiều thời gian hơn để hoàn thành các nhiệm vụ phức tạp. Lý do là họ tốn quá nhiều thời gian loay hoay sửa các lỗi ẩn do máy tính sinh ra mà bản thân không hiểu gốc rễ.</li>
+</ul>
+<h3 id="2-quy-trình-học-tập-và-lập-trình-4-bước">2. Quy trình học tập và lập trình 4 bước</h3>
+<p>Để vừa tận dụng tốc độ của công cụ vừa nâng cao năng lực cá nhân mỗi ngày, hãy áp dụng vòng lặp 4 bước sau:</p>
+<ol>
+<li><strong>Hỏi và tìm hiểu:</strong> Yêu cầu giải thích lý thuyết đi kèm một ví dụ mã nguồn cực kỳ tối giản.</li>
+<li><strong>Tự tay triển khai:</strong> Tự mình gõ lại đoạn mã vào dự án thay vì sao chép. Việc tự tay viết giúp hình thành phản xạ tư duy cú pháp.</li>
+<li><strong>Thu nhận phản hồi:</strong> Dán phần mã mình tự viết lại để nhờ công cụ phản biện và gợi ý hướng tối ưu.</li>
+<li><strong>Mở rộng thử thách:</strong> Tự thử thách bản thân bằng cách bổ sung thêm tính năng hoặc xử lý các trường hợp ngoại lệ mới.</li>
+</ol>
+<h3 id="3-quy-trình-phát-triển-dựa-trên-đặc-tả">3. Quy trình phát triển dựa trên đặc tả</h3>
+<p>Thay vì lập trình tự phát theo cảm tính, một quy trình chuyên nghiệp bắt buộc phải xây dựng tài liệu đặc tả rõ ràng trước khi tạo mã nguồn:</p>
+<ul>
+<li><strong>Viết tài liệu yêu cầu dự án:</strong> Bao gồm mục tiêu, các phần nằm ngoài phạm vi, kịch bản người dùng và tiêu chí nghiệm thu.</li>
+<li><strong>Cung cấp bản đặc tả cho công cụ:</strong> Yêu cầu công cụ không được viết mã nguồn ngay lập tức.</li>
+<li><strong>Phân tích và diễn giải:</strong> Yêu cầu máy tính diễn giải lại bài toán, liệt kê các giả định và đề xuất kịch bản triển khai.</li>
+<li><strong>Duyệt kịch bản và thực thi:</strong> Duyệt kịch bản kiến trúc và cho phép tạo mã nguồn theo từng phần nhỏ.</li>
+</ul>
+<hr>
+<h2 id="phần-2-bộ-câu-lệnh-mẫu-thực-chiến-từ-sách-web-dev-with-an-ai-sidekick">PHẦN 2: BỘ CÂU LỆNH MẪU THỰC CHIẾN TỪ SÁCH WEB DEV WITH AN AI SIDEKICK</h2>
+<p>Dưới đây là toàn bộ hệ thống câu lệnh mẫu được phân loại theo từng giai đoạn phát triển dự án từ cuốn sách của Mark J. Price.</p>
+<h3 id="1-đánh-giá-tư-duy-cấu-hình-nền-tảng-và-hợp-đồng-học-tập">1. Đánh giá tư duy, cấu hình nền tảng và hợp đồng học tập</h3>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Thiết lập Custom Instruction (Hợp đồng học tập)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">You are my web dev tutor for HTML, CSS, JavaScript, SQL, Python and Django. Teach me like a beginner who wants to become competent, not like someone who wants a quick copy-paste. Prefer short steps with checkpoints. When giving code, also explain: what the code does, why this approach is used, common mistakes. Ask me 1-3 quick questions if needed but do not stall. Always provide a tiny exercise after explaining a concept. When I paste an error, help me debug by: explaining likely causes, telling me exactly what to check, giving the minimal fix first.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Đặt hàng rào giới hạn code<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">You must follow these rules when your response includes code: Do not generate more than about 40 lines of code at once unless I ask. Prefer incremental changes with diffs. If you propose a change, show it as: what to delete, what to add. Tell me the one most likely issue first.</div>
+    </div>
+</div>
+<h3 id="2-giai-đoạn-phát-triển-giao-diện-người-dùng">2. Giai đoạn phát triển giao diện người dùng</h3>
+<h4 id="html--cấu-trúc-dữ-liệu">HTML — Cấu trúc dữ liệu</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Semantic HTML<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain the difference between semantic HTML and non-semantic HTML with real-world examples and why it matters for accessibility.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Form Data<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please show what form data looks like when it is submitted from a browser including the difference between GET and POST with real HTTP examples.</div>
+    </div>
+</div>
+<h4 id="css--giao-diện-và-độ-đặc-hiệu">CSS — Giao diện và Độ đặc hiệu</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>CSS Cascade và Specificity<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain the CSS cascade with real examples showing conflicts between element, class, and ID selectors. Show me examples where CSS rules conflict and explain why one wins over another. What is CSS specificity, and how is it calculated step by step?</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Đơn vị đo lường<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain px vs %, em, and rem with practical examples and when to use each. How do rem and em behave differently in nested elements? Please include an example to show how em compounds but rem does not.</div>
+    </div>
+</div>
+<h4 id="svg--đồ-họa-mã-nguồn">SVG — Đồ họa mã nguồn</h4>
+<p><em>Mẹo yêu cầu xuất mã nguồn đồ họa:</em> Khi yêu cầu công cụ tạo biểu đồ hoặc biểu tượng vector, luôn chỉ định rõ xuất mã nguồn trực tiếp thay vì tạo file hình ảnh.</p>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Tạo SVG Toolbar<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please create SVG source code suitable for icons in a toolbar for a web app with the following features: New File, Open File, Save File As, Close, Cut, Copy, Paste. Please provide the raw SVG source code directly in the chat instead of generating an image file.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>SVG Theme-aware<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain how to make SVG icons theme-aware using currentColor and CSS variables.</div>
+    </div>
+</div>
+<h4 id="javascript-và-typescript--xử-lý-tương-tác-và-an-toàn-mã-nguồn">JavaScript và TypeScript — Xử lý tương tác và An toàn mã nguồn</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Sự kiện trong JavaScript<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">What is event bubbling and capturing in JavaScript? Show a simple visual explanation. When should I use event delegation instead of adding individual event listeners?</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Strict Mode và Overloads trong TypeScript<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">What does strict mode actually enable under the hood in TypeScript? What kinds of bugs TypeScript cannot catch, even with strict mode enabled? Please explain function overloads in TypeScript and show a realistic example where they improve clarity.</div>
+    </div>
+</div>
+<h3 id="3-giai-đoạn-phát-triển-máy-chủ-và-cơ-sở-dữ-liệu">3. Giai đoạn phát triển máy chủ và cơ sở dữ liệu</h3>
+<h4 id="sql--quản-trị-và-gỡ-lỗi-cơ-sở-dữ-liệu">SQL — Quản trị và Gỡ lỗi cơ sở dữ liệu</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Gỡ lỗi câu truy vấn chậm<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please show me how to debug a slow SQL query step by step. Please explain how a database chooses between a table scan and an index scan. Please show me some examples where adding an index makes a query slower, not faster.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Hiệu quả của Index<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain index selectivity and why indexing Boolean columns is often useless. Please explain why ORDER BY can sometimes be satisfied by an index and sometimes cannot.</div>
+    </div>
+</div>
+<h4 id="python-và-django--logic-máy-chủ-và-orm">Python và Django — Logic máy chủ và ORM</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Import Modules và Virtual Environments<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain how Python decides where to look when importing a module. Why does Python execute module-level code on import? Please explain <code>if __name__ == '__main__':</code> in more depth with real examples. Please explain the difference between system Python and virtual environments.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Bản chất Django ORM<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">How does Django&rsquo;s ORM translate Python QuerySets into SQL, and when does it actually hit the database? Please show me the same Django ORM query and the SQL it generates, and explain each part.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Hệ thống xác thực của Django<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain Django&rsquo;s authentication system as part of the request-response lifecycle. What is the difference between authentication and authorization in Django, with concrete examples?</div>
+    </div>
+</div>
+<h4 id="bash-và-shell--tự-động-hóa-dòng-lệnh">Bash và Shell — Tự động hóa dòng lệnh</h4>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Gỡ lỗi Bash script<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain common Bash error messages like permission denied or command not found. How can I safely debug a Bash script step by step? Why does my Bash script exit early when I use set -e?</div>
+    </div>
+</div>
+<h3 id="4-giai-đoạn-xây-dựng-dự-án-tổng-hợp-kiểm-thử-và-triển-khai">4. Giai đoạn xây dựng dự án tổng hợp, kiểm thử và triển khai</h3>
+<p>Trong giai đoạn này, vai trò của lập trình viên chuyển dịch mạnh mẽ từ người gõ phím sang người thẩm định và đưa ra quyết định kiến trúc. Trí tuệ nhân tạo có thể sinh ra hàng trăm dòng mã lệnh hay file kiểm thử rất nhanh, nhưng việc quyết định giải pháp nào an toàn và bao quát rủi ro hoàn toàn phụ thuộc vào tư duy của người kỹ sư trưởng.</p>
+<h4 id="quản-lý-dự-án-dựa-trên-đặc-tả">Quản lý dự án dựa trên đặc tả</h4>
+<p>Thay vì phát triển dự án theo cảm tính, quy trình phát triển dựa trên đặc tả yêu cầu thiết lập bộ khung tài liệu nghiêm ngặt trước khi tạo mã nguồn.</p>
+<ul>
+<li><strong>Bản chất quy trình:</strong> Công cụ tự động có xu hướng tự bổ sung các tính năng ngoài luồng nếu yêu cầu quá mơ hồ. Quy trình này biến tài liệu đặc tả thành cam kết kỹ thuật buộc công cụ phải tuân thủ.</li>
+<li><strong>Chiến thuật Prompt 4 pha:</strong> Yêu cầu công cụ đóng vai trò kỹ sư phần mềm cao cấp để phản biện tài liệu qua 4 bước:
+<ol>
+<li><strong>Phân tích lỗ hổng:</strong> Rà soát lỗ hổng logic nghiệp vụ, bảo mật và các trường hợp biên.</li>
+<li><strong>Phỏng vấn mục tiêu:</strong> Đặt câu hỏi làm rõ những điểm chưa rõ ràng trong yêu cầu.</li>
+<li><strong>Đánh giá sự đánh đổi:</strong> Phân tích sự đánh đổi kỹ thuật giữa các phương án kiến trúc.</li>
+<li><strong>Cập nhật đặc tả:</strong> Hoàn thiện bản đặc tả trước khi triển khai.</li>
+</ol>
+</li>
+</ul>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt mẫu về rà soát đặc tả dự án<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Read project-brief.md and act as a senior engineer reviewing a new project before implementation. Your job is to find everything that is missing, unclear, or risky. Work in phases: Phase 1: Gap analysis. Phase 2: Targeted interview. Phase 3: Trade-offs and assumptions. Phase 4: Update the brief. Be concise, direct, and practical. Avoid generic advice.</div>
+    </div>
+</div>
+<h4 id="chiến-lược-kiểm-thử-toàn-diện">Chiến lược kiểm thử toàn diện</h4>
+<p>Mã kiểm thử do công cụ tự động sinh ra thường thiếu độ sâu nếu không có sự định hướng. Việc phân tầng kiểm thử giúp đảm bảo độ tin cậy của mã nguồn.</p>
+<ul>
+<li><strong>Bản chất quy trình:</strong> Xây dựng hệ thống kiểm thử bám sát kim tự tháp kiểm thử:
+<ol>
+<li><strong>Kiểm thử đơn vị (Unit Test):</strong> Kiểm tra logic cô lập với tốc độ xử lý tối đa.</li>
+<li><strong>Kiểm thử tích hợp (Integration Test):</strong> Kiểm tra luồng dữ liệu đi qua Router, Middleware và Cơ sở dữ liệu mà không cần trình duyệt thực tế.</li>
+<li><strong>Kiểm thử đầu cuối (End-to-End Test):</strong> Giả lập chính xác hành vi người dùng trên trình duyệt thực tế.</li>
+</ol>
+</li>
+<li><strong>Tư duy viết test bền vững:</strong> Yêu cầu công cụ sử dụng cơ chế thiết lập dữ liệu động thay vì cố định các giá trị khóa chính để đảm bảo tính độc lập giữa các trường hợp kiểm thử.</li>
+</ul>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt mẫu về kim tự tháp kiểm thử<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain the historical origins of the testing pyramid and how it differs from the testing trophy model. What are real-world examples of teams that inverted the testing pyramid and what problems did they face?</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt mẫu nhờ công cụ viết Unit Test chuẩn<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Here is my Django model for Survey. Write unit tests that verify validation rules, default values, and any constraints. Use Django TestCase and avoid relying on primary key values. Focus on negative paths and edge cases.</div>
+    </div>
+</div>
+<h4 id="triển-khai-máy-chủ-thực-tế">Triển khai máy chủ thực tế</h4>
+<p>Chuyển dịch từ môi trường phát triển cục bộ lên máy chủ thực tế đòi hỏi sự chuẩn bị kỹ lưỡng về hạ tầng và quy trình tự động hóa.</p>
+<ul>
+<li><strong>Bản chất quy trình:</strong> Bóc tách kiến trúc máy chủ phân tầng để chịu tải và tăng cường bảo mật:
+<ol>
+<li><strong>Nginx (Reverse Proxy):</strong> Tiếp nhận truy cập công cộng, xử lý các tệp tĩnh và chứng chỉ bảo mật SSL/TLS để giảm tải cho ứng dụng.</li>
+<li><strong>Gunicorn (WSGI Server):</strong> Đóng vai trò cầu nối, duy trì các tiến trình ứng dụng chạy liên tục trong hệ điều hành.</li>
+<li><strong>Quản lý dữ liệu an toàn:</strong> Tách tệp cơ sở dữ liệu ra khỏi thư mục mã nguồn để tránh bị ghi đè khi cập nhật và kích hoạt chế độ ghi nhật ký trước (Write-Ahead Logging) để xử lý truy cập đồng thời.</li>
+</ol>
+</li>
+<li><strong>Tự động hóa vận hành:</strong> Thiết lập công cụ lập lịch định kỳ để sao lưu dữ liệu vào mốc giờ thấp điểm và dọn dẹp các bản sao lưu cũ nhằm tối ưu dung lượng lưu trữ.</li>
+</ul>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt mẫu về kiến trúc hạ tầng máy chủ<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please explain reverse proxies in simple terms and why Nginx is used in front of Gunicorn and include a request flow diagram showing how Nginx, Gunicorn, and Django interact.</div>
+    </div>
+</div>
+<div class="details admonition example open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt mẫu về kịch bản triển khai và sao lưu an toàn<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Please write a bash script to deploy a Django app safely with zero downtime. How can I automate backups and test restoring a SQLite database?</div>
+    </div>
+</div>
+<hr>
+<h2 id="kết-luận">KẾT LUẬN</h2>
+<p>Lập trình trong kỷ nguyên mới không làm giảm đi tầm quan trọng của tư duy kỹ thuật, mà ngược lại đòi hỏi nhà phát triển phải có nhãn quan kiến trúc sắc bén hơn. Bằng cách thiết lập hợp đồng học tập rõ ràng, tuân thủ quy trình 4 bước và áp dụng phương pháp phát triển dựa trên đặc tả, bạn sẽ luôn giữ vững vị thế người điều khiển và làm chủ công nghệ.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-07-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/prompts-and-mindset-web-dev-with-ai-sidekick/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình" data-hashtags="AI,Prompt Engineering,Web Development,Cheat Sheet"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-hashtag="AI"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" data-title="Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình" data-description="Bài viết tổng hợp toàn bộ tư duy cốt lõi, quy trình phát triển dựa trên đặc tả và bộ sưu tập các mẫu câu lệnh thực chiến được trích xuất từ cuốn sách Web Dev with an AI Sidekick."><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fprompts-and-mindset-web-dev-with-ai-sidekick%2f&amp;text=K%e1%bb%b9%20Ngh%e1%bb%87%20C%c3%a2u%20L%e1%bb%87nh%20V%c3%a0%20T%c6%b0%20Duy%20L%c3%a0m%20Ch%e1%bb%a7%20Tr%c3%ad%20Tu%e1%bb%87%20Nh%c3%a2n%20T%e1%ba%a1o%20Trong%20L%e1%ba%adp%20Tr%c3%acnh" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/prompt-engineering/">Prompt Engineering</a>,&nbsp;<a href="/tags/web-development/">Web Development</a>,&nbsp;<a href="/tags/cheat-sheet/">Cheat Sheet</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/theme-documentation-basics.vi/" class="prev" rel="prev" title="Tài liệu Giao diện - Các bước Cơ bản"><i class="fas fa-angle-left" aria-hidden="true"></i>Tài liệu Giao diện - Các bước Cơ bản</a>
+            <a href="/posts/khong-co-con-duong-tat-trong-tu-hoc/" class="next" rel="next" title="Góc Nhìn Về Tự Học: Không Có Con Đường Tắt Trong Thế Giới Kỹ Thuật">Góc Nhìn Về Tự Học: Không Có Con Đường Tắt Trong Thế Giới Kỹ Thuật<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ngoctinn" target="_blank">Nguyen Ngoc Tin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
+</html>

@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Notes - Category - Nguyen Ngoc Tin</title>
+        <link>http://localhost:1313/categories/notes/</link>
+        <description>Notes - Category - Nguyen Ngoc Tin</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 22 Nov 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/notes/" rel="self" type="application/rss+xml" /><item>
+    <title>Không Có Con Đường Tắt Trong Tự Học</title>
+    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
+    <pubDate>Wed, 22 Nov 2023 00:00:00 &#43;0000</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
+    <description><![CDATA[<p><em>Bài viết trích dẫn góc nhìn từ tác giả Anh-Thi Dinh (Math2IT).</em></p>
+<hr>
+<p>Trong cuốn sách <em>Sapiens</em> của tác giả Yuval Noah Harari, ông có nhắc đến một ý rằng con người ta chủ yếu chọn làm những điều mang lại cảm giác dễ chịu. Xét riêng về vấn đề học tập cũng vậy.</p>
+<p>Thường chúng ta sẽ dễ dàng thỏa hiệp với những thứ dễ xơi, dễ tiếp cận. Chúng ta muốn tìm một nơi nào đó, một bài viết hay một video có thể dạy ngắn gọn và nhanh lẹ về Thống Kê, về Toán Giải Tích, hay về Lập Trình Hướng Đối Tượng&hellip;</p>]]></description>
+</item>
+</channel>
+</rss>

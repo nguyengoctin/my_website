@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Installation - Tag - Nguyen Ngoc Tin</title>
+        <link>http://localhost:1313/tags/installation/</link>
+        <description>Installation - Tag - Nguyen Ngoc Tin</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 06 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/installation/" rel="self" type="application/rss+xml" /><item>
+    <title>Tài liệu Giao diện - Các bước Cơ bản</title>
+    <link>http://localhost:1313/posts/theme-documentation-basics.vi/</link>
+    <pubDate>Fri, 06 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/theme-documentation-basics.vi/</guid>
+    <description><![CDATA[<p>Khám phá giao diện <strong>Hugo - LoveIt</strong> và các khái niệm cốt lõi đằng sau nó.</p>]]></description>
+</item>
+</channel>
+</rss>

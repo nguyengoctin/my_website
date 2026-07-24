@@ -1,0 +1,184 @@
+baseURL = "http://example.org/"
+
+# Change the default theme to be used when building the site with Hugo
+theme = "LoveIt"
+
+# Website title
+title = "Nguyen Ngoc Tin"
+
+# Language code and name
+languageCode = "en"
+languageName = "English"
+hasCJKLanguage = false
+
+# Enable robots.txt, git commit info, and emoji
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+
+# Outputs required for Lunr search indexing
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    title = "Blog Posts"
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    title = "All Tags"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    title = "All Categories"
+
+# Parameters config for LoveIt theme
+[params]
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  title = "Nguyen Ngoc Tin"
+  description = "Personal website and blog of Nguyen Ngoc Tin"
+
+  # Author config
+  [params.author]
+    name = "Nguyen Ngoc Tin"
+    email = "ngoctin.work@gmail.com"
+    link = "https://github.com/ngoctinn"
+
+  # Header config
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "Nguyen Ngoc Tin"
+      pre = ""
+      post = ""
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = true
+    hugo = true
+    copyright = true
+    author = true
+    since = 2026
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Search config (using Lunr.js)
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "Search..."
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+
+  # Home page config (Chip Huyen Style)
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/avatar.jpg"
+      title = "Nguyen Ngoc Tin"
+      social = true
+      bio = """
+Hi! I'm **Nguyễn Ngọc Tín**, a curious developer based in Ho Chi Minh City, Vietnam.
+
+I recently graduated from Saigon University (SGU), majoring in Information Systems under the Department of Information Technology. I'm actively aiming for **Software Engineer** and **Cloud Engineer** roles.
+
+Driven by an endless curiosity, I strive to learn something new every day. I believe that true growth begins with humility — knowing what I know while acknowledging there is always so much more to discover. My goal is simple: to build meaningful, efficient software products that solve real-world problems.
+
+This website serves as my personal portfolio and a digital garden where I document my technical notes, discoveries, and experiences in Software Engineering, Cloud Architecture, and Web Development.
+
+Outside of coding, I love reading books, exploring new concepts, and sharing experiences.
+
+---
+
+#### Contact & Links
+- <i class="fab fa-github"></i> **GitHub:** [github.com/ngoctinn](https://github.com/ngoctinn)
+- <i class="fab fa-linkedin"></i> **LinkedIn:** [linkedin.com/in/tin-nguyen-ngoc-2453372a3](https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/)
+- <i class="fas fa-envelope"></i> **Email:** [ngoctin.work@gmail.com](mailto:ngoctin.work@gmail.com)
+- <i class="fas fa-phone"></i> **Phone:** [0397662903](tel:0397662903)
+"""
+
+  # Social links config
+  [params.social]
+    GitHub = "ngoctinn"
+    Linkedin = "tin-nguyen-ngoc-2453372a3"
+    Email = "ngoctin.work@gmail.com"
+    Phone = "0397662903"
+
+  # Page config
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = true
+    ruby = true
+    fraction = true
+    fontawesome = true
+    linkToMarkdown = true
+
+    # Table of contents
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+    # KaTeX math support
+    [params.page.math]
+      enable = true
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      copyTex = true
+      mhchem = true
+
+    # Code block config
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+
+    # Social share
+    [params.page.share]
+      enable = true
+      X = true
+      Facebook = true
+      Telegram = true
+      Linkedin = false
+
+# Markup configuration in Hugo
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

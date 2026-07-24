@@ -1,0 +1,711 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Data Science - Tag - Nguyen Ngoc Tin</title>
+        <link>http://localhost:1313/tags/data-science/</link>
+        <description>Data Science - Tag - Nguyen Ngoc Tin</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/data-science/" rel="self" type="application/rss+xml" /><item>
+    <title>A Collection of Learning Resources</title>
+    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
+    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
+    <description><![CDATA[<p>The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.</p>
+<blockquote>
+<p>“You do not rise to the level of your goals. You fall to the level of your systems.” – James Clear</p>
+</blockquote>
+<p><strong>Icon Legend:</strong></p>
+<ul>
+<li><i class="fab fa-github"></i> GitHub Repository</li>
+<li><i class="fas fa-book"></i> Book or Document</li>
+<li><i class="fas fa-check-circle"></i> Learned or Noted</li>
+<li><i class="fab fa-youtube"></i> Video or YouTube</li>
+<li><i class="fas fa-star"></i> Favorite Resource</li>
+<li><i class="fas fa-graduation-cap"></i> Course or MOOC</li>
+</ul>
+<hr>
+<h2 id="general-resources">General Resources</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.youtube.com/c/3blue1brown" target="_blank" rel="noopener noreffer ">3Blue1Brown</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Visual math and neural network animations</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code" target="_blank" rel="noopener noreffer ">500+ AI Projects with Code</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Machine Learning, Deep Learning, CV &amp; NLP projects</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://adamlucek.com/" target="_blank" rel="noopener noreffer ">Adam Lucek</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Developer portfolio, GitHub and YouTube channel</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.youtube.com/@AndrejKarpathy" target="_blank" rel="noopener noreffer ">Andrej Karpathy</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Deep Learning and Neural Networks lectures</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://aws.amazon.com/blogs/machine-learning/" target="_blank" rel="noopener noreffer ">AWS Machine Learning Blog</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Official AWS blog for ML architecture &amp; tutorials</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener noreffer ">Build Your Own X</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Recreate programming technologies from scratch</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.deeplearning.ai/" target="_blank" rel="noopener noreffer ">DeepLearning.AI</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Start or advance your career in AI</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/Deep-Learning-Drizzle/Deep-Learning-Drizzle" target="_blank" rel="noopener noreffer ">Deep Learning Drizzle</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Curated list of high-quality Deep Learning courses</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener noreffer ">NVIDIA Deep Learning Institute</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Hands-on AI and GPU training and certification</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener noreffer ">DeepTutor</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Multi-agent document interactive learning system</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://roadmap.sh/" target="_blank" rel="noopener noreffer ">Developer Roadmaps - roadmap.sh</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Community-created developer learning roadmaps</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://distill.pub/" target="_blank" rel="noopener noreffer ">Distill</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Clear and visual machine learning research articles</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/Mr-TalhaIlyas/From-0-to-research-scientist-resources-guide" target="_blank" rel="noopener noreffer ">From 0 to Research Scientist Guide</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Self-study guide for AI research scientists</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://ai.google/" target="_blank" rel="noopener noreffer ">Google AI</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Google AI tools, research, training and skills</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener noreffer ">Google Cloud Skills Boost</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Google Cloud training, labs and certifications</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://skillshop.exceedlms.com/" target="_blank" rel="noopener noreffer ">Google Skills</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Free training and certifications for Google Cloud</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://huggingface.co/learn" target="_blank" rel="noopener noreffer ">Hugging Face Learn</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Open-source Machine Learning and NLP courses</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/results?search_query=H%C6%B0%E1%BB%9Bng&#43;D%E1%BA%A5n&#43;T%E1%BB%B1&#43;H%E1%BB%8Dc&#43;Tr%C3%AD&#43;Tu%E1%BB%87&#43;Nh%C3%A2n&#43;T%E1%BA%A1o" target="_blank" rel="noopener noreffer ">Hướng Dẫn Tự Học Trí Tuệ Nhân Tạo</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">AI self-study guides in Vietnamese</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/faridrashidi/kaggle-solutions" target="_blank" rel="noopener noreffer ">Collection of Kaggle Solutions</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Winning Kaggle solutions and competitive ideas</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreffer ">Kaggle Learn Tutorials</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Micro-courses for Python, Data Viz, and Pandas</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://learn.microsoft.com/" target="_blank" rel="noopener noreffer ">Microsoft Learn Training</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Microsoft official developer and cloud courses</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/@IBMTechnology" target="_blank" rel="noopener noreffer ">Understanding AI Models - IBM</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Concise visual explanations of AI technology</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/@welchlabs" target="_blank" rel="noopener noreffer ">Welch Labs</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Math, Science, and Machine Learning animations</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="learn-how-to-learn">Learn How to Learn</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://barbaraoakley.com/books/a-mind-for-numbers/" target="_blank" rel="noopener noreffer ">A Mind for Numbers</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">How to excel at math and science by Dr. Barbara Oakley</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/watch?v=p60rN9JEapg" target="_blank" rel="noopener noreffer ">How To Learn Any Skill So Fast It Feels Illegal</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Actionable techniques for rapid skill acquisition</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://en.wikipedia.org/wiki/How_to_Read_a_Book" target="_blank" rel="noopener noreffer ">How to Read a Book</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Classic guide to intelligent reading by Mortimer Adler</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://barbaraoakley.com/" target="_blank" rel="noopener noreffer ">Learning How To Learn Book</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Guide for kids and teens on effective learning</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener noreffer ">Learning How to Learn Coursera</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Popular MOOC on mental tools and memory techniques</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.retrievalpractice.org/make-it-stick" target="_blank" rel="noopener noreffer ">Make It Stick</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Science of successful learning through retrieval practice</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://pragprog.com/titles/ahprag/pragmatic-thinking-and-learning/" target="_blank" rel="noopener noreffer ">Pragmatic Thinking and Learning</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Refactor your wetware and cognitive habits by Andy Hunt</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/watch?v=733m6qBH-jI" target="_blank" rel="noopener noreffer ">Reading Research Papers by Andrew Ng</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Efficient workflow for digesting technical papers</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.learningscientists.org/book" target="_blank" rel="noopener noreffer ">Understanding How We Learn</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Visual guide to cognitive psychology in learning</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="agentic-ai">Agentic AI</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/waseemh-dev/all-agentic-architectures" target="_blank" rel="noopener noreffer ">all-agentic-architectures</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Collection of AI Agent system design patterns</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://academy.anthropic.com/" target="_blank" rel="noopener noreffer ">Claude Certified Architect – Foundations</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Official Anthropic certification for AI architecture</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="blogs--personal-websites">Blogs &amp; Personal Websites</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://karpathy.ai/" target="_blank" rel="noopener noreffer ">Andrej Karpathy Blog</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Insights on Deep Learning, LLMs, and AI systems</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://dennybritz.com/" target="_blank" rel="noopener noreffer ">Denny&rsquo;s Blog</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Deep Learning research notes by Denny Britz</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://colah.github.io/" target="_blank" rel="noopener noreffer ">Colah&rsquo;s Blog</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Visual and intuitive essays on Neural Networks</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://huyenchip.com/" target="_blank" rel="noopener noreffer ">Chip Huyen Blog</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Machine Learning Systems Design and MLOps</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://lilianweng.github.io/" target="_blank" rel="noopener noreffer ">Lil&rsquo;Log</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">In-depth technical AI posts by Lilian Weng</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://raulgomez.biz/" target="_blank" rel="noopener noreffer ">Raúl Gómez Blog</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Computer Vision and Deep Learning research</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://ruder.io/" target="_blank" rel="noopener noreffer ">ruder.io</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">NLP and Machine Learning research updates</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://serrano.academy/" target="_blank" rel="noopener noreffer ">serrano.academy</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Friendly Machine Learning video tutorials</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/c/sentdex" target="_blank" rel="noopener noreffer ">sentdex</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Python programming and Machine Learning tutorials</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/c/joshstarmer" target="_blank" rel="noopener noreffer ">StatQuest with Josh Starmer</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Statistics and Machine Learning broken down step by step</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/c/vcubingx" target="_blank" rel="noopener noreffer ">vcubingx</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Visual Mathematics and Computer Science concepts</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/c/yannickilcher" target="_blank" rel="noopener noreffer ">Yannic Kilcher</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">AI paper explanations and machine learning news</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="coding-platforms">Coding Platforms</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.codechef.com/" target="_blank" rel="noopener noreffer ">CodeChef</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Practical coding practice and competitive programming</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreffer ">HackerRank</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Technical interview prep and skill assessments</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/faridrashidi/kaggle-solutions" target="_blank" rel="noopener noreffer ">Kaggle Solutions</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Repository of competitive machine learning code</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://leetcode.com/" target="_blank" rel="noopener noreffer ">LeetCode</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Standard platform for Data Structures &amp; Algorithms practice</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="computer-science">Computer Science</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/developer-y/cs-video-courses" target="_blank" rel="noopener noreffer ">CS Video Courses</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Comprehensive list of Computer Science video courses</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="noopener noreffer ">coding-interview-university</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Complete CS study plan for software engineering jobs</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreffer ">CS50x 2025 - Harvard</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Introduction to Computer Science by David J. Malan</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://roadmap.sh/" target="_blank" rel="noopener noreffer ">roadmap.sh</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Visual learning paths for CS, DevOps, and Frontend</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/learn/program-code" target="_blank" rel="noopener noreffer ">Learn to Program: Crafting Quality Code</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Software quality course by University of Toronto</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://teachyourselfcs.com/" target="_blank" rel="noopener noreffer ">Teach Yourself Computer Science</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Curated guide for self-taught software engineers</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/stas00/the-art-of-debugging" target="_blank" rel="noopener noreffer ">The Art of Debugging</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Comprehensive open book on software debugging</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/brrr-lang/brrr" target="_blank" rel="noopener noreffer ">Visualize the Brrr</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Learn GPU hardware architecture interactively</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="data-structures--algorithms">Data Structures &amp; Algorithms</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/c/abdul_bari" target="_blank" rel="noopener noreffer ">Abdul Bari Channel</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Clear and comprehensive lectures on Algorithms</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://jeffe.cs.illinois.edu/teaching/algorithms/" target="_blank" rel="noopener noreffer ">Algorithms by Jeff Erickson</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Free open textbook on Algorithm design</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/learn/algorithms-part1" target="_blank" rel="noopener noreffer ">Algorithms Part I</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Princeton course by Sedgewick &amp; Wayne</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/learn/algorithms-part2" target="_blank" rel="noopener noreffer ">Algorithms Part II</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Advanced algorithms course from Princeton</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/tayllan/awesome-algorithms" target="_blank" rel="noopener noreffer ">awesome-algorithms</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Curated list of algorithm learning resources</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/specializations/data-structures-algorithms" target="_blank" rel="noopener noreffer ">UCSD DSA Specialization</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">6-course specialization in Data Structures</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/kevin-wayne/algs4" target="_blank" rel="noopener noreffer ">PrincetonAlgorithms</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Code repository for Algorithms 4th edition</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="noopener noreffer ">Stanford Algorithms Specialization</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Stanford algorithm course taught by Tim Roughgarden</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="design-patterns--system-design">Design Patterns &amp; System Design</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/mikeroyal/System-Design-Guide" target="_blank" rel="noopener noreffer ">awesome-system-design-resources</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Free system design interview study guide</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://dataintensive.net/" target="_blank" rel="noopener noreffer ">Designing Data-Intensive Applications</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Industry-standard book on distributed systems by Kleppmann</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank" rel="noopener noreffer ">Design Patterns (Gang of Four)</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Classic reference book on object-oriented design patterns</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.oreilly.com/library/view/head-first-design/9781492078005/" target="_blank" rel="noopener noreffer ">Head First Design Patterns</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Beginner-friendly visual guide to OOP patterns</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/minimaxir/personally-curated-ml-case-studies" target="_blank" rel="noopener noreffer ">Introduction to ML Systems - Harvard</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Course on building production machine learning systems</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/faif/python-patterns" target="_blank" rel="noopener noreffer ">python-patterns</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Collection of design patterns implemented in Python</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://refactoring.guru/" target="_blank" rel="noopener noreffer ">Refactoring.guru</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Visual interactive guide to refactoring and design patterns</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="deep-learning--neural-networks">Deep Learning &amp; Neural Networks</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/ChristosChristofidis/awesome-deep-learning" target="_blank" rel="noopener noreffer ">Awesome Deep Learning</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Curated list of deep learning tutorials and papers</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="noopener noreffer ">Deep Learning Specialization</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Landmark 5-course series by Andrew Ng</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF" target="_blank" rel="noopener noreffer ">DeepMind x UCL Lecture Series</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Advanced lectures on AI and Reinforcement Learning</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://d2l.ai/" target="_blank" rel="noopener noreffer ">Dive into Deep Learning</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Interactive book with code in PyTorch, JAX and NumPy</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreffer ">Deep Learning Book</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Definitive textbook by Goodfellow, Bengio &amp; Courville</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://at757.github.io/NYU-Deep-Learning-Spring-2020/" target="_blank" rel="noopener noreffer ">NYU Deep Learning Course</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Course taught by Turing Award winner Yann LeCun</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.fast.ai/" target="_blank" rel="noopener noreffer ">fast.ai Practical Deep Learning</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i></td>
+          <td style="text-align: left">Hands-on deep learning for coders</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank" rel="noopener noreffer ">Neural Networks Series</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Visual introduction to backpropagation by 3Blue1Brown</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://karpathy.ai/zero-to-hero.html" target="_blank" rel="noopener noreffer ">Neural Networks: Zero To Hero</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Build micrograd and GPT from scratch with Andrej Karpathy</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://udlbook.github.io/udlbook/" target="_blank" rel="noopener noreffer ">Understanding Deep Learning</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Comprehensive textbook by Simon J.D. Prince</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="generative-ai--large-language-models">Generative AI &amp; Large Language Models</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://huyenchip.com/" target="_blank" rel="noopener noreffer ">AI Engineering: Foundation Models</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Building production applications with LLMs by Chip Huyen</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/Shubhamshoo/awesome-llm-apps" target="_blank" rel="noopener noreffer ">Awesome LLM Apps</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">LLM apps built with AI Agents and RAG architectures</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank" rel="noopener noreffer ">Build LLM Applications from Scratch</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Step-by-step guide to training and building LLMs</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/" target="_blank" rel="noopener noreffer ">ChatGPT Prompt Engineering</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Short course by DeepLearning.AI and OpenAI</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/microsoft/generative-ai-for-beginners" target="_blank" rel="noopener noreffer ">Generative AI for Beginners - Microsoft</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">18-lesson curriculum on GenAI by Microsoft</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/HandsOnLLMs/HandsOnLLMs" target="_blank" rel="noopener noreffer ">Hands-On Large Language Models</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Code repository for language understanding models</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://bbycroft.net/llm" target="_blank" rel="noopener noreffer ">LLM Visualization</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Interactive 3D visualization of how GPT architecture works</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noopener noreffer ">LLMs-from-scratch</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Build a Transformer LLM from scratch in PyTorch</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.youtube.com/watch?v=9vM4p9NN0Ts" target="_blank" rel="noopener noreffer ">Stanford CS229: LLMs Lecture</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-youtube"></i></td>
+          <td style="text-align: left">Building Large Language Models lecture series</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/" target="_blank" rel="noopener noreffer ">Prompt Engineering Guide - Lil&rsquo;Log</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Comprehensive technical reference on prompt techniques</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="machine-learning--mathematics">Machine Learning &amp; Mathematics</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/Avik-Jain/100-Days-Of-ML-Code" target="_blank" rel="noopener noreffer ">100-Days-Of-ML-Code</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">100-day study roadmap for machine learning algorithms</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/" target="_blank" rel="noopener noreffer ">Hands-On Machine Learning (3rd Ed)</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i> <i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Practical guide using Scikit-Learn, Keras &amp; TensorFlow</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://machinelearningcoban.com/" target="_blank" rel="noopener noreffer ">Machine Learning Cơ Bản</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Machine Learning fundamentals explained in Vietnamese</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener noreffer ">ML Specialization by Andrew Ng</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Updated Stanford ML course series in Python</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf" target="_blank" rel="noopener noreffer ">Pattern Recognition and Machine Learning</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-book"></i></td>
+          <td style="text-align: left">Classic foundational textbook by Christopher Bishop</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://seeing-theory.brown.edu/" target="_blank" rel="noopener noreffer ">Seeing Theory</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Visual interactive introduction to probability &amp; statistics</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="developer-tools--ai-workflows">Developer Tools &amp; AI Workflows</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Resource</th>
+          <th style="text-align: center">Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.connectedpapers.com/" target="_blank" rel="noopener noreffer ">Connected Papers</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Visual graph tool to explore academic research papers</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://www.cursor.com/" target="_blank" rel="noopener noreffer ">Cursor AI Code Editor</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Next-generation AI-first code editor</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://docs.anthropic.com/claude/docs/claude-code" target="_blank" rel="noopener noreffer ">Claude Code by Anthropic</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Agentic CLI tool for codebase interaction</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><i class="fas fa-star"></i> <strong><a href="https://lightning.ai/" target="_blank" rel="noopener noreffer ">Lightning.ai</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-check-circle"></i></td>
+          <td style="text-align: left">Platform for building and training multi-GPU AI models</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://sdk.vercel.ai/" target="_blank" rel="noopener noreffer ">Vercel AI SDK</a></strong></td>
+          <td style="text-align: center"><i class="fas fa-globe"></i></td>
+          <td style="text-align: left">Library for building AI streaming web applications</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong><a href="https://github.com/github/spec-kit" target="_blank" rel="noopener noreffer ">spec-kit</a></strong></td>
+          <td style="text-align: center"><i class="fab fa-github"></i></td>
+          <td style="text-align: left">Toolkit for Spec-Driven Software Development</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
+</item>
+</channel>
+</rss>
