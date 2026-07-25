@@ -275,8 +275,15 @@ blockquote {
   }
 }
 
-// 7. General Content & Article Links (Excluding TOC)
-.single .content a, table a, .page-footer a, .post-footer a {
+// 7. 100% UNIFIED LINK COLOR SYSTEM ACROSS ENTIRE WEBSITE (Including Profile Bio, Contact, Articles, Tables)
+a, a:link, a:visited, 
+.profile .bio a, 
+.contact-links-grid a, 
+.home a, 
+.single .content a, 
+table a, 
+.page-footer a, 
+.post-footer a {
   color: #4d74eb !important;
   transition: color 0.2s ease;
 
@@ -291,6 +298,17 @@ blockquote {
     [theme=dark] & {
       color: #93c5fd !important;
     }
+  }
+}
+
+// 8. Contact Section Right Column Dark Mode Support
+.contact-info-right {
+  color: #424242 !important;
+  border-left-color: #f0f0f0 !important;
+
+  [theme=dark] & {
+    color: #d1d5db !important;
+    border-left-color: #27272a !important;
   }
 }
 

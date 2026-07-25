@@ -106,15 +106,15 @@ enableEmoji = true
       bio = """
 ## ABOUT
 
-Hi! I'm **Nguyễn Ngọc Tín**, a curious developer based in Ho Chi Minh City, Vietnam.
+Hello, my name is **Nguyễn Ngọc Tín**. I’m a software engineer based in Ho Chi Minh City, Vietnam, holding an **Engineer in Information Technology** degree from Saigon University, majoring in **Information Systems**. As a recent graduate, I am actively focusing on **Backend Development** and **Cloud Infrastructure**.
 
-I recently graduated from Saigon University (SGU), majoring in Information Systems under the Department of Information Technology. I'm actively aiming for **Software Engineer** and **Cloud Engineer** roles.
+My primary focus is building RESTful APIs, designing database schemas, and building systems on Cloud platforms. My core tech stack includes **Python, Java, TypeScript, FastAPI, PostgreSQL, Docker, and AWS**. I approach software development as a system problem-solver, believing that tools and technologies are secondary to a strong problem-solving mindset.
 
-Driven by an endless curiosity, I strive to learn something new every day. I believe that true growth begins with humility — knowing what I know while acknowledging there is always so much more to discover. My goal is simple: to build meaningful, efficient software products that solve real-world problems.
+I’m a guy with a curious mind. I like to learn something new every day. Whenever I explore new tools, I rely on official documentation and always start from the core fundamentals to build solutions that are solid, effective, and maintainable. Technology is vast and constantly evolving, which keeps me grounded and reminded of how much more there is to discover.
 
-This website serves as my personal portfolio and a digital garden where I document my technical notes, discoveries, and experiences in Software Engineering, Cloud Architecture, and Web Development.
+This website serves as my personal knowledge base and digital garden — a space where I keep my study notes, architecture concepts, code snippets, and technical write-ups.
 
-Outside of coding, I love reading books, exploring new concepts, and sharing experiences.
+Outside of engineering, I spend my time reading books across various fields, including technology, science, psychology, and literature.
 
 ---
 
@@ -129,7 +129,7 @@ Outside of coding, I love reading books, exploring new concepts, and sharing exp
       <li><i class="fas fa-comment-dots" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="tel:0397662903">0397662903</a> <span style="font-size: 0.85rem; color: #828282;">(Zalo only)</span></li>
     </ul>
   </div>
-  <div style="border-left: 1px solid #f0f0f0; padding-left: 1.5rem; font-size: 0.92rem; color: #424242; line-height: 1.9;">
+  <div class="contact-info-right" style="border-left: 1px solid #f0f0f0; padding-left: 1.5rem; font-size: 0.92rem; line-height: 1.9;">
     <div><strong>Location:</strong> Ho Chi Minh City, Vietnam</div>
     <div><strong>Status:</strong> Available for Software Engineer & Cloud Engineer roles</div>
     <div><strong>Timezone:</strong> ICT (UTC+7)</div>

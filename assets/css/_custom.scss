@@ -84,19 +84,19 @@
 .chip-huyen-style .bio-content a {
     color: #4d74eb !important;
     text-decoration: none !important;
+
+    [theme=dark] & {
+        color: #60a5fa !important;
+    }
 }
 
 .chip-huyen-style .bio-content a:hover {
-    color: var(--global-font-color, #111111) !important;
-    text-decoration: underline !important;
-}
-
-[theme=dark] .chip-huyen-style .bio-content a:hover {
-    color: #ffffff !important;
-}
-
-.chip-huyen-style .bio-content a:visited {
     color: #1337a6 !important;
+    text-decoration: underline !important;
+
+    [theme=dark] & {
+        color: #93c5fd !important;
+    }
 }
 
 .chip-huyen-style .social-links {
