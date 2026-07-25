@@ -1,39 +1,31 @@
-// ==============================
-// Variables
-// ==============================
-
-@font-face {
-  font-family: Emoji;
-  src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
-  unicode-range: U+1F000-1F644, U+203C-3299;
-}
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap");
 
 // ========== Global ========== //
 // Font and Line Height
-$global-font-family: system-ui, -apple-system, Segoe UI, Roboto, Emoji, Helvetica, Arial, sans-serif !default;
+$global-font-family: "Lora", Georgia, serif !default;
 $global-font-size: 16px !default;
 $global-font-weight: 400 !default;
-$global-line-height: 1.5rem !default;
+$global-line-height: 1.5 !default;
 
 // Color of the background
-$global-background-color: #fff !default;
-$global-background-color-dark: #292a2d !default;
+$global-background-color: #fdfdfd !default;
+$global-background-color-dark: #18181b !default;
 
 // Color of the text
-$global-font-color: #161209 !default;
-$global-font-color-dark: #a9a9b3 !default;
+$global-font-color: #111111 !default;
+$global-font-color-dark: #e5e7eb !default;
 
 // Color of the secondary text
-$global-font-secondary-color: #a9a9b3 !default;
-$global-font-secondary-color-dark: #5d5d5f !default;
+$global-font-secondary-color: #828282 !default;
+$global-font-secondary-color-dark: #9ca3af !default;
 
 // Color of the link
-$global-link-color: #161209 !default;
-$global-link-color-dark: #a9a9b3 !default;
+$global-link-color: #4d74eb !default;
+$global-link-color-dark: #60a5fa !default;
 
-// Color of the hover link
-$global-link-hover-color: #2d96bd !default;
-$global-link-hover-color-dark: #fff !default;
+// Color of the hover link (Shift to richer deep blue on hover, NEVER black)
+$global-link-hover-color: #1337a6 !default;
+$global-link-hover-color-dark: #93c5fd !default;
 
 // Color of the border
 $global-border-color: #f0f0f0 !default;
@@ -81,12 +73,12 @@ $toc-title-font-size: 1.2rem !default;
 $toc-content-font-size: 0.875rem !default;
 
 // Color of the single link
-$single-link-color: #2d96bd !default;
+$single-link-color: #011e41 !default;
 $single-link-color-dark: #55bde2 !default;
 
 // Color of the hover single link
-$single-link-hover-color: #ef3982 !default;
-$single-link-hover-color-dark: #bdebfc !default;
+$single-link-hover-color: #0284c7 !default;
+$single-link-hover-color-dark: #38bdf8 !default;
 
 // Color of the table background
 $table-background-color: #fff !default;
@@ -103,7 +95,7 @@ $blockquote-color-dark: #59c5ec !default;
 
 // ========== Pagination ========== //
 // Color of the link in pagination
-$pagination-link-color: #2d96bd !default;
+$pagination-link-color: #011e41 !default;
 $pagination-link-color-dark: #a9a9b3 !default;
 
 // Color of the hover link in pagination

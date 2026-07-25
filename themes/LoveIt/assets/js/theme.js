@@ -522,14 +522,17 @@ class Theme {
                 Util.forEach($tocLinkElements, $tocLink => { $tocLink.classList.remove('active'); });
                 Util.forEach($tocLiElements, $tocLi => { $tocLi.classList.remove('has-active'); });
                 const INDEX_SPACING = 20 + (headerIsFixed ? headerHeight : 0);
+                const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 50);
                 let activeTocIndex = $headerLinkElements.length - 1;
-                for (let i = 0; i < $headerLinkElements.length - 1; i++) {
-                    const thisTop = $headerLinkElements[i].getBoundingClientRect().top;
-                    const nextTop = $headerLinkElements[i + 1].getBoundingClientRect().top;
-                    if ((i === 0 && thisTop > INDEX_SPACING)
-                     || (thisTop <= INDEX_SPACING && nextTop > INDEX_SPACING)) {
-                        activeTocIndex = i;
-                        break;
+                if (!isAtBottom) {
+                    for (let i = 0; i < $headerLinkElements.length - 1; i++) {
+                        const thisTop = $headerLinkElements[i].getBoundingClientRect().top;
+                        const nextTop = $headerLinkElements[i + 1].getBoundingClientRect().top;
+                        if ((i === 0 && thisTop > INDEX_SPACING)
+                         || (thisTop <= INDEX_SPACING && nextTop > INDEX_SPACING)) {
+                            activeTocIndex = i;
+                            break;
+                        }
                     }
                 }
                 if (activeTocIndex !== -1) {

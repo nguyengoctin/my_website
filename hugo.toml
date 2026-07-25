@@ -51,6 +51,14 @@ enableEmoji = true
   title = "Nguyen Ngoc Tin"
   description = "Personal website and blog of Nguyen Ngoc Tin"
 
+  # App config & Favicon
+  [params.app]
+    title = "Nguyen Ngoc Tin"
+    noFavicon = false
+    svgFavicon = "/favicon.svg"
+    themeColor = "#ffffff"
+    iconColor = "#4d74eb"
+
   # Author config
   [params.author]
     name = "Nguyen Ngoc Tin"
@@ -63,7 +71,7 @@ enableEmoji = true
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = "Nguyen Ngoc Tin"
+      name = "Nguyễn Ngọc Tín"
       pre = ""
       post = ""
       typeit = false
@@ -94,9 +102,10 @@ enableEmoji = true
     [params.home.profile]
       enable = true
       avatarURL = "/images/avatar.jpg"
-      title = "Nguyen Ngoc Tin"
-      social = true
+      social = false
       bio = """
+## ABOUT
+
 Hi! I'm **Nguyễn Ngọc Tín**, a curious developer based in Ho Chi Minh City, Vietnam.
 
 I recently graduated from Saigon University (SGU), majoring in Information Systems under the Department of Information Technology. I'm actively aiming for **Software Engineer** and **Cloud Engineer** roles.
@@ -109,19 +118,31 @@ Outside of coding, I love reading books, exploring new concepts, and sharing exp
 
 ---
 
-#### Contact & Links
-- <i class="fab fa-github"></i> **GitHub:** [github.com/ngoctinn](https://github.com/ngoctinn)
-- <i class="fab fa-linkedin"></i> **LinkedIn:** [linkedin.com/in/tin-nguyen-ngoc-2453372a3](https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/)
-- <i class="fas fa-envelope"></i> **Email:** [ngoctin.work@gmail.com](mailto:ngoctin.work@gmail.com)
-- <i class="fas fa-phone"></i> **Phone:** [0397662903](tel:0397662903)
+## CONTACT
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 0.8rem;">
+  <div>
+    <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 2;">
+      <li><i class="fab fa-github" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">github.com/ngoctinn</a></li>
+      <li><i class="fab fa-linkedin" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">linkedin.com/in/tin-nguyen-ngoc</a></li>
+      <li><i class="fas fa-envelope" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a></li>
+      <li><i class="fas fa-comment-dots" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="tel:0397662903">0397662903</a> <span style="font-size: 0.85rem; color: #828282;">(Zalo only)</span></li>
+    </ul>
+  </div>
+  <div style="border-left: 1px solid #f0f0f0; padding-left: 1.5rem; font-size: 0.92rem; color: #424242; line-height: 1.9;">
+    <div><strong>Location:</strong> Ho Chi Minh City, Vietnam</div>
+    <div><strong>Status:</strong> Available for Software Engineer & Cloud Engineer roles</div>
+    <div><strong>Timezone:</strong> ICT (UTC+7)</div>
+  </div>
+</div>
 """
 
   # Social links config
   [params.social]
-    GitHub = "ngoctinn"
-    Linkedin = "tin-nguyen-ngoc-2453372a3"
-    Email = "ngoctin.work@gmail.com"
-    Phone = "0397662903"
+    GitHub = ""
+    Linkedin = ""
+    Email = ""
+    Phone = ""
 
   # Page config
   [params.page]

@@ -20,6 +20,8 @@
 
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
+            <hr>
+            <h2>POSTS</h2>
             {{- /* Paginate */ -}}
             {{- $pages := where .Site.RegularPages "Type" "posts" -}}
             {{- if .Site.Params.page.hiddenFromHomePage -}}

@@ -1,13 +1,397 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap");
+
 // ==========================================================
-// Phối màu Bổ túc (Complementary): Xanh Hải Quân & Cam San Hô
+// Chip Huyen Exact Design System (Classic Serif Magazine Style)
 // ==========================================================
 
-// 1. Cam San Hô (#FF6B5B) - Thay thế cho màu Xanh dương gốc (#2d96bd)
-$global-link-hover-color: #FF6B5B;
-$single-link-color: #FF6B5B;
-$single-link-color-dark: #FF6B5B;
-$pagination-link-color: #FF6B5B;
+body {
+  font-family: "Lora", Georgia, serif !important;
+  color: #111111 !important;
+  background-color: #fdfdfd !important;
 
-// 2. Xanh Hải Quân (#1A2B4C) - Thay thế cho màu Hồng gốc (#ef3982)
-$single-link-hover-color: #1A2B4C;
-$single-link-hover-color-dark: #64b5f6; // Biến thể sáng của Navy khi hover ở Dark Mode
+  &[theme=dark] {
+    color: #e5e7eb !important;
+    background-color: #18181b !important;
+  }
+}
+
+// 7. Search Button & Input: Neutral Black (No Blue, No Black Streak Underline!)
+.search input, #search-input-desktop, #search-input-mobile {
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.search .search-button, .search-toggle, #search-toggle-desktop, #search-toggle-mobile {
+  color: #111111 !important;
+  text-decoration: none !important;
+
+  i {
+    color: #111111 !important;
+    [theme=dark] & {
+      color: #e5e7eb !important;
+    }
+  }
+
+  [theme=dark] & {
+    color: #e5e7eb !important;
+  }
+
+  &:hover {
+    color: #111111 !important;
+    text-decoration: none !important;
+
+    [theme=dark] & {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// 1. Headings & Divider Lines
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", Georgia, serif !important;
+  font-weight: 400 !important;
+}
+
+h2 {
+  font-size: 1.35rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+  color: #111111 !important;
+
+  [theme=dark] & {
+    color: #e5e7eb !important;
+  }
+}
+
+hr {
+  border: none !important;
+  border-top: 1px solid #e8e8e8 !important;
+  margin: 1.2rem 0 !important;
+
+  [theme=dark] & {
+    border-top-color: #27272a !important;
+  }
+}
+
+// 2. Navigation Bar & Logo ("Nguyễn Ngọc Tín" - Underline on Hover, No Dot)
+.header-wrapper {
+  font-family: "Lora", Georgia, serif !important;
+  
+  .header-title {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    color: #424242 !important;
+
+    a {
+      color: #424242 !important;
+      font-weight: 400 !important;
+      text-decoration: none !important;
+
+      [theme=dark] & {
+        color: #e5e7eb !important;
+      }
+
+      &:hover {
+        text-decoration: underline !important;
+        color: #111111 !important;
+
+        [theme=dark] & {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+
+  .menu .menu-item {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    margin: 0 1rem;
+    color: #111111 !important;
+    text-decoration: none !important;
+
+    [theme=dark] & {
+      color: #e5e7eb !important;
+    }
+
+    &:hover {
+      text-decoration: underline !important;
+      color: #111111 !important;
+      font-weight: 400 !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &.active {
+      font-weight: 400 !important;
+      color: #111111 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &.delimiter {
+      display: none !important;
+    }
+  }
+}
+
+// 3. TOC Table of Contents: Light Muted Gray (13px), ONLY Active is Blue (#4d74eb), Hover is Bold + Underline
+.toc-content, #toc-auto, #toc-static {
+  a {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 0.8125rem !important; /* 13px small text */
+    font-weight: 400 !important;
+    color: #828282 !important; /* Muted light gray */
+    text-decoration: none !important;
+    transition: color 0.2s ease, font-weight 0.1s ease;
+
+    [theme=dark] & {
+      color: #9ca3af !important;
+    }
+
+    &:hover {
+      color: #111111 !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &.active {
+      color: #4d74eb !important; /* ONLY active scrolled/clicked section turns Blue */
+      font-weight: 700 !important;
+      text-decoration: none !important;
+
+      [theme=dark] & {
+        color: #60a5fa !important;
+      }
+    }
+  }
+}
+
+// 4. Article Titles & Links in Lists
+.summary .single-title {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.35rem;
+  font-weight: 400 !important;
+
+  a {
+    color: #111111 !important;
+    text-decoration: none !important;
+
+    [theme=dark] & {
+      color: #f3f4f6 !important;
+    }
+
+    &:hover {
+      color: #1337a6 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #93c5fd !important;
+      }
+    }
+  }
+}
+
+// 5. Meta Text & Tags (Muted Gray)
+.post-meta, .post-tags, .post-category, .post-author {
+  font-family: "Lora", Georgia, serif !important;
+  color: #828282 !important;
+  font-size: 14px;
+  
+  [theme=dark] & {
+    color: #9ca3af !important;
+  }
+  
+  a {
+    color: #828282 !important;
+    
+    [theme=dark] & {
+      color: #9ca3af !important;
+    }
+    
+    &:hover {
+      color: #1337a6 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #93c5fd !important;
+      }
+    }
+  }
+}
+
+// 6. Blockquotes (Exact Chip Huyen Style)
+blockquote {
+  font-family: "Lora", Georgia, serif !important;
+  color: #828282 !important;
+  border-left: 4px solid #e8e8e8 !important;
+  padding-left: 15px !important;
+  font-size: 18px !important;
+  font-style: italic !important;
+  background-color: transparent !important;
+
+  [theme=dark] & {
+    color: #9ca3af !important;
+    border-left-color: #374151 !important;
+    background-color: transparent !important;
+  }
+}
+
+// 7. General Content & Article Links (Excluding TOC)
+.single .content a, table a, .page-footer a, .post-footer a {
+  color: #4d74eb !important;
+  transition: color 0.2s ease;
+
+  [theme=dark] & {
+    color: #60a5fa !important;
+  }
+
+  &:hover {
+    color: #1337a6 !important;
+    text-decoration: underline !important;
+
+    [theme=dark] & {
+      color: #93c5fd !important;
+    }
+  }
+}
+
+// 8. Color-Coded Distinct Icons for Learning Resources Page
+.fa-youtube, .fa-youtube-square { color: #ff0000 !important; }
+.fa-star { color: #f59e0b !important; }
+.fa-graduation-cap { color: #2563eb !important; }
+.fa-book { color: #8b5cf6 !important; }
+.fa-globe { color: #10b981 !important; }
+.fa-check-circle { color: #16a34a !important; }
+.fa-github {
+  color: #24292e !important;
+  [theme=dark] & { color: #f0f6fc !important; }
+}
+
+// 9. Categories Page (Magazine Grid Cards & Left-Aligned Title)
+.page.archive {
+  .single-title {
+    text-align: left !important; /* Left-align "ALL CATEGORIES" */
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.4rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    font-weight: 400 !important;
+    color: #111111 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+
+    [theme=dark] & {
+      color: #e5e7eb !important;
+    }
+  }
+
+  .categories-card {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-top: 1rem !important;
+
+    .card-item {
+      width: 100% !important;
+      min-height: auto !important;
+      margin-top: 0 !important;
+      padding: 1.25rem 1.4rem !important;
+      border: 1px solid #e8e8e8 !important;
+      border-radius: 8px !important;
+      background-color: #ffffff !important;
+      box-sizing: border-box !important;
+
+      [theme=dark] & {
+        border-color: #27272a !important;
+        background-color: #18181b !important;
+      }
+
+      .card-item-wrapper {
+        width: 100% !important;
+      }
+
+      .card-item-title {
+        font-family: "Lora", Georgia, serif !important;
+        font-size: 1.15rem !important;
+        font-weight: 400 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.8rem !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        padding-bottom: 0.5rem !important;
+
+        [theme=dark] & {
+          border-bottom-color: #27272a !important;
+        }
+
+        a {
+          color: #111111 !important;
+          text-decoration: none !important;
+
+          [theme=dark] & {
+            color: #f3f4f6 !important;
+          }
+
+          &:hover {
+            color: #1337a6 !important;
+            text-decoration: underline !important;
+          }
+
+          i {
+            color: #828282 !important;
+            margin-right: 0.4rem !important;
+          }
+        }
+      }
+
+      .archive-item {
+        margin: 0.5rem 0 !important;
+
+        .archive-item-link {
+          font-family: "Lora", Georgia, serif !important;
+          font-size: 0.95rem !important;
+          color: #424242 !important;
+          text-decoration: none !important;
+
+          [theme=dark] & {
+            color: #d1d5db !important;
+          }
+
+          &:hover {
+            color: #1337a6 !important;
+            text-decoration: underline !important;
+
+            [theme=dark] & {
+              color: #93c5fd !important;
+            }
+          }
+        }
+      }
+
+      .more-post a {
+        font-family: "Lora", Georgia, serif !important;
+        font-size: 0.85rem !important;
+        color: #4d74eb !important;
+        text-decoration: none !important;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
