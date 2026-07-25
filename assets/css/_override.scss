@@ -234,20 +234,44 @@ hr {
   }
 }
 
-// 6. Blockquotes (Exact Chip Huyen Style)
+// 6. Blockquotes (Centered Magazine Billboard Style - Larger & Bolder)
 blockquote {
   font-family: "Lora", Georgia, serif !important;
-  color: #828282 !important;
-  border-left: 4px solid #e8e8e8 !important;
-  padding-left: 15px !important;
-  font-size: 18px !important;
+  color: #111111 !important;
+  text-align: center !important;
+  border: none !important;
+  border-top: 1px solid #e8e8e8 !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  border-left: none !important;
+  padding: 1.2rem 1.5rem !important;
+  margin: 1.8rem 0 !important;
+  font-size: 1.75rem !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
   font-style: italic !important;
   background-color: transparent !important;
 
   [theme=dark] & {
-    color: #9ca3af !important;
-    border-left-color: #374151 !important;
+    color: #f3f4f6 !important;
+    border-top-color: #27272a !important;
+    border-bottom-color: #27272a !important;
     background-color: transparent !important;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
+// 7. General Content & Article Typography (Line Height 1.8 for Maximum Comfort)
+.single .content {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+
+  p {
+    margin-bottom: 1.5rem !important;
+    line-height: 1.8 !important;
   }
 }
 
@@ -390,6 +414,128 @@ blockquote {
 
         &:hover {
           text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
+
+// 10. Mobile Navigation Menu (Clean Editorial Mobile UX)
+#header-mobile {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+
+  [theme=dark] & {
+    background-color: #18181b !important;
+    border-bottom-color: #27272a !important;
+  }
+
+  .header-wrapper {
+    .header-title a {
+      font-family: "Lora", Georgia, serif !important;
+      font-size: 22px !important;
+      font-weight: 400 !important;
+      color: #111111 !important;
+
+      [theme=dark] & {
+        color: #e5e7eb !important;
+      }
+    }
+
+    .menu-toggle span {
+      background-color: #111111 !important;
+
+      [theme=dark] & {
+        background-color: #e5e7eb !important;
+      }
+    }
+  }
+
+  .menu#menu-mobile {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    padding: 1rem 1.5rem !important;
+
+    [theme=dark] & {
+      background-color: #18181b !important;
+      border-bottom-color: #27272a !important;
+    }
+
+    .menu-item {
+      font-family: "Lora", Georgia, serif !important;
+      font-size: 1.15rem !important;
+      font-weight: 400 !important;
+      color: #111111 !important;
+      padding: 0.6rem 0 !important;
+      display: block !important;
+      text-align: center !important;
+      text-decoration: none !important;
+
+      [theme=dark] & {
+        color: #e5e7eb !important;
+      }
+
+      &:hover, &.active {
+        color: #111111 !important;
+        text-decoration: underline !important;
+
+        [theme=dark] & {
+          color: #ffffff !important;
+        }
+      }
+    }
+
+    .theme-switch {
+      color: #111111 !important;
+      margin-top: 0.5rem !important;
+
+      [theme=dark] & {
+        color: #e5e7eb !important;
+      }
+
+      i {
+        color: #111111 !important;
+
+        [theme=dark] & {
+          color: #e5e7eb !important;
+        }
+      }
+    }
+
+    .search-wrapper {
+      margin-bottom: 1rem !important;
+
+      .search.mobile {
+        background-color: #f4f4f5 !important;
+        border-radius: 6px !important;
+        padding: 0.4rem 0.8rem !important;
+
+        [theme=dark] & {
+          background-color: #27272a !important;
+        }
+
+        input {
+          font-family: "Lora", Georgia, serif !important;
+          color: #111111 !important;
+          background: transparent !important;
+          font-size: 0.95rem !important;
+
+          [theme=dark] & {
+            color: #e5e7eb !important;
+          }
+        }
+
+        .search-button i {
+          color: #828282 !important;
+        }
+      }
+
+      .search-cancel {
+        font-family: "Lora", Georgia, serif !important;
+        color: #828282 !important;
+
+        &:hover {
+          color: #111111 !important;
         }
       }
     }
