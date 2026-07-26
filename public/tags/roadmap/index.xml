@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Roadmap - Tag - Nguyen Ngoc Tin</title>
+        <link>http://localhost:1313/tags/roadmap/</link>
+        <description>Roadmap - Tag - Nguyen Ngoc Tin</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/roadmap/" rel="self" type="application/rss+xml" /><item>
+    <title>Không Có Con Đường Tắt Trong Tự Học</title>
+    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
+    <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, bạn đã đi hết con đường vòng.&rdquo;</em></p>
+</blockquote>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bài viết này được tổng hợp và phát triển dựa trên góc nhìn và các chia sẻ trên <strong>Math2IT</strong> của <strong>Đinh Anh Thi</strong>.</div>
+    </div>
+</div>
+<p>Trong cuốn sách <em>Sapiens</em>, nhà sử học Yuval Noah Harari có nhắc đến một bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong></p>]]></description>
+</item>
+</channel>
+</rss>

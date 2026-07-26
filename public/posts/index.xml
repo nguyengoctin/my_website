@@ -4,7 +4,7 @@
         <link>http://localhost:1313/posts/</link>
         <description>All Posts | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
     <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
@@ -193,6 +193,25 @@
 <p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
 </item>
 <item>
+    <title>Không Có Con Đường Tắt Trong Tự Học</title>
+    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
+    <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, bạn đã đi hết con đường vòng.&rdquo;</em></p>
+</blockquote>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bài viết này được tổng hợp và phát triển dựa trên góc nhìn và các chia sẻ trên <strong>Math2IT</strong> của <strong>Đinh Anh Thi</strong>.</div>
+    </div>
+</div>
+<p>Trong cuốn sách <em>Sapiens</em>, nhà sử học Yuval Noah Harari có nhắc đến một bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong></p>]]></description>
+</item>
+<item>
     <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết</title>
     <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
@@ -229,15 +248,6 @@
     </div>
 </div>
 <p>Trong bối cảnh AI đang phát triển bùng nổ, việc sử dụng các công cụ hỗ trợ như GitHub Copilot, ChatGPT hay Claude đã trở thành thói quen hàng ngày của nhiều kỹ sư phần mềm. Tuy nhiên, ranh giới thực sự của một hệ thống AI mạnh mẽ không dừng lại ở việc &ldquo;gõ code hộ&rdquo; hay &ldquo;trả lời câu hỏi theo prompt&rdquo;. Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> - những thực thể tự trị có khả năng tự động lên kế hoạch, tương tác với môi trường, sử dụng các công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
-</item>
-<item>
-    <title>Góc Nhìn Về Tự Học: Không Có Con Đường Tắt Trong Thế Giới Kỹ Thuật</title>
-    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
-    <description><![CDATA[<p>Trong hành trình phát triển bản thân và theo đuổi ngành kỹ thuật, một trong những bài học đắt giá nhất mà tôi đúc kết được chính là: <strong>Không bao giờ có con đường tắt trong tự học.</strong></p>
-<p>Thực tế, có một quy luật tâm lý rất tự nhiên: con người luôn ưu tiên những lựa chọn mang lại cảm giác dễ chịu. Trong việc học cũng vậy, chúng ta rất dễ bị hấp dẫn bởi những lời quảng cáo về các phương pháp tiếp cận siêu tốc hay những tài liệu tóm tắt ngắn gọn.</p>]]></description>
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng Để AI &#39;Code Hộ&#39;, Hãy Dùng AI Như Một Cộng Sự!</title>
