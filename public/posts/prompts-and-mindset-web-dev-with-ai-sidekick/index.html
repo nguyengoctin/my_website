@@ -36,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/prompts-and-mindset-web-dev-with-ai-sidekick\/"
-        },"genre": "posts","keywords": "AI, Prompt Engineering, Web Development, Spec-Driven Development, Career, Workflow, Django, Python","wordcount":  2748 ,
+        },"genre": "posts","keywords": "AI, Prompt Engineering, Web Development, Spec-Driven Development, Career, Workflow, Django, Python","wordcount":  2693 ,
         "url": "http:\/\/localhost:1313\/posts\/prompts-and-mindset-web-dev-with-ai-sidekick\/","datePublished": "2026-07-24T00:00:00+00:00","dateModified": "2026-07-24T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -213,41 +213,41 @@
 <p>Các nghiên cứu về tâm lý học hành vi đã chỉ ra hiện tượng <strong>&ldquo;Cognitive Offloading&rdquo;</strong> — khi con người quá phụ thuộc vào công cụ hỗ trợ, não bộ sẽ ngừng nỗ lực tư duy và ghi nhớ.</p>
 <div class="details admonition warning open">
     <div class="details-summary admonition-title">
-        <i class="icon fas fa-exclamation" aria-hidden="true"></i>Warning<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-exclamation" aria-hidden="true"></i>Cạm bẫy của việc lạm dụng AI<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Cạm bẫy của việc lạm dụng AI:</strong>
-Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy nghĩ logic, bạn dán ngay lỗi đó cho AI và bảo <em>&ldquo;Sửa hộ tôi&rdquo;</em>. Việc này tạo ra một vòng lặp tai hại: Bạn không hiểu nguyên nhân gỡ lỗi $\to$ Bạn dán code mới của AI $\to$ Code mới sinh ra lỗi khác $\to$ Bạn lại dán tiếp. Cuối cùng, bạn tốn nhiều thời gian hơn cả việc tự học và gỡ lỗi từ đầu!</p></div>
+        <div class="admonition-content">Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy nghĩ logic, bạn dán ngay lỗi đó cho AI và bảo <em>&ldquo;Sửa hộ tôi&rdquo;</em>. Việc này tạo ra một vòng lặp tai hại: Bạn không hiểu nguyên nhân gỡ lỗi $\to$ Bạn dán code mới của AI $\to$ Code mới sinh ra lỗi khác $\to$ Bạn lại dán tiếp. Cuối cùng, bạn tốn nhiều thời gian hơn cả việc tự học và gỡ lỗi từ đầu!</div>
     </div>
-</div><hr>
+</div>
+<hr>
 <h2 id="phần-2-dùng-ai-làm-mentor-để-học-ai-as-a-coach">PHẦN 2: DÙNG AI LÀM MENTOR ĐỂ HỌC (AI AS A COACH)</h2>
 <p>Để học tập hiệu quả cùng AI mà không bị thụ động, bạn cần thay đổi cách giao tiếp. Đừng bao giờ xin giải pháp cuối cùng ngay lập tức. Hãy biến AI thành một gia sư riêng khắc nghiệt nhưng kiên nhẫn.</p>
 <h3 id="1-thiết-lập-hợp-đồng-học-tập-learning-contract">1. Thiết lập &ldquo;Hợp đồng Học tập&rdquo; (Learning Contract)</h3>
 <p>Trước khi bắt đầu một chủ đề mới (VD: Học Django, SQL JOINs hay Async JavaScript), hãy gửi cho AI một câu lệnh thiết lập vai trò (System Prompt / Custom Instructions):</p>
-<div class="details admonition note open">
+<div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Hợp đồng học tập (Learning Contract)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Hợp đồng học tập (Learning Contract)</strong>
-<em>&ldquo;Bạn là gia sư web dev của tôi về HTML, CSS, JavaScript, SQL, Python và Django. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích: code làm gì, tại sao dùng cách này, và các lỗi phổ biến. Đưa ra 1-3 câu hỏi nhỏ sau khi giải thích. Luôn đưa ra một bài tập nhỏ sau khi giải thích một khái niệm. Khi tôi dán một lỗi, hãy giúp tôi debug bằng cách giải thích nguyên nhân có khả năng xảy ra nhất, bảo tôi cần kiểm tra gì và đưa ra cách sửa tối thiểu trước.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Bạn là gia sư web dev của tôi về HTML, CSS, JavaScript, SQL, Python và Django. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích: code làm gì, tại sao dùng cách này, và các lỗi phổ biến. Đưa ra 1-3 câu hỏi nhỏ sau khi giải thích. Luôn đưa ra một bài tập nhỏ sau khi giải thích một khái niệm. Khi tôi dán một lỗi, hãy giúp tôi debug bằng cách giải thích nguyên nhân có khả năng xảy ra nhất, bảo tôi cần kiểm tra gì và đưa ra cách sửa tối thiểu trước.&rdquo;</div>
     </div>
-</div><p>Đồng thời, hãy đặt ra <strong>hàng rào giới hạn (Guardrails)</strong> để ngăn AI sinh quá nhiều code:</p>
+</div>
+<p>Đồng thời, hãy đặt ra <strong>hàng rào giới hạn (Guardrails)</strong> để ngăn AI sinh quá nhiều code:</p>
 <div class="details admonition tip open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Prompt Mẫu: Hàng rào giới hạn (Guardrails)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Hàng rào giới hạn</strong>
-<em>&ldquo;Bạn phải tuân thủ các quy tắc này khi phản hồi có code: Không tạo quá 40 dòng code một lúc trừ khi được yêu cầu; Ưu tiên thay đổi từng bước với diffs (nêu rõ dòng nào xóa, dòng nào thêm); Đưa ra vấn đề có khả năng xảy ra nhất trước tiên.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Bạn phải tuân thủ các quy tắc này khi phản hồi có code: Không tạo quá 40 dòng code một lúc trừ khi được yêu cầu; Ưu tiên thay đổi từng bước với diffs (nêu rõ dòng nào xóa, dòng nào thêm); Đưa ra vấn đề có khả năng xảy ra nhất trước tiên.&rdquo;</div>
     </div>
-</div><h3 id="2-vòng-lặp-học-tập-4-bước-the-4-step-ai-learning-loop">2. Vòng lặp học tập 4 bước (The 4-Step AI Learning Loop)</h3>
+</div>
+<h3 id="2-vòng-lặp-học-tập-4-bước-the-4-step-ai-learning-loop">2. Vòng lặp học tập 4 bước (The 4-Step AI Learning Loop)</h3>
 <p>Áp dụng quy trình 4 bước mỗi khi học một kỹ thuật mới:</p>
-<div class="mermaid" id="id-1">graph TD
-    A[&#34;Bước 1: Hỏi &amp; Giải thích&lt;br&gt;(Yêu cầu ví dụ tối giản)&#34;] --&gt; B[&#34;Bước 2: Tự tay triển khai&lt;br&gt;(Gõ lại code vào Editor)&#34;]
-    B --&gt; C[&#34;Bước 3: Thu nhận phản hồi&lt;br&gt;(Dán code nhờ AI nhận xét)&#34;]
-    C --&gt; D[&#34;Bước 4: Mở rộng thử thách&lt;br&gt;(Yêu cầu bài tập biến thể)&#34;]
-    D --&gt; A</div><ol>
+<div class="mermaid" id="id-1">flowchart LR
+    A[&#34;Bước 1: Hỏi và Giải thích&#34;] --&gt; B[&#34;Bước 2: Tự tay triển khai&#34;]
+    B --&gt; C[&#34;Bước 3: Thu nhận phản hồi&#34;]
+    C --&gt; D[&#34;Bước 4: Mở rộng thử thách&#34;]
+    D -. Lặp lại quy trình .-&gt; A</div><ol>
 <li><strong>Bước 1 — Hỏi &amp; Giải thích:</strong> Yêu cầu AI giải thích lý thuyết đi kèm ví dụ nhỏ nhất có thể (<em>Minimal Working Example</em>).</li>
 <li><strong>Bước 2 — Tự tay triển khai (Type it out):</strong> Bắt buộc phải <strong>tự gõ lại từng dòng code</strong> vào VS Code thay vì bấm nút Copy. Việc tự gõ tạo ra liên kết thần kinh và phản xạ cú pháp trong não bộ.</li>
 <li><strong>Bước 3 — Thu nhận phản hồi:</strong> Dán đoạn code bạn tự gõ vào AI và hỏi: <em>&ldquo;Tôi viết như thế này đã chuẩn chưa? Có cách nào tối ưu hơn không?&rdquo;</em>.</li>
@@ -257,13 +257,13 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
 <p>Khi code bị lỗi, thay vì bảo AI sửa hộ, hãy dùng phương pháp vấn đáp Socratic:</p>
 <div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Example<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Phương pháp gỡ lỗi Socratic (Socratic Debugging)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Socratic Debugging</strong>
-<em>&ldquo;Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng đưa cho tôi code sửa ngay. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng đưa cho tôi code sửa ngay. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.&rdquo;</div>
     </div>
-</div><h3 id="4-kiểm-tra-chéo--thẩm-định-giả-định-verification-prompts">4. Kiểm tra chéo &amp; Thẩm định giả định (Verification Prompts)</h3>
+</div>
+<h3 id="4-kiểm-tra-chéo--thẩm-định-giả-định-verification-prompts">4. Kiểm tra chéo &amp; Thẩm định giả định (Verification Prompts)</h3>
 <p>AI rất hay đưa ra các câu trả lời tự tin nhưng sai lệch (illusion of competence). Hãy luôn kiểm tra chéo bằng các câu hỏi:</p>
 <ul>
 <li><em>&ldquo;Bạn đang đưa ra những giả định nào về cấu trúc dự án của tôi?&rdquo;</em></li>
@@ -291,52 +291,50 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
 <p>Dưới đây là quy trình thực tế được trích xuất từ tài liệu phát triển ứng dụng web chuyên nghiệp:</p>
 <div class="mermaid" id="id-2">sequenceDiagram
     autonumber
-    actor Dev as Lập trình viên (Lead Engineer)
-    participant AI as AI Sidekick (Codex / Claude)
+    actor Dev as Lập trình viên
+    participant AI as AI Sidekick
     participant Code as Mã nguồn Dự án
 
-    Dev-&gt;&gt;Dev: 1. Suy nghĩ &amp; Viết project-brief.md &#43; design.md
-    Dev-&gt;&gt;AI: 2. Phê bình tài liệu (Senior Engineer Review Prompt)
-    AI--&gt;&gt;Dev: Đặt câu hỏi phỏng vấn, chỉ ra rủi ro &amp; lỗ hổng
-    Dev-&gt;&gt;AI: 3. Duyệt tài liệu &amp; Yêu cầu tạo Implementation Plan
-    AI--&gt;&gt;Dev: Tạo file plan.md (CHƯA viết code)
-    Dev-&gt;&gt;AI: 4. Đề xuất chia nhỏ thành danh sách Tasks
-    AI--&gt;&gt;Dev: Tạo tasks.md (Các đầu việc nhỏ có thể test được)
-    Dev-&gt;&gt;AI: 5. Lệnh thực thi theo Task (Execute Prompt)
-    AI-&gt;&gt;Code: 6. Sinh mã scaffolding (Models, Views, Templates)
-    Dev-&gt;&gt;Code: 7. Chạy Migrations, Unit Test &amp; Kiểm thử thực tế</div><h4 id="bước-1-viết-tài-liệu-brief--design">Bước 1: Viết tài liệu Brief &amp; Design</h4>
+    Dev-&gt;&gt;Dev: Viết project-brief.md và design.md
+    Dev-&gt;&gt;AI: Phỏng vấn rà soát lỗ hổng đặc tả
+    AI--&gt;&gt;Dev: Phản biện rủi ro và góp ý tài liệu
+    Dev-&gt;&gt;AI: Yêu cầu tạo plan.md và tasks.md
+    AI--&gt;&gt;Dev: Xuất Kế hoạch và Danh sách Task
+    Dev-&gt;&gt;AI: Yêu cầu thực thi mã nguồn theo Task
+    AI-&gt;&gt;Code: Sinh mã Scaffolding (Models, Views,...)
+    Dev-&gt;&gt;Code: Kiểm thử Unit Test và nghiệm thu</div><h4 id="bước-1-viết-tài-liệu-brief--design">Bước 1: Viết tài liệu Brief &amp; Design</h4>
 <p>Tự mình viết ra yêu cầu bài toán vào file <code>project-brief.md</code>. Điểm quan trọng nhất là mục <strong>Non-goals (Những gì KHÔNG làm)</strong> để ngăn AI tự ý thêm tính năng rác.</p>
 <h4 id="bước-2-bắt-ai-đóng-vai-senior-engineer-để-phản-biện">Bước 2: Bắt AI đóng vai Senior Engineer để phản biện</h4>
 <p>Gửi tài liệu cho AI và yêu cầu nó &ldquo;tìm lỗi&rdquo;:</p>
-<div class="details admonition note open">
+<div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Senior Engineer Review Brief<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Senior Engineer Review Brief</strong>
-<em>&ldquo;Đọc file <code>project-brief.md</code> và đóng vai senior engineer review dự án trước khi triển khai code. Nhiệm vụ của bạn là tìm các điểm thiếu sót, không rõ ràng hoặc rủi ro về mặt kiến trúc. Phỏng vấn tôi bằng các câu hỏi tập trung để giải quyết các lỗ hổng. Sau đó đề xuất một phiên bản brief tốt hơn.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Đọc file <code>project-brief.md</code> và đóng vai senior engineer review dự án trước khi triển khai code. Nhiệm vụ của bạn là tìm các điểm thiếu sót, không rõ ràng hoặc rủi ro về mặt kiến trúc. Phỏng vấn tôi bằng các câu hỏi tập trung để giải quyết các lỗ hổng. Sau đó đề xuất một phiên bản brief tốt hơn.&rdquo;</div>
     </div>
-</div><h4 id="bước-3-lập-kế-hoạch-triển-khai-implementation-plan">Bước 3: Lập kế hoạch triển khai (Implementation Plan)</h4>
+</div>
+<h4 id="bước-3-lập-kế-hoạch-triển-khai-implementation-plan">Bước 3: Lập kế hoạch triển khai (Implementation Plan)</h4>
 <p>Sau khi chốt tài liệu Brief, yêu cầu AI lập kế hoạch chi tiết mà <strong>chưa viết code</strong>:</p>
-<div class="details admonition note open">
+<div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Lên Kế hoạch triển khai (Plan)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Lên Kế hoạch triển khai (Plan)</strong>
-<em>&ldquo;Tạo một kế hoạch triển khai (implementation plan) cho tính năng URL shortener dựa trên spec trong project-brief.md. Ràng buộc: Giữ code đơn giản, sử dụng Django built-in templates. Chỉ tạo kế hoạch chi tiết từng file cần sửa/tạo mới, CHƯA viết code thực thi.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Tạo một kế hoạch triển khai (implementation plan) cho tính năng URL shortener dựa trên spec trong project-brief.md. Ràng buộc: Giữ code đơn giản, sử dụng Django built-in templates. Chỉ tạo kế hoạch chi tiết từng file cần sửa/tạo mới, CHƯA viết code thực thi.&rdquo;</div>
     </div>
-</div><h4 id="bước-4-chia-nhỏ-thành-danh-sách-tasks">Bước 4: Chia nhỏ thành danh sách Tasks</h4>
+</div>
+<h4 id="bước-4-chia-nhỏ-thành-danh-sách-tasks">Bước 4: Chia nhỏ thành danh sách Tasks</h4>
 <p>Yêu cầu AI chia kế hoạch thành các danh sách công việc nhỏ (tickets):</p>
-<div class="details admonition note open">
+<div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Chia Task<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Chia Task</strong>
-<em>&ldquo;Hãy chia kế hoạch triển khai tính năng thành một chuỗi các task nhỏ, có thể review được độc lập. Mỗi task phải tạo ra một kết quả nhìn thấy được (verifiable outcome) và có thứ tự thực hiện hợp lý.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Hãy chia kế hoạch triển khai tính năng thành một chuỗi các task nhỏ, có thể review được độc lập. Mỗi task phải tạo ra một kết quả nhìn thấy được (verifiable outcome) và có thứ tự thực hiện hợp lý.&rdquo;</div>
     </div>
-</div><h4 id="bước-5-thực-thi-code-từng-phần-implementation">Bước 5: Thực thi code từng phần (Implementation)</h4>
+</div>
+<h4 id="bước-5-thực-thi-code-từng-phần-implementation">Bước 5: Thực thi code từng phần (Implementation)</h4>
 <p>Lúc này mới sử dụng các công cụ AI CLI (như Codex, Claude Code hay Cursor) để sinh mã nguồn theo đúng các task đã duyệt.</p>
 <h4 id="bước-6-thẩm-định--kiểm-thử-verification--review">Bước 6: Thẩm định &amp; Kiểm thử (Verification &amp; Review)</h4>
 <p>Chạy các lệnh khởi tạo database, chạy unit test và truy cập ứng dụng trên trình duyệt để nghiệm thu theo đúng tiêu chí <strong>Acceptance Criteria</strong>.</p>
@@ -346,11 +344,10 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
 <h3 id="1-mega-prompt-one-shot-khởi-tạo-dự-án-chuẩn-kiến-trúc">1. Mega-Prompt: One-Shot Khởi Tạo Dự Án Chuẩn Kiến Trúc</h3>
 <div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Example<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: One-Shot Khởi tạo Dự án (TallyApp)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: One-Shot Project Scaffolding</strong>
-*&ldquo;Tôi đang xây dựng ứng dụng web Django 6 tên là TallyApp. Hãy đọc kỹ hai file <code>project-brief.md</code> và <code>design.md</code>.</p>
+        <div class="admonition-content"><p>&ldquo;Tôi đang xây dựng ứng dụng web Django 6 tên là TallyApp. Hãy đọc kỹ hai file <code>project-brief.md</code> và <code>design.md</code>.</p>
 <p>Trước khi tạo code, bạn phải hoàn thành phân tích theo các bước:</p>
 <ol>
 <li>Trình bày lại yêu cầu bài toán.</li>
@@ -363,32 +360,34 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
 6. Đề xuất cấu trúc Django apps.
 7. Thiết kế data models.
 8. Đề xuất danh sách URLs.</p>
-<p>Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã scaffolding cơ bản cho models, forms, views, urls, templates, và test cases.&rdquo;*</p></div>
+<p>Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã scaffolding cơ bản cho models, forms, views, urls, templates, và test cases.&rdquo;</p>
+</div>
     </div>
-</div><h3 id="2-prompt-kiểm-thử-code-testing-prompt">2. Prompt Kiểm Thử Code (Testing Prompt)</h3>
+</div>
+<h3 id="2-prompt-kiểm-thử-code-testing-prompt">2. Prompt Kiểm Thử Code (Testing Prompt)</h3>
 <div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Example<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Viết Unit Test cho Django Model<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Viết Unit Test cho Django Model</strong>
-<em>&ldquo;Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc xác thực (validation rules), giá trị mặc định (default values) và các ràng buộc. Tránh phụ thuộc vào giá trị primary key cố định. Tập trung vào negative paths và edge cases.&rdquo;</em></p></div>
+        <div class="admonition-content">&ldquo;Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc xác thực (validation rules), giá trị mặc định (default values) và các ràng buộc. Tránh phụ thuộc vào giá trị primary key cố định. Tập trung vào negative paths và edge cases.&rdquo;</div>
     </div>
-</div><h3 id="3-prompt-code-review-sau-khi-ai-viết-code">3. Prompt Code Review Sau Khi AI Viết Code</h3>
+</div>
+<h3 id="3-prompt-code-review-sau-khi-ai-viết-code">3. Prompt Code Review Sau Khi AI Viết Code</h3>
 <div class="details admonition example open">
     <div class="details-summary admonition-title">
-        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Example<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon fas fa-list-ol" aria-hidden="true"></i>Prompt Mẫu: Phản biện &amp; Review mã nguồn AI<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content"><p><strong>Prompt Mẫu: Phản biện mã nguồn AI</strong>
-*&ldquo;Hãy review lại tính năng vừa triển khai so với spec và acceptance criteria ban đầu. Xác định:</p>
+        <div class="admonition-content"><p>&ldquo;Hãy review lại tính năng vừa triển khai so với spec và acceptance criteria ban đầu. Xác định:</p>
 <ol>
 <li>Hành vi hoặc yêu cầu nào còn thiếu?</li>
 <li>Có sự phức tạp không cần thiết nào được thêm vào không?</li>
-<li>Những trường hợp test case nào còn thiếu?&rdquo;*</li>
+<li>Những trường hợp test case nào còn thiếu?&rdquo;</li>
 </ol></div>
     </div>
-</div><hr>
+</div>
+<hr>
 <h2 id="phần-5-kết-luận--giá-trị-của-lập-trình-viên-trong-thập-kỷ-tới">PHẦN 5: KẾT LUẬN — GIÁ TRỊ CỦA LẬP TRÌNH VIÊN TRONG THẬP KỶ TỚI</h2>
 <p>Trí tuệ nhân tạo đang tái định hình toàn bộ ngành công nghiệp phần mềm. Cú gõ bàn phím không còn là rào cản, và việc thuộc lòng cú pháp không còn là lợi thế cạnh tranh độc quyền.</p>
 <p>Tuy nhiên, điều đó không có nghĩa là vai trò của lập trình viên bị mờ nhạt. Trái lại, <strong>yêu cầu đối với một kỹ sư phần mềm thực thụ chưa bao giờ cao đến thế</strong>.</p>
@@ -427,10 +426,35 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.160.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 1.0.0"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ngoctinn" target="_blank">Nguyen Ngoc Tin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    <div class="footer-container custom-footer-wrapper">
+        <div class="footer-social-links">
+            <a href="https://github.com/ngoctinn" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:ngoctin.work@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="/index.xml" target="_blank" title="RSS Feed">
+                <i class="fas fa-rss"></i>
+            </a>
         </div>
-    </footer></div>
+
+        <div class="footer-line copyright-line">
+            <span class="copyright-year">&copy; 2026</span>
+            <span class="author-name"><a href="https://github.com/ngoctinn">Nguyen Ngoc Tin</a></span>
+            <span class="rights-reserved">• All rights reserved.</span>
+        </div>
+
+        <div class="footer-line meta-line">
+            <span class="tech-stack">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
+            <span class="splitter">|</span>
+            <span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+        </div>
+    </div>
+</footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
                 <i class="fas fa-arrow-up" aria-hidden="true"></i>
@@ -440,5 +464,5 @@ Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy ngh
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script src="/lib/mermaid/mermaid.min.js"></script><script>window.config={"comment":{},"data":{"id-1":"graph TD\n    A[\"Bước 1: Hỏi \u0026 Giải thích\u003cbr\u003e(Yêu cầu ví dụ tối giản)\"] --\u003e B[\"Bước 2: Tự tay triển khai\u003cbr\u003e(Gõ lại code vào Editor)\"]\n    B --\u003e C[\"Bước 3: Thu nhận phản hồi\u003cbr\u003e(Dán code nhờ AI nhận xét)\"]\n    C --\u003e D[\"Bước 4: Mở rộng thử thách\u003cbr\u003e(Yêu cầu bài tập biến thể)\"]\n    D --\u003e A","id-2":"sequenceDiagram\n    autonumber\n    actor Dev as Lập trình viên (Lead Engineer)\n    participant AI as AI Sidekick (Codex / Claude)\n    participant Code as Mã nguồn Dự án\n\n    Dev-\u003e\u003eDev: 1. Suy nghĩ \u0026 Viết project-brief.md + design.md\n    Dev-\u003e\u003eAI: 2. Phê bình tài liệu (Senior Engineer Review Prompt)\n    AI--\u003e\u003eDev: Đặt câu hỏi phỏng vấn, chỉ ra rủi ro \u0026 lỗ hổng\n    Dev-\u003e\u003eAI: 3. Duyệt tài liệu \u0026 Yêu cầu tạo Implementation Plan\n    AI--\u003e\u003eDev: Tạo file plan.md (CHƯA viết code)\n    Dev-\u003e\u003eAI: 4. Đề xuất chia nhỏ thành danh sách Tasks\n    AI--\u003e\u003eDev: Tạo tasks.md (Các đầu việc nhỏ có thể test được)\n    Dev-\u003e\u003eAI: 5. Lệnh thực thi theo Task (Execute Prompt)\n    AI-\u003e\u003eCode: 6. Sinh mã scaffolding (Models, Views, Templates)\n    Dev-\u003e\u003eCode: 7. Chạy Migrations, Unit Test \u0026 Kiểm thử thực tế"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
 </html>

@@ -1,0 +1,32 @@
+{{- if ne .Site.Params.footer.enable false -}}
+<footer class="footer">
+    <div class="footer-container custom-footer-wrapper">
+        <div class="footer-social-links">
+            <a href="https://github.com/ngoctinn" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:ngoctin.work@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="/index.xml" target="_blank" title="RSS Feed">
+                <i class="fas fa-rss"></i>
+            </a>
+        </div>
+
+        <div class="footer-line copyright-line">
+            <span class="copyright-year">&copy; {{ with .Site.Params.footer.since }}{{ if lt . now.Year }}{{ . }} - {{ end }}{{ end }}{{ now.Year }}</span>
+            <span class="author-name"><a href="{{ $.Site.Params.Author.link | default .Site.Home.RelPermalink }}">{{ .Site.Params.Author.name }}</a></span>
+            <span class="rights-reserved">• All rights reserved.</span>
+        </div>
+
+        <div class="footer-line meta-line">
+            <span class="tech-stack">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
+            <span class="splitter">|</span>
+            <span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+        </div>
+    </div>
+</footer>
+{{- end -}}

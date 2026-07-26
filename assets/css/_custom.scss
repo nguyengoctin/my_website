@@ -126,3 +126,123 @@
     word-break: break-word !important;
     overflow-x: auto !important;
 }
+
+/* 7. Modern & Professional Custom Footer Styling */
+.footer {
+    padding: 2.5rem 0 2rem 0 !important;
+    margin-top: 3rem !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+
+    [theme=dark] & {
+        border-top-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+.custom-footer-wrapper {
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    text-align: center !important;
+}
+
+.footer-social-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+
+    a {
+        color: #666666 !important;
+        font-size: 1.25rem !important;
+        transition: color 0.2s ease, transform 0.2s ease !important;
+        display: inline-flex !important;
+
+        &:hover {
+            color: #4d74eb !important;
+            transform: translateY(-2px) !important;
+        }
+
+        [theme=dark] & {
+            color: #a0aec0 !important;
+
+            &:hover {
+                color: #60a5fa !important;
+            }
+        }
+    }
+}
+
+.footer-line.copyright-line {
+    font-size: 0.92rem !important;
+    color: #4a5568 !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+
+    [theme=dark] & {
+        color: #cbd5e0 !important;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+
+        &:hover {
+            color: #4d74eb !important;
+            text-decoration: underline !important;
+        }
+
+        [theme=dark] &:hover {
+            color: #60a5fa !important;
+        }
+    }
+
+    .rights-reserved {
+        margin-left: 0.25rem !important;
+        color: #718096 !important;
+
+        [theme=dark] & {
+            color: #a0aec0 !important;
+        }
+    }
+}
+
+.footer-line.meta-line {
+    font-size: 0.82rem !important;
+    color: #828282 !important;
+
+    [theme=dark] & {
+        color: #718096 !important;
+    }
+
+    a {
+        color: #666666 !important;
+        text-decoration: none !important;
+
+        &:hover {
+            color: #4d74eb !important;
+            text-decoration: underline !important;
+        }
+
+        [theme=dark] & {
+            color: #a0aec0 !important;
+
+            &:hover {
+                color: #60a5fa !important;
+            }
+        }
+    }
+
+    .splitter {
+        margin: 0 0.4rem !important;
+        opacity: 0.6 !important;
+    }
+}
+

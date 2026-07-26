@@ -18,10 +18,10 @@
       <description></description>
     </item>
     <item>
-      <title>Cheat Sheet</title>
-      <link>http://localhost:1313/tags/cheat-sheet/</link>
+      <title>Career</title>
+      <link>http://localhost:1313/tags/career/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cheat-sheet/</guid>
+      <guid>http://localhost:1313/tags/career/</guid>
       <description></description>
     </item>
     <item>
@@ -29,6 +29,13 @@
       <link>http://localhost:1313/tags/data-science/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>http://localhost:1313/tags/data-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Django</title>
+      <link>http://localhost:1313/tags/django/</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/django/</guid>
       <description></description>
     </item>
     <item>
@@ -60,6 +67,13 @@
       <description></description>
     </item>
     <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Resources</title>
       <link>http://localhost:1313/tags/resources/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -74,6 +88,13 @@
       <description></description>
     </item>
     <item>
+      <title>Spec-Driven Development</title>
+      <link>http://localhost:1313/tags/spec-driven-development/</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/spec-driven-development/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Thinking</title>
       <link>http://localhost:1313/tags/thinking/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -85,6 +106,13 @@
       <link>http://localhost:1313/tags/web-development/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>http://localhost:1313/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>http://localhost:1313/tags/workflow/</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/workflow/</guid>
       <description></description>
     </item>
     <item>

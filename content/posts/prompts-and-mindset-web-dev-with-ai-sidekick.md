@@ -49,9 +49,9 @@ AI có thể sinh ra code rất nhanh, nhưng **trách nhiệm với chất lư�
 
 Các nghiên cứu về tâm lý học hành vi đã chỉ ra hiện tượng **"Cognitive Offloading"** — khi con người quá phụ thuộc vào công cụ hỗ trợ, não bộ sẽ ngừng nỗ lực tư duy và ghi nhớ.
 
-> [!WARNING]
-> **Cạm bẫy của việc lạm dụng AI:**
-> Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy nghĩ logic, bạn dán ngay lỗi đó cho AI và bảo *"Sửa hộ tôi"*. Việc này tạo ra một vòng lặp tai hại: Bạn không hiểu nguyên nhân gỡ lỗi $\to$ Bạn dán code mới của AI $\to$ Code mới sinh ra lỗi khác $\to$ Bạn lại dán tiếp. Cuối cùng, bạn tốn nhiều thời gian hơn cả việc tự học và gỡ lỗi từ đầu!
+{{< admonition warning "Cạm bẫy của việc lạm dụng AI" >}}
+Khi gặp một lỗi nhỏ, thay vì đọc vết lỗi (traceback) hay suy nghĩ logic, bạn dán ngay lỗi đó cho AI và bảo *"Sửa hộ tôi"*. Việc này tạo ra một vòng lặp tai hại: Bạn không hiểu nguyên nhân gỡ lỗi $\to$ Bạn dán code mới của AI $\to$ Code mới sinh ra lỗi khác $\to$ Bạn lại dán tiếp. Cuối cùng, bạn tốn nhiều thời gian hơn cả việc tự học và gỡ lỗi từ đầu!
+{{< /admonition >}}
 
 ---
 
@@ -63,26 +63,26 @@ Các nghiên cứu về tâm lý học hành vi đã chỉ ra hiện tượng **
 
 Trước khi bắt đầu một chủ đề mới (VD: Học Django, SQL JOINs hay Async JavaScript), hãy gửi cho AI một câu lệnh thiết lập vai trò (System Prompt / Custom Instructions):
 
-> [!NOTE]
-> **Prompt Mẫu: Hợp đồng học tập (Learning Contract)**
-> *"Bạn là gia sư web dev của tôi về HTML, CSS, JavaScript, SQL, Python và Django. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích: code làm gì, tại sao dùng cách này, và các lỗi phổ biến. Đưa ra 1-3 câu hỏi nhỏ sau khi giải thích. Luôn đưa ra một bài tập nhỏ sau khi giải thích một khái niệm. Khi tôi dán một lỗi, hãy giúp tôi debug bằng cách giải thích nguyên nhân có khả năng xảy ra nhất, bảo tôi cần kiểm tra gì và đưa ra cách sửa tối thiểu trước."*
+{{< admonition example "Prompt Mẫu: Hợp đồng học tập (Learning Contract)" >}}
+"Bạn là gia sư web dev của tôi về HTML, CSS, JavaScript, SQL, Python và Django. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích: code làm gì, tại sao dùng cách này, và các lỗi phổ biến. Đưa ra 1-3 câu hỏi nhỏ sau khi giải thích. Luôn đưa ra một bài tập nhỏ sau khi giải thích một khái niệm. Khi tôi dán một lỗi, hãy giúp tôi debug bằng cách giải thích nguyên nhân có khả năng xảy ra nhất, bảo tôi cần kiểm tra gì và đưa ra cách sửa tối thiểu trước."
+{{< /admonition >}}
 
 Đồng thời, hãy đặt ra **hàng rào giới hạn (Guardrails)** để ngăn AI sinh quá nhiều code:
 
-> [!TIP]
-> **Prompt Mẫu: Hàng rào giới hạn**
-> *"Bạn phải tuân thủ các quy tắc này khi phản hồi có code: Không tạo quá 40 dòng code một lúc trừ khi được yêu cầu; Ưu tiên thay đổi từng bước với diffs (nêu rõ dòng nào xóa, dòng nào thêm); Đưa ra vấn đề có khả năng xảy ra nhất trước tiên."*
+{{< admonition tip "Prompt Mẫu: Hàng rào giới hạn (Guardrails)" >}}
+"Bạn phải tuân thủ các quy tắc này khi phản hồi có code: Không tạo quá 40 dòng code một lúc trừ khi được yêu cầu; Ưu tiên thay đổi từng bước với diffs (nêu rõ dòng nào xóa, dòng nào thêm); Đưa ra vấn đề có khả năng xảy ra nhất trước tiên."
+{{< /admonition >}}
 
 ### 2. Vòng lặp học tập 4 bước (The 4-Step AI Learning Loop)
 
 Áp dụng quy trình 4 bước mỗi khi học một kỹ thuật mới:
 
 ```mermaid
-graph TD
-    A["Bước 1: Hỏi & Giải thích<br>(Yêu cầu ví dụ tối giản)"] --> B["Bước 2: Tự tay triển khai<br>(Gõ lại code vào Editor)"]
-    B --> C["Bước 3: Thu nhận phản hồi<br>(Dán code nhờ AI nhận xét)"]
-    C --> D["Bước 4: Mở rộng thử thách<br>(Yêu cầu bài tập biến thể)"]
-    D --> A
+flowchart LR
+    A["Bước 1: Hỏi và Giải thích"] --> B["Bước 2: Tự tay triển khai"]
+    B --> C["Bước 3: Thu nhận phản hồi"]
+    C --> D["Bước 4: Mở rộng thử thách"]
+    D -. Lặp lại quy trình .-> A
 ```
 
 1. **Bước 1 — Hỏi & Giải thích:** Yêu cầu AI giải thích lý thuyết đi kèm ví dụ nhỏ nhất có thể (*Minimal Working Example*).
@@ -94,9 +94,9 @@ graph TD
 
 Khi code bị lỗi, thay vì bảo AI sửa hộ, hãy dùng phương pháp vấn đáp Socratic:
 
-> [!EXAMPLE]
-> **Prompt Mẫu: Socratic Debugging**
-> *"Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng đưa cho tôi code sửa ngay. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ."*
+{{< admonition example "Prompt Mẫu: Phương pháp gỡ lỗi Socratic (Socratic Debugging)" >}}
+"Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng đưa cho tôi code sửa ngay. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ."
+{{< /admonition >}}
 
 ### 4. Kiểm tra chéo & Thẩm định giả định (Verification Prompts)
 
@@ -134,20 +134,18 @@ Dưới đây là quy trình thực tế được trích xuất từ tài liệu
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Dev as Lập trình viên (Lead Engineer)
-    participant AI as AI Sidekick (Codex / Claude)
+    actor Dev as Lập trình viên
+    participant AI as AI Sidekick
     participant Code as Mã nguồn Dự án
 
-    Dev->>Dev: 1. Suy nghĩ & Viết project-brief.md + design.md
-    Dev->>AI: 2. Phê bình tài liệu (Senior Engineer Review Prompt)
-    AI-->>Dev: Đặt câu hỏi phỏng vấn, chỉ ra rủi ro & lỗ hổng
-    Dev->>AI: 3. Duyệt tài liệu & Yêu cầu tạo Implementation Plan
-    AI-->>Dev: Tạo file plan.md (CHƯA viết code)
-    Dev->>AI: 4. Đề xuất chia nhỏ thành danh sách Tasks
-    AI-->>Dev: Tạo tasks.md (Các đầu việc nhỏ có thể test được)
-    Dev->>AI: 5. Lệnh thực thi theo Task (Execute Prompt)
-    AI->>Code: 6. Sinh mã scaffolding (Models, Views, Templates)
-    Dev->>Code: 7. Chạy Migrations, Unit Test & Kiểm thử thực tế
+    Dev->>Dev: Viết project-brief.md và design.md
+    Dev->>AI: Phỏng vấn rà soát lỗ hổng đặc tả
+    AI-->>Dev: Phản biện rủi ro và góp ý tài liệu
+    Dev->>AI: Yêu cầu tạo plan.md và tasks.md
+    AI-->>Dev: Xuất Kế hoạch và Danh sách Task
+    Dev->>AI: Yêu cầu thực thi mã nguồn theo Task
+    AI->>Code: Sinh mã Scaffolding (Models, Views,...)
+    Dev->>Code: Kiểm thử Unit Test và nghiệm thu
 ```
 
 #### Bước 1: Viết tài liệu Brief & Design
@@ -156,23 +154,23 @@ Tự mình viết ra yêu cầu bài toán vào file `project-brief.md`. Điểm
 #### Bước 2: Bắt AI đóng vai Senior Engineer để phản biện
 Gửi tài liệu cho AI và yêu cầu nó "tìm lỗi":
 
-> [!NOTE]
-> **Prompt Mẫu: Senior Engineer Review Brief**
-> *"Đọc file `project-brief.md` và đóng vai senior engineer review dự án trước khi triển khai code. Nhiệm vụ của bạn là tìm các điểm thiếu sót, không rõ ràng hoặc rủi ro về mặt kiến trúc. Phỏng vấn tôi bằng các câu hỏi tập trung để giải quyết các lỗ hổng. Sau đó đề xuất một phiên bản brief tốt hơn."*
+{{< admonition example "Prompt Mẫu: Senior Engineer Review Brief" >}}
+"Đọc file `project-brief.md` và đóng vai senior engineer review dự án trước khi triển khai code. Nhiệm vụ của bạn là tìm các điểm thiếu sót, không rõ ràng hoặc rủi ro về mặt kiến trúc. Phỏng vấn tôi bằng các câu hỏi tập trung để giải quyết các lỗ hổng. Sau đó đề xuất một phiên bản brief tốt hơn."
+{{< /admonition >}}
 
 #### Bước 3: Lập kế hoạch triển khai (Implementation Plan)
 Sau khi chốt tài liệu Brief, yêu cầu AI lập kế hoạch chi tiết mà **chưa viết code**:
 
-> [!NOTE]
-> **Prompt Mẫu: Lên Kế hoạch triển khai (Plan)**
-> *"Tạo một kế hoạch triển khai (implementation plan) cho tính năng URL shortener dựa trên spec trong project-brief.md. Ràng buộc: Giữ code đơn giản, sử dụng Django built-in templates. Chỉ tạo kế hoạch chi tiết từng file cần sửa/tạo mới, CHƯA viết code thực thi."*
+{{< admonition example "Prompt Mẫu: Lên Kế hoạch triển khai (Plan)" >}}
+"Tạo một kế hoạch triển khai (implementation plan) cho tính năng URL shortener dựa trên spec trong project-brief.md. Ràng buộc: Giữ code đơn giản, sử dụng Django built-in templates. Chỉ tạo kế hoạch chi tiết từng file cần sửa/tạo mới, CHƯA viết code thực thi."
+{{< /admonition >}}
 
 #### Bước 4: Chia nhỏ thành danh sách Tasks
 Yêu cầu AI chia kế hoạch thành các danh sách công việc nhỏ (tickets):
 
-> [!NOTE]
-> **Prompt Mẫu: Chia Task**
-> *"Hãy chia kế hoạch triển khai tính năng thành một chuỗi các task nhỏ, có thể review được độc lập. Mỗi task phải tạo ra một kết quả nhìn thấy được (verifiable outcome) và có thứ tự thực hiện hợp lý."*
+{{< admonition example "Prompt Mẫu: Chia Task" >}}
+"Hãy chia kế hoạch triển khai tính năng thành một chuỗi các task nhỏ, có thể review được độc lập. Mỗi task phải tạo ra một kết quả nhìn thấy được (verifiable outcome) và có thứ tự thực hiện hợp lý."
+{{< /admonition >}}
 
 #### Bước 5: Thực thi code từng phần (Implementation)
 Lúc này mới sử dụng các công cụ AI CLI (như Codex, Claude Code hay Cursor) để sinh mã nguồn theo đúng các task đã duyệt.
@@ -188,38 +186,38 @@ Dưới đây là bộ câu lệnh mẫu đắc lực mà bạn có thể lưu l
 
 ### 1. Mega-Prompt: One-Shot Khởi Tạo Dự Án Chuẩn Kiến Trúc
 
-> [!EXAMPLE]
-> **Prompt Mẫu: One-Shot Project Scaffolding**
-> *"Tôi đang xây dựng ứng dụng web Django 6 tên là TallyApp. Hãy đọc kỹ hai file `project-brief.md` và `design.md`.
->
-> Trước khi tạo code, bạn phải hoàn thành phân tích theo các bước:
-> 1. Trình bày lại yêu cầu bài toán.
-> 2. Xác định những điểm chưa rõ ràng.
-> 3. Liệt kê các giả định kỹ thuật.
-> 4. Nêu bật các rủi ro tiềm ẩn.
->
-> Sau khi phân tích xong:
-> 5. Chia giai đoạn phát triển.
-> 6. Đề xuất cấu trúc Django apps.
-> 7. Thiết kế data models.
-> 8. Đề xuất danh sách URLs.
->
-> Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã scaffolding cơ bản cho models, forms, views, urls, templates, và test cases."*
+{{< admonition example "Prompt Mẫu: One-Shot Khởi tạo Dự án (TallyApp)" >}}
+"Tôi đang xây dựng ứng dụng web Django 6 tên là TallyApp. Hãy đọc kỹ hai file `project-brief.md` và `design.md`.
+
+Trước khi tạo code, bạn phải hoàn thành phân tích theo các bước:
+1. Trình bày lại yêu cầu bài toán.
+2. Xác định những điểm chưa rõ ràng.
+3. Liệt kê các giả định kỹ thuật.
+4. Nêu bật các rủi ro tiềm ẩn.
+
+Sau khi phân tích xong:
+5. Chia giai đoạn phát triển.
+6. Đề xuất cấu trúc Django apps.
+7. Thiết kế data models.
+8. Đề xuất danh sách URLs.
+
+Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã scaffolding cơ bản cho models, forms, views, urls, templates, và test cases."
+{{< /admonition >}}
 
 ### 2. Prompt Kiểm Thử Code (Testing Prompt)
 
-> [!EXAMPLE]
-> **Prompt Mẫu: Viết Unit Test cho Django Model**
-> *"Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc xác thực (validation rules), giá trị mặc định (default values) và các ràng buộc. Tránh phụ thuộc vào giá trị primary key cố định. Tập trung vào negative paths và edge cases."*
+{{< admonition example "Prompt Mẫu: Viết Unit Test cho Django Model" >}}
+"Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc xác thực (validation rules), giá trị mặc định (default values) và các ràng buộc. Tránh phụ thuộc vào giá trị primary key cố định. Tập trung vào negative paths và edge cases."
+{{< /admonition >}}
 
 ### 3. Prompt Code Review Sau Khi AI Viết Code
 
-> [!EXAMPLE]
-> **Prompt Mẫu: Phản biện mã nguồn AI**
-> *"Hãy review lại tính năng vừa triển khai so với spec và acceptance criteria ban đầu. Xác định:
-> 1. Hành vi hoặc yêu cầu nào còn thiếu?
-> 2. Có sự phức tạp không cần thiết nào được thêm vào không?
-> 3. Những trường hợp test case nào còn thiếu?"*
+{{< admonition example "Prompt Mẫu: Phản biện & Review mã nguồn AI" >}}
+"Hãy review lại tính năng vừa triển khai so với spec và acceptance criteria ban đầu. Xác định:
+1. Hành vi hoặc yêu cầu nào còn thiếu?
+2. Có sự phức tạp không cần thiết nào được thêm vào không?
+3. Những trường hợp test case nào còn thiếu?"
+{{< /admonition >}}
 
 ---
 
