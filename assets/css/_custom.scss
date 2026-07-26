@@ -27,7 +27,8 @@
 
 /* Container chứa cả Avatar lẫn Text */
 .chip-huyen-style .profile-container {
-    display: block !important; /* Dùng block để float: right hoạt động đúng dòng chữ */
+    display: block !important;
+    /* Dùng block để float: right hoạt động đúng dòng chữ */
     width: 100% !important;
 }
 
@@ -246,37 +247,22 @@
     }
 }
 
-/* 4. Custom Blockquote & Admonition Quote Styling */
+/* 4. Custom Blockquote Font Size */
 .single .content blockquote {
-    font-size: 0.95rem !important;
-    line-height: 1.65 !important;
-    font-style: italic !important;
-    font-family: "Lora", Georgia, serif !important;
-    padding: 0.6rem 1.1rem !important;
-    margin: 1.25rem 0 !important;
-    border-left: 3px solid #4d74eb !important;
-    background-color: rgba(77, 116, 235, 0.05) !important;
-
-    [theme=dark] & {
-        border-left-color: #60a5fa !important;
-        background-color: rgba(96, 165, 250, 0.07) !important;
-    }
-
-    p {
-        margin: 0 !important;
-    }
+    font-size: 1.5rem !important;
 }
 
-.admonition.quote, .admonition.note, .admonition.warning {
-    font-size: 0.95rem !important;
+.admonition.quote,
+.admonition.note,
+.admonition.warning {
+    font-size: 1.1rem !important;
 
     .admonition-title {
-        font-size: 0.9rem !important;
+        font-size: 1.1rem !important;
     }
 
     .admonition-content {
-        font-size: 0.95rem !important;
+        font-size: 1.1rem !important;
         line-height: 1.6 !important;
     }
 }
-
