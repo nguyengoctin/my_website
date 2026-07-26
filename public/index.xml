@@ -204,13 +204,15 @@
 <p>Thực tế, có một quy luật tâm lý rất tự nhiên: con người luôn ưu tiên những lựa chọn mang lại cảm giác dễ chịu. Trong việc học cũng vậy, chúng ta rất dễ bị hấp dẫn bởi những lời quảng cáo về các phương pháp tiếp cận siêu tốc hay những tài liệu tóm tắt ngắn gọn.</p>]]></description>
 </item>
 <item>
-    <title>Kỹ Nghệ Câu Lệnh Và Tư Duy Làm Chủ Trí Tuệ Nhân Tạo Trong Lập Trình</title>
+    <title>Lập Trình Web Kỷ Nguyên AI: Đừng Để AI &#39;Code Hộ&#39;, Hãy Dùng AI Như Một Cộng Sự!</title>
     <link>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
-    <description><![CDATA[<p><strong>Về bài viết này</strong></p>
-<p>Bài viết tổng hợp toàn bộ tư duy cốt lõi, <strong>8 quy trình code thực tế</strong> và <strong>bộ câu lệnh (prompt) thực chiến</strong> được trích xuất từ cuốn sách <em>Web Dev with an AI Sidekick</em> của tác giả Mark J. Price. Đây là kim chỉ nam toàn diện giúp lập trình viên chuyển dịch từ tư duy sao chép thụ động sang vai trò Kỹ sư trưởng (Lead Engineer) – người kiểm soát hoàn toàn chất lượng mã nguồn và dòng chảy tư duy của AI.</p>]]></description>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI.&rdquo;</em></p>
+</blockquote>
+<p>Nếu bạn vừa bước chân vào thế giới lập trình web trong năm nay, rất có thể bạn đang trải qua một cảm giác vừa kinh ngạc vừa hoang mang. Chỉ với vài dòng câu lệnh đơn giản gửi tới ChatGPT, Claude hay GitHub Copilot, một trang web hoàn chỉnh hay một hệ thống RESTful API phức tạp đã hiện ra trước mắt trong vài giây.</p>]]></description>
 </item>
 <item>
     <title>Tài liệu Giao diện - Các bước Cơ bản</title>
