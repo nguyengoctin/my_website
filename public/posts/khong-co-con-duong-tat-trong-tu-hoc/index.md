@@ -55,15 +55,7 @@ Khi không còn ai giao bài tập hay kiểm tra hàng tuần, bạn dễ rơi 
 
 ## 4. Bốn Trụ Cột Xây Dựng Lộ Trình Tự Học Hiệu Quả
 
-Tự học trong thời đại công nghệ hiện đại không chỉ là cắm đầu vào đọc sách, mà đòi hỏi một **chiến lược hệ thống**:
-
-```mermaid
-flowchart TD
-    A["Tự Học Hiệu Quả"] --> B["1. Mô Hình Kiến Thức T-Shaped"]
-    A --> C["2. Tự Xây Dựng Lộ Trình (Roadmap)"]
-    A --> D["3. Lựa Chọn Nguồn Tài Liệu Chuẩn"]
-    A --> E["4. Nuôi Dưỡng Môi Trường & Cảm Hứng"]
-```
+Tự học trong thời đại công nghệ hiện đại không chỉ là cắm đầu vào đọc sách, mà đòi hỏi một chiến lược hệ thống:
 
 ### 1. Tư duy kiến thức hình chữ T (T-Shaped)
 Thời đại ngày nay đòi hỏi bạn phải biết rộng nhiều thứ và phát triển cực kỳ mạnh về một chuyên môn sâu. Bạn giỏi Lập trình không có nghĩa là bạn được phép ngó lơ Kiến trúc hệ thống hay Tư duy sản phẩm.
