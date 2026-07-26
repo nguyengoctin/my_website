@@ -353,7 +353,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.home.profile]
       enable = true
       gravatarEmail = ""
-      avatarURL = "/images/avatar.png"
+      avatarURL = "/images/avatar.webp"
       title = ""
       subtitle = "Đây là Trang Hugo Mới Của Tôi"
       typeit = true

@@ -59,7 +59,7 @@ Ngược lại, một **LLM Agent** hoạt động như một điều tra viên 
 
 Dù kiến trúc phần mềm có phức tạp đến đâu, cốt lõi của một Agent luôn xoay quanh 3 yếu tố nền tảng: **Model**, **Tools**, và **Instructions**.
 
-![Kiến trúc nền tảng của một AI Agent: Input → Agent → Output, với các lớp Instructions, Tools, Guardrails và Hooks bên dưới](/images/posts/ai-agent-guide/agent-architecture.png)
+![Kiến trúc nền tảng của một AI Agent: Input → Agent → Output, với các lớp Instructions, Tools, Guardrails và Hooks bên dưới](/images/posts/ai-agent-guide/agent-architecture.webp)
 
 ### 1. Model (Trí Tuệ Của Agent)
 
@@ -121,7 +121,7 @@ Hai Design Patterns Multi-agent chuẩn từ OpenAI:
 
 Một Agent trung tâm ("Manager") đóng vai trò điều phối mạng lưới các Agent chuyên biệt thông qua việc gọi Tool. Manager là đại diện duy nhất giao tiếp với người dùng và tổng hợp kết quả cuối cùng.
 
-![Manager Pattern: Manager Agent nhận yêu cầu và phân phối Task song song cho các Spanish, French, Italian Sub-Agents](/images/posts/ai-agent-guide/manager-pattern.png)
+![Manager Pattern: Manager Agent nhận yêu cầu và phân phối Task song song cho các Spanish, French, Italian Sub-Agents](/images/posts/ai-agent-guide/manager-pattern.webp)
 
 {{< admonition example "Prompt Mẫu: Định hình Manager Agent dịch thuật" >}}
 "Bạn là một agent dịch thuật. Bạn sử dụng các công cụ được cung cấp để dịch. Nếu được yêu cầu dịch ra nhiều ngôn ngữ, bạn hãy gọi các công cụ tương ứng."
@@ -146,7 +146,7 @@ Một Agent trung tâm ("Manager") đóng vai trò điều phối mạng lưới
 
 Các Agent hoạt động bình đẳng như các Peers. Khi một Agent phát hiện yêu cầu vượt quá chuyên môn, nó thực hiện lệnh **Handoff** để chuyển hoàn toàn quyền kiểm soát và lịch sử hội thoại sang cho Agent chuyên trách khác.
 
-![Decentralized Pattern: Triage Agent tiếp nhận câu hỏi "Where is my order?" và Handoff sang Orders Agent để trả lời "On its way!"](/images/posts/ai-agent-guide/decentralized-pattern.png)
+![Decentralized Pattern: Triage Agent tiếp nhận câu hỏi "Where is my order?" và Handoff sang Orders Agent để trả lời "On its way!"](/images/posts/ai-agent-guide/decentralized-pattern.webp)
 
 {{< admonition example "Prompt Mẫu: Kiến trúc Handoff Chăm sóc Khách hàng" >}}
 - **Triage Agent (Phân loại cửa ngõ):** "Bạn đóng vai trò là điểm tiếp xúc đầu tiên, đánh giá các truy vấn của khách hàng và chuyển hướng chúng nhanh chóng đến đúng agent chuyên môn."
@@ -165,7 +165,7 @@ Các Agent hoạt động bình đẳng như các Peers. Khi một Agent phát h
 
 Guardrails là hệ thống phòng thủ đa lớp hoạt động độc lập nhằm quản lý rủi ro rò rỉ dữ liệu riêng tư và bảo vệ uy tín thương hiệu.
 
-![Layered Guardrails: Một Prompt Injection tấn công đi qua các lớp LLM Classifier, Moderation API và Rules-based Protections trước khi AgentSDK quyết định xử lý](/images/posts/ai-agent-guide/layered-guardrails.png)
+![Layered Guardrails: Một Prompt Injection tấn công đi qua các lớp LLM Classifier, Moderation API và Rules-based Protections trước khi AgentSDK quyết định xử lý](/images/posts/ai-agent-guide/layered-guardrails.webp)
 
 ### 1. Phân loại 7 lớp Guardrails tiêu chuẩn
 
