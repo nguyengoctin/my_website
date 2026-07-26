@@ -4,7 +4,7 @@
         <link>http://localhost:1313/</link>
         <description>Personal website and blog of Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</lastBuildDate>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>A Collection of Learning Resources</title>
@@ -193,6 +193,25 @@
 </ul>
 <hr>
 <p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
+</item>
+<item>
+    <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết</title>
+    <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
+    <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em></p>
+</blockquote>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bài viết này được tổng hợp và biên dịch dựa trên cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>. Nội dung gốc tham khảo từ bài viết của <a href="https://github.com/tuananhhedspibk/tuananhhedspibk.github.io" target="_blank" rel="noopener noreffer ">tuananhhedspibk</a>.</div>
+    </div>
+</div>
+<p>Là một developer, tôi từng nghĩ thiết kế UI là lãnh địa riêng của designers. Nhưng thực tế là: <strong>mọi người viết code đều phải đưa ra quyết định thiết kế hàng ngày</strong> — từ việc đặt khoảng cách cho một button, chọn màu cho một badge, cho đến bố cục của một form đăng ký. Refactoring UI là cuốn sách giúp developers tư duy đúng về những quyết định đó.</p>]]></description>
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>

@@ -10,7 +10,18 @@
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/design-and-build-ai-agents/</guid>
-    <description><![CDATA[<p>Trong bối cảnh AI đang phát triển bùng nổ, việc sử dụng các công cụ hỗ trợ như GitHub Copilot, ChatGPT hay Claude đã trở thành thói quen hàng ngày của nhiều kỹ sư phần mềm. Tuy nhiên, ranh giới thực sự của một hệ thống AI mạnh mẽ không dừng lại ở việc &ldquo;gõ code hộ&rdquo; hay &ldquo;trả lời câu hỏi theo prompt&rdquo;. Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> - những thực thể tự trị có khả năng tự động lên kế hoạch, tương tác với môi trường, sử dụng các công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
+</blockquote>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bài viết này được tổng hợp và biên dịch dựa trên báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (Xuất bản bởi đội ngũ kỹ sư OpenAI).</div>
+    </div>
+</div>
+<p>Trong bối cảnh AI đang phát triển bùng nổ, việc sử dụng các công cụ hỗ trợ như GitHub Copilot, ChatGPT hay Claude đã trở thành thói quen hàng ngày của nhiều kỹ sư phần mềm. Tuy nhiên, ranh giới thực sự của một hệ thống AI mạnh mẽ không dừng lại ở việc &ldquo;gõ code hộ&rdquo; hay &ldquo;trả lời câu hỏi theo prompt&rdquo;. Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> - những thực thể tự trị có khả năng tự động lên kế hoạch, tương tác với môi trường, sử dụng các công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
 </item>
 </channel>
 </rss>

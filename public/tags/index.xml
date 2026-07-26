@@ -8,8 +8,78 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 22:00:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design System</title>
+      <link>http://localhost:1313/tags/design-system/</link>
+      <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/design-system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>http://localhost:1313/tags/frontend/</link>
+      <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Refactoring UI</title>
+      <link>http://localhost:1313/tags/refactoring-ui/</link>
+      <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/refactoring-ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UI Design</title>
+      <link>http://localhost:1313/tags/ui-design/</link>
+      <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/ui-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UX</title>
+      <link>http://localhost:1313/tags/ux/</link>
+      <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/ux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Agent</title>
+      <link>http://localhost:1313/tags/ai-agent/</link>
+      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/ai-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>http://localhost:1313/tags/openai/</link>
+      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>http://localhost:1313/tags/software-engineering/</link>
+      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Architecture</title>
+      <link>http://localhost:1313/tags/system-architecture/</link>
+      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/system-architecture/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>http://localhost:1313/tags/ai/</link>
@@ -78,13 +148,6 @@
       <link>http://localhost:1313/tags/resources/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>http://localhost:1313/tags/resources/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software Engineering</title>
-      <link>http://localhost:1313/tags/software-engineering/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
