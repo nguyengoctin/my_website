@@ -8,8 +8,36 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Sun, 26 Jul 2026 22:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 22:50:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mindset</title>
+      <link>http://localhost:1313/tags/mindset/</link>
+      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>http://localhost:1313/tags/roadmap/</link>
+      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/roadmap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self Learning</title>
+      <link>http://localhost:1313/tags/self-learning/</link>
+      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/self-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>http://localhost:1313/tags/software-engineering/</link>
+      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/software-engineering/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Design System</title>
       <link>http://localhost:1313/tags/design-system/</link>
@@ -67,13 +95,6 @@
       <description></description>
     </item>
     <item>
-      <title>Software Engineering</title>
-      <link>http://localhost:1313/tags/software-engineering/</link>
-      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/software-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>System Architecture</title>
       <link>http://localhost:1313/tags/system-architecture/</link>
       <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -123,13 +144,6 @@
       <description></description>
     </item>
     <item>
-      <title>Mindset</title>
-      <link>http://localhost:1313/tags/mindset/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/mindset/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Prompt Engineering</title>
       <link>http://localhost:1313/tags/prompt-engineering/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -155,13 +169,6 @@
       <link>http://localhost:1313/tags/spec-driven-development/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>http://localhost:1313/tags/spec-driven-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Thinking</title>
-      <link>http://localhost:1313/tags/thinking/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/thinking/</guid>
       <description></description>
     </item>
     <item>
@@ -197,6 +204,13 @@
       <link>http://localhost:1313/tags/installation/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>http://localhost:1313/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thinking</title>
+      <link>http://localhost:1313/tags/thinking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/tags/thinking/</guid>
       <description></description>
     </item>
   </channel>

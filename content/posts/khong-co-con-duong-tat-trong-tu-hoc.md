@@ -38,12 +38,10 @@ Thực tế là: việc học một khái niệm kỹ thuật hay công nghệ m
 
 Khi tự học, bất kỳ ai cũng sẽ phải trải qua một giai đoạn gọi là **Quãng thời gian chờ (Plateau of latent potential)**.
 
-![Quãng thời gian chờ trong tự học — giai đoạn mệt mỏi nhưng tích lũy nền tảng để bứt phá](/images/posts/refactoring-ui/62372718-2c438600-b573-11ea-90b0-8c313e4e358d.webp)
-
 Đây là khoảng thời gian:
 - Học rất mệt, rất chán và kéo dài.
 - Cảm giác bản thân giậm chân tại chỗ, không có tiến bộ gì rõ rệt.
--Dễ nảy sinh tâm lý bỏ cuộc vì thiếu đi sự "ép buộc" từ trường lớp hay bài kiểm tra.
+- Dễ nảy sinh tâm lý bỏ cuộc vì thiếu đi sự "ép buộc" từ trường lớp hay bài kiểm tra.
 
 Nhưng chính trong khoảng thời gian "không thấy kết quả" này, bộ não đang tích lũy và xây dựng các liên kết thần kinh nền tảng. Để rồi một ngày đẹp trời, bạn đột nhiên nhận ra mình đã tiến bộ vượt bậc — từ việc đọc hiểu tài liệu tiếng Anh dễ dàng đến việc tự tay kiến tạo một hệ thống phức tạp.
 
