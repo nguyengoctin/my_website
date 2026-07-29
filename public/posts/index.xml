@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://ngoctin.me/posts/</link>
         <description>All Posts | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
-    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
+    <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
+    <guid>https://ngoctin.me/posts/a-collection-of-learning-resources/</guid>
     <description><![CDATA[<p>The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.</p>
 <blockquote>
 <p>“You do not rise to the level of your goals. You fall to the level of your systems.” – James Clear</p>
@@ -193,11 +193,22 @@
 <p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
 </item>
 <item>
+    <title>Bí Kíp Đọc Tài Liệu Tiếng Anh Siêu Tốc Bằng Microsoft Edge &amp; AI Trợ Lý</title>
+    <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
+    <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Cách tốt nhất để tiếp thu tri thức chuyên ngành là đọc tài liệu gốc tiếng Anh. Nhưng rào cản lớn nhất lại là việc ngắt quãng dòng suy nghĩ khi phải liên tục tra từ điển.&rdquo;</em></p>
+</blockquote>
+<p>Nếu bạn là một lập trình viên, nghiên cứu sinh hay người làm việc thường xuyên với tài liệu kỹ thuật, tài liệu PDF dày cộp bằng tiếng Anh, chắc chắn bạn đã từng trải qua cảm giác nản lòng khi phải liên tục <strong>bôi đen - copy - chuyển tab sang Google Translate/DeepL - paste - rồi quay lại</strong>.</p>]]></description>
+</item>
+<item>
     <title>Không Có Con Đường Tắt Trong Tự Học</title>
-    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
+    <link>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
     <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
+    <guid>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, bạn đã đi hết con đường vòng.&rdquo;</em></p>
 </blockquote>
@@ -213,10 +224,10 @@
 </item>
 <item>
     <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết</title>
-    <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
+    <link>https://ngoctin.me/posts/refactoring-ui-design-principles/</link>
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
+    <guid>https://ngoctin.me/posts/refactoring-ui-design-principles/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em></p>
 </blockquote>
@@ -232,10 +243,10 @@
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>http://localhost:1313/posts/design-and-build-ai-agents/</link>
+    <link>https://ngoctin.me/posts/design-and-build-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/design-and-build-ai-agents/</guid>
+    <guid>https://ngoctin.me/posts/design-and-build-ai-agents/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
 </blockquote>
@@ -251,10 +262,10 @@
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng Để AI &#39;Code Hộ&#39;, Hãy Dùng AI Như Một Cộng Sự!</title>
-    <link>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
+    <link>https://ngoctin.me/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
+    <guid>https://ngoctin.me/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI.&rdquo;</em></p>
 </blockquote>
@@ -262,10 +273,10 @@
 </item>
 <item>
     <title>Tài liệu Giao diện - Các bước Cơ bản</title>
-    <link>http://localhost:1313/posts/theme-documentation-basics.vi/</link>
+    <link>https://ngoctin.me/posts/theme-documentation-basics.vi/</link>
     <pubDate>Fri, 06 Mar 2020 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/theme-documentation-basics.vi/</guid>
+    <guid>https://ngoctin.me/posts/theme-documentation-basics.vi/</guid>
     <description><![CDATA[<p>Khám phá giao diện <strong>Hugo - LoveIt</strong> và các khái niệm cốt lõi đằng sau nó.</p>]]></description>
 </item>
 </channel>

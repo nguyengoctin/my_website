@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Machine Learning - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/machine-learning/</link>
+        <link>https://ngoctin.me/tags/machine-learning/</link>
         <description>Machine Learning - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
-    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
+    <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
+    <guid>https://ngoctin.me/posts/a-collection-of-learning-resources/</guid>
     <description><![CDATA[<p>The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.</p>
 <blockquote>
 <p>“You do not rise to the level of your goals. You fall to the level of your systems.” – James Clear</p>

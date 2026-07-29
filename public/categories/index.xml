@@ -2,47 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Nguyen Ngoc Tin</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://ngoctin.me/categories/</link>
     <description>Recent content in Categories on Nguyen Ngoc Tin</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Sun, 26 Jul 2026 22:50:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jul 2026 15:45:00 +0700</lastBuildDate>
+    <atom:link href="https://ngoctin.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech Blog</title>
-      <link>http://localhost:1313/categories/tech-blog/</link>
-      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/categories/tech-blog/</guid>
+      <link>https://ngoctin.me/categories/tech-blog/</link>
+      <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/categories/tech-blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>http://localhost:1313/categories/resources/</link>
+      <link>https://ngoctin.me/categories/resources/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/categories/resources/</guid>
+      <guid>https://ngoctin.me/categories/resources/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>http://localhost:1313/categories/technology/</link>
+      <link>https://ngoctin.me/categories/technology/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/categories/technology/</guid>
+      <guid>https://ngoctin.me/categories/technology/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>http://localhost:1313/categories/documentation/</link>
+      <link>https://ngoctin.me/categories/documentation/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/categories/documentation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Personal Notes</title>
-      <link>http://localhost:1313/categories/personal-notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/categories/personal-notes/</guid>
+      <guid>https://ngoctin.me/categories/documentation/</guid>
       <description></description>
     </item>
   </channel>

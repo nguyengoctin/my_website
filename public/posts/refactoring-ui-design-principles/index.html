@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết - Nguyen Ngoc Tin</title><meta name="Description" content="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện."><meta property="og:url" content="http://localhost:1313/posts/refactoring-ui-design-principles/">
+        <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết - Nguyen Ngoc Tin</title><meta name="Description" content="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện."><meta property="og:url" content="https://ngoctin.me/posts/refactoring-ui-design-principles/">
   <meta property="og:site_name" content="Nguyen Ngoc Tin">
   <meta property="og:title" content="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết">
   <meta property="og:description" content="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện.">
@@ -24,9 +24,9 @@
   <meta name="twitter:description" content="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện.">
 <meta name="application-name" content="Nguyen Ngoc Tin">
 <meta name="apple-mobile-web-app-title" content="Nguyen Ngoc Tin">
-<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/refactoring-ui-design-principles/" /><link rel="prev" href="http://localhost:1313/posts/design-and-build-ai-agents/" /><link rel="next" href="http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ngoctin.me/posts/refactoring-ui-design-principles/" /><link rel="prev" href="https://ngoctin.me/posts/design-and-build-ai-agents/" /><link rel="next" href="https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -34,9 +34,9 @@
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/refactoring-ui-design-principles\/"
-        },"genre": "posts","keywords": "UI Design, Refactoring UI, UX, Frontend, Design System","wordcount":  3996 ,
-        "url": "http:\/\/localhost:1313\/posts\/refactoring-ui-design-principles\/","datePublished": "2026-07-26T22:00:00+07:00","dateModified": "2026-07-26T22:00:00+07:00","publisher": {
+            "@id": "https:\/\/ngoctin.me\/posts\/refactoring-ui-design-principles\/"
+        },"genre": "posts","keywords": "UI Design, Refactoring UI, UX, Frontend, Design System","wordcount":  3974 ,
+        "url": "https:\/\/ngoctin.me\/posts\/refactoring-ui-design-principles\/","datePublished": "2026-07-26T22:00:00+07:00","dateModified": "2026-07-26T22:00:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -276,7 +276,7 @@
 <h3 id="giữ-màu-grayscale-lúc-đầu">Giữ màu Grayscale lúc đầu</h3>
 <p>Ban đầu nên thiết kế với 2 màu <strong>đen, trắng (grayscale)</strong> — điều này buộc bạn phải chú trọng vào <strong>khoảng cách</strong>, <strong>tương phản</strong>, <strong>kích thước</strong>. Kết quả là bạn sẽ có được giao diện với tính phân cấp tốt trước, rồi mới thêm màu sắc vào sau.</p>
 <h3 id="đừng-đầu-tư-quá-sớm">Đừng đầu tư quá sớm</h3>
-<p>Build nhanh nhất có thể. Mục đích của bản thiết kế ban đầu là thể hiện ý tưởng — không phải là sản phẩm cuối. Khi đã có quyết định cuối cùng, hãy bỏ bản thô ban đầu và làm lại đúng cách.
+<p>Build nhanh nhất có thể. Mục đích của bản thiết kế ban đầu là thể hiện ý tưởng — không phải là sản phẩm cuối. Khi đã có quyết định cuối cùng, hãy bỏ bản thô ban đầu và làm lại đúng cách.</p>
 <div class="details admonition tip open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-lightbulb" aria-hidden="true"></i>Đừng thiết kế quá nhiều<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
@@ -284,7 +284,7 @@
     <div class="details-content">
         <div class="admonition-content">Không cần thiết kế toàn bộ feature trước khi triển khai. Việc tưởng tượng ra tất cả các trường hợp biên (edge cases) chỉ dựa trên trí tưởng tượng và design tool khiến công việc thiết kế trở nên nhàm chán và khó khăn một cách vô lý. <strong>Hãy bắt đầu từ version đơn giản nhất</strong> và mở rộng dần khi có dữ liệu thực.</div>
     </div>
-</div>}</p>
+</div>
 <h3 id="chọn-tính-cách-personality-cho-giao-diện">Chọn tính cách (Personality) cho giao diện</h3>
 <p>Mỗi site nên có đặc điểm nhận dạng riêng. Những site liên quan đến ngân hàng hướng đến <strong>bảo mật, tin cậy, chuyên nghiệp</strong>, trong khi startup có thể mang lại hình ảnh <strong>vui nhộn, tươi mới</strong>.</p>
 <p>Tính cách được quyết định bởi:</p>
@@ -534,7 +534,9 @@
 <ul>
 <li><strong>Primary actions:</strong> Background tương phản cao, solid</li>
 <li><strong>Secondary actions:</strong> Outline style hoặc màu tương phản thấp</li>
-<li>**Tertiary actions:**<div class="details admonition warning open">
+<li><strong>Tertiary actions:</strong> Style như một link</li>
+</ul>
+<div class="details admonition warning open">
     <div class="details-summary admonition-title">
         <i class="icon fas fa-exclamation" aria-hidden="true"></i>Destructive Actions<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
@@ -543,17 +545,15 @@
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png"
-        data-srcset="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png, /images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png 1.5x, /images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png 2x"
+        data-src="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.webp"
+        data-srcset="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.webp, /images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.webp 1.5x, /images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.webp 2x"
         data-sizes="auto"
-        alt="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png"
+        alt="/images/posts/refactoring-ui/62268618-590c7600-b46b-11e9-8353-1c69337a666b.webp"
         title="Nút xóa không nhất thiết phải là primary action" /></p>
 <p>Chỉ khi nút xóa đi kèm với bước xác nhận thì nó mới nên là primary action.</p>
 </div>
     </div>
-</div>tion.
-{{&lt; /admonition &gt;}}</li>
-</ul>
+</div>
 <hr>
 <h2 id="3-layout-and-spacing">3. LAYOUT AND SPACING</h2>
 <h3 id="bắt-đầu-với-quá-nhiều-white-space">Bắt đầu với quá nhiều White Space</h3>
@@ -727,15 +727,22 @@
         alt="/images/posts/refactoring-ui/62684281-4e1d8c80-b9fb-11e9-9c24-be924914df0c.webp"
         title="Title 35px trên màn hình nhỏ — quá lớn và không tự nhiên" /></p>
 <p>Nếu chỉnh title xuống 24px:</p>
-<p>![Title 24px trên màn hình nhỏ — tự nhiên và phù hợp hơn nhiều](/images/posts/refactoring-ui/62684433-<div class="details admonition info open">
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/posts/refactoring-ui/62684433-a94f7f00-b9fb-11e9-8197-f75f1abc03c6.webp"
+        data-srcset="/images/posts/refactoring-ui/62684433-a94f7f00-b9fb-11e9-8197-f75f1abc03c6.webp, /images/posts/refactoring-ui/62684433-a94f7f00-b9fb-11e9-8197-f75f1abc03c6.webp 1.5x, /images/posts/refactoring-ui/62684433-a94f7f00-b9fb-11e9-8197-f75f1abc03c6.webp 2x"
+        data-sizes="auto"
+        alt="/images/posts/refactoring-ui/62684433-a94f7f00-b9fb-11e9-8197-f75f1abc03c6.webp"
+        title="Title 24px trên màn hình nhỏ — tự nhiên và phù hợp hơn nhiều" /></p>
+<div class="details admonition info open">
     <div class="details-summary admonition-title">
         <i class="icon fas fa-info" aria-hidden="true"></i>Quy tắc tổng quát<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
         <div class="admonition-content">Các phần tử có kích cỡ lớn trên màn hình lớn sẽ bị thu nhỏ <strong>nhanh hơn</strong> là các phần tử có kích cỡ nhỏ khi kích cỡ màn hình bị thu nhỏ. Không có sự khác biệt quá nhiều giữa phần tử lớn và nhỏ ở màn hình có kích cỡ nhỏ. <strong>Hãy scale mọi thứ độc lập với nhau.</strong></div>
     </div>
-</div>ộc lập với nhau.**
-{{&lt; /admonition &gt;}}</p>
+</div>
 <p>Tương tự, với button: nếu giữ nguyên tỉ lệ padding/font-size khi scale:</p>
 <p><img
         class="lazyload"
@@ -1271,7 +1278,7 @@
 </ul>
 <p>Đây là cuốn sách ngắn nhưng mỗi trang đều có thể áp dụng ngay vào dự án thực tế.</p>
 <hr>
-<p>*Bài viết được tổng hợp từ: <strong>Refactoring UI</strong> — Adam Wathan &amp; Steve Schoger (2019). Nội dung gốc tham khảo từ bài viết của [</p>
+<p><em>Bài viết được tổng hợp từ: <strong>Refactoring UI</strong> — Adam Wathan &amp; Steve Schoger (2019). Nội dung gốc tham khảo từ bài viết của <a href="https://github.com/tuananhhedspibk/tuananhhedspibk.github.io" target="_blank" rel="noopener noreffer ">tuananhhedspibk</a>.</em></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -1283,7 +1290,7 @@
                             <a class="link-to-markdown" href="/posts/refactoring-ui-design-principles/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết" data-hashtags="UI Design,Refactoring UI,UX,Frontend,Design System"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-hashtag="UI Design"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết" data-description="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện."><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2frefactoring-ui-design-principles%2f&amp;text=Refactoring%20UI%3a%20Nh%e1%bb%afng%20Nguy%c3%aan%20T%e1%ba%afc%20Thi%e1%ba%bft%20K%e1%ba%bf%20Giao%20Di%e1%bb%87n%20M%c3%a0%20M%e1%bb%8di%20Developer%20N%c3%aan%20Bi%e1%ba%bft" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết" data-hashtags="UI Design,Refactoring UI,UX,Frontend,Design System"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-hashtag="UI Design"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="https://ngoctin.me/posts/refactoring-ui-design-principles/" data-title="Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết" data-description="Tổng hợp toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — dành cho cả designer lẫn developer muốn nâng cao tư duy về giao diện."><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fngoctin.me%2fposts%2frefactoring-ui-design-principles%2f&amp;text=Refactoring%20UI%3a%20Nh%e1%bb%afng%20Nguy%c3%aan%20T%e1%ba%afc%20Thi%e1%ba%bft%20K%e1%ba%bf%20Giao%20Di%e1%bb%87n%20M%c3%a0%20M%e1%bb%8di%20Developer%20N%c3%aan%20Bi%e1%ba%bft" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -1338,5 +1345,5 @@
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
 </html>
