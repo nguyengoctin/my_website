@@ -8,20 +8,55 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Wed, 29 Jul 2026 15:45:00 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 16:15:00 +0700</lastBuildDate>
     <atom:link href="https://ngoctin.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI Tools</title>
-      <link>https://ngoctin.me/tags/ai-tools/</link>
-      <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/ai-tools/</guid>
+      <title>AI Agents</title>
+      <link>https://ngoctin.me/tags/ai-agents/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/ai-agents/</guid>
       <description></description>
     </item>
     <item>
-      <title>Linux</title>
-      <link>https://ngoctin.me/tags/linux/</link>
+      <title>Graph Engineering</title>
+      <link>https://ngoctin.me/tags/graph-engineering/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/graph-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangGraph</title>
+      <link>https://ngoctin.me/tags/langgraph/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/langgraph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Agent Systems</title>
+      <link>https://ngoctin.me/tags/multi-agent-systems/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/multi-agent-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>https://ngoctin.me/tags/software-engineering/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Architecture</title>
+      <link>https://ngoctin.me/tags/system-architecture/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/system-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://ngoctin.me/tags/ai/</link>
       <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/linux/</guid>
+      <guid>https://ngoctin.me/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -39,10 +74,17 @@
       <description></description>
     </item>
     <item>
-      <title>Reading Workflow</title>
-      <link>https://ngoctin.me/tags/reading-workflow/</link>
+      <title>Reading Experience</title>
+      <link>https://ngoctin.me/tags/reading-experience/</link>
       <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/reading-workflow/</guid>
+      <guid>https://ngoctin.me/tags/reading-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>https://ngoctin.me/tags/workflow/</link>
+      <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
@@ -64,13 +106,6 @@
       <link>https://ngoctin.me/tags/self-learning/</link>
       <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>https://ngoctin.me/tags/self-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software Engineering</title>
-      <link>https://ngoctin.me/tags/software-engineering/</link>
-      <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
@@ -127,20 +162,6 @@
       <link>https://ngoctin.me/tags/openai/</link>
       <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>https://ngoctin.me/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>System Architecture</title>
-      <link>https://ngoctin.me/tags/system-architecture/</link>
-      <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/system-architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://ngoctin.me/tags/ai/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -211,13 +232,6 @@
       <link>https://ngoctin.me/tags/web-development/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>https://ngoctin.me/tags/web-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Workflow</title>
-      <link>https://ngoctin.me/tags/workflow/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/tags/workflow/</guid>
       <description></description>
     </item>
     <item>

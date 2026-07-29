@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Wed, 29 Jul 2026 15:45:00 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 16:15:00 +0700</lastBuildDate>
     <atom:link href="https://ngoctin.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technology</title>
+      <link>https://ngoctin.me/categories/technology/</link>
+      <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/categories/technology/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Tech Blog</title>
       <link>https://ngoctin.me/categories/tech-blog/</link>
@@ -22,13 +29,6 @@
       <link>https://ngoctin.me/categories/resources/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
       <guid>https://ngoctin.me/categories/resources/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Technology</title>
-      <link>https://ngoctin.me/categories/technology/</link>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/technology/</guid>
       <description></description>
     </item>
     <item>

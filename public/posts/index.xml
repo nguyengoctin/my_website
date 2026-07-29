@@ -4,7 +4,7 @@
         <link>https://ngoctin.me/posts/</link>
         <description>All Posts | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
     <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
@@ -193,15 +193,27 @@
 <p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
 </item>
 <item>
-    <title>Bí Kíp Đọc Tài Liệu Tiếng Anh Siêu Tốc Bằng Microsoft Edge &amp; AI Trợ Lý</title>
+    <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
+    <link>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</link>
+    <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Kiến trúc hệ thống quan trọng hơn bản thân mô hình ngôn ngữ.&rdquo; (Architecture matters more than the model)</em> — <strong>Andrew Ng</strong></p>
+</blockquote>
+<p>Chỉ trong vòng chưa đầy ba năm, phương thức thiết kế và vận hành các hệ thống Trí tuệ Nhân tạo (AI) đã trải qua những cuộc dịch chuyển mô hình (paradigm shift) mang tính nền tảng.</p>
+<p>Giai đoạn đầu của kỷ nguyên AI Tạo sinh được đánh dấu bởi sự thống trị của <strong>Prompt Engineering</strong> — nơi trọng tâm nằm ở việc biến hóa ngôn ngữ tự nhiên để &ldquo;vắt kiệt&rdquo; khả năng suy luận của mô hình. Khi nhu cầu tích hợp dữ liệu doanh nghiệp bùng nổ, <strong>Context Engineering</strong> (với đại diện là kỹ thuật RAG) lên ngôi để cung cấp đúng ngữ cảnh cho mô hình trước khi khởi tạo câu trả lời.</p>]]></description>
+</item>
+<item>
+    <title>Từ Ngày Dùng Microsoft Edge Đọc PDF Tiếng Anh, Tôi Không Còn Muốn Mở Tab Từ Điển Nữa</title>
     <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
     <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
     <description><![CDATA[<blockquote>
-<p><em>&ldquo;Cách tốt nhất để tiếp thu tri thức chuyên ngành là đọc tài liệu gốc tiếng Anh. Nhưng rào cản lớn nhất lại là việc ngắt quãng dòng suy nghĩ khi phải liên tục tra từ điển.&rdquo;</em></p>
+<p><em>&ldquo;Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua.&rdquo;</em></p>
 </blockquote>
-<p>Nếu bạn là một lập trình viên, nghiên cứu sinh hay người làm việc thường xuyên với tài liệu kỹ thuật, tài liệu PDF dày cộp bằng tiếng Anh, chắc chắn bạn đã từng trải qua cảm giác nản lòng khi phải liên tục <strong>bôi đen - copy - chuyển tab sang Google Translate/DeepL - paste - rồi quay lại</strong>.</p>]]></description>
+<p>Trước đây, mỗi lần phải đối mặt với một tài liệu PDF tiếng Anh dày cộp — dù là tài liệu kỹ thuật, bài báo khoa học hay sách chuyên ngành — tôi luôn có một cảm giác &ldquo;ngại&rdquo; ngầm.</p>]]></description>
 </item>
 <item>
     <title>Không Có Con Đường Tắt Trong Tự Học</title>

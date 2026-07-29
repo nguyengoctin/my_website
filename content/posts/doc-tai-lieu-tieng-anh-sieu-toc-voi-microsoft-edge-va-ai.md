@@ -27,9 +27,11 @@ Thực ra Microsoft Edge đã có sẵn trên máy từ lâu, nhưng tôi vốn 
 Dưới đây là 3 điểm chạm đã thay đổi hoàn toàn thói quen đọc tài liệu tiếng Anh của tôi trên PC:
 
 ### 1. Dịch Thuật Sidebar Song Song — Giữ Trọn Dòng Suy Nghĩ
-Khi gặp một đoạn văn tiếng Anh phức tạp, tôi chỉ cần bôi đen và **chuột phải $\rightarrow$ Dịch đoạn văn đã chọn**.
+Khi gặp một đoạn văn tiếng Anh phức tạp, tôi chỉ cần bôi đen và **chuột phải → Dịch đoạn văn đã chọn**.
 
 Thay vì nhảy ra một cửa sổ popup lơ lửng che mất nội dung (như các extension từ điển thường làm), một thanh **Sidebar bên phải** trượt ra rất gọn gàng. Văn bản gốc và bản dịch tiếng Việt hiển thị song song với nhau. Mắt tôi chỉ cần liếc nhẹ sang phải để đối chiếu rồi đọc tiếp, trang sách hoàn toàn giữ nguyên vị trí.
+
+![Minh họa trình đọc PDF Microsoft Edge](/images/edge_doc.webp)
 
 ### 2. AI Copilot — "Người Trợ Lý" Giải Thích Thuật Ngữ Tại Chỗ
 Có những đoạn văn mà dù dịch từng từ sang tiếng Việt, tôi vẫn thấy mơ hồ vì chứa các thuật ngữ chuyên ngành trừu tượng. 
@@ -39,7 +41,7 @@ Những lúc đó, thay vì dịch, tôi chọn **Ask Copilot**. Ngay lập tứ
 ### 3. Tắt "Mini Menu" — Trả Lại Sự Tối Giản Cho Trang Sách
 Mặc định khi bôi đen chữ, trình duyệt sẽ hiện một thanh menu nhỏ lơ lửng ngay tại con trỏ. Ban đầu tôi thấy nó khá vướng mắt vì che mất dòng chữ bên dưới.
 
-Sau khi vào **Cài đặt $\rightarrow$ Giao diện $\rightarrow$ Menu ngữ cảnh** và **Tắt (OFF)** dòng *"Show mini menu when selecting text"*, trang sách trở nên sạch sẽ tuyệt đối. Tôi toàn quyền kiểm soát khi nào cần dịch chỉ bằng một cú nhấp chuột phải.
+Sau khi vào **Cài đặt → Giao diện → Menu ngữ cảnh** và **Tắt (OFF)** dòng *"Show mini menu when selecting text"*, trang sách trở nên sạch sẽ tuyệt đối. Tôi toàn quyền kiểm soát khi nào cần dịch chỉ bằng một cú nhấp chuột phải.
 
 ---
 

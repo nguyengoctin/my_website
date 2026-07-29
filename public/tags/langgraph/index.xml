@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LangGraph - Tag - Nguyen Ngoc Tin</title>
+        <link>https://ngoctin.me/tags/langgraph/</link>
+        <description>LangGraph - Tag - Nguyen Ngoc Tin</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/langgraph/" rel="self" type="application/rss+xml" /><item>
+    <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
+    <link>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</link>
+    <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Kiến trúc hệ thống quan trọng hơn bản thân mô hình ngôn ngữ.&rdquo; (Architecture matters more than the model)</em> — <strong>Andrew Ng</strong></p>
+</blockquote>
+<p>Chỉ trong vòng chưa đầy ba năm, phương thức thiết kế và vận hành các hệ thống Trí tuệ Nhân tạo (AI) đã trải qua những cuộc dịch chuyển mô hình (paradigm shift) mang tính nền tảng.</p>
+<p>Giai đoạn đầu của kỷ nguyên AI Tạo sinh được đánh dấu bởi sự thống trị của <strong>Prompt Engineering</strong> — nơi trọng tâm nằm ở việc biến hóa ngôn ngữ tự nhiên để &ldquo;vắt kiệt&rdquo; khả năng suy luận của mô hình. Khi nhu cầu tích hợp dữ liệu doanh nghiệp bùng nổ, <strong>Context Engineering</strong> (với đại diện là kỹ thuật RAG) lên ngôi để cung cấp đúng ngữ cảnh cho mô hình trước khi khởi tạo câu trả lời.</p>]]></description>
+</item>
+</channel>
+</rss>
