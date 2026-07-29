@@ -1,3 +1,4 @@
-{{- $id := dict "Content" .Content "Scratch" .Page.Scratch | partial "function/id.html" -}}
-<div class="mermaid" id="{{ $id }}">{{ .Content }}</div>
+{{- $content := .Content | htmlUnescape -}}
+{{- $id := dict "Content" $content "Scratch" .Page.Scratch | partial "function/id.html" -}}
+<div class="mermaid" id="{{ $id }}">{{ $content }}</div>
 {{- .Page.Scratch.SetInMap "this" "mermaid" true -}}

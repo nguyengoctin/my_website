@@ -1,64 +1,68 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tech Blog - Category - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/categories/tech-blog/</link>
+        <link>http://localhost:1313/categories/tech-blog/</link>
         <description>Tech Blog - Category - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/categories/tech-blog/" rel="self" type="application/rss+xml" /><item>
-    <title>Từ Ngày Dùng Microsoft Edge Đọc PDF Tiếng Anh, Tôi Không Còn Muốn Mở Tab Từ Điển Nữa</title>
-    <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/categories/tech-blog/" rel="self" type="application/rss+xml" /><item>
+    <title>Hướng Dẫn &amp; Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
+    <link>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</link>
+    <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Các shortcodes của LoveIt giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp.&rdquo;</em></p>
+</blockquote>
+<p>Giao diện <strong>LoveIt</strong> cung cấp một bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, âm nhạc, biểu đồ và các ô ghi chú ấn tượng.</p>
+<p>Dưới đây là tài liệu tổng hợp và demo trực quan toàn bộ 16 shortcodes có sẵn trong hệ thống.</p>]]></description>
+</item>
+<item>
+    <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
+    <link>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
     <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
+    <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua.&rdquo;</em></p>
 </blockquote>
-<p>Trước đây, mỗi lần phải đối mặt với một tài liệu PDF tiếng Anh dày cộp — dù là tài liệu kỹ thuật, bài báo khoa học hay sách chuyên ngành — tôi luôn có một cảm giác &ldquo;ngại&rdquo; ngầm.</p>]]></description>
+<p>Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm.</p>]]></description>
 </item>
 <item>
     <title>Không Có Con Đường Tắt Trong Tự Học</title>
-    <link>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
+    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
     <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
+    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
     <description><![CDATA[<blockquote>
-<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, bạn đã đi hết con đường vòng.&rdquo;</em></p>
+<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, chúng ta đã đi hết con đường vòng.&rdquo;</em> — <strong>Đinh Anh Thi</strong></p>
 </blockquote>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content">Bài viết này được tổng hợp và phát triển dựa trên góc nhìn và các chia sẻ trên <strong>Math2IT</strong> của <strong>Đinh Anh Thi</strong>.</div>
-    </div>
-</div>
-<p>Trong cuốn sách <em>Sapiens</em>, nhà sử học Yuval Noah Harari có nhắc đến một bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong></p>]]></description>
+<p>Trong cuốn sách <em>Sapiens</em>, Yuval Noah Harari chỉ ra bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong> Khi áp dụng vào việc học, bản năng này khiến chúng ta săn tìm những bài viết tóm tắt vài trang, video vài phút hứa hẹn &ldquo;Làm chủ Python trong 4 giờ&rdquo; hay &ldquo;Thành thạo lập trình sau 1 ngày&rdquo;.</p>]]></description>
 </item>
 <item>
-    <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết</title>
-    <link>https://ngoctin.me/posts/refactoring-ui-design-principles/</link>
+    <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Cho Developer</title>
+    <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/refactoring-ui-design-principles/</guid>
+    <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
     <description><![CDATA[<blockquote>
-<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em></p>
+<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em> — <strong>Adam Wathan &amp; Steve Schoger</strong></p>
 </blockquote>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Bài viết này được tổng hợp và biên dịch dựa trên cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>. Nội dung gốc tham khảo từ bài viết của <a href="https://github.com/tuananhhedspibk/tuananhhedspibk.github.io" target="_blank" rel="noopener noreffer ">tuananhhedspibk</a>.</div>
+        <div class="admonition-content">Bài viết được tổng hợp và đúc kết từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
     </div>
 </div>
-<p>Là một developer, tôi từng nghĩ thiết kế UI là lãnh địa riêng của designers. Nhưng thực tế là: <strong>mọi người viết code đều phải đưa ra quyết định thiết kế hàng ngày</strong> — từ việc đặt khoảng cách cho một button, chọn màu cho một badge, cho đến bố cục của một form đăng ký. Refactoring UI là cuốn sách giúp developers tư duy đúng về những quyết định đó.</p>]]></description>
+<p>Là lập trình viên, mỗi khi viết code chúng ta đều phải đưa ra các quyết định thiết kế hàng ngày — từ khoảng cách button, chọn màu badge, đến bố cục form. Dưới đây là bộ nguyên tắc cốt lõi giúp chúng ta tự tin đưa ra quyết định thiết kế chuẩn mực.</p>]]></description>
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>https://ngoctin.me/posts/design-and-build-ai-agents/</link>
+    <link>http://localhost:1313/posts/design-and-build-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/design-and-build-ai-agents/</guid>
+    <guid>http://localhost:1313/posts/design-and-build-ai-agents/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
 </blockquote>
@@ -67,10 +71,10 @@
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Bài viết này được tổng hợp và biên dịch dựa trên báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (Xuất bản bởi đội ngũ kỹ sư OpenAI).</div>
+        <div class="admonition-content">Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (2025).</div>
     </div>
 </div>
-<p>Trong bối cảnh AI đang phát triển bùng nổ, việc sử dụng các công cụ hỗ trợ như GitHub Copilot, ChatGPT hay Claude đã trở thành thói quen hàng ngày của nhiều kỹ sư phần mềm. Tuy nhiên, ranh giới thực sự của một hệ thống AI mạnh mẽ không dừng lại ở việc &ldquo;gõ code hộ&rdquo; hay &ldquo;trả lời câu hỏi theo prompt&rdquo;. Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> - những thực thể tự trị có khả năng tự động lên kế hoạch, tương tác với môi trường, sử dụng các công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
+<p>Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
 </item>
 </channel>
 </rss>

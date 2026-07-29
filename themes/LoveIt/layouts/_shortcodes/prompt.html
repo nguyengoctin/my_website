@@ -1,0 +1,13 @@
+{{- $title := cond .IsNamedParams (.Get "title") (.Get 0) | default "Prompt" -}}
+{{- $content := trim .Inner "\n" -}}
+<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
+    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
+        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
+            <i class="fas fa-terminal" style="color: #57606a;"></i> {{ $title }}
+        </span>
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+            <i class="far fa-copy"></i> <span>Copy</span>
+        </button>
+    </div>
+    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">{{ $content }}</div>
+</div>

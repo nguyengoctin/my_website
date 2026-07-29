@@ -1,27 +1,27 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Design System - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/design-system/</link>
+        <link>http://localhost:1313/tags/design-system/</link>
         <description>Design System - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/design-system/" rel="self" type="application/rss+xml" /><item>
-    <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Mà Mọi Developer Nên Biết</title>
-    <link>https://ngoctin.me/posts/refactoring-ui-design-principles/</link>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/design-system/" rel="self" type="application/rss+xml" /><item>
+    <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Cho Developer</title>
+    <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/refactoring-ui-design-principles/</guid>
+    <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
     <description><![CDATA[<blockquote>
-<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em></p>
+<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em> — <strong>Adam Wathan &amp; Steve Schoger</strong></p>
 </blockquote>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Bài viết này được tổng hợp và biên dịch dựa trên cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>. Nội dung gốc tham khảo từ bài viết của <a href="https://github.com/tuananhhedspibk/tuananhhedspibk.github.io" target="_blank" rel="noopener noreffer ">tuananhhedspibk</a>.</div>
+        <div class="admonition-content">Bài viết được tổng hợp và đúc kết từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
     </div>
 </div>
-<p>Là một developer, tôi từng nghĩ thiết kế UI là lãnh địa riêng của designers. Nhưng thực tế là: <strong>mọi người viết code đều phải đưa ra quyết định thiết kế hàng ngày</strong> — từ việc đặt khoảng cách cho một button, chọn màu cho một badge, cho đến bố cục của một form đăng ký. Refactoring UI là cuốn sách giúp developers tư duy đúng về những quyết định đó.</p>]]></description>
+<p>Là lập trình viên, mỗi khi viết code chúng ta đều phải đưa ra các quyết định thiết kế hàng ngày — từ khoảng cách button, chọn màu badge, đến bố cục form. Dưới đây là bộ nguyên tắc cốt lõi giúp chúng ta tự tin đưa ra quyết định thiết kế chuẩn mực.</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,15 +1,27 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Documentation - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/documentation/</link>
+        <link>http://localhost:1313/tags/documentation/</link>
         <description>Documentation - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 06 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/documentation/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/documentation/" rel="self" type="application/rss+xml" /><item>
+    <title>Hướng Dẫn &amp; Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
+    <link>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</link>
+    <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Các shortcodes của LoveIt giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp.&rdquo;</em></p>
+</blockquote>
+<p>Giao diện <strong>LoveIt</strong> cung cấp một bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, âm nhạc, biểu đồ và các ô ghi chú ấn tượng.</p>
+<p>Dưới đây là tài liệu tổng hợp và demo trực quan toàn bộ 16 shortcodes có sẵn trong hệ thống.</p>]]></description>
+</item>
+<item>
     <title>Tài liệu Giao diện - Các bước Cơ bản</title>
-    <link>https://ngoctin.me/posts/theme-documentation-basics.vi/</link>
+    <link>http://localhost:1313/posts/theme-documentation-basics.vi/</link>
     <pubDate>Fri, 06 Mar 2020 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/theme-documentation-basics.vi/</guid>
+    <guid>http://localhost:1313/posts/theme-documentation-basics.vi/</guid>
     <description><![CDATA[<p>Khám phá giao diện <strong>Hugo - LoveIt</strong> và các khái niệm cốt lõi đằng sau nó.</p>]]></description>
 </item>
 </channel>

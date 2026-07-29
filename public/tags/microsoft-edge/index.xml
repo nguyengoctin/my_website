@@ -1,19 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Microsoft Edge - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/microsoft-edge/</link>
+        <link>http://localhost:1313/tags/microsoft-edge/</link>
         <description>Microsoft Edge - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/microsoft-edge/" rel="self" type="application/rss+xml" /><item>
-    <title>Từ Ngày Dùng Microsoft Edge Đọc PDF Tiếng Anh, Tôi Không Còn Muốn Mở Tab Từ Điển Nữa</title>
-    <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/microsoft-edge/" rel="self" type="application/rss+xml" /><item>
+    <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
+    <link>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
     <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
+    <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua.&rdquo;</em></p>
 </blockquote>
-<p>Trước đây, mỗi lần phải đối mặt với một tài liệu PDF tiếng Anh dày cộp — dù là tài liệu kỹ thuật, bài báo khoa học hay sách chuyên ngành — tôi luôn có một cảm giác &ldquo;ngại&rdquo; ngầm.</p>]]></description>
+<p>Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm.</p>]]></description>
 </item>
 </channel>
 </rss>

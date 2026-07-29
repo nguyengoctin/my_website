@@ -1,19 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Career - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/career/</link>
+        <link>http://localhost:1313/tags/career/</link>
         <description>Career - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/career/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/career/" rel="self" type="application/rss+xml" /><item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng Để AI &#39;Code Hộ&#39;, Hãy Dùng AI Như Một Cộng Sự!</title>
-    <link>https://ngoctin.me/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
+    <link>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
+    <guid>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
     <description><![CDATA[<blockquote>
 <p><em>&ldquo;AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI.&rdquo;</em></p>
 </blockquote>
-<p>Nếu bạn vừa bước chân vào thế giới lập trình web trong năm nay, rất có thể bạn đang trải qua một cảm giác vừa kinh ngạc vừa hoang mang. Chỉ với vài dòng câu lệnh đơn giản gửi tới ChatGPT, Claude hay GitHub Copilot, một trang web hoàn chỉnh hay một hệ thống RESTful API phức tạp đã hiện ra trước mắt trong vài giây.</p>]]></description>
+<p>Nếu chúng ta vừa bước chân vào thế giới lập trình web trong giai đoạn này, rất có thể chúng ta đang trải qua một cảm giác vừa kinh ngạc vừa hoang mang. Chỉ với vài dòng câu lệnh đơn giản gửi tới ChatGPT, Claude hay GitHub Copilot, một trang web hoàn chỉnh hay một hệ thống RESTful API phức tạp đã hiện ra trước mắt trong vài giây.</p>]]></description>
 </item>
 </channel>
 </rss>
