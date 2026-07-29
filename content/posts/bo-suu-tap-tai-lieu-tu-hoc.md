@@ -1,6 +1,6 @@
 ---
-title: "A Collection of Learning Resources"
-date: 2026-07-24
+title: "Tài Nguyên Tự Học"
+date: 2026-07-26
 weight: 1
 draft: false
 author: "Nguyen Ngoc Tin"

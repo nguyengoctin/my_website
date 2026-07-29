@@ -1,76 +1,89 @@
-# BỘ QUY TẮC VIẾT BLOG CÁ NHÂN (BLOG WRITING RULES)
-
-> *"Writing is a shared learning experience for both the writer and the readers."* — **Huyen Chip**
-> *"Nếu bạn có thể nói một vấn đề trong vòng một đoạn văn thì đừng nên dùng một trang A4 để giải thích cái vấn đề đó."* — **Phạm Huy Hoàng**
+# Quy Tắc Viết Blog Chia Sẻ Kiến Thức
 
 ---
 
-## 1. PHONG CÁCH VĂN PHONG & XƯNG HÔ (TONE & PERSPECTIVE)
+## 1. Triết Lý & Phong Cách Viết
 
-- **Xưng hô "Chúng ta" (Shared Learning Experience):**
-  Sử dụng "chúng ta" (người viết và người đọc cùng đồng hành) để tạo giọng văn chia sẻ, cùng học hỏi. Tránh giọng điệu dạy đời, xa cách hoặc xưng "tôi - bạn" cứng nhắc.
-- **Tập trung vào bản chất bài toán:**
-  Đến thẳng vấn đề, nêu rõ lý do tại sao kiến thức/kỹ thuật này quan trọng và ứng dụng thực tế ra sao.
-
----
-
-## 2. NGUYÊN TẮC TINH GỌN & MẬT ĐỘ THÔNG TIN (CONCISENESS & DENSITY)
-
-- **Nguyên tắc "Không trang A4 dư thừa":**
-  Loại bỏ hoàn toàn các đoạn mở bài/kết bài hoa mỹ dài dòng, các câu từ cảm xúc lặp đi lặp lại.
-- **Tối ưu hình thức trình bày:**
-  - Dùng **Bảng so sánh (Tables)** cho các đối tượng so sánh.
-  - Dùng **Danh sách đánh số (Numbered Lists)** cho các quy trình tuần tự.
-  - Dùng **Phương trình toán LaTeX** cho công thức hiệu suất.
-  - Dùng **Sơ đồ Mermaid / ASCII** cho kiến trúc hệ thống và luồng dữ liệu.
-
----
-
-## 3. QUY TẮC NGÔN NGỮ & DỊCH THUẬT (NO PARENTHETICAL TRANSLATION)
-
-- **TUYỆT ĐỐI KHÔNG dùng dấu ngoặc đơn `()` để dịch nghĩa tiếng Việt đi kèm:**
-  - **SAI (Cấm):** `Spec-Driven Development (Phát triển dựa trên đặc tả)`, `hallucination (ảo giác)`, `nợ kỹ thuật (technical debt)`.
-  - **ĐÚNG:** Diễn đạt câu tiếng Việt tự nhiên HOẶC giữ nguyên thuật ngữ chuyên ngành tiếng Anh mà không thêm ngoặc giải thích phía sau.
-  - *Ví dụ đúng:* "Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm Nguồn sự thật duy nhất."
+- **Xưng hô "Chúng ta":** Dùng "chúng ta" khi khám phá khái niệm và chia sẻ hành trình học hỏi — người viết và người đọc cùng đồng hành. Tránh giọng dạy đời hay khoảng cách "tôi - bạn".
+- **Tinh gọn & Mật độ thông tin:** Nếu nói được trong một đoạn văn, đừng dùng một trang A4. Không mở bài hay kết bài rườm rà.
+- **Cấm ngoặc đơn dịch nghĩa:** TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()` để dịch từ inline. Dùng tiếng Việt tự nhiên hoặc giữ nguyên thuật ngữ tiếng Anh.
+- **Cấu trúc rõ ràng & Dễ lướt:** Phân chia tiêu đề H2/H3 cụ thể. Trình bày bài toán trước, giải pháp và bài học thực tế theo sau.
+- **Mở bài bằng bài toán, không phải bằng giới thiệu:** Câu đầu tiên phải khiến người đọc thấy ngay vấn đề đang được giải quyết. Không mở bằng "Biết đến X bao giờ chưa?" hay "Hôm nay chúng ta sẽ tìm hiểu…".
+- **Đặt người đọc vào bối cảnh trước khi giải pháp:** Xác định rõ bài toán, ai sẽ gặp và tại sao nó khó. Đừng nhảy thẳng vào giải pháp khi người đọc chưa đồng cảm với vấn đề.
+- **Tiêu đề mô tả cụ thể:** Tiêu đề phải phản ánh chính xác nội dung. Tránh tiêu đề mơ hồ — độc giả quyết định đọc hay không trong 3 giây.
+- **Không dùng buzzwords hype:** Tránh tuyệt đối các từ "game-changer", "revolutionary", "blazing fast" hay các cụm từ marketing rỗng nghĩa.
+- **Viết cho "bản thân quá khứ":** Chọn chủ đề từ những khái niệm mà bản thân từng bế tắc. Bài viết tốt nhất là bài viết bạn ước gì được đọc khi còn mới học.
+- **Góc nhìn độc quyền:** Đừng viết lại tài liệu chính thức. Chia sẻ insight từ thực tế triển khai — sai lầm, edge case, và bài học "hidden gem" chỉ người có kinh nghiệm thực chiến mới biết.
+- **Bằng chứng hơn tuyên bố:** Dùng ví dụ code, sơ đồ kiến trúc để minh họa thay vì chỉ khẳng định suông. "Show, don't tell."
+- **Hiểu bản chất, đừng chỉ biết tên:** Diễn giải khái niệm bằng ngôn ngữ của mình — nếu chỉ lặp lại định nghĩa từ để biết cái tên, đó không phải hiểu.
+- **Dạy cách tư duy, không chỉ đưa ra đáp án:** Mỗi bài viết nên trang bị cho người đọc một framework tư duy, không chỉ một giải pháp cụ thể để copy-paste.
+- **Thất bại là dữ liệu:** Chia sẻ cả những gì đã không hoạt động và lý do tại sao — những bài học từ thất bại thường có giá trị hơn thành công.
+- **Trích dẫn nguồn:** Khi tham khảo nghiên cứu hay quan điểm người khác, dẫn nguồn rõ ràng. Điều này xây dựng uy tín và tôn trọng người đọc.
+- **Chấp nhận bài viết chưa hoàn hảo:** Strive to be right, but don't fear being wrong. Bài viết có lỗ hổng khi đăng vẫn có giá trị hơn không đăng. Cộng đồng sẽ giúp chỉnh sửa.
 
 ---
 
-## 4. ĐỊNH DẠNG PROMPT MẪU (PROMPT SHORTCODE)
+## 2. Cú Pháp Trình Bày Nội Dung
 
-- **Sử dụng shortcode `prompt` chuyên dụng:**
-  ```markdown
-  {{< prompt title="Prompt Mẫu: [Tên Prompt]" >}}
-  Nội dung prompt ở đây...
-  1. Mục 1
-  2. Mục 2
-  {{< /prompt >}}
-  ```
-- **Ưu điểm giao diện:**
-  - Định dạng font chữ monospace chuyên dụng cho prompt.
-  - **Không đánh số dòng** (no line numbers) để tránh rối mắt.
-  - Tích hợp nút **Copy** 1-click góc trên bên phải.
-  - Tự động xuống dòng chuẩn từng mục (1, 2, 3, 4, 5, 6, 7, 8).
+Các shortcodes sẵn có trong theme LoveIt và cách sử dụng chuẩn:
 
----
+**Callout / Hộp chú thích:**
+```
+{{< admonition type="note|tip|warning|danger|info|success|question|failure|bug|example|abstract" title="Tiêu đề" >}}
+Nội dung...
+{{< /admonition >}}
+```
 
-## 5. ĐỊNH DẠNG QUOTE & TRÍCH DẪN (QUOTES)
+**Trích dẫn:**
+```
+{{< quote author="Tên Tác Giả" >}}
+Nội dung trích dẫn...
+{{< /quote >}}
+```
+Nếu không ghi `author` sẽ tự động hiển thị `— Sưu tầm`.
 
-- **Cú pháp Blockquote chuẩn:**
-  ```markdown
-  > *"Nội dung câu quote"* — **Tên Tác Giả**
-  ```
-- Các câu quote đầu bài viết hoặc trong bài sưu tầm quote phải trình bày đơn giản, cô đọng, không kèm các đoạn giải thích trang A4 rườm rà phía dưới.
+**Khung Prompt mẫu:**
+```
+{{< prompt title="Prompt Mẫu: [Tiêu đề]" >}}
+Nội dung prompt...
+{{< /prompt >}}
+```
+Không dùng codeblock hay dấu ngoặc kép bên trong prompt.
 
----
+**Hình ảnh với lightbox:**
+```
+{{< image src="/images/..." caption="Chú thích ảnh" alt="Mô tả alt" >}}
+```
 
-## 6. QUY TẮC SƠ ĐỒ MERMAID (MERMAID DIAGRAMS IN HUGO LOVEIT)
+**Liên kết nội bộ:**
+```
+{{< link href="https://..." content="Tên hiển thị" title="Tooltip" >}}
+```
 
-- **Bọc sơ đồ bằng khối mã ` ```mermaid `:**
-  ```markdown
-  ```mermaid
-  flowchart LR
-      Step1["Bước 1: Hỏi và giải thích"] --> Step2["Bước 2: Tự tay triển khai"]
-  ```
-  ```
-- **Lưu ý nhãn nút (Node Labels):**
-  Bọc nhãn nút trong dấu ngoặc kép `"..."` và không bắt đầu nhãn bằng dạng `1. `, `2. ` để tránh lỗi `Unsupported markdown: list` của Mermaid 11.
+**Sơ đồ Mermaid:**
+````
+```mermaid
+flowchart LR
+    A["Nhãn nút"] --> B["Nhãn nút khác"]
+```
+````
+Bọc nhãn nút trong dấu ngoặc kép `"..."` để tránh lỗi ký tự đặc biệt.
+
+**Code Snippets:**
+````
+```ngôn_ngữ
+// code ở đây
+```
+````
+Luôn có câu giải thích ngắn gọn ngữ cảnh trước khi đưa ra mã nguồn.
+
+**Shortcodes ít dùng (tham khảo khi cần):**
+- `{{< typeit >}}` — Hiệu ứng gõ chữ từng ký tự
+- `{{< echarts >}}` — Biểu đồ ECharts
+- `{{< bilibili id="..." >}}` — Nhúng video Bilibili
+- `{{< music >}}` — Nhúng trình phát nhạc
+- `{{< gist >}}` — Nhúng GitHub Gist
+- `{{< version >}}` — Đánh dấu phiên bản thay đổi
+- `{{< style >}}` — CSS inline tùy chỉnh
+- `{{< person >}}` — Thẻ giới thiệu người
+- `{{< raw >}}` — HTML thô không qua sanitize

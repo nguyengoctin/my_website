@@ -1,33 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Quotes - Category - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/categories/quotes/</link>
+        <link>https://ngoctin.me/categories/quotes/</link>
         <description>Quotes - Category - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/categories/quotes/" rel="self" type="application/rss+xml" /><item>
-    <title>A Collection of Favorite Quotes</title>
-    <link>http://localhost:1313/posts/a-collection-of-favorite-quotes/</link>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/categories/quotes/" rel="self" type="application/rss+xml" /><item>
+    <title>Những Trích Dẫn Định Hình Tư Duy Về Tự Học Và Phát Triển Bản Thân</title>
+    <link>https://ngoctin.me/posts/bo-suu-tap-cau-noi-yeu-thich/</link>
     <pubDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-favorite-quotes/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers.&rdquo;</em><br>
-— <strong>Huyen Chip</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;The light is brightest when it is dark.&rdquo;</em><br>
-— <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;Remember that, you are a son before becoming a father.&rdquo;</em><br>
-— <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;Premature optimization is the root of all evil.&rdquo;</em><br>
-— <strong>Donald Knuth</strong></p>]]></description>
+    <guid>https://ngoctin.me/posts/bo-suu-tap-cau-noi-yeu-thich/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers."</p>]]></description>
 </item>
 </channel>
 </rss>

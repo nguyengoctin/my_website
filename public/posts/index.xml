@@ -5,11 +5,11 @@
         <description>All Posts | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
             <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>A Collection of Learning Resources</title>
-    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
+    <title>Tài Nguyên Tự Học</title>
+    <link>http://localhost:1313/posts/bo-suu-tap-tai-lieu-tu-hoc/</link>
+    <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
+    <guid>http://localhost:1313/posts/bo-suu-tap-tai-lieu-tu-hoc/</guid>
     <description><![CDATA[<p>The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.</p>
 <blockquote>
 <p>“You do not rise to the level of your goals. You fall to the level of your systems.” – James Clear</p>
@@ -198,46 +198,37 @@
     <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Các shortcodes của LoveIt giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp.&rdquo;</em></p>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Các shortcodes giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
-<p>Giao diện <strong>LoveIt</strong> cung cấp một bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, âm nhạc, biểu đồ và các ô ghi chú ấn tượng.</p>
-<p>Dưới đây là tài liệu tổng hợp và demo trực quan toàn bộ 16 shortcodes có sẵn trong hệ thống.</p>]]></description>
+
+<p>Giao diện <strong>LoveIt</strong> cùng các tùy chỉnh nâng cao cung cấp bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, trích dẫn, biểu đồ, câu lệnh prompt và các ô ghi chú ấn tượng.</p>]]></description>
 </item>
 <item>
-    <title>A Collection of Favorite Quotes</title>
-    <link>http://localhost:1313/posts/a-collection-of-favorite-quotes/</link>
+    <title>Những Trích Dẫn Định Hình Tư Duy Về Tự Học Và Phát Triển Bản Thân</title>
+    <link>http://localhost:1313/posts/bo-suu-tap-cau-noi-yeu-thich/</link>
     <pubDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-favorite-quotes/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers.&rdquo;</em><br>
-— <strong>Huyen Chip</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;The light is brightest when it is dark.&rdquo;</em><br>
-— <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;Remember that, you are a son before becoming a father.&rdquo;</em><br>
-— <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><em>&ldquo;Premature optimization is the root of all evil.&rdquo;</em><br>
-— <strong>Donald Knuth</strong></p>]]></description>
+    <guid>http://localhost:1313/posts/bo-suu-tap-cau-noi-yeu-thich/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers."</p>]]></description>
 </item>
 <item>
-    <title>Ảo Tưởng Về Sự Nhẹ Nhàng Và Tư Duy Khổ Luyện Của Kình Ngư Vĩ Đại Nhất Olympic</title>
+    <title>Ảo Tưởng Về Sự Nhẹ Nhàng Và Kỷ Luật Lạnh Lùng Từ Michael Phelps</title>
     <link>http://localhost:1313/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</link>
     <pubDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Sự xuất chúng chưa bao giờ là một món quà. Nó là một bài kiểm tra sức chịu đựng và một hệ thống kỷ luật lạnh lùng bỏ qua cảm xúc.&rdquo;</em></p>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Sự xuất chúng chưa bao giờ là một món quà. Nó là một bài kiểm tra sức chịu đựng và một hệ thống kỷ luật lạnh lùng bỏ qua cảm xúc."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <p>Xã hội hiện đại ngập tràn những lời khuyên vuốt ve dễ chịu: <em>&ldquo;Hãy nhẹ nhàng với bản thân&rdquo;</em>, <em>&ldquo;Cứ thong dong rồi kết quả sẽ đến&rdquo;</em>. Nhưng sự thật là: <strong>Thế giới này không vận hành bằng sự dịu dàng.</strong> Nền kinh tế tri thức không bao giờ trả tiền cho những nỗ lực nửa vời. Khi chúng ta chọn thong dong thay vì ép bản thân vượt qua ngưỡng chịu đựng, chúng ta đang vô tình nhường lại cơ hội bứt phá cho nhóm <strong>1% những người sẵn sàng sống trong áp lực cực hạn</strong>.</p>]]></description>
 </item>
 <item>
@@ -246,19 +237,14 @@
     <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Architecture matters more than the model.&rdquo;</em> — <strong>Andrew Ng</strong></p>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Architecture matters more than the model."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Andrew Ng</cite>
+    </footer>
 </blockquote>
-<p>Phương thức chúng ta thiết kế các hệ thống AI đã trải qua 4 bước dịch chuyển kiến trúc:</p>
-<ol>
-<li><strong>Prompt Engineering:</strong> Biến hóa ngôn ngữ tự nhiên để vắt kiệt khả năng suy luận của mô hình.</li>
-<li><strong>Context Engineering:</strong> Cung cấp đúng dữ liệu doanh nghiệp làm ngữ cảnh cho mô hình thông qua RAG.</li>
-<li><strong>Loop Engineering:</strong> Cho phép tác tử tự suy nghĩ, gọi công cụ và tự sửa sai trong một vòng lặp kín.</li>
-<li><strong>Graph Engineering:</strong> Cấu trúc hóa quy trình thành cỗ máy trạng thái State Machine gồm các Nút, Cạnh và Bộ nhớ chia sẻ Shared State.</li>
-</ol>
-<hr>
-<h2 id="1-cơn-ác-mộng-loop-engineering--sự-sụp-đổ-của-tác-tử-đơn-độc">1. CƠN ÁC MỘNG LOOP ENGINEERING &amp; SỰ SỤP ĐỔ CỦA TÁC TỬ ĐƠN ĐỘC</h2>
-<p>Mô hình đơn tác tử Monolithic Single Agent bắt một LLM duy nhất gánh mọi vai trò từ Business Analyst, Coder đến QA và Architect.</p>]]></description>
+
+<p>Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:</p>]]></description>
 </item>
 <item>
     <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
@@ -266,9 +252,13 @@
     <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua.&rdquo;</em></p>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <p>Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm.</p>]]></description>
 </item>
 <item>
@@ -277,10 +267,15 @@
     <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, chúng ta đã đi hết con đường vòng.&rdquo;</em> — <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<p>Trong cuốn sách <em>Sapiens</em>, Yuval Noah Harari chỉ ra bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong> Khi áp dụng vào việc học, bản năng này khiến chúng ta săn tìm những bài viết tóm tắt vài trang, video vài phút hứa hẹn &ldquo;Làm chủ Python trong 4 giờ&rdquo; hay &ldquo;Thành thạo lập trình sau 1 ngày&rdquo;.</p>]]></description>
+    <description><![CDATA[<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn gốc bài viết<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bài viết được đăng lại và dịch thuật từ bài gốc trên <a href="https://math2it.com" target="_blank" rel="noopener noreffer ">Math2IT</a> của tác giả <strong>Đinh Anh Thi</strong>.</div>
+    </div>
+</div>
+<p>Trong quyển <em>Sapiens</em> của Yuval Noah Harari, tác giả có nhắc đến một ý rằng con người ta chủ yếu chọn làm những cái mang lại cảm giác dễ chịu. Xét riêng về vấn đề học một thứ gì đó cũng vậy.</p>]]></description>
 </item>
 <item>
     <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Cho Developer</title>
@@ -288,28 +283,33 @@
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Design không phải là làm cho thứ gì đó trông đẹp. Design là làm cho thứ gì đó hoạt động đúng cách.&rdquo;</em> — <strong>Adam Wathan &amp; Steve Schoger</strong></p>
-</blockquote>
+    <description><![CDATA[<p>Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách <strong>Refactoring UI</strong> của Adam Wathan &amp; Steve Schoger được viết chính xác cho người như vậy.</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Bài viết được tổng hợp và đúc kết từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
+        <div class="admonition-content">Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
     </div>
 </div>
-<p>Là lập trình viên, mỗi khi viết code chúng ta đều phải đưa ra các quyết định thiết kế hàng ngày — từ khoảng cách button, chọn màu badge, đến bố cục form. Dưới đây là bộ nguyên tắc cốt lõi giúp chúng ta tự tin đưa ra quyết định thiết kế chuẩn mực.</p>]]></description>
+<hr>
+<h2 id="chương-1--starting-from-scratch-khởi-đầu-đúng-hướng">Chương 1 — Starting from scratch: Khởi đầu đúng hướng</h2>
+<h3 id="bắt-đầu-từ-feature-không-phải-layout">Bắt đầu từ feature, không phải layout</h3>
+<p>Khi bắt tay vào thiết kế một ứng dụng, phản xạ tự nhiên là nghĩ đến bố cục tổng thể: <em>&ldquo;Có nên có top nav không? Sidebar bên trái hay bên phải?&rdquo;</em> Đây là một cái bẫy — chúng ta đang nghĩ về phần <strong>vỏ bên ngoài</strong> thay vì tính năng thực sự.</p>]]></description>
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>http://localhost:1313/posts/design-and-build-ai-agents/</link>
+    <link>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/design-and-build-ai-agents/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
+    <guid>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
@@ -318,17 +318,21 @@
         <div class="admonition-content">Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (2025).</div>
     </div>
 </div>
-<p>Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
+<p>Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh <code>if-else</code> lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một <strong>AI Agent</strong> — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</link>
+    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI.&rdquo;</em></p>
+    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description>
 </item>
 </channel>

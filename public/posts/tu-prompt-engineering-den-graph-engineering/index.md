@@ -1,9 +1,11 @@
 # Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ
 
 
-> *"Architecture matters more than the model."* — **Andrew Ng**
+{{< quote author="Andrew Ng" >}}
+Architecture matters more than the model.
+{{< /quote >}}
 
-Phương thức chúng ta thiết kế các hệ thống AI đã trải qua 4 bước dịch chuyển kiến trúc:
+Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:
 1. **Prompt Engineering:** Biến hóa ngôn ngữ tự nhiên để vắt kiệt khả năng suy luận của mô hình.
 2. **Context Engineering:** Cung cấp đúng dữ liệu doanh nghiệp làm ngữ cảnh cho mô hình thông qua RAG.
 3. **Loop Engineering:** Cho phép tác tử tự suy nghĩ, gọi công cụ và tự sửa sai trong một vòng lặp kín.
@@ -11,32 +13,32 @@ Phương thức chúng ta thiết kế các hệ thống AI đã trải qua 4 b�
 
 ---
 
-## 1. CƠN ÁC MỘNG LOOP ENGINEERING & SỰ SỤP ĐỔ CỦA TÁC TỬ ĐƠN ĐỘC
+## 1. Cơn ác mộng Loop Engineering và sự sụp đổ của tác tử đơn độc
 
 Mô hình đơn tác tử Monolithic Single Agent bắt một LLM duy nhất gánh mọi vai trò từ Business Analyst, Coder đến QA và Architect.
 
 $$\text{Nhận Mục Tiêu} \rightarrow \text{Suy Luận} \rightarrow \text{Gọi Công Cụ} \rightarrow \text{Đánh Giá Kết Quả} \rightarrow \text{Lặp Lại}$$
 
-### 3 Mẫu thất bại chí mạng (Failure Patterns)
+{{< admonition danger "3 Mẫu thất bại chí mạng (Failure Patterns)" >}}
 1. **Retrieval Thrash:** Rơi vào vòng xoáy tìm kiếm thông tin không bao giờ chốt kết quả do thiếu tiêu chuẩn dừng Termination Criteria.
 2. **Tool Storms:** Bão công cụ quá tải gọi API liên tục để sắp xếp hoặc di chuyển tệp hàng nghìn lần, treo hệ thống.
 3. **Recursive Verification:** Xác minh đệ quy tự viết mã, sửa lỗi nhỏ, xóa đi viết lại từ đầu vô hạn vì thiếu cơ chế theo dõi tiến trình Progress Detection.
+{{< /admonition >}}
 
 ---
 
-## 2. GIẢI MÃ CONTEXT BLOAT: CỬA SỔ NGỮ CẢNH KHÔNG PHẢI LÀ Ổ CỨNG
+## 2. Giải mã Context Bloat: Cửa sổ ngữ cảnh không phải là ổ cứng
 
 Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RAM, chứ không phải ổ cứng lưu trữ cố định.
 
-```
-+-------------------------------------------------------------------+
-|                        CONTEXT WINDOW (RAM)                       |
-|  [System Prompt] -> [Tool Definitions (MCP)] -> [History & Error] |
-+-------------------------------------------------------------------+
-                                  │
-       Hiệu ứng Attention Rot (O(n²)) & Lost in the Middle
-                                  ▼
-                    Suy giảm 67% quy tắc an toàn
+```mermaid
+flowchart TD
+    subgraph Context_Window["CONTEXT WINDOW (RAM)"]
+        direction LR
+        A["System Prompt"] --> B["Tool Definitions (MCP)"]
+        B --> C["History & Error"]
+    end
+    Context_Window --"Hiệu ứng Attention Rot (O(n²)) & Lost in the Middle"--> D["Suy giảm 67% quy tắc an toàn"]
 ```
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
@@ -44,36 +46,29 @@ Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RA
 
 ---
 
-## 3. GRAPH ENGINEERING: XÂY DỰNG TỔ CHỨC AI PHÂN TÁN
+## 3. Graph Engineering: Xây dựng tổ chức AI phân tán
 
-```
-       ┌──────────────┐
-       │   Supervisor │
-       └──────┬───────┘
-              │ (Routing Edge)
-       ┌──────┴───────┐
-       ▼              ▼
-┌────────────┐  ┌────────────┐
-│ Node A:    │  │ Node B:    │
-│ Research   │  │ Coder      │
-└─────┬──────┘  └─────┬──────┘
-      │               │
-      └───────┬───────┘
-              ▼
-   ┌─────────────────────┐
-   │ Shared State (Docs) │  <--- Checkpoint & Isolation
-   └─────────────────────┘
+```mermaid
+flowchart TD
+    S["Supervisor"] --"Routing Edge"--> A["Node A: Research"]
+    S --"Routing Edge"--> B["Node B: Coder"]
+    A --> SS["Shared State (Docs)"]
+    B --> SS
+    SS -.-> C["Checkpoint & Isolation"]
+    style SS fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
-- **Nút (Nodes):** Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.
-- **Cạnh (Edges):** Định tuyến dữ liệu tất định $A \to B$ hoặc có điều kiện như Test lỗi $\to$ quay lại Coder.
+- **Nút Nodes:** Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.
+- **Cạnh Edges:** Định tuyến dữ liệu tất định $A \to B$ hoặc có điều kiện như Test lỗi $\to$ quay lại Coder.
 - **Shared State:** Bộ nhớ trạng thái chung hoạt động như Google Docs chung của nhóm. Mỗi Nút chỉ nạp đúng phần dữ liệu nó cần, xử lý xong và ghi kết quả trở lại Docs.
 
-> *"Agent có thể quên, nhưng hệ thống Đồ thị thì không bao giờ quên."* — **Anthropic Engineering**
+{{< quote author="Anthropic Engineering" >}}
+Agent có thể quên, nhưng hệ thống Đồ thị thì không bao giờ quên.
+{{< /quote >}}
 
 ---
 
-## 4. BỐN MẪU KIẾN TRÚC PHỐI HỢP ĐA TÁC VỤ
+## 4. Bốn mẫu kiến trúc phối hợp đa tác vụ
 
 1. **Routing - Định tuyến:** Chuyển câu hỏi đơn giản tới Haiku hoặc GPT-4o-mini; đẩy bài toán phức tạp cho Sonnet hoặc GPT-4o.
 2. **Parallelization & Map-Reduce:** Nhân bản 100 nút song song phân tích 100 báo cáo tài chính cùng lúc rồi đẩy về nút tổng hợp.
@@ -82,7 +77,7 @@ Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RA
 
 ---
 
-## 5. ĐỘNG LỰC HỌC THỜI ĐIỂM SUY LUẬN
+## 5. Động lực học thời điểm suy luận (Inference-time Compute)
 
 $$\text{Hiệu Năng Hệ Thống} = \text{Năng Lực Mô Hình} \times \text{Độ Tinh Xảo Của Kiến Trúc Đồ Thị}$$
 
@@ -91,7 +86,7 @@ $$\text{Hiệu Năng Hệ Thống} = \text{Năng Lực Mô Hình} \times \text{�
 
 ---
 
-## LỜI KẾT
+## Lời kết
 
 Chúng ta không còn chỉ đóng vai trò là những người ra lệnh thụ động cho cỗ máy. Chúng ta đang cùng nhau trở thành những **Kiến trúc sư hệ thần kinh**, sử dụng các khối logic, cỗ máy trạng thái và cơ chế cô lập ngữ cảnh để kiến tạo nên những tổ chức AI tự vận hành mạnh mẽ.
 

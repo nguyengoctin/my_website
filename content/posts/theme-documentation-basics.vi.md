@@ -1,5 +1,5 @@
 ---
-title: "Tài liệu Giao diện - Các bước Cơ bản"
+title: "Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"
 author: "Dillon"
 date: 2020-03-06
 draft: false

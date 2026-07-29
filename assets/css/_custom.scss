@@ -254,7 +254,8 @@
 
 .admonition.quote,
 .admonition.note,
-.admonition.warning {
+.admonition.warning,
+.admonition.danger {
     font-size: 1.1rem !important;
 
     .admonition-title {
@@ -264,5 +265,42 @@
     .admonition-content {
         font-size: 1.1rem !important;
         line-height: 1.6 !important;
+    }
+}
+
+/* Fix LoveIt theme bug where .admonition.danger background is mistakenly blue */
+.admonition.danger {
+    background-color: rgba(255, 23, 68, 0.08) !important;
+    border-left-color: #ff1744 !important;
+
+    .admonition-title {
+        color: #ff1744 !important;
+        background-color: rgba(255, 23, 68, 0.14) !important;
+    }
+
+    &.open .admonition-title {
+        background-color: rgba(255, 23, 68, 0.08) !important;
+    }
+
+    i.icon {
+        color: #ff1744 !important;
+    }
+
+    [theme=dark] & {
+        background-color: rgba(255, 23, 68, 0.15) !important;
+        border-left-color: #ff5252 !important;
+
+        .admonition-title {
+            color: #ff5252 !important;
+            background-color: rgba(255, 23, 68, 0.25) !important;
+        }
+
+        &.open .admonition-title {
+            background-color: rgba(255, 23, 68, 0.15) !important;
+        }
+
+        i.icon {
+            color: #ff5252 !important;
+        }
     }
 }

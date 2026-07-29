@@ -6,17 +6,19 @@ tags: ["AI Agent", "System Architecture", "LLM", "Software Engineering", "OpenAI
 categories: ["Tech Blog"]
 ---
 
-> *"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."*
+{{< quote >}}
+AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.
+{{< /quote >}}
 
 {{< admonition note "Nguồn tham khảo / Reference" >}}
 Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của **OpenAI**: **"A practical guide to building agents"** (2025).
 {{< /admonition >}}
 
-Cấp độ tiếp theo của phần mềm thông minh là **AI Agent** — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.
+Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh `if-else` lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một **AI Agent** — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.
 
 ---
 
-## 1. HIỂU ĐÚNG BẢN CHẤT CỦA AI AGENT
+## 1. Hiểu đúng bản chất của AI Agent
 
 ### So sánh: Phần mềm truyền thống vs. Copilot vs. AI Agent
 
@@ -28,9 +30,11 @@ Cấp độ tiếp theo của phần mềm thông minh là **AI Agent** — nh�
 
 ---
 
-## 2. KHI NÀO NÊN (VÀ KHÔNG NÊN) XÂY DỰNG AGENT?
+## 2. Khi nào nên và không nên xây dựng Agent?
 
-Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-deterministic. Do đó chúng ta cần cân nhắc kỹ:
+{{< admonition warning "Chi phí & Độ trễ" >}}
+Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-deterministic (không tất định). Do đó chúng ta cần cân nhắc kỹ ranh giới áp dụng.
+{{< /admonition >}}
 
 - **KHÔNG NÊN DÙNG:** Cho các logic If-Else đơn giản có thể hardcode. *(Ví dụ: Nếu khách trên 18 tuổi thì cho đăng ký)*.
 - **KHUYÊN DÙNG:**
@@ -40,7 +44,7 @@ Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-
 
 ---
 
-## 3. BA THÀNH PHẦN NỀN TẢNG CỦA AI AGENT
+## 3. Ba thành phần nền tảng của AI Agent
 
 {{< image src="/images/posts/ai-agent-guide/agent-architecture.webp" caption="Kiến trúc nền tảng của một AI Agent: Input → Agent → Output với các lớp Instructions, Tools, Guardrails" alt="Kiến trúc nền tảng AI Agent" >}}
 
@@ -59,7 +63,7 @@ Bạn là một chuyên gia viết chỉ dẫn cho LLM agent. Hãy chuyển đ�
 
 ---
 
-## 4. KIẾN TRÚC ĐIỀU PHỐI ORCHESTRATION
+## 4. Kiến trúc điều phối (Orchestration)
 
 ### 1. Kiến trúc Single-agent
 Luôn bắt đầu với Single-agent bằng cách bổ sung dần các Tools. Vòng lặp dừng Exit Conditions khi:
@@ -69,6 +73,10 @@ Luôn bắt đầu với Single-agent bằng cách bổ sung dần các Tools. V
 
 ### 2. Kiến trúc Multi-agent
 Chỉ chuyển sang Multi-agent khi logic quá phức tạp hoặc bị Tool Overload với trên 15 tools trùng lặp chức năng.
+
+{{< admonition tip "Quy tắc thiết kế" >}}
+Luôn ưu tiên bắt đầu bằng Single-agent. Chỉ chia nhỏ thành hệ thống Đa tác tử (Multi-agent) khi tập hợp công cụ vượt quá khả năng chọn lọc của mô hình.
+{{< /admonition >}}
 
 #### Mô hình Manager
 Agent trung tâm Manager nhận yêu cầu và phân phối tác vụ song song cho các Sub-Agents chuyên biệt qua Tool calls.
@@ -82,7 +90,7 @@ Các Agents hoạt động bình đẳng. Khi yêu cầu vượt quá chuyên m�
 
 ---
 
-## 5. RÀO CHẮN BẢO MẬT GUARDRAILS & CON NGƯỜI GIÁM SÁT
+## 5. Rào chắn bảo mật (Guardrails) và giám sát con người
 
 {{< image src="/images/posts/ai-agent-guide/layered-guardrails.webp" caption="Layered Guardrails: Các lớp bảo vệ độc lập chặn Prompt Injection trước khi Agent xử lý" alt="Layered Guardrails" >}}
 
@@ -97,13 +105,18 @@ Các Agents hoạt động bình đẳng. Khi yêu cầu vượt quá chuyên m�
 7. **Output Validation:** Kiểm tra định dạng và tính chính xác của câu trả lời trước khi hiển thị.
 
 ### Cơ chế Con người can thiệp Human-in-the-loop
+
+{{< admonition danger "Thao tác rủi ro cao" >}}
+Bắt buộc phải có điểm dừng cho con người duyệt (Human Approval) trước khi Agent thực thi các lệnh ghi (Write operations) có tính chất vĩnh viễn hoặc rủi ro tài chính lớn.
+{{< /admonition >}}
+
 Chuyển giao quyền điều khiển cho con người khi:
 - **Vượt quá ngưỡng thất bại Failure Thresholds:** Agent gọi API lỗi quá 3 lần.
 - **Thực hiện High-Risk Actions:** Các thao tác không thể đảo ngược như hoàn tiền lớn hay xóa dữ liệu.
 
 ---
 
-## 6. LỜI KẾT
+## Lời kết
 
 Để chúng ta xây dựng AI Agent thành công trong thực tế:
 - Khởi đầu nhỏ với một **Single-agent** được trang bị Tools rõ ràng.

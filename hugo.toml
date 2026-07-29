@@ -177,6 +177,9 @@ Outside of engineering, I spend my time reading books across various fields, inc
     [params.page.code]
       copy = true
       maxShownLines = 50
+    [params.page.code.render]
+      goat = true
+      mermaid = true
 
     # Social share
     [params.page.share]

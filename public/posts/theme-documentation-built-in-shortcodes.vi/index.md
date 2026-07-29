@@ -1,20 +1,19 @@
 # Hướng Dẫn & Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt
 
 
-> *"Các shortcodes của LoveIt giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp."*
+{{< quote >}}
+Các shortcodes giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp.
+{{< /quote >}}
 
-Giao diện **LoveIt** cung cấp một bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, âm nhạc, biểu đồ và các ô ghi chú ấn tượng. 
+Giao diện **LoveIt** cùng các tùy chỉnh nâng cao cung cấp bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, trích dẫn, biểu đồ, câu lệnh prompt và các ô ghi chú ấn tượng. 
 
-Dưới đây là tài liệu tổng hợp và demo trực quan toàn bộ 16 shortcodes có sẵn trong hệ thống.
+Dưới đây là tài liệu tổng hợp và demo trực quan toàn bộ 17 shortcodes trong hệ thống.
 
 ---
 
 ## 1. THẺ GHI CHÚ ADMONITION
 
 Shortcode `admonition` giúp tạo các hộp thông báo phân loại theo màu sắc và biểu tượng.
-
-### Các loại Admonition hỗ trợ:
-`note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `failure`, `danger`, `bug`, `example`, `quote`.
 
 {{< admonition note "Admonition Ghi Chú (Note)" >}}
 Đây là ô thông báo ghi chú mặc định dùng để cung cấp thông tin ngữ cảnh bổ sung cho bài viết.
@@ -41,34 +40,72 @@ Nội dung bên trong ô thông báo...
 
 ---
 
-## 2. SƠ ĐỒ ĐỘNG MERMAID
+## 2. TRÍCH DẪN NÂNG CAO QUOTE
+
+Shortcode `quote` tạo khối trích dẫn sang trọng với dải viền nổi bật và tên tác giả căn lề phải.
+
+{{< quote author="Huyen Chip" >}}
+I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers.
+{{< /quote >}}
+
+{{< quote author="Phạm Huy Hoàng" >}}
+Nếu bạn có thể nói một vấn đề trong vòng một đoạn văn thì đừng nên dùng một trang A4 để giải thích cái vấn đề đó.
+{{< /quote >}}
+
+### Cú pháp Markdown:
+```markdown
+{{</* quote author="Tên Tác Giả" */>}}
+Nội dung câu trích dẫn...
+{{</* /quote */>}}
+```
+
+---
+
+## 3. KHUNG CÂU LỆNH PROMPT
+
+Shortcode `prompt` tạo khung chứa câu lệnh mẫu dạng Script, chuẩn font monospace, không đánh số dòng và tích hợp nút Copy 1-click.
+
+{{< prompt title="Prompt Mẫu: Hướng dẫn gỡ lỗi Socratic" >}}
+Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.
+{{< /prompt >}}
+
+### Cú pháp Markdown:
+```markdown
+{{</* prompt title="Prompt Mẫu: Tiêu đề câu lệnh" */>}}
+Nội dung câu lệnh prompt ở đây...
+{{</* /prompt */>}}
+```
+
+---
+
+## 4. SƠ ĐỒ ĐỘNG MERMAID
 
 Sử dụng khối mã ```` ```mermaid ```` cho phép tạo sơ đồ quy trình, luồng dữ liệu hoặc biểu đồ trình tự trực quan.
 
 ```mermaid
 flowchart LR
-    Start[Khởi tạo] --> Process[Xử lý dữ liệu]
-    Process --> Condition{Kiểm tra}
-    Condition -- Hợp lệ --> Finish[Hoàn thành]
-    Condition -- Lỗi --> Retry[Thử lại]
+    Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
+    Process --> Condition{"Kiểm tra"}
+    Condition -- "Hợp lệ" --> Finish["Hoàn thành"]
+    Condition -- "Lỗi" --> Retry["Thử lại"]
     Retry -.-> Process
 ```
 
 ### Cú pháp Markdown:
-```markdown
+````markdown
 ```mermaid
 flowchart LR
-    Start[Khởi tạo] --> Process[Xử lý dữ liệu]
-    Process --> Condition{Kiểm tra}
-    Condition -- Hợp lệ --> Finish[Hoàn thành]
-    Condition -- Lỗi --> Retry[Thử lại]
+    Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
+    Process --> Condition{"Kiểm tra"}
+    Condition -- "Hợp lệ" --> Finish["Hoàn thành"]
+    Condition -- "Lỗi" --> Retry["Thử lại"]
     Retry -.-> Process
 ```
-```
+````
 
 ---
 
-## 3. TÙY CHỈNH KIỂU DÁNG CƠ BẢN STYLE
+## 5. TÙY CHỈNH KIỂU DÁNG CƠ BẢN STYLE
 
 Shortcode `style` giúp chúng ta can thiệp trực tiếp các thuộc tính CSS cho một đoạn văn bản hoặc khối nội dung.
 
@@ -85,7 +122,7 @@ Nội dung tùy chỉnh CSS...
 
 ---
 
-## 4. HIỆU ỨNG GÕ CHỮ TỰ ĐỘNG TYPEIT
+## 6. HIỆU ỨNG GÕ CHỮ TỰ ĐỘNG TYPEIT
 
 Shortcode `typeit` tạo hiệu ứng gõ phím hoạt hình cho văn bản hoặc đoạn mã nguồn.
 
@@ -102,7 +139,7 @@ Nội dung hiển thị dạng gõ chữ tự động...
 
 ---
 
-## 5. THẺ PHIÊN BẢN VERSION
+## 7. THẺ PHIÊN BẢN VERSION
 
 Shortcode `version` hiển thị các huy hiệu đánh dấu phiên bản cập nhật kèm màu sắc tương ứng.
 
@@ -118,20 +155,20 @@ Shortcode `version` hiển thị các huy hiệu đánh dấu phiên bản cập
 
 ---
 
-## 6. THẺ NHÂN VẬT PERSON
+## 8. THẺ NHÂN VẬT PERSON
 
 Shortcode `person` giúp tạo thẻ giới thiệu thông tin cá nhân hoặc tác giả dạng card.
 
-{{< person url="https://github.com/ngoctinn" name="Nguyễn Ngọc Tín" text="Backend Engineer" picture="/images/avatar.jpg" >}}
+{{< person url="https://github.com/ngoctinn" name="Nguyễn Ngọc Tín" text="Backend Engineer" picture="/images/avatar.webp" >}}
 
 ### Cú pháp Markdown:
 ```markdown
-{{</* person url="https://github.com/ngoctinn" name="Nguyễn Ngọc Tín" text="Backend Engineer" picture="/images/avatar.jpg" */>}}
+{{</* person url="https://github.com/ngoctinn" name="Nguyễn Ngọc Tín" text="Backend Engineer" picture="/images/avatar.webp" */>}}
 ```
 
 ---
 
-## 7. LIÊN KẾT TÙY CHỈNH LINK
+## 9. LIÊN KẾT TÙY CHỈNH LINK
 
 Shortcode `link` hỗ trợ tạo liên kết nâng cao kèm thuộc tính hiển thị.
 
@@ -144,20 +181,20 @@ Shortcode `link` hỗ trợ tạo liên kết nâng cao kèm thuộc tính hiể
 
 ---
 
-## 8. HÌNH ẢNH NÂNG CAO IMAGE
+## 10. HÌNH ẢNH NÂNG CAO IMAGE
 
 Shortcode `image` tạo hình ảnh có phản hồi kích thước, tự động làm lightbox xem ảnh phóng to và chú thích bên dưới.
 
-{{< image src="/images/avatar.jpg" alt="Ảnh đại diện" caption="Ảnh đại diện Nguyễn Ngọc Tín" width="150px" >}}
+{{< image src="/images/avatar.webp" alt="Ảnh đại diện" caption="Ảnh đại diện Nguyễn Ngọc Tín" width="150px" >}}
 
 ### Cú pháp Markdown:
 ```markdown
-{{</* image src="/images/avatar.jpg" alt="Mô tả ảnh" caption="Chú thích" width="150px" */>}}
+{{</* image src="/images/avatar.webp" alt="Mô tả ảnh" caption="Chú thích" width="150px" */>}}
 ```
 
 ---
 
-## 9. BIỂU ĐỒ ECHARTS
+## 11. BIỂU ĐỒ ECHARTS
 
 Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar, Line hoặc Pie bằng cấu trúc dữ liệu JSON.
 
@@ -174,27 +211,18 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 
 ---
 
-## 10. TRÌNH PHÁT NHẠC MUSIC
-
-Shortcode `music` nhúng trình phát nhạc trực tuyến MetingJS trên bài viết.
-
-### Cú pháp Markdown:
-```markdown
-{{</* music url="/music/song.mp3" name="Tên bài hát" artist="Ca sĩ" cover="/images/cover.jpg" */>}}
-```
-
----
-
-## 11. BẢNG TỔNG HỢP DANH SÁCH 16 SHORTCODES
+## 12. BẢNG TỔNG HỢP DANH SÁCH 17 SHORTCODES
 
 | Tên Shortcode | Chức năng chính | Ví dụ sử dụng tiêu biểu |
 | :--- | :--- | :--- |
 | **admonition** | Tạo khung thông báo phân loại | `{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}` |
+| **quote** | Khung trích dẫn sang trọng kèm tác giả | `{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}` |
+| **prompt** | Khung chứa câu lệnh mẫu kèm nút Copy | `{{</* prompt title="Prompt" */>}}...{{</* /prompt */>}}` |
 | **mermaid** | Vẽ sơ đồ quy trình và trình tự | ` ```mermaid flowchart LR ... ``` ` |
 | **style** | Định dạng CSS trực tiếp cho văn bản | `{{</* style "color: red;" p */>}}...{{</* /style */>}}` |
 | **typeit** | Hiệu ứng gõ chữ hoạt hình | `{{</* typeit */>}}Hello World{{</* /typeit */>}}` |
 | **version** | Huy hiệu đánh dấu phiên bản | `{{</* version 0.3.0 new */>}}` |
-| **person** | Thẻ giới thiệu tác giả | `{{</* person name="Ngọc Tín" url="..." */>}}` |
+| **person** | Thẻ giới thiệu tác giả | `{{</* person name="Ngọc Tín" picture="/images/avatar.webp" */>}}` |
 | **link** | Liên kết tùy chỉnh | `{{</* link href="..." content="..." */>}}` |
 | **image** | Hiển thị ảnh kèm chú thích & lightbox | `{{</* image src="..." caption="..." */>}}` |
 | **echarts** | Vẽ biểu đồ thống kê dạng JSON | `{{</* echarts */>}} { ... } {{</* /echarts */>}}` |
@@ -204,7 +232,6 @@ Shortcode `music` nhúng trình phát nhạc trực tuyến MetingJS trên bài 
 | **mapbox** | Nhúng bản đồ tương tác Mapbox | `{{</* mapbox lng lat zoom */>}}` |
 | **highlight** | Tô màu cú pháp mã nguồn | `{{</* highlight python */>}}...{{</* /highlight */>}}` |
 | **raw** | Chèn trực tiếp mã HTML thô | `{{</* raw */>}}<div>HTML</div>{{</* /raw */>}}` |
-| **script** | Thực thi đoạn mã JavaScript nội tuyến | `{{</* script */>}}console.log("OK"){{</* /script */>}}` |
 
 ---
 

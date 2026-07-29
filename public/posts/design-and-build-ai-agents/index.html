@@ -7,8 +7,8 @@
         <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent - Nguyen Ngoc Tin</title><meta name="Description" content="Personal website and blog of Nguyen Ngoc Tin"><meta property="og:url" content="http://localhost:1313/posts/design-and-build-ai-agents/">
   <meta property="og:site_name" content="Nguyen Ngoc Tin">
   <meta property="og:title" content="Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent">
-  <meta property="og:description" content="“AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.”
-Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của OpenAI: “A practical guide to building agents” (2025). Cấp độ tiếp theo của phần mềm thông minh là AI Agent — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.">
+  <meta property="og:description" content="&#34;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&#34;
+— Sưu tầm Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của OpenAI: “A practical guide to building agents” (2025). Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh if-else lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một AI Agent — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -22,8 +22,8 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent">
-  <meta name="twitter:description" content="“AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.”
-Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của OpenAI: “A practical guide to building agents” (2025). Cấp độ tiếp theo của phần mềm thông minh là AI Agent — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.">
+  <meta name="twitter:description" content="&#34;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&#34;
+— Sưu tầm Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của OpenAI: “A practical guide to building agents” (2025). Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh if-else lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một AI Agent — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.">
 <meta name="application-name" content="Nguyen Ngoc Tin">
 <meta name="apple-mobile-web-app-title" content="Nguyen Ngoc Tin">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/design-and-build-ai-agents/" /><link rel="prev" href="http://localhost:1313/posts/prompts-and-mindset-web-dev-with-ai-sidekick/" /><link rel="next" href="http://localhost:1313/posts/refactoring-ui-design-principles/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -37,7 +37,7 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/design-and-build-ai-agents\/"
-        },"genre": "posts","keywords": "AI Agent, System Architecture, LLM, Software Engineering, OpenAI","wordcount":  962 ,
+        },"genre": "posts","keywords": "AI Agent, System Architecture, LLM, Software Engineering, OpenAI","wordcount":  1098 ,
         "url": "http:\/\/localhost:1313\/posts\/design-and-build-ai-agents\/","datePublished": "2026-07-26T21:38:18+07:00","dateModified": "2026-07-26T21:38:18+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -136,21 +136,21 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
             &nbsp;·&nbsp;
             <time datetime="2026-07-26">Jul 26, 2026</time>
             &nbsp;·&nbsp;
-            <span>5 min read</span>&nbsp;·&nbsp;<a href="/categories/tech-blog/" style="color: #828282; margin-left: 0.5rem;">in Tech Blog</a></div><div class="details toc" id="toc-static"  data-kept="">
+            <span>6 min read</span>&nbsp;·&nbsp;<a href="/categories/tech-blog/" style="color: #828282; margin-left: 0.5rem;">in Tech Blog</a></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-hiểu-đúng-bản-chất-của-ai-agent">1. HIỂU ĐÚNG BẢN CHẤT CỦA AI AGENT</a>
+    <li><a href="#1-hiểu-đúng-bản-chất-của-ai-agent">1. Hiểu đúng bản chất của AI Agent</a>
       <ul>
         <li><a href="#so-sánh-phần-mềm-truyền-thống-vs-copilot-vs-ai-agent">So sánh: Phần mềm truyền thống vs. Copilot vs. AI Agent</a></li>
       </ul>
     </li>
-    <li><a href="#2-khi-nào-nên-và-không-nên-xây-dựng-agent">2. KHI NÀO NÊN (VÀ KHÔNG NÊN) XÂY DỰNG AGENT?</a></li>
-    <li><a href="#3-ba-thành-phần-nền-tảng-của-ai-agent">3. BA THÀNH PHẦN NỀN TẢNG CỦA AI AGENT</a></li>
-    <li><a href="#4-kiến-trúc-điều-phối-orchestration">4. KIẾN TRÚC ĐIỀU PHỐI ORCHESTRATION</a>
+    <li><a href="#2-khi-nào-nên-và-không-nên-xây-dựng-agent">2. Khi nào nên và không nên xây dựng Agent?</a></li>
+    <li><a href="#3-ba-thành-phần-nền-tảng-của-ai-agent">3. Ba thành phần nền tảng của AI Agent</a></li>
+    <li><a href="#4-kiến-trúc-điều-phối-orchestration">4. Kiến trúc điều phối (Orchestration)</a>
       <ul>
         <li><a href="#1-kiến-trúc-single-agent">1. Kiến trúc Single-agent</a></li>
         <li><a href="#2-kiến-trúc-multi-agent">2. Kiến trúc Multi-agent</a>
@@ -161,18 +161,22 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
         </li>
       </ul>
     </li>
-    <li><a href="#5-rào-chắn-bảo-mật-guardrails--con-người-giám-sát">5. RÀO CHẮN BẢO MẬT GUARDRAILS &amp; CON NGƯỜI GIÁM SÁT</a>
+    <li><a href="#5-rào-chắn-bảo-mật-guardrails-và-giám-sát-con-người">5. Rào chắn bảo mật (Guardrails) và giám sát con người</a>
       <ul>
         <li><a href="#7-lớp-guardrails-tiêu-chuẩn">7 Lớp Guardrails tiêu chuẩn</a></li>
         <li><a href="#cơ-chế-con-người-can-thiệp-human-in-the-loop">Cơ chế Con người can thiệp Human-in-the-loop</a></li>
       </ul>
     </li>
-    <li><a href="#6-lời-kết">6. LỜI KẾT</a></li>
+    <li><a href="#lời-kết">Lời kết</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
+            </div><div class="content" id="content"><blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
@@ -181,9 +185,9 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
         <div class="admonition-content">Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (2025).</div>
     </div>
 </div>
-<p>Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>
+<p>Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh <code>if-else</code> lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một <strong>AI Agent</strong> — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>
 <hr>
-<h2 id="1-hiểu-đúng-bản-chất-của-ai-agent">1. HIỂU ĐÚNG BẢN CHẤT CỦA AI AGENT</h2>
+<h2 id="1-hiểu-đúng-bản-chất-của-ai-agent">1. Hiểu đúng bản chất của AI Agent</h2>
 <h3 id="so-sánh-phần-mềm-truyền-thống-vs-copilot-vs-ai-agent">So sánh: Phần mềm truyền thống vs. Copilot vs. AI Agent</h3>
 <table>
   <thead>
@@ -212,8 +216,15 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
   </tbody>
 </table>
 <hr>
-<h2 id="2-khi-nào-nên-và-không-nên-xây-dựng-agent">2. KHI NÀO NÊN (VÀ KHÔNG NÊN) XÂY DỰNG AGENT?</h2>
-<p>Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-deterministic. Do đó chúng ta cần cân nhắc kỹ:</p>
+<h2 id="2-khi-nào-nên-và-không-nên-xây-dựng-agent">2. Khi nào nên và không nên xây dựng Agent?</h2>
+<div class="details admonition warning open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-exclamation" aria-hidden="true"></i>Chi phí &amp; Độ trễ<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-deterministic (không tất định). Do đó chúng ta cần cân nhắc kỹ ranh giới áp dụng.</div>
+    </div>
+</div>
 <ul>
 <li><strong>KHÔNG NÊN DÙNG:</strong> Cho các logic If-Else đơn giản có thể hardcode. <em>(Ví dụ: Nếu khách trên 18 tuổi thì cho đăng ký)</em>.</li>
 <li><strong>KHUYÊN DÙNG:</strong>
@@ -225,7 +236,7 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
 </li>
 </ul>
 <hr>
-<h2 id="3-ba-thành-phần-nền-tảng-của-ai-agent">3. BA THÀNH PHẦN NỀN TẢNG CỦA AI AGENT</h2>
+<h2 id="3-ba-thành-phần-nền-tảng-của-ai-agent">3. Ba thành phần nền tảng của AI Agent</h2>
 <figure><a class="lightgallery" href="/images/posts/ai-agent-guide/agent-architecture.webp" title="Kiến trúc nền tảng AI Agent" data-thumbnail="/images/posts/ai-agent-guide/agent-architecture.webp" data-sub-html="<h2>Kiến trúc nền tảng của một AI Agent: Input → Agent → Output với các lớp Instructions, Tools, Guardrails</h2>">
         <img
             class="lazyload"
@@ -265,7 +276,7 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
 </div>
 
 <hr>
-<h2 id="4-kiến-trúc-điều-phối-orchestration">4. KIẾN TRÚC ĐIỀU PHỐI ORCHESTRATION</h2>
+<h2 id="4-kiến-trúc-điều-phối-orchestration">4. Kiến trúc điều phối (Orchestration)</h2>
 <h3 id="1-kiến-trúc-single-agent">1. Kiến trúc Single-agent</h3>
 <p>Luôn bắt đầu với Single-agent bằng cách bổ sung dần các Tools. Vòng lặp dừng Exit Conditions khi:</p>
 <ul>
@@ -275,6 +286,14 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
 </ul>
 <h3 id="2-kiến-trúc-multi-agent">2. Kiến trúc Multi-agent</h3>
 <p>Chỉ chuyển sang Multi-agent khi logic quá phức tạp hoặc bị Tool Overload với trên 15 tools trùng lặp chức năng.</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Quy tắc thiết kế<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Luôn ưu tiên bắt đầu bằng Single-agent. Chỉ chia nhỏ thành hệ thống Đa tác tử (Multi-agent) khi tập hợp công cụ vượt quá khả năng chọn lọc của mô hình.</div>
+    </div>
+</div>
 <h4 id="mô-hình-manager">Mô hình Manager</h4>
 <p>Agent trung tâm Manager nhận yêu cầu và phân phối tác vụ song song cho các Sub-Agents chuyên biệt qua Tool calls.</p>
 <figure><a class="lightgallery" href="/images/posts/ai-agent-guide/manager-pattern.webp" title="Manager Pattern" data-thumbnail="/images/posts/ai-agent-guide/manager-pattern.webp" data-sub-html="<h2>Manager Pattern: Manager Agent nhận yêu cầu và phân phối Task song song cho các Sub-Agents</h2>">
@@ -300,7 +319,7 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
     </a><figcaption class="image-caption">Decentralized Pattern: Triage Agent tiếp nhận câu hỏi và Handoff sang Orders Agent</figcaption>
     </figure>
 <hr>
-<h2 id="5-rào-chắn-bảo-mật-guardrails--con-người-giám-sát">5. RÀO CHẮN BẢO MẬT GUARDRAILS &amp; CON NGƯỜI GIÁM SÁT</h2>
+<h2 id="5-rào-chắn-bảo-mật-guardrails-và-giám-sát-con-người">5. Rào chắn bảo mật (Guardrails) và giám sát con người</h2>
 <figure><a class="lightgallery" href="/images/posts/ai-agent-guide/layered-guardrails.webp" title="Layered Guardrails" data-thumbnail="/images/posts/ai-agent-guide/layered-guardrails.webp" data-sub-html="<h2>Layered Guardrails: Các lớp bảo vệ độc lập chặn Prompt Injection trước khi Agent xử lý</h2>">
         <img
             class="lazyload"
@@ -322,13 +341,21 @@ Nguồn tham khảo / Reference Bài viết được tổng hợp từ báo cáo
 <li><strong>Output Validation:</strong> Kiểm tra định dạng và tính chính xác của câu trả lời trước khi hiển thị.</li>
 </ol>
 <h3 id="cơ-chế-con-người-can-thiệp-human-in-the-loop">Cơ chế Con người can thiệp Human-in-the-loop</h3>
+<div class="details admonition danger open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-bolt" aria-hidden="true"></i>Thao tác rủi ro cao<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">Bắt buộc phải có điểm dừng cho con người duyệt (Human Approval) trước khi Agent thực thi các lệnh ghi (Write operations) có tính chất vĩnh viễn hoặc rủi ro tài chính lớn.</div>
+    </div>
+</div>
 <p>Chuyển giao quyền điều khiển cho con người khi:</p>
 <ul>
 <li><strong>Vượt quá ngưỡng thất bại Failure Thresholds:</strong> Agent gọi API lỗi quá 3 lần.</li>
 <li><strong>Thực hiện High-Risk Actions:</strong> Các thao tác không thể đảo ngược như hoàn tiền lớn hay xóa dữ liệu.</li>
 </ul>
 <hr>
-<h2 id="6-lời-kết">6. LỜI KẾT</h2>
+<h2 id="lời-kết">Lời kết</h2>
 <p>Để chúng ta xây dựng AI Agent thành công trong thực tế:</p>
 <ul>
 <li>Khởi đầu nhỏ với một <strong>Single-agent</strong> được trang bị Tools rõ ràng.</li>

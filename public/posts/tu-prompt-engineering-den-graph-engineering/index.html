@@ -36,7 +36,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/tu-prompt-engineering-den-graph-engineering\/"
-        },"genre": "posts","keywords": "AI Agents, Graph Engineering, System Architecture, LangGraph, Multi-Agent Systems, Software Engineering","wordcount":  792 ,
+        },"genre": "posts","keywords": "AI Agents, Graph Engineering, System Architecture, LangGraph, Multi-Agent Systems, Software Engineering","wordcount":  828 ,
         "url": "http:\/\/localhost:1313\/posts\/tu-prompt-engineering-den-graph-engineering\/","datePublished": "2026-07-29T16:15:00+07:00","dateModified": "2026-07-29T16:15:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -142,22 +142,22 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1-cơn-ác-mộng-loop-engineering--sự-sụp-đổ-của-tác-tử-đơn-độc">1. CƠN ÁC MỘNG LOOP ENGINEERING &amp; SỰ SỤP ĐỔ CỦA TÁC TỬ ĐƠN ĐỘC</a>
-      <ul>
-        <li><a href="#3-mẫu-thất-bại-chí-mạng-failure-patterns">3 Mẫu thất bại chí mạng (Failure Patterns)</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-giải-mã-context-bloat-cửa-sổ-ngữ-cảnh-không-phải-là-ổ-cứng">2. GIẢI MÃ CONTEXT BLOAT: CỬA SỔ NGỮ CẢNH KHÔNG PHẢI LÀ Ổ CỨNG</a></li>
-    <li><a href="#3-graph-engineering-xây-dựng-tổ-chức-ai-phân-tán">3. GRAPH ENGINEERING: XÂY DỰNG TỔ CHỨC AI PHÂN TÁN</a></li>
-    <li><a href="#4-bốn-mẫu-kiến-trúc-phối-hợp-đa-tác-vụ">4. BỐN MẪU KIẾN TRÚC PHỐI HỢP ĐA TÁC VỤ</a></li>
-    <li><a href="#5-động-lực-học-thời-điểm-suy-luận">5. ĐỘNG LỰC HỌC THỜI ĐIỂM SUY LUẬN</a></li>
-    <li><a href="#lời-kết">LỜI KẾT</a></li>
+    <li><a href="#1-cơn-ác-mộng-loop-engineering-và-sự-sụp-đổ-của-tác-tử-đơn-độc">1. Cơn ác mộng Loop Engineering và sự sụp đổ của tác tử đơn độc</a></li>
+    <li><a href="#2-giải-mã-context-bloat-cửa-sổ-ngữ-cảnh-không-phải-là-ổ-cứng">2. Giải mã Context Bloat: Cửa sổ ngữ cảnh không phải là ổ cứng</a></li>
+    <li><a href="#3-graph-engineering-xây-dựng-tổ-chức-ai-phân-tán">3. Graph Engineering: Xây dựng tổ chức AI phân tán</a></li>
+    <li><a href="#4-bốn-mẫu-kiến-trúc-phối-hợp-đa-tác-vụ">4. Bốn mẫu kiến trúc phối hợp đa tác vụ</a></li>
+    <li><a href="#5-động-lực-học-thời-điểm-suy-luận-inference-time-compute">5. Động lực học thời điểm suy luận (Inference-time Compute)</a></li>
+    <li><a href="#lời-kết">Lời kết</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p><em>&ldquo;Architecture matters more than the model.&rdquo;</em> — <strong>Andrew Ng</strong></p>
+            </div><div class="content" id="content"><blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Architecture matters more than the model."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Andrew Ng</cite>
+    </footer>
 </blockquote>
-<p>Phương thức chúng ta thiết kế các hệ thống AI đã trải qua 4 bước dịch chuyển kiến trúc:</p>
+
+<p>Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:</p>
 <ol>
 <li><strong>Prompt Engineering:</strong> Biến hóa ngôn ngữ tự nhiên để vắt kiệt khả năng suy luận của mô hình.</li>
 <li><strong>Context Engineering:</strong> Cung cấp đúng dữ liệu doanh nghiệp làm ngữ cảnh cho mô hình thông qua RAG.</li>
@@ -165,68 +165,57 @@
 <li><strong>Graph Engineering:</strong> Cấu trúc hóa quy trình thành cỗ máy trạng thái State Machine gồm các Nút, Cạnh và Bộ nhớ chia sẻ Shared State.</li>
 </ol>
 <hr>
-<h2 id="1-cơn-ác-mộng-loop-engineering--sự-sụp-đổ-của-tác-tử-đơn-độc">1. CƠN ÁC MỘNG LOOP ENGINEERING &amp; SỰ SỤP ĐỔ CỦA TÁC TỬ ĐƠN ĐỘC</h2>
+<h2 id="1-cơn-ác-mộng-loop-engineering-và-sự-sụp-đổ-của-tác-tử-đơn-độc">1. Cơn ác mộng Loop Engineering và sự sụp đổ của tác tử đơn độc</h2>
 <p>Mô hình đơn tác tử Monolithic Single Agent bắt một LLM duy nhất gánh mọi vai trò từ Business Analyst, Coder đến QA và Architect.</p>
 <p>$$\text{Nhận Mục Tiêu} \rightarrow \text{Suy Luận} \rightarrow \text{Gọi Công Cụ} \rightarrow \text{Đánh Giá Kết Quả} \rightarrow \text{Lặp Lại}$$</p>
-<h3 id="3-mẫu-thất-bại-chí-mạng-failure-patterns">3 Mẫu thất bại chí mạng (Failure Patterns)</h3>
-<ol>
+<div class="details admonition danger open">
+    <div class="details-summary admonition-title">
+        <i class="icon fas fa-bolt" aria-hidden="true"></i>3 Mẫu thất bại chí mạng (Failure Patterns)<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><ol>
 <li><strong>Retrieval Thrash:</strong> Rơi vào vòng xoáy tìm kiếm thông tin không bao giờ chốt kết quả do thiếu tiêu chuẩn dừng Termination Criteria.</li>
 <li><strong>Tool Storms:</strong> Bão công cụ quá tải gọi API liên tục để sắp xếp hoặc di chuyển tệp hàng nghìn lần, treo hệ thống.</li>
 <li><strong>Recursive Verification:</strong> Xác minh đệ quy tự viết mã, sửa lỗi nhỏ, xóa đi viết lại từ đầu vô hạn vì thiếu cơ chế theo dõi tiến trình Progress Detection.</li>
 </ol>
+</div>
+    </div>
+</div>
 <hr>
-<h2 id="2-giải-mã-context-bloat-cửa-sổ-ngữ-cảnh-không-phải-là-ổ-cứng">2. GIẢI MÃ CONTEXT BLOAT: CỬA SỔ NGỮ CẢNH KHÔNG PHẢI LÀ Ổ CỨNG</h2>
+<h2 id="2-giải-mã-context-bloat-cửa-sổ-ngữ-cảnh-không-phải-là-ổ-cứng">2. Giải mã Context Bloat: Cửa sổ ngữ cảnh không phải là ổ cứng</h2>
 <p>Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RAM, chứ không phải ổ cứng lưu trữ cố định.</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+-------------------------------------------------------------------+
-</span></span><span class="line"><span class="cl">|                        CONTEXT WINDOW (RAM)                       |
-</span></span><span class="line"><span class="cl">|  [System Prompt] -&gt; [Tool Definitions (MCP)] -&gt; [History &amp; Error] |
-</span></span><span class="line"><span class="cl">+-------------------------------------------------------------------+
-</span></span><span class="line"><span class="cl">                                  │
-</span></span><span class="line"><span class="cl">       Hiệu ứng Attention Rot (O(n²)) &amp; Lost in the Middle
-</span></span><span class="line"><span class="cl">                                  ▼
-</span></span><span class="line"><span class="cl">                    Suy giảm 67% quy tắc an toàn</span></span></code></pre></div></div>
-<ul>
+<div class="mermaid" id="id-1">flowchart TD
+    subgraph Context_Window[&#34;CONTEXT WINDOW (RAM)&#34;]
+        direction LR
+        A[&#34;System Prompt&#34;] --&gt; B[&#34;Tool Definitions (MCP)&#34;]
+        B --&gt; C[&#34;History &amp; Error&#34;]
+    end
+    Context_Window --&#34;Hiệu ứng Attention Rot (O(n²)) &amp; Lost in the Middle&#34;--&gt; D[&#34;Suy giảm 67% quy tắc an toàn&#34;]</div><ul>
 <li><strong>Tool Definition Bloat:</strong> Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới <strong>55.000 token</strong> ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.</li>
 <li><strong>Attention Dilution - Suy thoái chú ý:</strong> Do độ phức tạp tính toán $O(n^2)$, hiện tượng <em>Lost in the Middle</em> làm suy giảm khả năng tuân thủ quy tắc từ <strong>73% ở lượt 5 xuống chỉ còn 33% ở lượt 16</strong>.</li>
 </ul>
 <hr>
-<h2 id="3-graph-engineering-xây-dựng-tổ-chức-ai-phân-tán">3. GRAPH ENGINEERING: XÂY DỰNG TỔ CHỨC AI PHÂN TÁN</h2>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">       ┌──────────────┐
-</span></span><span class="line"><span class="cl">       │   Supervisor │
-</span></span><span class="line"><span class="cl">       └──────┬───────┘
-</span></span><span class="line"><span class="cl">              │ (Routing Edge)
-</span></span><span class="line"><span class="cl">       ┌──────┴───────┐
-</span></span><span class="line"><span class="cl">       ▼              ▼
-</span></span><span class="line"><span class="cl">┌────────────┐  ┌────────────┐
-</span></span><span class="line"><span class="cl">│ Node A:    │  │ Node B:    │
-</span></span><span class="line"><span class="cl">│ Research   │  │ Coder      │
-</span></span><span class="line"><span class="cl">└─────┬──────┘  └─────┬──────┘
-</span></span><span class="line"><span class="cl">      │               │
-</span></span><span class="line"><span class="cl">      └───────┬───────┘
-</span></span><span class="line"><span class="cl">              ▼
-</span></span><span class="line"><span class="cl">   ┌─────────────────────┐
-</span></span><span class="line"><span class="cl">   │ Shared State (Docs) │  &lt;--- Checkpoint &amp; Isolation
-</span></span><span class="line"><span class="cl">   └─────────────────────┘</span></span></code></pre></div></div>
-<ul>
-<li><strong>Nút (Nodes):</strong> Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.</li>
-<li><strong>Cạnh (Edges):</strong> Định tuyến dữ liệu tất định $A \to B$ hoặc có điều kiện như Test lỗi $\to$ quay lại Coder.</li>
+<h2 id="3-graph-engineering-xây-dựng-tổ-chức-ai-phân-tán">3. Graph Engineering: Xây dựng tổ chức AI phân tán</h2>
+<div class="mermaid" id="id-2">flowchart TD
+    S[&#34;Supervisor&#34;] --&#34;Routing Edge&#34;--&gt; A[&#34;Node A: Research&#34;]
+    S --&#34;Routing Edge&#34;--&gt; B[&#34;Node B: Coder&#34;]
+    A --&gt; SS[&#34;Shared State (Docs)&#34;]
+    B --&gt; SS
+    SS -.-&gt; C[&#34;Checkpoint &amp; Isolation&#34;]
+    style SS fill:#f9f,stroke:#333,stroke-width:2px</div><ul>
+<li><strong>Nút Nodes:</strong> Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.</li>
+<li><strong>Cạnh Edges:</strong> Định tuyến dữ liệu tất định $A \to B$ hoặc có điều kiện như Test lỗi $\to$ quay lại Coder.</li>
 <li><strong>Shared State:</strong> Bộ nhớ trạng thái chung hoạt động như Google Docs chung của nhóm. Mỗi Nút chỉ nạp đúng phần dữ liệu nó cần, xử lý xong và ghi kết quả trở lại Docs.</li>
 </ul>
-<blockquote>
-<p><em>&ldquo;Agent có thể quên, nhưng hệ thống Đồ thị thì không bao giờ quên.&rdquo;</em> — <strong>Anthropic Engineering</strong></p>
+<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Agent có thể quên, nhưng hệ thống Đồ thị thì không bao giờ quên."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Anthropic Engineering</cite>
+    </footer>
 </blockquote>
+
 <hr>
-<h2 id="4-bốn-mẫu-kiến-trúc-phối-hợp-đa-tác-vụ">4. BỐN MẪU KIẾN TRÚC PHỐI HỢP ĐA TÁC VỤ</h2>
+<h2 id="4-bốn-mẫu-kiến-trúc-phối-hợp-đa-tác-vụ">4. Bốn mẫu kiến trúc phối hợp đa tác vụ</h2>
 <ol>
 <li><strong>Routing - Định tuyến:</strong> Chuyển câu hỏi đơn giản tới Haiku hoặc GPT-4o-mini; đẩy bài toán phức tạp cho Sonnet hoặc GPT-4o.</li>
 <li><strong>Parallelization &amp; Map-Reduce:</strong> Nhân bản 100 nút song song phân tích 100 báo cáo tài chính cùng lúc rồi đẩy về nút tổng hợp.</li>
@@ -234,14 +223,14 @@
 <li><strong>Evaluator-Optimizer:</strong> Nút <strong>Generator</strong> viết nội dung, nút <strong>Evaluator</strong> độc lập phản biện và yêu cầu Generator tinh chỉnh.</li>
 </ol>
 <hr>
-<h2 id="5-động-lực-học-thời-điểm-suy-luận">5. ĐỘNG LỰC HỌC THỜI ĐIỂM SUY LUẬN</h2>
+<h2 id="5-động-lực-học-thời-điểm-suy-luận-inference-time-compute">5. Động lực học thời điểm suy luận (Inference-time Compute)</h2>
 <p>$$\text{Hiệu Năng Hệ Thống} = \text{Năng Lực Mô Hình} \times \text{Độ Tinh Xảo Của Kiến Trúc Đồ Thị}$$</p>
 <ul>
 <li><strong>SWE-Search:</strong> Kết hợp thuật toán tìm kiếm cây MCTS với 3 tác tử SWE-Agent, Value Agent và Discriminator Agent, tăng <strong>23% hiệu suất</strong> sửa lỗi phần mềm trên bảng xếp hạng SWE-bench.</li>
 <li><strong>AWorld:</strong> Áp dụng Lý thuyết Điều khiển tự động hóa. Một <strong>Guard Agent</strong> liên tục giám sát <strong>Execution Agent</strong>, đo lường dấu vân tay lỗi và điều chỉnh quỹ đạo kịp thời.</li>
 </ul>
 <hr>
-<h2 id="lời-kết">LỜI KẾT</h2>
+<h2 id="lời-kết">Lời kết</h2>
 <p>Chúng ta không còn chỉ đóng vai trò là những người ra lệnh thụ động cho cỗ máy. Chúng ta đang cùng nhau trở thành những <strong>Kiến trúc sư hệ thần kinh</strong>, sử dụng các khối logic, cỗ máy trạng thái và cơ chế cô lập ngữ cảnh để kiến tạo nên những tổ chức AI tự vận hành mạnh mẽ.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -267,7 +256,7 @@
     </div>
 
     <div class="post-nav"><a href="/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/" class="prev" rel="prev" title="Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI"><i class="fas fa-angle-left" aria-hidden="true"></i>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</a>
-            <a href="/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/" class="next" rel="next" title="Ảo Tưởng Về Sự Nhẹ Nhàng Và Tư Duy Khổ Luyện Của Kình Ngư Vĩ Đại Nhất Olympic">Ảo Tưởng Về Sự Nhẹ Nhàng Và Tư Duy Khổ Luyện Của Kình Ngư Vĩ Đại Nhất Olympic<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+            <a href="/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/" class="next" rel="next" title="Ảo Tưởng Về Sự Nhẹ Nhàng Và Kỷ Luật Lạnh Lùng Từ Michael Phelps">Ảo Tưởng Về Sự Nhẹ Nhàng Và Kỷ Luật Lạnh Lùng Từ Michael Phelps<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

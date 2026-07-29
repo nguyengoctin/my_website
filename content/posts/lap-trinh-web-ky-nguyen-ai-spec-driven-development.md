@@ -8,7 +8,10 @@ tags: ["AI", "Prompt Engineering", "Web Development", "Spec-Driven Development",
 categories: ["Technology"]
 ---
 
-> *"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."*
+{{< quote >}}
+AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI.
+{{< /quote >}}
+
 
 Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc **Vibe Coding** — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.
 
@@ -16,13 +19,16 @@ Bài viết này tổng hợp các nghiên cứu và thảo luận mới nhất 
 
 ---
 
-## 1. TƯ DUY NỀN TẢNG: VIBE CODING VS. SPEC-DRIVEN DEVELOPMENT
+## 1. Tư duy nền tảng: Vibe Coding và Spec-Driven Development
 
 ### 1. Sự nguy hiểm của Vibe Coding
-Vibe Coding là thuật ngữ mô tả thói quen lập trình hoàn toàn dựa vào cảm xúc và sự phó mặc cho AI:
+
+{{< admonition danger "Tác hại của Vibe Coding" >}}
+Vibe Coding là thói quen lập trình hoàn toàn dựa vào cảm xúc và sự phó mặc cho AI:
 - Ra lệnh cho AI tạo toàn bộ tính năng lớn chỉ bằng một prompt ngắn mơ hồ.
 - Copy-paste mã nguồn vào dự án mà không đọc hiểu bản chất.
 - Khi xảy ra lỗi, liên tục dán traceback cho AI sửa hộ mà không phân tích nguyên nhân gốc rễ, dẫn đến vòng lặp nợ kỹ thuật và xung đột kiến trúc.
+{{< /admonition >}}
 
 ### 2. Phương trình hiệu suất lập trình AI
 
@@ -39,7 +45,7 @@ Lạm dụng AI làm suy giảm khả năng tư duy độc lập. Mỗi khi gặ
 
 ---
 
-## 2. BIẾN AI THÀNH MENTOR HƯỚNG DẪN HỌC TẬP
+## 2. Biến AI thành Mentor hướng dẫn học tập
 
 Để tiếp thu kiến thức mới hiệu quả, hãy biến AI thành một người thầy kiên nhẫn thông qua các quy tắc giao tiếp có định hướng.
 
@@ -74,7 +80,7 @@ Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng 
 
 ---
 
-## 3. QUY TRÌNH SPEC-DRIVEN DEVELOPMENT TRONG THỰC TẾ
+## 3. Quy trình Spec-Driven Development thực chiến
 
 Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm **Nguồn sự thật duy nhất**. Thay vì bắt AI đoán ý, chúng ta cùng AI xây dựng đặc tả hoàn chỉnh trước khi viết bất kỳ dòng mã nào.
 
@@ -103,26 +109,26 @@ Tôi muốn xây dựng tính năng [Tên tính năng]. Hãy đóng vai Product 
 
 Cấu trúc tài liệu cần có:
 1. Mục tiêu kinh doanh & User Stories.
-2. Phạm vi thực hiện (Scope) và Các điểm KHÔNG làm (Non-goals).
+2. Phạm vi thực hiện Scope và Các điểm KHÔNG làm Non-goals.
 3. Giả định kỹ thuật & Data Schema đề xuất.
 4. Ràng buộc bảo mật & Hiệu năng.
 
 Hãy đặt 3 câu hỏi làm rõ trước khi xuất bản nháp đầu tiên.
 {{< /prompt >}}
 
-#### Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả (Columbo Method)
+#### Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả — Phương pháp Columbo
 Áp dụng phương pháp điều tra Columbo — yêu cầu AI thẩm vấn tài liệu đặc tả để phát hiện các trường hợp biên và rủi ro kiến trúc trước khi chạm vào mã nguồn.
 
 {{< prompt title="Prompt Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả" >}}
 Đọc file specs/feature-brief.md và codebase hiện tại. Đóng vai một Principal Engineer khắt khe, hãy rà soát và chỉ ra:
-1. Các trường hợp biên (Edge cases) chưa được bao phủ trong brief.
+1. Các trường hợp biên Edge cases chưa được bao phủ trong brief.
 2. Rủi ro xung đột kiến trúc hoặc lãng phí truy vấn (N+1 query, Race condition).
 3. 3 điểm mơ hồ nhất trong tài liệu cần tôi làm rõ ngay.
 
 Đừng viết code. Chỉ tập trung phỏng vấn để hoàn thiện brief.
 {{< /prompt >}}
 
-#### Bước 3: Kích hoạt chế độ lập kế hoạch (Plan Mode)
+#### Bước 3: Kích hoạt chế độ lập kế hoạch Plan Mode
 Sử dụng các công cụ như Claude Code hoặc Cursor ở chế độ Plan Mode để buộc AI phân tích codebase và phác thảo `plan.md`.
 
 {{< prompt title="Prompt Bước 3: Lập kế hoạch kỹ thuật plan.md" >}}
@@ -136,21 +142,21 @@ Nội dung plan.md phải bao gồm:
 Lưu ý: CHƯA viết mã nguồn chi tiết. Chỉ tập trung vào kiến trúc kế hoạch.
 {{< /prompt >}}
 
-#### Bước 4: Phân rã thành danh sách Task độc lập (Atomic Tasks)
+#### Bước 4: Phân rã thành danh sách Task độc lập — Atomic Tasks
 Chia `plan.md` thành các bước nhỏ, mỗi bước có tiêu chuẩn nghiệm thu rõ ràng.
 
 {{< prompt title="Prompt Bước 4: Phân rã danh sách Task độc lập" >}}
-Đọc plan.md và tạo file tasks.md chia kế hoạch thành các nhiệm vụ độc lập (Atomic Tasks).
+Đọc plan.md và tạo file tasks.md chia kế hoạch thành các nhiệm vụ độc lập Atomic Tasks.
 
 Mỗi task cần có:
 - ID và tên task rõ ràng (ví dụ: Task 1.1: Create Migration for Survey Model).
-- Tiêu chuẩn nghiệm thu cụ thể (Acceptance Criteria).
+- Tiêu chuẩn nghiệm thu cụ thể Acceptance Criteria.
 - Lệnh kiểm thử tự động để xác nhận hoàn thành.
 
 Đảm bảo mỗi task có dung lượng vừa đủ để triển khai trong 1 lượt tương tác mà không bị tràn context.
 {{< /prompt >}}
 
-#### Bước 5: Thực thi mã nguồn tuần tự (Sequential Execution)
+#### Bước 5: Thực thi mã nguồn tuần tự — Sequential Execution
 Cho phép AI CLI thực thi từng nhiệm vụ đã phê duyệt theo phạm vi giới hạn.
 
 {{< prompt title="Prompt Bước 5: Thực thi mã nguồn theo từng Task" >}}
@@ -176,7 +182,7 @@ Nếu phát hiện lỗi hoặc thiếu sót, hãy đề xuất hướng sửa �
 
 ---
 
-## 4. BỘ SƯU TẬP PROMPT THỰC CHIẾN
+## 4. Bộ sưu tập Prompt thực chiến
 
 ### 1. Phân tích bài toán ban đầu
 {{< prompt title="Prompt Mẫu: One-Shot Khởi tạo Dự án" >}}
@@ -212,12 +218,14 @@ Hãy review lại tính năng vừa triển khai so với spec và tiêu chuẩn
 
 ---
 
-## 5. LỜI KẾT
+## Lời kết
 
 Lập trình viên trong thập kỷ tới không định vị giá trị ở tốc độ gõ bàn phím hay khả năng thuộc lòng cú pháp. Chúng ta thành công nhờ 3 năng lực cốt lõi:
 1. **Tư duy hệ thống và phân rã bài toán.**
 2. **Kỹ năng thiết lập đặc tả và định hướng AI.**
 3. **Năng lực thẩm định và phê duyệt mã nguồn.**
 
-> *"AI là trợ thủ vĩ đại, nhưng lập trình viên luôn là người nắm giữ vô-lăng."*
+{{< quote >}}
+AI là trợ thủ vĩ đại, nhưng lập trình viên luôn là người nắm giữ vô-lăng.
+{{< /quote >}}
 

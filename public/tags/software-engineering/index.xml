@@ -1,49 +1,37 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Software Engineering - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/software-engineering/</link>
+        <link>https://ngoctin.me/tags/software-engineering/</link>
         <description>Software Engineering - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/software-engineering/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/software-engineering/" rel="self" type="application/rss+xml" /><item>
     <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
-    <link>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</link>
+    <link>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</link>
     <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Architecture matters more than the model.&rdquo;</em> — <strong>Andrew Ng</strong></p>
+    <guid>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Architecture matters more than the model."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Andrew Ng</cite>
+    </footer>
 </blockquote>
-<p>Phương thức chúng ta thiết kế các hệ thống AI đã trải qua 4 bước dịch chuyển kiến trúc:</p>
-<ol>
-<li><strong>Prompt Engineering:</strong> Biến hóa ngôn ngữ tự nhiên để vắt kiệt khả năng suy luận của mô hình.</li>
-<li><strong>Context Engineering:</strong> Cung cấp đúng dữ liệu doanh nghiệp làm ngữ cảnh cho mô hình thông qua RAG.</li>
-<li><strong>Loop Engineering:</strong> Cho phép tác tử tự suy nghĩ, gọi công cụ và tự sửa sai trong một vòng lặp kín.</li>
-<li><strong>Graph Engineering:</strong> Cấu trúc hóa quy trình thành cỗ máy trạng thái State Machine gồm các Nút, Cạnh và Bộ nhớ chia sẻ Shared State.</li>
-</ol>
-<hr>
-<h2 id="1-cơn-ác-mộng-loop-engineering--sự-sụp-đổ-của-tác-tử-đơn-độc">1. CƠN ÁC MỘNG LOOP ENGINEERING &amp; SỰ SỤP ĐỔ CỦA TÁC TỬ ĐƠN ĐỘC</h2>
-<p>Mô hình đơn tác tử Monolithic Single Agent bắt một LLM duy nhất gánh mọi vai trò từ Business Analyst, Coder đến QA và Architect.</p>]]></description>
-</item>
-<item>
-    <title>Không Có Con Đường Tắt Trong Tự Học</title>
-    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
-    <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Đừng tốn thời gian tìm con đường tắt để rồi nhận ra với thời gian đó, chúng ta đã đi hết con đường vòng.&rdquo;</em> — <strong>Đinh Anh Thi</strong></p>
-</blockquote>
-<p>Trong cuốn sách <em>Sapiens</em>, Yuval Noah Harari chỉ ra bản năng tự nhiên của con người: <strong>chúng ta luôn xu hướng chọn làm những gì mang lại cảm giác dễ chịu.</strong> Khi áp dụng vào việc học, bản năng này khiến chúng ta săn tìm những bài viết tóm tắt vài trang, video vài phút hứa hẹn &ldquo;Làm chủ Python trong 4 giờ&rdquo; hay &ldquo;Thành thạo lập trình sau 1 ngày&rdquo;.</p>]]></description>
+
+<p>Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:</p>]]></description>
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>http://localhost:1313/posts/design-and-build-ai-agents/</link>
+    <link>https://ngoctin.me/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/design-and-build-ai-agents/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng.&rdquo;</em></p>
+    <guid>https://ngoctin.me/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Sưu tầm</cite>
+    </footer>
 </blockquote>
+
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
@@ -52,7 +40,7 @@
         <div class="admonition-content">Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (2025).</div>
     </div>
 </div>
-<p>Cấp độ tiếp theo của phần mềm thông minh là <strong>AI Agent</strong> — những thực thể tự trị có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
+<p>Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh <code>if-else</code> lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một <strong>AI Agent</strong> — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
 </item>
 </channel>
 </rss>

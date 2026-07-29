@@ -8,7 +8,9 @@ tags: ["Productivity", "Workflow", "AI", "Reading Experience", "Microsoft Edge"]
 categories: ["Tech Blog"]
 ---
 
-> *"Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua."*
+{{< quote >}}
+Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua.
+{{< /quote >}}
 
 Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm. 
 
@@ -20,7 +22,7 @@ Khi mở file PDF bằng **Microsoft Edge**, chúng ta sẽ phát hiện ra mộ
 
 ---
 
-## TRẢI NGHIỆM THAY ĐỔI TOÀN BỘ LUỒNG ĐỌC
+## 1. Trải nghiệm thay đổi toàn bộ luồng đọc
 
 Microsoft Edge vốn có sẵn trên hệ điều hành, nhưng nhiều người trong chúng ta thường chỉ xem nó như một trình duyệt phụ. Khi trực tiếp mở tài liệu PDF trên đó, chúng ta sẽ nhận ra đây chính là một **PDF Reader tích hợp AI** cực kỳ tinh tế.
 
@@ -38,6 +40,10 @@ Có những đoạn văn mà dù dịch từng từ sang tiếng Việt, chúng 
 
 Những lúc đó, thay vì chỉ dịch đơn thuần, chúng ta chọn **Ask Copilot**. Ngay lập tức, khung chat AI bên cạnh sẽ giải thích bản chất khái niệm đó bằng văn phong ngắn gọn, dễ hiểu, thậm chí đưa ra ví dụ minh họa trực tiếp cho đoạn văn vừa chọn.
 
+{{< prompt title="Prompt Mẫu: Giải thích thuật ngữ chuyên ngành trong PDF" >}}
+Giải thích đoạn văn bản sau đây bằng tiếng Việt một cách trực quan, ngắn gọn trong 2 câu, lấy 1 ví dụ thực tế liên quan đến phát triển phần mềm: {{selected_text}}
+{{< /prompt >}}
+
 ### 3. Tắt Mini Menu — Trả lại sự tối giản cho trang sách
 Mặc định khi bôi đen chữ, trình duyệt sẽ hiện một thanh menu nhỏ lơ lửng ngay tại con trỏ. Ban đầu chúng ta có thể thấy khá vướng mắt vì che mất dòng chữ bên dưới.
 
@@ -45,7 +51,7 @@ Sau khi vào **Cài đặt $\to$ Giao diện $\to$ Menu ngữ cảnh** và **T�
 
 ---
 
-## LỜI KẾT
+## Lời kết
 
 Việc đọc tài liệu tiếng Anh giờ đây với chúng ta không còn là một bài tập chịu đựng nữa, mà trở thành một luồng trải nghiệm liền mạch và thư thái. 
 

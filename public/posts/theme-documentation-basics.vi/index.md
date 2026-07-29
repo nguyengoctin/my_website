@@ -1,4 +1,4 @@
-# Tài liệu Giao diện - Các bước Cơ bản
+# Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản
 
 
 Khám phá giao diện **Hugo - LoveIt** và các khái niệm cốt lõi đằng sau nó.
