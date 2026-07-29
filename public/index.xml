@@ -4,7 +4,7 @@
         <link>https://ngoctin.me/</link>
         <description>Personal website and blog of Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</lastBuildDate>
             <atom:link href="https://ngoctin.me/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>A Collection of Learning Resources</title>
@@ -118,7 +118,7 @@
 <hr>
 <h2 id="data-structures--algorithms">Data Structures &amp; Algorithms</h2>
 <ul>
-<li><strong><a href="https://www.youtube.com/c/abdul_bari" target="_blank" rel="noopener noreffer ">Abdul Bari Channel</a></strong> <i class="fab fa-youtube"></i> — Clear and comprehensive lectures on Algorithms</li>
+<li><strong><a href="https://www.youtube.com/@abdul_bari" target="_blank" rel="noopener noreffer ">Abdul Bari Channel</a></strong> <i class="fab fa-youtube"></i> — Clear and comprehensive lectures on Algorithms</li>
 <li><strong><a href="https://jeffe.cs.illinois.edu/teaching/algorithms/" target="_blank" rel="noopener noreffer ">Algorithms by Jeff Erickson</a></strong> <i class="fas fa-book"></i> — Free open textbook on Algorithm design</li>
 <li><strong><a href="https://www.coursera.org/learn/algorithms-part1" target="_blank" rel="noopener noreffer ">Algorithms Part I</a></strong> <i class="fas fa-graduation-cap"></i> — Princeton course by Sedgewick &amp; Wayne</li>
 <li><strong><a href="https://www.coursera.org/learn/algorithms-part2" target="_blank" rel="noopener noreffer ">Algorithms Part II</a></strong> <i class="fas fa-graduation-cap"></i> — Advanced algorithms course from Princeton</li>
@@ -193,6 +193,17 @@
 </ul>
 <hr>
 <p><em>This collection is maintained and updated periodically. Feel free to explore the links above to deepen your technical knowledge.</em></p>]]></description>
+</item>
+<item>
+    <title>Ảo Tưởng Về Sự Nhẹ Nhàng Và Tư Duy Khổ Luyện Của Kình Ngư Vĩ Đại Nhất Olympic</title>
+    <link>https://ngoctin.me/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</link>
+    <pubDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>&ldquo;Sự xuất chúng chưa bao giờ là một món quà. Nó là một bài kiểm tra sức chịu đựng và một hệ thống kỷ luật lạnh lùng bỏ qua cảm xúc.&rdquo;</em></p>
+</blockquote>
+<p>Câu nói trên đúc kết toàn bộ những gì tôi đã và đang thực chứng mỗi ngày: <strong>chỉ có một lối sống kỷ luật thép và sự tập trung cực hạn — ngay cả khi bạn không có chút hứng thú nào — mới là con đường duy nhất dẫn đến sự xuất chúng.</strong></p>]]></description>
 </item>
 <item>
     <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>

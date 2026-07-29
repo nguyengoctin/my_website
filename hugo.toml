@@ -125,6 +125,7 @@ Outside of engineering, I spend my time reading books across various fields, inc
     <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 2;">
       <li><i class="fab fa-github" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">github.com/ngoctinn</a></li>
       <li><i class="fab fa-linkedin" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">linkedin.com/in/tin-nguyen-ngoc</a></li>
+      <li><i class="fab fa-facebook" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">facebook.com/tin.nguyenngoc.56808</a></li>
       <li><i class="fas fa-envelope" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a></li>
       <li><i class="fas fa-comment-dots" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="tel:0397662903">0397662903</a> <span style="font-size: 0.85rem; color: #828282;">(Zalo only)</span></li>
     </ul>
@@ -143,6 +144,7 @@ Outside of engineering, I spend my time reading books across various fields, inc
     Linkedin = ""
     Email = ""
     Phone = ""
+    Facebook = "tin.nguyenngoc.56808"
 
   # Page config
   [params.page]

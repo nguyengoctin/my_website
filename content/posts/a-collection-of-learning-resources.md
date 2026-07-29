@@ -121,7 +121,7 @@ The resources listed in this note have not been verified yet. They are included 
 
 ## Data Structures & Algorithms
 
-- **[Abdul Bari Channel](https://www.youtube.com/c/abdul_bari)** <i class="fab fa-youtube"></i> — Clear and comprehensive lectures on Algorithms
+- **[Abdul Bari Channel](https://www.youtube.com/@abdul_bari)** <i class="fab fa-youtube"></i> — Clear and comprehensive lectures on Algorithms
 - **[Algorithms by Jeff Erickson](https://jeffe.cs.illinois.edu/teaching/algorithms/)** <i class="fas fa-book"></i> — Free open textbook on Algorithm design
 - **[Algorithms Part I](https://www.coursera.org/learn/algorithms-part1)** <i class="fas fa-graduation-cap"></i> — Princeton course by Sedgewick & Wayne
 - **[Algorithms Part II](https://www.coursera.org/learn/algorithms-part2)** <i class="fas fa-graduation-cap"></i> — Advanced algorithms course from Princeton

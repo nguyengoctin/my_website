@@ -27,7 +27,7 @@ Trong mô hình này, một LLM duy nhất phải "gánh" toàn bộ các vai tr
 Không một tập đoàn nào có thể vận hành hiệu quả nếu bắt một cá nhân duy nhất đảm nhận mọi công đoạn của dự án. Khi áp lực công việc tăng cao, cá nhân đó chắc chắn sẽ quá tải và mắc sai lầm liên hoàn.
 {{< /admonition >}}
 
-### 📍 Ba mẫu thất bại chí mạng (Failure Patterns)
+### Ba mẫu thất bại chí mạng (Failure Patterns)
 Nghiên cứu trên AutoGPT và các hệ thống tác tử đơn đã chỉ ra 3 hiện tượng sụp đổ phổ biến:
 
 1. **Retrieval Thrash (Vòng lặp tìm kiếm vô tận):** Tác tử rơi vào vòng xoáy tìm kiếm thông tin, đánh giá "chưa đủ", tìm kiếm lại và tiêu tốn hàng trăm lượt gọi API mà không bao giờ chốt được kết quả cuối cùng do thiếu tiêu chuẩn dừng (Termination Criteria).
@@ -55,10 +55,10 @@ Rất nhiều nhà phát triển coi cửa sổ ngữ cảnh như một cơ sở
 
 Khi dồn toàn bộ dữ liệu dự án vào cửa sổ ngữ cảnh, hai vấn đề nghiêm trọng xuất hiện:
 
-### 📍 Tool Definition Bloat (Phình to định nghĩa công cụ)
+### Tool Definition Bloat (Phình to định nghĩa công cụ)
 Trước khi hội thoại bắt đầu, hệ thống phải tải toàn bộ thông tin về các công cụ mà tác tử có quyền sử dụng (schema, mô tả tham số). Khi tích hợp qua các chuẩn như MCP (Model Context Protocol), việc nạp 50-60 công cụ doanh nghiệp có thể tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm hơn 25% không gian xử lý của một mô hình 200K token trước khi người dùng kịp gõ một từ!
 
-### 📍 Context Degradation & Attention Dilution (Suy thoái chú ý)
+### Context Degradation & Attention Dilution (Suy thoái chú ý)
 Bản chất của kiến trúc Transformer yêu cầu mọi token phải so sánh độ tương quan với mọi token khác với độ phức tạp tính toán $O(n^2)$. 
 
 Hiện tượng *Lost in the Middle* đã chứng minh: khi cửa sổ ngữ cảnh phình to, khả năng truy xuất dữ kiện ở khu vực giữa của LLM giảm sút nghiêm trọng. Nghiên cứu thực tế chỉ ra rằng một quy tắc an toàn thiết lập ở lượt thứ 3 nhưng không được chạm đến sẽ **chỉ còn 33% tỷ lệ tuân thủ ở lượt thứ 16** (so với 73% ở lượt thứ 5).
@@ -88,7 +88,7 @@ Hiện tượng *Lost in the Middle* đã chứng minh: khi cửa sổ ngữ c�
    └─────────────────────┘
 ```
 
-### 📍 Cấu trúc cốt lõi của Graph Engineering
+### Cấu trúc cốt lõi của Graph Engineering
 * **Nút (Nodes):** Là đơn vị thực thi chuyên biệt. Một nút có thể là một câu lệnh tất định (code Python), một lệnh gọi API, hoặc một Sub-agent chuyên trách chạy vòng lặp nội bộ.
 * **Cạnh (Edges):** Định tuyến luồng dữ liệu giữa các nút. Cạnh có thể mang tính tất định (Chuyển từ A $\rightarrow$ B) hoặc có điều kiện (nếu test lỗi $\rightarrow$ quay lại nút Coder; nếu thành công $\rightarrow$ chuyển sang nút Deploy).
 * **Shared State (Trạng thái chung):** Đây là đột phá quan trọng nhất. 

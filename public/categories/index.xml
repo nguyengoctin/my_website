@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Wed, 29 Jul 2026 16:15:00 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 16:30:00 +0700</lastBuildDate>
     <atom:link href="https://ngoctin.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mindset</title>
+      <link>https://ngoctin.me/categories/mindset/</link>
+      <pubDate>Wed, 29 Jul 2026 16:30:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>https://ngoctin.me/categories/mindset/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Technology</title>
       <link>https://ngoctin.me/categories/technology/</link>
