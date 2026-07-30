@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>UI Design - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/ui-design/</link>
+        <link>https://ngoctin.me/tags/ui-design/</link>
         <description>UI Design - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/ui-design/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/ui-design/" rel="self" type="application/rss+xml" /><item>
     <title>Refactoring UI: Những Nguyên Tắc Thiết Kế Giao Diện Cho Developer</title>
-    <link>http://localhost:1313/posts/refactoring-ui-design-principles/</link>
+    <link>https://ngoctin.me/posts/refactoring-ui-design-principles/</link>
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
-    <description><![CDATA[<p>Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách <strong>Refactoring UI</strong> của Adam Wathan &amp; Steve Schoger được viết chính xác cho người như vậy.</p>
+    <guid>https://ngoctin.me/posts/refactoring-ui-design-principles/</guid>
+    <description><![CDATA[<p>Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách <strong>Refactoring UI</strong> của Adam Wathan và Steve Schoger được viết chính xác cho người như vậy.</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
+        <div class="admonition-content">Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan và Steve Schoger</strong>.</div>
     </div>
 </div>
 <hr>

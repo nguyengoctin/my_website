@@ -48,9 +48,9 @@ flowchart TD
         S3 --> F1["Bước 4: Recite - Người đọc tự giải thích cho AI"]
         F1 --> F2["AI phân tích: Điểm đúng, Lỗ hổng, Thuật ngữ rỗng"]
         F2 --> F3{"Đã giải thích bản chất trôi chảy?"}
-        F3 -->|Còn lỗ hổng hoặc giả định ngầm| F4["Bước 5: Critical - Vấn đáp Socratic phản biện 1-on-1"]
+        F3 -->|"Còn lỗ hổng hoặc giả định ngầm"| F4["Bước 5: Critical - Vấn đáp Socratic phản biện 1-on-1"]
         F4 --> F1
-        F3 -->|Đã hiểu sâu bản chất| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
+        F3 -->|"Đã hiểu sâu bản chất"| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
     end
 {{< /mermaid >}}
 

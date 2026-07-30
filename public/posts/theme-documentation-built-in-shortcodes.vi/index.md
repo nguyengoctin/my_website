@@ -82,26 +82,26 @@ Nội dung câu lệnh prompt ở đây...
 
 Sử dụng khối mã ```` ```mermaid ```` cho phép tạo sơ đồ quy trình, luồng dữ liệu hoặc biểu đồ trình tự trực quan.
 
-```mermaid
+{{< mermaid >}}
 flowchart LR
     Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
     Process --> Condition{"Kiểm tra"}
-    Condition -- "Hợp lệ" --> Finish["Hoàn thành"]
-    Condition -- "Lỗi" --> Retry["Thử lại"]
+    Condition -->|"Hợp lệ"| Finish["Hoàn thành"]
+    Condition -->|"Lỗi"| Retry["Thử lại"]
     Retry -.-> Process
-```
+{{< /mermaid >}}
 
-### Cú pháp Markdown:
-````markdown
-```mermaid
+### Cú pháp Shortcode:
+```markdown
+{{< mermaid >}}
 flowchart LR
     Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
     Process --> Condition{"Kiểm tra"}
-    Condition -- "Hợp lệ" --> Finish["Hoàn thành"]
-    Condition -- "Lỗi" --> Retry["Thử lại"]
+    Condition -->|"Hợp lệ"| Finish["Hoàn thành"]
+    Condition -->|"Lỗi"| Retry["Thử lại"]
     Retry -.-> Process
+{{< /mermaid >}}
 ```
-````
 
 ---
 
@@ -218,7 +218,7 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 | **admonition** | Tạo khung thông báo phân loại | `{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}` |
 | **quote** | Khung trích dẫn sang trọng kèm tác giả | `{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}` |
 | **prompt** | Khung chứa câu lệnh mẫu kèm nút Copy | `{{</* prompt title="Prompt" */>}}...{{</* /prompt */>}}` |
-| **mermaid** | Vẽ sơ đồ quy trình và trình tự | ` ```mermaid flowchart LR ... ``` ` |
+| **mermaid** | Vẽ sơ đồ quy trình và trình tự | ` {{< mermaid >}} flowchart LR ... {{< /mermaid >}} ` |
 | **style** | Định dạng CSS trực tiếp cho văn bản | `{{</* style "color: red;" p */>}}...{{</* /style */>}}` |
 | **typeit** | Hiệu ứng gõ chữ hoạt hình | `{{</* typeit */>}}Hello World{{</* /typeit */>}}` |
 | **version** | Huy hiệu đánh dấu phiên bản | `{{</* version 0.3.0 new */>}}` |
