@@ -556,6 +556,11 @@ class Theme {
     getMermaidDefinition(element) {
         if (!element) return null;
 
+        const dataContent = element.getAttribute('data-content');
+        if (dataContent && dataContent.trim().length > 0) {
+            return dataContent.trim();
+        }
+
         const id = element.id;
         if (id && this.data && typeof this.data[id] === 'string') {
             const fromConfig = this.data[id].trim();
@@ -576,19 +581,19 @@ class Theme {
             if (!$mermaidElements.length) return;
 
             mermaid.initialize({startOnLoad: false, theme: this.isDark ? 'dark' : 'neutral', securityLevel: 'loose'});
-            Util.forEach($mermaidElements, $mermaid => {
-                const definition = this.getMermaidDefinition($mermaid);
-                if (!definition) return;
+            if (typeof mermaid.run === 'function') {
+                mermaid.run({ nodes: $mermaidElements });
+            } else {
+                Util.forEach($mermaidElements, $mermaid => {
+                    const definition = this.getMermaidDefinition($mermaid);
+                    if (!definition) return;
 
-                mermaid
-                    .render('mermaid-svg-' + $mermaid.id, definition)
-                    .then(({ svg }) => {
+                    const renderId = 'mermaid-svg-' + ($mermaid.id || Math.random().toString(36).substring(2, 9));
+                    mermaid.render(renderId, definition).then(({ svg }) => {
                         $mermaid.innerHTML = svg;
-                    })
-                    .catch(err => {
-                        console.error(err);
-                    });
-            });
+                    }).catch(err => console.error(err));
+                });
+            }
         });
         this.switchThemeEventSet.add(this._mermaidOnSwitchTheme);
         this._mermaidOnSwitchTheme();

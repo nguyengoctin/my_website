@@ -52,13 +52,13 @@ Quy tắc: Không tạo quá 40 dòng code một lúc; Ưu tiên thay đổi t�
 
 ### 2. Vòng lặp học tập 4 bước
 
-```mermaid
+{{< mermaid >}}
 flowchart LR
     Step1["Bước 1: Hỏi và giải thích"] --> Step2["Bước 2: Tự tay triển khai"]
     Step2 --> Step3["Bước 3: Xin phản hồi tối ưu"]
     Step3 --> Step4["Bước 4: Thử thách mở rộng"]
     Step4 -.-> Step1
-```
+{{< /mermaid >}}
 
 - **Bước 1 — Hỏi và giải thích:** Yêu cầu AI giải thích khái niệm kèm ví dụ tối giản.
 - **Bước 2 — Tự tay triển khai:** Tự gõ lại từng dòng code vào trình soạn thảo để tạo phản xạ cú pháp trong não bộ.
@@ -79,7 +79,7 @@ Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm **
 
 ### Quy trình 6 bước phối hợp với AI Sidekick
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
     autonumber
     actor Dev as Developer
@@ -92,7 +92,7 @@ sequenceDiagram
     Dev->>AI: 4. Chia nhỏ danh sách task độc lập
     Dev->>AI: 5. Thực thi mã nguồn theo từng task
     Dev->>Code: 6. Chạy unit test và nghiệm thu
-```
+{{< /mermaid >}}
 
 #### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief & Specs)
 Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.

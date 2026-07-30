@@ -38,15 +38,12 @@ $$\text{Nhận Mục Tiêu} \rightarrow \text{Suy Luận} \rightarrow \text{Gọ
 
 Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RAM, chứ không phải ổ cứng lưu trữ cố định.
 
-```mermaid
-flowchart TD
-    subgraph Context_Window["CONTEXT WINDOW (RAM)"]
-        direction LR
-        A["System Prompt"] --> B["Tool Definitions (MCP)"]
-        B --> C["History & Error"]
-    end
-    Context_Window --"Hiệu ứng Attention Rot (O(n²)) & Lost in the Middle"--> D["Suy giảm 67% quy tắc an toàn"]
-```
+{{< mermaid >}}
+flowchart LR
+    A["System Prompt"] --> B["MCP Tools"]
+    B --> C["History"]
+    C --> D["Context Rot"]
+{{< /mermaid >}}
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
 - **Attention Dilution - Suy thoái chú ý:** Do độ phức tạp tính toán $O(n^2)$, hiện tượng *Lost in the Middle* làm suy giảm khả năng tuân thủ quy tắc từ **73% ở lượt 5 xuống chỉ còn 33% ở lượt 16**.
@@ -55,15 +52,14 @@ flowchart TD
 
 ## 3. Graph Engineering: Xây dựng tổ chức AI phân tán
 
-```mermaid
+{{< mermaid >}}
 flowchart TD
-    S["Supervisor"] --"Routing Edge"--> A["Node A: Research"]
-    S --"Routing Edge"--> B["Node B: Coder"]
-    A --> SS["Shared State (Docs)"]
-    B --> SS
-    SS -.-> C["Checkpoint & Isolation"]
-    style SS fill:#f9f,stroke:#333,stroke-width:2px
-```
+    Supervisor["Supervisor"] --> NodeA["Research Agent"]
+    Supervisor --> NodeB["Coder Agent"]
+    NodeA --> SharedState["Shared State"]
+    NodeB --> SharedState
+    SharedState --> Checkpoint["Checkpoint"]
+{{< /mermaid >}}
 
 - **Nút Nodes:** Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.
 - **Cạnh Edges:** Định tuyến dữ liệu tất định $A \to B$ hoặc có điều kiện như Test lỗi $\to$ quay lại Coder.

@@ -1,19 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Linux - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/linux/</link>
+        <link>http://localhost:1313/tags/linux/</link>
         <description>Linux - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/linux/" rel="self" type="application/rss+xml" /><item>
-    <title>Bí Kíp Đọc Tài Liệu Tiếng Anh Siêu Tốc Bằng Microsoft Edge &amp; AI Trợ Lý</title>
-    <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
-    <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Thu, 30 Jul 2026 10:55:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Cách Cấu Hình Mac Mini Làm Headless Server Điều Khiển Qua RustDesk Và SSH Từ Linux</title>
+    <link>http://localhost:1313/posts/huong-dan-cau-hinh-mac-mini-headless-server/</link>
+    <pubDate>Thu, 30 Jul 2026 10:55:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>&ldquo;Cách tốt nhất để tiếp thu tri thức chuyên ngành là đọc tài liệu gốc tiếng Anh. Nhưng rào cản lớn nhất lại là việc ngắt quãng dòng suy nghĩ khi phải liên tục tra từ điển.&rdquo;</em></p>
-</blockquote>
-<p>Nếu bạn là một lập trình viên, nghiên cứu sinh hay người làm việc thường xuyên với tài liệu kỹ thuật, tài liệu PDF dày cộp bằng tiếng Anh, chắc chắn bạn đã từng trải qua cảm giác nản lòng khi phải liên tục <strong>bôi đen - copy - chuyển tab sang Google Translate/DeepL - paste - rồi quay lại</strong>.</p>]]></description>
+    <guid>http://localhost:1313/posts/huong-dan-cau-hinh-mac-mini-headless-server/</guid>
+    <description><![CDATA[<p>Khi vận hành Mac Mini dạng Headless Server mà không cắm màn hình, chuột hay bàn phím, chúng ta sẽ vấp phải hai rào cản hệ thống: chip đồ họa GPU tự động ngắt xuất hình khiến RustDesk tụt sâu xuống 2–5 FPS, và máy bị kẹt hoàn toàn ở màn hình đăng nhập sau mỗi lần khởi động lại do cúp điện.</p>
+<p>Bài viết này tổng hợp giải pháp kỹ thuật triệt để giúp giải quyết bài toán nghẽn hiệu năng render, đồng thời xây dựng cơ chế tự khôi phục dịch vụ để điều khiển Mac Mini từ máy Linux hoàn toàn qua RustDesk và SSH.</p>]]></description>
 </item>
 </channel>
 </rss>

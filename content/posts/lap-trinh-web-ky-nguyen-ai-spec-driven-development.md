@@ -52,25 +52,6 @@ Lạm dụng AI làm suy giảm khả năng tư duy độc lập. Mỗi khi gặ
 ### 1. Hợp đồng học tập và rào chắn giới hạn
 
 {{< prompt title="Prompt Mẫu: Hợp đồng học tập & Guardrails" >}}
-Bạn là gia sư web dev của tôi. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích bản chất và các lỗi phổ biến.
-
-Quy tắc: Không tạo quá 40 dòng code một lúc; Ưu tiên thay đổi từng bước với diffs; Khi tôi dán lỗi, hãy gợi ý nguyên nhân có khả năng nhất và hướng dẫn tôi tự kiểm tra trước.
-{{< /prompt >}}
-
-### 2. Vòng lặp học tập 4 bước
-
-```mermaid
-flowchart LR
-    Step1["Bước 1: Hỏi và giải thích"] --> Step2["Bước 2: Tự tay triển khai"]
-    Step2 --> Step3["Bước 3: Xin phản hồi tối ưu"]
-    Step3 --> Step4["Bước 4: Thử thách mở rộng"]
-    Step4 -.-> Step1
-```
-
-- **Bước 1 — Hỏi và giải thích:** Yêu cầu AI giải thích khái niệm kèm ví dụ tối giản.
-- **Bước 2 — Tự tay triển khai:** Tự gõ lại từng dòng code vào trình soạn thảo để tạo phản xạ cú pháp trong não bộ.
-- **Bước 3 — Xin phản hồi:** Hỏi AI đánh giá mã nguồn vừa viết để tìm điểm tối ưu về hiệu năng hoặc cấu trúc.
-- **Bước 4 — Thử thách mở rộng:** Yêu cầu AI đưa ra bài tập biến thể nhỏ để kiểm thử mức độ thấu hiểu.
 
 ### 3. Gỡ lỗi theo phương pháp Socratic
 
@@ -86,7 +67,7 @@ Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm **
 
 ### Quy trình 6 bước phối hợp với AI Sidekick
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
     autonumber
     actor Dev as Developer
@@ -99,7 +80,7 @@ sequenceDiagram
     Dev->>AI: 4. Chia nhỏ danh sách task độc lập
     Dev->>AI: 5. Thực thi mã nguồn theo từng task
     Dev->>Code: 6. Chạy unit test và nghiệm thu
-```
+{{< /mermaid >}}
 
 #### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief & Specs)
 Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.

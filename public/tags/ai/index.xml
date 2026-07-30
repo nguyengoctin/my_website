@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AI - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/ai/</link>
+        <link>http://localhost:1313/tags/ai/</link>
         <description>AI - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/ai/" rel="self" type="application/rss+xml" /><item>
-    <title>Tài Nguyên Tự Học Chuyên Sâu: AI, Data Engineering Và Web Development</title>
-    <link>https://ngoctin.me/posts/bo-suu-tap-tai-lieu-tu-hoc/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>Tài Nguyên Tự Học</title>
+    <link>http://localhost:1313/posts/bo-suu-tap-tai-lieu-tu-hoc/</link>
+    <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/bo-suu-tap-tai-lieu-tu-hoc/</guid>
+    <guid>http://localhost:1313/posts/bo-suu-tap-tai-lieu-tu-hoc/</guid>
     <description><![CDATA[<p>The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.</p>
 <blockquote>
 <p>“You do not rise to the level of your goals. You fall to the level of your systems.” – James Clear</p>
@@ -194,10 +194,10 @@
 </item>
 <item>
     <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
-    <link>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
+    <link>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
     <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
+    <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -209,10 +209,10 @@
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
+    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
+    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

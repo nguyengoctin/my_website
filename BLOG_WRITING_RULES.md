@@ -61,13 +61,13 @@ Không dùng codeblock hay dấu ngoặc kép bên trong prompt.
 ```
 
 **Sơ đồ Mermaid:**
-````
-```mermaid
+```markdown
+{{</* mermaid */>}}
 flowchart LR
     A["Nhãn nút"] --> B["Nhãn nút khác"]
+{{</* /mermaid */>}}
 ```
-````
-Bọc nhãn nút trong dấu ngoặc kép `"..."` để tránh lỗi ký tự đặc biệt.
+BẮT BUỘC dùng shortcode cặp `{{< mermaid >}} ... {{< /mermaid >}}` (KHÔNG dùng khối mã ```mermaid thô). Bọc nhãn nút trong dấu ngoặc kép `"..."`. TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()`, ngoặc vuông `[]` hay toán tử như `O(n²)` trong nhãn nút và nhãn mũi tên để tránh văng lỗi parser. Tách `subgraph` và `end` trên các dòng riêng biệt.
 
 **Code Snippets:**
 ````

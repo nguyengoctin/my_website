@@ -1,4 +1,4 @@
-# Tài Nguyên Tự Học
+# A Collection of Learning Resources
 
 
 The resources listed in this note have not been verified yet. They are included so that they can be checked at a later time. The order is random.

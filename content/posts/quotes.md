@@ -1,5 +1,5 @@
 ---
-title: "Những Trích Dẫn Định Hình Tư Duy Về Tự Học Và Phát Triển Bản Thân"
+title: "A collection of quotes"
 date: 2026-07-29T17:15:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

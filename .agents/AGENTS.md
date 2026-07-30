@@ -37,5 +37,9 @@ Shortcodes trong theme LoveIt. Luôn dùng shortcode thay vì Markdown thô:
 - **Prompt mẫu:** `{{< prompt title="Prompt Mẫu: [Tiêu đề]" >}} Nội dung {{< /prompt >}}` — Không dùng codeblock hay dấu ngoặc kép bên trong
 - **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
-- **Mermaid:** Dùng khối mã ` ```mermaid ` — bọc nhãn nút trong `"..."` để tránh lỗi ký tự đặc biệt
+- **Mermaid:** BẮT BUỘC dùng shortcode cặp `{{< mermaid >}} ... {{< /mermaid >}}` (KHÔNG dùng khối mã ```mermaid thô).
+  - Khai báo kiểu biểu đồ (như `flowchart TD`) trên dòng riêng biệt.
+  - Luôn bọc nhãn nút trong dấu ngoặc kép `"..."`.
+  - TUYỆT ĐỐI KHÔNG dùng dấu ngoặc đơn `()`, ngoặc vuông `[]` hay ký tự đặc biệt như `O(n²)` bên trong nhãn nút và nhãn mũi tên `-- "..." -->` (Mermaid parser sẽ văng lỗi).
+  - Tách từ khóa `subgraph` và `end` trên từng dòng độc lập.
 - **Code:** Dùng khối mã ` ```ngôn_ngữ ` — luôn có câu giải thích ngữ cảnh trước khi đưa code
