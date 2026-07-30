@@ -44,12 +44,12 @@ sudo pmset autorestart 1
 ### Bước 2: Tự động đăng nhập (Automatic Login)
 Nếu không bật tự động đăng nhập, hệ thống sẽ dừng lại ở màn hình nhập mật khẩu User, ngăn cản các dịch vụ điều khiển từ xa truyền hình ảnh về máy Linux Client.
 
-1. Vào **System Settings > Users & Groups**.
+1. Vào **System Settings > Users và Groups**.
 2. Nhấp chọn **Login Options** ngay bên dưới danh sách tài khoản.
 3. Tại mục **Automatic login**, chuyển từ Off sang Tên tài khoản của bạn và nhập mật khẩu xác nhận.
 
 {{< admonition type="warning" title="Lưu ý về FileVault" >}}
-Nếu mục Automatic login bị ẩn xám không chọn được, bạn cần tắt FileVault trước tại **System Settings > Privacy & Security > FileVault**.
+Nếu mục Automatic login bị ẩn xám không chọn được, bạn cần tắt FileVault trước tại **System Settings > Privacy và Security > FileVault**.
 {{< /admonition >}}
 
 ### Bước 3: Cố định địa chỉ IP (Static IP)
@@ -71,7 +71,7 @@ Vào **System Settings > General > Sharing**, tích bật công tắc **Remote L
 Tải file `.dmg` từ {{< link href="https://rustdesk.com" content="Trang chủ RustDesk" >}} và kéo vào thư mục Applications.
 
 ### Cấp quyền hệ thống
-Vào **System Settings > Privacy & Security** để cấp quyền cho RustDesk:
+Vào **System Settings > Privacy và Security** để cấp quyền cho RustDesk:
 - **Screen Recording:** Cho phép RustDesk ghi và truyền hình ảnh màn hình.
 - **Accessibility:** Cho phép RustDesk nhận lệnh gõ phím và click chuột.
 

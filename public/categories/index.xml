@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
-    <lastBuildDate>Thu, 30 Jul 2026 10:55:00 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 12:15:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/categories/tech/</link>
+      <pubDate>Thu, 30 Jul 2026 12:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/categories/tech/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Tech Blog</title>
       <link>http://localhost:1313/categories/tech-blog/</link>

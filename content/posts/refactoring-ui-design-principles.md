@@ -8,10 +8,10 @@ categories: ["Tech Blog"]
 description: "Toàn bộ những nguyên tắc thiết kế UI chuyên sâu từ cuốn sách Refactoring UI — kèm ảnh minh họa thực tế, dành cho developer muốn tự thiết kế giao diện mà không cần designer."
 ---
 
-Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách **Refactoring UI** của Adam Wathan & Steve Schoger được viết chính xác cho người như vậy.
+Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách **Refactoring UI** của Adam Wathan và Steve Schoger được viết chính xác cho người như vậy.
 
 {{< admonition note "Nguồn tham khảo" >}}
-Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách **Refactoring UI** của **Adam Wathan & Steve Schoger**.
+Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách **Refactoring UI** của **Adam Wathan và Steve Schoger**.
 {{< /admonition >}}
 
 ---
@@ -145,7 +145,7 @@ Destructive action (xóa, hủy) không mặc nhiên là primary. Chỉ khi đi 
 
 ---
 
-## Chương 4 — Layout & Spacing: Bố cục và khoảng trắng
+## Chương 4 — Layout và Spacing: Bố cục và khoảng trắng
 
 ### Đừng ép element lấp đầy toàn màn hình
 

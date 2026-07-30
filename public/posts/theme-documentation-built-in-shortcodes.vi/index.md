@@ -1,4 +1,4 @@
-# Hướng Dẫn & Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt
+# Hướng Dẫn và Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt
 
 
 {{< quote >}}
@@ -224,7 +224,7 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 | **version** | Huy hiệu đánh dấu phiên bản | `{{</* version 0.3.0 new */>}}` |
 | **person** | Thẻ giới thiệu tác giả | `{{</* person name="Ngọc Tín" picture="/images/avatar.webp" */>}}` |
 | **link** | Liên kết tùy chỉnh | `{{</* link href="..." content="..." */>}}` |
-| **image** | Hiển thị ảnh kèm chú thích & lightbox | `{{</* image src="..." caption="..." */>}}` |
+| **image** | Hiển thị ảnh kèm chú thích và lightbox | `{{</* image src="..." caption="..." */>}}` |
 | **echarts** | Vẽ biểu đồ thống kê dạng JSON | `{{</* echarts */>}} { ... } {{</* /echarts */>}}` |
 | **music** | Nhúng trình phát nhạc APlayer | `{{</* music url="..." name="..." */>}}` |
 | **gist** | Nhúng GitHub Gist snippet | `{{</* gist username gist_id */>}}` |

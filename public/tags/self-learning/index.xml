@@ -1,10 +1,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Self Learning - Tag - Nguyen Ngoc Tin</title>
+        <title>Self-Learning - Tag - Nguyen Ngoc Tin</title>
         <link>http://localhost:1313/tags/self-learning/</link>
-        <description>Self Learning - Tag - Nguyen Ngoc Tin</description>
+        <description>Self-Learning - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/self-learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/self-learning/" rel="self" type="application/rss+xml" /><item>
+    <title>Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman</title>
+    <link>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</link>
+    <pubDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</guid>
+    <description><![CDATA[<p>Bạn nạp một tài liệu học thuật vài chục trang vào mô hình AI, hy vọng nó sẽ giúp bạn bóc tách từng luồng tư duy phức tạp. Nhưng kết quả trả về thường là một bản tóm tắt nông cạn, bỏ sót hoàn toàn những luận điểm sắc bén nằm ở giữa văn bản, hoặc nguy hiểm hơn là tự bịa ra thông tin. Đây là rào cản chung khi chúng ta cố gắng biến AI thành người thầy cá nhân: sự hời hợt do giới hạn của không gian ngữ cảnh và thói quen đọc thụ động của não bộ.</p>]]></description>
+</item>
+<item>
     <title>Không Có Con Đường Tắt Trong Tự Học</title>
     <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
     <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>

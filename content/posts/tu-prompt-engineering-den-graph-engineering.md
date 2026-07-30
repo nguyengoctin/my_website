@@ -74,7 +74,7 @@ Agent có thể quên, nhưng hệ thống Đồ thị thì không bao giờ qu�
 ## 4. Bốn mẫu kiến trúc phối hợp đa tác vụ
 
 1. **Routing - Định tuyến:** Chuyển câu hỏi đơn giản tới Haiku hoặc GPT-4o-mini; đẩy bài toán phức tạp cho Sonnet hoặc GPT-4o.
-2. **Parallelization & Map-Reduce:** Nhân bản 100 nút song song phân tích 100 báo cáo tài chính cùng lúc rồi đẩy về nút tổng hợp.
+2. **Parallelization và Map-Reduce:** Nhân bản 100 nút song song phân tích 100 báo cáo tài chính cùng lúc rồi đẩy về nút tổng hợp.
 3. **Orchestrator-Workers:** Agent Trưởng nhóm phân tích bài toán, giao nhiệm vụ con cho các Worker Agents và nghiệm thu.
 4. **Evaluator-Optimizer:** Nút **Generator** viết nội dung, nút **Evaluator** độc lập phản biện và yêu cầu Generator tinh chỉnh.
 

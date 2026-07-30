@@ -19,7 +19,7 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 
 ---
 
-## 1. Fundamentals & Meta-Learning
+## 1. Fundamentals và Meta-Learning
 
 ### Learn How to Learn
 - **[A Mind for Numbers](https://barbaraoakley.com/books/a-mind-for-numbers/)** <i class="fas fa-book"></i> — How to excel at math and science by Dr. Barbara Oakley
@@ -39,22 +39,22 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 - **[Teach Yourself Computer Science](https://teachyourselfcs.com/)** <i class="fas fa-globe"></i> — Curated guide for self-taught software engineers
 - **[The Art of Debugging](https://github.com/stas00/the-art-of-debugging)** <i class="fas fa-book"></i> — Comprehensive open book on software debugging
 - **[Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)** <i class="fab fa-github"></i> — Recreate programming technologies from scratch
-- **[OpenStax](https://openstax.org/)** <i class="fas fa-book"></i> — Free, peer-reviewed open textbooks for Math, Physics & CS
+- **[OpenStax](https://openstax.org/)** <i class="fas fa-book"></i> — Free, peer-reviewed open textbooks for Math, Physics và CS
 
 ---
 
-## 2. Software Engineering & Data Structures
+## 2. Software Engineering và Data Structures
 
-### Data Structures & Algorithms
+### Data Structures và Algorithms
 - **[Abdul Bari Channel](https://www.youtube.com/@abdul_bari)** <i class="fab fa-youtube"></i> — Clear and comprehensive lectures on Algorithms
 - **[Algorithms by Jeff Erickson](https://jeffe.cs.illinois.edu/teaching/algorithms/)** <i class="fas fa-book"></i> — Free open textbook on Algorithm design
-- **[Algorithms Part I](https://www.coursera.org/learn/algorithms-part1)** <i class="fas fa-graduation-cap"></i> — Princeton course by Sedgewick & Wayne
+- **[Algorithms Part I](https://www.coursera.org/learn/algorithms-part1)** <i class="fas fa-graduation-cap"></i> — Princeton course by Sedgewick và Wayne
 - **[Algorithms Part II](https://www.coursera.org/learn/algorithms-part2)** <i class="fas fa-graduation-cap"></i> — Advanced algorithms course from Princeton
 - **[awesome-algorithms](https://github.com/tayllan/awesome-algorithms)** <i class="fab fa-github"></i> — Curated list of algorithm learning resources
 - **[UCSD DSA Specialization](https://www.coursera.org/specializations/data-structures-algorithms)** <i class="fas fa-graduation-cap"></i> — 6-course specialization in Data Structures
 - **[Stanford Algorithms Specialization](https://www.coursera.org/specializations/algorithms)** <i class="fas fa-graduation-cap"></i> — Stanford algorithm course taught by Tim Roughgarden
 
-### Design Patterns & System Design
+### Design Patterns và System Design
 - **[awesome-system-design-resources](https://github.com/donnemartin/system-design-primer)** <i class="fab fa-github"></i> — Industry-standard system design interview study guide
 - <i class="fas fa-star"></i> **[Designing Data-Intensive Applications](https://dataintensive.net/)** <i class="fas fa-book"></i> — Industry-standard book on distributed systems by Kleppmann
 - **[Design Patterns (Gang of Four)](https://en.wikipedia.org/wiki/Design_Patterns)** <i class="fas fa-book"></i> — Classic reference book on object-oriented design patterns
@@ -62,8 +62,8 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 - **[python-patterns](https://github.com/faif/python-patterns)** <i class="fab fa-github"></i> — Collection of design patterns implemented in Python
 - **[Refactoring.guru](https://refactoring.guru/)** <i class="fas fa-globe"></i> — Visual interactive guide to refactoring and design patterns
 
-### Coding & Practice Platforms
-- <i class="fas fa-star"></i> **[LeetCode](https://leetcode.com/)** <i class="fas fa-globe"></i> <i class="fas fa-check-circle"></i> — Standard platform for Data Structures & Algorithms practice
+### Coding và Practice Platforms
+- <i class="fas fa-star"></i> **[LeetCode](https://leetcode.com/)** <i class="fas fa-globe"></i> <i class="fas fa-check-circle"></i> — Standard platform for Data Structures và Algorithms practice
 - <i class="fas fa-star"></i> **[Exercism](https://exercism.org/)** <i class="fas fa-globe"></i> — Code practice and mentorship in 70+ programming languages
 - **[CodeChef](https://www.codechef.com/)** <i class="fas fa-globe"></i> — Practical coding practice and competitive programming
 - **[HackerRank](https://www.hackerrank.com/)** <i class="fas fa-globe"></i> — Technical interview prep and skill assessments
@@ -71,33 +71,33 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 
 ---
 
-## 3. Artificial Intelligence & Machine Learning
+## 3. Artificial Intelligence và Machine Learning
 
-### Machine Learning & Mathematics
+### Machine Learning và Mathematics
 - <i class="fas fa-star"></i> **[ML Specialization by Andrew Ng](https://www.coursera.org/specializations/machine-learning-introduction)** <i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i> — Updated Stanford ML course series in Python
-- <i class="fas fa-star"></i> **[Hands-On Machine Learning (3rd Ed)](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/)** <i class="fas fa-book"></i> <i class="fas fa-check-circle"></i> — Practical guide using Scikit-Learn, Keras & TensorFlow
+- <i class="fas fa-star"></i> **[Hands-On Machine Learning (3rd Ed)](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/)** <i class="fas fa-book"></i> <i class="fas fa-check-circle"></i> — Practical guide using Scikit-Learn, Keras và TensorFlow
 - <i class="fas fa-star"></i> **[3Blue1Brown](https://www.youtube.com/c/3blue1brown)** <i class="fab fa-youtube"></i> — Visual math and neural network animations
-- <i class="fas fa-star"></i> **[Seeing Theory](https://seeing-theory.brown.edu/)** <i class="fas fa-globe"></i> — Visual interactive introduction to probability & statistics
+- <i class="fas fa-star"></i> **[Seeing Theory](https://seeing-theory.brown.edu/)** <i class="fas fa-globe"></i> — Visual interactive introduction to probability và statistics
 - **[100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code)** <i class="fab fa-github"></i> — 100-day study roadmap for machine learning algorithms
 - **[Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)** <i class="fas fa-book"></i> — Practical Python programming guide for beginners by Al Sweigart
 - **[Machine Learning Cơ Bản](https://machinelearningcoban.com/)** <i class="fas fa-globe"></i> — Machine Learning fundamentals explained in Vietnamese
 - **[Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)** <i class="fas fa-book"></i> — Classic foundational textbook by Christopher Bishop
 
-### Deep Learning & Neural Networks
+### Deep Learning và Neural Networks
 - <i class="fas fa-star"></i> **[Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)** <i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i> — Landmark 5-course series by Andrew Ng
 - <i class="fas fa-star"></i> **[Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html)** <i class="fab fa-youtube"></i> — Build micrograd and GPT from scratch with Andrej Karpathy
 - **[Fast.ai Practical Deep Learning for Coders](https://course.fast.ai/)** <i class="fas fa-graduation-cap"></i> — Free hands-on course covering Deep Learning from top to bottom
-- **[Deep Learning Book](https://www.deeplearningbook.org/)** <i class="fas fa-book"></i> — Definitive textbook by Goodfellow, Bengio & Courville
+- **[Deep Learning Book](https://www.deeplearningbook.org/)** <i class="fas fa-book"></i> — Definitive textbook by Goodfellow, Bengio và Courville
 - **[Dive into Deep Learning](https://d2l.ai/)** <i class="fas fa-book"></i> — Interactive book with code in PyTorch, JAX and NumPy
 - **[DeepMind x UCL Lecture Series](https://www.youtube.com/playlist?list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF)** <i class="fab fa-youtube"></i> — Advanced lectures on AI and Reinforcement Learning
 - **[NYU Deep Learning Course](https://at757.github.io/NYU-Deep-Learning/)** <i class="fab fa-youtube"></i> — Course taught by Turing Award winner Yann LeCun
 - **[Understanding Deep Learning](https://udlbook.github.io/udlbook/)** <i class="fas fa-book"></i> — Comprehensive textbook by Simon J.D. Prince
 
-### Generative AI, LLMs & Agentic Architectures
-- <i class="fas fa-star"></i> **[Anthropic Claude Documentation & Guides](https://docs.anthropic.com/)** <i class="fas fa-graduation-cap"></i> — Official Anthropic architecture & LLM documentation
+### Generative AI, LLMs và Agentic Architectures
+- <i class="fas fa-star"></i> **[Anthropic Claude Documentation và Guides](https://docs.anthropic.com/)** <i class="fas fa-graduation-cap"></i> — Official Anthropic architecture và LLM documentation
 - <i class="fas fa-star"></i> **[Ollama - Local AI Models](https://ollama.com/)** <i class="fas fa-globe"></i> <i class="fas fa-check-circle"></i> — Run Llama 3, Mistral, and other LLMs locally
 - <i class="fas fa-star"></i> **[LLM Visualization](https://bbycroft.net/llm)** <i class="fas fa-globe"></i> — Interactive 3D visualization of how GPT architecture works
-- **[all-agentic-architectures](https://github.com/awslabs/multi-agent-orchestrator)** <i class="fab fa-github"></i> — Flexible multi-agent orchestrator & architectural patterns
+- **[all-agentic-architectures](https://github.com/awslabs/multi-agent-orchestrator)** <i class="fab fa-github"></i> — Flexible multi-agent orchestrator và architectural patterns
 - **[Awesome LLM Apps](https://github.com/Shubhamai/Awesome-LLM-Apps)** <i class="fab fa-github"></i> — LLM apps built with AI Agents and RAG architectures
 - **[Build LLM Applications from Scratch](https://www.manning.com/books/build-a-large-language-model-from-scratch)** <i class="fas fa-book"></i> — Step-by-step guide to training and building LLMs
 - **[ChatGPT Prompt Engineering](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)** <i class="fas fa-graduation-cap"></i> <i class="fas fa-check-circle"></i> — Short course by DeepLearning.AI and OpenAI
@@ -108,9 +108,9 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 
 ---
 
-## 4. Cloud Infrastructure & MLOps
+## 4. Cloud Infrastructure và MLOps
 
-- **[AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)** <i class="fas fa-globe"></i> — Official AWS blog for ML architecture & tutorials
+- **[AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)** <i class="fas fa-globe"></i> — Official AWS blog for ML architecture và tutorials
 - **[Google Cloud Skills Boost](https://www.cloudskillsboost.google/)** <i class="fas fa-graduation-cap"></i> — Google Cloud training, labs and certifications
 - <i class="fas fa-star"></i> **[Google Skills](https://skillshop.exceedlms.com/)** <i class="fas fa-graduation-cap"></i> — Free training and certifications for Google Cloud
 - **[Microsoft Learn Training](https://learn.microsoft.com/)** <i class="fas fa-graduation-cap"></i> — Microsoft official developer and cloud courses
@@ -120,22 +120,22 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 
 ---
 
-## 5. Blogs, Personal Websites & Community
+## 5. Blogs, Personal Websites và Community
 
 - <i class="fas fa-star"></i> **[Andrej Karpathy Blog](https://karpathy.ai/)** <i class="fab fa-youtube"></i> — Insights on Deep Learning, LLMs, and AI systems
 - <i class="fas fa-star"></i> **[Chip Huyen Blog](https://huyenchip.com/)** <i class="fas fa-globe"></i> — Machine Learning Systems Design and MLOps
 - <i class="fas fa-star"></i> **[Lil'Log](https://lilianweng.github.io/)** <i class="fas fa-globe"></i> — In-depth technical AI posts by Lilian Weng
-- <i class="fas fa-star"></i> **[Corey Schafer YouTube](https://www.youtube.com/@coreyms)** <i class="fab fa-youtube"></i> — High quality Python, Django & Git video tutorials
+- <i class="fas fa-star"></i> **[Corey Schafer YouTube](https://www.youtube.com/@coreyms)** <i class="fab fa-youtube"></i> — High quality Python, Django và Git video tutorials
 - **[Colah's Blog](https://colah.github.io/)** <i class="fas fa-globe"></i> — Visual and intuitive essays on Neural Networks
-- **[Brittany Chiang](https://brittanychiang.com/)** <i class="fas fa-globe"></i> — Software Engineer portfolio & design resources
-- **[Josh W. Comeau](https://joshwcomeau.com/)** <i class="fas fa-globe"></i> — Interactive CSS & Web Development tutorials
+- **[Brittany Chiang](https://brittanychiang.com/)** <i class="fas fa-globe"></i> — Software Engineer portfolio và design resources
+- **[Josh W. Comeau](https://joshwcomeau.com/)** <i class="fas fa-globe"></i> — Interactive CSS và Web Development tutorials
 - **[StatQuest with Josh Starmer](https://www.youtube.com/c/joshstarmer)** <i class="fab fa-youtube"></i> — Statistics and Machine Learning broken down step by step
-- <i class="fas fa-star"></i> **[Dinh Anh Thi Blog](https://dinhanhthi.com/)** <i class="fas fa-globe"></i> — Data Science, Machine Learning & Software Engineering notes by Dinh Anh Thi
+- <i class="fas fa-star"></i> **[Dinh Anh Thi Blog](https://dinhanhthi.com/)** <i class="fas fa-globe"></i> — Data Science, Machine Learning và Software Engineering notes by Dinh Anh Thi
 - **[Yannic Kilcher](https://www.youtube.com/c/yannickilcher)** <i class="fab fa-youtube"></i> — AI paper explanations and machine learning news
 
 ---
 
-## 6. Developer Tools & AI Workflows
+## 6. Developer Tools và AI Workflows
 
 - **[Connected Papers](https://www.connectedpapers.com/)** <i class="fas fa-globe"></i> — Visual graph tool to explore academic research papers
 - **[Cursor AI Code Editor](https://www.cursor.com/)** <i class="fas fa-check-circle"></i> — Next-generation AI-first code editor

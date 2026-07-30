@@ -4,7 +4,15 @@
         <link>http://localhost:1313/tags/prompt-engineering/</link>
         <description>Prompt Engineering - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/prompt-engineering/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/prompt-engineering/" rel="self" type="application/rss+xml" /><item>
+    <title>Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman</title>
+    <link>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</link>
+    <pubDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</guid>
+    <description><![CDATA[<p>Bạn nạp một tài liệu học thuật vài chục trang vào mô hình AI, hy vọng nó sẽ giúp bạn bóc tách từng luồng tư duy phức tạp. Nhưng kết quả trả về thường là một bản tóm tắt nông cạn, bỏ sót hoàn toàn những luận điểm sắc bén nằm ở giữa văn bản, hoặc nguy hiểm hơn là tự bịa ra thông tin. Đây là rào cản chung khi chúng ta cố gắng biến AI thành người thầy cá nhân: sự hời hợt do giới hạn của không gian ngữ cảnh và thói quen đọc thụ động của não bộ.</p>]]></description>
+</item>
+<item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
     <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>

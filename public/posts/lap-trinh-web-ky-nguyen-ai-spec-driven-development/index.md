@@ -44,26 +44,9 @@ Lạm dụng AI làm suy giảm khả năng tư duy độc lập. Mỗi khi gặ
 
 ### 1. Hợp đồng học tập và rào chắn giới hạn
 
-{{< prompt title="Prompt Mẫu: Hợp đồng học tập & Guardrails" >}}
-Bạn là gia sư web dev của tôi. Hãy dạy tôi như một người mới bắt đầu muốn trở nên thành thạo, không phải như một người muốn copy-paste nhanh. Ưu tiên các bước ngắn có điểm kiểm tra. Khi đưa ra code, hãy giải thích bản chất và các lỗi phổ biến.
-
-Quy tắc: Không tạo quá 40 dòng code một lúc; Ưu tiên thay đổi từng bước với diffs; Khi tôi dán lỗi, hãy gợi ý nguyên nhân có khả năng nhất và hướng dẫn tôi tự kiểm tra trước.
+{{< prompt title="Prompt Mẫu: Hợp đồng học tập và Guardrails" >}}
+Đóng vai một chuyên gia. Không đưa giải pháp ngay, hãy giải thích nguyên lý để tôi tự viết code.
 {{< /prompt >}}
-
-### 2. Vòng lặp học tập 4 bước
-
-{{< mermaid >}}
-flowchart LR
-    Step1["Bước 1: Hỏi và giải thích"] --> Step2["Bước 2: Tự tay triển khai"]
-    Step2 --> Step3["Bước 3: Xin phản hồi tối ưu"]
-    Step3 --> Step4["Bước 4: Thử thách mở rộng"]
-    Step4 -.-> Step1
-{{< /mermaid >}}
-
-- **Bước 1 — Hỏi và giải thích:** Yêu cầu AI giải thích khái niệm kèm ví dụ tối giản.
-- **Bước 2 — Tự tay triển khai:** Tự gõ lại từng dòng code vào trình soạn thảo để tạo phản xạ cú pháp trong não bộ.
-- **Bước 3 — Xin phản hồi:** Hỏi AI đánh giá mã nguồn vừa viết để tìm điểm tối ưu về hiệu năng hoặc cấu trúc.
-- **Bước 4 — Thử thách mở rộng:** Yêu cầu AI đưa ra bài tập biến thể nhỏ để kiểm thử mức độ thấu hiểu.
 
 ### 3. Gỡ lỗi theo phương pháp Socratic
 
@@ -94,17 +77,15 @@ sequenceDiagram
     Dev->>Code: 6. Chạy unit test và nghiệm thu
 {{< /mermaid >}}
 
-#### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief & Specs)
+#### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief và Specs)
 Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.
 
-{{< prompt title="Prompt Bước 1: Khởi tạo Project Brief & Technical Specs" >}}
-Tôi muốn xây dựng tính năng [Tên tính năng]. Hãy đóng vai Product Owner và Senior Architect để soạn thảo file specs/feature-brief.md.
-
-Cấu trúc tài liệu cần có:
-1. Mục tiêu kinh doanh & User Stories.
-2. Phạm vi thực hiện Scope và Các điểm KHÔNG làm Non-goals.
-3. Giả định kỹ thuật & Data Schema đề xuất.
-4. Ràng buộc bảo mật & Hiệu năng.
+{{< prompt title="Prompt Bước 1: Khởi tạo Project Brief và Technical Specs" >}}
+Tôi muốn xây dựng một dự án [Tên ứng dụng]. Hãy đóng vai một Principal System Architect và phỏng vấn tôi từng câu hỏi một để làm rõ:
+1. Mục tiêu kinh doanh và User Stories.
+2. Luồng nghiệp vụ chính.
+3. Giả định kỹ thuật và Data Schema đề xuất.
+4. Ràng buộc bảo mật và Hiệu năng.
 
 Hãy đặt 3 câu hỏi làm rõ trước khi xuất bản nháp đầu tiên.
 {{< /prompt >}}
@@ -130,7 +111,7 @@ Dựa trên specs/feature-brief.md đã chốt, hãy phác thảo file plan.md c
 Nội dung plan.md phải bao gồm:
 1. Danh sách các file cần tạo mới [NEW], chỉnh sửa [MODIFY] hoặc xóa [DELETE].
 2. Chi tiết thay đổi về Data Models, Migration, API Endpoints và Services.
-3. Kế hoạch kiểm thử tự động (Unit test & Integration test).
+3. Kế hoạch kiểm thử tự động (Unit test và Integration test).
 
 Lưu ý: CHƯA viết mã nguồn chi tiết. Chỉ tập trung vào kiến trúc kế hoạch.
 {{< /prompt >}}
@@ -161,10 +142,10 @@ Quy tắc thực thi:
 3. Sau khi viết code, hãy trình bày diffs và giải thích ngắn gọn lý do chọn giải pháp này.
 {{< /prompt >}}
 
-#### Bước 6: Kiểm thử tự động & Nghiệm thu (Verification & Review)
+#### Bước 6: Kiểm thử tự động và Nghiệm thu (Verification và Review)
 Chạy bộ kiểm thử tự động unit test để đảm bảo mã nguồn tuân thủ đúng tiêu chí nghiệm thu Acceptance Criteria.
 
-{{< prompt title="Prompt Bước 6: Kiểm thử tự động & Acceptance Review" >}}
+{{< prompt title="Prompt Bước 6: Kiểm thử tự động và Acceptance Review" >}}
 Đã hoàn thành Task 1.1. Hãy hỗ trợ kiểm thử và rà soát:
 1. Viết bộ unit test bao phủ các kịch bản thành công và thất bại cho Task 1.1.
 2. Chạy lệnh test và phân tích kết quả.

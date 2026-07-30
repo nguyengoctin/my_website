@@ -27,7 +27,7 @@ Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nh
 
 ## 2. Khi nào nên và không nên xây dựng Agent?
 
-{{< admonition warning "Chi phí & Độ trễ" >}}
+{{< admonition warning "Chi phí và Độ trễ" >}}
 Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-deterministic (không tất định). Do đó chúng ta cần cân nhắc kỹ ranh giới áp dụng.
 {{< /admonition >}}
 

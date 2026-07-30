@@ -1,4 +1,4 @@
-# Quotes
+# A collection of quotes
 
 
 {{< quote author="Huyen Chip" >}}

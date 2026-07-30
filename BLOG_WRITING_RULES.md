@@ -7,6 +7,7 @@
 - **Xưng hô "Chúng ta":** Dùng "chúng ta" khi khám phá khái niệm và chia sẻ hành trình học hỏi — người viết và người đọc cùng đồng hành. Tránh giọng dạy đời hay khoảng cách "tôi - bạn".
 - **Tinh gọn & Mật độ thông tin:** Nếu nói được trong một đoạn văn, đừng dùng một trang A4. Không mở bài hay kết bài rườm rà.
 - **Cấm ngoặc đơn dịch nghĩa:** TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()` để dịch từ inline. Dùng tiếng Việt tự nhiên hoặc giữ nguyên thuật ngữ tiếng Anh.
+- **Cấm dùng ký tự `&` trong TOÀN BỘ bài viết:** TUYỆT ĐỐI KHÔNG dùng `&` ở bất kỳ đâu (tiêu đề bài viết, tiêu đề mục, nội dung văn bản, prompt mẫu hay nhãn sơ đồ Mermaid). Luôn luôn dùng chữ "và" để thay thế (trừ đường dẫn URL hoặc khối mã code).
 - **Cấu trúc rõ ràng & Dễ lướt:** Phân chia tiêu đề H2/H3 cụ thể. Trình bày bài toán trước, giải pháp và bài học thực tế theo sau.
 - **Mở bài bằng bài toán, không phải bằng giới thiệu:** Câu đầu tiên phải khiến người đọc thấy ngay vấn đề đang được giải quyết. Không mở bằng "Biết đến X bao giờ chưa?" hay "Hôm nay chúng ta sẽ tìm hiểu…".
 - **Đặt người đọc vào bối cảnh trước khi giải pháp:** Xác định rõ bài toán, ai sẽ gặp và tại sao nó khó. Đừng nhảy thẳng vào giải pháp khi người đọc chưa đồng cảm với vấn đề.
@@ -67,7 +68,7 @@ flowchart LR
     A["Nhãn nút"] --> B["Nhãn nút khác"]
 {{</* /mermaid */>}}
 ```
-BẮT BUỘC dùng shortcode cặp `{{< mermaid >}} ... {{< /mermaid >}}` (KHÔNG dùng khối mã ```mermaid thô). Bọc nhãn nút trong dấu ngoặc kép `"..."`. TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()`, ngoặc vuông `[]` hay toán tử như `O(n²)` trong nhãn nút và nhãn mũi tên để tránh văng lỗi parser. Tách `subgraph` và `end` trên các dòng riêng biệt.
+BẮT BUỘC dùng shortcode cặp `{{< mermaid >}} ... {{< /mermaid >}}` (KHÔNG dùng khối mã ```mermaid thô). Bọc nhãn nút trong dấu ngoặc kép `"..."`. Nhãn mũi tên BẮT BUỘC dùng cú pháp `A -->|Nhãn| B` (KHÔNG dùng `-- "Nhãn" -->`). TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()`, ngoặc vuông `[]` hay ký tự đặc biệt như `&` (hãy thay bằng chữ "và"), toán tử như `O(n²)` trong nhãn nút và nhãn mũi tên để tránh văng lỗi parser. Tách `subgraph` và `end` trên các dòng riêng biệt.
 
 **Code Snippets:**
 ````

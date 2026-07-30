@@ -4,7 +4,7 @@
         <link>http://localhost:1313/</link>
         <description>Personal website and blog of Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>A Collection of Learning Resources</title>
@@ -30,6 +30,14 @@
 <p><strong>Icon Legend:</strong></p>]]></description>
 </item>
 <item>
+    <title>Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman</title>
+    <link>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</link>
+    <pubDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</guid>
+    <description><![CDATA[<p>Bạn nạp một tài liệu học thuật vài chục trang vào mô hình AI, hy vọng nó sẽ giúp bạn bóc tách từng luồng tư duy phức tạp. Nhưng kết quả trả về thường là một bản tóm tắt nông cạn, bỏ sót hoàn toàn những luận điểm sắc bén nằm ở giữa văn bản, hoặc nguy hiểm hơn là tự bịa ra thông tin. Đây là rào cản chung khi chúng ta cố gắng biến AI thành người thầy cá nhân: sự hời hợt do giới hạn của không gian ngữ cảnh và thói quen đọc thụ động của não bộ.</p>]]></description>
+</item>
+<item>
     <title>Cách Cấu Hình Mac Mini Làm Headless Server Điều Khiển Qua RustDesk Và SSH Từ Linux</title>
     <link>http://localhost:1313/posts/huong-dan-cau-hinh-mac-mini-headless-server/</link>
     <pubDate>Thu, 30 Jul 2026 10:55:00 &#43;0700</pubDate>
@@ -39,7 +47,7 @@
 <p>Bài viết này tổng hợp giải pháp kỹ thuật triệt để giúp giải quyết bài toán nghẽn hiệu năng render, đồng thời xây dựng cơ chế tự khôi phục dịch vụ để điều khiển Mac Mini từ máy Linux hoàn toàn qua RustDesk và SSH.</p>]]></description>
 </item>
 <item>
-    <title>Hướng Dẫn &amp; Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
+    <title>Hướng Dẫn và Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
     <link>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</link>
     <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -54,7 +62,7 @@
 <p>Giao diện <strong>LoveIt</strong> cùng các tùy chỉnh nâng cao cung cấp bộ công cụ shortcodes đa dạng giúp chúng ta dễ dàng trình bày bài viết chuẩn đẹp, tích hợp sơ đồ, trích dẫn, biểu đồ, câu lệnh prompt và các ô ghi chú ấn tượng.</p>]]></description>
 </item>
 <item>
-    <title>Quotes</title>
+    <title>A collection of quotes</title>
     <link>http://localhost:1313/posts/quotes/</link>
     <pubDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
@@ -129,42 +137,19 @@
     <pubDate>Sun, 26 Jul 2026 22:00:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/posts/refactoring-ui-design-principles/</guid>
-    <description><![CDATA[<p>Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách <strong>Refactoring UI</strong> của Adam Wathan &amp; Steve Schoger được viết chính xác cho người như vậy.</p>
+    <description><![CDATA[<p>Là lập trình viên, mỗi lần phải đưa ra quyết định thiết kế — chọn màu button, căn khoảng cách, chọn font chữ — đều là một bài toán không có đáp án rõ ràng. Cuốn sách <strong>Refactoring UI</strong> của Adam Wathan và Steve Schoger được viết chính xác cho người như vậy.</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
     <div class="details-content">
-        <div class="admonition-content">Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan &amp; Steve Schoger</strong>.</div>
+        <div class="admonition-content">Tất cả nội dung và hình ảnh trong bài viết đều được tổng hợp từ cuốn sách <strong>Refactoring UI</strong> của <strong>Adam Wathan và Steve Schoger</strong>.</div>
     </div>
 </div>
 <hr>
 <h2 id="chương-1--starting-from-scratch-khởi-đầu-đúng-hướng">Chương 1 — Starting from scratch: Khởi đầu đúng hướng</h2>
 <h3 id="bắt-đầu-từ-feature-không-phải-layout">Bắt đầu từ feature, không phải layout</h3>
 <p>Khi bắt tay vào thiết kế một ứng dụng, phản xạ tự nhiên là nghĩ đến bố cục tổng thể: <em>&ldquo;Có nên có top nav không? Sidebar bên trái hay bên phải?&rdquo;</em> Đây là một cái bẫy — chúng ta đang nghĩ về phần <strong>vỏ bên ngoài</strong> thay vì tính năng thực sự.</p>]]></description>
-</item>
-<item>
-    <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
-    <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Sưu tầm</cite>
-    </footer>
-</blockquote>
-
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn tham khảo / Reference<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content">Bài viết được tổng hợp từ báo cáo kiến trúc kỹ thuật chính thức của <strong>OpenAI</strong>: <strong>&ldquo;A practical guide to building agents&rdquo;</strong> (2025).</div>
-    </div>
-</div>
-<p>Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh <code>if-else</code> lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một <strong>AI Agent</strong> — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
 </item>
 </channel>
 </rss>
