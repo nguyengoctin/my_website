@@ -1,23 +1,8 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Claude Code - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/claude-code/</link>
-        <description>Claude Code - Tag - Nguyen Ngoc Tin</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/claude-code/" rel="self" type="application/rss+xml" /><item>
-    <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Claude Code - Tag - Nguyen Ngoc Tin</title><link>https://ngoctin.me/tags/claude-code/</link><description>Claude Code - Tag - Nguyen Ngoc Tin</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor><webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/claude-code/" rel="self" type="application/rss+xml"/><item><title>Lập Trình Web Kỷ Nguyên AI: Đừng 'Vibe Code', Hãy Làm Chủ Spec-Driven Development!</title><link>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link><pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid><description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
         <cite style="font-style: normal;">— Sưu tầm</cite>
     </footer>
 </blockquote>
 
-<p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description>
-</item>
-</channel>
-</rss>
+<p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description></item></channel></rss>

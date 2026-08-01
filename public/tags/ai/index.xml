@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>AI - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/ai/</link>
-        <description>AI - Tag - Nguyen Ngoc Tin</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/ai/" rel="self" type="application/rss+xml" /><item>
-    <title>A Collection of Learning Resources</title>
-    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
-    <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>AI - Tag - Nguyen Ngoc Tin</title><link>https://ngoctin.me/tags/ai/</link><description>AI - Tag - Nguyen Ngoc Tin</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor><webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 +0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/ai/" rel="self" type="application/rss+xml"/><item><title>A Collection of Learning Resources</title><link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link><pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/posts/a-collection-of-learning-resources/</guid><description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"You do not rise to the level of your goals. You fall to the level of your systems."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
         <cite style="font-style: normal;">— James Clear</cite>
@@ -25,53 +13,4 @@
         <div class="admonition-content">This curated collection gathers top-tier courses, documentation, books, and technical tools across Artificial Intelligence, Computer Science, and Software Development. Resources are updated and organized periodically by category.</div>
     </div>
 </div>
-<p><strong>Icon Legend:</strong></p>]]></description>
-</item>
-<item>
-    <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>
-    <link>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
-    <pubDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</guid>
-    <description><![CDATA[<p>Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.</p>]]></description>
-</item>
-<item>
-    <title>Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman</title>
-    <link>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</link>
-    <pubDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</guid>
-    <description><![CDATA[<p>Bạn nạp một tài liệu học thuật vài chục trang vào mô hình AI, hy vọng nó sẽ giúp bạn bóc tách từng luồng tư duy phức tạp. Nhưng kết quả trả về thường là một bản tóm tắt nông cạn, bỏ sót hoàn toàn những luận điểm sắc bén nằm ở giữa văn bản, hoặc nguy hiểm hơn là tự bịa ra thông tin. Đây là rào cản chung khi chúng ta cố gắng biến AI thành người thầy cá nhân: sự hời hợt do giới hạn của không gian ngữ cảnh và thói quen đọc thụ động của não bộ.</p>]]></description>
-</item>
-<item>
-    <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
-    <link>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
-    <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Sưu tầm</cite>
-    </footer>
-</blockquote>
-
-<p>Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm.</p>]]></description>
-</item>
-<item>
-    <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Sưu tầm</cite>
-    </footer>
-</blockquote>
-
-<p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description>
-</item>
-</channel>
-</rss>
+<p><strong>Icon Legend:</strong></p>]]></description></item><item><title>AI vs AGI</title><link>https://ngoctin.me/ai-engineer/02-llm-fundamentals/ai-vs-agi/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/02-llm-fundamentals/ai-vs-agi/</guid><description>AI (Trí tuệ nhân tạo) đề cập đến các hệ thống được thiết kế để thực hiện các tác vụ cụ thể bằng cách bắt chước các khía cạnh của trí thông minh con người, như nhận diện mẫu, ra quyết định và xử lý ngôn ngữ.</description></item><item><title>Purpose and Functionality</title><link>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/purpose-and-functionality/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/purpose-and-functionality/</guid><description>Cơ sở dữ liệu vector được thiết kế để lưu trữ, quản lý và truy xuất các vector (embedding) đa chiều do các mô hình AI tạo ra.</description></item><item><title>RAG Usecases</title><link>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/rag-usecases/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/rag-usecases/</guid><description>Retrieval-Augmented Generation (RAG) nâng cao các ứng dụng như chatbot, hỗ trợ khách hàng và tóm tắt nội dung bằng cách kết hợp truy xuất thông tin với tạo ngôn ngữ.</description></item><item><title>Embedding</title><link>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/embedding/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/04-rag-and-vector-databases/embedding/</guid><description>Trong Retrieval-Augmented Generation (RAG), các embedding là thiết yếu để liên kết việc truy xuất thông tin với việc tạo ngôn ngữ tự nhiên.</description></item><item><title>Multimodal AI</title><link>https://ngoctin.me/ai-engineer/08-multimodal-ai/multimodal-ai/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/08-multimodal-ai/multimodal-ai/</guid><description>AI đa phương thức là một phương pháp kết hợp và xử lý dữ liệu từ nhiều nguồn, chẳng hạn như văn bản, hình ảnh, âm thanh và video, để hiểu và tạo ra các phản hồi.</description></item><item><title>Multimodal AI Usecases</title><link>https://ngoctin.me/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/</guid><description>AI đa phương thức cung cấp năng lượng cho các ứng dụng như trả lời câu hỏi bằng hình ảnh, kiểm duyệt nội dung và các công cụ tìm kiếm nâng cao.</description></item><item><title>Video Understanding</title><link>https://ngoctin.me/ai-engineer/08-multimodal-ai/video-understanding/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/08-multimodal-ai/video-understanding/</guid><description>Hiểu video với AI đa phương thức bao gồm việc phân tích và diễn giải cả nội dung hình ảnh và âm thanh để cung cấp sự hiểu biết toàn diện hơn về video.</description></item><item><title>Audio Processing</title><link>https://ngoctin.me/ai-engineer/08-multimodal-ai/audio-processing/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/08-multimodal-ai/audio-processing/</guid><description>Xử lý âm thanh trong AI đa phương thức cho phép nhiều trường hợp sử dụng bằng cách kết hợp âm thanh với các loại dữ liệu khác, chẳng hạn như văn bản, hình ảnh hoặc video, để tạo ra các hệ thống nhận biết ngữ cảnh tốt hơn.</description></item><item><title>Text-to-Speech</title><link>https://ngoctin.me/ai-engineer/08-multimodal-ai/text-to-speech/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/ai-engineer/08-multimodal-ai/text-to-speech/</guid><description>Trong bối cảnh AI đa phương thức, công nghệ chuyển đổi văn bản thành giọng nói (TTS) chuyển đổi văn bản viết thành ngôn ngữ nói tự nhiên, cho phép các hệ thống AI giao tiếp bằng lời nói.</description></item></channel></rss>

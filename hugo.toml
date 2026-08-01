@@ -152,9 +152,9 @@ Outside of engineering, I spend my time reading books across various fields, inc
     hiddenFromSearch = false
     twemoji = false
     lightgallery = true
-    ruby = true
-    fraction = true
-    fontawesome = true
+    ruby = false
+    fraction = false
+    fontawesome = false
     linkToMarkdown = true
 
     # Table of contents

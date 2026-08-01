@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Think - Category - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/categories/think/</link>
-        <description>Think - Category - Nguyen Ngoc Tin</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/categories/think/" rel="self" type="application/rss+xml" /><item>
-    <title>Không Có Con Đường Tắt Trong Tự Học</title>
-    <link>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</link>
-    <pubDate>Sun, 26 Jul 2026 22:50:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid>
-    <description><![CDATA[<div class="details admonition note open">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Think - Category - Nguyen Ngoc Tin</title><link>https://ngoctin.me/categories/think/</link><description>Think - Category - Nguyen Ngoc Tin</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor><webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 22:50:00 +0700</lastBuildDate><atom:link href="https://ngoctin.me/categories/think/" rel="self" type="application/rss+xml"/><item><title>Không Có Con Đường Tắt Trong Tự Học</title><link>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</link><pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author><guid>https://ngoctin.me/posts/khong-co-con-duong-tat-trong-tu-hoc/</guid><description><![CDATA[<div class="details admonition note open">
     <div class="details-summary admonition-title">
         <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Nguồn gốc bài viết<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
     </div>
@@ -18,7 +6,4 @@
         <div class="admonition-content">Bài viết được đăng lại và dịch thuật từ bài gốc trên <a href="https://math2it.com" target="_blank" rel="noopener noreffer ">Math2IT</a> của tác giả <strong>Đinh Anh Thi</strong>.</div>
     </div>
 </div>
-<p>Trong quyển <em>Sapiens</em> của Yuval Noah Harari, tác giả có nhắc đến một ý rằng con người ta chủ yếu chọn làm những cái mang lại cảm giác dễ chịu. Xét riêng về vấn đề học một thứ gì đó cũng vậy.</p>]]></description>
-</item>
-</channel>
-</rss>
+<p>Trong quyển <em>Sapiens</em> của Yuval Noah Harari, tác giả có nhắc đến một ý rằng con người ta chủ yếu chọn làm những cái mang lại cảm giác dễ chịu. Xét riêng về vấn đề học một thứ gì đó cũng vậy.</p>]]></description></item></channel></rss>

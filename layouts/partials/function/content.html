@@ -1,0 +1,8 @@
+{{- /* Safe Content Processor: Avoids Hugo replaceRE slice bounds panic */ -}}
+{{- $content := .Content -}}
+
+{{- if $content -}}
+    {{- $content = partial "function/checkbox.html" $content -}}
+{{- end -}}
+
+{{- return $content -}}
