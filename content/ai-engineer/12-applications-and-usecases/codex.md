@@ -4,6 +4,9 @@ description: "Codex is an AI model created by OpenAI that translates natural lan
 summary: "Codex là một model AI được tạo bởi OpenAI giúp dịch ngôn ngữ tự nhiên thành code."
 slug: "codex"
 date: 2026-08-01
+weight: 166
+next: "/ai-engineer/12-applications-and-usecases/windsurf/"
+prev: "/ai-engineer/12-applications-and-usecases/gemini/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Codex)
+
+---
+
+[← Gemini](/ai-engineer/12-applications-and-usecases/gemini/) · [AI Engineer Roadmap](/ai-engineer/) · [Windsurf →](/ai-engineer/12-applications-and-usecases/windsurf/)

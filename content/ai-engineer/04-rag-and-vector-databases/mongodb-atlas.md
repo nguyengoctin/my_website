@@ -4,7 +4,7 @@ description: "MongoDB Atlas, traditionally known for its document database capab
 summary: "MongoDB Atlas, vốn nổi tiếng với khả năng cơ sở dữ liệu tài liệu, hiện đã bao gồm chức năng tìm kiếm vector, biến nó thành một lựa chọn mạnh mẽ như một cơ sở dữ liệu vector."
 slug: "mongodb-atlas"
 date: 2026-08-01
-weight: 69
+weight: 61
 next: "/ai-engineer/04-rag-and-vector-databases/indexing-embeddings/"
 prev: "/ai-engineer/04-rag-and-vector-databases/supabase/"
 draft: false

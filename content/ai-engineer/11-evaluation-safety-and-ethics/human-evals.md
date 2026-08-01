@@ -4,6 +4,9 @@ description: "Human evals involve people directly reviewing and scoring model ou
 summary: "Đánh giá của con người liên quan đến việc mọi người trực tiếp xem xét và chấm điểm đầu ra của mô hình dựa trên các tiêu chí đã xác định."
 slug: "human-evals"
 date: 2026-08-01
+weight: 159
+next: "/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/"
 draft: false
 
 categories:
@@ -45,3 +48,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Human Evals)
+
+---
+
+[← Model-Based Evals](/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/) · [AI Engineer Roadmap](/ai-engineer/) · [Evaluation Metrics →](/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/)

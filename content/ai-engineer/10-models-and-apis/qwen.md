@@ -4,6 +4,9 @@ description: "Qwen is a series of large language models (LLMs) developed by Alib
 summary: "Qwen là một loạt các large language models (LLMs) được phát triển bởi Alibaba Group."
 slug: "qwen"
 date: 2026-08-01
+weight: 133
+next: "/ai-engineer/10-models-and-apis/openrouter/"
+prev: "/ai-engineer/10-models-and-apis/gemma/"
 draft: false
 
 categories:
@@ -45,3 +48,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Qwen)
+
+---
+
+[← Gemma](/ai-engineer/10-models-and-apis/gemma/) · [AI Engineer Roadmap](/ai-engineer/) · [OpenRouter →](/ai-engineer/10-models-and-apis/openrouter/)

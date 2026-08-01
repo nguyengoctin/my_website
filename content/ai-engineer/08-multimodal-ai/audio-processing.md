@@ -4,7 +4,7 @@ description: "Audio processing in multimodal AI enables a wide range of use case
 summary: "Xử lý âm thanh trong AI đa phương thức cho phép nhiều trường hợp sử dụng bằng cách kết hợp âm thanh với các loại dữ liệu khác, chẳng hạn như văn bản, hình ảnh hoặc video, để tạo ra các hệ thống nhận biết ngữ cảnh tốt hơn."
 slug: "audio-processing"
 date: 2026-08-01
-weight: 96
+weight: 101
 next: "/ai-engineer/08-multimodal-ai/text-to-speech/"
 prev: "/ai-engineer/08-multimodal-ai/video-understanding/"
 draft: false

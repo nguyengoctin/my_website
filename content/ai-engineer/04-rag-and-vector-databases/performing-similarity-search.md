@@ -4,7 +4,7 @@ description: "In a similarity search, the process begins by converting the user�
 summary: "Trong một tìm kiếm tương đồng, quy trình bắt đầu bằng việc chuyển đổi truy vấn của người dùng (chẳng hạn như một đoạn văn bản hoặc một hình ảnh) thành một embedding—một biểu diễn vector nắm bắt ý nghĩa ngữ nghĩa của truy vấn."
 slug: "performing-similarity-search"
 date: 2026-08-01
-weight: 71
+weight: 63
 next: "/ai-engineer/04-rag-and-vector-databases/what-are-rags/"
 prev: "/ai-engineer/04-rag-and-vector-databases/indexing-embeddings/"
 draft: false

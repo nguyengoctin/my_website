@@ -4,6 +4,9 @@ description: "Arize is an ML observability platform that supports both tradition
 summary: "Arize là một nền tảng quan sát ML hỗ trợ cả các mô hình ML truyền thống và các ứng dụng LLM."
 slug: "arize-ai"
 date: 2026-08-01
+weight: 156
+next: "/ai-engineer/11-evaluation-safety-and-ethics/deterministic-evals/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/helicone/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Arize AI)
+
+---
+
+[← Helicone](/ai-engineer/11-evaluation-safety-and-ethics/helicone/) · [AI Engineer Roadmap](/ai-engineer/) · [Deterministic Evals →](/ai-engineer/11-evaluation-safety-and-ethics/deterministic-evals/)

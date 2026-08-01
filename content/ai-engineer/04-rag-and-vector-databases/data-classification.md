@@ -4,7 +4,7 @@ description: "Once data is embedded, a classification algorithm, such as a neura
 summary: "Khi dữ liệu đã được nhúng, một thuật toán phân loại, chẳng hạn như mạng thần kinh hoặc mô hình hồi quy logistic, có thể được huấn luyện trên các embeddings này để phân loại dữ liệu thành các danh mục khác nhau."
 slug: "data-classification"
 date: 2026-08-01
-weight: 53
+weight: 46
 next: "/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/"
 prev: "/ai-engineer/04-rag-and-vector-databases/anomaly-detection/"
 draft: false

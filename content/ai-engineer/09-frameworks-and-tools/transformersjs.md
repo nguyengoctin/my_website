@@ -4,7 +4,7 @@ description: "Transformers.js is a JavaScript library that enables transformer m
 summary: "Transformers.js là một thư viện JavaScript cho phép các mô hình transformer, giống như các mô hình từ Hugging Face, chạy trực tiếp trong trình duyệt hoặc Node.js mà không cần dịch vụ đám mây."
 slug: "transformersjs"
 date: 2026-08-01
-weight: 45
+weight: 114
 next: "/ai-engineer/09-frameworks-and-tools/ollama/"
 prev: "/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/"
 draft: false

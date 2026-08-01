@@ -4,7 +4,7 @@ description: "Embedding models are used to convert raw data like text, code, or 
 summary: "Các mô hình embedding được sử dụng để chuyển đổi dữ liệu thô như văn bản, mã nguồn hoặc hình ảnh thành các vector đa chiều nắm bắt ý nghĩa ngữ nghĩa."
 slug: "models-on-hugging-face"
 date: 2026-08-01
-weight: 59
+weight: 51
 next: "/ai-engineer/04-rag-and-vector-databases/vector-databases/"
 prev: "/ai-engineer/04-rag-and-vector-databases/sentence-transformers/"
 draft: false

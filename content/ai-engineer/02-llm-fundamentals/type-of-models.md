@@ -4,6 +4,9 @@ description: "AI models come in various forms."
 summary: "Các mô hình AI có nhiều dạng khác nhau."
 slug: "type-of-models"
 date: 2026-08-01
+weight: 17
+next: "/ai-engineer/02-llm-fundamentals/self-hosted-models/"
+prev: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
 draft: false
 
 categories:
@@ -41,3 +44,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Type of Models)
+
+---
+
+[← Closed vs Open Source Models](/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/) · [AI Engineer Roadmap](/ai-engineer/) · [Self-Hosted Models →](/ai-engineer/02-llm-fundamentals/self-hosted-models/)

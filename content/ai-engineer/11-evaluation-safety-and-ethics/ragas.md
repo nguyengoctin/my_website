@@ -4,6 +4,9 @@ description: "RAGAS is an open-source framework specifically designed for evalua
 summary: "RAGAS là một framework mã nguồn mở được thiết kế đặc biệt để đánh giá các pipeline RAG."
 slug: "ragas"
 date: 2026-08-01
+weight: 163
+next: "/ai-engineer/12-applications-and-usecases/claude-code/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/deepeval/"
 draft: false
 
 categories:
@@ -46,3 +49,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: RAGAS)
+
+---
+
+[← DeepEval](/ai-engineer/11-evaluation-safety-and-ethics/deepeval/) · [AI Engineer Roadmap](/ai-engineer/) · [Claude Code →](/ai-engineer/12-applications-and-usecases/claude-code/)

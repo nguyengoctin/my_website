@@ -3,12 +3,11 @@
 {{- end -}}
 
 {{- define "content" -}}
-    <div class="page single special">
-        <h1 class="single-title animate__animated animate__pulse animate__faster">
+    <div class="page single">
+        <h1 class="single-title animate__animated animate__flipInX">
             {{- .Title | emojify -}}
         </h1>
 
-        {{- /* Content */ -}}
         <div class="content" id="content">
             {{- .Content -}}
         </div>

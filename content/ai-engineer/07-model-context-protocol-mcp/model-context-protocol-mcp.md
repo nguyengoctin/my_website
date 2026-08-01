@@ -4,6 +4,9 @@ description: "Model Context Protocol (MCP) provides a standardized way for AI ag
 summary: "Model Context Protocol (MCP) cung cấp một cách chuẩn hóa để các tác nhân AI quản lý và chia sẻ thông tin ngữ cảnh."
 slug: "model-context-protocol-mcp"
 date: 2026-08-01
+weight: 86
+next: "/ai-engineer/07-model-context-protocol-mcp/mcp-host/"
+prev: "/ai-engineer/06-ai-agents/multi-agents/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Model Context Protocol (MCP))
+
+---
+
+[← Multi-agents](/ai-engineer/06-ai-agents/multi-agents/) · [AI Engineer Roadmap](/ai-engineer/) · [MCP Host →](/ai-engineer/07-model-context-protocol-mcp/mcp-host/)

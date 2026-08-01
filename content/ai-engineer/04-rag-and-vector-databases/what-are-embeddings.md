@@ -4,9 +4,9 @@ description: "Embeddings are dense, numerical vector representations of data, su
 summary: "Embeddings là các biểu diễn vector số dày đặc của dữ liệu, chẳng hạn như từ, câu, hình ảnh hoặc âm thanh, nắm bắt ý nghĩa ngữ nghĩa và các mối quan hệ của chúng."
 slug: "what-are-embeddings"
 date: 2026-08-01
-weight: 49
+weight: 42
 next: "/ai-engineer/04-rag-and-vector-databases/semantic-search/"
-prev: "/ai-engineer/10-models-and-apis/google-gemini-api/"
+prev: "/ai-engineer/03-prompt-engineering/context-isolation/"
 draft: false
 
 categories:
@@ -47,4 +47,4 @@ mermaid: false
 
 ---
 
-[← Google Gemini APi](/ai-engineer/10-models-and-apis/google-gemini-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Semantic Search →](/ai-engineer/04-rag-and-vector-databases/semantic-search/)
+[← Context Isolation](/ai-engineer/03-prompt-engineering/context-isolation/) · [AI Engineer Roadmap](/ai-engineer/) · [Semantic Search →](/ai-engineer/04-rag-and-vector-databases/semantic-search/)

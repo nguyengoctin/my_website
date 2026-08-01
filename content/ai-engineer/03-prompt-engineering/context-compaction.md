@@ -4,6 +4,9 @@ description: "Context compaction is a technique used to reduce the length of the
 summary: "Context compaction là một kỹ thuật được sử dụng để giảm độ dài của ngữ cảnh được cung cấp cho một large language model (LLM) mà không làm mất đi thông tin liên quan."
 slug: "context-compaction"
 date: 2026-08-01
+weight: 40
+next: "/ai-engineer/03-prompt-engineering/context-isolation/"
+prev: "/ai-engineer/03-prompt-engineering/rag-dynamic-filters/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Context Compaction)
+
+---
+
+[← RAG & Dynamic Filters](/ai-engineer/03-prompt-engineering/rag-dynamic-filters/) · [AI Engineer Roadmap](/ai-engineer/) · [Context Isolation →](/ai-engineer/03-prompt-engineering/context-isolation/)

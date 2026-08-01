@@ -4,7 +4,7 @@ description: "Embeddings are used for semantic search by converting text, such a
 summary: "Embeddings được sử dụng cho tìm kiếm ngữ nghĩa bằng cách chuyển đổi văn bản, chẳng hạn như truy vấn và tài liệu, thành các vector đa chiều nắm bắt ý nghĩa và ngữ cảnh cơ bản, thay vì chỉ các từ chính xác."
 slug: "semantic-search"
 date: 2026-08-01
-weight: 50
+weight: 43
 next: "/ai-engineer/04-rag-and-vector-databases/recommendation-systems/"
 prev: "/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/"
 draft: false

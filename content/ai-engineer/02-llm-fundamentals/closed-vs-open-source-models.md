@@ -4,9 +4,9 @@ description: "Open-source models are freely available for customization and coll
 summary: "Các mô hình mã nguồn mở có sẵn miễn phí để tùy chỉnh và cộng tác, thúc đẩy tính minh bạch và linh hoạt, trong khi các mô hình đóng là độc quyền, mang lại sự dễ sử dụng nhưng hạn chế sửa đổi và tính minh bạch."
 slug: "closed-vs-open-source-models"
 date: 2026-08-01
-weight: 42
-next: "/ai-engineer/09-frameworks-and-tools/hugging-face-hub/"
-prev: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
+weight: 16
+next: "/ai-engineer/02-llm-fundamentals/type-of-models/"
+prev: "/ai-engineer/02-llm-fundamentals/how-llms-work/"
 draft: false
 
 categories:
@@ -41,4 +41,4 @@ mermaid: false
 
 ---
 
-[← LM Studio](/ai-engineer/09-frameworks-and-tools/lm-studio/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Hub →](/ai-engineer/09-frameworks-and-tools/hugging-face-hub/)
+[← How LLMs Work](/ai-engineer/02-llm-fundamentals/how-llms-work/) · [AI Engineer Roadmap](/ai-engineer/) · [Type of Models →](/ai-engineer/02-llm-fundamentals/type-of-models/)

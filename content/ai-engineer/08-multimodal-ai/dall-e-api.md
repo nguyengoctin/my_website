@@ -4,7 +4,7 @@ description: "The DALL-E API is a tool provided by OpenAI that allows developers
 summary: "DALL-E API là một công cụ do OpenAI cung cấp cho phép các nhà phát triển tích hợp mô hình tạo hình ảnh DALL-E vào các ứng dụng."
 slug: "dall-e-api"
 date: 2026-08-01
-weight: 100
+weight: 105
 next: "/ai-engineer/08-multimodal-ai/whisper-api/"
 prev: "/ai-engineer/08-multimodal-ai/openai-vision-api/"
 draft: false

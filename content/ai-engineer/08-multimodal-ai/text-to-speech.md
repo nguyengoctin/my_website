@@ -4,7 +4,7 @@ description: "In the context of multimodal AI, text-to-speech (TTS) technology c
 summary: "Trong bối cảnh AI đa phương thức, công nghệ chuyển đổi văn bản thành giọng nói (TTS) chuyển đổi văn bản viết thành ngôn ngữ nói tự nhiên, cho phép các hệ thống AI giao tiếp bằng lời nói."
 slug: "text-to-speech"
 date: 2026-08-01
-weight: 97
+weight: 102
 next: "/ai-engineer/08-multimodal-ai/speech-to-text/"
 prev: "/ai-engineer/08-multimodal-ai/audio-processing/"
 draft: false

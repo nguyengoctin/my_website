@@ -4,6 +4,9 @@ description: "RAGFlow is a framework designed to streamline the creation, evalua
 summary: "RAGFlow là một framework được thiết kế để hợp lý hóa việc tạo, đánh giá và triển khai các pipeline RAG."
 slug: "ragflow"
 date: 2026-08-01
+weight: 118
+next: "/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/"
+prev: "/ai-engineer/09-frameworks-and-tools/haystack/"
 draft: false
 
 categories:
@@ -33,3 +36,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: RAGFlow)
+
+---
+
+[← Haystack](/ai-engineer/09-frameworks-and-tools/haystack/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Tasks →](/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/)

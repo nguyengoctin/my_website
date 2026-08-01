@@ -4,7 +4,7 @@ description: "Chain of Thought (CoT) is a way for an AI agent to think out loud.
 summary: "Chain of Thought (CoT) là một cách để một tác nhân AI suy nghĩ thành tiếng."
 slug: "cot"
 date: 2026-08-01
-weight: 26
+weight: 21
 next: "/ai-engineer/03-prompt-engineering/zero-shot/"
 prev: "/ai-engineer/03-prompt-engineering/react/"
 draft: false

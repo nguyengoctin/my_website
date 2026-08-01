@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 07. Model Context Protocol (MCP)
-
 - [Model Context Protocol (MCP)](/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/)
 - [MCP Host](/ai-engineer/07-model-context-protocol-mcp/mcp-host/)
 - [MCP Server](/ai-engineer/07-model-context-protocol-mcp/mcp-server/)

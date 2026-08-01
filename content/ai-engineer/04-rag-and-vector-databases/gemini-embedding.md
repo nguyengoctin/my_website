@@ -4,9 +4,9 @@ description: "The Gemini API offers methods to convert text, images, or other da
 summary: "Gemini API cung cấp các phương thức để chuyển đổi văn bản, hình ảnh hoặc các loại dữ liệu khác thành các biểu diễn vector số được gọi là embeddings."
 slug: "gemini-embedding"
 date: 2026-08-01
-weight: 56
+weight: 48
 next: "/ai-engineer/04-rag-and-vector-databases/jina/"
-prev: "/ai-engineer/10-models-and-apis/cohere/"
+prev: "/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/"
 draft: false
 
 categories:
@@ -45,4 +45,4 @@ mermaid: false
 
 ---
 
-[← Cohere](/ai-engineer/10-models-and-apis/cohere/) · [AI Engineer Roadmap](/ai-engineer/) · [Jina →](/ai-engineer/04-rag-and-vector-databases/jina/)
+[← Open AI Embeddings API](/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Jina →](/ai-engineer/04-rag-and-vector-databases/jina/)

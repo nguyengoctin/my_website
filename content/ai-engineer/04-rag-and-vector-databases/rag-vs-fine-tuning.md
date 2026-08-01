@@ -4,7 +4,7 @@ description: "RAG (Retrieval-Augmented Generation) and fine-tuning are two appro
 summary: "RAG (Retrieval-Augmented Generation) và fine-tuning là hai phương pháp tiếp cận để nâng cao các mô hình ngôn ngữ, nhưng chúng khác nhau về phương pháp luận và các trường hợp sử dụng."
 slug: "rag-vs-fine-tuning"
 date: 2026-08-01
-weight: 74
+weight: 66
 next: "/ai-engineer/04-rag-and-vector-databases/chunking/"
 prev: "/ai-engineer/04-rag-and-vector-databases/rag-usecases/"
 draft: false

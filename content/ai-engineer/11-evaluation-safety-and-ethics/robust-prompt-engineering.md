@@ -4,7 +4,7 @@ description: "Robust prompt engineering involves carefully crafting inputs to gu
 summary: "Kỹ thuật prompt mạnh mẽ liên quan đến việc tạo ra các đầu vào một cách cẩn thận để hướng dẫn các mô hình AI tạo ra các đầu ra chính xác, phù hợp và đáng tin cậy."
 slug: "robust-prompt-engineering"
 date: 2026-08-01
-weight: 38
+weight: 145
 next: "/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/adding-end-user-ids-in-prompts/"
 draft: false

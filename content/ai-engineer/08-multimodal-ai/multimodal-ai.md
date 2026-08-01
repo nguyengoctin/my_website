@@ -4,9 +4,9 @@ description: "Multimodal AI is an approach that combines and processes data from
 summary: "AI đa phương thức là một phương pháp kết hợp và xử lý dữ liệu từ nhiều nguồn, chẳng hạn như văn bản, hình ảnh, âm thanh và video, để hiểu và tạo ra các phản hồi."
 slug: "multimodal-ai"
 date: 2026-08-01
-weight: 91
+weight: 96
 next: "/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/"
-prev: "/ai-engineer/06-ai-agents/claude-agent-sdk/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/"
 draft: false
 
 categories:
@@ -52,4 +52,4 @@ mermaid: false
 
 ---
 
-[← Claude Agent SDK](/ai-engineer/06-ai-agents/claude-agent-sdk/) · [AI Engineer Roadmap](/ai-engineer/) · [Multimodal AI Usecases →](/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/)
+[← Connect to Remote Server](/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/) · [AI Engineer Roadmap](/ai-engineer/) · [Multimodal AI Usecases →](/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/)

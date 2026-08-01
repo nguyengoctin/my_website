@@ -4,6 +4,9 @@ description: "Fine-tuning involves taking a pre-trained large language model (LL
 summary: "Fine-tuning bao gồm việc lấy một mô hình ngôn ngữ lớn (LLM) đã được huấn luyện trước và huấn luyện thêm trên một tập dữ liệu nhỏ hơn, chuyên biệt cho tác vụ."
 slug: "fine-tuning"
 date: 2026-08-01
+weight: 77
+next: "/ai-engineer/06-ai-agents/ai-agents/"
+prev: "/ai-engineer/04-rag-and-vector-databases/embeddings/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Fine-tuning)
+
+---
+
+[← Embeddings](/ai-engineer/04-rag-and-vector-databases/embeddings/) · [AI Engineer Roadmap](/ai-engineer/) · [AI Agents →](/ai-engineer/06-ai-agents/ai-agents/)

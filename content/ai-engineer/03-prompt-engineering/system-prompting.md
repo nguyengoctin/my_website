@@ -4,6 +4,9 @@ description: "System prompting sets the overall context, purpose, and operationa
 summary: "System prompting thiết lập bối cảnh tổng thể, mục đích và các hướng dẫn vận hành cho các LLM."
 slug: "system-prompting"
 date: 2026-08-01
+weight: 28
+next: "/ai-engineer/03-prompt-engineering/role-behavior/"
+prev: "/ai-engineer/03-prompt-engineering/input-format/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: System Prompting)
+
+---
+
+[← Input Format](/ai-engineer/03-prompt-engineering/input-format/) · [AI Engineer Roadmap](/ai-engineer/) · [Role & Behavior →](/ai-engineer/03-prompt-engineering/role-behavior/)

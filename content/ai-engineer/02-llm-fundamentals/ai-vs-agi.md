@@ -4,9 +4,9 @@ description: "AI (Artificial Intelligence) refers to systems designed to perform
 summary: "AI (Trí tuệ nhân tạo) đề cập đến các hệ thống được thiết kế để thực hiện các tác vụ cụ thể bằng cách bắt chước các khía cạnh của trí thông minh con người, như nhận diện mẫu, ra quyết định và xử lý ngôn ngữ."
 slug: "ai-vs-agi"
 date: 2026-08-01
-weight: 12
-next: "/ai-engineer/01-introduction/impact-on-product-development/"
-prev: "/ai-engineer/06-ai-agents/ai-agents/"
+weight: 11
+next: "/ai-engineer/02-llm-fundamentals/pre-trained-models/"
+prev: "/ai-engineer/02-llm-fundamentals/rags/"
 draft: false
 
 categories:
@@ -69,4 +69,4 @@ mermaid: false
 
 ---
 
-[← AI Agents](/ai-engineer/06-ai-agents/ai-agents/) · [AI Engineer Roadmap](/ai-engineer/) · [Impact on Product Development →](/ai-engineer/01-introduction/impact-on-product-development/)
+[← RAGs](/ai-engineer/02-llm-fundamentals/rags/) · [AI Engineer Roadmap](/ai-engineer/) · [Pre-trained Models →](/ai-engineer/02-llm-fundamentals/pre-trained-models/)

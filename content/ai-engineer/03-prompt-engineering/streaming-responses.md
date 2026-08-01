@@ -4,6 +4,9 @@ description: "Streamed responses is one of the techniques an AI agent can use to
 summary: "Streamed responses là một trong những kỹ thuật mà một AI agent có thể sử dụng để gửi câu trả lời của nó cho người dùng."
 slug: "streaming-responses"
 date: 2026-08-01
+weight: 34
+next: "/ai-engineer/03-prompt-engineering/repetition-penalties/"
+prev: "/ai-engineer/03-prompt-engineering/prompt-caching/"
 draft: false
 
 categories:
@@ -49,3 +52,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Streaming Responses)
+
+---
+
+[← Prompt Caching](/ai-engineer/03-prompt-engineering/prompt-caching/) · [AI Engineer Roadmap](/ai-engineer/) · [Repetition Penalties →](/ai-engineer/03-prompt-engineering/repetition-penalties/)

@@ -4,7 +4,7 @@ description: "Bias and fairness in AI refer to the challenges of ensuring that m
 summary: "Định kiến và sự công bằng trong AI đề cập đến những thách thức trong việc đảm bảo rằng các mô hình học máy không tạo ra các kết quả phân biệt đối xử hoặc sai lệch."
 slug: "bias-and-fairness"
 date: 2026-08-01
-weight: 33
+weight: 140
 next: "/ai-engineer/11-evaluation-safety-and-ethics/security-and-privacy-concerns/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/"
 draft: false

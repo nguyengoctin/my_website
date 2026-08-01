@@ -4,7 +4,7 @@ description: "Top-P sampling, also known as nucleus sampling, is a technique use
 summary: "Top-P sampling, còn được gọi là nucleus sampling, là một kỹ thuật được sử dụng trong các mô hình ngôn ngữ để tạo văn bản."
 slug: "top-p"
 date: 2026-08-01
-weight: 29
+weight: 24
 next: "/ai-engineer/03-prompt-engineering/few-shot/"
 prev: "/ai-engineer/03-prompt-engineering/top-k/"
 draft: false

@@ -4,9 +4,9 @@ description: "Large Language Models (LLMs) are sophisticated AI systems trained 
 summary: "Các mô hình ngôn ngữ lớn (LLMs) là các hệ thống AI tinh vi được huấn luyện trên lượng lớn dữ liệu văn bản để hiểu, tạo và thao tác ngôn ngữ con người."
 slug: "how-llms-work"
 date: 2026-08-01
-weight: 24
-next: "/ai-engineer/03-prompt-engineering/react/"
-prev: "/ai-engineer/10-models-and-apis/cohere/"
+weight: 15
+next: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
+prev: "/ai-engineer/02-llm-fundamentals/context/"
 draft: false
 
 categories:
@@ -50,4 +50,4 @@ mermaid: false
 
 ---
 
-[← Cohere](/ai-engineer/10-models-and-apis/cohere/) · [AI Engineer Roadmap](/ai-engineer/) · [ReAct →](/ai-engineer/03-prompt-engineering/react/)
+[← Context](/ai-engineer/02-llm-fundamentals/context/) · [AI Engineer Roadmap](/ai-engineer/) · [Closed vs Open Source Models →](/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/)

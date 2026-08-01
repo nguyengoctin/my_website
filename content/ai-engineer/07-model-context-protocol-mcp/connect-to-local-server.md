@@ -4,6 +4,9 @@ description: "A Local Desktop deployment means running the MCP server directly o
 summary: "Triển khai trên máy tính cục bộ có nghĩa là chạy máy chủ MCP trực tiếp trên máy tính của bạn thay vì đám mây."
 slug: "connect-to-local-server"
 date: 2026-08-01
+weight: 94
+next: "/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-client/"
 draft: false
 
 categories:
@@ -41,3 +44,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Connect to Local Server)
+
+---
+
+[← Building an MCP Client](/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-client/) · [AI Engineer Roadmap](/ai-engineer/) · [Connect to Remote Server →](/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/)

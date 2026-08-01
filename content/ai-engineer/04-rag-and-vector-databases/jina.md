@@ -4,7 +4,7 @@ description: "Jina Embeddings are a family of high-performance, open-source, mul
 summary: "Jina Embeddings là một dòng các mô hình embedding hiệu suất cao, mã nguồn mở, đa ngôn ngữ và đa phương thức do Jina AI phát triển."
 slug: "jina"
 date: 2026-08-01
-weight: 57
+weight: 49
 next: "/ai-engineer/04-rag-and-vector-databases/sentence-transformers/"
 prev: "/ai-engineer/04-rag-and-vector-databases/gemini-embedding/"
 draft: false

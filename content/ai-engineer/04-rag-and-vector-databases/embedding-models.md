@@ -4,6 +4,9 @@ description: "Embedding models transform data, like text or images, into numeric
 summary: "Embedding models chuyển đổi dữ liệu, như văn bản hoặc hình ảnh, thành các biểu diễn số được gọi là embeddings."
 slug: "embedding-models"
 date: 2026-08-01
+weight: 75
+next: "/ai-engineer/04-rag-and-vector-databases/embeddings/"
+prev: "/ai-engineer/04-rag-and-vector-databases/llama-index/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Embedding Models)
+
+---
+
+[← Llama Index](/ai-engineer/04-rag-and-vector-databases/llama-index/) · [AI Engineer Roadmap](/ai-engineer/) · [Embeddings →](/ai-engineer/04-rag-and-vector-databases/embeddings/)

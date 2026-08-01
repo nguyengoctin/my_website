@@ -4,7 +4,7 @@ description: "In the context of embeddings, recommendation systems use vector re
 summary: "Trong bối cảnh của embeddings, các hệ thống gợi ý sử dụng các biểu diễn vector để nắm bắt sự tương đồng giữa các mục, chẳng hạn như sản phẩm hoặc nội dung."
 slug: "recommendation-systems"
 date: 2026-08-01
-weight: 51
+weight: 44
 next: "/ai-engineer/04-rag-and-vector-databases/anomaly-detection/"
 prev: "/ai-engineer/04-rag-and-vector-databases/semantic-search/"
 draft: false

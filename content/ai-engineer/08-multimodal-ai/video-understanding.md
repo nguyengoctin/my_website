@@ -4,7 +4,7 @@ description: "Video understanding with multimodal AI involves analyzing and inte
 summary: "Hiểu video với AI đa phương thức bao gồm việc phân tích và diễn giải cả nội dung hình ảnh và âm thanh để cung cấp sự hiểu biết toàn diện hơn về video."
 slug: "video-understanding"
 date: 2026-08-01
-weight: 95
+weight: 100
 next: "/ai-engineer/08-multimodal-ai/audio-processing/"
 prev: "/ai-engineer/08-multimodal-ai/image-generation/"
 draft: false

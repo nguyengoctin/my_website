@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 04. RAG & Vector Databases
-
 - [What are Embeddings](/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/)
 - [Semantic Search](/ai-engineer/04-rag-and-vector-databases/semantic-search/)
 - [Recommendation Systems](/ai-engineer/04-rag-and-vector-databases/recommendation-systems/)

@@ -4,7 +4,7 @@ description: "Sentence Transformers are a type of model designed to generate hig
 summary: "Sentence Transformers là một loại mô hình được thiết kế để tạo ra các embeddings chất lượng cao cho các câu, cho phép chúng nắm bắt ý nghĩa ngữ nghĩa của văn bản."
 slug: "sentence-transformers"
 date: 2026-08-01
-weight: 58
+weight: 50
 next: "/ai-engineer/04-rag-and-vector-databases/models-on-hugging-face/"
 prev: "/ai-engineer/04-rag-and-vector-databases/jina/"
 draft: false

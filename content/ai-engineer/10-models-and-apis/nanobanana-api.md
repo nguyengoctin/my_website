@@ -4,6 +4,9 @@ description: "The NanoBanana API is a tool designed to facilitate the integratio
 summary: "NanoBanana API là một công cụ được thiết kế để tạo điều kiện thuận lợi cho việc tích hợp và xử lý dữ liệu từ nhiều phương thức, như văn bản, hình ảnh và âm thanh."
 slug: "nanobanana-api"
 date: 2026-08-01
+weight: 137
+next: "/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/"
+prev: "/ai-engineer/10-models-and-apis/openai-compatible-apis/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: NanoBanana API)
+
+---
+
+[← OpenAI-compatible APIs](/ai-engineer/10-models-and-apis/openai-compatible-apis/) · [AI Engineer Roadmap](/ai-engineer/) · [AI Safety and Ethics →](/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/)

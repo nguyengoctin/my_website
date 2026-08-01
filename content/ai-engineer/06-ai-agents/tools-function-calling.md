@@ -4,9 +4,9 @@ description: "Tools and function calling equip AI agents with the ability to int
 summary: "Công cụ và gọi hàm trang bị cho các tác nhân AI khả năng tương tác với thế giới thực và truy cập thông tin bên ngoài."
 slug: "tools-function-calling"
 date: 2026-08-01
-weight: 83
-next: "/ai-engineer/10-models-and-apis/deepseek/"
-prev: "/ai-engineer/04-rag-and-vector-databases/llama-index/"
+weight: 79
+next: "/ai-engineer/06-ai-agents/agents-usecases/"
+prev: "/ai-engineer/06-ai-agents/ai-agents/"
 draft: false
 
 categories:
@@ -56,4 +56,4 @@ mermaid: false
 
 ---
 
-[← Llama Index](/ai-engineer/04-rag-and-vector-databases/llama-index/) · [AI Engineer Roadmap](/ai-engineer/) · [DeepSeek →](/ai-engineer/10-models-and-apis/deepseek/)
+[← AI Agents](/ai-engineer/06-ai-agents/ai-agents/) · [AI Engineer Roadmap](/ai-engineer/) · [Agents Usecases →](/ai-engineer/06-ai-agents/agents-usecases/)

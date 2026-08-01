@@ -4,7 +4,7 @@ description: "The retrieval process in Retrieval-Augmented Generation (RAG) invo
 summary: "Quy trình truy xuất trong Retrieval-Augmented Generation (RAG) bao gồm việc tìm kiếm thông tin liên quan từ một tập dữ liệu lớn hoặc cơ sở kiến thức để hỗ trợ việc tạo ra các phản hồi chính xác, nhận biết ngữ cảnh."
 slug: "retrieval-process"
 date: 2026-08-01
-weight: 78
+weight: 70
 next: "/ai-engineer/04-rag-and-vector-databases/generation/"
 prev: "/ai-engineer/04-rag-and-vector-databases/vector-database/"
 draft: false

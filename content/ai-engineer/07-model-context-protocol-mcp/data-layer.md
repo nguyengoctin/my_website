@@ -4,6 +4,9 @@ description: "The Data Layer within the Model Context Protocol (MCP) is responsi
 summary: "Data Layer trong MCP chịu trách nhiệm quản lý và cung cấp quyền truy cập vào dữ liệu mà các tác nhân AI sử dụng."
 slug: "data-layer"
 date: 2026-08-01
+weight: 90
+next: "/ai-engineer/07-model-context-protocol-mcp/transport-layer/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/mcp-client/"
 draft: false
 
 categories:
@@ -33,3 +36,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Data Layer)
+
+---
+
+[← MCP Client](/ai-engineer/07-model-context-protocol-mcp/mcp-client/) · [AI Engineer Roadmap](/ai-engineer/) · [Transport Layer →](/ai-engineer/07-model-context-protocol-mcp/transport-layer/)

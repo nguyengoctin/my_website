@@ -4,6 +4,9 @@ description: "Temperature is a parameter used in language models that controls t
 summary: "Temperature là một tham số được sử dụng trong các language models để kiểm soát tính ngẫu nhiên của văn bản được tạo ra."
 slug: "temperature"
 date: 2026-08-01
+weight: 37
+next: "/ai-engineer/03-prompt-engineering/external-memory/"
+prev: "/ai-engineer/03-prompt-engineering/sampling-parameters/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Temperature)
+
+---
+
+[← Sampling Parameters](/ai-engineer/03-prompt-engineering/sampling-parameters/) · [AI Engineer Roadmap](/ai-engineer/) · [External Memory →](/ai-engineer/03-prompt-engineering/external-memory/)

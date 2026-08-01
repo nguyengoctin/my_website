@@ -4,9 +4,9 @@ description: "AI safety and ethics involve establishing guidelines and best prac
 summary: "An toàn và đạo đức AI bao gồm việc thiết lập các hướng dẫn và thực tiễn tốt nhất để đảm bảo rằng các hệ thống trí tuệ nhân tạo được phát triển, triển khai và sử dụng theo cách ưu tiên phúc lợi con người, sự công bằng và tính minh bạch."
 slug: "ai-safety-and-ethics"
 date: 2026-08-01
-weight: 31
+weight: 138
 next: "/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/"
-prev: "/ai-engineer/03-prompt-engineering/few-shot/"
+prev: "/ai-engineer/10-models-and-apis/nanobanana-api/"
 draft: false
 
 categories:
@@ -53,4 +53,4 @@ mermaid: false
 
 ---
 
-[← Few-Shot](/ai-engineer/03-prompt-engineering/few-shot/) · [AI Engineer Roadmap](/ai-engineer/) · [Prompt Injection Attacks →](/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/)
+[← NanoBanana API](/ai-engineer/10-models-and-apis/nanobanana-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Prompt Injection Attacks →](/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/)

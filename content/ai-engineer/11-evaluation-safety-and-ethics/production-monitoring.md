@@ -4,6 +4,9 @@ description: "Production monitoring is the continuous observation of your AI sys
 summary: "Giám sát sản xuất là việc quan sát liên tục hệ thống AI của bạn khi nó đã hoạt động và xử lý lưu lượng truy cập thực tế."
 slug: "production-monitoring"
 date: 2026-08-01
+weight: 152
+next: "/ai-engineer/11-evaluation-safety-and-ethics/langsmith/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/"
 draft: false
 
 categories:
@@ -44,3 +47,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Production monitoring)
+
+---
+
+[← Cost/latency monitoring](/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/) · [AI Engineer Roadmap](/ai-engineer/) · [LangSmith →](/ai-engineer/11-evaluation-safety-and-ethics/langsmith/)

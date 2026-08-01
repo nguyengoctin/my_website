@@ -4,8 +4,8 @@ description: "An AI Engineer uses pre-trained models and existing AI tools to im
 summary: "Một AI Engineer sử dụng các mô hình pre-trained và các công cụ AI hiện có để cải thiện trải nghiệm người dùng."
 slug: "ai-engineer-vs-ml-engineer"
 date: 2026-08-01
-weight: 4
-next: "/ai-engineer/02-llm-fundamentals/large-language-model-llm/"
+weight: 3
+next: "/ai-engineer/01-introduction/impact-on-product-development/"
 prev: "/ai-engineer/01-introduction/what-is-an-ai-engineer/"
 draft: false
 
@@ -51,4 +51,4 @@ mermaid: false
 
 ---
 
-[← What is an AI Engineer?](/ai-engineer/01-introduction/what-is-an-ai-engineer/) · [AI Engineer Roadmap](/ai-engineer/) · [Large Language Model (LLM) →](/ai-engineer/02-llm-fundamentals/large-language-model-llm/)
+[← What is an AI Engineer?](/ai-engineer/01-introduction/what-is-an-ai-engineer/) · [AI Engineer Roadmap](/ai-engineer/) · [Impact on Product Development →](/ai-engineer/01-introduction/impact-on-product-development/)

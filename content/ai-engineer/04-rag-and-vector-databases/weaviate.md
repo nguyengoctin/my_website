@@ -4,7 +4,7 @@ description: "Weaviate is an open-source vector database that allows users to st
 summary: "Weaviate là một cơ sở dữ liệu vector mã nguồn mở cho phép người dùng lưu trữ, tìm kiếm và quản lý các vector đa chiều, thường được sử dụng cho các tác vụ như tìm kiếm ngữ nghĩa và hệ thống gợi ý."
 slug: "weaviate"
 date: 2026-08-01
-weight: 64
+weight: 56
 next: "/ai-engineer/04-rag-and-vector-databases/faiss/"
 prev: "/ai-engineer/04-rag-and-vector-databases/pinecone/"
 draft: false

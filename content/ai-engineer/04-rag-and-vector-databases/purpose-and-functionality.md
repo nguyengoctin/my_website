@@ -4,7 +4,7 @@ description: "A vector database is designed to store, manage, and retrieve high-
 summary: "Cơ sở dữ liệu vector được thiết kế để lưu trữ, quản lý và truy xuất các vector (embedding) đa chiều do các mô hình AI tạo ra."
 slug: "purpose-and-functionality"
 date: 2026-08-01
-weight: 61
+weight: 53
 next: "/ai-engineer/04-rag-and-vector-databases/chroma/"
 prev: "/ai-engineer/04-rag-and-vector-databases/vector-databases/"
 draft: false

@@ -4,6 +4,9 @@ description: "LangFuse is an open-source LLM observability platform that provide
 summary: "LangFuse là một nền tảng quan sát LLM mã nguồn mở cung cấp các công cụ theo dõi, quản lý prompt và đánh giá."
 slug: "langfuse"
 date: 2026-08-01
+weight: 154
+next: "/ai-engineer/11-evaluation-safety-and-ethics/helicone/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/langsmith/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Langfuse)
+
+---
+
+[← LangSmith](/ai-engineer/11-evaluation-safety-and-ethics/langsmith/) · [AI Engineer Roadmap](/ai-engineer/) · [Helicone →](/ai-engineer/11-evaluation-safety-and-ethics/helicone/)

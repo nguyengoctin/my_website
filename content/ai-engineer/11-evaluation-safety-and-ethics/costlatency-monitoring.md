@@ -4,6 +4,9 @@ description: "Cost and latency monitoring tracks token usage, the resulting fina
 summary: "Giám sát chi phí và độ trễ theo dõi việc sử dụng token, chi phí tài chính và thời gian phản hồi trong hệ thống AI của bạn."
 slug: "costlatency-monitoring"
 date: 2026-08-01
+weight: 151
+next: "/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/"
 draft: false
 
 categories:
@@ -48,3 +51,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Cost/latency monitoring)
+
+---
+
+[← Tracing & logging](/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/) · [AI Engineer Roadmap](/ai-engineer/) · [Production monitoring →](/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/)

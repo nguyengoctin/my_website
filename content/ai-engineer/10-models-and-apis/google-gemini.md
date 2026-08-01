@@ -4,7 +4,7 @@ description: "Google Gemini is an advanced AI model by Google DeepMind, designed
 summary: "Google Gemini là một mô hình AI tiên tiến của Google DeepMind, được thiết kế để tích hợp NLP với các khả năng đa phương thức, cho phép nó hiểu và tạo ra không chỉ văn bản mà còn cả hình ảnh, video và các loại dữ liệu khác."
 slug: "google-gemini"
 date: 2026-08-01
-weight: 19
+weight: 121
 next: "/ai-engineer/10-models-and-apis/openai-gpt-o-series/"
 prev: "/ai-engineer/10-models-and-apis/anthropic-claude/"
 draft: false

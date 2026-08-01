@@ -4,7 +4,7 @@ description: "While tools like Langchain and LlamaIndex make it easy to implemen
 summary: "Mặc dù các công cụ như Langchain và LlamaIndex giúp việc triển khai RAG trở nên dễ dàng, bạn không nhất thiết phải học và sử dụng chúng."
 slug: "using-sdks-directly"
 date: 2026-08-01
-weight: 80
+weight: 72
 next: "/ai-engineer/04-rag-and-vector-databases/langchain/"
 prev: "/ai-engineer/04-rag-and-vector-databases/generation/"
 draft: false

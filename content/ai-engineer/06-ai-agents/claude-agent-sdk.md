@@ -4,8 +4,8 @@ description: "The Claude Agent SDK provides tools and libraries to build autonom
 summary: "Claude Agent SDK cung cấp các công cụ và thư viện để xây dựng các tác nhân AI tự trị được hỗ trợ bởi các mô hình Claude của Anthropic."
 slug: "claude-agent-sdk"
 date: 2026-08-01
-weight: 90
-next: "/ai-engineer/08-multimodal-ai/multimodal-ai/"
+weight: 84
+next: "/ai-engineer/06-ai-agents/multi-agents/"
 prev: "/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/"
 draft: false
 
@@ -50,4 +50,4 @@ mermaid: false
 
 ---
 
-[← OpenAI AgentKit & Agent SDK](/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/) · [AI Engineer Roadmap](/ai-engineer/) · [Multimodal AI →](/ai-engineer/08-multimodal-ai/multimodal-ai/)
+[← OpenAI AgentKit & Agent SDK](/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/) · [AI Engineer Roadmap](/ai-engineer/) · [Multi-agents →](/ai-engineer/06-ai-agents/multi-agents/)

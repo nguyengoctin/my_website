@@ -4,9 +4,9 @@ description: "LM Studio is a desktop application designed for discovering, downl
 summary: "LM Studio là một ứng dụng máy tính được thiết kế để khám phá, tải xuống và chạy các LLM cục bộ trên máy tính của bạn."
 slug: "lm-studio"
 date: 2026-08-01
-weight: 41
-next: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
-prev: "/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/"
+weight: 111
+next: "/ai-engineer/09-frameworks-and-tools/hugging-face-hub/"
+prev: "/ai-engineer/09-frameworks-and-tools/hugging-face/"
 draft: false
 
 categories:
@@ -43,4 +43,4 @@ mermaid: false
 
 ---
 
-[← Constraining outputs and inputs](/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/) · [AI Engineer Roadmap](/ai-engineer/) · [Closed vs Open Source Models →](/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/)
+[← Hugging Face](/ai-engineer/09-frameworks-and-tools/hugging-face/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Hub →](/ai-engineer/09-frameworks-and-tools/hugging-face-hub/)

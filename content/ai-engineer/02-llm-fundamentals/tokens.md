@@ -4,7 +4,7 @@ description: "Tokens are fundamental units of text that LLMs process, created by
 summary: "Tokens là các đơn vị văn bản cơ bản mà LLMs xử lý, được tạo ra bằng cách chia văn bản thành các thành phần nhỏ hơn như từ, từ con hoặc ký tự."
 slug: "tokens"
 date: 2026-08-01
-weight: 16
+weight: 13
 next: "/ai-engineer/02-llm-fundamentals/context/"
 prev: "/ai-engineer/02-llm-fundamentals/pre-trained-models/"
 draft: false

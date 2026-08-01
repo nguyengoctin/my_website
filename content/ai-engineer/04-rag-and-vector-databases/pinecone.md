@@ -4,7 +4,7 @@ description: "Pinecone is a managed vector database designed for efficient simil
 summary: "Pinecone là một cơ sở dữ liệu vector được quản lý, được thiết kế để tìm kiếm tương đồng hiệu quả và truy xuất dữ liệu đa chiều theo thời gian thực, chẳng hạn như các embedding."
 slug: "pinecone"
 date: 2026-08-01
-weight: 63
+weight: 55
 next: "/ai-engineer/04-rag-and-vector-databases/weaviate/"
 prev: "/ai-engineer/04-rag-and-vector-databases/chroma/"
 draft: false

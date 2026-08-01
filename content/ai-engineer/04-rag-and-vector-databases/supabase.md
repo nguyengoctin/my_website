@@ -4,7 +4,7 @@ description: "Supabase Vector is an extension of the Supabase platform, specific
 summary: "Supabase Vector là một phần mở rộng của nền tảng Supabase, được thiết kế đặc biệt cho các ứng dụng AI và học máy yêu cầu các thao tác vector."
 slug: "supabase"
 date: 2026-08-01
-weight: 68
+weight: 60
 next: "/ai-engineer/04-rag-and-vector-databases/mongodb-atlas/"
 prev: "/ai-engineer/04-rag-and-vector-databases/qdrant/"
 draft: false

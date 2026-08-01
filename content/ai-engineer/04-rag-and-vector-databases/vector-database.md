@@ -4,7 +4,7 @@ description: "When implementing Retrieval-Augmented Generation (RAG), a vector d
 summary: "Khi triển khai Retrieval-Augmented Generation (RAG), một cơ sở dữ liệu vector được sử dụng để lưu trữ và truy xuất hiệu quả các embedding, vốn là các biểu diễn vector của dữ liệu như tài liệu, hình ảnh hoặc các nguồn kiến thức khác."
 slug: "vector-database"
 date: 2026-08-01
-weight: 77
+weight: 69
 next: "/ai-engineer/04-rag-and-vector-databases/retrieval-process/"
 prev: "/ai-engineer/04-rag-and-vector-databases/embedding/"
 draft: false

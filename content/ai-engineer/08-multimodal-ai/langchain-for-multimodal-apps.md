@@ -4,6 +4,9 @@ description: "LangChain is a framework designed to build applications that integ
 summary: "LangChain là một framework được thiết kế để xây dựng các ứng dụng tích hợp nhiều mô hình AI."
 slug: "langchain-for-multimodal-apps"
 date: 2026-08-01
+weight: 108
+next: "/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/"
+prev: "/ai-engineer/08-multimodal-ai/hugging-face-models/"
 draft: false
 
 categories:
@@ -32,3 +35,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: LangChain for Multimodal Apps)
+
+---
+
+[← Hugging Face Models](/ai-engineer/08-multimodal-ai/hugging-face-models/) · [AI Engineer Roadmap](/ai-engineer/) · [LlamaIndex for Multimodal Apps →](/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/)

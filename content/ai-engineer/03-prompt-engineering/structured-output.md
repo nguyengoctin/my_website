@@ -4,6 +4,9 @@ description: "Structured output in system prompting refers to designing prompts 
 summary: "Structured output trong system prompting đề cập đến việc thiết kế các prompts hướng dẫn một Large Language Model (LLM) tạo ra các phản hồi theo một định dạng được xác định trước, chẳng hạn như JSON, XML, hoặc một cấu trúc dựa trên văn bản cụ thể."
 slug: "structured-output"
 date: 2026-08-01
+weight: 31
+next: "/ai-engineer/03-prompt-engineering/function-calling/"
+prev: "/ai-engineer/03-prompt-engineering/constraints/"
 draft: false
 
 categories:
@@ -46,3 +49,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Structured Output)
+
+---
+
+[← Constraints](/ai-engineer/03-prompt-engineering/constraints/) · [AI Engineer Roadmap](/ai-engineer/) · [Function Calling →](/ai-engineer/03-prompt-engineering/function-calling/)

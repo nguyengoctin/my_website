@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 10. Models & APIs
-
 - [Anthropic Claude](/ai-engineer/10-models-and-apis/anthropic-claude/)
 - [Google Gemini](/ai-engineer/10-models-and-apis/google-gemini/)
 - [OpenAI (GPT, o-series)](/ai-engineer/10-models-and-apis/openai-gpt-o-series/)
@@ -20,7 +18,6 @@ toc: true
 - [Cohere](/ai-engineer/10-models-and-apis/cohere/)
 - [OpenAI Response API](/ai-engineer/10-models-and-apis/openai-response-api/)
 - [Google Gemini APi](/ai-engineer/10-models-and-apis/google-gemini-api/)
-- [Cohere](/ai-engineer/10-models-and-apis/cohere/)
 - [DeepSeek](/ai-engineer/10-models-and-apis/deepseek/)
 - [Vertex AI Agent Builder](/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/)
 - [Google ADK](/ai-engineer/10-models-and-apis/google-adk/)

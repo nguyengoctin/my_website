@@ -4,7 +4,7 @@ description: "Sending end-user IDs in your requests can be a useful tool to help
 summary: "Việc gửi ID người dùng cuối trong các yêu cầu của bạn có thể là một công cụ hữu ích để giúp OpenAI giám sát và phát hiện hành vi lạm dụng."
 slug: "adding-end-user-ids-in-prompts"
 date: 2026-08-01
-weight: 37
+weight: 144
 next: "/ai-engineer/11-evaluation-safety-and-ethics/robust-prompt-engineering/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/content-moderation-apis/"
 draft: false

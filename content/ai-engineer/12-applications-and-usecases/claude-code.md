@@ -4,6 +4,9 @@ description: "Claude Code refers to the code-generation capabilities of Anthropi
 summary: "Claude Code đề cập đến khả năng tạo code của model AI Claude từ Anthropic."
 slug: "claude-code"
 date: 2026-08-01
+weight: 164
+next: "/ai-engineer/12-applications-and-usecases/gemini/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/ragas/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Claude Code)
+
+---
+
+[← RAGAS](/ai-engineer/11-evaluation-safety-and-ethics/ragas/) · [AI Engineer Roadmap](/ai-engineer/) · [Gemini →](/ai-engineer/12-applications-and-usecases/gemini/)

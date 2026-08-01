@@ -4,6 +4,9 @@ description: "OpenAI-compatible APIs are interfaces that mimic the structure and
 summary: "OpenAI-compatible APIs là các giao diện mô phỏng cấu trúc và chức năng của API OpenAI."
 slug: "openai-compatible-apis"
 date: 2026-08-01
+weight: 136
+next: "/ai-engineer/10-models-and-apis/nanobanana-api/"
+prev: "/ai-engineer/10-models-and-apis/claude-messages-api/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: OpenAI-compatible APIs)
+
+---
+
+[← Claude Messages API](/ai-engineer/10-models-and-apis/claude-messages-api/) · [AI Engineer Roadmap](/ai-engineer/) · [NanoBanana API →](/ai-engineer/10-models-and-apis/nanobanana-api/)

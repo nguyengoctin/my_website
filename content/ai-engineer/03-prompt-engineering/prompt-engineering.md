@@ -4,6 +4,9 @@ description: "Prompt engineering focuses on crafting effective instructions (pro
 summary: "Prompt engineering tập trung vào việc tạo ra các hướng dẫn hiệu quả (prompts) để gợi ra các đầu ra mong muốn từ các Large Language Models (LLMs)."
 slug: "prompt-engineering"
 date: 2026-08-01
+weight: 19
+next: "/ai-engineer/03-prompt-engineering/react/"
+prev: "/ai-engineer/02-llm-fundamentals/self-hosted-models/"
 draft: false
 
 categories:
@@ -41,3 +44,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Prompt Engineering)
+
+---
+
+[← Self-Hosted Models](/ai-engineer/02-llm-fundamentals/self-hosted-models/) · [AI Engineer Roadmap](/ai-engineer/) · [ReAct →](/ai-engineer/03-prompt-engineering/react/)

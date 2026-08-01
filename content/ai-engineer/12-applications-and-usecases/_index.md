@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 12. Applications & Use Cases
-
 - [Claude Code](/ai-engineer/12-applications-and-usecases/claude-code/)
 - [Gemini](/ai-engineer/12-applications-and-usecases/gemini/)
 - [Codex](/ai-engineer/12-applications-and-usecases/codex/)

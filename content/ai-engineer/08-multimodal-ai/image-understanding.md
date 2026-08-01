@@ -4,7 +4,7 @@ description: "Multimodal AI enhances image understanding by integrating visual d
 summary: "AI đa phương thức nâng cao khả năng hiểu hình ảnh bằng cách tích hợp dữ liệu hình ảnh với các loại thông tin khác, chẳng hạn như văn bản hoặc âm thanh."
 slug: "image-understanding"
 date: 2026-08-01
-weight: 93
+weight: 98
 next: "/ai-engineer/08-multimodal-ai/image-generation/"
 prev: "/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/"
 draft: false

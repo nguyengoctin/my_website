@@ -4,7 +4,7 @@ description: "OpenAI AgentKit is a framework designed to simplify the process of
 summary: "OpenAI AgentKit là một khung làm việc được thiết kế để đơn giản hóa quá trình tạo các tác nhân AI có thể thực hiện các tác vụ cụ thể bằng cách tận dụng các mô hình ngôn ngữ lớn (LLMs)."
 slug: "openai-agentkit-agent-sdk"
 date: 2026-08-01
-weight: 89
+weight: 83
 next: "/ai-engineer/06-ai-agents/claude-agent-sdk/"
 prev: "/ai-engineer/06-ai-agents/manual-implementation/"
 draft: false

@@ -4,9 +4,9 @@ description: "ReAct (Reason and Act) prompting enables LLMs to solve complex tas
 summary: "ReAct (Suy luận và Hành động) prompting cho phép các LLM giải quyết các tác vụ phức tạp bằng cách kết hợp suy luận với các tương tác công cụ bên ngoài."
 slug: "react"
 date: 2026-08-01
-weight: 25
+weight: 20
 next: "/ai-engineer/03-prompt-engineering/cot/"
-prev: "/ai-engineer/02-llm-fundamentals/how-llms-work/"
+prev: "/ai-engineer/03-prompt-engineering/prompt-engineering/"
 draft: false
 
 categories:
@@ -43,4 +43,4 @@ mermaid: false
 
 ---
 
-[← How LLMs Work](/ai-engineer/02-llm-fundamentals/how-llms-work/) · [AI Engineer Roadmap](/ai-engineer/) · [CoT →](/ai-engineer/03-prompt-engineering/cot/)
+[← Prompt Engineering](/ai-engineer/03-prompt-engineering/prompt-engineering/) · [AI Engineer Roadmap](/ai-engineer/) · [CoT →](/ai-engineer/03-prompt-engineering/cot/)

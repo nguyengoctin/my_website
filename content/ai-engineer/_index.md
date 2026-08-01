@@ -13,8 +13,6 @@ math: false
 mermaid: false
 ---
 
-# AI Engineer Roadmap
-
 Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 
 ## 01. Introduction
@@ -38,7 +36,6 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 - [Context](/ai-engineer/02-llm-fundamentals/context/)
 - [How LLMs Work](/ai-engineer/02-llm-fundamentals/how-llms-work/)
 - [Closed vs Open Source Models](/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/)
-- [Context](/ai-engineer/02-llm-fundamentals/context/)
 - [Type of Models](/ai-engineer/02-llm-fundamentals/type-of-models/)
 - [Self-Hosted Models](/ai-engineer/02-llm-fundamentals/self-hosted-models/)
 
@@ -52,7 +49,6 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 - [Top-P](/ai-engineer/03-prompt-engineering/top-p/)
 - [Few-Shot](/ai-engineer/03-prompt-engineering/few-shot/)
 - [Context Engineering](/ai-engineer/03-prompt-engineering/context-engineering/)
-- [Prompt Engineering](/ai-engineer/03-prompt-engineering/prompt-engineering/)
 - [Input Format](/ai-engineer/03-prompt-engineering/input-format/)
 - [System Prompting](/ai-engineer/03-prompt-engineering/system-prompting/)
 - [Role & Behavior](/ai-engineer/03-prompt-engineering/role-behavior/)
@@ -68,7 +64,6 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 - [RAG & Dynamic Filters](/ai-engineer/03-prompt-engineering/rag-dynamic-filters/)
 - [Context Compaction](/ai-engineer/03-prompt-engineering/context-compaction/)
 - [Context Isolation](/ai-engineer/03-prompt-engineering/context-isolation/)
-- [Context Engineering](/ai-engineer/03-prompt-engineering/context-engineering/)
 
 ## 04. RAG & Vector Databases
 
@@ -116,7 +111,6 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 
 - [AI Agents](/ai-engineer/06-ai-agents/ai-agents/)
 - [Tools & Function Calling](/ai-engineer/06-ai-agents/tools-function-calling/)
-- [AI Agents](/ai-engineer/06-ai-agents/ai-agents/)
 - [Agents Usecases](/ai-engineer/06-ai-agents/agents-usecases/)
 - [ReAct Prompting](/ai-engineer/06-ai-agents/react-prompting/)
 - [Manual Implementation](/ai-engineer/06-ai-agents/manual-implementation/)
@@ -177,7 +171,6 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 - [Cohere](/ai-engineer/10-models-and-apis/cohere/)
 - [OpenAI Response API](/ai-engineer/10-models-and-apis/openai-response-api/)
 - [Google Gemini APi](/ai-engineer/10-models-and-apis/google-gemini-api/)
-- [Cohere](/ai-engineer/10-models-and-apis/cohere/)
 - [DeepSeek](/ai-engineer/10-models-and-apis/deepseek/)
 - [Vertex AI Agent Builder](/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/)
 - [Google ADK](/ai-engineer/10-models-and-apis/google-adk/)

@@ -4,7 +4,7 @@ description: "Security and privacy concerns in AI revolve around the protection 
 summary: "Các mối quan tâm về bảo mật và quyền riêng tư trong AI xoay quanh việc bảo vệ dữ liệu và sử dụng các mô hình một cách có trách nhiệm."
 slug: "security-and-privacy-concerns"
 date: 2026-08-01
-weight: 34
+weight: 141
 next: "/ai-engineer/11-evaluation-safety-and-ethics/conducting-adversarial-testing/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/bias-and-fairness/"
 draft: false

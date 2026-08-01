@@ -4,6 +4,9 @@ description: "Context isolation is about keeping different tasks or areas of kno
 summary: "Context isolation là việc giữ cho các tác vụ hoặc lĩnh vực kiến thức khác nhau tách biệt khi làm việc với các large language models (LLMs)."
 slug: "context-isolation"
 date: 2026-08-01
+weight: 41
+next: "/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/"
+prev: "/ai-engineer/03-prompt-engineering/context-compaction/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Context Isolation)
+
+---
+
+[← Context Compaction](/ai-engineer/03-prompt-engineering/context-compaction/) · [AI Engineer Roadmap](/ai-engineer/) · [What are Embeddings →](/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/)

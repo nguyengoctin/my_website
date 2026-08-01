@@ -4,6 +4,9 @@ description: "The MCP Server acts as a central hub for managing and serving cont
 summary: "MCP Server đóng vai trò là một trung tâm quản lý và cung cấp thông tin ngữ cảnh cho các tác nhân AI."
 slug: "mcp-server"
 date: 2026-08-01
+weight: 88
+next: "/ai-engineer/07-model-context-protocol-mcp/mcp-client/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/mcp-host/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: MCP Server)
+
+---
+
+[← MCP Host](/ai-engineer/07-model-context-protocol-mcp/mcp-host/) · [AI Engineer Roadmap](/ai-engineer/) · [MCP Client →](/ai-engineer/07-model-context-protocol-mcp/mcp-client/)

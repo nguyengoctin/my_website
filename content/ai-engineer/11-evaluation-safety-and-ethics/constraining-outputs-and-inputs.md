@@ -4,8 +4,8 @@ description: "Constraining outputs and inputs in AI models refers to implementin
 summary: "Việc ràng buộc đầu ra và đầu vào trong các mô hình AI đề cập đến việc thực hiện các giới hạn hoặc quy tắc hướng dẫn cả dữ liệu mà mô hình xử lý (đầu vào) và kết quả mà nó tạo ra (đầu ra)."
 slug: "constraining-outputs-and-inputs"
 date: 2026-08-01
-weight: 40
-next: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
+weight: 147
+next: "/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases/"
 draft: false
 
@@ -55,4 +55,4 @@ mermaid: false
 
 ---
 
-[← Know your Customers / Usecases](/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases/) · [AI Engineer Roadmap](/ai-engineer/) · [LM Studio →](/ai-engineer/09-frameworks-and-tools/lm-studio/)
+[← Know your Customers / Usecases](/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases/) · [AI Engineer Roadmap](/ai-engineer/) · [LLM Observability →](/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/)

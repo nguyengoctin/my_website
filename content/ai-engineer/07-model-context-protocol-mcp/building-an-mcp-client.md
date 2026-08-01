@@ -4,6 +4,9 @@ description: "Building an MCP (Model Context Protocol) client involves creating 
 summary: "Việc xây dựng một MCP client bao gồm việc tạo phần mềm có thể tương tác với các mô hình AI bằng giao thức chuẩn."
 slug: "building-an-mcp-client"
 date: 2026-08-01
+weight: 93
+next: "/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-server/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Building an MCP Client)
+
+---
+
+[← Building an MCP Server](/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-server/) · [AI Engineer Roadmap](/ai-engineer/) · [Connect to Local Server →](/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/)

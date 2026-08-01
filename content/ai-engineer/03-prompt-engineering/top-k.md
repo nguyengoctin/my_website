@@ -4,7 +4,7 @@ description: "Top-K sampling is a method used by Large Language Models (LLMs) du
 summary: "Top-K sampling là một phương pháp được các mô hình ngôn ngữ lớn (LLMs) sử dụng trong quá trình tạo văn bản để chọn từ tiếp theo."
 slug: "top-k"
 date: 2026-08-01
-weight: 28
+weight: 23
 next: "/ai-engineer/03-prompt-engineering/top-p/"
 prev: "/ai-engineer/03-prompt-engineering/zero-shot/"
 draft: false

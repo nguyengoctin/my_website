@@ -4,9 +4,9 @@ description: "In AI engineering, \"agents\" refer to autonomous systems or compo
 summary: "Trong kỹ thuật AI, \"tác nhân\" đề cập đến các hệ thống hoặc thành phần tự trị có thể nhận thức môi trường của chúng, đưa ra quyết định và thực hiện hành động để đạt được các mục tiêu cụ thể."
 slug: "ai-agents"
 date: 2026-08-01
-weight: 85
-next: "/ai-engineer/06-ai-agents/agents-usecases/"
-prev: "/ai-engineer/10-models-and-apis/deepseek/"
+weight: 78
+next: "/ai-engineer/06-ai-agents/tools-function-calling/"
+prev: "/ai-engineer/05-fine-tuning/fine-tuning/"
 draft: false
 
 categories:
@@ -53,4 +53,4 @@ mermaid: false
 
 ---
 
-[← DeepSeek](/ai-engineer/10-models-and-apis/deepseek/) · [AI Engineer Roadmap](/ai-engineer/) · [Agents Usecases →](/ai-engineer/06-ai-agents/agents-usecases/)
+[← Fine-tuning](/ai-engineer/05-fine-tuning/fine-tuning/) · [AI Engineer Roadmap](/ai-engineer/) · [Tools & Function Calling →](/ai-engineer/06-ai-agents/tools-function-calling/)

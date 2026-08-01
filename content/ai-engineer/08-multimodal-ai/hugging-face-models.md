@@ -4,6 +4,9 @@ description: "Hugging Face models are a collection of pre-trained machine learni
 summary: "Các mô hình Hugging Face là một bộ sưu tập các mô hình ML được huấn luyện trước có sẵn thông qua nền tảng Hugging Face."
 slug: "hugging-face-models"
 date: 2026-08-01
+weight: 107
+next: "/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/"
+prev: "/ai-engineer/08-multimodal-ai/whisper-api/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Hugging Face Models)
+
+---
+
+[← Whisper API](/ai-engineer/08-multimodal-ai/whisper-api/) · [AI Engineer Roadmap](/ai-engineer/) · [LangChain for Multimodal Apps →](/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/)

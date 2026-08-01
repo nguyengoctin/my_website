@@ -4,6 +4,8 @@ description: "Replit is an online integrated development environment (IDE) that 
 summary: "Replit là một môi trường phát triển tích hợp (IDE) trực tuyến cho phép người dùng viết và chạy code bằng nhiều ngôn ngữ lập trình khác nhau ngay trong trình duyệt web."
 slug: "replit"
 date: 2026-08-01
+weight: 169
+prev: "/ai-engineer/12-applications-and-usecases/cursor/"
 draft: false
 
 categories:
@@ -37,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Replit)
+
+---
+
+[← Cursor](/ai-engineer/12-applications-and-usecases/cursor/) · [AI Engineer Roadmap](/ai-engineer/)

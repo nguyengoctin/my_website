@@ -4,7 +4,7 @@ description: "In artificial intelligence (AI), inference refers to the process b
 summary: "Trong trí tuệ nhân tạo (AI), inference đề cập đến quá trình mà một mô hình ML đã được huấn luyện đưa ra dự đoán hoặc kết luận từ dữ liệu mới, chưa từng thấy."
 slug: "inference"
 date: 2026-08-01
-weight: 6
+weight: 7
 next: "/ai-engineer/02-llm-fundamentals/training/"
 prev: "/ai-engineer/02-llm-fundamentals/large-language-model-llm/"
 draft: false

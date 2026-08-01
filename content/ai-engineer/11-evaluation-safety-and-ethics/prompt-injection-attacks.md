@@ -4,7 +4,7 @@ description: "Prompt injection attacks are a type of security vulnerability wher
 summary: "Tấn công Prompt Injection là một loại lỗ hổng bảo mật trong đó các đầu vào độc hại được tạo ra để thao túng hoặc khai thác các mô hình AI, như các mô hình ngôn ngữ, nhằm tạo ra các đầu ra không mong muốn hoặc có hại."
 slug: "prompt-injection-attacks"
 date: 2026-08-01
-weight: 32
+weight: 139
 next: "/ai-engineer/11-evaluation-safety-and-ethics/bias-and-fairness/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/"
 draft: false

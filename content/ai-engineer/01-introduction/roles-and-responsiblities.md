@@ -4,8 +4,8 @@ description: "AI Engineers are responsible for designing, developing, and deploy
 summary: "Các AI Engineer chịu trách nhiệm thiết kế, phát triển và triển khai các hệ thống AI giải quyết các vấn đề thực tế."
 slug: "roles-and-responsiblities"
 date: 2026-08-01
-weight: 14
-next: "/ai-engineer/02-llm-fundamentals/pre-trained-models/"
+weight: 5
+next: "/ai-engineer/02-llm-fundamentals/large-language-model-llm/"
 prev: "/ai-engineer/01-introduction/impact-on-product-development/"
 draft: false
 
@@ -61,4 +61,4 @@ mermaid: false
 
 ---
 
-[← Impact on Product Development](/ai-engineer/01-introduction/impact-on-product-development/) · [AI Engineer Roadmap](/ai-engineer/) · [Pre-trained Models →](/ai-engineer/02-llm-fundamentals/pre-trained-models/)
+[← Impact on Product Development](/ai-engineer/01-introduction/impact-on-product-development/) · [AI Engineer Roadmap](/ai-engineer/) · [Large Language Model (LLM) →](/ai-engineer/02-llm-fundamentals/large-language-model-llm/)

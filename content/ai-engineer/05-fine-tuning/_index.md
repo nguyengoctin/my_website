@@ -10,6 +10,4 @@ categories:
 toc: true
 ---
 
-# 05. Fine-Tuning
-
 - [Fine-tuning](/ai-engineer/05-fine-tuning/fine-tuning/)

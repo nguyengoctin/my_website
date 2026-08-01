@@ -4,6 +4,9 @@ description: "Tracing records the full lifecycle of a request through your AI sy
 summary: "Tracing ghi lại toàn bộ vòng đời của một yêu cầu thông qua hệ thống AI của bạn, từ đầu vào ban đầu của người dùng qua bất kỳ cuộc gọi LLM trung gian, việc sử dụng công cụ hoặc các bước truy xuất, cho đến phản hồi cuối cùng."
 slug: "tracing-logging"
 date: 2026-08-01
+weight: 150
+next: "/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Tracing & logging)
+
+---
+
+[← LLM Evaluations](/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/) · [AI Engineer Roadmap](/ai-engineer/) · [Cost/latency monitoring →](/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/)

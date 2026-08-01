@@ -4,6 +4,9 @@ description: "Prompt caching is a technique that stores the results of previous 
 summary: "Prompt caching là một kỹ thuật lưu trữ kết quả của các LLM prompts trước đó, cho phép bạn truy xuất và tái sử dụng chúng một cách nhanh chóng thay vì chạy lại prompt mỗi lần."
 slug: "prompt-caching"
 date: 2026-08-01
+weight: 33
+next: "/ai-engineer/03-prompt-engineering/streaming-responses/"
+prev: "/ai-engineer/03-prompt-engineering/function-calling/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Prompt Caching)
+
+---
+
+[← Function Calling](/ai-engineer/03-prompt-engineering/function-calling/) · [AI Engineer Roadmap](/ai-engineer/) · [Streaming Responses →](/ai-engineer/03-prompt-engineering/streaming-responses/)

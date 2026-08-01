@@ -4,6 +4,9 @@ description: "Vertex AI is Google Cloud's fully-managed, unified development pla
 summary: "Vertex AI là nền tảng phát triển hợp nhất, được quản lý hoàn toàn của Google Cloud."
 slug: "vertex-ai-agent-builder"
 date: 2026-08-01
+weight: 129
+next: "/ai-engineer/10-models-and-apis/google-adk/"
+prev: "/ai-engineer/10-models-and-apis/deepseek/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Vertex AI Agent Builder)
+
+---
+
+[← DeepSeek](/ai-engineer/10-models-and-apis/deepseek/) · [AI Engineer Roadmap](/ai-engineer/) · [Google ADK →](/ai-engineer/10-models-and-apis/google-adk/)

@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 09. Frameworks & Tools
-
 - [Hugging Face](/ai-engineer/09-frameworks-and-tools/hugging-face/)
 - [LM Studio](/ai-engineer/09-frameworks-and-tools/lm-studio/)
 - [Hugging Face Hub](/ai-engineer/09-frameworks-and-tools/hugging-face-hub/)

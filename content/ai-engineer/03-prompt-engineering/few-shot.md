@@ -4,8 +4,8 @@ description: "Few-shot prompting is a technique used with large language models 
 summary: "Few-shot prompting là một kỹ thuật được sử dụng với các mô hình ngôn ngữ lớn (LLMs) trong đó bạn cung cấp một số lượng nhỏ các cặp ví dụ đầu vào-đầu ra ngay trong prompt."
 slug: "few-shot"
 date: 2026-08-01
-weight: 30
-next: "/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/"
+weight: 25
+next: "/ai-engineer/03-prompt-engineering/context-engineering/"
 prev: "/ai-engineer/03-prompt-engineering/top-p/"
 draft: false
 
@@ -47,4 +47,4 @@ mermaid: false
 
 ---
 
-[← Top-P](/ai-engineer/03-prompt-engineering/top-p/) · [AI Engineer Roadmap](/ai-engineer/) · [AI Safety and Ethics →](/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/)
+[← Top-P](/ai-engineer/03-prompt-engineering/top-p/) · [AI Engineer Roadmap](/ai-engineer/) · [Context Engineering →](/ai-engineer/03-prompt-engineering/context-engineering/)

@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 11. Evaluation, Safety & Ethics
-
 - [AI Safety and Ethics](/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/)
 - [Prompt Injection Attacks](/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/)
 - [Bias and Fairness](/ai-engineer/11-evaluation-safety-and-ethics/bias-and-fairness/)

@@ -4,9 +4,9 @@ description: "AI engineering transforms product development by automating tasks,
 summary: "Kỹ thuật AI chuyển đổi quá trình phát triển sản phẩm bằng cách tự động hóa các tác vụ, tăng cường ra quyết định dựa trên dữ liệu và cho phép tạo ra các sản phẩm thông minh hơn, cá nhân hóa hơn."
 slug: "impact-on-product-development"
 date: 2026-08-01
-weight: 13
+weight: 4
 next: "/ai-engineer/01-introduction/roles-and-responsiblities/"
-prev: "/ai-engineer/02-llm-fundamentals/ai-vs-agi/"
+prev: "/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/"
 draft: false
 
 categories:
@@ -49,4 +49,4 @@ mermaid: false
 
 ---
 
-[← AI vs AGI](/ai-engineer/02-llm-fundamentals/ai-vs-agi/) · [AI Engineer Roadmap](/ai-engineer/) · [Roles and Responsiblities →](/ai-engineer/01-introduction/roles-and-responsiblities/)
+[← AI Engineer vs ML Engineer](/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/) · [AI Engineer Roadmap](/ai-engineer/) · [Roles and Responsiblities →](/ai-engineer/01-introduction/roles-and-responsiblities/)

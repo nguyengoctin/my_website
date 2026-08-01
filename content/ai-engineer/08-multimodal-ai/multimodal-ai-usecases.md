@@ -4,7 +4,7 @@ description: "Multimodal AI powers applications like visual question answering, 
 summary: "AI đa phương thức cung cấp năng lượng cho các ứng dụng như trả lời câu hỏi bằng hình ảnh, kiểm duyệt nội dung và các công cụ tìm kiếm nâng cao."
 slug: "multimodal-ai-usecases"
 date: 2026-08-01
-weight: 92
+weight: 97
 next: "/ai-engineer/08-multimodal-ai/image-understanding/"
 prev: "/ai-engineer/08-multimodal-ai/multimodal-ai/"
 draft: false

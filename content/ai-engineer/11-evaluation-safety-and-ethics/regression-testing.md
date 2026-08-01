@@ -4,6 +4,9 @@ description: "Regression testing for AI systems means verifying that a change to
 summary: "Kiểm thử hồi quy cho các hệ thống AI có nghĩa là xác minh rằng một thay đổi đối với prompt, phiên bản mô hình, chiến lược truy xuất hoặc bất kỳ thành phần nào khác không làm giảm hiệu suất trên các trường hợp trước đây đã hoạt động chính xác."
 slug: "regression-testing"
 date: 2026-08-01
+weight: 161
+next: "/ai-engineer/11-evaluation-safety-and-ethics/deepeval/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Regression Testing)
+
+---
+
+[← Evaluation Metrics](/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/) · [AI Engineer Roadmap](/ai-engineer/) · [DeepEval →](/ai-engineer/11-evaluation-safety-and-ethics/deepeval/)

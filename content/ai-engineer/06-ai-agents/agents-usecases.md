@@ -4,9 +4,9 @@ description: "AI Agents have a variety of use cases ranging from customer suppor
 summary: "Các tác nhân AI có nhiều trường hợp sử dụng khác nhau, từ hỗ trợ khách hàng, tự động hóa quy trình làm việc, an ninh mạng, tài chính, tiếp thị, bán hàng và hơn thế nữa."
 slug: "agents-usecases"
 date: 2026-08-01
-weight: 86
+weight: 80
 next: "/ai-engineer/06-ai-agents/react-prompting/"
-prev: "/ai-engineer/06-ai-agents/ai-agents/"
+prev: "/ai-engineer/06-ai-agents/tools-function-calling/"
 draft: false
 
 categories:
@@ -41,4 +41,4 @@ mermaid: false
 
 ---
 
-[← AI Agents](/ai-engineer/06-ai-agents/ai-agents/) · [AI Engineer Roadmap](/ai-engineer/) · [ReAct Prompting →](/ai-engineer/06-ai-agents/react-prompting/)
+[← Tools & Function Calling](/ai-engineer/06-ai-agents/tools-function-calling/) · [AI Engineer Roadmap](/ai-engineer/) · [ReAct Prompting →](/ai-engineer/06-ai-agents/react-prompting/)

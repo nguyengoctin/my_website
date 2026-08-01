@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate Hugo section index files (_index.md) for the AI Engineer Roadmap.
-MINIMALIST VERSION: No emojis, no decorative symbols, clean text hierarchy.
+Sequenced by Chapter 01 to 12. Clean header (no duplicate H1 in markdown body).
 """
 
 import json
@@ -12,7 +12,7 @@ PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 DATA_FILE = os.path.join(PROJECT_DIR, ".roadmap-data", "all_nodes.json")
 CONTENT_DIR = os.path.join(PROJECT_DIR, "content", "ai-engineer")
 
-CATEGORY_TITLES = {
+CHAPTER_TITLES = {
     "01-introduction": "01. Introduction",
     "02-llm-fundamentals": "02. LLM Fundamentals",
     "03-prompt-engineering": "03. Prompt Engineering",
@@ -35,26 +35,23 @@ def main():
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
         nodes = json.load(f)
 
-    categories = {cat: [] for cat in sorted(CATEGORY_TITLES.keys())}
+    categories = {cat: [] for cat in CHAPTER_TITLES.keys()}
 
-    for node in nodes:
-        cat = node.get('category', '01-introduction')
-        if cat not in categories:
-            categories[cat] = []
-        
-        slug = node.get('slug', '')
-        file_path = os.path.join(CONTENT_DIR, cat, f"{slug}.md")
-        rel_link = f"/ai-engineer/{cat}/{slug}/"
-        
-        categories[cat].append({
-            'label': node.get('label', ''),
-            'type': node.get('type', ''),
-            'slug': slug,
-            'link': rel_link,
-            'exists': os.path.exists(file_path)
-        })
+    seen_paths = set()
+    for cat in CHAPTER_TITLES.keys():
+        cat_nodes = [n for n in nodes if n.get('category') == cat]
+        for node in cat_nodes:
+            slug = node.get('slug', '')
+            file_path = os.path.join(CONTENT_DIR, cat, f"{slug}.md")
+            if os.path.exists(file_path) and file_path not in seen_paths:
+                seen_paths.add(file_path)
+                categories[cat].append({
+                    'label': node.get('label', ''),
+                    'slug': slug,
+                    'link': f"/ai-engineer/{cat}/{slug}/"
+                })
 
-    # Build master _index.md content - Minimalist
+    # Master Index - Note: No H1 header in body because Hugo layout renders .Title in page header
     master_index_content = """---
 title: "AI Engineer Roadmap"
 description: "Lộ trình học tập AI Engineer năm 2026 với 174 bài học được phân đoạn song ngữ Anh - Việt."
@@ -70,13 +67,11 @@ math: false
 mermaid: false
 ---
 
-# AI Engineer Roadmap
-
 Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
 
 """
 
-    for cat_slug, cat_title in CATEGORY_TITLES.items():
+    for cat_slug, cat_title in CHAPTER_TITLES.items():
         cat_nodes = categories.get(cat_slug, [])
         if not cat_nodes:
             continue
@@ -89,10 +84,10 @@ Lộ trình học tập AI Engineer được phân chia theo 12 chuyên mục:
     master_index_path = os.path.join(CONTENT_DIR, "_index.md")
     with open(master_index_path, 'w', encoding='utf-8') as f:
         f.write(master_index_content)
-    print("Updated Master Index (Minimalist format).")
+    print("Updated Master Index (No duplicate H1 header).")
 
     # Category-level _index.md
-    for cat_slug, cat_title in CATEGORY_TITLES.items():
+    for cat_slug, cat_title in CHAPTER_TITLES.items():
         cat_nodes = categories.get(cat_slug, [])
         cat_dir = os.path.join(CONTENT_DIR, cat_slug)
         os.makedirs(cat_dir, exist_ok=True)
@@ -109,8 +104,6 @@ categories:
 
 toc: true
 ---
-
-# {cat_title}
 
 """
         for item in cat_nodes:

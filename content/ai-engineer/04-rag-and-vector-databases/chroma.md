@@ -4,7 +4,7 @@ description: "Chroma is an open-source vector database and AI-native embedding d
 summary: "Chroma là một cơ sở dữ liệu vector mã nguồn mở và cơ sở dữ liệu embedding AI-native được thiết kế để xử lý và lưu trữ các embedding quy mô lớn và vector ngữ nghĩa."
 slug: "chroma"
 date: 2026-08-01
-weight: 62
+weight: 54
 next: "/ai-engineer/04-rag-and-vector-databases/pinecone/"
 prev: "/ai-engineer/04-rag-and-vector-databases/purpose-and-functionality/"
 draft: false

@@ -4,7 +4,7 @@ description: "Zero-shot prompting is a prompt engineering method that relies on 
 summary: "Zero-shot prompting là một phương pháp kỹ thuật prompt dựa vào quá trình tiền huấn luyện của một mô hình ngôn ngữ lớn (LLM) để suy luận ra phản hồi phù hợp."
 slug: "zero-shot"
 date: 2026-08-01
-weight: 27
+weight: 22
 next: "/ai-engineer/03-prompt-engineering/top-k/"
 prev: "/ai-engineer/03-prompt-engineering/cot/"
 draft: false

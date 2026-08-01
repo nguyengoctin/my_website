@@ -4,6 +4,9 @@ description: "Contextual prompting provides specific background information or s
 summary: "Contextual prompting cung cấp thông tin nền tảng cụ thể hoặc các chi tiết tình huống liên quan đến tác vụ hiện tại, giúp các LLM hiểu các sắc thái và điều chỉnh phản hồi cho phù hợp."
 slug: "context"
 date: 2026-08-01
+weight: 14
+next: "/ai-engineer/02-llm-fundamentals/how-llms-work/"
+prev: "/ai-engineer/02-llm-fundamentals/tokens/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Context)
+
+---
+
+[← Tokens](/ai-engineer/02-llm-fundamentals/tokens/) · [AI Engineer Roadmap](/ai-engineer/) · [How LLMs Work →](/ai-engineer/02-llm-fundamentals/how-llms-work/)

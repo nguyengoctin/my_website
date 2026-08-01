@@ -4,6 +4,9 @@ description: "The MCP Client is a software component that allows AI agents to in
 summary: "MCP Client là một thành phần phần mềm cho phép các tác nhân AI tương tác với một máy chủ MCP."
 slug: "mcp-client"
 date: 2026-08-01
+weight: 89
+next: "/ai-engineer/07-model-context-protocol-mcp/data-layer/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/mcp-server/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: MCP Client)
+
+---
+
+[← MCP Server](/ai-engineer/07-model-context-protocol-mcp/mcp-server/) · [AI Engineer Roadmap](/ai-engineer/) · [Data Layer →](/ai-engineer/07-model-context-protocol-mcp/data-layer/)

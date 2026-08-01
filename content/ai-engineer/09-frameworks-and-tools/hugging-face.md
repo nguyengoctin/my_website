@@ -4,8 +4,9 @@ description: "Hugging Face is a leading AI company and open-source platform that
 summary: "Hugging Face là một công ty AI hàng đầu và nền tảng mã nguồn mở cung cấp các công cụ, mô hình và thư viện cho NLP, thị giác máy tính và các tác vụ ML khác."
 slug: "hugging-face"
 date: 2026-08-01
-weight: 1
-next: "/ai-engineer/01-introduction/introduction/"
+weight: 110
+prev: "/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/"
+next: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
 draft: false
 
 categories:
@@ -53,4 +54,4 @@ mermaid: false
 
 ---
 
-[AI Engineer Roadmap](/ai-engineer/) · [Introduction →](/ai-engineer/01-introduction/introduction/)
+[← LlamaIndex for Multimodal Apps](/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/) · [AI Engineer Roadmap](/ai-engineer/) · [LM Studio →](/ai-engineer/09-frameworks-and-tools/lm-studio/)

@@ -4,7 +4,7 @@ description: "Manually implementing AI agents involves crafting their logic and 
 summary: "Việc triển khai thủ công các tác nhân AI bao gồm việc xây dựng logic và hành vi của chúng từ đầu, mà không phụ thuộc nhiều vào các khung làm việc được xây dựng sẵn hoặc các công cụ tự động."
 slug: "manual-implementation"
 date: 2026-08-01
-weight: 88
+weight: 82
 next: "/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/"
 prev: "/ai-engineer/06-ai-agents/react-prompting/"
 draft: false

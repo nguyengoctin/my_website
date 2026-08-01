@@ -4,7 +4,7 @@ description: "Vector databases are specialized systems designed to store, index,
 summary: "Vector databases là các hệ thống chuyên dụng được thiết kế để lưu trữ, lập chỉ mục và truy xuất các vector đa chiều, thường được sử dụng làm các embedding đại diện cho dữ liệu như văn bản, hình ảnh hoặc âm thanh."
 slug: "vector-dbs"
 date: 2026-08-01
-weight: 8
+weight: 9
 next: "/ai-engineer/02-llm-fundamentals/rags/"
 prev: "/ai-engineer/02-llm-fundamentals/training/"
 draft: false

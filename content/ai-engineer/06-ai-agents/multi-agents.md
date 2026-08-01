@@ -4,6 +4,9 @@ description: "Multi-agent systems involve the coordinated behavior of multiple i
 summary: "Hệ thống đa tác nhân liên quan đến hành vi phối hợp của nhiều tác nhân thông minh trong một môi trường."
 slug: "multi-agents"
 date: 2026-08-01
+weight: 85
+next: "/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/"
+prev: "/ai-engineer/06-ai-agents/claude-agent-sdk/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Multi-agents)
+
+---
+
+[← Claude Agent SDK](/ai-engineer/06-ai-agents/claude-agent-sdk/) · [AI Engineer Roadmap](/ai-engineer/) · [Model Context Protocol (MCP) →](/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/)

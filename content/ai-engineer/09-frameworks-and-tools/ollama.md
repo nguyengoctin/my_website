@@ -4,8 +4,8 @@ description: "Ollama is a platform that offers large language models (LLMs) desi
 summary: "Ollama là một nền tảng cung cấp các LLM được thiết kế để chạy cục bộ trên các thiết bị cá nhân, cho phép chức năng AI mà không cần dựa vào các dịch vụ đám mây."
 slug: "ollama"
 date: 2026-08-01
-weight: 46
-next: "/ai-engineer/10-models-and-apis/openai-response-api/"
+weight: 115
+next: "/ai-engineer/09-frameworks-and-tools/development-tools/"
 prev: "/ai-engineer/09-frameworks-and-tools/transformersjs/"
 draft: false
 
@@ -45,4 +45,4 @@ mermaid: false
 
 ---
 
-[← Transformers.js](/ai-engineer/09-frameworks-and-tools/transformersjs/) · [AI Engineer Roadmap](/ai-engineer/) · [OpenAI Response API →](/ai-engineer/10-models-and-apis/openai-response-api/)
+[← Transformers.js](/ai-engineer/09-frameworks-and-tools/transformersjs/) · [AI Engineer Roadmap](/ai-engineer/) · [Development Tools →](/ai-engineer/09-frameworks-and-tools/development-tools/)

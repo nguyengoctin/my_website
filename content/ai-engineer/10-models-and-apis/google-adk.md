@@ -4,6 +4,9 @@ description: "The Google Agent Development Kit (ADK) is a framework designed to 
 summary: "Google Agent Development Kit (ADK) là một framework được thiết kế để giúp các nhà phát triển xây dựng, kiểm thử và triển khai các tác nhân AI."
 slug: "google-adk"
 date: 2026-08-01
+weight: 130
+next: "/ai-engineer/10-models-and-apis/choosing-the-right-model/"
+prev: "/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Google ADK)
+
+---
+
+[← Vertex AI Agent Builder](/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/) · [AI Engineer Roadmap](/ai-engineer/) · [Choosing the Right Model →](/ai-engineer/10-models-and-apis/choosing-the-right-model/)

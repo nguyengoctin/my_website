@@ -4,6 +4,9 @@ description: "The MCP Host is a central component within the Model Context Proto
 summary: "MCP Host là một thành phần trung tâm trong framework Model Context Protocol (MCP)."
 slug: "mcp-host"
 date: 2026-08-01
+weight: 87
+next: "/ai-engineer/07-model-context-protocol-mcp/mcp-server/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/"
 draft: false
 
 categories:
@@ -34,3 +37,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: MCP Host)
+
+---
+
+[← Model Context Protocol (MCP)](/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/) · [AI Engineer Roadmap](/ai-engineer/) · [MCP Server →](/ai-engineer/07-model-context-protocol-mcp/mcp-server/)

@@ -4,7 +4,7 @@ description: "Meta Llama is a family of large language models (LLMs) developed b
 summary: "Meta Llama là một dòng các mô hình ngôn ngữ lớn (LLMs) được phát triển bởi Meta AI."
 slug: "meta-llama"
 date: 2026-08-01
-weight: 21
+weight: 123
 next: "/ai-engineer/10-models-and-apis/mistral/"
 prev: "/ai-engineer/10-models-and-apis/openai-gpt-o-series/"
 draft: false

@@ -4,6 +4,9 @@ description: "The Whisper API by OpenAI enables developers to integrate speech-t
 summary: "Whisper API của OpenAI cho phép các nhà phát triển tích hợp khả năng chuyển đổi giọng nói thành văn bản vào ứng dụng."
 slug: "whisper-api"
 date: 2026-08-01
+weight: 106
+next: "/ai-engineer/08-multimodal-ai/hugging-face-models/"
+prev: "/ai-engineer/08-multimodal-ai/dall-e-api/"
 draft: false
 
 categories:
@@ -38,3 +41,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Whisper API)
+
+---
+
+[← DALL-E API](/ai-engineer/08-multimodal-ai/dall-e-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Models →](/ai-engineer/08-multimodal-ai/hugging-face-models/)

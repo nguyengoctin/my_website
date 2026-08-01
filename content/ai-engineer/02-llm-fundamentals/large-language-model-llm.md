@@ -4,9 +4,9 @@ description: "LLMs, or Large Language Models, are advanced AI models trained on 
 summary: "LLMs, hay Large Language Models, là các mô hình AI tiên tiến được huấn luyện trên các tập dữ liệu khổng lồ để hiểu và tạo ra văn bản giống con người."
 slug: "large-language-model-llm"
 date: 2026-08-01
-weight: 5
+weight: 6
 next: "/ai-engineer/02-llm-fundamentals/inference/"
-prev: "/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/"
+prev: "/ai-engineer/01-introduction/roles-and-responsiblities/"
 draft: false
 
 categories:
@@ -59,4 +59,4 @@ mermaid: false
 
 ---
 
-[← AI Engineer vs ML Engineer](/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/) · [AI Engineer Roadmap](/ai-engineer/) · [Inference →](/ai-engineer/02-llm-fundamentals/inference/)
+[← Roles and Responsiblities](/ai-engineer/01-introduction/roles-and-responsiblities/) · [AI Engineer Roadmap](/ai-engineer/) · [Inference →](/ai-engineer/02-llm-fundamentals/inference/)

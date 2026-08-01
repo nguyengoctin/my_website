@@ -4,6 +4,9 @@ description: "Constraining system prompts involves explicitly defining boundarie
 summary: "Việc ràng buộc các system prompts liên quan đến việc xác định rõ ràng các ranh giới và giới hạn trong các hướng dẫn được đưa ra cho một large language model (LLM)."
 slug: "constraints"
 date: 2026-08-01
+weight: 30
+next: "/ai-engineer/03-prompt-engineering/structured-output/"
+prev: "/ai-engineer/03-prompt-engineering/role-behavior/"
 draft: false
 
 categories:
@@ -38,3 +41,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Constraints)
+
+---
+
+[← Role & Behavior](/ai-engineer/03-prompt-engineering/role-behavior/) · [AI Engineer Roadmap](/ai-engineer/) · [Structured Output →](/ai-engineer/03-prompt-engineering/structured-output/)

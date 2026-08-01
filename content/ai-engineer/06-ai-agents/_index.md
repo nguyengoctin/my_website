@@ -10,11 +10,8 @@ categories:
 toc: true
 ---
 
-# 06. AI Agents
-
 - [AI Agents](/ai-engineer/06-ai-agents/ai-agents/)
 - [Tools & Function Calling](/ai-engineer/06-ai-agents/tools-function-calling/)
-- [AI Agents](/ai-engineer/06-ai-agents/ai-agents/)
 - [Agents Usecases](/ai-engineer/06-ai-agents/agents-usecases/)
 - [ReAct Prompting](/ai-engineer/06-ai-agents/react-prompting/)
 - [Manual Implementation](/ai-engineer/06-ai-agents/manual-implementation/)

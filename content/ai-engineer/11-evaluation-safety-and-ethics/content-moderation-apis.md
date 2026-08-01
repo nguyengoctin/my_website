@@ -4,7 +4,7 @@ description: "Content Moderation APIs are tools that automatically analyze text,
 summary: "Các API kiểm duyệt nội dung là các công cụ tự động phân tích văn bản, hình ảnh, video và âm thanh để phát hiện nội dung có khả năng gây hại hoặc không phù hợp."
 slug: "content-moderation-apis"
 date: 2026-08-01
-weight: 36
+weight: 143
 next: "/ai-engineer/11-evaluation-safety-and-ethics/adding-end-user-ids-in-prompts/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/conducting-adversarial-testing/"
 draft: false

@@ -4,6 +4,9 @@ description: "Gemini is a multimodal AI model developed by Google."
 summary: "Gemini là một model AI đa phương thức được phát triển bởi Google."
 slug: "gemini"
 date: 2026-08-01
+weight: 165
+next: "/ai-engineer/12-applications-and-usecases/codex/"
+prev: "/ai-engineer/12-applications-and-usecases/claude-code/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Gemini)
+
+---
+
+[← Claude Code](/ai-engineer/12-applications-and-usecases/claude-code/) · [AI Engineer Roadmap](/ai-engineer/) · [Codex →](/ai-engineer/12-applications-and-usecases/codex/)

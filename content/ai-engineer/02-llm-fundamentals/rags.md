@@ -4,8 +4,8 @@ description: "Retrieval-Augmented Generation (RAG) is an AI approach that combin
 summary: "Retrieval-Augmented Generation (RAG) là một phương pháp tiếp cận AI kết hợp việc truy xuất thông tin với tạo ngôn ngữ để tạo ra các đầu ra chính xác và phù hợp với ngữ cảnh hơn."
 slug: "rags"
 date: 2026-08-01
-weight: 9
-next: "/ai-engineer/03-prompt-engineering/prompt-engineering/"
+weight: 10
+next: "/ai-engineer/02-llm-fundamentals/ai-vs-agi/"
 prev: "/ai-engineer/02-llm-fundamentals/vector-dbs/"
 draft: false
 
@@ -56,4 +56,4 @@ mermaid: false
 
 ---
 
-[← Vector DBs](/ai-engineer/02-llm-fundamentals/vector-dbs/) · [AI Engineer Roadmap](/ai-engineer/) · [Prompt Engineering →](/ai-engineer/03-prompt-engineering/prompt-engineering/)
+[← Vector DBs](/ai-engineer/02-llm-fundamentals/vector-dbs/) · [AI Engineer Roadmap](/ai-engineer/) · [AI vs AGI →](/ai-engineer/02-llm-fundamentals/ai-vs-agi/)

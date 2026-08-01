@@ -4,6 +4,9 @@ description: "LlamaIndex enables multi-modal apps by linking language models (LL
 summary: "LlamaIndex hỗ trợ các ứng dụng đa phương thức bằng cách liên kết các LLM với các nguồn dữ liệu đa dạng."
 slug: "llamaindex-for-multimodal-apps"
 date: 2026-08-01
+weight: 109
+next: "/ai-engineer/09-frameworks-and-tools/hugging-face/"
+prev: "/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: LlamaIndex for Multimodal Apps)
+
+---
+
+[← LangChain for Multimodal Apps](/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face →](/ai-engineer/09-frameworks-and-tools/hugging-face/)

@@ -4,7 +4,7 @@ description: "Generation refers to the process where a generative language model
 summary: "Generation đề cập đến quy trình nơi một mô hình ngôn ngữ tạo, chẳng hạn như GPT, tạo ra một phản hồi dựa trên thông tin được truy xuất trong giai đoạn truy xuất."
 slug: "generation"
 date: 2026-08-01
-weight: 79
+weight: 71
 next: "/ai-engineer/04-rag-and-vector-databases/using-sdks-directly/"
 prev: "/ai-engineer/04-rag-and-vector-databases/retrieval-process/"
 draft: false

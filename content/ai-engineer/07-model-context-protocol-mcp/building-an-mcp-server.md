@@ -4,6 +4,9 @@ description: "An MCP (Model Context Protocol) server acts as an intermediary bet
 summary: "Một máy chủ MCP đóng vai trò là trung gian giữa các tác nhân AI và các nguồn dữ liệu hoặc công cụ khác nhau."
 slug: "building-an-mcp-server"
 date: 2026-08-01
+weight: 92
+next: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-client/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/transport-layer/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Building an MCP Server)
+
+---
+
+[← Transport Layer](/ai-engineer/07-model-context-protocol-mcp/transport-layer/) · [AI Engineer Roadmap](/ai-engineer/) · [Building an MCP Client →](/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-client/)

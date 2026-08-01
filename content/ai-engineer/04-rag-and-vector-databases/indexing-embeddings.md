@@ -4,7 +4,7 @@ description: "Embeddings are stored in a vector database by first converting dat
 summary: "Các embedding được lưu trữ trong cơ sở dữ liệu vector bằng cách trước tiên chuyển đổi dữ liệu, chẳng hạn như văn bản, hình ảnh hoặc âm thanh, thành các vector đa chiều bằng cách sử dụng các mô hình học máy."
 slug: "indexing-embeddings"
 date: 2026-08-01
-weight: 70
+weight: 62
 next: "/ai-engineer/04-rag-and-vector-databases/performing-similarity-search/"
 prev: "/ai-engineer/04-rag-and-vector-databases/mongodb-atlas/"
 draft: false

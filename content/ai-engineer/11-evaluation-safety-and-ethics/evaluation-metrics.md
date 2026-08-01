@@ -4,6 +4,9 @@ description: "Evaluation metrics are the specific measurements used to score LLM
 summary: "Các chỉ số đánh giá là các phép đo cụ thể được sử dụng để chấm điểm đầu ra của LLM dựa trên các tiêu chí chất lượng đã xác định."
 slug: "evaluation-metrics"
 date: 2026-08-01
+weight: 160
+next: "/ai-engineer/11-evaluation-safety-and-ethics/regression-testing/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/human-evals/"
 draft: false
 
 categories:
@@ -48,3 +51,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Evaluation Metrics)
+
+---
+
+[← Human Evals](/ai-engineer/11-evaluation-safety-and-ethics/human-evals/) · [AI Engineer Roadmap](/ai-engineer/) · [Regression Testing →](/ai-engineer/11-evaluation-safety-and-ethics/regression-testing/)

@@ -4,6 +4,9 @@ description: "External memory, in the context of large language models (LLMs), r
 summary: "External memory, trong ngữ cảnh của các large language models (LLMs), đề cập đến các cơ chế cho phép các model này truy cập và sử dụng thông tin được lưu trữ bên ngoài các tham số nội bộ của chúng."
 slug: "external-memory"
 date: 2026-08-01
+weight: 38
+next: "/ai-engineer/03-prompt-engineering/rag-dynamic-filters/"
+prev: "/ai-engineer/03-prompt-engineering/temperature/"
 draft: false
 
 categories:
@@ -35,3 +38,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: External Memory)
+
+---
+
+[← Temperature](/ai-engineer/03-prompt-engineering/temperature/) · [AI Engineer Roadmap](/ai-engineer/) · [RAG & Dynamic Filters →](/ai-engineer/03-prompt-engineering/rag-dynamic-filters/)

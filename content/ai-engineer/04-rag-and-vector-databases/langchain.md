@@ -4,7 +4,7 @@ description: "LangChain is a development framework that simplifies building appl
 summary: "LangChain là một khung phát triển giúp đơn giản hóa việc xây dựng các ứng dụng được hỗ trợ bởi các mô hình ngôn ngữ."
 slug: "langchain"
 date: 2026-08-01
-weight: 81
+weight: 73
 next: "/ai-engineer/04-rag-and-vector-databases/llama-index/"
 prev: "/ai-engineer/04-rag-and-vector-databases/using-sdks-directly/"
 draft: false

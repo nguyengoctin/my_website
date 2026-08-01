@@ -4,6 +4,9 @@ description: "Windsurf is a tool specifically designed to enhance code navigatio
 summary: "Windsurf là một công cụ được thiết kế đặc biệt để tăng cường khả năng điều hướng và hiểu code trong các codebase lớn."
 slug: "windsurf"
 date: 2026-08-01
+weight: 167
+next: "/ai-engineer/12-applications-and-usecases/cursor/"
+prev: "/ai-engineer/12-applications-and-usecases/codex/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Windsurf)
+
+---
+
+[← Codex](/ai-engineer/12-applications-and-usecases/codex/) · [AI Engineer Roadmap](/ai-engineer/) · [Cursor →](/ai-engineer/12-applications-and-usecases/cursor/)

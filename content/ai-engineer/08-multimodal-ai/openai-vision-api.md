@@ -4,7 +4,7 @@ description: "The OpenAI Vision API enables models to analyze and understand ima
 summary: "OpenAI Vision API cho phép các mô hình phân tích và hiểu hình ảnh, cho phép chúng xác định các đối tượng, nhận dạng văn bản và diễn giải nội dung hình ảnh."
 slug: "openai-vision-api"
 date: 2026-08-01
-weight: 99
+weight: 104
 next: "/ai-engineer/08-multimodal-ai/dall-e-api/"
 prev: "/ai-engineer/08-multimodal-ai/speech-to-text/"
 draft: false

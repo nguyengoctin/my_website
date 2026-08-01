@@ -4,6 +4,9 @@ description: "Sampling parameters are settings that control the randomness and c
 summary: "Sampling parameters là các cài đặt kiểm soát tính ngẫu nhiên và sự sáng tạo của văn bản được tạo bởi LLM."
 slug: "sampling-parameters"
 date: 2026-08-01
+weight: 36
+next: "/ai-engineer/03-prompt-engineering/temperature/"
+prev: "/ai-engineer/03-prompt-engineering/repetition-penalties/"
 draft: false
 
 categories:
@@ -32,3 +35,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Sampling Parameters)
+
+---
+
+[← Repetition Penalties](/ai-engineer/03-prompt-engineering/repetition-penalties/) · [AI Engineer Roadmap](/ai-engineer/) · [Temperature →](/ai-engineer/03-prompt-engineering/temperature/)

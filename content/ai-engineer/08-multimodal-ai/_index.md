@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 08. Multimodal AI
-
 - [Multimodal AI](/ai-engineer/08-multimodal-ai/multimodal-ai/)
 - [Multimodal AI Usecases](/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/)
 - [Image Understanding](/ai-engineer/08-multimodal-ai/image-understanding/)

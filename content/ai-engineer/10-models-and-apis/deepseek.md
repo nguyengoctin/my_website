@@ -4,9 +4,9 @@ description: "DeepSeek refers to a family of large language models (LLMs) develo
 summary: "DeepSeek đề cập đến một dòng các mô hình ngôn ngữ lớn (LLMs) được phát triển bởi DeepSeek AI."
 slug: "deepseek"
 date: 2026-08-01
-weight: 84
-next: "/ai-engineer/06-ai-agents/ai-agents/"
-prev: "/ai-engineer/06-ai-agents/tools-function-calling/"
+weight: 128
+next: "/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/"
+prev: "/ai-engineer/10-models-and-apis/google-gemini-api/"
 draft: false
 
 categories:
@@ -49,4 +49,4 @@ mermaid: false
 
 ---
 
-[← Tools & Function Calling](/ai-engineer/06-ai-agents/tools-function-calling/) · [AI Engineer Roadmap](/ai-engineer/) · [AI Agents →](/ai-engineer/06-ai-agents/ai-agents/)
+[← Google Gemini APi](/ai-engineer/10-models-and-apis/google-gemini-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Vertex AI Agent Builder →](/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/)

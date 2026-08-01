@@ -4,7 +4,7 @@ description: "Retrieval-Augmented Generation (RAG) enhances applications like ch
 summary: "Retrieval-Augmented Generation (RAG) nâng cao các ứng dụng như chatbot, hỗ trợ khách hàng và tóm tắt nội dung bằng cách kết hợp truy xuất thông tin với tạo ngôn ngữ."
 slug: "rag-usecases"
 date: 2026-08-01
-weight: 73
+weight: 65
 next: "/ai-engineer/04-rag-and-vector-databases/rag-vs-fine-tuning/"
 prev: "/ai-engineer/04-rag-and-vector-databases/what-are-rags/"
 draft: false

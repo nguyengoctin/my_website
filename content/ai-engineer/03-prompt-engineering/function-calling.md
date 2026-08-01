@@ -4,6 +4,9 @@ description: "Function calling allows Large Language Models (LLMs) to interact w
 summary: "Function calling cho phép các Large Language Models (LLMs) tương tác với các công cụ và API bên ngoài."
 slug: "function-calling"
 date: 2026-08-01
+weight: 32
+next: "/ai-engineer/03-prompt-engineering/prompt-caching/"
+prev: "/ai-engineer/03-prompt-engineering/structured-output/"
 draft: false
 
 categories:
@@ -43,3 +46,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Function Calling)
+
+---
+
+[← Structured Output](/ai-engineer/03-prompt-engineering/structured-output/) · [AI Engineer Roadmap](/ai-engineer/) · [Prompt Caching →](/ai-engineer/03-prompt-engineering/prompt-caching/)

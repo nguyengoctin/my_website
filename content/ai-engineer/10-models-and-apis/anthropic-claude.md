@@ -4,9 +4,9 @@ description: "Anthropic's Claude is an AI language model designed to facilitate 
 summary: "Anthropic's Claude là một mô hình ngôn ngữ AI được thiết kế để tạo điều kiện cho các hệ thống AI an toàn và có khả năng mở rộng."
 slug: "anthropic-claude"
 date: 2026-08-01
-weight: 18
+weight: 120
 next: "/ai-engineer/10-models-and-apis/google-gemini/"
-prev: "/ai-engineer/02-llm-fundamentals/context/"
+prev: "/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/"
 draft: false
 
 categories:
@@ -49,4 +49,4 @@ mermaid: false
 
 ---
 
-[← Context](/ai-engineer/02-llm-fundamentals/context/) · [AI Engineer Roadmap](/ai-engineer/) · [Google Gemini →](/ai-engineer/10-models-and-apis/google-gemini/)
+[← Hugging Face Tasks](/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/) · [AI Engineer Roadmap](/ai-engineer/) · [Google Gemini →](/ai-engineer/10-models-and-apis/google-gemini/)

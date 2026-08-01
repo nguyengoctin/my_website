@@ -4,6 +4,9 @@ description: "Repetition penalties discourage LLMs from repeating words or phras
 summary: "Repetition penalties ngăn cản các LLM lặp lại các từ hoặc cụm từ bằng cách giảm xác suất chọn các token đã được sử dụng trước đó."
 slug: "repetition-penalties"
 date: 2026-08-01
+weight: 35
+next: "/ai-engineer/03-prompt-engineering/sampling-parameters/"
+prev: "/ai-engineer/03-prompt-engineering/streaming-responses/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Repetition Penalties)
+
+---
+
+[← Streaming Responses](/ai-engineer/03-prompt-engineering/streaming-responses/) · [AI Engineer Roadmap](/ai-engineer/) · [Sampling Parameters →](/ai-engineer/03-prompt-engineering/sampling-parameters/)

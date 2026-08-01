@@ -4,6 +4,9 @@ description: "Model-based evals use a separate AI model to automatically score o
 summary: "Các đánh giá dựa trên mô hình sử dụng một mô hình AI riêng biệt để tự động chấm điểm hoặc đánh giá đầu ra của ứng dụng LLM của bạn."
 slug: "model-based-evals"
 date: 2026-08-01
+weight: 158
+next: "/ai-engineer/11-evaluation-safety-and-ethics/human-evals/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/deterministic-evals/"
 draft: false
 
 categories:
@@ -49,3 +52,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Model-Based Evals)
+
+---
+
+[← Deterministic Evals](/ai-engineer/11-evaluation-safety-and-ethics/deterministic-evals/) · [AI Engineer Roadmap](/ai-engineer/) · [Human Evals →](/ai-engineer/11-evaluation-safety-and-ethics/human-evals/)

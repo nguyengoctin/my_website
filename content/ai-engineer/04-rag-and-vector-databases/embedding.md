@@ -4,7 +4,7 @@ description: "In Retrieval-Augmented Generation (RAG), embeddings are essential 
 summary: "Trong Retrieval-Augmented Generation (RAG), các embedding là thiết yếu để liên kết việc truy xuất thông tin với việc tạo ngôn ngữ tự nhiên."
 slug: "embedding"
 date: 2026-08-01
-weight: 76
+weight: 68
 next: "/ai-engineer/04-rag-and-vector-databases/vector-database/"
 prev: "/ai-engineer/04-rag-and-vector-databases/chunking/"
 draft: false

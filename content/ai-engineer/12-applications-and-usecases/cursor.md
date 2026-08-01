@@ -4,6 +4,9 @@ description: "Cursor is an AI-powered code editor designed to enhance developer 
 summary: "Cursor là một trình soạn thảo code hỗ trợ bởi AI được thiết kế để tăng năng suất cho lập trình viên."
 slug: "cursor"
 date: 2026-08-01
+weight: 168
+next: "/ai-engineer/12-applications-and-usecases/replit/"
+prev: "/ai-engineer/12-applications-and-usecases/windsurf/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Cursor)
+
+---
+
+[← Windsurf](/ai-engineer/12-applications-and-usecases/windsurf/) · [AI Engineer Roadmap](/ai-engineer/) · [Replit →](/ai-engineer/12-applications-and-usecases/replit/)

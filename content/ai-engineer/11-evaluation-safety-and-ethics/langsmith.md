@@ -4,6 +4,9 @@ description: "LangSmith is an observability and evaluation platform built by the
 summary: "LangSmith là một nền tảng quan sát và đánh giá được xây dựng bởi đội ngũ LangChain, được thiết kế đặc biệt cho các ứng dụng LLM."
 slug: "langsmith"
 date: 2026-08-01
+weight: 153
+next: "/ai-engineer/11-evaluation-safety-and-ethics/langfuse/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: LangSmith)
+
+---
+
+[← Production monitoring](/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/) · [AI Engineer Roadmap](/ai-engineer/) · [Langfuse →](/ai-engineer/11-evaluation-safety-and-ethics/langfuse/)

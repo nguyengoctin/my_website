@@ -4,6 +4,9 @@ description: "The Claude Messages API provides a structured way to interact with
 summary: "Claude Messages API cung cấp một cách có cấu trúc để tương tác với mô hình Claude AI."
 slug: "claude-messages-api"
 date: 2026-08-01
+weight: 135
+next: "/ai-engineer/10-models-and-apis/openai-compatible-apis/"
+prev: "/ai-engineer/10-models-and-apis/openrouter/"
 draft: false
 
 categories:
@@ -40,3 +43,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Claude Messages API)
+
+---
+
+[← OpenRouter](/ai-engineer/10-models-and-apis/openrouter/) · [AI Engineer Roadmap](/ai-engineer/) · [OpenAI-compatible APIs →](/ai-engineer/10-models-and-apis/openai-compatible-apis/)

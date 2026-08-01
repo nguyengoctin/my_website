@@ -4,6 +4,9 @@ description: "Remote or cloud deployment places the MCP server on a cloud provid
 summary: "Triển khai từ xa hoặc trên đám mây đặt máy chủ MCP trên một nhà cung cấp đám mây thay vì máy cục bộ."
 slug: "connect-to-remote-server"
 date: 2026-08-01
+weight: 95
+next: "/ai-engineer/08-multimodal-ai/multimodal-ai/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Connect to Remote Server)
+
+---
+
+[← Connect to Local Server](/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/) · [AI Engineer Roadmap](/ai-engineer/) · [Multimodal AI →](/ai-engineer/08-multimodal-ai/multimodal-ai/)

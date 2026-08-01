@@ -4,6 +4,9 @@ description: "Gemma is a family of open-source large language models (LLMs) deve
 summary: "Gemma là một gia đình các large language models (LLMs) mã nguồn mở được phát triển bởi Google."
 slug: "gemma"
 date: 2026-08-01
+weight: 132
+next: "/ai-engineer/10-models-and-apis/qwen/"
+prev: "/ai-engineer/10-models-and-apis/choosing-the-right-model/"
 draft: false
 
 categories:
@@ -41,3 +44,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Gemma)
+
+---
+
+[← Choosing the Right Model](/ai-engineer/10-models-and-apis/choosing-the-right-model/) · [AI Engineer Roadmap](/ai-engineer/) · [Qwen →](/ai-engineer/10-models-and-apis/qwen/)

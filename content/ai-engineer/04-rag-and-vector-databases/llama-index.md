@@ -4,8 +4,8 @@ description: "LlamaIndex, formerly known as GPT Index, is a tool designed to fac
 summary: "LlamaIndex, trước đây được gọi là GPT Index, là một công cụ được thiết kế để tạo điều kiện tích hợp các mô hình ngôn ngữ lớn (LLMs) với các nguồn dữ liệu có cấu trúc và phi cấu trúc."
 slug: "llama-index"
 date: 2026-08-01
-weight: 82
-next: "/ai-engineer/06-ai-agents/tools-function-calling/"
+weight: 74
+next: "/ai-engineer/04-rag-and-vector-databases/embedding-models/"
 prev: "/ai-engineer/04-rag-and-vector-databases/langchain/"
 draft: false
 
@@ -48,4 +48,4 @@ mermaid: false
 
 ---
 
-[← Langchain](/ai-engineer/04-rag-and-vector-databases/langchain/) · [AI Engineer Roadmap](/ai-engineer/) · [Tools & Function Calling →](/ai-engineer/06-ai-agents/tools-function-calling/)
+[← Langchain](/ai-engineer/04-rag-and-vector-databases/langchain/) · [AI Engineer Roadmap](/ai-engineer/) · [Embedding Models →](/ai-engineer/04-rag-and-vector-databases/embedding-models/)

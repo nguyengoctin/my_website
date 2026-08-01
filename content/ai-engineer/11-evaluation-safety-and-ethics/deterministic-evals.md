@@ -4,6 +4,9 @@ description: "Deterministic evals use fixed, rule-based checks to score model ou
 summary: "Các đánh giá tất định sử dụng các kiểm tra dựa trên quy tắc cố định để chấm điểm đầu ra của mô hình."
 slug: "deterministic-evals"
 date: 2026-08-01
+weight: 157
+next: "/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/arize-ai/"
 draft: false
 
 categories:
@@ -42,3 +45,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Deterministic Evals)
+
+---
+
+[← Arize AI](/ai-engineer/11-evaluation-safety-and-ethics/arize-ai/) · [AI Engineer Roadmap](/ai-engineer/) · [Model-Based Evals →](/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/)

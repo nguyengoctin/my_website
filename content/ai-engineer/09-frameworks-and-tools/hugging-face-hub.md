@@ -4,9 +4,9 @@ description: "The Hugging Face Hub is a central platform where users can discove
 summary: "Hugging Face Hub là một nền tảng trung tâm nơi người dùng có thể khám phá, chia sẻ và cộng tác trên các mô hình, tập dữ liệu và bản demo đã được huấn luyện trước cho machine learning."
 slug: "hugging-face-hub"
 date: 2026-08-01
-weight: 43
+weight: 112
 next: "/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/"
-prev: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
+prev: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
 draft: false
 
 categories:
@@ -43,4 +43,4 @@ mermaid: false
 
 ---
 
-[← Closed vs Open Source Models](/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Inference SDK →](/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/)
+[← LM Studio](/ai-engineer/09-frameworks-and-tools/lm-studio/) · [AI Engineer Roadmap](/ai-engineer/) · [Hugging Face Inference SDK →](/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/)

@@ -4,7 +4,7 @@ description: "Retrieval-Augmented Generation (RAG) combines information retrieva
 summary: "Retrieval-Augmented Generation (RAG) kết hợp việc truy xuất thông tin với tạo ngôn ngữ để tạo ra các phản hồi chính xác hơn và nhận biết ngữ cảnh."
 slug: "what-are-rags"
 date: 2026-08-01
-weight: 72
+weight: 64
 next: "/ai-engineer/04-rag-and-vector-databases/rag-usecases/"
 prev: "/ai-engineer/04-rag-and-vector-databases/performing-similarity-search/"
 draft: false

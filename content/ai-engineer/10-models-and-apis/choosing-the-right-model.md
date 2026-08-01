@@ -4,6 +4,9 @@ description: "Selecting the appropriate large language model (LLM) involves cons
 summary: "Việc chọn large language model (LLM) phù hợp liên quan đến việc xem xét các yếu tố như độ phức tạp của tác vụ, ngân sách và hiệu suất mong muốn."
 slug: "choosing-the-right-model"
 date: 2026-08-01
+weight: 131
+next: "/ai-engineer/10-models-and-apis/gemma/"
+prev: "/ai-engineer/10-models-and-apis/google-adk/"
 draft: false
 
 categories:
@@ -45,3 +48,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Choosing the Right Model)
+
+---
+
+[← Google ADK](/ai-engineer/10-models-and-apis/google-adk/) · [AI Engineer Roadmap](/ai-engineer/) · [Gemma →](/ai-engineer/10-models-and-apis/gemma/)

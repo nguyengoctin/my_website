@@ -4,6 +4,9 @@ description: "Input format in prompt engineering deals with how you structure an
 summary: "Định dạng đầu vào trong prompt engineering liên quan đến cách bạn cấu trúc và trình bày prompt của mình cho một large language model (LLM)."
 slug: "input-format"
 date: 2026-08-01
+weight: 27
+next: "/ai-engineer/03-prompt-engineering/system-prompting/"
+prev: "/ai-engineer/03-prompt-engineering/context-engineering/"
 draft: false
 
 categories:
@@ -45,3 +48,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Input Format)
+
+---
+
+[← Context Engineering](/ai-engineer/03-prompt-engineering/context-engineering/) · [AI Engineer Roadmap](/ai-engineer/) · [System Prompting →](/ai-engineer/03-prompt-engineering/system-prompting/)

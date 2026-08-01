@@ -4,6 +4,9 @@ description: "Haystack is an open-source Python framework that helps you build s
 summary: "Haystack là một framework Python mã nguồn mở giúp bạn xây dựng các tác nhân tìm kiếm và trả lời câu hỏi nhanh chóng."
 slug: "haystack"
 date: 2026-08-01
+weight: 117
+next: "/ai-engineer/09-frameworks-and-tools/ragflow/"
+prev: "/ai-engineer/09-frameworks-and-tools/development-tools/"
 draft: false
 
 categories:
@@ -50,3 +53,7 @@ Langchain
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Haystack)
+
+---
+
+[← Development Tools](/ai-engineer/09-frameworks-and-tools/development-tools/) · [AI Engineer Roadmap](/ai-engineer/) · [RAGFlow →](/ai-engineer/09-frameworks-and-tools/ragflow/)

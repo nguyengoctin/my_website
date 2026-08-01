@@ -4,6 +4,9 @@ description: "Retrieval-Augmented Generation (RAG) enhances Large Language Model
 summary: "Retrieval-Augmented Generation (RAG) tăng cường các Large Language Models (LLMs) bằng cách cung cấp cho chúng thông tin liên quan, cập nhật từ các nguồn bên ngoài."
 slug: "rag-dynamic-filters"
 date: 2026-08-01
+weight: 39
+next: "/ai-engineer/03-prompt-engineering/context-compaction/"
+prev: "/ai-engineer/03-prompt-engineering/external-memory/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: RAG & Dynamic Filters)
+
+---
+
+[← External Memory](/ai-engineer/03-prompt-engineering/external-memory/) · [AI Engineer Roadmap](/ai-engineer/) · [Context Compaction →](/ai-engineer/03-prompt-engineering/context-compaction/)

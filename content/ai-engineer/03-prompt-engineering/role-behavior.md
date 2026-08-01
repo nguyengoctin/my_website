@@ -4,6 +4,9 @@ description: "System prompting involves crafting instructions that define the AI
 summary: "System prompting liên quan đến việc tạo ra các hướng dẫn xác định vai trò, tính cách và hành vi tổng thể của mô hình AI khi tương tác với người dùng."
 slug: "role-behavior"
 date: 2026-08-01
+weight: 29
+next: "/ai-engineer/03-prompt-engineering/constraints/"
+prev: "/ai-engineer/03-prompt-engineering/system-prompting/"
 draft: false
 
 categories:
@@ -44,3 +47,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Role & Behavior)
+
+---
+
+[← System Prompting](/ai-engineer/03-prompt-engineering/system-prompting/) · [AI Engineer Roadmap](/ai-engineer/) · [Constraints →](/ai-engineer/03-prompt-engineering/constraints/)

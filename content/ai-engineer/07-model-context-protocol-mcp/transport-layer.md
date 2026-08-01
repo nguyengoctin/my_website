@@ -4,6 +4,9 @@ description: "The Transport Layer in the Model Context Protocol (MCP) is respons
 summary: "Transport Layer trong MCP chịu trách nhiệm di chuyển dữ liệu một cách đáng tin cậy và hiệu quả giữa các thành phần."
 slug: "transport-layer"
 date: 2026-08-01
+weight: 91
+next: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-server/"
+prev: "/ai-engineer/07-model-context-protocol-mcp/data-layer/"
 draft: false
 
 categories:
@@ -33,3 +36,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Transport Layer)
+
+---
+
+[← Data Layer](/ai-engineer/07-model-context-protocol-mcp/data-layer/) · [AI Engineer Roadmap](/ai-engineer/) · [Building an MCP Server →](/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-server/)

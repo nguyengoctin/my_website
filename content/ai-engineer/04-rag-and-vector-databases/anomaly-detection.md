@@ -4,7 +4,7 @@ description: "Anomaly detection with embeddings works by transforming data, such
 summary: "Phát hiện bất thường với embeddings hoạt động bằng cách chuyển đổi dữ liệu, chẳng hạn như văn bản, hình ảnh hoặc dữ liệu chuỗi thời gian, thành các biểu diễn vector nắm bắt các mẫu và mối quan hệ của chúng."
 slug: "anomaly-detection"
 date: 2026-08-01
-weight: 52
+weight: 45
 next: "/ai-engineer/04-rag-and-vector-databases/data-classification/"
 prev: "/ai-engineer/04-rag-and-vector-databases/recommendation-systems/"
 draft: false

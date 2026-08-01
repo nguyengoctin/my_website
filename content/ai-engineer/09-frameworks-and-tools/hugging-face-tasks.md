@@ -4,6 +4,9 @@ description: "Hugging Face supports text classification, named entity recognitio
 summary: "Hugging Face hỗ trợ phân loại văn bản, nhận dạng thực thể có tên, trả lời câu hỏi, tóm tắt và dịch thuật."
 slug: "hugging-face-tasks"
 date: 2026-08-01
+weight: 119
+next: "/ai-engineer/10-models-and-apis/anthropic-claude/"
+prev: "/ai-engineer/09-frameworks-and-tools/ragflow/"
 draft: false
 
 categories:
@@ -37,3 +40,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Hugging Face Tasks)
+
+---
+
+[← RAGFlow](/ai-engineer/09-frameworks-and-tools/ragflow/) · [AI Engineer Roadmap](/ai-engineer/) · [Anthropic Claude →](/ai-engineer/10-models-and-apis/anthropic-claude/)

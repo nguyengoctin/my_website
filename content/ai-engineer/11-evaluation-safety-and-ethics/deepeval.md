@@ -4,6 +4,9 @@ description: "DeepEval is an open-source LLM evaluation framework that lets you 
 summary: "DeepEval là một framework đánh giá LLM mã nguồn mở cho phép bạn viết các bài kiểm tra tự động cho ứng dụng AI của mình theo cách tương tự như kiểm thử đơn vị với pytest."
 slug: "deepeval"
 date: 2026-08-01
+weight: 162
+next: "/ai-engineer/11-evaluation-safety-and-ethics/ragas/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/regression-testing/"
 draft: false
 
 categories:
@@ -49,3 +52,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: DeepEval)
+
+---
+
+[← Regression Testing](/ai-engineer/11-evaluation-safety-and-ethics/regression-testing/) · [AI Engineer Roadmap](/ai-engineer/) · [RAGAS →](/ai-engineer/11-evaluation-safety-and-ethics/ragas/)

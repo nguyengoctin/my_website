@@ -4,9 +4,9 @@ description: "The OpenAI Response API allows developers to interact with various
 summary: "OpenAI Response API cho phép các nhà phát triển tương tác với nhiều mô hình AI khác nhau do OpenAI cung cấp."
 slug: "openai-response-api"
 date: 2026-08-01
-weight: 47
+weight: 126
 next: "/ai-engineer/10-models-and-apis/google-gemini-api/"
-prev: "/ai-engineer/09-frameworks-and-tools/ollama/"
+prev: "/ai-engineer/10-models-and-apis/cohere/"
 draft: false
 
 categories:
@@ -47,4 +47,4 @@ mermaid: false
 
 ---
 
-[← Ollama](/ai-engineer/09-frameworks-and-tools/ollama/) · [AI Engineer Roadmap](/ai-engineer/) · [Google Gemini APi →](/ai-engineer/10-models-and-apis/google-gemini-api/)
+[← Cohere](/ai-engineer/10-models-and-apis/cohere/) · [AI Engineer Roadmap](/ai-engineer/) · [Google Gemini APi →](/ai-engineer/10-models-and-apis/google-gemini-api/)

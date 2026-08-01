@@ -4,9 +4,9 @@ description: "Pre-trained models are Machine Learning (ML) models that have been
 summary: "Pre-trained models là các mô hình Machine Learning (ML) đã được huấn luyện trước đó trên một tập dữ liệu lớn để giải quyết một tác vụ hoặc một tập hợp các tác vụ cụ thể."
 slug: "pre-trained-models"
 date: 2026-08-01
-weight: 15
+weight: 12
 next: "/ai-engineer/02-llm-fundamentals/tokens/"
-prev: "/ai-engineer/01-introduction/roles-and-responsiblities/"
+prev: "/ai-engineer/02-llm-fundamentals/ai-vs-agi/"
 draft: false
 
 categories:
@@ -52,4 +52,4 @@ mermaid: false
 
 ---
 
-[← Roles and Responsiblities](/ai-engineer/01-introduction/roles-and-responsiblities/) · [AI Engineer Roadmap](/ai-engineer/) · [Tokens →](/ai-engineer/02-llm-fundamentals/tokens/)
+[← AI vs AGI](/ai-engineer/02-llm-fundamentals/ai-vs-agi/) · [AI Engineer Roadmap](/ai-engineer/) · [Tokens →](/ai-engineer/02-llm-fundamentals/tokens/)

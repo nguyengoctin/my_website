@@ -4,6 +4,9 @@ description: "LLM observability is the practice of monitoring and understanding 
 summary: "LLM observability là thực hành giám sát và hiểu những gì xảy ra bên trong ứng dụng AI của bạn tại thời điểm chạy, theo dõi các thứ như prompt nào đã được gửi, phản hồi nào đã trả về, mỗi cuộc gọi mất bao lâu và bao nhiêu token đã được sử dụng."
 slug: "llm-observability"
 date: 2026-08-01
+weight: 148
+next: "/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: LLM Observability)
+
+---
+
+[← Constraining outputs and inputs](/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/) · [AI Engineer Roadmap](/ai-engineer/) · [LLM Evaluations →](/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/)

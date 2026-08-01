@@ -4,9 +4,8 @@ description: "AI Engineering is the process of designing and implementing AI sys
 summary: "AI Engineering là quá trình thiết kế và triển khai các hệ thống AI sử dụng các mô hình pre-trained và công cụ AI hiện có để giải quyết các vấn đề thực tế."
 slug: "introduction"
 date: 2026-08-01
-weight: 2
+weight: 1
 next: "/ai-engineer/01-introduction/what-is-an-ai-engineer/"
-prev: "/ai-engineer/09-frameworks-and-tools/hugging-face/"
 draft: false
 
 categories:
@@ -59,4 +58,4 @@ mermaid: false
 
 ---
 
-[← Hugging Face](/ai-engineer/09-frameworks-and-tools/hugging-face/) · [AI Engineer Roadmap](/ai-engineer/) · [What is an AI Engineer? →](/ai-engineer/01-introduction/what-is-an-ai-engineer/)
+[AI Engineer Roadmap](/ai-engineer/) · [What is an AI Engineer? →](/ai-engineer/01-introduction/what-is-an-ai-engineer/)

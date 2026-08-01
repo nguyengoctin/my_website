@@ -10,8 +10,6 @@ categories:
 toc: true
 ---
 
-# 03. Prompt Engineering
-
 - [Prompt Engineering](/ai-engineer/03-prompt-engineering/prompt-engineering/)
 - [ReAct](/ai-engineer/03-prompt-engineering/react/)
 - [CoT](/ai-engineer/03-prompt-engineering/cot/)
@@ -20,7 +18,6 @@ toc: true
 - [Top-P](/ai-engineer/03-prompt-engineering/top-p/)
 - [Few-Shot](/ai-engineer/03-prompt-engineering/few-shot/)
 - [Context Engineering](/ai-engineer/03-prompt-engineering/context-engineering/)
-- [Prompt Engineering](/ai-engineer/03-prompt-engineering/prompt-engineering/)
 - [Input Format](/ai-engineer/03-prompt-engineering/input-format/)
 - [System Prompting](/ai-engineer/03-prompt-engineering/system-prompting/)
 - [Role & Behavior](/ai-engineer/03-prompt-engineering/role-behavior/)
@@ -36,4 +33,3 @@ toc: true
 - [RAG & Dynamic Filters](/ai-engineer/03-prompt-engineering/rag-dynamic-filters/)
 - [Context Compaction](/ai-engineer/03-prompt-engineering/context-compaction/)
 - [Context Isolation](/ai-engineer/03-prompt-engineering/context-isolation/)
-- [Context Engineering](/ai-engineer/03-prompt-engineering/context-engineering/)

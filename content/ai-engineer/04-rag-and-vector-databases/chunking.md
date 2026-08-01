@@ -4,7 +4,7 @@ description: "The chunking step in Retrieval-Augmented Generation (RAG) involves
 summary: "Bước chunking trong Retrieval-Augmented Generation (RAG) bao gồm việc chia nhỏ các tài liệu hoặc nguồn dữ liệu lớn thành các phần nhỏ hơn, dễ quản lý."
 slug: "chunking"
 date: 2026-08-01
-weight: 75
+weight: 67
 next: "/ai-engineer/04-rag-and-vector-databases/embedding/"
 prev: "/ai-engineer/04-rag-and-vector-databases/rag-vs-fine-tuning/"
 draft: false

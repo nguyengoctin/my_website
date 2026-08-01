@@ -4,6 +4,9 @@ description: "Self-hosted AI models are machine learning models that are deploye
 summary: "Các mô hình AI self-hosted là các mô hình machine learning được triển khai và chạy trên cơ sở hạ tầng của riêng bạn, thay vì dựa vào dịch vụ của bên thứ ba hoặc nhà cung cấp đám mây."
 slug: "self-hosted-models"
 date: 2026-08-01
+weight: 18
+next: "/ai-engineer/03-prompt-engineering/prompt-engineering/"
+prev: "/ai-engineer/02-llm-fundamentals/type-of-models/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Self-Hosted Models)
+
+---
+
+[← Type of Models](/ai-engineer/02-llm-fundamentals/type-of-models/) · [AI Engineer Roadmap](/ai-engineer/) · [Prompt Engineering →](/ai-engineer/03-prompt-engineering/prompt-engineering/)

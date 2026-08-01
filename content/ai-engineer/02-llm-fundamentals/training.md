@@ -4,7 +4,7 @@ description: "Training refers to the process of teaching a machine learning mode
 summary: "Training đề cập đến quá trình dạy một mô hình ML nhận diện các mẫu và đưa ra dự đoán bằng cách cho nó tiếp xúc với một tập dữ liệu."
 slug: "training"
 date: 2026-08-01
-weight: 7
+weight: 8
 next: "/ai-engineer/02-llm-fundamentals/vector-dbs/"
 prev: "/ai-engineer/02-llm-fundamentals/inference/"
 draft: false

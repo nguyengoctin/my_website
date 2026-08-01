@@ -4,7 +4,7 @@ description: "Qdrant is an open-source vector database designed for efficient si
 summary: "Qdrant là một cơ sở dữ liệu vector mã nguồn mở được thiết kế để tìm kiếm tương đồng hiệu quả và truy xuất dữ liệu theo thời gian thực."
 slug: "qdrant"
 date: 2026-08-01
-weight: 67
+weight: 59
 next: "/ai-engineer/04-rag-and-vector-databases/supabase/"
 prev: "/ai-engineer/04-rag-and-vector-databases/lancedb/"
 draft: false

@@ -4,7 +4,7 @@ description: "LanceDB is a vector database designed for efficient storage, retri
 summary: "LanceDB là một cơ sở dữ liệu vector được thiết kế để lưu trữ, truy xuất và quản lý các embedding một cách hiệu quả."
 slug: "lancedb"
 date: 2026-08-01
-weight: 66
+weight: 58
 next: "/ai-engineer/04-rag-and-vector-databases/qdrant/"
 prev: "/ai-engineer/04-rag-and-vector-databases/faiss/"
 draft: false

@@ -4,8 +4,8 @@ description: "The OpenAI Embeddings API provides a straightforward way to transf
 summary: "OpenAI Embeddings API cung cấp một cách đơn giản để chuyển đổi văn bản thành các biểu diễn vector số được gọi là embeddings."
 slug: "open-ai-embeddings-api"
 date: 2026-08-01
-weight: 54
-next: "/ai-engineer/10-models-and-apis/cohere/"
+weight: 47
+next: "/ai-engineer/04-rag-and-vector-databases/gemini-embedding/"
 prev: "/ai-engineer/04-rag-and-vector-databases/data-classification/"
 draft: false
 
@@ -44,4 +44,4 @@ mermaid: false
 
 ---
 
-[← Data Classification](/ai-engineer/04-rag-and-vector-databases/data-classification/) · [AI Engineer Roadmap](/ai-engineer/) · [Cohere →](/ai-engineer/10-models-and-apis/cohere/)
+[← Data Classification](/ai-engineer/04-rag-and-vector-databases/data-classification/) · [AI Engineer Roadmap](/ai-engineer/) · [Gemini Embedding →](/ai-engineer/04-rag-and-vector-databases/gemini-embedding/)

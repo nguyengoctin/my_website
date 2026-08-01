@@ -4,7 +4,7 @@ description: "Image generation is a process in artificial intelligence where mod
 summary: "Tạo hình ảnh là một quá trình trong trí tuệ nhân tạo, nơi các mô hình tạo ra hình ảnh mới dựa trên các prompt đầu vào hoặc dữ liệu hiện có."
 slug: "image-generation"
 date: 2026-08-01
-weight: 94
+weight: 99
 next: "/ai-engineer/08-multimodal-ai/video-understanding/"
 prev: "/ai-engineer/08-multimodal-ai/image-understanding/"
 draft: false

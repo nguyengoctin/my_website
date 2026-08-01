@@ -4,7 +4,7 @@ description: "In the context of multimodal AI, speech-to-text technology convert
 summary: "Trong bối cảnh AI đa phương thức, công nghệ chuyển đổi giọng nói thành văn bản chuyển đổi ngôn ngữ nói thành văn bản viết, cho phép tích hợp liền mạch với các loại dữ liệu khác như hình ảnh và văn bản."
 slug: "speech-to-text"
 date: 2026-08-01
-weight: 98
+weight: 103
 next: "/ai-engineer/08-multimodal-ai/openai-vision-api/"
 prev: "/ai-engineer/08-multimodal-ai/text-to-speech/"
 draft: false

@@ -4,6 +4,9 @@ description: "Embeddings are dense, continuous vector representations of data, s
 summary: "Embeddings là các biểu diễn vector liên tục, dày đặc của dữ liệu, như từ, câu hoặc hình ảnh, trong một không gian chiều thấp hơn."
 slug: "embeddings"
 date: 2026-08-01
+weight: 76
+next: "/ai-engineer/05-fine-tuning/fine-tuning/"
+prev: "/ai-engineer/04-rag-and-vector-databases/embedding-models/"
 draft: false
 
 categories:
@@ -43,3 +46,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Embeddings)
+
+---
+
+[← Embedding Models](/ai-engineer/04-rag-and-vector-databases/embedding-models/) · [AI Engineer Roadmap](/ai-engineer/) · [Fine-tuning →](/ai-engineer/05-fine-tuning/fine-tuning/)

@@ -4,9 +4,9 @@ description: "Cohere offers powerful text embeddings, which are numerical repres
 summary: "Cohere cung cấp các text embeddings mạnh mẽ, là các biểu diễn số của dữ liệu văn bản."
 slug: "cohere"
 date: 2026-08-01
-weight: 55
-next: "/ai-engineer/04-rag-and-vector-databases/gemini-embedding/"
-prev: "/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/"
+weight: 125
+next: "/ai-engineer/10-models-and-apis/openai-response-api/"
+prev: "/ai-engineer/10-models-and-apis/mistral/"
 draft: false
 
 categories:
@@ -43,4 +43,4 @@ mermaid: false
 
 ---
 
-[← Open AI Embeddings API](/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/) · [AI Engineer Roadmap](/ai-engineer/) · [Gemini Embedding →](/ai-engineer/04-rag-and-vector-databases/gemini-embedding/)
+[← Mistral](/ai-engineer/10-models-and-apis/mistral/) · [AI Engineer Roadmap](/ai-engineer/) · [OpenAI Response API →](/ai-engineer/10-models-and-apis/openai-response-api/)

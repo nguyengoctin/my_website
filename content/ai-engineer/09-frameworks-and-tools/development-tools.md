@@ -4,6 +4,9 @@ description: "AI has given rise to a collection of AI-powered development tools 
 summary: "AI đã tạo ra một bộ sưu tập các công cụ phát triển được hỗ trợ bởi AI với nhiều chủng loại khác nhau."
 slug: "development-tools"
 date: 2026-08-01
+weight: 116
+next: "/ai-engineer/09-frameworks-and-tools/haystack/"
+prev: "/ai-engineer/09-frameworks-and-tools/ollama/"
 draft: false
 
 categories:
@@ -29,3 +32,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Development Tools)
+
+---
+
+[← Ollama](/ai-engineer/09-frameworks-and-tools/ollama/) · [AI Engineer Roadmap](/ai-engineer/) · [Haystack →](/ai-engineer/09-frameworks-and-tools/haystack/)

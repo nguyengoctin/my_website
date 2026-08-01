@@ -4,7 +4,7 @@ description: "To know your customer means deeply understanding the needs, behavi
 summary: "Hiểu khách hàng của bạn có nghĩa là hiểu sâu sắc nhu cầu, hành vi và kỳ vọng của người dùng mục tiêu."
 slug: "know-your-customers-usecases"
 date: 2026-08-01
-weight: 39
+weight: 146
 next: "/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/robust-prompt-engineering/"
 draft: false

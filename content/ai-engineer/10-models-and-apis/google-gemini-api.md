@@ -4,8 +4,8 @@ description: "The Google Gemini API provides developers with programmatic access
 summary: "Google Gemini API cung cấp cho các nhà phát triển quyền truy cập lập trình vào dòng mô hình AI đa phương thức Gemini của Google."
 slug: "google-gemini-api"
 date: 2026-08-01
-weight: 48
-next: "/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/"
+weight: 127
+next: "/ai-engineer/10-models-and-apis/deepseek/"
 prev: "/ai-engineer/10-models-and-apis/openai-response-api/"
 draft: false
 
@@ -45,4 +45,4 @@ mermaid: false
 
 ---
 
-[← OpenAI Response API](/ai-engineer/10-models-and-apis/openai-response-api/) · [AI Engineer Roadmap](/ai-engineer/) · [What are Embeddings →](/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/)
+[← OpenAI Response API](/ai-engineer/10-models-and-apis/openai-response-api/) · [AI Engineer Roadmap](/ai-engineer/) · [DeepSeek →](/ai-engineer/10-models-and-apis/deepseek/)

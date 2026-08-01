@@ -4,6 +4,9 @@ description: "LLM evaluations are structured tests that measure how well a model
 summary: "LLM evaluations là các bài kiểm tra có cấu trúc đo lường mức độ hiệu quả của một model hoặc hệ thống AI dựa trên một tập hợp các tiêu chí được xác định."
 slug: "llm-evaluations"
 date: 2026-08-01
+weight: 149
+next: "/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/"
 draft: false
 
 categories:
@@ -36,3 +39,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: LLM Evaluations)
+
+---
+
+[← LLM Observability](/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/) · [AI Engineer Roadmap](/ai-engineer/) · [Tracing & logging →](/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/)

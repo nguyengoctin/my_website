@@ -4,7 +4,7 @@ description: "AI engineers are professionals who specialize in designing, develo
 summary: "AI engineers là những chuyên gia chuyên về thiết kế, phát triển và triển khai các hệ thống trí tuệ nhân tạo (AI)."
 slug: "what-is-an-ai-engineer"
 date: 2026-08-01
-weight: 3
+weight: 2
 next: "/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/"
 prev: "/ai-engineer/01-introduction/introduction/"
 draft: false

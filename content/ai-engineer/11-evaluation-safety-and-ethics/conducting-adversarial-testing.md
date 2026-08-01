@@ -4,7 +4,7 @@ description: "Adversarial testing involves intentionally exposing machine learni
 summary: "Kiểm thử đối nghịch liên quan đến việc cố tình phơi bày các mô hình học máy trước các đầu vào lừa đảo, bị nhiễu hoặc được tạo ra cẩn thận để đánh giá độ bền vững và xác định các lỗ hổng."
 slug: "conducting-adversarial-testing"
 date: 2026-08-01
-weight: 35
+weight: 142
 next: "/ai-engineer/11-evaluation-safety-and-ethics/content-moderation-apis/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/security-and-privacy-concerns/"
 draft: false

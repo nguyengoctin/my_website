@@ -4,7 +4,7 @@ description: "FAISS (Facebook AI Similarity Search) is a library developed by Fa
 summary: "FAISS (Facebook AI Similarity Search) là một thư viện do Facebook AI phát triển để tìm kiếm tương đồng và phân cụm các vector dày đặc một cách hiệu quả, đặc biệt hữu ích cho các tập dữ liệu quy mô lớn."
 slug: "faiss"
 date: 2026-08-01
-weight: 65
+weight: 57
 next: "/ai-engineer/04-rag-and-vector-databases/lancedb/"
 prev: "/ai-engineer/04-rag-and-vector-databases/weaviate/"
 draft: false

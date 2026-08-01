@@ -4,7 +4,7 @@ description: "Mistral AI is a company focused on developing open-weight, large l
 summary: "Mistral AI là một công ty tập trung vào việc phát triển các mô hình ngôn ngữ lớn (LLMs) có trọng số mở để cung cấp các giải pháp AI hiệu suất cao."
 slug: "mistral"
 date: 2026-08-01
-weight: 22
+weight: 124
 next: "/ai-engineer/10-models-and-apis/cohere/"
 prev: "/ai-engineer/10-models-and-apis/meta-llama/"
 draft: false

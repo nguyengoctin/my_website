@@ -4,7 +4,7 @@ description: "ReAct prompting is a technique that combines reasoning and action 
 summary: "ReAct prompting là một kỹ thuật kết hợp suy luận và hành động bằng cách hướng dẫn các mô hình ngôn ngữ suy nghĩ về một vấn đề từng bước một và sau đó thực hiện các hành động cụ thể dựa trên suy luận đó."
 slug: "react-prompting"
 date: 2026-08-01
-weight: 87
+weight: 81
 next: "/ai-engineer/06-ai-agents/manual-implementation/"
 prev: "/ai-engineer/06-ai-agents/agents-usecases/"
 draft: false

@@ -4,6 +4,9 @@ description: "OpenRouter acts as a unified API, providing access to various larg
 summary: "OpenRouter hoạt động như một API thống nhất, cung cấp quyền truy cập vào nhiều large language models (LLMs) khác nhau từ các nhà cung cấp khác nhau như OpenAI, Cohere, và Anthropic thông qua một nền tảng duy nhất."
 slug: "openrouter"
 date: 2026-08-01
+weight: 134
+next: "/ai-engineer/10-models-and-apis/claude-messages-api/"
+prev: "/ai-engineer/10-models-and-apis/qwen/"
 draft: false
 
 categories:
@@ -43,3 +46,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: OpenRouter)
+
+---
+
+[← Qwen](/ai-engineer/10-models-and-apis/qwen/) · [AI Engineer Roadmap](/ai-engineer/) · [Claude Messages API →](/ai-engineer/10-models-and-apis/claude-messages-api/)

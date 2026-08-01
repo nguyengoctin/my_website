@@ -4,6 +4,9 @@ description: "Helicone is a logging and observability proxy for LLM APIs."
 summary: "Helicone là một proxy ghi nhật ký và quan sát cho các API LLM."
 slug: "helicone"
 date: 2026-08-01
+weight: 155
+next: "/ai-engineer/11-evaluation-safety-and-ethics/arize-ai/"
+prev: "/ai-engineer/11-evaluation-safety-and-ethics/langfuse/"
 draft: false
 
 categories:
@@ -39,3 +42,7 @@ mermaid: false
 ## References
 
 - https://roadmap.sh/ai-engineer (Node: Helicone)
+
+---
+
+[← Langfuse](/ai-engineer/11-evaluation-safety-and-ethics/langfuse/) · [AI Engineer Roadmap](/ai-engineer/) · [Arize AI →](/ai-engineer/11-evaluation-safety-and-ethics/arize-ai/)
