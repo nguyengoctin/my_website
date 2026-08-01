@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Hugo - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/hugo/</link>
+        <link>http://localhost:1313/tags/hugo/</link>
         <description>Hugo - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>Hướng Dẫn và Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
-    <link>https://ngoctin.me/posts/theme-documentation-built-in-shortcodes.vi/</link>
+    <link>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</link>
     <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/theme-documentation-built-in-shortcodes.vi/</guid>
+    <guid>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Các shortcodes giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

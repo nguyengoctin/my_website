@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>OpenAI - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/openai/</link>
+        <link>http://localhost:1313/tags/openai/</link>
         <description>OpenAI - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/openai/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/openai/" rel="self" type="application/rss+xml" /><item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>https://ngoctin.me/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
+    <link>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
+    <guid>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
