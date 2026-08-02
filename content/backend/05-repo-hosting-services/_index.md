@@ -1,6 +1,7 @@
 ---
 title: "05 Repo Hosting Services"
 description: "Các bài học thuộc chuyên mục 05 Repo Hosting Services."
+weight: 500
 date: 2026-08-01
 draft: false
 

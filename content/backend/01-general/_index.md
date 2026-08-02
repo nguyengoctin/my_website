@@ -1,6 +1,7 @@
 ---
 title: "01 General"
 description: "Các bài học thuộc chuyên mục 01 General."
+weight: 100
 date: 2026-08-01
 draft: false
 

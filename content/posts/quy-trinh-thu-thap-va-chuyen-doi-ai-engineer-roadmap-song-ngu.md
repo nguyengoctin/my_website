@@ -6,7 +6,7 @@ date: 2026-08-01
 draft: false
 
 categories:
-  - AI Engineer
+  - Tech Blog
   - Automation
 
 tags:
@@ -131,7 +131,7 @@ slug: "[slug]"
 date: 2026-08-01
 draft: false
 categories:
-  - AI Engineer
+  - Tech Blog
 toc: true
 ---
 [Chunked content]

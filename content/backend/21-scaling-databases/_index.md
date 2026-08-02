@@ -1,6 +1,7 @@
 ---
 title: "21 Scaling Databases"
 description: "Các bài học thuộc chuyên mục 21 Scaling Databases."
+weight: 2100
 date: 2026-08-01
 draft: false
 

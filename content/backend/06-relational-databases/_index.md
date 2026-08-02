@@ -1,6 +1,7 @@
 ---
 title: "06 Relational Databases"
 description: "Các bài học thuộc chuyên mục 06 Relational Databases."
+weight: 600
 date: 2026-08-01
 draft: false
 

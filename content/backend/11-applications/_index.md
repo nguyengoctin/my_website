@@ -1,6 +1,7 @@
 ---
 title: "11 Applications"
 description: "Các bài học thuộc chuyên mục 11 Applications."
+weight: 1100
 date: 2026-08-01
 draft: false
 

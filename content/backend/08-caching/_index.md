@@ -1,6 +1,7 @@
 ---
 title: "08 Caching"
 description: "Các bài học thuộc chuyên mục 08 Caching."
+weight: 800
 date: 2026-08-01
 draft: false
 

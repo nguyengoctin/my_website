@@ -1,6 +1,7 @@
 ---
 title: "12. Applications & Use Cases"
 description: "Các bài học thuộc chuyên mục 12. Applications & Use Cases."
+weight: 1200
 date: 2026-08-01
 draft: false
 

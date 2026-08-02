@@ -1,6 +1,7 @@
 ---
 title: "20 Real Time Data"
 description: "Các bài học thuộc chuyên mục 20 Real Time Data."
+weight: 2000
 date: 2026-08-01
 draft: false
 

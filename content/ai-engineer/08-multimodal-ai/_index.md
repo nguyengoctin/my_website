@@ -1,6 +1,7 @@
 ---
 title: "08. Multimodal AI"
 description: "Các bài học thuộc chuyên mục 08. Multimodal AI."
+weight: 800
 date: 2026-08-01
 draft: false
 

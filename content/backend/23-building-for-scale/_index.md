@@ -1,6 +1,7 @@
 ---
 title: "23 Building For Scale"
 description: "Các bài học thuộc chuyên mục 23 Building For Scale."
+weight: 2300
 date: 2026-08-01
 draft: false
 

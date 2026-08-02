@@ -1,6 +1,7 @@
 ---
 title: "02 Frontend Basics"
 description: "Các bài học thuộc chuyên mục 02 Frontend Basics."
+weight: 200
 date: 2026-08-01
 draft: false
 

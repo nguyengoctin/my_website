@@ -1,6 +1,7 @@
 ---
 title: "11. Evaluation, Safety & Ethics"
 description: "Các bài học thuộc chuyên mục 11. Evaluation, Safety & Ethics."
+weight: 1100
 date: 2026-08-01
 draft: false
 

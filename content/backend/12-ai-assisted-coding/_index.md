@@ -1,6 +1,7 @@
 ---
 title: "12 Ai Assisted Coding"
 description: "Các bài học thuộc chuyên mục 12 Ai Assisted Coding."
+weight: 1200
 date: 2026-08-01
 draft: false
 

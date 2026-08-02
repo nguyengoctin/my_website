@@ -1,6 +1,7 @@
 ---
 title: "06. AI Agents"
 description: "Các bài học thuộc chuyên mục 06. AI Agents."
+weight: 600
 date: 2026-08-01
 draft: false
 

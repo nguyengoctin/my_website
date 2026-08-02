@@ -1,6 +1,7 @@
 ---
 title: "04 Version Control Systems"
 description: "Các bài học thuộc chuyên mục 04 Version Control Systems."
+weight: 400
 date: 2026-08-01
 draft: false
 

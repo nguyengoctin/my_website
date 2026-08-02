@@ -1,6 +1,7 @@
 ---
 title: "03 Pick A Backend Language"
 description: "Các bài học thuộc chuyên mục 03 Pick A Backend Language."
+weight: 300
 date: 2026-08-01
 draft: false
 
