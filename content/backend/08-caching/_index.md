@@ -5,7 +5,7 @@ date: 2026-08-01
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 toc: true
 ---
@@ -15,7 +15,7 @@ toc: true
 - [Nginx](/backend/08-caching/nginx/)
 - [Apache](/backend/08-caching/apache/)
 - [Token Authentication](/backend/08-caching/token-authentication/)
-- [Redis](/backend/08-caching/redis/)
+- [Redis](/backend/08-caching/redis-caching/)
 - [Caddy](/backend/08-caching/caddy/)
 - [MS IIS](/backend/08-caching/ms-iis/)
 - [Cookie Based Auth](/backend/08-caching/cookie-based-auth/)

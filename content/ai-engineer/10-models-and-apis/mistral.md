@@ -13,7 +13,7 @@ categories:
   - AI Engineer
 
 tags:
-  - models
+  - Models
   - LLM
 
 toc: true

@@ -13,7 +13,7 @@ categories:
   - AI Engineer
 
 tags:
-  - Langchain
+  - LangChain
   - Framework
   - LLM
 

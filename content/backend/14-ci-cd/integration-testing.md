@@ -10,10 +10,10 @@ prev: "/backend/14-ci-cd/ci-cd/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

@@ -5,7 +5,7 @@ draft: false
 author: "Nguyen Ngoc Tin"
 description: "Phân tích sâu về sự khác biệt giữa Vibe Coding ngẫu hứng và quy trình Spec-Driven Development. Hướng dẫn lập trình viên biến AI thành Mentor hướng dẫn và một Cộng sự phát triển dự án thực tế."
 tags: ["AI", "Prompt Engineering", "Web Development", "Spec-Driven Development", "Cursor", "Claude Code", "Workflow", "Django", "Python"]
-categories: ["Technology"]
+categories: ["Tech Blog"]
 ---
 
 {{< quote >}}

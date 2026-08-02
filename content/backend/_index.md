@@ -1,24 +1,24 @@
 ---
-title: "{'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'} Roadmap"
-description: "Lộ trình học tập {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'} được phân đoạn song ngữ Anh - Việt chuẩn SEO."
+title: "Backend Developer Roadmap"
+description: "Lộ trình học tập Backend Developer được phân đoạn song ngữ Anh - Việt chuẩn SEO."
 slug: "backend"
 date: 2026-08-01
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 toc: true
 math: false
 mermaid: false
 ---
 
-Lộ trình học tập {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'} được phân chia theo các chuyên mục tuần tự:
+Lộ trình học tập Backend Developer được phân chia theo các chuyên mục tuần tự:
 
 ## 01 General
 
 - [How does the internet work?](/backend/01-general/how-does-the-internet-work/)
-- [JavaScript](/backend/01-general/javascript/)
+- [JavaScript](/backend/01-general/general-javascript/)
 - [Go](/backend/01-general/go/)
 - [What is HTTP?](/backend/01-general/what-is-http/)
 - [Python](/backend/01-general/python/)
@@ -90,7 +90,7 @@ Lộ trình học tập {'card': 'Backend', 'page': 'Backend Developer', '_id': 
 - [Nginx](/backend/08-caching/nginx/)
 - [Apache](/backend/08-caching/apache/)
 - [Token Authentication](/backend/08-caching/token-authentication/)
-- [Redis](/backend/08-caching/redis/)
+- [Redis](/backend/08-caching/redis-caching/)
 - [Caddy](/backend/08-caching/caddy/)
 - [MS IIS](/backend/08-caching/ms-iis/)
 - [Cookie Based Auth](/backend/08-caching/cookie-based-auth/)

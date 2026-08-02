@@ -14,7 +14,7 @@ categories:
 
 tags:
   - LLM
-  - fundamentals
+  - Fundamentals
 
 toc: true
 math: false

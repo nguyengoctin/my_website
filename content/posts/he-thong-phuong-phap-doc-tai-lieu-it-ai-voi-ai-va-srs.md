@@ -1,8 +1,9 @@
 ---
 title: "Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS"
 date: 2026-08-01T10:10:00+07:00
-categories: ["Tech"]
+categories: ["Tech Blog"]
 tags: ["AI", "Self-learning", "Obsidian", "Prompt Engineering", "Anki"]
+draft: false
 ---
 
 Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.

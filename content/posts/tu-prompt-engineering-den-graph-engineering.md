@@ -5,7 +5,7 @@ draft: false
 author: "Nguyen Ngoc Tin"
 description: "Phân tích sự dịch chuyển kiến trúc AI từ mô hình đơn tác tử sang Graph Engineering: Giải mã hiện tượng Context Bloat, bộ nhớ Shared State và kỷ nguyên của Hệ thống Đa tác vụ Multi-Agent Systems."
 tags: ["AI Agents", "Graph Engineering", "System Architecture", "LangGraph", "Multi-Agent Systems", "Software Engineering"]
-categories: ["Technology"]
+categories: ["Tech Blog"]
 ---
 
 {{< quote author="Andrew Ng" >}}

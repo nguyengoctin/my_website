@@ -14,7 +14,7 @@ categories:
 
 tags:
   - safety
-  - prompt engineering
+  - Prompt Engineering
 
 toc: true
 math: false

@@ -5,14 +5,14 @@ summary: "Internet là một mạng lưới toàn cầu gồm các máy tính k�
 slug: "how-does-the-internet-work"
 date: 2026-08-01
 weight: 1
-next: "/backend/01-general/javascript/"
+next: "/backend/01-general/general-javascript/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

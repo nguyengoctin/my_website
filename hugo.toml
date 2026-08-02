@@ -16,6 +16,11 @@ enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
 
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 # Outputs required for Lunr search indexing
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -101,20 +106,20 @@ enableEmoji = true
     rss = 10
     [params.home.profile]
       enable = true
-      avatarURL = "/images/avatar.jpg"
+      avatarURL = "/images/avatar.webp"
       social = false
       bio = """
 ## ABOUT
 
-Hello, my name is **Nguyễn Ngọc Tín**. I’m a software engineer based in Ho Chi Minh City, Vietnam, holding an **Engineer in Information Technology** degree from Saigon University, majoring in **Information Systems**. As a recent graduate, I am actively focusing on **Backend Development** and **Cloud Infrastructure**.
+Hello, my name is **Nguyễn Ngọc Tín**. I'm a software engineer based in Ho Chi Minh City, Vietnam. I graduated from Saigon University with an **Engineer in Information Technology** degree, majoring in **Information Systems**.
 
-My primary focus is building RESTful APIs, designing database schemas, and building systems on Cloud platforms. My core tech stack includes **Python, Java, TypeScript, FastAPI, PostgreSQL, Docker, and AWS**. I approach software development as a system problem-solver, believing that tools and technologies are secondary to a strong problem-solving mindset.
+I'm a curious guy. I like to learn something new every day, and lately that curiosity has been pulling me in two directions — building backend systems and figuring out how to make AI actually useful in real products. I spend most of my time writing APIs, designing databases, and tinkering with things like LLM applications, RAG pipelines, and AI agents. My go-to tools are **Python, Java, TypeScript, FastAPI, PostgreSQL, Docker, and AWS**, but I try not to get too attached to any specific stack. Tools come and go; understanding the fundamentals is what sticks.
 
-I’m a guy with a curious mind. I like to learn something new every day. Whenever I explore new tools, I rely on official documentation and always start from the core fundamentals to build solutions that are solid, effective, and maintainable. Technology is vast and constantly evolving, which keeps me grounded and reminded of how much more there is to discover.
+Whenever I pick up something new, I start from official docs and first principles. No shortcuts, no skipping ahead. I care more about understanding *why* things work than just knowing *how* to use them.
 
-This website serves as my personal knowledge base and digital garden — a space where I keep my study notes, architecture concepts, code snippets, and technical write-ups.
+This website is my digital garden — a place where I keep study notes, architecture concepts, code snippets, and technical write-ups as I learn.
 
-Outside of engineering, I spend my time reading books across various fields, including technology, science, psychology, and literature.
+Outside of engineering, I read across technology, science, psychology, and literature.
 
 ---
 
@@ -132,7 +137,7 @@ Outside of engineering, I spend my time reading books across various fields, inc
   </div>
   <div class="contact-info-right" style="border-left: 1px solid #f0f0f0; padding-left: 1.5rem; font-size: 0.92rem; line-height: 1.9;">
     <div><strong>Location:</strong> Ho Chi Minh City, Vietnam</div>
-    <div><strong>Status:</strong> Available for Software Engineer & Cloud Engineer roles</div>
+    <div><strong>Status:</strong> Available for Backend Engineer, AI Engineer, and Cloud Engineer roles</div>
     <div><strong>Timezone:</strong> ICT (UTC+7)</div>
   </div>
 </div>
@@ -140,10 +145,10 @@ Outside of engineering, I spend my time reading books across various fields, inc
 
   # Social links config
   [params.social]
-    GitHub = ""
-    Linkedin = ""
-    Email = ""
-    Phone = ""
+    GitHub = "ngoctinn"
+    Linkedin = "tin-nguyen-ngoc-2453372a3"
+    Email = "ngoctin.work@gmail.com"
+    Phone = "0397662903"
     Facebook = "tin.nguyenngoc.56808"
 
   # Page config

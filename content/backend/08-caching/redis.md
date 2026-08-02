@@ -2,7 +2,7 @@
 title: "Redis"
 description: "Redis is an open-source, in-memory data structure store supporting strings, lists, sets, hashes, and sorted sets."
 summary: "Redis là một kho lưu trữ cấu trúc dữ liệu in-memory mã nguồn mở hỗ trợ strings, lists, sets, hashes, và sorted sets."
-slug: "redis"
+slug: "redis-caching"
 date: 2026-08-01
 weight: 50
 next: "/backend/08-caching/caddy/"
@@ -10,10 +10,10 @@ prev: "/backend/08-caching/token-authentication/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

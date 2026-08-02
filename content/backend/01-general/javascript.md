@@ -2,7 +2,7 @@
 title: "JavaScript"
 description: "JavaScript is a versatile, high-level language for web interactivity and dynamic features."
 summary: "JavaScript là một ngôn ngữ cấp cao, linh hoạt cho tính tương tác web và các tính năng động."
-slug: "javascript"
+slug: "general-javascript"
 date: 2026-08-01
 weight: 2
 next: "/backend/01-general/go/"
@@ -10,10 +10,10 @@ prev: "/backend/01-general/how-does-the-internet-work/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

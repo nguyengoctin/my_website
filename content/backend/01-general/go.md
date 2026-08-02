@@ -6,14 +6,14 @@ slug: "go"
 date: 2026-08-01
 weight: 3
 next: "/backend/01-general/what-is-http/"
-prev: "/backend/01-general/javascript/"
+prev: "/backend/01-general/general-javascript/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

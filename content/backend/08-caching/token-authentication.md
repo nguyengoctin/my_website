@@ -5,15 +5,15 @@ summary: "Xác thực dựa trên token xác minh danh tính người dùng và 
 slug: "token-authentication"
 date: 2026-08-01
 weight: 49
-next: "/backend/08-caching/redis/"
+next: "/backend/08-caching/redis-caching/"
 prev: "/backend/08-caching/apache/"
 draft: false
 
 categories:
-  - {'card': 'Backend', 'page': 'Backend Developer', '_id': '6986094d45613096ac8d34a0'}
+  - Backend
 
 tags:
-  - backend
+  - Backend
 
 toc: true
 math: false

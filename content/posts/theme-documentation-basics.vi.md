@@ -5,7 +5,7 @@ date: 2020-03-06
 draft: false
 description: "Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."
 tags: ["documentation", "installation", "configuration"]
-categories: ["documentation"]
+categories: ["Tech Blog"]
 ---
 
 Khám phá giao diện **Hugo - LoveIt** và các khái niệm cốt lõi đằng sau nó.

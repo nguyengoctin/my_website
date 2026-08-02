@@ -13,7 +13,7 @@ categories:
   - AI Engineer
 
 tags:
-  - prompt engineering
+  - Prompt Engineering
   - few-shot
 
 toc: true
