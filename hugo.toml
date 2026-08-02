@@ -76,7 +76,7 @@ enableEmoji = true
 [params]
   defaultTheme = "auto"
   dateFormat = "2006-01-02"
-  title = "Nguyen Ngoc Tin"
+  title = "Nguyễn Ngọc Tín"
   description = "Personal website and blog of Nguyen Ngoc Tin"
   images = ["/images/og-cover.png"]
 
