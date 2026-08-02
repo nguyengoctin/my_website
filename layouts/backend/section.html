@@ -1,0 +1,15 @@
+{{- define "title" -}}
+    {{- .Params.Title | default .Title }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page single">
+        <h1 class="single-title animate__animated animate__flipInX">
+            {{- .Title | emojify -}}
+        </h1>
+
+        <div class="content" id="content">
+            {{- .Content -}}
+        </div>
+    </div>
+{{- end -}}
