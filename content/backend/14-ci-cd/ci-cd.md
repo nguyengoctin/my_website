@@ -9,8 +9,6 @@ next: "/backend/14-ci-cd/integration-testing/"
 prev: "/backend/13-integration-patterns/integration-patterns/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/cap-theorem/"
 prev: "/backend/20-real-time-data/long-short-polling/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

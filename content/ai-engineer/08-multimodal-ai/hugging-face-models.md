@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/"
 prev: "/ai-engineer/08-multimodal-ai/whisper-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face

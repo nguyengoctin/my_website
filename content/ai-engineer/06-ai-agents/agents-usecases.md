@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/react-prompting/"
 prev: "/ai-engineer/06-ai-agents/tools-function-calling/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Agents

@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/database-indexes/"
 prev: "/backend/19-search-engines/twelve-factor-apps/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

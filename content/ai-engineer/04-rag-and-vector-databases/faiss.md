@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/lancedb/"
 prev: "/ai-engineer/04-rag-and-vector-databases/weaviate/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - FAISS

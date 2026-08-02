@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/cors/"
 prev: "/backend/10-learn-the-basics/https/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

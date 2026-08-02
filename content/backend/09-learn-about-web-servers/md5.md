@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/sha/"
 prev: "/backend/09-learn-about-web-servers/how-llms-work/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

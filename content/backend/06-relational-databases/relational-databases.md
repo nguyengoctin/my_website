@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/mariadb/"
 prev: "/backend/05-repo-hosting-services/json-apis/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/haystack/"
 prev: "/ai-engineer/09-frameworks-and-tools/ollama/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Development Tools

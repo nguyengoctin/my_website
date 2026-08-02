@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/video-understanding/"
 prev: "/ai-engineer/08-multimodal-ai/image-understanding/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Image Generation

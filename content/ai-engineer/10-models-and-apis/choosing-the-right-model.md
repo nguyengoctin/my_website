@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/gemma/"
 prev: "/ai-engineer/10-models-and-apis/google-adk/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models and APIs
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Choosing the Right Model
 
 **Selecting the appropriate large language model (LLM) | involves considering factors like | task complexity, budget,**  
 *Việc chọn large language model (LLM) phù hợp | liên quan đến việc xem xét các yếu tố như | độ phức tạp của tác vụ, ngân sách,*

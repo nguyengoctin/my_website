@@ -9,8 +9,6 @@ next: "/backend/16-testing/testing/"
 prev: "/backend/14-ci-cd/functional-testing/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

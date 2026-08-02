@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/hugging-face-hub/"
 prev: "/ai-engineer/09-frameworks-and-tools/hugging-face/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# LM Studio
 
 **LM Studio is a desktop application | designed for discovering, downloading, | and running large language models (LLMs) | locally on your computer.**  
 *LM Studio là một ứng dụng máy tính | được thiết kế để khám phá, tải xuống | và chạy các LLM | cục bộ trên máy tính của bạn.*

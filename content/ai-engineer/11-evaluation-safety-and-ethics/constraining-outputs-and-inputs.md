@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - safety
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Constraining outputs and inputs
 
 **Constraining outputs and inputs | in AI models refers to | implementing limits or rules | that guide both the data**  
 *Việc ràng buộc đầu ra và đầu vào | trong các mô hình AI đề cập đến | việc thực hiện các giới hạn hoặc quy tắc | hướng dẫn cả dữ liệu*

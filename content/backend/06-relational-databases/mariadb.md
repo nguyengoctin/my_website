@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/sqlite/"
 prev: "/backend/06-relational-databases/relational-databases/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

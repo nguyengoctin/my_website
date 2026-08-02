@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/replit/"
 prev: "/ai-engineer/12-applications-and-usecases/windsurf/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Cursor

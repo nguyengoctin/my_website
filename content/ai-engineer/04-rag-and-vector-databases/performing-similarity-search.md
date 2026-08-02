@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/what-are-rags/"
 prev: "/ai-engineer/04-rag-and-vector-databases/indexing-embeddings/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Similarity Search

@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/nanobanana-api/"
 prev: "/ai-engineer/10-models-and-apis/claude-messages-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - API

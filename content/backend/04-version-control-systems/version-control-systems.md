@@ -9,8 +9,6 @@ next: "/backend/04-version-control-systems/git/"
 prev: "/backend/03-pick-a-backend-language/javascript/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/mongodb-atlas/"
 prev: "/ai-engineer/04-rag-and-vector-databases/qdrant/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Supabase

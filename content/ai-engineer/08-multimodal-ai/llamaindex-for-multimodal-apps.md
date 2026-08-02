@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/hugging-face/"
 prev: "/ai-engineer/08-multimodal-ai/langchain-for-multimodal-apps/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LlamaIndex

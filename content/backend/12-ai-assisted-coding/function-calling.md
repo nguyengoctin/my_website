@@ -9,8 +9,6 @@ next: "/backend/13-integration-patterns/integration-patterns/"
 prev: "/backend/12-ai-assisted-coding/anthropic/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

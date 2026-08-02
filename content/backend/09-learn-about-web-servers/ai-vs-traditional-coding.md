@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/scrypt/"
 prev: "/backend/09-learn-about-web-servers/sha/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

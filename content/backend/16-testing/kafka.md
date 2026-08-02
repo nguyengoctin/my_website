@@ -9,8 +9,6 @@ next: "/backend/16-testing/rabbitmq/"
 prev: "/backend/16-testing/transactions/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

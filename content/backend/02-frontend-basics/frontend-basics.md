@@ -9,8 +9,6 @@ next: "/backend/02-frontend-basics/php/"
 prev: "/backend/01-introduction/what-is-hosting/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

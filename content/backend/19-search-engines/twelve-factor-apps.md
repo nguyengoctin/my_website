@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/server-sent-events/"
 prev: "/backend/19-search-engines/solr/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

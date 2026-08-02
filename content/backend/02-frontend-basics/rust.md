@@ -9,8 +9,6 @@ next: "/backend/02-frontend-basics/dns-and-how-it-works/"
 prev: "/backend/02-frontend-basics/php/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

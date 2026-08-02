@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/mistral/"
 prev: "/ai-engineer/10-models-and-apis/openai-gpt-o-series/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Meta Llama
 
 **Meta Llama is a family | of large language models (LLMs) | developed by Meta AI.**  
 *Meta Llama là một dòng | các mô hình ngôn ngữ lớn (LLMs) | được phát triển bởi Meta AI.*

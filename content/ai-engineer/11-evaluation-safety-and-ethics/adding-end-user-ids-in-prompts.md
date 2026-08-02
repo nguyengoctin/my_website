@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/robust-prompt-engineering/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/content-moderation-apis/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - security
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Adding end-user IDs in prompts
 
 **Sending end-user IDs | in your requests | can be a useful tool | to help OpenAI monitor**  
 *Việc gửi ID người dùng cuối | trong các yêu cầu của bạn | có thể là một công cụ hữu ích | để giúp OpenAI giám sát*

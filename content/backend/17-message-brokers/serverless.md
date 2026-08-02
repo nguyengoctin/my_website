@@ -9,8 +9,6 @@ next: "/backend/18-architectural-patterns/architectural-patterns/"
 prev: "/backend/17-message-brokers/soa/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

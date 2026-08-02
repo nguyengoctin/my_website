@@ -9,8 +9,6 @@ next: "/ai-engineer/05-fine-tuning/fine-tuning/"
 prev: "/ai-engineer/04-rag-and-vector-databases/embedding-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Embeddings

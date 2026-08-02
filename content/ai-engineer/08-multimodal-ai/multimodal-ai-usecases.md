@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/image-understanding/"
 prev: "/ai-engineer/08-multimodal-ai/multimodal-ai/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Multimodal AI

@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/streaming/"
 prev: "/backend/12-ai-assisted-coding/documentation-generation/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

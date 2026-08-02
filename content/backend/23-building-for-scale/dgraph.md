@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/scylladb/"
 prev: "/backend/23-building-for-scale/telemetry/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

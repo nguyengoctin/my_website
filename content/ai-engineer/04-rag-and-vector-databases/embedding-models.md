@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/embeddings/"
 prev: "/ai-engineer/04-rag-and-vector-databases/llama-index/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG and Vector Databases
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Embedding Models
 
 **Embedding models transform data, | like text or images, | into numerical representations called embeddings.**  
 *Embedding models chuyển đổi dữ liệu, | như văn bản hoặc hình ảnh, | thành các biểu diễn số được gọi là embeddings.*

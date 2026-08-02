@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/google-adk/"
 prev: "/ai-engineer/10-models-and-apis/deepseek/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Vertex AI

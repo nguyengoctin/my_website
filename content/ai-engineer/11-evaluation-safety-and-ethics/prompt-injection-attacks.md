@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/bias-and-fairness/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - security
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Prompt Injection Attacks
 
 **Prompt injection attacks are a type | of security vulnerability | where malicious inputs are crafted | to manipulate or exploit AI models,**  
 *Tấn công Prompt Injection là một loại | lỗ hổng bảo mật | trong đó các đầu vào độc hại được tạo ra | để thao túng hoặc khai thác các mô hình AI,*

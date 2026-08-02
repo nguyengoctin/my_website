@@ -9,8 +9,6 @@ next: "/backend/02-frontend-basics/html/"
 prev: "/backend/02-frontend-basics/rust/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/16-testing/orms/"
 prev: "/backend/16-testing/kafka/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

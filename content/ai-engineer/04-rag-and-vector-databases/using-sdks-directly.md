@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/langchain/"
 prev: "/ai-engineer/04-rag-and-vector-databases/generation/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

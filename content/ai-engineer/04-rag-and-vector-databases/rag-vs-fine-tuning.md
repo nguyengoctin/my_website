@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/chunking/"
 prev: "/ai-engineer/04-rag-and-vector-databases/rag-usecases/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

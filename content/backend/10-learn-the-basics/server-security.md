@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/csp/"
 prev: "/backend/10-learn-the-basics/cursor/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

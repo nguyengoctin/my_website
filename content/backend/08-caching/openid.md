@@ -9,8 +9,6 @@ next: "/backend/08-caching/saml/"
 prev: "/backend/08-caching/memcached/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

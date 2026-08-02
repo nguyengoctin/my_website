@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/monitoring/"
 prev: "/backend/23-building-for-scale/clickhouse/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

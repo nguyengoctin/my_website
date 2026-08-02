@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/prompt-caching/"
 prev: "/ai-engineer/03-prompt-engineering/structured-output/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Function Calling
 
 **Function calling allows Large Language Models (LLMs) | to interact with external tools | and APIs.**  
 *Function calling cho phép các Large Language Models (LLMs) | tương tác với các công cụ bên ngoài | và các API.*

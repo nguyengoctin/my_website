@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/self-hosted-models/"
 prev: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM Fundamentals
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Types of AI Models
 
 **AI models come in various forms. | Open models provide transparent access | to their architecture and training data,**  
 *Các mô hình AI có nhiều dạng khác nhau. | Các mô hình mở cung cấp quyền truy cập minh bạch | vào kiến trúc và dữ liệu huấn luyện của chúng,*

@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/function-calling/"
 prev: "/backend/12-ai-assisted-coding/structured-outputs/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

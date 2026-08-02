@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/prompting-techniques/"
 prev: "/backend/11-applications/applications/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/ai-agents/"
 prev: "/ai-engineer/04-rag-and-vector-databases/embeddings/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Fine-tuning

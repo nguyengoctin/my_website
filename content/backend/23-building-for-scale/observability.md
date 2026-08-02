@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/dynamodb/"
 prev: "/backend/23-building-for-scale/firebase/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

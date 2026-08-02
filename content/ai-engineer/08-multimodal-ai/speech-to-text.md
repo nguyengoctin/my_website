@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/openai-vision-api/"
 prev: "/ai-engineer/08-multimodal-ai/text-to-speech/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - STT

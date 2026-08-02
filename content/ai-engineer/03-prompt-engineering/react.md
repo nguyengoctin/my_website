@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/cot/"
 prev: "/ai-engineer/03-prompt-engineering/prompt-engineering/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# ReAct
 
 **ReAct (Reason and Act) prompting | enables LLMs to solve | complex tasks by combining | reasoning with external tool interactions.**  
 *ReAct (Suy luận và Hành động) prompting | cho phép các LLM giải quyết | các tác vụ phức tạp bằng cách kết hợp | suy luận với các tương tác công cụ bên ngoài.*

@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/n1-problem/"
 prev: "/backend/06-relational-databases/ms-sql/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

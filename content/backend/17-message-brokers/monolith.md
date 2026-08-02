@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/microservices/"
 prev: "/backend/17-message-brokers/profiling-performance/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

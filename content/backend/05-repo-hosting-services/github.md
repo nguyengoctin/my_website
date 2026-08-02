@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/gitlab/"
 prev: "/backend/05-repo-hosting-services/repo-hosting-services/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

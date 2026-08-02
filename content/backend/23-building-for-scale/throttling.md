@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/neo4j/"
 prev: "/backend/23-building-for-scale/instrumentation/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

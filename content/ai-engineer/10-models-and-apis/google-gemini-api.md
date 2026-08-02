@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/deepseek/"
 prev: "/ai-engineer/10-models-and-apis/openai-response-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Google
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Google Gemini API
 
 **The Google Gemini API provides developers | with programmatic access to Google's | Gemini family of multimodal AI models.**  
 *Google Gemini API cung cấp cho các nhà phát triển | quyền truy cập lập trình vào dòng | mô hình AI đa phương thức Gemini của Google.*

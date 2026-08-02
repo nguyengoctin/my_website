@@ -9,8 +9,6 @@ next: "/backend/04-version-control-systems/version-control-systems/"
 prev: "/backend/03-pick-a-backend-language/pick-a-backend-language/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

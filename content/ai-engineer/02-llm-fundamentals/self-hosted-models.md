@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/prompt-engineering/"
 prev: "/ai-engineer/02-llm-fundamentals/type-of-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM Fundamentals
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Self-Hosted AI Models
 
 **Self-hosted AI models are machine learning models | that are deployed and run | on your own infrastructure,**  
 *Các mô hình AI self-hosted là các mô hình machine learning | được triển khai và chạy | trên cơ sở hạ tầng của riêng bạn,*

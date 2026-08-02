@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/json-apis/"
 prev: "/backend/05-repo-hosting-services/postgresql/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

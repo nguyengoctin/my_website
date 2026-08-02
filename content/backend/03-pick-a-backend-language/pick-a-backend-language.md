@@ -9,8 +9,6 @@ next: "/backend/03-pick-a-backend-language/javascript/"
 prev: "/backend/02-frontend-basics/browsers-and-how-they-work/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

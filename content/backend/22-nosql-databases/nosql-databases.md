@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/building-for-scale/"
 prev: "/backend/21-scaling-databases/scaling-databases/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

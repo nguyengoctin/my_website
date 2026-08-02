@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/multimodal-ai/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

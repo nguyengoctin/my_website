@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/openai-response-api/"
 prev: "/ai-engineer/10-models-and-apis/mistral/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Cohere
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Cohere Embeddings
 
 **Cohere offers powerful text embeddings, | which are numerical representations | of text data.**  
 *Cohere cung cấp các text embeddings mạnh mẽ, | là các biểu diễn số | của dữ liệu văn bản.*

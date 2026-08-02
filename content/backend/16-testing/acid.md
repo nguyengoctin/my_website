@@ -9,8 +9,6 @@ next: "/backend/16-testing/normalization/"
 prev: "/backend/16-testing/orms/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

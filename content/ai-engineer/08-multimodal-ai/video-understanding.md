@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/audio-processing/"
 prev: "/ai-engineer/08-multimodal-ai/image-generation/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Video Understanding

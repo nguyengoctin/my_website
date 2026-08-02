@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/google-gemini-api/"
 prev: "/ai-engineer/10-models-and-apis/cohere/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# OpenAI Response API
 
 **The OpenAI Response API allows developers | to interact with various AI models | offered by OpenAI.**  
 *OpenAI Response API cho phép các nhà phát triển | tương tác với nhiều mô hình AI khác nhau | do OpenAI cung cấp.*

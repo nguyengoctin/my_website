@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/graphql/"
 prev: "/backend/06-relational-databases/oracle/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

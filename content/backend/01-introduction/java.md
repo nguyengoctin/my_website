@@ -9,8 +9,6 @@ next: "/backend/01-introduction/c/"
 prev: "/backend/01-introduction/introduction/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/anthropic-claude/"
 prev: "/ai-engineer/09-frameworks-and-tools/ragflow/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face

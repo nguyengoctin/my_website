@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/long-short-polling/"
 prev: "/backend/20-real-time-data/websockets/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

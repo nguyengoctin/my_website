@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/transformersjs/"
 prev: "/ai-engineer/09-frameworks-and-tools/hugging-face-hub/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Inference SDK
 
 **The Hugging Face Inference SDK | is a powerful tool | that allows developers to easily integrate | and run inference on large language models | hosted on the Hugging Face Hub.**  
 *Hugging Face Inference SDK | là một công cụ mạnh mẽ | cho phép các nhà phát triển dễ dàng tích hợp | và chạy inference trên các LLM | được lưu trữ trên Hugging Face Hub.*

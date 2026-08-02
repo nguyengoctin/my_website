@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/loadshifting/"
 prev: "/backend/23-building-for-scale/cassandra/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

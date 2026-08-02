@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/ai-safety-and-ethics/"
 prev: "/ai-engineer/10-models-and-apis/openai-compatible-apis/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - API

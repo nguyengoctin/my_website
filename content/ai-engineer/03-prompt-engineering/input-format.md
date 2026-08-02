@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/system-prompting/"
 prev: "/ai-engineer/03-prompt-engineering/context-engineering/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Input Format
 
 **Input format in prompt engineering | deals with how you structure | and present your prompt**  
 *Định dạng đầu vào trong prompt engineering | liên quan đến cách bạn cấu trúc | và trình bày prompt của mình*

@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/large-language-model-llm/"
 prev: "/ai-engineer/01-introduction/impact-on-product-development/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Roles
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Roles and Responsibilities
 
 **AI Engineers are responsible | for designing, developing, and | deploying AI systems that**  
 *Các AI Engineer chịu trách nhiệm | thiết kế, phát triển, và | triển khai các hệ thống AI*

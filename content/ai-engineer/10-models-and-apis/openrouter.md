@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/claude-messages-api/"
 prev: "/ai-engineer/10-models-and-apis/qwen/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models and APIs
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# OpenRouter
 
 **OpenRouter acts as a unified API, | providing access to various | large language models (LLMs)**  
 *OpenRouter hoạt động như một API thống nhất, | cung cấp quyền truy cập vào nhiều | large language models (LLMs)*

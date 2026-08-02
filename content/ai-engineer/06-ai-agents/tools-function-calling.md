@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/agents-usecases/"
 prev: "/ai-engineer/06-ai-agents/ai-agents/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Agents

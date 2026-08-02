@@ -9,8 +9,6 @@ next: "/backend/08-caching/basic-authentication/"
 prev: "/backend/07-learn-about-apis/oauth/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

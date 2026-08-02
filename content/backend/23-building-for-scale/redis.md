@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/mongodb/"
 prev: "/backend/23-building-for-scale/building-for-scale/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

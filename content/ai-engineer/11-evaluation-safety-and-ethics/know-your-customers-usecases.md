@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inp
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/robust-prompt-engineering/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - ethics
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Know your Customers / Usecases
 
 **To know your customer means | deeply understanding the needs, | behaviors, and expectations | of your target users.**  
 *Hiểu khách hàng của bạn có nghĩa là | hiểu sâu sắc nhu cầu, | hành vi và kỳ vọng | của người dùng mục tiêu.*

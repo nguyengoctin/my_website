@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/cursor/"
 prev: "/backend/10-learn-the-basics/cors/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

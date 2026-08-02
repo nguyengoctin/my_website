@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/external-memory/"
 prev: "/ai-engineer/03-prompt-engineering/sampling-parameters/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/context-engineering/"
 prev: "/ai-engineer/03-prompt-engineering/top-p/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Few-Shot Prompting
 
 **Few-shot prompting is a technique | used with large language models (LLMs) | where you provide a small number | of example input-output pairs**  
 *Few-shot prompting là một kỹ thuật | được sử dụng với các mô hình ngôn ngữ lớn (LLMs) | nơi bạn cung cấp một số lượng nhỏ | các cặp ví dụ đầu vào-đầu ra*

@@ -9,8 +9,6 @@ next: "/backend/03-pick-a-backend-language/pick-a-backend-language/"
 prev: "/backend/02-frontend-basics/css/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -8,8 +8,6 @@ weight: 1
 next: "/backend/01-general/general-javascript/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

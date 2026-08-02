@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/manual-implementation/"
 prev: "/ai-engineer/06-ai-agents/agents-usecases/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - ReAct

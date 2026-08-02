@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/rag-vs-fine-tuning/"
 prev: "/ai-engineer/04-rag-and-vector-databases/what-are-rags/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

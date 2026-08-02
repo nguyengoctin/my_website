@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/service-mesh/"
 prev: "/backend/18-architectural-patterns/architectural-patterns/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

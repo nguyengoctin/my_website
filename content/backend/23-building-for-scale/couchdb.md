@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/rethinkdb/"
 prev: "/backend/23-building-for-scale/dynamodb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

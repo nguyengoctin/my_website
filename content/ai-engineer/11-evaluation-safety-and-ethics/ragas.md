@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/claude-code/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/deepeval/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/claude-agent-sdk/"
 prev: "/ai-engineer/06-ai-agents/manual-implementation/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI

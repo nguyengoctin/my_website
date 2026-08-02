@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Evaluation

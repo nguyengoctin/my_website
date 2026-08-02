@@ -9,8 +9,6 @@ next: "/backend/01-introduction/java/"
 prev: "/backend/01-general/what-is-domain-name/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

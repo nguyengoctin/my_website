@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/adding-end-user-ids-in-promp
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/conducting-adversarial-testing/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - API
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Content Moderation APIs
 
 **Content Moderation APIs are tools | that automatically analyze text, | images, video, and audio | to detect potentially harmful**  
 *Các API kiểm duyệt nội dung là các công cụ | tự động phân tích văn bản, | hình ảnh, video và âm thanh | để phát hiện nội dung có khả năng gây hại*

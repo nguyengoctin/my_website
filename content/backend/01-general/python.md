@@ -9,8 +9,6 @@ next: "/backend/01-general/ruby/"
 prev: "/backend/01-general/what-is-http/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

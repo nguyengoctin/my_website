@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/twelve-factor-apps/"
 prev: "/backend/19-search-engines/elasticsearch/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

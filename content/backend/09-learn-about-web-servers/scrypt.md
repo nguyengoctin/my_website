@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/bcrypt/"
 prev: "/backend/09-learn-about-web-servers/ai-vs-traditional-coding/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

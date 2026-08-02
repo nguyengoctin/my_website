@@ -9,8 +9,6 @@ next: "/backend/07-learn-about-apis/jwt/"
 prev: "/backend/07-learn-about-apis/learn-about-apis/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

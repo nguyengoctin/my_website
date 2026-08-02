@@ -9,8 +9,6 @@ next: "/backend/01-general/what-is-http/"
 prev: "/backend/01-general/general-javascript/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

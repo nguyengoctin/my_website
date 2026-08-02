@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/security-and-privacy-concern
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - ethics
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Bias and Fairness
 
 **Bias and fairness in AI | refer to the challenges | of ensuring that machine learning models | do not produce discriminatory**  
 *Định kiến và sự công bằng trong AI | đề cập đến những thách thức | trong việc đảm bảo rằng các mô hình học máy | không tạo ra các kết quả phân biệt đối xử*

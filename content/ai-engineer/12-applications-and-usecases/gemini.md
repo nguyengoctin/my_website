@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/codex/"
 prev: "/ai-engineer/12-applications-and-usecases/claude-code/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Gemini

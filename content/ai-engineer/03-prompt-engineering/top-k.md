@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/top-p/"
 prev: "/ai-engineer/03-prompt-engineering/zero-shot/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Top-K Sampling
 
 **Top-K sampling is a method | used by Large Language Models (LLMs) | during text generation | to select the next word.**  
 *Top-K sampling là một phương pháp | được các mô hình ngôn ngữ lớn (LLMs) sử dụng | trong quá trình tạo văn bản | để chọn từ tiếp theo.*

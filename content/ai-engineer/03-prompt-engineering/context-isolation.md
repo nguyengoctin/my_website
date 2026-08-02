@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/"
 prev: "/ai-engineer/03-prompt-engineering/context-compaction/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

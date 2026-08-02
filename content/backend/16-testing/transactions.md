@@ -9,8 +9,6 @@ next: "/backend/16-testing/kafka/"
 prev: "/backend/16-testing/testing/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/openai-gpt-o-series/"
 prev: "/ai-engineer/10-models-and-apis/anthropic-claude/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Gemini
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Google's Gemini
 
 **Google Gemini is an | advanced AI model by | Google DeepMind, designed to**  
 *Google Gemini là một | mô hình AI tiên tiến của | Google DeepMind, được thiết kế để*

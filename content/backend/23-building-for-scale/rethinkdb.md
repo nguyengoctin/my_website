@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/graceful-degradation/"
 prev: "/backend/23-building-for-scale/couchdb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/pre-trained-models/"
 prev: "/ai-engineer/02-llm-fundamentals/rags/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# AI vs AGI
 
 **AI (Artificial Intelligence) refers | to systems designed to | perform specific tasks by**  
 *AI (Trí tuệ nhân tạo) đề cập | đến các hệ thống được thiết kế để | thực hiện các tác vụ cụ thể bằng cách*

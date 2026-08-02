@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/open-api-specs/"
 prev: "/backend/06-relational-databases/n1-problem/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

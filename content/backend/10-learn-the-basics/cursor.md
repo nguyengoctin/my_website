@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/server-security/"
 prev: "/backend/10-learn-the-basics/claude-code/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

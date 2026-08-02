@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/chroma/"
 prev: "/ai-engineer/04-rag-and-vector-databases/vector-databases/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Vector Database

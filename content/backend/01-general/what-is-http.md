@@ -9,8 +9,6 @@ next: "/backend/01-general/python/"
 prev: "/backend/01-general/go/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

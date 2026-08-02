@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/timescaledb/"
 prev: "/backend/23-building-for-scale/aws-neptune/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

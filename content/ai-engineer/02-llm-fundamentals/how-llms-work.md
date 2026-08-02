@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/"
 prev: "/ai-engineer/02-llm-fundamentals/context/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# How LLMs Work
 
 **Large Language Models (LLMs) | are sophisticated AI systems | trained on vast amounts | of text data**  
 *Các mô hình ngôn ngữ lớn (LLMs) | là các hệ thống AI tinh vi | được huấn luyện trên lượng lớn | dữ liệu văn bản*

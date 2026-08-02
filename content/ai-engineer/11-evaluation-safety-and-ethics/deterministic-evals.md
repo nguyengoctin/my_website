@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/model-based-evals/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/arize-ai/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Evaluation

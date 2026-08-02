@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/monolith/"
 prev: "/backend/17-message-brokers/failure-modes/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/qdrant/"
 prev: "/ai-engineer/04-rag-and-vector-databases/faiss/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LanceDB

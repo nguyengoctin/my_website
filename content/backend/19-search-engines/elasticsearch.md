@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/solr/"
 prev: "/backend/19-search-engines/service-mesh/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

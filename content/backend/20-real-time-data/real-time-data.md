@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/websockets/"
 prev: "/backend/19-search-engines/database-indexes/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

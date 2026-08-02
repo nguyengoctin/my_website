@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/data-classification/"
 prev: "/ai-engineer/04-rag-and-vector-databases/recommendation-systems/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Anomaly Detection
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Anomaly Detection
 
 **Anomaly detection with embeddings works | by transforming data, such as text, | images, or time-series data, | into vector representations that capture | their patterns and relationships.**  
 *Phát hiện bất thường với embeddings hoạt động | bằng cách chuyển đổi dữ liệu, chẳng hạn như văn bản, | hình ảnh hoặc dữ liệu chuỗi thời gian, | thành các biểu diễn vector nắm bắt | các mẫu và mối quan hệ của chúng.*

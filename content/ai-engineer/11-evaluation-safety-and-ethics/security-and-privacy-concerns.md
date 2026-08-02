@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/conducting-adversarial-testi
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/bias-and-fairness/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - security
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Security and Privacy Concerns
 
 **Security and privacy concerns in AI | revolve around the protection | of data and the responsible | use of models.**  
 *Các mối quan tâm về bảo mật và quyền riêng tư trong AI | xoay quanh việc bảo vệ | dữ liệu và việc sử dụng | các mô hình một cách có trách nhiệm.*

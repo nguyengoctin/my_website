@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/message-brokers/"
 prev: "/backend/16-testing/normalization/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

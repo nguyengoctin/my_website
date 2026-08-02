@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/recommendation-systems/"
 prev: "/ai-engineer/04-rag-and-vector-databases/what-are-embeddings/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Semantic Search
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Semantic Search
 
 **Embeddings are used for semantic search | by converting text, such as queries | and documents, into high-dimensional vectors | that capture the underlying meaning | and context, rather than just exact words.**  
 *Embeddings được sử dụng cho tìm kiếm ngữ nghĩa | bằng cách chuyển đổi văn bản, chẳng hạn như truy vấn | và tài liệu, thành các vector đa chiều | nắm bắt ý nghĩa | và ngữ cảnh cơ bản, thay vì chỉ các từ chính xác.*

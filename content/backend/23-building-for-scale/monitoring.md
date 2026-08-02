@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/backpressure/"
 prev: "/backend/23-building-for-scale/influx-db/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/"
 prev: "/ai-engineer/08-multimodal-ai/hugging-face-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LangChain

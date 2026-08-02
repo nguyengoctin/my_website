@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/constraints/"
 prev: "/ai-engineer/03-prompt-engineering/system-prompting/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Role & Behavior
 
 **System prompting involves crafting instructions | that define the AI model's role, | personality, and overall behavior**  
 *System prompting liên quan đến việc tạo ra các hướng dẫn | xác định vai trò của mô hình AI, | tính cách, và hành vi tổng thể*

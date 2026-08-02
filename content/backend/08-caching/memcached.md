@@ -9,8 +9,6 @@ next: "/backend/08-caching/openid/"
 prev: "/backend/08-caching/cookie-based-auth/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

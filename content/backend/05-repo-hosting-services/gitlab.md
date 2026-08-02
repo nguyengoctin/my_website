@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/migrations/"
 prev: "/backend/05-repo-hosting-services/github/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/antigravity/"
 prev: "/backend/10-learn-the-basics/csp/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/multimodal-ai-usecases/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Multimodal AI

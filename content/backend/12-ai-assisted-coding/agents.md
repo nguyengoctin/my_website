@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/mcp/"
 prev: "/backend/12-ai-assisted-coding/code-reviews/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

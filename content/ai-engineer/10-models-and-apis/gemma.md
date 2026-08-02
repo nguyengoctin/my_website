@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/qwen/"
 prev: "/ai-engineer/10-models-and-apis/choosing-the-right-model/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models and APIs
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Gemma
 
 **Gemma is a family of | open-source large language models (LLMs) | developed by Google.**  
 *Gemma là một gia đình các | large language models (LLMs) mã nguồn mở | được phát triển bởi Google.*

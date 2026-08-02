@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/temperature/"
 prev: "/ai-engineer/03-prompt-engineering/repetition-penalties/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

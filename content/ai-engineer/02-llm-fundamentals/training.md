@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/vector-dbs/"
 prev: "/ai-engineer/02-llm-fundamentals/inference/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Training
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Training
 
 **Training refers to the | process of teaching a | machine learning model to**  
 *Training đề cập đến | quá trình dạy một | mô hình ML*

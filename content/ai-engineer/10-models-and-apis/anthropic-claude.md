@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/google-gemini/"
 prev: "/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Claude
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Anthropic's Claude
 
 **Anthropic's Claude is an | AI language model designed | to facilitate safe and**  
 *Anthropic's Claude là một | mô hình ngôn ngữ AI được thiết kế | để tạo điều kiện cho các hệ thống AI an toàn và*

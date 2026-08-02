@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/connect-to-local-server/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-server/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

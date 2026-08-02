@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/real-time-data/"
 prev: "/backend/19-search-engines/server-sent-events/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

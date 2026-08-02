@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/purpose-and-functionality/"
 prev: "/ai-engineer/04-rag-and-vector-databases/models-on-hugging-face/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Vector Database
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Vector Databases
 
 **Vector databases are systems specialized | in storing, indexing, and retrieving | high-dimensional vectors, often used | as embeddings for data like text, | images, or audio.**  
 *Vector databases là các hệ thống chuyên | lưu trữ, lập chỉ mục và truy xuất | các vector đa chiều, thường được sử dụng | làm embeddings cho dữ liệu như văn bản, | hình ảnh hoặc âm thanh.*

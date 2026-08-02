@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/firebase/"
 prev: "/backend/23-building-for-scale/redis/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

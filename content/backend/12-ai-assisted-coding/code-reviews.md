@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/agents/"
 prev: "/backend/12-ai-assisted-coding/prompting-techniques/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

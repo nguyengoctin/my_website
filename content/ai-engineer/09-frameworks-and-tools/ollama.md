@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/development-tools/"
 prev: "/ai-engineer/09-frameworks-and-tools/transformersjs/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Ollama
 
 **Ollama is a platform that offers | large language models (LLMs) designed | to run locally on personal devices, | enabling AI functionality without relying | on cloud services.**  
 *Ollama là một nền tảng cung cấp | các LLM được thiết kế | để chạy cục bộ trên các thiết bị cá nhân, | cho phép chức năng AI mà không cần dựa | vào các dịch vụ đám mây.*

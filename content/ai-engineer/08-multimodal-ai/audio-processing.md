@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/text-to-speech/"
 prev: "/ai-engineer/08-multimodal-ai/video-understanding/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Audio Processing

@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/ssltls/"
 prev: "/backend/10-learn-the-basics/owasp-risks/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

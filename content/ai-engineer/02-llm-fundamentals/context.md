@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/how-llms-work/"
 prev: "/ai-engineer/02-llm-fundamentals/tokens/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM Fundamentals
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Contextual prompting
 
 **Contextual prompting provides specific background information | or situational details relevant | to the current task,**  
 *Contextual prompting cung cấp thông tin nền tảng cụ thể | hoặc các chi tiết tình huống liên quan | đến tác vụ hiện tại,*

@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/couchdb/"
 prev: "/backend/23-building-for-scale/observability/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

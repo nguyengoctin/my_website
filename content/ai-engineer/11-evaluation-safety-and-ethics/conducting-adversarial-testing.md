@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/content-moderation-apis/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/security-and-privacy-concerns/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Testing
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Conducting adversarial testing
 
 **Adversarial testing involves | intentionally exposing machine learning models | to deceptive, perturbed, | or carefully crafted inputs**  
 *Kiểm thử đối nghịch liên quan đến | việc cố tình phơi bày các mô hình học máy | trước các đầu vào lừa đảo, bị nhiễu, | hoặc được tạo ra cẩn thận*

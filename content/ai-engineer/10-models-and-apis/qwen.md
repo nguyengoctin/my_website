@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/openrouter/"
 prev: "/ai-engineer/10-models-and-apis/gemma/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models and APIs
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Qwen
 
 **Qwen is a series of | large language models (LLMs) | developed by Alibaba Group.**  
 *Qwen là một loạt các | large language models (LLMs) | được phát triển bởi Alibaba Group.*

@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/top-k/"
 prev: "/ai-engineer/03-prompt-engineering/cot/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Zero Shot Prompting
 
 **Zero-shot prompting is a prompt engineering method | that relies on the pretraining | of a large language model (LLM) | to infer an appropriate response.**  
 *Zero-shot prompting là một phương pháp kỹ thuật prompt | dựa vào quá trình tiền huấn luyện | của một mô hình ngôn ngữ lớn (LLM) | để suy luận ra phản hồi phù hợp.*

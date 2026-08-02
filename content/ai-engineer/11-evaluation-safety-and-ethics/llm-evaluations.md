@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/llm-observability/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Evaluation

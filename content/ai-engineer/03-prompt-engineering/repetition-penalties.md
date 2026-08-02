@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/sampling-parameters/"
 prev: "/ai-engineer/03-prompt-engineering/streaming-responses/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Repetition Penalties
 
 **Repetition penalties discourage LLMs | from repeating words or phrases | by reducing the probability**  
 *Repetition penalties ngăn cản các LLM | lặp lại các từ hoặc cụm từ | bằng cách giảm xác suất*

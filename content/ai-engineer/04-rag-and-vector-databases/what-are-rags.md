@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/rag-usecases/"
 prev: "/ai-engineer/04-rag-and-vector-databases/performing-similarity-search/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

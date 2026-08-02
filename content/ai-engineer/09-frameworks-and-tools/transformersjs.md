@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/ollama/"
 prev: "/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - JavaScript
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Transformers.js
 
 **Transformers.js is a JavaScript library | that enables transformer models, | like those from Hugging Face, | to run directly in the browser | or Node.js, without needing cloud services.**  
 *Transformers.js là một thư viện JavaScript | cho phép các mô hình transformer, | giống như các mô hình từ Hugging Face, | chạy trực tiếp trong trình duyệt | hoặc Node.js mà không cần dịch vụ đám mây.*

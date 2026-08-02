@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/profiling-performance/"
 prev: "/backend/17-message-brokers/message-brokers/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

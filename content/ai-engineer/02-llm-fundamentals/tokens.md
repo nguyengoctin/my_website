@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/context/"
 prev: "/ai-engineer/02-llm-fundamentals/pre-trained-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Tokens
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Tokens in Large Language Models
 
 **Tokens are fundamental units | of text that LLMs | process, created by breaking**  
 *Tokens là các đơn vị cơ bản | của văn bản mà LLMs | xử lý, được tạo ra bằng cách chia*

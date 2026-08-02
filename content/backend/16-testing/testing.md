@@ -9,8 +9,6 @@ next: "/backend/16-testing/transactions/"
 prev: "/backend/15-more-about-databases/more-about-databases/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

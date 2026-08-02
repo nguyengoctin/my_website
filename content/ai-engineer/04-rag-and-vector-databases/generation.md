@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/using-sdks-directly/"
 prev: "/ai-engineer/04-rag-and-vector-databases/retrieval-process/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

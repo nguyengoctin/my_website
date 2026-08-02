@@ -9,8 +9,6 @@ next: "/backend/08-caching/redis-caching/"
 prev: "/backend/08-caching/apache/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

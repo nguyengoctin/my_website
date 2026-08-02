@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/gemini-embedding/"
 prev: "/ai-engineer/04-rag-and-vector-databases/data-classification/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# OpenAI Embeddings API
 
 **The OpenAI Embeddings API provides | a straightforward way to transform text | into numerical vector representations | called embeddings.**  
 *OpenAI Embeddings API cung cấp | một cách đơn giản để chuyển đổi văn bản | thành các biểu diễn vector số | được gọi là embeddings.*

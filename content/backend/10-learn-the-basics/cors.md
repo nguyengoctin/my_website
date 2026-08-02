@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/claude-code/"
 prev: "/backend/10-learn-the-basics/ssltls/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

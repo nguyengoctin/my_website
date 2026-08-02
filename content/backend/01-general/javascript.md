@@ -9,8 +9,6 @@ next: "/backend/01-general/go/"
 prev: "/backend/01-general/how-does-the-internet-work/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

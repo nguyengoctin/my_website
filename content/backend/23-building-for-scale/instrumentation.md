@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/throttling/"
 prev: "/backend/23-building-for-scale/graceful-degradation/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

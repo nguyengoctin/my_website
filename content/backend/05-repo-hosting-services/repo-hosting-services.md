@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/github/"
 prev: "/backend/04-version-control-systems/git/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

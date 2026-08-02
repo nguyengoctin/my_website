@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/rest/"
 prev: "/backend/05-repo-hosting-services/mysql/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

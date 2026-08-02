@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/md5/"
 prev: "/backend/09-learn-about-web-servers/web-security/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

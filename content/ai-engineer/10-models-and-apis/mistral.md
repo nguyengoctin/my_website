@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/cohere/"
 prev: "/ai-engineer/10-models-and-apis/meta-llama/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Mistral AI
 
 **Mistral AI is a company | focused on developing open-weight, | large language models (LLMs)**  
 *Mistral AI là một công ty | tập trung phát triển các mô hình ngôn ngữ lớn (LLMs) | có trọng số mở*

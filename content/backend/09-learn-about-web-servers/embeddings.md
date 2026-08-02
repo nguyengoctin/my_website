@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/learn-the-basics/"
 prev: "/backend/09-learn-about-web-servers/bcrypt/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/tokens/"
 prev: "/ai-engineer/02-llm-fundamentals/ai-vs-agi/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Pre-trained Models
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Pre-trained Models
 
 **Pre-trained models are Machine | Learning (ML) models that | have been previously trained**  
 *Pre-trained models là các mô hình | Machine Learning (ML) đã | được huấn luyện trước đó*

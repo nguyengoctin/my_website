@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/ai-vs-traditional-coding/"
 prev: "/backend/09-learn-about-web-servers/md5/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

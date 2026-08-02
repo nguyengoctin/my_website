@@ -9,8 +9,6 @@ next: "/backend/11-applications/applications/"
 prev: "/backend/10-learn-the-basics/copilot/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

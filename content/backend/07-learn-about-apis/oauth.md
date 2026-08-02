@@ -9,8 +9,6 @@ next: "/backend/08-caching/caching/"
 prev: "/backend/07-learn-about-apis/jwt/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

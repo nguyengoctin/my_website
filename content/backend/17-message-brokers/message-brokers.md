@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/failure-modes/"
 prev: "/backend/16-testing/lxc/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

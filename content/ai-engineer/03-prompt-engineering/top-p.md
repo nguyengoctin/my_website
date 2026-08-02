@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/few-shot/"
 prev: "/ai-engineer/03-prompt-engineering/top-k/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Top-P Sampling
 
 **Top-P sampling, also known as | nucleus sampling, is a technique | used in language models | to generate text.**  
 *Top-P sampling, còn được gọi là | nucleus sampling, là một kỹ thuật | được sử dụng trong các mô hình ngôn ngữ | để tạo văn bản.*

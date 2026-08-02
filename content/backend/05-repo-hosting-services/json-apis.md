@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/relational-databases/"
 prev: "/backend/05-repo-hosting-services/rest/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/learn-about-web-servers/"
 prev: "/backend/08-caching/saml/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

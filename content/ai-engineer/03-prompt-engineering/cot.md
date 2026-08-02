@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/zero-shot/"
 prev: "/ai-engineer/03-prompt-engineering/react/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Chain-of-Thought Prompting
 
 **Chain of Thought (CoT) | is a way for an AI agent | to think out loud.**  
 *Chain of Thought (CoT) | là một cách để một tác nhân AI | suy nghĩ thành tiếng.*

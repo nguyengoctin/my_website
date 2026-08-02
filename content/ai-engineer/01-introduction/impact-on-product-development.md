@@ -9,8 +9,6 @@ next: "/ai-engineer/01-introduction/roles-and-responsiblities/"
 prev: "/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Product Development
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Impact on Product Development
 
 **AI engineering transforms product | development by automating tasks, | enhancing data-driven decision-making, and**  
 *Kỹ thuật AI chuyển đổi quá trình | phát triển sản phẩm bằng cách tự động hóa các tác vụ, | tăng cường ra quyết định dựa trên dữ liệu, và*

@@ -9,8 +9,6 @@ next: "/backend/14-ci-cd/functional-testing/"
 prev: "/backend/14-ci-cd/integration-testing/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/role-behavior/"
 prev: "/ai-engineer/03-prompt-engineering/input-format/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# System Prompting
 
 **System prompting sets the overall context, | purpose, and operational guidelines | for LLMs.**  
 *System prompting thiết lập bối cảnh tổng thể, | mục đích, và các hướng dẫn vận hành | cho các LLM.*

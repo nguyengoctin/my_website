@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/openai-compatible-apis/"
 prev: "/ai-engineer/10-models-and-apis/openrouter/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Models and APIs
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Claude Messages API
 
 **The Claude Messages API | provides a structured way | to interact with the Claude AI model.**  
 *Claude Messages API | cung cấp một cách có cấu trúc | để tương tác với mô hình Claude AI.*

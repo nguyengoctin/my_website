@@ -9,8 +9,6 @@ next: "/backend/07-learn-about-apis/oauth/"
 prev: "/backend/07-learn-about-apis/authentication/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/embeddings/"
 prev: "/backend/09-learn-about-web-servers/scrypt/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

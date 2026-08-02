@@ -9,8 +9,6 @@ next: "/backend/01-introduction/what-is-hosting/"
 prev: "/backend/01-introduction/java/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

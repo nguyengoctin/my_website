@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/transport-layer/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/mcp-client/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/langsmith/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Monitoring

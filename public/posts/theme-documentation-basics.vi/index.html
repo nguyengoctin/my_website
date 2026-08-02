@@ -1,990 +1,465 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản - Nguyen Ngoc Tin</title><meta name="Description" content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><meta property="og:url" content="http://localhost:1313/posts/theme-documentation-basics.vi/">
-  <meta property="og:site_name" content="Nguyen Ngoc Tin">
-  <meta property="og:title" content="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản">
-  <meta property="og:description" content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2020-03-06T00:00:00+00:00">
-    <meta property="article:modified_time" content="2020-03-06T00:00:00+00:00">
-    <meta property="article:tag" content="Documentation">
-    <meta property="article:tag" content="Installation">
-    <meta property="article:tag" content="Configuration">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản">
-  <meta name="twitter:description" content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó.">
-<meta name="application-name" content="Nguyen Ngoc Tin">
-<meta name="apple-mobile-web-app-title" content="Nguyen Ngoc Tin">
-<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/theme-documentation-basics.vi/" /><link rel="next" href="http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản",
-        "inLanguage": "en",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/theme-documentation-basics.vi\/"
-        },"genre": "posts","keywords": "documentation, installation, configuration","wordcount":  2642 ,
-        "url": "http:\/\/localhost:1313\/posts\/theme-documentation-basics.vi\/","datePublished": "2020-03-06T00:00:00+00:00","dateModified": "2020-03-06T00:00:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "Dillon"
-            },"description": "Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
-          const query = window.matchMedia('(prefers-color-scheme: dark)');
-          function applyTheme() {
-            let theme = window.localStorage?.getItem('theme') || 'auto';
-            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
-            document.body.setAttribute('theme', isDark? 'dark' : 'light');
-            document.body.setAttribute('cfg-theme', theme);
-          }
-
-          applyTheme();
-          query.addEventListener('change', applyTheme);
-        </script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Nguyen Ngoc Tin">Nguyễn Ngọc Tín</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/roadmaps/" title="Learning Roadmaps"> Roadmaps </a><a class="menu-item" href="/posts/" title="Blog Posts"> Blog </a><a class="menu-item" href="/tags/" title="All Tags"> Tags </a><a class="menu-item" href="/categories/" title="All Categories"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust" aria-hidden="true"></i>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Nguyen Ngoc Tin">Nguyễn Ngọc Tín</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
-                    </a>
-                </div><a class="menu-item" href="/roadmaps/" title="Learning Roadmaps">Roadmaps</a><a class="menu-item" href="/posts/" title="Blog Posts">Blog</a><a class="menu-item" href="/tags/" title="All Tags">Tags</a><a class="menu-item" href="/categories/" title="All Categories">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><div class="search-dropdown desktop">
-        <div id="search-dropdown-desktop"></div>
-    </div>
-    <div class="search-dropdown mobile">
-        <div id="search-dropdown-mobile"></div>
-    </div><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><div id="reading-progress" style="position: fixed; top: 0; left: 0; height: 2px; background: #4d74eb; z-index: 9999; width: 0%; transition: width 0.1s ease-out;"></div>
-    <script>
-      window.addEventListener('scroll', function() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        var bar = document.getElementById('reading-progress');
-        if (bar) bar.style.width = scrolled + '%';
-      });
-    </script>
-
-    <article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản</h1><div class="post-meta" style="font-family: 'Lora', Georgia, serif; font-size: 0.9rem; color: #828282; margin-bottom: 1.5rem;">
-            <span class="post-author">By <strong>Dillon</strong></span>
-            &nbsp;·&nbsp;
-            <time datetime="2020-03-06">Mar 06, 2020</time>
-            &nbsp;·&nbsp;
-            <span>13 min read</span>&nbsp;·&nbsp;<a href="/categories/tech-blog/" style="color: #828282; margin-left: 0.5rem;">in Tech Blog</a></div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-yêu-cầu">1 Yêu cầu</a></li>
-    <li><a href="#2-cài-đặt">2 Cài đặt</a>
-      <ul>
-        <li><a href="#21-tạo-dự-án-của-bạn">2.1 Tạo Dự án của Bạn</a></li>
-        <li><a href="#22-cài-đặt-giao-diện-theme">2.2 Cài đặt Giao diện (Theme)</a>
-          <ul>
-            <li><a href="#độ-tương-thích-của-giao-diện-loveit">Độ tương thích của giao diện LoveIt</a></li>
-          </ul>
-        </li>
-        <li><a href="#23-cấu-hình-cơ-bản">2.3 Cấu hình Cơ bản</a></li>
-        <li><a href="#24-tạo-bài-viết-đầu-tiên">2.4 Tạo Bài viết Đầu tiên</a></li>
-        <li><a href="#25-khởi-chạy-trang-web-ở-local">2.5 Khởi chạy Trang web ở Local</a></li>
-        <li><a href="#26-build-trang-web">2.6 Build Trang web</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-cấu-hình">3 Cấu hình</a>
-      <ul>
-        <li><a href="#31-cấu-hình-trang-web-site-configuration">3.1 Cấu hình Trang web (Site Configuration)</a></li>
-        <li><a href="#32-favicons-browserconfig-manifest">3.2 Favicons, Browserconfig, Manifest</a></li>
-        <li><a href="#33-tùy-chỉnh-kiểu-dáng-style-customization">3.3 Tùy chỉnh Kiểu dáng (Style Customization)</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-đa-ngôn-ngữ-và-i18n">4 Đa ngôn ngữ và i18n</a>
-      <ul>
-        <li><a href="#41-độ-tương-thích">4.1 Độ tương thích</a></li>
-        <li><a href="#42-cấu-hình-cơ-bản">4.2 Cấu hình Cơ bản</a></li>
-      </ul>
-    </li>
-    <li><a href="#5-tìm-kiếm-search">5 Tìm kiếm (Search)</a>
-      <ul>
-        <li><a href="#51-cấu-hình-đầu-ra">5.1 Cấu hình Đầu ra</a></li>
-        <li><a href="#52-cấu-hình-tìm-kiếm">5.2 Cấu hình Tìm kiếm</a>
-          <ul>
-            <li><a href="#so-sánh-công-cụ-tìm-kiếm">So sánh công cụ tìm kiếm:</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>Khám phá giao diện <strong>Hugo - LoveIt</strong> và các khái niệm cốt lõi đằng sau nó.</p>
-<hr>
-<h2 id="1-yêu-cầu">1 Yêu cầu</h2>
-<p>Nhờ sự đơn giản của Hugo, Hugo là phụ thuộc (dependency) duy nhất của giao diện này.</p>
-<p>Chỉ cần cài đặt phiên bản Hugo mới nhất cho hệ điều hành của bạn (Windows, Linux, macOS).</p>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p><strong>Khi nào bạn cần sử dụng Hugo phiên bản Extended (Hugo extended edition)?</strong></p>
-<p>Khi bạn muốn tùy chỉnh kiểu dáng (style customization), bạn cần sử dụng phiên bản Hugo extended để hiển thị/chuyển đổi SCSS sang CSS một cách chính xác.</p></div>
-    </div>
-</div><hr>
-<h2 id="2-cài-đặt">2 Cài đặt</h2>
-<p>Các bước dưới đây sẽ giúp bạn khởi tạo trang web mới của mình. Nếu bạn chưa biết gì về Hugo, chúng tôi khuyên bạn nên tìm hiểu thêm thông qua tài liệu tuyệt vời dành cho người bắt đầu của Hugo.</p>
-<h3 id="21-tạo-dự-án-của-bạn">2.1 Tạo Dự án của Bạn</h3>
-<p>Hugo cung cấp một lệnh mới để tạo một trang web mới:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site my_website
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> my_website</span></span></code></pre></div></div>
-<h3 id="22-cài-đặt-giao-diện-theme">2.2 Cài đặt Giao diện (Theme)</h3>
-<p>Kho lưu trữ (repository) của giao diện LoveIt là: <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer ">https://github.com/dillonzq/LoveIt</a>.</p>
-<p>Bạn có thể tải xuống tệp nén <code>.zip</code> bản phát hành của giao diện và giải nén nó vào thư mục <code>themes</code>.</p>
-<p>Hoặc, clone kho lưu trữ này vào thư mục <code>themes</code>:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt</span></span></code></pre></div></div>
-<p>Hoặc, tạo một kho lưu trữ git rỗng và biến kho lưu trữ theme này thành một submodule trong thư mục trang web của bạn:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt</span></span></code></pre></div></div>
-<h4 id="độ-tương-thích-của-giao-diện-loveit">Độ tương thích của giao diện LoveIt</h4>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left">Nhánh hoặc phiên bản LoveIt</th>
-          <th style="text-align: left">Phiên bản Hugo được hỗ trợ</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><strong>master</strong> (Unstable)</td>
-          <td style="text-align: left">$\ge$ 0.128.0</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>0.3.X</strong> (Khuyên dùng)</td>
-          <td style="text-align: left">0.128.0 - 0.145.0</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>0.2.X</strong> (Cũ/Outdated)</td>
-          <td style="text-align: left">0.68.0 - 0.127.0</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h3 id="23-cấu-hình-cơ-bản">2.3 Cấu hình Cơ bản</h3>
-<p>Dưới đây là cấu hình cơ bản cho giao diện LoveIt:</p>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-toml">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Thay đổi giao diện mặc định được sử dụng khi build trang web với Hugo</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Tiêu đề trang web</span>
-</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Trang Hugo Mới Của Tôi&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Mã ngôn ngữ [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Tên ngôn ngữ [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình Menu</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Bạn có thể thêm thông tin phụ trước tên (hỗ trợ định dạng HTML), ví dụ như icon</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Bạn có thể thêm thông tin phụ sau tên (hỗ trợ định dạng HTML), ví dụ như icon</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Bài viết&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Tiêu đề sẽ hiển thị khi bạn rê chuột vào liên kết menu này</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Thẻ&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Danh mục&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình liên quan đến Markup trong Hugo</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Tô màu cú pháp (Syntax Highlighting)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># false là cấu hình bắt buộc</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span></span></span></code></pre></div></div>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Khi build trang web, bạn có thể thiết lập giao diện bằng tùy chọn <code>--theme</code>. Tuy nhiên, chúng tôi khuyên bạn nên chỉnh sửa tệp cấu hình (<code>hugo.toml</code>) và đặt giao diện làm mặc định.</p></div>
-    </div>
-</div><hr>
-<h3 id="24-tạo-bài-viết-đầu-tiên">2.4 Tạo Bài viết Đầu tiên</h3>
-<p>Dưới đây là cách tạo bài viết đầu tiên của bạn:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/first_post.md</span></span></code></pre></div></div>
-<p>Hãy thoải mái chỉnh sửa tệp bài viết bằng cách thêm một số nội dung mẫu và thay đổi giá trị <code>title</code> ở phần đầu của tệp.</p>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Theo mặc định, tất cả các bài viết và trang đều được tạo dưới dạng bản nháp (<code>draft</code>). Nếu bạn muốn hiển thị các trang này, hãy xóa thuộc tính <code>draft: true</code> khỏi phần metadata, đặt thuộc tính <code>draft: false</code> hoặc thêm tham số <code>-D</code>/<code>--buildDrafts</code> vào lệnh <code>hugo</code>.</p></div>
-    </div>
-</div><hr>
-<h3 id="25-khởi-chạy-trang-web-ở-local">2.5 Khởi chạy Trang web ở Local</h3>
-<p>Khởi chạy bằng lệnh sau:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo serve</span></span></code></pre></div></div>
-<p>Truy cập vào <a href="http://localhost:1313" target="_blank" rel="noopener noreffer ">http://localhost:1313</a>.</p>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Khi bạn chạy <code>hugo serve</code>, mỗi khi nội dung của các tệp thay đổi, trang web sẽ tự động làm mới với các thay đổi đó.</p></div>
-    </div>
-</div><div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Vì giao diện sử dụng <code>.Scratch</code> trong Hugo để thực hiện một số tính năng, chúng tôi rất khuyên bạn nên thêm tham số <code>--disableFastRender</code> vào lệnh <code>hugo serve</code> để xem trước trực tiếp trang bạn đang chỉnh sửa:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo serve --disableFastRender</span></span></code></pre></div></div></div>
-    </div>
-</div><hr>
-<h3 id="26-build-trang-web">2.6 Build Trang web</h3>
-<p>Khi trang web của bạn sẵn sàng để triển khai, hãy chạy lệnh sau:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-bash">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo</span></span></code></pre></div></div>
-<p>Thư mục <code>public</code> sẽ được tạo ra, chứa tất cả nội dung tĩnh và tài nguyên cho trang web của bạn. Giờ đây, nó có thể được triển khai trên bất kỳ máy chủ web nào.</p>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Trang web có thể được tự động xuất bản và lưu trữ với Netlify. Hoặc bạn có thể sử dụng AWS Amplify, GitHub Pages, Render và nhiều dịch vụ khác…</p></div>
-    </div>
-</div><hr>
-<h2 id="3-cấu-hình">3 Cấu hình</h2>
-<h3 id="31-cấu-hình-trang-web-site-configuration">3.1 Cấu hình Trang web (Site Configuration)</h3>
-<p>Ngoài cấu hình toàn cục của Hugo và cấu hình menu, LoveIt cho phép bạn định nghĩa các tham số sau trong cấu hình trang web của bạn (dưới đây là tệp <code>hugo.toml</code> với các giá trị mặc định).</p>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-toml">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://example.org/&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Thay đổi giao diện mặc định được sử dụng khi build trang web với Hugo</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;LoveIt&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Tiêu đề trang web</span>
-</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Trang Hugo Mới Của Tôi&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Mã ngôn ngữ [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Tên ngôn ngữ [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Có bao gồm ngôn ngữ Trung/Nhật/Hàn hay không</span>
-</span></span><span class="line"><span class="cl"><span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Mô tả bản quyền chỉ được sử dụng cho cấu hình SEO schema</span>
-</span></span><span class="line"><span class="cl"><span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Có sử dụng robots.txt hay không</span>
-</span></span><span class="line"><span class="cl"><span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Có sử dụng nhật ký git commit hay không</span>
-</span></span><span class="line"><span class="cl"><span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="c"># Có sử dụng mã emoji hay không</span>
-</span></span><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Bỏ qua một số lỗi build</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ignoreErrors</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;error-remote-getjson&#34;</span><span class="p">,</span> <span class="s2">&#34;error-missing-instagram-accesstoken&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình phân trang (Pagination)</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">pagination</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">disableAliases</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">pagerSize</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">path</span> <span class="p">=</span> <span class="s2">&#34;page&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình Menu</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Bài viết&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Thẻ&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Danh mục&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Giao diện mặc định của trang web [&#34;auto&#34;, &#34;light&#34;, &#34;dark&#34;]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">defaultTheme</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># URL kho lưu trữ git công khai chỉ khi enableGitInfo là true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">gitRepo</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Hàm băm được sử dụng cho SRI, khi để trống sẽ không sử dụng SRI</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">fingerprint</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Định dạng ngày tháng</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;2006-01-02&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Tiêu đề trang web cho Open Graph và Twitter Cards</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Trang web xịn của tôi&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Mô tả trang web cho RSS, SEO, Open Graph và Twitter Cards</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Đây là trang web xịn của tôi&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Hình ảnh trang web cho Open Graph và Twitter Cards</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">images</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;/logo.png&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình Tác giả (Author)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">author</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">email</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">link</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Header</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">header</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Chế độ header trên máy tính [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">desktopMode</span> <span class="p">=</span> <span class="s2">&#34;fixed&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Chế độ header trên di động [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">mobileMode</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Cấu hình tiêu đề Header</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">header</span><span class="p">.</span><span class="nx">title</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="c"># URL của LOGO</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">logo</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="c"># Tên tiêu đề</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="c"># Bạn có thể thêm thông tin phụ trước tên (hỗ trợ HTML)</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="c"># Bạn có thể thêm thông tin phụ sau tên (hỗ trợ HTML)</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="c"># Có sử dụng hiệu ứng gõ chữ typeit cho tiêu đề hay không</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">typeit</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Footer</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">footer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Nội dung tùy chỉnh (hỗ trợ HTML)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">custom</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Có hiển thị thông tin Hugo và giao diện hay không</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hugo</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Có hiển thị thông tin bản quyền hay không</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">copyright</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Có hiển thị tác giả hay không</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">author</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Thời gian tạo trang web</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">since</span> <span class="p">=</span> <span class="mi">2019</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Thông tin ICP chỉ ở Trung Quốc (hỗ trợ HTML)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">icp</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Thông tin giấy phép (hỗ trợ HTML)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">license</span> <span class="p">=</span> <span class="s1">&#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình trang Section (tất cả bài viết)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">section</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">paginate</span> <span class="p">=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;01-02&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">rss</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình trang Danh sách (List - danh mục hoặc thẻ)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">list</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">paginate</span> <span class="p">=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;01-02&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">rss</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình App icon</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">app</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Trang web xịn của tôi&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">noFavicon</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">svgFavicon</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">themeColor</span> <span class="p">=</span> <span class="s2">&#34;#ffffff&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">iconColor</span> <span class="p">=</span> <span class="s2">&#34;#5bbad5&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">tileColor</span> <span class="p">=</span> <span class="s2">&#34;#da532c&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Tìm kiếm (Search)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Loại công cụ tìm kiếm [&#34;lunr&#34;, &#34;algolia&#34;]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;lunr&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">30</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Trang chủ (Home page)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">home</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">rss</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Hồ sơ trang chủ</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">home</span><span class="p">.</span><span class="nx">profile</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">gravatarEmail</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">avatarURL</span> <span class="p">=</span> <span class="s2">&#34;/images/avatar.webp&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">subtitle</span> <span class="p">=</span> <span class="s2">&#34;Đây là Trang Hugo Mới Của Tôi&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">typeit</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">social</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">disclaimer</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Bài viết trang chủ</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">home</span><span class="p">.</span><span class="nx">posts</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">paginate</span> <span class="p">=</span> <span class="mi">6</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Mạng xã hội của tác giả</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">social</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">GitHub</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Linkedin</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">X</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Twitter</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Instagram</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Facebook</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Telegram</span> <span class="p">=</span> <span class="s2">&#34;xxxx&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Medium</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">Email</span> <span class="p">=</span> <span class="s2">&#34;xxxx@xxxx.com&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">RSS</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Toàn cục Trang (Page global config)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hiddenFromHomePage</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hiddenFromSearch</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">twemoji</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">lightgallery</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">ruby</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">fraction</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">fontawesome</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">linkToMarkdown</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">rssFullText</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># Mục lục (Table of contents)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">toc</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">keepStatic</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">auto</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># Công thức toán học KaTeX</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">math</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">inlineLeftDelimiter</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">inlineRightDelimiter</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">blockLeftDelimiter</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">blockRightDelimiter</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">copyTex</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">mhchem</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># Cấu hình Mã nguồn (Code)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">code</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">copy</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">maxShownLines</span> <span class="p">=</span> <span class="mi">50</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># Cấu hình Chia sẻ mạng xã hội</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">share</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">X</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">Facebook</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">Telegram</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">Linkedin</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">Whatsapp</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c"># Cấu hình Bình luận (Comment)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">comment</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">comment</span><span class="p">.</span><span class="nx">disqus</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">enable</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">shortname</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">comment</span><span class="p">.</span><span class="nx">giscus</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">enable</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Thư viện bên thứ ba</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">library</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">css</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">js</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình SEO trang</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">seo</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">images</span> <span class="p">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">seo</span><span class="p">.</span><span class="nx">publisher</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">logoUrl</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình TypeIt</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">typeit</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">speed</span> <span class="p">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">cursorSpeed</span> <span class="p">=</span> <span class="mi">1000</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">cursorChar</span> <span class="p">=</span> <span class="s2">&#34;|&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">duration</span> <span class="p">=</span> <span class="mi">-1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình SEO trang web</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">seo</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">image</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">thumbnailUrl</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Phân tích (Analytics)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">analytics</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">analytics</span><span class="p">.</span><span class="nx">google</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">id</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">respectDoNotTrack</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Chấp nhận Cookie</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">cookieconsent</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">cookieconsent</span><span class="p">.</span><span class="nx">content</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">message</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">dismiss</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">link</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình CDN</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">cdn</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">data</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># Cấu hình Độ tương thích</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">compatibility</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">polyfill</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">objectFit</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># Cấu hình Markup trong Hugo</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">lineNos</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">lineNumbersInTable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">extensions</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">definitionList</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">footnote</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">linkify</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">strikethrough</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">table</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">taskList</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">typographer</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">tableOfContents</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">startLevel</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">endLevel</span> <span class="p">=</span> <span class="mi">6</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">changefreq</span> <span class="p">=</span> <span class="s2">&#34;weekly&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">filename</span> <span class="p">=</span> <span class="s2">&#34;sitemap.xml&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">priority</span> <span class="p">=</span> <span class="mf">0.5</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s2">&#34;:filename&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">mediaTypes</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">mediaTypes</span><span class="p">.</span><span class="s2">&#34;text/plain&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">suffixes</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;md&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputFormats</span><span class="p">.</span><span class="nx">MarkDown</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">mediaType</span> <span class="p">=</span> <span class="s2">&#34;text/plain&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isPlainText</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isHTML</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">page</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;MarkDown&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">taxonomy</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">]</span></span></span></code></pre></div></div>
-<div class="details admonition note open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p>Môi trường mặc định là <code>development</code> khi dùng <code>hugo serve</code> và <code>production</code> khi dùng <code>hugo</code>.
-Do các hạn chế trong môi trường phát triển cục bộ, hệ thống bình luận, CDN và fingerprint sẽ không được bật. Bạn có thể bật các tính năng này bằng lệnh: <code>hugo serve -e production</code>.</p></div>
-    </div>
-</div><hr>
-<h3 id="32-favicons-browserconfig-manifest">3.2 Favicons, Browserconfig, Manifest</h3>
-<p>Khuyên bạn nên đặt các biểu tượng favicon riêng của mình:</p>
-<ul>
-<li><code>apple-touch-icon.png</code> (180x180)</li>
-<li><code>favicon-32x32.png</code> (32x32)</li>
-<li><code>favicon-16x16.png</code> (16x16)</li>
-<li><code>mstile-150x150.png</code> (150x150)</li>
-<li><code>android-chrome-192x192.png</code> (192x192)</li>
-<li><code>android-chrome-512x512.png</code> (512x512)</li>
-</ul>
-<p>Vào thư mục <code>/static</code>. Chúng dễ dàng được tạo thông qua <a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreffer ">https://realfavicongenerator.net/</a>.</p>
-<p>Chỉnh sửa <code>browserconfig.xml</code> và <code>site.webmanifest</code> để đặt <code>theme-color</code> và <code>background-color</code>.</p>
-<hr>
-<h3 id="33-tùy-chỉnh-kiểu-dáng-style-customization">3.3 Tùy chỉnh Kiểu dáng (Style Customization)</h3>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-        <i class="icon far fa-lightbulb" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-        <div class="admonition-content"><p><strong>Yêu cầu phiên bản Hugo Extended</strong>
-Vì Hugo cần xử lý SCSS sang CSS, phiên bản Hugo extended là bắt buộc để tùy chỉnh kiểu dáng.</p></div>
-    </div>
-</div><p>Giao diện LoveIt được thiết kế để có thể cấu hình linh hoạt bằng cách định nghĩa các tệp kiểu dáng <code>.scss</code> tùy chỉnh.</p>
-<p>Thư mục chứa các tệp kiểu dáng <code>.scss</code> tùy chỉnh là <code>assets/css</code> tương đối so với thư mục gốc dự án của bạn.</p>
-<p>Trong <code>assets/css/_override.scss</code>, bạn có thể ghi đè các biến trong <code>themes/LoveIt/assets/css/_variables.scss</code> để tùy chỉnh giao diện. Ví dụ:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-scss">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="sx">url(&#39;https://fonts.googleapis.com/css?family=Fira+Mono:400,700&amp;display=swap&amp;subset=latin-ext&#39;)</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$code-font-family</span><span class="o">:</span> <span class="n">Fira</span> <span class="n">Mono</span><span class="o">,</span> <span class="n">Source</span> <span class="n">Code</span> <span class="n">Pro</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>Trong <code>assets/css/_custom.scss</code>, bạn có thể thêm mã CSS tùy chỉnh để điều chỉnh kiểu dáng.</p>
-<hr>
-<h2 id="4-đa-ngôn-ngữ-và-i18n">4 Đa ngôn ngữ và i18n</h2>
-<p>Giao diện LoveIt hoàn toàn tương thích với chế độ đa ngôn ngữ của Hugo, cung cấp khả năng chuyển đổi ngôn ngữ ngay trong trình duyệt.</p>
-<h3 id="41-độ-tương-thích">4.1 Độ tương thích</h3>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left">Ngôn ngữ</th>
-          <th style="text-align: left">Mã Hugo</th>
-          <th style="text-align: left">Thuộc tính lang HTML</th>
-          <th style="text-align: left">Hỗ trợ Lunr.js</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Anh (English)</strong></td>
-          <td style="text-align: left"><code>en</code></td>
-          <td style="text-align: left"><code>en</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Trung Giản thể</strong></td>
-          <td style="text-align: left"><code>zh-cn</code></td>
-          <td style="text-align: left"><code>zh-CN</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Trung Phồn thể</strong></td>
-          <td style="text-align: left"><code>zh-tw</code></td>
-          <td style="text-align: left"><code>zh-TW</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Pháp (French)</strong></td>
-          <td style="text-align: left"><code>fr</code></td>
-          <td style="text-align: left"><code>fr</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Ba Lan (Polish)</strong></td>
-          <td style="text-align: left"><code>pl</code></td>
-          <td style="text-align: left"><code>pl</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Bồ Đào Nha (Brazil)</strong></td>
-          <td style="text-align: left"><code>pt-br</code></td>
-          <td style="text-align: left"><code>pt-BR</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Ý (Italian)</strong></td>
-          <td style="text-align: left"><code>it</code></td>
-          <td style="text-align: left"><code>it</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Tây Ban Nha</strong></td>
-          <td style="text-align: left"><code>es</code></td>
-          <td style="text-align: left"><code>es</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Đức (German)</strong></td>
-          <td style="text-align: left"><code>de</code></td>
-          <td style="text-align: left"><code>de</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Nga (Russian)</strong></td>
-          <td style="text-align: left"><code>ru</code></td>
-          <td style="text-align: left"><code>ru</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Việt (Vietnamese)</strong></td>
-          <td style="text-align: left"><code>vi</code></td>
-          <td style="text-align: left"><code>vi</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Nhật (Japanese)</strong></td>
-          <td style="text-align: left"><code>ja</code></td>
-          <td style="text-align: left"><code>ja</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>Tiếng Hàn (Korean)</strong></td>
-          <td style="text-align: left"><code>ko</code></td>
-          <td style="text-align: left"><code>ko</code></td>
-          <td style="text-align: left">$\checkmark$</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="42-cấu-hình-cơ-bản">4.2 Cấu hình Cơ bản</h3>
-<p>Xác định ngôn ngữ của bạn trong cấu hình trang web. Ví dụ với trang web tiếng Anh, tiếng Trung và tiếng Pháp:</p>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-toml">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># Xác định ngôn ngữ nội dung mặc định [&#34;en&#34;, &#34;zh-cn&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Trang Hugo Mới Của Tôi&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;我的全新 Hugo 网站&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">fr</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Mon nouveau site Hugo&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;fr&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;Français&#34;</span></span></span></code></pre></div></div>
-<p>Sau đó, đối với mỗi trang mới, hãy thêm mã ngôn ngữ vào tên tệp.
-Tệp đơn <code>my-page.md</code> được tách thành ba tệp:</p>
-<ul>
-<li>Tiếng Anh: <code>my-page.en.md</code></li>
-<li>Tiếng Trung: <code>my-page.zh-cn.md</code></li>
-<li>Tiếng Pháp: <code>my-page.fr.md</code></li>
-</ul>
-<hr>
-<h2 id="5-tìm-kiếm-search">5 Tìm kiếm (Search)</h2>
-<p>Dựa trên <strong>Lunr.js</strong> hoặc <strong>Algolia</strong>, tính năng tìm kiếm được hỗ trợ trong giao diện LoveIt.</p>
-<h3 id="51-cấu-hình-đầu-ra">5.1 Cấu hình Đầu ra</h3>
-<p>Để tạo <code>index.json</code> cho việc tìm kiếm, thêm loại tệp đầu ra <code>JSON</code> vào phần <code>home</code> của cấu hình <code>outputs</code>:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-toml">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span></span></span></code></pre></div></div>
-<h3 id="52-cấu-hình-tìm-kiếm">5.2 Cấu hình Tìm kiếm</h3>
-<p>Dựa trên tệp <code>index.json</code> được tạo bởi Hugo, bạn có thể kích hoạt tính năng tìm kiếm:</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-toml">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># Loại công cụ tìm kiếm [&#34;lunr&#34;, &#34;algolia&#34;]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;lunr&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">30</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span></span></span></code></pre></div></div>
-<h4 id="so-sánh-công-cụ-tìm-kiếm">So sánh công cụ tìm kiếm:</h4>
-<ul>
-<li><strong>lunr</strong>: Đơn giản, không cần đồng bộ <code>index.json</code>, không giới hạn <code>contentLength</code>, nhưng tốn băng thông hơn và hiệu năng thấp hơn.</li>
-<li><strong>algolia</strong>: Hiệu năng cao và tiết kiệm băng thông, nhưng cần đồng bộ <code>index.json</code> và có giới hạn đối với <code>contentLength</code>.</li>
-</ul></div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>Updated on 2020-03-06</span>
-            </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/posts/theme-documentation-basics.vi/index.md" target="_blank">Read Markdown</a>
-                        </span></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản" data-hashtags="documentation,installation,configuration"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-hashtag="documentation"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/theme-documentation-basics.vi/" data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản" data-description="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2ftheme-documentation-basics.vi%2f&amp;text=H%c6%b0%e1%bb%9bng%20D%e1%ba%abn%20C%e1%ba%a5u%20H%c3%acnh%20V%c3%a0%20S%e1%bb%ad%20D%e1%bb%a5ng%20Giao%20Di%e1%bb%87n%20LoveIt%20C%c6%a1%20B%e1%ba%a3n" target="_blank" title="Share on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/installation/">Installation</a>,&nbsp;<a href="/tags/configuration/">Configuration</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav">
-            <a href="/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/" class="next" rel="next" title="Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!">Lập Trình Web Kỷ Nguyên AI: Đừng 'Vibe Code', Hãy Làm Chủ Spec-Driven Development!<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
-</div>
-</article></div>
-            </main><footer class="footer">
-    <div class="footer-container custom-footer-wrapper">
-        <div class="footer-social-links">
-            <a href="https://github.com/ngoctinn" target="_blank" rel="noopener noreferrer" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:ngoctin.work@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="/index.xml" target="_blank" title="RSS Feed">
-                <i class="fas fa-rss"></i>
-            </a>
-        </div>
-
-        <div class="footer-line copyright-line">
-            <span class="copyright-year">&copy; 2026</span>
-            <span class="author-name"><a href="https://github.com/ngoctinn">Nguyen Ngoc Tin</a></span>
-            <span class="rights-reserved">• All rights reserved.</span>
-        </div>
-
-        <div class="footer-line meta-line">
-            <span class="tech-stack">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
-            <span class="splitter">|</span>
-            <span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
-        </div>
-    </div>
-</footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </a>
-        </div>
-
-        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment" aria-hidden="true"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script></body>
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản - Nguyen Ngoc Tin</title><meta name=Description content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><meta property="og:url" content="https://ngoctin.me/posts/theme-documentation-basics.vi/"><meta property="og:site_name" content="Nguyen Ngoc Tin"><meta property="og:title" content="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><meta property="og:description" content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-03-06T00:00:00+00:00"><meta property="article:modified_time" content="2020-03-06T00:00:00+00:00"><meta property="article:tag" content="Documentation"><meta property="article:tag" content="Installation"><meta property="article:tag" content="Configuration"><meta name=twitter:card content="summary"><meta name=twitter:title content="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><meta name=twitter:description content="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><meta name=application-name content="Nguyen Ngoc Tin"><meta name=apple-mobile-web-app-title content="Nguyen Ngoc Tin"><meta name=referrer content="no-referrer"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/favicon.svg><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#4d74eb><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://ngoctin.me/posts/theme-documentation-basics.vi/><link rel=next href=https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css></noscript><link rel=preload href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ngoctin.me\/posts\/theme-documentation-basics.vi\/"},"genre":"posts","keywords":"documentation, installation, configuration","wordcount":2642,"url":"https:\/\/ngoctin.me\/posts\/theme-documentation-basics.vi\/","datePublished":"2020-03-06T00:00:00+00:00","dateModified":"2020-03-06T00:00:00+00:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Dillon"},"description":"Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script>const query=window.matchMedia("(prefers-color-scheme: dark)");function applyTheme(){let e=window.localStorage?.getItem("theme")||"auto",t=e==="dark"||e==="auto"&&query.matches;document.body.setAttribute("theme",t?"dark":"light"),document.body.setAttribute("cfg-theme",e)}applyTheme(),query.addEventListener("change",applyTheme)</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Nguyen Ngoc Tin">Nguyễn Ngọc Tín</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/roadmaps/ title="Learning Roadmaps">Roadmaps </a><a class=menu-item href=/posts/ title="Blog Posts">Blog </a><a class=menu-item href=/tags/ title="All Tags">Tags </a><a class=menu-item href=/categories/ title="All Categories">Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder=Search... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Search><i class="fas fa-search" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clear><i class="fas fa-times-circle" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-spin" aria-hidden=true></i>
+</span></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme"><i class="fas fa-adjust" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Nguyen Ngoc Tin">Nguyễn Ngọc Tín</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=Search... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Search><i class="fas fa-search" aria-hidden=true></i>
+</a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clear><i class="fas fa-times-circle" aria-hidden=true></i>
+</a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>Cancel</a></div><a class=menu-item href=/roadmaps/ title="Learning Roadmaps">Roadmaps</a><a class=menu-item href=/posts/ title="Blog Posts">Blog</a><a class=menu-item href=/tags/ title="All Tags">Tags</a><a class=menu-item href=/categories/ title="All Categories">Categories</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust" aria-hidden=true></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><div id=reading-progress style="position:fixed;top:0;left:0;height:2px;background:#4d74eb;z-index:9999;width:0%;transition:width .1s ease-out"></div><script>window.addEventListener("scroll",function(){var t=document.body.scrollTop||document.documentElement.scrollTop,n=document.documentElement.scrollHeight-document.documentElement.clientHeight,s=t/n*100,e=document.getElementById("reading-progress");e&&(e.style.width=s+"%")})</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản</h1><div class=post-meta style=font-family:lora,Georgia,serif;font-size:.9rem;color:#828282;margin-bottom:1.5rem><span class=post-author>By <strong>Dillon</strong></span>
+&nbsp;·&nbsp;
+<time datetime=2020-03-06>Mar 06, 2020</time>
+&nbsp;·&nbsp;
+<span>13 min read</span>&nbsp;·&nbsp;<a href=/categories/tech-blog/ style=color:#828282;margin-left:.5rem>in Tech Blog</a></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#1-yêu-cầu>1 Yêu cầu</a></li><li><a href=#2-cài-đặt>2 Cài đặt</a><ul><li><a href=#21-tạo-dự-án-của-bạn>2.1 Tạo Dự án của Bạn</a></li><li><a href=#22-cài-đặt-giao-diện-theme>2.2 Cài đặt Giao diện (Theme)</a><ul><li><a href=#độ-tương-thích-của-giao-diện-loveit>Độ tương thích của giao diện LoveIt</a></li></ul></li><li><a href=#23-cấu-hình-cơ-bản>2.3 Cấu hình Cơ bản</a></li><li><a href=#24-tạo-bài-viết-đầu-tiên>2.4 Tạo Bài viết Đầu tiên</a></li><li><a href=#25-khởi-chạy-trang-web-ở-local>2.5 Khởi chạy Trang web ở Local</a></li><li><a href=#26-build-trang-web>2.6 Build Trang web</a></li></ul></li><li><a href=#3-cấu-hình>3 Cấu hình</a><ul><li><a href=#31-cấu-hình-trang-web-site-configuration>3.1 Cấu hình Trang web (Site Configuration)</a></li><li><a href=#32-favicons-browserconfig-manifest>3.2 Favicons, Browserconfig, Manifest</a></li><li><a href=#33-tùy-chỉnh-kiểu-dáng-style-customization>3.3 Tùy chỉnh Kiểu dáng (Style Customization)</a></li></ul></li><li><a href=#4-đa-ngôn-ngữ-và-i18n>4 Đa ngôn ngữ và i18n</a><ul><li><a href=#41-độ-tương-thích>4.1 Độ tương thích</a></li><li><a href=#42-cấu-hình-cơ-bản>4.2 Cấu hình Cơ bản</a></li></ul></li><li><a href=#5-tìm-kiếm-search>5 Tìm kiếm (Search)</a><ul><li><a href=#51-cấu-hình-đầu-ra>5.1 Cấu hình Đầu ra</a></li><li><a href=#52-cấu-hình-tìm-kiếm>5.2 Cấu hình Tìm kiếm</a><ul><li><a href=#so-sánh-công-cụ-tìm-kiếm>So sánh công cụ tìm kiếm:</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><p>Khám phá giao diện <strong>Hugo - LoveIt</strong> và các khái niệm cốt lõi đằng sau nó.</p><hr><h2 id=1-yêu-cầu>1 Yêu cầu</h2><p>Nhờ sự đơn giản của Hugo, Hugo là phụ thuộc (dependency) duy nhất của giao diện này.</p><p>Chỉ cần cài đặt phiên bản Hugo mới nhất cho hệ điều hành của bạn (Windows, Linux, macOS).</p><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon far fa-pen-to-square" aria-hidden=true></i>Note<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p><strong>Khi nào bạn cần sử dụng Hugo phiên bản Extended (Hugo extended edition)?</strong></p><p>Khi bạn muốn tùy chỉnh kiểu dáng (style customization), bạn cần sử dụng phiên bản Hugo extended để hiển thị/chuyển đổi SCSS sang CSS một cách chính xác.</p></div></div></div><hr><h2 id=2-cài-đặt>2 Cài đặt</h2><p>Các bước dưới đây sẽ giúp bạn khởi tạo trang web mới của mình. Nếu bạn chưa biết gì về Hugo, chúng tôi khuyên bạn nên tìm hiểu thêm thông qua tài liệu tuyệt vời dành cho người bắt đầu của Hugo.</p><h3 id=21-tạo-dự-án-của-bạn>2.1 Tạo Dự án của Bạn</h3><p>Hugo cung cấp một lệnh mới để tạo một trang web mới:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new site my_website
+</span></span><span class=line><span class=cl><span class=nb>cd</span> my_website</span></span></code></pre></div></div><h3 id=22-cài-đặt-giao-diện-theme>2.2 Cài đặt Giao diện (Theme)</h3><p>Kho lưu trữ (repository) của giao diện LoveIt là: <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer">https://github.com/dillonzq/LoveIt</a>.</p><p>Bạn có thể tải xuống tệp nén <code>.zip</code> bản phát hành của giao diện và giải nén nó vào thư mục <code>themes</code>.</p><p>Hoặc, clone kho lưu trữ này vào thư mục <code>themes</code>:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt</span></span></code></pre></div></div><p>Hoặc, tạo một kho lưu trữ git rỗng và biến kho lưu trữ theme này thành một submodule trong thư mục trang web của bạn:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git init
+</span></span><span class=line><span class=cl>git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt</span></span></code></pre></div></div><h4 id=độ-tương-thích-của-giao-diện-loveit>Độ tương thích của giao diện LoveIt</h4><table><thead><tr><th style=text-align:left>Nhánh hoặc phiên bản LoveIt</th><th style=text-align:left>Phiên bản Hugo được hỗ trợ</th></tr></thead><tbody><tr><td style=text-align:left><strong>master</strong> (Unstable)</td><td style=text-align:left>$\ge$ 0.128.0</td></tr><tr><td style=text-align:left><strong>0.3.X</strong> (Khuyên dùng)</td><td style=text-align:left>0.128.0 - 0.145.0</td></tr><tr><td style=text-align:left><strong>0.2.X</strong> (Cũ/Outdated)</td><td style=text-align:left>0.68.0 - 0.127.0</td></tr></tbody></table><hr><h3 id=23-cấu-hình-cơ-bản>2.3 Cấu hình Cơ bản</h3><p>Dưới đây là cấu hình cơ bản cho giao diện LoveIt:</p><div class="code-block code-line-numbers" style="counter-reset:code-block 0"><div class="code-header language-toml"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s2>&#34;http://example.org/&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Thay đổi giao diện mặc định được sử dụng khi build trang web với Hugo</span>
+</span></span><span class=line><span class=cl><span class=nx>theme</span> <span class=p>=</span> <span class=s2>&#34;LoveIt&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Tiêu đề trang web</span>
+</span></span><span class=line><span class=cl><span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trang Hugo Mới Của Tôi&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Mã ngôn ngữ [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
+</span></span><span class=line><span class=cl><span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+</span></span><span class=line><span class=cl><span class=c># Tên ngôn ngữ [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
+</span></span><span class=line><span class=cl><span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;English&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình Menu</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>menu</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;posts&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Bạn có thể thêm thông tin phụ trước tên (hỗ trợ định dạng HTML), ví dụ như icon</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Bạn có thể thêm thông tin phụ sau tên (hỗ trợ định dạng HTML), ví dụ như icon</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Bài viết&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/posts/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Tiêu đề sẽ hiển thị khi bạn rê chuột vào liên kết menu này</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;tags&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Thẻ&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/tags/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;categories&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Danh mục&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/categories/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình liên quan đến Markup trong Hugo</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>markup</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=c># Tô màu cú pháp (Syntax Highlighting)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>highlight</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=c># false là cấu hình bắt buộc</span>
+</span></span><span class=line><span class=cl>    <span class=nx>noClasses</span> <span class=p>=</span> <span class=kc>false</span></span></span></code></pre></div></div><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon far fa-pen-to-square" aria-hidden=true></i>Note<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Khi build trang web, bạn có thể thiết lập giao diện bằng tùy chọn <code>--theme</code>. Tuy nhiên, chúng tôi khuyên bạn nên chỉnh sửa tệp cấu hình (<code>hugo.toml</code>) và đặt giao diện làm mặc định.</p></div></div></div><hr><h3 id=24-tạo-bài-viết-đầu-tiên>2.4 Tạo Bài viết Đầu tiên</h3><p>Dưới đây là cách tạo bài viết đầu tiên của bạn:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new posts/first_post.md</span></span></code></pre></div></div><p>Hãy thoải mái chỉnh sửa tệp bài viết bằng cách thêm một số nội dung mẫu và thay đổi giá trị <code>title</code> ở phần đầu của tệp.</p><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon far fa-pen-to-square" aria-hidden=true></i>Note<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Theo mặc định, tất cả các bài viết và trang đều được tạo dưới dạng bản nháp (<code>draft</code>). Nếu bạn muốn hiển thị các trang này, hãy xóa thuộc tính <code>draft: true</code> khỏi phần metadata, đặt thuộc tính <code>draft: false</code> hoặc thêm tham số <code>-D</code>/<code>--buildDrafts</code> vào lệnh <code>hugo</code>.</p></div></div></div><hr><h3 id=25-khởi-chạy-trang-web-ở-local>2.5 Khởi chạy Trang web ở Local</h3><p>Khởi chạy bằng lệnh sau:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo serve</span></span></code></pre></div></div><p>Truy cập vào <a href=http://localhost:1313 target=_blank rel="noopener noreffer">http://localhost:1313</a>.</p><div class="details admonition tip open"><div class="details-summary admonition-title"><i class="icon far fa-lightbulb" aria-hidden=true></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Khi bạn chạy <code>hugo serve</code>, mỗi khi nội dung của các tệp thay đổi, trang web sẽ tự động làm mới với các thay đổi đó.</p></div></div></div><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon far fa-pen-to-square" aria-hidden=true></i>Note<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Vì giao diện sử dụng <code>.Scratch</code> trong Hugo để thực hiện một số tính năng, chúng tôi rất khuyên bạn nên thêm tham số <code>--disableFastRender</code> vào lệnh <code>hugo serve</code> để xem trước trực tiếp trang bạn đang chỉnh sửa:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo serve --disableFastRender</span></span></code></pre></div></div></div></div></div><hr><h3 id=26-build-trang-web>2.6 Build Trang web</h3><p>Khi trang web của bạn sẵn sàng để triển khai, hãy chạy lệnh sau:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-bash"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo</span></span></code></pre></div></div><p>Thư mục <code>public</code> sẽ được tạo ra, chứa tất cả nội dung tĩnh và tài nguyên cho trang web của bạn. Giờ đây, nó có thể được triển khai trên bất kỳ máy chủ web nào.</p><div class="details admonition tip open"><div class="details-summary admonition-title"><i class="icon far fa-lightbulb" aria-hidden=true></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Trang web có thể được tự động xuất bản và lưu trữ với Netlify. Hoặc bạn có thể sử dụng AWS Amplify, GitHub Pages, Render và nhiều dịch vụ khác…</p></div></div></div><hr><h2 id=3-cấu-hình>3 Cấu hình</h2><h3 id=31-cấu-hình-trang-web-site-configuration>3.1 Cấu hình Trang web (Site Configuration)</h3><p>Ngoài cấu hình toàn cục của Hugo và cấu hình menu, LoveIt cho phép bạn định nghĩa các tham số sau trong cấu hình trang web của bạn (dưới đây là tệp <code>hugo.toml</code> với các giá trị mặc định).</p><div class="code-block code-line-numbers" style="counter-reset:code-block 0"><div class="code-header language-toml"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s2>&#34;http://example.org/&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Thay đổi giao diện mặc định được sử dụng khi build trang web với Hugo</span>
+</span></span><span class=line><span class=cl><span class=nx>theme</span> <span class=p>=</span> <span class=s2>&#34;LoveIt&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Tiêu đề trang web</span>
+</span></span><span class=line><span class=cl><span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trang Hugo Mới Của Tôi&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Mã ngôn ngữ [&#34;en&#34;, &#34;zh-CN&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
+</span></span><span class=line><span class=cl><span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+</span></span><span class=line><span class=cl><span class=c># Tên ngôn ngữ [&#34;English&#34;, &#34;简体中文&#34;, &#34;Français&#34;, &#34;Polski&#34;, ...]</span>
+</span></span><span class=line><span class=cl><span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;English&#34;</span>
+</span></span><span class=line><span class=cl><span class=c># Có bao gồm ngôn ngữ Trung/Nhật/Hàn hay không</span>
+</span></span><span class=line><span class=cl><span class=nx>hasCJKLanguage</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Mô tả bản quyền chỉ được sử dụng cho cấu hình SEO schema</span>
+</span></span><span class=line><span class=cl><span class=nx>copyright</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Có sử dụng robots.txt hay không</span>
+</span></span><span class=line><span class=cl><span class=nx>enableRobotsTXT</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=c># Có sử dụng nhật ký git commit hay không</span>
+</span></span><span class=line><span class=cl><span class=nx>enableGitInfo</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=c># Có sử dụng mã emoji hay không</span>
+</span></span><span class=line><span class=cl><span class=nx>enableEmoji</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Bỏ qua một số lỗi build</span>
+</span></span><span class=line><span class=cl><span class=nx>ignoreErrors</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;error-remote-getjson&#34;</span><span class=p>,</span> <span class=s2>&#34;error-missing-instagram-accesstoken&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình phân trang (Pagination)</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>pagination</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>disableAliases</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>  <span class=nx>pagerSize</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>  <span class=nx>path</span> <span class=p>=</span> <span class=s2>&#34;page&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình Menu</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>menu</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;posts&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Bài viết&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/posts/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;tags&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Thẻ&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/tags/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>    <span class=nx>identifier</span> <span class=p>=</span> <span class=s2>&#34;categories&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;Danh mục&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>url</span> <span class=p>=</span> <span class=s2>&#34;/categories/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=c># Giao diện mặc định của trang web [&#34;auto&#34;, &#34;light&#34;, &#34;dark&#34;]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>defaultTheme</span> <span class=p>=</span> <span class=s2>&#34;auto&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># URL kho lưu trữ git công khai chỉ khi enableGitInfo là true</span>
+</span></span><span class=line><span class=cl>  <span class=nx>gitRepo</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># Hàm băm được sử dụng cho SRI, khi để trống sẽ không sử dụng SRI</span>
+</span></span><span class=line><span class=cl>  <span class=c># [&#34;sha256&#34;, &#34;sha384&#34;, &#34;sha512&#34;, &#34;md5&#34;]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>fingerprint</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># Định dạng ngày tháng</span>
+</span></span><span class=line><span class=cl>  <span class=nx>dateFormat</span> <span class=p>=</span> <span class=s2>&#34;2006-01-02&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># Tiêu đề trang web cho Open Graph và Twitter Cards</span>
+</span></span><span class=line><span class=cl>  <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trang web xịn của tôi&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># Mô tả trang web cho RSS, SEO, Open Graph và Twitter Cards</span>
+</span></span><span class=line><span class=cl>  <span class=nx>description</span> <span class=p>=</span> <span class=s2>&#34;Đây là trang web xịn của tôi&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=c># Hình ảnh trang web cho Open Graph và Twitter Cards</span>
+</span></span><span class=line><span class=cl>  <span class=nx>images</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;/logo.png&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình Tác giả (Author)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>author</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>email</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>link</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Header</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>header</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=c># Chế độ header trên máy tính [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>desktopMode</span> <span class=p>=</span> <span class=s2>&#34;fixed&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Chế độ header trên di động [&#34;fixed&#34;, &#34;normal&#34;, &#34;auto&#34;]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>mobileMode</span> <span class=p>=</span> <span class=s2>&#34;auto&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Cấu hình tiêu đề Header</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>header</span><span class=p>.</span><span class=nx>title</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=c># URL của LOGO</span>
+</span></span><span class=line><span class=cl>      <span class=nx>logo</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=c># Tên tiêu đề</span>
+</span></span><span class=line><span class=cl>      <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=c># Bạn có thể thêm thông tin phụ trước tên (hỗ trợ HTML)</span>
+</span></span><span class=line><span class=cl>      <span class=nx>pre</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=c># Bạn có thể thêm thông tin phụ sau tên (hỗ trợ HTML)</span>
+</span></span><span class=line><span class=cl>      <span class=nx>post</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=c># Có sử dụng hiệu ứng gõ chữ typeit cho tiêu đề hay không</span>
+</span></span><span class=line><span class=cl>      <span class=nx>typeit</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Footer</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>footer</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=c># Nội dung tùy chỉnh (hỗ trợ HTML)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>custom</span> <span class=p>=</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Có hiển thị thông tin Hugo và giao diện hay không</span>
+</span></span><span class=line><span class=cl>    <span class=nx>hugo</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=c># Có hiển thị thông tin bản quyền hay không</span>
+</span></span><span class=line><span class=cl>    <span class=nx>copyright</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=c># Có hiển thị tác giả hay không</span>
+</span></span><span class=line><span class=cl>    <span class=nx>author</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=c># Thời gian tạo trang web</span>
+</span></span><span class=line><span class=cl>    <span class=nx>since</span> <span class=p>=</span> <span class=mi>2019</span>
+</span></span><span class=line><span class=cl>    <span class=c># Thông tin ICP chỉ ở Trung Quốc (hỗ trợ HTML)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>icp</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Thông tin giấy phép (hỗ trợ HTML)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>license</span> <span class=p>=</span> <span class=s1>&#39;&lt;a rel=&#34;license external nofollow noopener noreffer&#34; href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34;&gt;CC BY-NC 4.0&lt;/a&gt;&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình trang Section (tất cả bài viết)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>section</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>paginate</span> <span class=p>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>    <span class=nx>dateFormat</span> <span class=p>=</span> <span class=s2>&#34;01-02&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rss</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình trang Danh sách (List - danh mục hoặc thẻ)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>list</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>paginate</span> <span class=p>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>    <span class=nx>dateFormat</span> <span class=p>=</span> <span class=s2>&#34;01-02&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rss</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình App icon</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>app</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trang web xịn của tôi&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>noFavicon</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>svgFavicon</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>themeColor</span> <span class=p>=</span> <span class=s2>&#34;#ffffff&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>iconColor</span> <span class=p>=</span> <span class=s2>&#34;#5bbad5&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>tileColor</span> <span class=p>=</span> <span class=s2>&#34;#da532c&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Tìm kiếm (Search)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>search</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=c># Loại công cụ tìm kiếm [&#34;lunr&#34;, &#34;algolia&#34;]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;lunr&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>contentLength</span> <span class=p>=</span> <span class=mi>4000</span>
+</span></span><span class=line><span class=cl>    <span class=nx>placeholder</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>maxResultLength</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>    <span class=nx>snippetLength</span> <span class=p>=</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl>    <span class=nx>highlightTag</span> <span class=p>=</span> <span class=s2>&#34;em&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>absoluteURL</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>search</span><span class=p>.</span><span class=nx>algolia</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>index</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>appID</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>searchKey</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Trang chủ (Home page)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>home</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rss</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>    <span class=c># Hồ sơ trang chủ</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>home</span><span class=p>.</span><span class=nx>profile</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>gravatarEmail</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>avatarURL</span> <span class=p>=</span> <span class=s2>&#34;/images/avatar.webp&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>subtitle</span> <span class=p>=</span> <span class=s2>&#34;Đây là Trang Hugo Mới Của Tôi&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>typeit</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>social</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>disclaimer</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=c># Bài viết trang chủ</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>home</span><span class=p>.</span><span class=nx>posts</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>paginate</span> <span class=p>=</span> <span class=mi>6</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Mạng xã hội của tác giả</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>social</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>GitHub</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Linkedin</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>X</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Twitter</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Instagram</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Facebook</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Telegram</span> <span class=p>=</span> <span class=s2>&#34;xxxx&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Medium</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>Email</span> <span class=p>=</span> <span class=s2>&#34;xxxx@xxxx.com&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>RSS</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Toàn cục Trang (Page global config)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>hiddenFromHomePage</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>hiddenFromSearch</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>twemoji</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>lightgallery</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>ruby</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fraction</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fontawesome</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>linkToMarkdown</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>rssFullText</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># Mục lục (Table of contents)</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>toc</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>keepStatic</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>      <span class=nx>auto</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># Công thức toán học KaTeX</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>math</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>inlineLeftDelimiter</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>inlineRightDelimiter</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>blockLeftDelimiter</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>blockRightDelimiter</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>copyTex</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>mhchem</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># Cấu hình Mã nguồn (Code)</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>code</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>copy</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>maxShownLines</span> <span class=p>=</span> <span class=mi>50</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># Cấu hình Chia sẻ mạng xã hội</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>share</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>X</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Facebook</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Telegram</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Linkedin</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>      <span class=nx>Whatsapp</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># Cấu hình Bình luận (Comment)</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>comment</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>enable</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>      <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>comment</span><span class=p>.</span><span class=nx>disqus</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=nx>enable</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>        <span class=nx>shortname</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>comment</span><span class=p>.</span><span class=nx>giscus</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=nx>enable</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Thư viện bên thứ ba</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>library</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>library</span><span class=p>.</span><span class=nx>css</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>library</span><span class=p>.</span><span class=nx>js</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình SEO trang</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>seo</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>images</span> <span class=p>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>page</span><span class=p>.</span><span class=nx>seo</span><span class=p>.</span><span class=nx>publisher</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>name</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>logoUrl</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình TypeIt</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>typeit</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>speed</span> <span class=p>=</span> <span class=mi>100</span>
+</span></span><span class=line><span class=cl>    <span class=nx>cursorSpeed</span> <span class=p>=</span> <span class=mi>1000</span>
+</span></span><span class=line><span class=cl>    <span class=nx>cursorChar</span> <span class=p>=</span> <span class=s2>&#34;|&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>duration</span> <span class=p>=</span> <span class=mi>-1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình SEO trang web</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>seo</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>image</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>thumbnailUrl</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Phân tích (Analytics)</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>analytics</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>analytics</span><span class=p>.</span><span class=nx>google</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>id</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>respectDoNotTrack</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Chấp nhận Cookie</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>cookieconsent</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>cookieconsent</span><span class=p>.</span><span class=nx>content</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>message</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>dismiss</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nx>link</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình CDN</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>cdn</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>data</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c># Cấu hình Độ tương thích</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>compatibility</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>polyfill</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>    <span class=nx>objectFit</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Cấu hình Markup trong Hugo</span>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>markup</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>highlight</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>codeFences</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>guessSyntax</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>lineNos</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>lineNumbersInTable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=nx>noClasses</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>goldmark</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>goldmark</span><span class=p>.</span><span class=nx>extensions</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>definitionList</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>footnote</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>linkify</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>strikethrough</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>table</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>taskList</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>      <span class=nx>typographer</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>goldmark</span><span class=p>.</span><span class=nx>renderer</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=nx>unsafe</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>markup</span><span class=p>.</span><span class=nx>tableOfContents</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>startLevel</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=nx>endLevel</span> <span class=p>=</span> <span class=mi>6</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>sitemap</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>changefreq</span> <span class=p>=</span> <span class=s2>&#34;weekly&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>filename</span> <span class=p>=</span> <span class=s2>&#34;sitemap.xml&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>priority</span> <span class=p>=</span> <span class=mf>0.5</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>Permalinks</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>posts</span> <span class=p>=</span> <span class=s2>&#34;:filename&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>mediaTypes</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>mediaTypes</span><span class=p>.</span><span class=s2>&#34;text/plain&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>suffixes</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;md&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>outputFormats</span><span class=p>.</span><span class=nx>MarkDown</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>mediaType</span> <span class=p>=</span> <span class=s2>&#34;text/plain&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>isPlainText</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=nx>isHTML</span> <span class=p>=</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>outputs</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>home</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>,</span> <span class=s2>&#34;JSON&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>page</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;MarkDown&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>section</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>taxonomy</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>]</span></span></span></code></pre></div></div><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon far fa-pen-to-square" aria-hidden=true></i>Note<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p>Môi trường mặc định là <code>development</code> khi dùng <code>hugo serve</code> và <code>production</code> khi dùng <code>hugo</code>.
+Do các hạn chế trong môi trường phát triển cục bộ, hệ thống bình luận, CDN và fingerprint sẽ không được bật. Bạn có thể bật các tính năng này bằng lệnh: <code>hugo serve -e production</code>.</p></div></div></div><hr><h3 id=32-favicons-browserconfig-manifest>3.2 Favicons, Browserconfig, Manifest</h3><p>Khuyên bạn nên đặt các biểu tượng favicon riêng của mình:</p><ul><li><code>apple-touch-icon.png</code> (180x180)</li><li><code>favicon-32x32.png</code> (32x32)</li><li><code>favicon-16x16.png</code> (16x16)</li><li><code>mstile-150x150.png</code> (150x150)</li><li><code>android-chrome-192x192.png</code> (192x192)</li><li><code>android-chrome-512x512.png</code> (512x512)</li></ul><p>Vào thư mục <code>/static</code>. Chúng dễ dàng được tạo thông qua <a href=https://realfavicongenerator.net/ target=_blank rel="noopener noreffer">https://realfavicongenerator.net/</a>.</p><p>Chỉnh sửa <code>browserconfig.xml</code> và <code>site.webmanifest</code> để đặt <code>theme-color</code> và <code>background-color</code>.</p><hr><h3 id=33-tùy-chỉnh-kiểu-dáng-style-customization>3.3 Tùy chỉnh Kiểu dáng (Style Customization)</h3><div class="details admonition tip open"><div class="details-summary admonition-title"><i class="icon far fa-lightbulb" aria-hidden=true></i>Tip<i class="details-icon fas fa-angle-right" aria-hidden=true></i></div><div class=details-content><div class=admonition-content><p><strong>Yêu cầu phiên bản Hugo Extended</strong>
+Vì Hugo cần xử lý SCSS sang CSS, phiên bản Hugo extended là bắt buộc để tùy chỉnh kiểu dáng.</p></div></div></div><p>Giao diện LoveIt được thiết kế để có thể cấu hình linh hoạt bằng cách định nghĩa các tệp kiểu dáng <code>.scss</code> tùy chỉnh.</p><p>Thư mục chứa các tệp kiểu dáng <code>.scss</code> tùy chỉnh là <code>assets/css</code> tương đối so với thư mục gốc dự án của bạn.</p><p>Trong <code>assets/css/_override.scss</code>, bạn có thể ghi đè các biến trong <code>themes/LoveIt/assets/css/_variables.scss</code> để tùy chỉnh giao diện. Ví dụ:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-scss"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-scss data-lang=scss><span class=line><span class=cl><span class=k>@import</span> <span class=sx>url(&#39;https://fonts.googleapis.com/css?family=Fira+Mono:400,700&amp;display=swap&amp;subset=latin-ext&#39;)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nv>$code-font-family</span><span class=o>:</span> <span class=n>Fira</span> <span class=n>Mono</span><span class=o>,</span> <span class=n>Source</span> <span class=n>Code</span> <span class=n>Pro</span><span class=o>,</span> <span class=n>Menlo</span><span class=o>,</span> <span class=n>Consolas</span><span class=o>,</span> <span class=n>Monaco</span><span class=o>,</span> <span class=ni>monospace</span><span class=p>;</span></span></span></code></pre></div></div><p>Trong <code>assets/css/_custom.scss</code>, bạn có thể thêm mã CSS tùy chỉnh để điều chỉnh kiểu dáng.</p><hr><h2 id=4-đa-ngôn-ngữ-và-i18n>4 Đa ngôn ngữ và i18n</h2><p>Giao diện LoveIt hoàn toàn tương thích với chế độ đa ngôn ngữ của Hugo, cung cấp khả năng chuyển đổi ngôn ngữ ngay trong trình duyệt.</p><h3 id=41-độ-tương-thích>4.1 Độ tương thích</h3><table><thead><tr><th style=text-align:left>Ngôn ngữ</th><th style=text-align:left>Mã Hugo</th><th style=text-align:left>Thuộc tính lang HTML</th><th style=text-align:left>Hỗ trợ Lunr.js</th></tr></thead><tbody><tr><td style=text-align:left><strong>Tiếng Anh (English)</strong></td><td style=text-align:left><code>en</code></td><td style=text-align:left><code>en</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Trung Giản thể</strong></td><td style=text-align:left><code>zh-cn</code></td><td style=text-align:left><code>zh-CN</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Trung Phồn thể</strong></td><td style=text-align:left><code>zh-tw</code></td><td style=text-align:left><code>zh-TW</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Pháp (French)</strong></td><td style=text-align:left><code>fr</code></td><td style=text-align:left><code>fr</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Ba Lan (Polish)</strong></td><td style=text-align:left><code>pl</code></td><td style=text-align:left><code>pl</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Bồ Đào Nha (Brazil)</strong></td><td style=text-align:left><code>pt-br</code></td><td style=text-align:left><code>pt-BR</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Ý (Italian)</strong></td><td style=text-align:left><code>it</code></td><td style=text-align:left><code>it</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Tây Ban Nha</strong></td><td style=text-align:left><code>es</code></td><td style=text-align:left><code>es</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Đức (German)</strong></td><td style=text-align:left><code>de</code></td><td style=text-align:left><code>de</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Nga (Russian)</strong></td><td style=text-align:left><code>ru</code></td><td style=text-align:left><code>ru</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Việt (Vietnamese)</strong></td><td style=text-align:left><code>vi</code></td><td style=text-align:left><code>vi</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Nhật (Japanese)</strong></td><td style=text-align:left><code>ja</code></td><td style=text-align:left><code>ja</code></td><td style=text-align:left>$\checkmark$</td></tr><tr><td style=text-align:left><strong>Tiếng Hàn (Korean)</strong></td><td style=text-align:left><code>ko</code></td><td style=text-align:left><code>ko</code></td><td style=text-align:left>$\checkmark$</td></tr></tbody></table><h3 id=42-cấu-hình-cơ-bản>4.2 Cấu hình Cơ bản</h3><p>Xác định ngôn ngữ của bạn trong cấu hình trang web. Ví dụ với trang web tiếng Anh, tiếng Trung và tiếng Pháp:</p><div class="code-block code-line-numbers" style="counter-reset:code-block 0"><div class="code-header language-toml"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=c># Xác định ngôn ngữ nội dung mặc định [&#34;en&#34;, &#34;zh-cn&#34;, &#34;fr&#34;, &#34;pl&#34;, ...]</span>
+</span></span><span class=line><span class=cl><span class=nx>defaultContentLanguage</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>languages</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>en</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Trang Hugo Mới Của Tôi&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;English&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>zh-cn</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;我的全新 Hugo 网站&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;zh-CN&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;简体中文&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>hasCJKLanguage</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>languages</span><span class=p>.</span><span class=nx>fr</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=nx>weight</span> <span class=p>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>    <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;Mon nouveau site Hugo&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;fr&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;Français&#34;</span></span></span></code></pre></div></div><p>Sau đó, đối với mỗi trang mới, hãy thêm mã ngôn ngữ vào tên tệp.
+Tệp đơn <code>my-page.md</code> được tách thành ba tệp:</p><ul><li>Tiếng Anh: <code>my-page.en.md</code></li><li>Tiếng Trung: <code>my-page.zh-cn.md</code></li><li>Tiếng Pháp: <code>my-page.fr.md</code></li></ul><hr><h2 id=5-tìm-kiếm-search>5 Tìm kiếm (Search)</h2><p>Dựa trên <strong>Lunr.js</strong> hoặc <strong>Algolia</strong>, tính năng tìm kiếm được hỗ trợ trong giao diện LoveIt.</p><h3 id=51-cấu-hình-đầu-ra>5.1 Cấu hình Đầu ra</h3><p>Để tạo <code>index.json</code> cho việc tìm kiếm, thêm loại tệp đầu ra <code>JSON</code> vào phần <code>home</code> của cấu hình <code>outputs</code>:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-toml"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[</span><span class=nx>outputs</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>home</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>,</span> <span class=s2>&#34;JSON&#34;</span><span class=p>]</span></span></span></code></pre></div></div><h3 id=52-cấu-hình-tìm-kiếm>5.2 Cấu hình Tìm kiếm</h3><p>Dựa trên tệp <code>index.json</code> được tạo bởi Hugo, bạn có thể kích hoạt tính năng tìm kiếm:</p><div class="code-block code-line-numbers open" style="counter-reset:code-block 0"><div class="code-header language-toml"><span class=code-title><i class="arrow fas fa-angle-right" aria-hidden=true></i></span>
+<span class=ellipses><i class="fas fa-ellipsis-h" aria-hidden=true></i></span>
+<span class=copy title="Copy to clipboard"><i class="far fa-copy" aria-hidden=true></i></span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>search</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>enable</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=c># Loại công cụ tìm kiếm [&#34;lunr&#34;, &#34;algolia&#34;]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>type</span> <span class=p>=</span> <span class=s2>&#34;lunr&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>contentLength</span> <span class=p>=</span> <span class=mi>4000</span>
+</span></span><span class=line><span class=cl>  <span class=nx>placeholder</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>maxResultLength</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>  <span class=nx>snippetLength</span> <span class=p>=</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl>  <span class=nx>highlightTag</span> <span class=p>=</span> <span class=s2>&#34;em&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>absoluteURL</span> <span class=p>=</span> <span class=kc>false</span></span></span></code></pre></div></div><h4 id=so-sánh-công-cụ-tìm-kiếm>So sánh công cụ tìm kiếm:</h4><ul><li><strong>lunr</strong>: Đơn giản, không cần đồng bộ <code>index.json</code>, không giới hạn <code>contentLength</code>, nhưng tốn băng thông hơn và hiệu năng thấp hơn.</li><li><strong>algolia</strong>: Hiệu năng cao và tiết kiệm băng thông, nhưng cần đồng bộ <code>index.json</code> và có giới hạn đối với <code>contentLength</code>.</li></ul></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2020-03-06</span></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/posts/theme-documentation-basics.vi/index.md target=_blank>Read Markdown</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on X" data-sharer=x data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản" data-hashtags=documentation,installation,configuration><i class="fab fa-x-twitter" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Threads" data-sharer=threads data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-threads" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-hashtag=documentation><i class="fab fa-facebook-square" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-hacker-news" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@16.9.0/icons/line.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản"><i class="fab fa-weibo" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Diaspora" data-sharer=diaspora data-url=https://ngoctin.me/posts/theme-documentation-basics.vi/ data-title="Hướng Dẫn Cấu Hình Và Sử Dụng Giao Diện LoveIt Cơ Bản" data-description="Khám phá giao diện Hugo - LoveIt và các khái niệm cốt lõi đằng sau nó."><i class="fab fa-diaspora" aria-hidden=true></i></a><a href="https://t.me/share/url?url=https%3a%2f%2fngoctin.me%2fposts%2ftheme-documentation-basics.vi%2f&amp;text=H%c6%b0%e1%bb%9bng%20D%e1%ba%abn%20C%e1%ba%a5u%20H%c3%acnh%20V%c3%a0%20S%e1%bb%ad%20D%e1%bb%a5ng%20Giao%20Di%e1%bb%87n%20LoveIt%20C%c6%a1%20B%e1%ba%a3n" target=_blank title="Share on Telegram"><i class="fab fa-telegram" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags" aria-hidden=true></i>&nbsp;<a href=/tags/documentation/>Documentation</a>,&nbsp;<a href=/tags/installation/>Installation</a>,&nbsp;<a href=/tags/configuration/>Configuration</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/ class=next rel=next title="Lập Trình Web Kỷ Nguyên AI: Đừng 'Vibe Code', Hãy Làm Chủ Spec-Driven Development!">Lập Trình Web Kỷ Nguyên AI: Đừng 'Vibe Code', Hãy Làm Chủ Spec-Driven Development!<i class="fas fa-angle-right" aria-hidden=true></i></a></div></div></article></div></main><footer class=footer><div class="footer-container custom-footer-wrapper"><div class=footer-social-links><a href=https://github.com/ngoctinn target=_blank rel="noopener noreferrer" title=GitHub><i class="fab fa-github"></i>
+</a><a href=https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/ target=_blank rel="noopener noreferrer" title=LinkedIn><i class="fab fa-linkedin"></i>
+</a><a href=mailto:ngoctin.work@gmail.com title=Email><i class="fas fa-envelope"></i>
+</a><a href=/index.xml target=_blank title="RSS Feed"><i class="fas fa-rss"></i></a></div><div class="footer-line copyright-line"><span class=copyright-year>&copy; 2026</span>
+<span class=author-name><a href=https://github.com/ngoctinn>Nguyen Ngoc Tin</a></span>
+<span class=rights-reserved>• All rights reserved.</span></div><div class="footer-line meta-line"><span class=tech-stack>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a></span>
+<span class=splitter>|</span>
+<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up" aria-hidden=true></i></a></div><div id=fixed-buttons-hidden><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment" aria-hidden=true></i></a></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css><script src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js></script><script src=https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js></script><script src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js></script><script src=https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js></script><script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js></script><script src=https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js></script><script>window.config={comment:{},lightgallery:!0,math:{delimiters:[{display:!0,left:"$$",right:"$$"},{display:!0,left:"\\[",right:"\\]"},{display:!0,left:"\\begin{equation}",right:"\\end{equation}"},{display:!0,left:"\\begin{equation*}",right:"\\end{equation*}"},{display:!0,left:"\\begin{align}",right:"\\end{align}"},{display:!0,left:"\\begin{align*}",right:"\\end{align*}"},{display:!0,left:"\\begin{alignat}",right:"\\end{alignat}"},{display:!0,left:"\\begin{alignat*}",right:"\\end{alignat*}"},{display:!0,left:"\\begin{gather}",right:"\\end{gather}"},{display:!0,left:"\\begin{CD}",right:"\\end{CD}"},{display:!1,left:"$",right:"$"},{display:!1,left:"\\(",right:"\\)"}],strict:!1},search:{highlightTag:"em",lunrIndexURL:"/index.json",maxResultLength:10,noResultsFound:"No results found",snippetLength:30,type:"lunr"}}</script><script src=/js/theme.js></script></body></html>

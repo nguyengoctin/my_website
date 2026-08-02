@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/embedding-models/"
 prev: "/ai-engineer/04-rag-and-vector-databases/langchain/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Llama Index

@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/choosing-the-right-model/"
 prev: "/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Google ADK

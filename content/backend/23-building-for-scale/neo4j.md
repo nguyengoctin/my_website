@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/clickhouse/"
 prev: "/backend/23-building-for-scale/throttling/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

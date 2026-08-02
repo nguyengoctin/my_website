@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/hugging-face-models/"
 prev: "/ai-engineer/08-multimodal-ai/dall-e-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Whisper

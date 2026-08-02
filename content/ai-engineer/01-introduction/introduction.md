@@ -8,8 +8,6 @@ weight: 1
 next: "/ai-engineer/01-introduction/what-is-an-ai-engineer/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Introduction
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Introduction
 
 **AI Engineering is the process | of designing and implementing | AI systems using**  
 *AI Engineering là quá trình | thiết kế và triển khai | các hệ thống AI sử dụng*

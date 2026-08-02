@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/data-layer/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/mcp-server/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

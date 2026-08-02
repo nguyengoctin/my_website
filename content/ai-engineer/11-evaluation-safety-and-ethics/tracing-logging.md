@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/costlatency-monitoring/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Tracing

@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/deepeval/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/evaluation-metrics/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Testing

@@ -9,8 +9,6 @@ next: "/backend/08-caching/cookie-based-auth/"
 prev: "/backend/08-caching/caddy/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

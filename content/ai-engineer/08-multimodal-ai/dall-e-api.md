@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/whisper-api/"
 prev: "/ai-engineer/08-multimodal-ai/openai-vision-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/semantic-search/"
 prev: "/ai-engineer/03-prompt-engineering/context-isolation/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Embeddings
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# What are Embeddings
 
 **Embeddings are dense, numerical vector representations | of data, such as words, sentences, | images, or audio, that capture | their semantic meaning and relationships.**  
 *Embeddings là các biểu diễn vector số dày đặc | của dữ liệu, chẳng hạn như từ, câu, | hình ảnh hoặc âm thanh, nắm bắt | ý nghĩa ngữ nghĩa và các mối quan hệ của chúng.*

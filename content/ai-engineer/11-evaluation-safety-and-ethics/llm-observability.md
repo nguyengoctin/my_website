@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/llm-evaluations/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/constraining-outputs-and-inputs/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Observability

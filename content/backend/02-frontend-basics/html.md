@@ -9,8 +9,6 @@ next: "/backend/02-frontend-basics/css/"
 prev: "/backend/02-frontend-basics/dns-and-how-it-works/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

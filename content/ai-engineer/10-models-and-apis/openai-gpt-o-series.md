@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/meta-llama/"
 prev: "/ai-engineer/10-models-and-apis/google-gemini/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# OpenAI Models (GPT, o-series)
 
 **OpenAI models, including the | GPT and "o-series" (like | Whisper), are pre-trained AI**  
 *Các mô hình OpenAI, bao gồm | GPT và "o-series" (như | Whisper), là các mô hình AI pre-trained*

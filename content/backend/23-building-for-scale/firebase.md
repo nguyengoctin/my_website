@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/observability/"
 prev: "/backend/23-building-for-scale/mongodb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

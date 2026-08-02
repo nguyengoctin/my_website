@@ -8,8 +8,6 @@ weight: 155
 prev: "/backend/23-building-for-scale/scylladb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

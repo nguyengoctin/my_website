@@ -9,8 +9,6 @@ next: "/backend/01-general/what-is-domain-name/"
 prev: "/backend/01-general/python/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ prev: "/ai-engineer/08-multimodal-ai/llamaindex-for-multimodal-apps/"
 next: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Hugging Face
 
 **Hugging Face is a leading | AI company and | open-source platform**  
 *Hugging Face là một | công ty AI hàng đầu | và nền tảng mã nguồn mở*

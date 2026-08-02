@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/tools-function-calling/"
 prev: "/ai-engineer/05-fine-tuning/fine-tuning/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Agents

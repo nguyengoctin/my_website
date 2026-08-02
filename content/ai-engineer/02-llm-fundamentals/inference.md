@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/training/"
 prev: "/ai-engineer/02-llm-fundamentals/large-language-model-llm/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Inference
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Inference
 
 **In artificial intelligence (AI), | inference refers to the | process by which a**  
 *Trong trí tuệ nhân tạo (AI), | inference đề cập đến | quá trình mà một*

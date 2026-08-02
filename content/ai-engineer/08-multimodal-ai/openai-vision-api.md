@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/dall-e-api/"
 prev: "/ai-engineer/08-multimodal-ai/speech-to-text/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - OpenAI

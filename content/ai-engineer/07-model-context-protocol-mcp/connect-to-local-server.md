@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/connect-to-remote-server/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/building-an-mcp-client/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

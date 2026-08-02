@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/know-your-customers-usecases
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/adding-end-user-ids-in-prompts/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Robust prompt engineering
 
 **Robust prompt engineering involves | carefully crafting inputs | to guide AI models | toward producing accurate, relevant,**  
 *Kỹ thuật prompt mạnh mẽ liên quan đến | việc tạo ra các đầu vào một cách cẩn thận | để hướng dẫn các mô hình AI | tạo ra các đầu ra chính xác, phù hợp,*

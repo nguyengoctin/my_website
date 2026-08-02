@@ -9,8 +9,6 @@ next: "/ai-engineer/01-introduction/impact-on-product-development/"
 prev: "/ai-engineer/01-introduction/what-is-an-ai-engineer/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Engineer
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# AI Engineer vs ML Engineer
 
 **An AI Engineer uses | pre-trained models and | existing AI tools to**  
 *Một AI Engineer sử dụng | các mô hình pre-trained và | các công cụ AI hiện có để*

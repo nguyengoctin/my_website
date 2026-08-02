@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/serverless/"
 prev: "/backend/17-message-brokers/microservices/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

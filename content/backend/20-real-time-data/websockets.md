@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/data-replication/"
 prev: "/backend/20-real-time-data/real-time-data/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

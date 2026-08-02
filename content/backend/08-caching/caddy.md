@@ -9,8 +9,6 @@ next: "/backend/08-caching/ms-iis/"
 prev: "/backend/08-caching/redis-caching/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

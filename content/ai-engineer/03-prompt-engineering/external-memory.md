@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/rag-dynamic-filters/"
 prev: "/ai-engineer/03-prompt-engineering/temperature/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

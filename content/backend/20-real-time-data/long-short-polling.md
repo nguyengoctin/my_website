@@ -9,8 +9,6 @@ next: "/backend/20-real-time-data/sharding-strategies/"
 prev: "/backend/20-real-time-data/data-replication/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

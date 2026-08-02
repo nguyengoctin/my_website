@@ -9,8 +9,6 @@ next: "/backend/14-ci-cd/unit-testing/"
 prev: "/backend/14-ci-cd/ci-cd/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

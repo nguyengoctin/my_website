@@ -9,8 +9,6 @@ next: "/backend/21-scaling-databases/scaling-databases/"
 prev: "/backend/20-real-time-data/sharding-strategies/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/prompt-injection-attacks/"
 prev: "/ai-engineer/10-models-and-apis/nanobanana-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - safety
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# AI Safety and Ethics
 
 **AI safety and ethics involve | establishing guidelines and best practices | to ensure that artificial intelligence systems | are developed, deployed, and used**  
 *An toàn và đạo đức AI bao gồm | việc thiết lập các hướng dẫn và thực tiễn tốt nhất | để đảm bảo rằng các hệ thống trí tuệ nhân tạo | được phát triển, triển khai và sử dụng*

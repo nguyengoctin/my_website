@@ -9,8 +9,6 @@ next: "/backend/08-caching/nginx/"
 prev: "/backend/08-caching/caching/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

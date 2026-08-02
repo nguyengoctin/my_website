@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/redis/"
 prev: "/backend/22-nosql-databases/nosql-databases/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

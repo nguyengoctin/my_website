@@ -304,3 +304,35 @@
         }
     }
 }
+
+/* ==========================================================================
+   MASONRY GRID FOR CATEGORIES (Stacked Columns)
+   ========================================================================== */
+div.categories-card {
+    display: block !important;
+    column-count: 2;
+    column-gap: 24px;
+    margin-top: 3rem;
+
+    .card-item {
+        width: 100% !important;
+        margin: 0 0 24px 0 !important;
+        padding: 0 !important;
+        min-height: auto !important;
+        display: inline-block !important; /* Vital for masonry */
+        break-inside: avoid !important; 
+        page-break-inside: avoid !important;
+        -webkit-column-break-inside: avoid !important;
+        
+        .card-item-wrapper {
+            height: auto !important;
+            display: block !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    div.categories-card {
+        column-count: 1;
+    }
+}

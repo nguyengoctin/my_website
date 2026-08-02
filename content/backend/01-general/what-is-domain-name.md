@@ -9,8 +9,6 @@ next: "/backend/01-introduction/introduction/"
 prev: "/backend/01-general/ruby/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

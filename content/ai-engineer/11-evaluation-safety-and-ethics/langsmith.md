@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/langfuse/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LangChain

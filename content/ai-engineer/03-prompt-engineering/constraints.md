@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/structured-output/"
 prev: "/ai-engineer/03-prompt-engineering/role-behavior/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Constraining Prompts
 
 **Constraining system prompts involves | explicitly defining boundaries and limitations | within the instructions given**  
 *Việc ràng buộc các system prompts liên quan đến | việc xác định rõ ràng các ranh giới và giới hạn | trong các hướng dẫn được đưa ra*

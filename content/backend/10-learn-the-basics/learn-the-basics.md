@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/vectors/"
 prev: "/backend/09-learn-about-web-servers/embeddings/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

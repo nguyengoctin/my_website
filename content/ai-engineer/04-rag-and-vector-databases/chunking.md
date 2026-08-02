@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/embedding/"
 prev: "/ai-engineer/04-rag-and-vector-databases/rag-vs-fine-tuning/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

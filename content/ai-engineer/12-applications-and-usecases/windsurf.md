@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/cursor/"
 prev: "/ai-engineer/12-applications-and-usecases/codex/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Windsurf

@@ -9,8 +9,6 @@ next: "/backend/02-frontend-basics/browsers-and-how-they-work/"
 prev: "/backend/02-frontend-basics/html/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

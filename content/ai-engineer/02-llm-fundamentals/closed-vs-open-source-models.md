@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/type-of-models/"
 prev: "/ai-engineer/02-llm-fundamentals/how-llms-work/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Open vs Closed Source Models
 
 **Open-source models are freely available | for customization and collaboration, | promoting transparency and flexibility,**  
 *Các mô hình mã nguồn mở có sẵn miễn phí | để tùy chỉnh và cộng tác, | thúc đẩy tính minh bạch và linh hoạt,*

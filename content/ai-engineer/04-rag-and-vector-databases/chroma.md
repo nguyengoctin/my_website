@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/pinecone/"
 prev: "/ai-engineer/04-rag-and-vector-databases/purpose-and-functionality/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Chroma

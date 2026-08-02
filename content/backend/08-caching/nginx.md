@@ -9,8 +9,6 @@ next: "/backend/08-caching/apache/"
 prev: "/backend/08-caching/basic-authentication/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

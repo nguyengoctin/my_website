@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/retrieval-process/"
 prev: "/ai-engineer/04-rag-and-vector-databases/embedding/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Vector Database

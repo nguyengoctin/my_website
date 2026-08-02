@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/hugging-face-inference-sdk/"
 prev: "/ai-engineer/09-frameworks-and-tools/lm-studio/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Hugging Face Hub
 
 **The Hugging Face Hub is a central platform | where users can discover, share, | and collaborate on pre-trained models, | datasets, and demos for machine learning.**  
 *Hugging Face Hub là một nền tảng trung tâm | nơi người dùng có thể khám phá, chia sẻ | và cộng tác trên các mô hình đã huấn luyện trước, | tập dữ liệu và bản demo cho machine learning.*

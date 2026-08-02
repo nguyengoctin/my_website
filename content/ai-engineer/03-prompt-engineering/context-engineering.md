@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/input-format/"
 prev: "/ai-engineer/03-prompt-engineering/few-shot/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

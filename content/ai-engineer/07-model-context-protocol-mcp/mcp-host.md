@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/mcp-server/"
 prev: "/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MCP

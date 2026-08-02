@@ -9,8 +9,6 @@ next: "/backend/15-more-about-databases/more-about-databases/"
 prev: "/backend/14-ci-cd/unit-testing/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

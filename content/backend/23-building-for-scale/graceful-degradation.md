@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/instrumentation/"
 prev: "/backend/23-building-for-scale/rethinkdb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

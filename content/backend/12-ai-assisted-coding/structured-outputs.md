@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/anthropic/"
 prev: "/backend/12-ai-assisted-coding/openai/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

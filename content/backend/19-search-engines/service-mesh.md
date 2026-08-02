@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/elasticsearch/"
 prev: "/backend/19-search-engines/search-engines/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

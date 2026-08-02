@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/openai/"
 prev: "/backend/12-ai-assisted-coding/gemini/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

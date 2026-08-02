@@ -8,8 +8,6 @@ weight: 169
 prev: "/ai-engineer/12-applications-and-usecases/cursor/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Replit

@@ -9,8 +9,6 @@ next: "/ai-engineer/10-models-and-apis/vertex-ai-agent-builder/"
 prev: "/ai-engineer/10-models-and-apis/google-gemini-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - DeepSeek

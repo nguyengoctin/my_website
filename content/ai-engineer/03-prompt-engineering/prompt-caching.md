@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/streaming-responses/"
 prev: "/ai-engineer/03-prompt-engineering/function-calling/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Prompt Caching
 
 **Prompt caching is a technique | that stores the results | of previous LLM prompts,**  
 *Prompt caching là một kỹ thuật | lưu trữ các kết quả | của các LLM prompts trước đó,*

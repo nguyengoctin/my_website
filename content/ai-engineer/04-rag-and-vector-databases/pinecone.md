@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/weaviate/"
 prev: "/ai-engineer/04-rag-and-vector-databases/chroma/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Pinecone

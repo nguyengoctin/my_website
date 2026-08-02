@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/cassandra/"
 prev: "/backend/23-building-for-scale/backpressure/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/generation/"
 prev: "/ai-engineer/04-rag-and-vector-databases/vector-database/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

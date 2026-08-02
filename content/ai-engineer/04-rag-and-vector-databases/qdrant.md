@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/supabase/"
 prev: "/ai-engineer/04-rag-and-vector-databases/lancedb/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Qdrant

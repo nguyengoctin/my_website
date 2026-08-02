@@ -9,8 +9,6 @@ next: "/backend/08-caching/memcached/"
 prev: "/backend/08-caching/ms-iis/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

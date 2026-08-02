@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/context-isolation/"
 prev: "/ai-engineer/03-prompt-engineering/rag-dynamic-filters/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering

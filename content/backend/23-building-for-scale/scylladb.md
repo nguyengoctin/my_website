@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/circuit-breaker/"
 prev: "/backend/23-building-for-scale/dgraph/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

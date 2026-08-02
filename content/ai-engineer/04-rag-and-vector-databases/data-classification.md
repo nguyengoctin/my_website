@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/"
 prev: "/ai-engineer/04-rag-and-vector-databases/anomaly-detection/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Classification
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Data Classification
 
 **Once data is embedded, | a classification algorithm, such as | a neural network or a logistic regression model, | can be trained on these embeddings | to classify the data | into different categories.**  
 *Khi dữ liệu đã được nhúng, | một thuật toán phân loại, chẳng hạn như | mạng thần kinh hoặc mô hình hồi quy logistic, | có thể được huấn luyện trên các embeddings này | để phân loại dữ liệu | thành các danh mục khác nhau.*

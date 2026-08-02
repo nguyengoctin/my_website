@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/telemetry/"
 prev: "/backend/23-building-for-scale/timescaledb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

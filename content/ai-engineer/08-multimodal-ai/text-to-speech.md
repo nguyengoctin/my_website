@@ -9,8 +9,6 @@ next: "/ai-engineer/08-multimodal-ai/speech-to-text/"
 prev: "/ai-engineer/08-multimodal-ai/audio-processing/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - TTS

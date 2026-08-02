@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/performing-similarity-search/"
 prev: "/ai-engineer/04-rag-and-vector-databases/mongodb-atlas/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Embeddings

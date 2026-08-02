@@ -9,8 +9,6 @@ next: "/backend/08-caching/http-caching/"
 prev: "/backend/08-caching/openid/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/08-caching/token-authentication/"
 prev: "/backend/08-caching/nginx/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

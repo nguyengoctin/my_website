@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/indexing-embeddings/"
 prev: "/ai-engineer/04-rag-and-vector-databases/supabase/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - MongoDB

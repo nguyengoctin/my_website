@@ -9,8 +9,6 @@ next: "/backend/05-repo-hosting-services/repo-hosting-services/"
 prev: "/backend/04-version-control-systems/version-control-systems/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

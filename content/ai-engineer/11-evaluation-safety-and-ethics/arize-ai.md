@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/deterministic-evals/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/helicone/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Observability

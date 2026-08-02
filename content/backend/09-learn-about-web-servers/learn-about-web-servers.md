@@ -9,8 +9,6 @@ next: "/backend/09-learn-about-web-servers/web-security/"
 prev: "/backend/08-caching/http-caching/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/refactoring/"
 prev: "/backend/12-ai-assisted-coding/mcp/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

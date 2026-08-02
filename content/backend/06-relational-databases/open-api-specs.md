@@ -9,8 +9,6 @@ next: "/backend/07-learn-about-apis/learn-about-apis/"
 prev: "/backend/06-relational-databases/graphql/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/jina/"
 prev: "/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Google
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Gemini Embedding
 
 **The Gemini API offers methods | to convert text, images, | or other data types | into numerical vector representations | called embeddings.**  
 *Gemini API cung cấp các phương thức | để chuyển đổi văn bản, hình ảnh | hoặc các loại dữ liệu khác | thành các biểu diễn vector số | được gọi là embeddings.*

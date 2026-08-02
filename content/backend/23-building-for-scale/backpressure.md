@@ -9,8 +9,6 @@ next: "/backend/23-building-for-scale/aws-neptune/"
 prev: "/backend/23-building-for-scale/monitoring/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

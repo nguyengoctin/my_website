@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/vector-database/"
 prev: "/ai-engineer/04-rag-and-vector-databases/chunking/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Embeddings

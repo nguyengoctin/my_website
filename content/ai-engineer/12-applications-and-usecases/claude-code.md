@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/gemini/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/ragas/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Claude

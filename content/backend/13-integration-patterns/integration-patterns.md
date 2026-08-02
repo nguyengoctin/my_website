@@ -9,8 +9,6 @@ next: "/backend/14-ci-cd/ci-cd/"
 prev: "/backend/12-ai-assisted-coding/function-calling/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/anomaly-detection/"
 prev: "/ai-engineer/04-rag-and-vector-databases/semantic-search/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Recommendation Systems
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Recommendation Systems
 
 **In the context of embeddings, | recommendation systems use vector representations | to capture similarities between items, | such as products or content.**  
 *Trong bối cảnh của embeddings, | các hệ thống gợi ý sử dụng các biểu diễn vector | để nắm bắt sự tương đồng giữa các mục, | chẳng hạn như sản phẩm hoặc nội dung.*

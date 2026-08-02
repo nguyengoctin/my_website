@@ -9,8 +9,6 @@ next: "/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/"
 prev: "/ai-engineer/01-introduction/introduction/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Engineer
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# What is an AI Engineer?
 
 **AI engineers are professionals | who specialize in designing, | developing, and implementing**  
 *AI engineers là những chuyên gia | chuyên về thiết kế, | phát triển và triển khai*

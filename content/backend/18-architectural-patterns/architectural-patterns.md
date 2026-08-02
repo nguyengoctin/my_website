@@ -9,8 +9,6 @@ next: "/backend/19-search-engines/search-engines/"
 prev: "/backend/17-message-brokers/serverless/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

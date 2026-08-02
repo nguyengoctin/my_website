@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/skills/"
 prev: "/backend/12-ai-assisted-coding/agents/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

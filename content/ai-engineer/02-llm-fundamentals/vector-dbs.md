@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/rags/"
 prev: "/ai-engineer/02-llm-fundamentals/training/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Vector Database
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Vector Databases
 
 **Vector databases are specialized | systems designed to store, | index, and retrieve high-dimensional**  
 *Vector databases là các hệ thống | chuyên dụng được thiết kế để lưu trữ, | lập chỉ mục và truy xuất các vector*

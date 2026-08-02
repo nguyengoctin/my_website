@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/helicone/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/langsmith/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Observability

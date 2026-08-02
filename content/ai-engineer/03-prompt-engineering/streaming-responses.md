@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/repetition-penalties/"
 prev: "/ai-engineer/03-prompt-engineering/prompt-caching/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Streaming Responses
 
 **Streamed responses is one of the techniques | an AI agent can use | to send its answer to the user.**  
 *Streamed responses là một trong những kỹ thuật | một AI agent có thể sử dụng | để gửi câu trả lời của nó cho người dùng.*

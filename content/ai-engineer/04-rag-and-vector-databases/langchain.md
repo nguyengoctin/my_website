@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/llama-index/"
 prev: "/ai-engineer/04-rag-and-vector-databases/using-sdks-directly/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LangChain

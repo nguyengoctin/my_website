@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/faiss/"
 prev: "/ai-engineer/04-rag-and-vector-databases/pinecone/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Weaviate

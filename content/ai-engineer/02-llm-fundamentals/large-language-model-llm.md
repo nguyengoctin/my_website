@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/inference/"
 prev: "/ai-engineer/01-introduction/roles-and-responsiblities/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - LLM
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# LLMs
 
 **LLMs, or Large Language Models, | are advanced AI models | trained on vast datasets**  
 *LLMs, hay Large Language Models, | là các mô hình AI tiên tiến | được huấn luyện trên các tập dữ liệu khổng lồ*

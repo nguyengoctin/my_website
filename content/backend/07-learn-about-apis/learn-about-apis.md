@@ -9,8 +9,6 @@ next: "/backend/07-learn-about-apis/authentication/"
 prev: "/backend/06-relational-databases/open-api-specs/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

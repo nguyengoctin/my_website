@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/ragflow/"
 prev: "/ai-engineer/09-frameworks-and-tools/development-tools/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Haystack
@@ -21,8 +19,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Haystack
 
 Langchain
 =========

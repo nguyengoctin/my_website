@@ -9,8 +9,6 @@ next: "/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/"
 prev: "/ai-engineer/06-ai-agents/react-prompting/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Agents

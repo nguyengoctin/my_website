@@ -9,8 +9,6 @@ next: "/backend/17-message-brokers/soa/"
 prev: "/backend/17-message-brokers/monolith/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

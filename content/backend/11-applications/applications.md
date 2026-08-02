@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/ai-assisted-coding/"
 prev: "/backend/10-learn-the-basics/antigravity/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

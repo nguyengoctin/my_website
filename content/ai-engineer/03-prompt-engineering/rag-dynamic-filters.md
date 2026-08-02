@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/context-compaction/"
 prev: "/ai-engineer/03-prompt-engineering/external-memory/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG

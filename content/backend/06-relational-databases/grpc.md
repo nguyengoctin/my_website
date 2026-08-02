@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/ms-sql/"
 prev: "/backend/06-relational-databases/soap/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

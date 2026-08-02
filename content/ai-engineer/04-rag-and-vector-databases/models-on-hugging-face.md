@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/vector-databases/"
 prev: "/ai-engineer/04-rag-and-vector-databases/sentence-transformers/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Hugging Face
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Models on Hugging Face
 
 **Embedding models are used to convert | raw data like text, code, | or images into high-dimensional vectors | that capture semantic meaning.**  
 *Các mô hình embedding được sử dụng để chuyển đổi | dữ liệu thô như văn bản, mã nguồn | hoặc hình ảnh thành các vector đa chiều | nắm bắt ý nghĩa ngữ nghĩa.*

@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/owasp-risks/"
 prev: "/backend/10-learn-the-basics/vectors/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

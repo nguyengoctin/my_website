@@ -9,8 +9,6 @@ next: "/ai-engineer/09-frameworks-and-tools/hugging-face-tasks/"
 prev: "/ai-engineer/09-frameworks-and-tools/haystack/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAGFlow

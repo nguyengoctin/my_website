@@ -9,8 +9,6 @@ next: "/ai-engineer/04-rag-and-vector-databases/sentence-transformers/"
 prev: "/ai-engineer/04-rag-and-vector-databases/gemini-embedding/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Jina AI
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Jina AI
 
 **Jina Embeddings are a family | of high-performance, open-source, multilingual, | and multimodal embedding models | developed by Jina AI.**  
 *Jina Embeddings là một dòng | các mô hình embedding hiệu suất cao, mã nguồn mở, đa ngôn ngữ | và đa phương thức | do Jina AI phát triển.*

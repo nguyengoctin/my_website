@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/react/"
 prev: "/ai-engineer/02-llm-fundamentals/self-hosted-models/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Prompt vs. Context Engineering
 
 **Prompt engineering focuses on | crafting effective instructions (prompts) | to elicit desired outputs**  
 *Prompt engineering tập trung vào | việc tạo ra các hướng dẫn hiệu quả (prompts) | để gợi ra các đầu ra mong muốn*

@@ -9,8 +9,6 @@ next: "/backend/16-testing/acid/"
 prev: "/backend/16-testing/rabbitmq/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

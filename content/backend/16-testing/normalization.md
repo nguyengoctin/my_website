@@ -9,8 +9,6 @@ next: "/backend/16-testing/lxc/"
 prev: "/backend/16-testing/acid/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/regression-testing/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/human-evals/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Evaluation

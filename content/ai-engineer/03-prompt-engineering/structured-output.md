@@ -9,8 +9,6 @@ next: "/ai-engineer/03-prompt-engineering/function-calling/"
 prev: "/ai-engineer/03-prompt-engineering/constraints/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Prompt Engineering
@@ -19,8 +17,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# Structured Outputs
 
 **Structured output in system prompting | refers to designing prompts | that guide a Large Language Model (LLM)**  
 *Structured output trong system prompting | đề cập đến việc thiết kế các prompts | hướng dẫn một Large Language Model (LLM)*

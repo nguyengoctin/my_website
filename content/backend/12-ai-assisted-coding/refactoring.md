@@ -9,8 +9,6 @@ next: "/backend/12-ai-assisted-coding/documentation-generation/"
 prev: "/backend/12-ai-assisted-coding/skills/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

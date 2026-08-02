@@ -9,8 +9,6 @@ next: "/backend/10-learn-the-basics/https/"
 prev: "/backend/10-learn-the-basics/rags/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

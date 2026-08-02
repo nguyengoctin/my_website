@@ -9,8 +9,6 @@ next: "/ai-engineer/12-applications-and-usecases/windsurf/"
 prev: "/ai-engineer/12-applications-and-usecases/gemini/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Codex

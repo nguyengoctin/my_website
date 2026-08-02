@@ -9,8 +9,6 @@ next: "/ai-engineer/11-evaluation-safety-and-ethics/production-monitoring/"
 prev: "/ai-engineer/11-evaluation-safety-and-ethics/tracing-logging/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - Monitoring

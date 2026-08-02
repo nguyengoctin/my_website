@@ -9,8 +9,6 @@ next: "/ai-engineer/02-llm-fundamentals/ai-vs-agi/"
 prev: "/ai-engineer/02-llm-fundamentals/vector-dbs/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - RAG
@@ -20,8 +18,6 @@ toc: true
 math: false
 mermaid: false
 ---
-
-# RAG
 
 **Retrieval-Augmented Generation (RAG) is | an AI approach that | combines information retrieval with**  
 *Retrieval-Augmented Generation (RAG) là | một phương pháp tiếp cận AI | kết hợp việc truy xuất thông tin với*

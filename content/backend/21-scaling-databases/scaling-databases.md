@@ -9,8 +9,6 @@ next: "/backend/22-nosql-databases/nosql-databases/"
 prev: "/backend/20-real-time-data/cap-theorem/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

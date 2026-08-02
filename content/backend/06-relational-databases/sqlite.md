@@ -9,8 +9,6 @@ next: "/backend/06-relational-databases/soap/"
 prev: "/backend/06-relational-databases/mariadb/"
 draft: false
 
-categories:
-  - Backend
 
 tags:
   - Backend

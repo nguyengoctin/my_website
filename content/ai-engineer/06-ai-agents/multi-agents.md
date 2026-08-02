@@ -9,8 +9,6 @@ next: "/ai-engineer/07-model-context-protocol-mcp/model-context-protocol-mcp/"
 prev: "/ai-engineer/06-ai-agents/claude-agent-sdk/"
 draft: false
 
-categories:
-  - AI Engineer
 
 tags:
   - AI Agents
