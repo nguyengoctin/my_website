@@ -2,7 +2,7 @@
     <channel>
         <title>Nguyen Ngoc Tin</title>
         <link>http://localhost:1313/</link>
-        <description>Backend Development &amp; AI Engineering</description>
+        <description>Personal website and blog of Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
             <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
