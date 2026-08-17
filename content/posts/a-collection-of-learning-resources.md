@@ -46,6 +46,7 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 - <i class="fas fa-star"></i> **[roadmap.sh](https://roadmap.sh/)** <i class="fas fa-globe"></i> — Visual learning paths for CS, DevOps, and Backend
 - **[Teach Yourself Computer Science](https://teachyourselfcs.com/)** <i class="fas fa-globe"></i> — Curated guide for self-taught software engineers
 - **[The Art of Debugging](https://github.com/stas00/the-art-of-debugging)** <i class="fas fa-book"></i> — Comprehensive open book on software debugging
+- **[University of Helsinki Python Programming 2026](https://programming-26.mooc.fi/)** <i class="fas fa-graduation-cap"></i> — Free, comprehensive online course covering Python programming from basics to advanced topics
 - **[Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)** <i class="fab fa-github"></i> — Recreate programming technologies from scratch
 - **[OpenStax](https://openstax.org/)** <i class="fas fa-book"></i> — Free, peer-reviewed open textbooks for Math, Physics và CS
 
