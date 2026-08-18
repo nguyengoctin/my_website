@@ -14,7 +14,7 @@ I’m deeply curious about how software works under the hood — from database i
 - **Backend & Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
 - **Applied AI:** Experimenting with LLM integration, agentic workflows, and data-driven systems.
 
-**What I’m doing right now:**  
+**What I’m doing right now:**
 Currently building practical side-projects, deep-diving into backend performance optimization, and documenting technical post-mortems on this blog.
 
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.

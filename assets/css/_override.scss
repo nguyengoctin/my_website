@@ -496,15 +496,41 @@ blockquote:not(.custom-quote) {
   }
 }
 
-// 7. General Content & Article Typography (Line Height 1.8 for Maximum Comfort)
+// 7. General Content & Article Typography (Balanced Line Height & Harmonious Spacing)
 .single .content {
   font-family: "Lora", Georgia, serif !important;
   font-size: 1.05rem !important;
-  line-height: 1.8 !important;
+  line-height: 1.75 !important;
 
   p {
-    margin-bottom: 1.5rem !important;
-    line-height: 1.8 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.05rem !important;
+    line-height: 1.75 !important;
+  }
+
+  // Gắn kết tự nhiên giữa đoạn dẫn và danh sách ngay sau nó
+  p + ul,
+  p + ol {
+    margin-top: -0.45rem !important;
+  }
+
+  ul, ol {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1.05rem !important;
+    padding-left: 1.4rem !important;
+
+    li {
+      margin-bottom: 0.35rem !important;
+      line-height: 1.7 !important;
+
+      p {
+        margin-bottom: 0.35rem !important;
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 
   // Clearfix: tránh float avatar tràn ra ngoài container
