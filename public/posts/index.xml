@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Blog - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>All Blog | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
-    <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
+    <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
     <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/a-collection-of-learning-resources/</guid>
+    <guid>http://localhost:1313/posts/a-collection-of-learning-resources/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"You do not rise to the level of your goals. You fall to the level of your systems."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -29,10 +29,10 @@
 </item>
 <item>
     <title>A Collection of Essential Productivity and Online Tools</title>
-    <link>https://ngoctin.me/posts/essential-productivity-and-online-tools/</link>
+    <link>http://localhost:1313/posts/essential-productivity-and-online-tools/</link>
     <pubDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/essential-productivity-and-online-tools/</guid>
+    <guid>http://localhost:1313/posts/essential-productivity-and-online-tools/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"Give me a lever long enough and a place to stand, and I will move the earth. Tools are the levers of the modern software mind."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -52,52 +52,52 @@
 </item>
 <item>
     <title>Tối Ưu CLAUDE.md và AGENTS.md: Dựa Trên Số Liệu Thực Nghiệm</title>
-    <link>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</link>
+    <link>http://localhost:1313/posts/tu-duy-viet-claudemd-thuc-chien/</link>
     <pubDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</guid>
+    <guid>http://localhost:1313/posts/tu-duy-viet-claudemd-thuc-chien/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"CLAUDE.md không phải bộ nhớ kiến thức, nó là bộ nhớ quy trình. Nó không làm agent thông minh hơn, nhưng nó điều khiển hành vi của agent — và hành vi mới là nơi chúng ta đang đốt tiền."</p>]]></description>
 </item>
 <item>
     <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>
-    <link>https://ngoctin.me/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
+    <link>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
     <pubDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</guid>
+    <guid>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</guid>
     <description><![CDATA[<p>Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.</p>]]></description>
 </item>
 <item>
     <title>Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ</title>
-    <link>https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
+    <link>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
+    <guid>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
     <description><![CDATA[Hướng dẫn toàn tập về kiến trúc pipeline thu thập dữ liệu bí mật từ roadmap.sh, thiết kế prompt cho LLM phân đoạn song ngữ và giải quyết các lỗi rendering thực tế trên Hugo Theme LoveIt.]]></description>
 </item>
 <item>
     <title>Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman</title>
-    <link>https://ngoctin.me/posts/doc-sach-hoc-thuat-cung-ai/</link>
+    <link>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</link>
     <pubDate>Thu, 30 Jul 2026 12:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/doc-sach-hoc-thuat-cung-ai/</guid>
+    <guid>http://localhost:1313/posts/doc-sach-hoc-thuat-cung-ai/</guid>
     <description><![CDATA[<p>Bạn nạp một tài liệu học thuật vài chục trang vào mô hình AI, hy vọng nó sẽ giúp bạn bóc tách từng luồng tư duy phức tạp. Nhưng kết quả trả về thường là một bản tóm tắt nông cạn, bỏ sót hoàn toàn những luận điểm sắc bén nằm ở giữa văn bản, hoặc nguy hiểm hơn là tự bịa ra thông tin. Đây là rào cản chung khi chúng ta cố gắng biến AI thành người thầy cá nhân: sự hời hợt do giới hạn của không gian ngữ cảnh và thói quen đọc thụ động của não bộ.</p>]]></description>
 </item>
 <item>
     <title>Cách Cấu Hình Mac Mini Làm Headless Server Điều Khiển Qua RustDesk Và SSH Từ Linux</title>
-    <link>https://ngoctin.me/posts/huong-dan-cau-hinh-mac-mini-headless-server/</link>
+    <link>http://localhost:1313/posts/huong-dan-cau-hinh-mac-mini-headless-server/</link>
     <pubDate>Thu, 30 Jul 2026 10:55:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/huong-dan-cau-hinh-mac-mini-headless-server/</guid>
+    <guid>http://localhost:1313/posts/huong-dan-cau-hinh-mac-mini-headless-server/</guid>
     <description><![CDATA[<p>Khi vận hành Mac Mini dạng Headless Server mà không cắm màn hình, chuột hay bàn phím, chúng ta sẽ vấp phải hai rào cản hệ thống: chip đồ họa GPU tự động ngắt xuất hình khiến RustDesk tụt sâu xuống 2–5 FPS, và máy bị kẹt hoàn toàn ở màn hình đăng nhập sau mỗi lần khởi động lại do cúp điện.</p>
 <p>Bài viết này tổng hợp giải pháp kỹ thuật triệt để giúp giải quyết bài toán nghẽn hiệu năng render, đồng thời xây dựng cơ chế tự khôi phục dịch vụ để điều khiển Mac Mini từ máy Linux hoàn toàn qua RustDesk và SSH.</p>]]></description>
 </item>
 <item>
     <title>Hướng Dẫn và Demo Toàn Bộ Shortcodes Trên Giao Diện LoveIt</title>
-    <link>https://ngoctin.me/posts/theme-documentation-built-in-shortcodes.vi/</link>
+    <link>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</link>
     <pubDate>Wed, 29 Jul 2026 18:40:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/theme-documentation-built-in-shortcodes.vi/</guid>
+    <guid>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"Các shortcodes giúp nâng cao trải nghiệm hiển thị nội dung phong phú mà không cần viết thêm mã HTML phức tạp."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -109,19 +109,19 @@
 </item>
 <item>
     <title>A collection of quotes</title>
-    <link>https://ngoctin.me/posts/quotes/</link>
+    <link>http://localhost:1313/posts/quotes/</link>
     <pubDate>Wed, 29 Jul 2026 17:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/quotes/</guid>
+    <guid>http://localhost:1313/posts/quotes/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"I often use “we” in this book to mean you (the reader) and I. It’s a habit I got from my teaching days, as I saw writing as a shared learning experience for both the writer and the readers."</p>]]></description>
 </item>
 <item>
     <title>Ảo Tưởng Về Sự Nhẹ Nhàng Và Bài Học Kỷ Luật Lạnh Lùng Từ Michael Phelps</title>
-    <link>https://ngoctin.me/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</link>
+    <link>http://localhost:1313/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</link>
     <pubDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</guid>
+    <guid>http://localhost:1313/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"Sự xuất chúng chưa bao giờ là một món quà. Nó là một bài kiểm tra sức chịu đựng và một hệ thống kỷ luật lạnh lùng bỏ qua cảm xúc."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
