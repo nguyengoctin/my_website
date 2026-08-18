@@ -2,1594 +2,1594 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Nguyen Ngoc Tin</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:35501/tags/</link>
     <description>Recent content in Tags on Nguyen Ngoc Tin</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
     <lastBuildDate>Tue, 18 Aug 2026 09:43:03 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:35501/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cheatsheet</title>
-      <link>http://localhost:1313/tags/cheatsheet/</link>
+      <link>http://localhost:35501/tags/cheatsheet/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:03 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cheatsheet/</guid>
+      <guid>http://localhost:35501/tags/cheatsheet/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>http://localhost:35501/tags/devops/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:03 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>http://localhost:35501/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>http://localhost:35501/tags/git/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:03 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>http://localhost:35501/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Version Control</title>
-      <link>http://localhost:1313/tags/version-control/</link>
+      <link>http://localhost:35501/tags/version-control/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:03 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/version-control/</guid>
+      <guid>http://localhost:35501/tags/version-control/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/tags/database/</link>
+      <link>http://localhost:35501/tags/database/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:02 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/database/</guid>
+      <guid>http://localhost:35501/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Query</title>
-      <link>http://localhost:1313/tags/query/</link>
+      <link>http://localhost:35501/tags/query/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:02 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/query/</guid>
+      <guid>http://localhost:35501/tags/query/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>http://localhost:1313/tags/sql/</link>
+      <link>http://localhost:35501/tags/sql/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:02 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/sql/</guid>
+      <guid>http://localhost:35501/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Science</title>
-      <link>http://localhost:1313/tags/data-science/</link>
+      <link>http://localhost:35501/tags/data-science/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:01 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data-science/</guid>
+      <guid>http://localhost:35501/tags/data-science/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>http://localhost:35501/tags/python/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:01 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>http://localhost:35501/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Scripting</title>
-      <link>http://localhost:1313/tags/scripting/</link>
+      <link>http://localhost:35501/tags/scripting/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:01 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/scripting/</guid>
+      <guid>http://localhost:35501/tags/scripting/</guid>
       <description></description>
     </item>
     <item>
       <title>Backend</title>
-      <link>http://localhost:1313/tags/backend/</link>
+      <link>http://localhost:35501/tags/backend/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/backend/</guid>
+      <guid>http://localhost:35501/tags/backend/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/tags/java/</link>
+      <link>http://localhost:35501/tags/java/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/java/</guid>
+      <guid>http://localhost:35501/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>OOP</title>
-      <link>http://localhost:1313/tags/oop/</link>
+      <link>http://localhost:35501/tags/oop/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/oop/</guid>
+      <guid>http://localhost:35501/tags/oop/</guid>
       <description></description>
     </item>
     <item>
       <title>Algorithms</title>
-      <link>http://localhost:1313/tags/algorithms/</link>
+      <link>http://localhost:35501/tags/algorithms/</link>
       <pubDate>Tue, 18 Aug 2026 08:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/algorithms/</guid>
+      <guid>http://localhost:35501/tags/algorithms/</guid>
       <description></description>
     </item>
     <item>
       <title>C&#43;&#43;</title>
-      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <link>http://localhost:35501/tags/c&#43;&#43;/</link>
       <pubDate>Tue, 18 Aug 2026 08:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <guid>http://localhost:35501/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Structures</title>
-      <link>http://localhost:1313/tags/data-structures/</link>
+      <link>http://localhost:35501/tags/data-structures/</link>
       <pubDate>Tue, 18 Aug 2026 08:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data-structures/</guid>
+      <guid>http://localhost:35501/tags/data-structures/</guid>
       <description></description>
     </item>
     <item>
       <title>DSA</title>
-      <link>http://localhost:1313/tags/dsa/</link>
+      <link>http://localhost:35501/tags/dsa/</link>
       <pubDate>Tue, 18 Aug 2026 08:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/dsa/</guid>
+      <guid>http://localhost:35501/tags/dsa/</guid>
       <description></description>
     </item>
     <item>
       <title>Interview</title>
-      <link>http://localhost:1313/tags/interview/</link>
+      <link>http://localhost:35501/tags/interview/</link>
       <pubDate>Tue, 18 Aug 2026 08:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/interview/</guid>
+      <guid>http://localhost:35501/tags/interview/</guid>
       <description></description>
     </item>
     <item>
       <title>Browser Extensions</title>
-      <link>http://localhost:1313/tags/browser-extensions/</link>
+      <link>http://localhost:35501/tags/browser-extensions/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/browser-extensions/</guid>
+      <guid>http://localhost:35501/tags/browser-extensions/</guid>
       <description></description>
     </item>
     <item>
       <title>Media</title>
-      <link>http://localhost:1313/tags/media/</link>
+      <link>http://localhost:35501/tags/media/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/media/</guid>
+      <guid>http://localhost:35501/tags/media/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>http://localhost:1313/tags/productivity/</link>
+      <link>http://localhost:35501/tags/productivity/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/productivity/</guid>
+      <guid>http://localhost:35501/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
+      <link>http://localhost:35501/tags/tools/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/tools/</guid>
+      <guid>http://localhost:35501/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Utilities</title>
-      <link>http://localhost:1313/tags/utilities/</link>
+      <link>http://localhost:35501/tags/utilities/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/utilities/</guid>
+      <guid>http://localhost:35501/tags/utilities/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Development</title>
-      <link>http://localhost:1313/tags/web-development/</link>
+      <link>http://localhost:35501/tags/web-development/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/web-development/</guid>
+      <guid>http://localhost:35501/tags/web-development/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>http://localhost:35501/tags/ai/</link>
       <pubDate>Sat, 01 Aug 2026 10:10:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <guid>http://localhost:35501/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Anki</title>
-      <link>http://localhost:1313/tags/anki/</link>
+      <link>http://localhost:35501/tags/anki/</link>
       <pubDate>Sat, 01 Aug 2026 10:10:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/anki/</guid>
+      <guid>http://localhost:35501/tags/anki/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>http://localhost:1313/tags/obsidian/</link>
+      <link>http://localhost:35501/tags/obsidian/</link>
       <pubDate>Sat, 01 Aug 2026 10:10:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/obsidian/</guid>
+      <guid>http://localhost:35501/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt Engineering</title>
-      <link>http://localhost:1313/tags/prompt-engineering/</link>
+      <link>http://localhost:35501/tags/prompt-engineering/</link>
       <pubDate>Sat, 01 Aug 2026 10:10:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/prompt-engineering/</guid>
+      <guid>http://localhost:35501/tags/prompt-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Self Learning</title>
-      <link>http://localhost:1313/tags/self-learning/</link>
+      <link>http://localhost:35501/tags/self-learning/</link>
       <pubDate>Sat, 01 Aug 2026 10:10:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/self-learning/</guid>
+      <guid>http://localhost:35501/tags/self-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Agent SDK</title>
-      <link>http://localhost:1313/tags/agent-sdk/</link>
+      <link>http://localhost:35501/tags/agent-sdk/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/agent-sdk/</guid>
+      <guid>http://localhost:35501/tags/agent-sdk/</guid>
       <description></description>
     </item>
     <item>
       <title>AgentKit</title>
-      <link>http://localhost:1313/tags/agentkit/</link>
+      <link>http://localhost:35501/tags/agentkit/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/agentkit/</guid>
+      <guid>http://localhost:35501/tags/agentkit/</guid>
       <description></description>
     </item>
     <item>
       <title>AGI</title>
-      <link>http://localhost:1313/tags/agi/</link>
+      <link>http://localhost:35501/tags/agi/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/agi/</guid>
+      <guid>http://localhost:35501/tags/agi/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Agents</title>
-      <link>http://localhost:1313/tags/ai-agents/</link>
+      <link>http://localhost:35501/tags/ai-agents/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-agents/</guid>
+      <guid>http://localhost:35501/tags/ai-agents/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Engineer</title>
-      <link>http://localhost:1313/tags/ai-engineer/</link>
+      <link>http://localhost:35501/tags/ai-engineer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-engineer/</guid>
+      <guid>http://localhost:35501/tags/ai-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Engineering</title>
-      <link>http://localhost:1313/tags/ai-engineering/</link>
+      <link>http://localhost:35501/tags/ai-engineering/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-engineering/</guid>
+      <guid>http://localhost:35501/tags/ai-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Fundamentals</title>
-      <link>http://localhost:1313/tags/ai-fundamentals/</link>
+      <link>http://localhost:35501/tags/ai-fundamentals/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-fundamentals/</guid>
+      <guid>http://localhost:35501/tags/ai-fundamentals/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Impact</title>
-      <link>http://localhost:1313/tags/ai-impact/</link>
+      <link>http://localhost:35501/tags/ai-impact/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-impact/</guid>
+      <guid>http://localhost:35501/tags/ai-impact/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Tools</title>
-      <link>http://localhost:1313/tags/ai-tools/</link>
+      <link>http://localhost:35501/tags/ai-tools/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-tools/</guid>
+      <guid>http://localhost:35501/tags/ai-tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Anomaly Detection</title>
-      <link>http://localhost:1313/tags/anomaly-detection/</link>
+      <link>http://localhost:35501/tags/anomaly-detection/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/anomaly-detection/</guid>
+      <guid>http://localhost:35501/tags/anomaly-detection/</guid>
       <description></description>
     </item>
     <item>
       <title>Anthropic</title>
-      <link>http://localhost:1313/tags/anthropic/</link>
+      <link>http://localhost:35501/tags/anthropic/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/anthropic/</guid>
+      <guid>http://localhost:35501/tags/anthropic/</guid>
       <description></description>
     </item>
     <item>
       <title>API</title>
-      <link>http://localhost:1313/tags/api/</link>
+      <link>http://localhost:35501/tags/api/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/api/</guid>
+      <guid>http://localhost:35501/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Audio Processing</title>
-      <link>http://localhost:1313/tags/audio-processing/</link>
+      <link>http://localhost:35501/tags/audio-processing/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/audio-processing/</guid>
+      <guid>http://localhost:35501/tags/audio-processing/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>http://localhost:35501/tags/automation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>http://localhost:35501/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Autonomous Systems</title>
-      <link>http://localhost:1313/tags/autonomous-systems/</link>
+      <link>http://localhost:35501/tags/autonomous-systems/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/autonomous-systems/</guid>
+      <guid>http://localhost:35501/tags/autonomous-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>Bias</title>
-      <link>http://localhost:1313/tags/bias/</link>
+      <link>http://localhost:35501/tags/bias/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/bias/</guid>
+      <guid>http://localhost:35501/tags/bias/</guid>
       <description></description>
     </item>
     <item>
       <title>Career</title>
-      <link>http://localhost:1313/tags/career/</link>
+      <link>http://localhost:35501/tags/career/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/career/</guid>
+      <guid>http://localhost:35501/tags/career/</guid>
       <description></description>
     </item>
     <item>
       <title>Chroma</title>
-      <link>http://localhost:1313/tags/chroma/</link>
+      <link>http://localhost:35501/tags/chroma/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/chroma/</guid>
+      <guid>http://localhost:35501/tags/chroma/</guid>
       <description></description>
     </item>
     <item>
       <title>Chunking</title>
-      <link>http://localhost:1313/tags/chunking/</link>
+      <link>http://localhost:35501/tags/chunking/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/chunking/</guid>
+      <guid>http://localhost:35501/tags/chunking/</guid>
       <description></description>
     </item>
     <item>
       <title>Classification</title>
-      <link>http://localhost:1313/tags/classification/</link>
+      <link>http://localhost:35501/tags/classification/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/classification/</guid>
+      <guid>http://localhost:35501/tags/classification/</guid>
       <description></description>
     </item>
     <item>
       <title>Claude</title>
-      <link>http://localhost:1313/tags/claude/</link>
+      <link>http://localhost:35501/tags/claude/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/claude/</guid>
+      <guid>http://localhost:35501/tags/claude/</guid>
       <description></description>
     </item>
     <item>
       <title>Client</title>
-      <link>http://localhost:1313/tags/client/</link>
+      <link>http://localhost:35501/tags/client/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/client/</guid>
+      <guid>http://localhost:35501/tags/client/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/tags/cloud/</link>
+      <link>http://localhost:35501/tags/cloud/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cloud/</guid>
+      <guid>http://localhost:35501/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Code Editor</title>
-      <link>http://localhost:1313/tags/code-editor/</link>
+      <link>http://localhost:35501/tags/code-editor/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/code-editor/</guid>
+      <guid>http://localhost:35501/tags/code-editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Code Generation</title>
-      <link>http://localhost:1313/tags/code-generation/</link>
+      <link>http://localhost:35501/tags/code-generation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/code-generation/</guid>
+      <guid>http://localhost:35501/tags/code-generation/</guid>
       <description></description>
     </item>
     <item>
       <title>Codex</title>
-      <link>http://localhost:1313/tags/codex/</link>
+      <link>http://localhost:35501/tags/codex/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/codex/</guid>
+      <guid>http://localhost:35501/tags/codex/</guid>
       <description></description>
     </item>
     <item>
       <title>Cohere</title>
-      <link>http://localhost:1313/tags/cohere/</link>
+      <link>http://localhost:35501/tags/cohere/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cohere/</guid>
+      <guid>http://localhost:35501/tags/cohere/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer Vision</title>
-      <link>http://localhost:1313/tags/computer-vision/</link>
+      <link>http://localhost:35501/tags/computer-vision/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/computer-vision/</guid>
+      <guid>http://localhost:35501/tags/computer-vision/</guid>
       <description></description>
     </item>
     <item>
       <title>Context</title>
-      <link>http://localhost:1313/tags/context/</link>
+      <link>http://localhost:35501/tags/context/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/context/</guid>
+      <guid>http://localhost:35501/tags/context/</guid>
       <description></description>
     </item>
     <item>
       <title>Cost</title>
-      <link>http://localhost:1313/tags/cost/</link>
+      <link>http://localhost:35501/tags/cost/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cost/</guid>
+      <guid>http://localhost:35501/tags/cost/</guid>
       <description></description>
     </item>
     <item>
       <title>CoT</title>
-      <link>http://localhost:1313/tags/cot/</link>
+      <link>http://localhost:35501/tags/cot/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cot/</guid>
+      <guid>http://localhost:35501/tags/cot/</guid>
       <description></description>
     </item>
     <item>
       <title>Cursor</title>
-      <link>http://localhost:1313/tags/cursor/</link>
+      <link>http://localhost:35501/tags/cursor/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/cursor/</guid>
+      <guid>http://localhost:35501/tags/cursor/</guid>
       <description></description>
     </item>
     <item>
       <title>DALL-E</title>
-      <link>http://localhost:1313/tags/dall-e/</link>
+      <link>http://localhost:35501/tags/dall-e/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/dall-e/</guid>
+      <guid>http://localhost:35501/tags/dall-e/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>http://localhost:1313/tags/data/</link>
+      <link>http://localhost:35501/tags/data/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data/</guid>
+      <guid>http://localhost:35501/tags/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Framework</title>
-      <link>http://localhost:1313/tags/data-framework/</link>
+      <link>http://localhost:35501/tags/data-framework/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data-framework/</guid>
+      <guid>http://localhost:35501/tags/data-framework/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Layer</title>
-      <link>http://localhost:1313/tags/data-layer/</link>
+      <link>http://localhost:35501/tags/data-layer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data-layer/</guid>
+      <guid>http://localhost:35501/tags/data-layer/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Processing</title>
-      <link>http://localhost:1313/tags/data-processing/</link>
+      <link>http://localhost:35501/tags/data-processing/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/data-processing/</guid>
+      <guid>http://localhost:35501/tags/data-processing/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugging</title>
-      <link>http://localhost:1313/tags/debugging/</link>
+      <link>http://localhost:35501/tags/debugging/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/debugging/</guid>
+      <guid>http://localhost:35501/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>DeepSeek</title>
-      <link>http://localhost:1313/tags/deepseek/</link>
+      <link>http://localhost:35501/tags/deepseek/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/deepseek/</guid>
+      <guid>http://localhost:35501/tags/deepseek/</guid>
       <description></description>
     </item>
     <item>
       <title>Development</title>
-      <link>http://localhost:1313/tags/development/</link>
+      <link>http://localhost:35501/tags/development/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/development/</guid>
+      <guid>http://localhost:35501/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Development Tools</title>
-      <link>http://localhost:1313/tags/development-tools/</link>
+      <link>http://localhost:35501/tags/development-tools/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/development-tools/</guid>
+      <guid>http://localhost:35501/tags/development-tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Embeddings</title>
-      <link>http://localhost:1313/tags/embeddings/</link>
+      <link>http://localhost:35501/tags/embeddings/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/embeddings/</guid>
+      <guid>http://localhost:35501/tags/embeddings/</guid>
       <description></description>
     </item>
     <item>
       <title>Enterprise</title>
-      <link>http://localhost:1313/tags/enterprise/</link>
+      <link>http://localhost:35501/tags/enterprise/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/enterprise/</guid>
+      <guid>http://localhost:35501/tags/enterprise/</guid>
       <description></description>
     </item>
     <item>
       <title>Ethics</title>
-      <link>http://localhost:1313/tags/ethics/</link>
+      <link>http://localhost:35501/tags/ethics/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ethics/</guid>
+      <guid>http://localhost:35501/tags/ethics/</guid>
       <description></description>
     </item>
     <item>
       <title>Evaluation</title>
-      <link>http://localhost:1313/tags/evaluation/</link>
+      <link>http://localhost:35501/tags/evaluation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/evaluation/</guid>
+      <guid>http://localhost:35501/tags/evaluation/</guid>
       <description></description>
     </item>
     <item>
       <title>FAISS</title>
-      <link>http://localhost:1313/tags/faiss/</link>
+      <link>http://localhost:35501/tags/faiss/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/faiss/</guid>
+      <guid>http://localhost:35501/tags/faiss/</guid>
       <description></description>
     </item>
     <item>
       <title>Few-Shot</title>
-      <link>http://localhost:1313/tags/few-shot/</link>
+      <link>http://localhost:35501/tags/few-shot/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/few-shot/</guid>
+      <guid>http://localhost:35501/tags/few-shot/</guid>
       <description></description>
     </item>
     <item>
       <title>Fine-Tuning</title>
-      <link>http://localhost:1313/tags/fine-tuning/</link>
+      <link>http://localhost:35501/tags/fine-tuning/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/fine-tuning/</guid>
+      <guid>http://localhost:35501/tags/fine-tuning/</guid>
       <description></description>
     </item>
     <item>
       <title>Framework</title>
-      <link>http://localhost:1313/tags/framework/</link>
+      <link>http://localhost:35501/tags/framework/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/framework/</guid>
+      <guid>http://localhost:35501/tags/framework/</guid>
       <description></description>
     </item>
     <item>
       <title>Function Calling</title>
-      <link>http://localhost:1313/tags/function-calling/</link>
+      <link>http://localhost:35501/tags/function-calling/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/function-calling/</guid>
+      <guid>http://localhost:35501/tags/function-calling/</guid>
       <description></description>
     </item>
     <item>
       <title>Fundamentals</title>
-      <link>http://localhost:1313/tags/fundamentals/</link>
+      <link>http://localhost:35501/tags/fundamentals/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/fundamentals/</guid>
+      <guid>http://localhost:35501/tags/fundamentals/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>http://localhost:1313/tags/gemini/</link>
+      <link>http://localhost:35501/tags/gemini/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/gemini/</guid>
+      <guid>http://localhost:35501/tags/gemini/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini API</title>
-      <link>http://localhost:1313/tags/gemini-api/</link>
+      <link>http://localhost:35501/tags/gemini-api/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/gemini-api/</guid>
+      <guid>http://localhost:35501/tags/gemini-api/</guid>
       <description></description>
     </item>
     <item>
       <title>Generation</title>
-      <link>http://localhost:1313/tags/generation/</link>
+      <link>http://localhost:35501/tags/generation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/generation/</guid>
+      <guid>http://localhost:35501/tags/generation/</guid>
       <description></description>
     </item>
     <item>
       <title>Generative AI</title>
-      <link>http://localhost:1313/tags/generative-ai/</link>
+      <link>http://localhost:35501/tags/generative-ai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/generative-ai/</guid>
+      <guid>http://localhost:35501/tags/generative-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Google</title>
-      <link>http://localhost:1313/tags/google/</link>
+      <link>http://localhost:35501/tags/google/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/google/</guid>
+      <guid>http://localhost:35501/tags/google/</guid>
       <description></description>
     </item>
     <item>
       <title>Google ADK</title>
-      <link>http://localhost:1313/tags/google-adk/</link>
+      <link>http://localhost:35501/tags/google-adk/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/google-adk/</guid>
+      <guid>http://localhost:35501/tags/google-adk/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Cloud</title>
-      <link>http://localhost:1313/tags/google-cloud/</link>
+      <link>http://localhost:35501/tags/google-cloud/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/google-cloud/</guid>
+      <guid>http://localhost:35501/tags/google-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>GPT</title>
-      <link>http://localhost:1313/tags/gpt/</link>
+      <link>http://localhost:35501/tags/gpt/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/gpt/</guid>
+      <guid>http://localhost:35501/tags/gpt/</guid>
       <description></description>
     </item>
     <item>
       <title>Haystack</title>
-      <link>http://localhost:1313/tags/haystack/</link>
+      <link>http://localhost:35501/tags/haystack/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/haystack/</guid>
+      <guid>http://localhost:35501/tags/haystack/</guid>
       <description></description>
     </item>
     <item>
       <title>Host</title>
-      <link>http://localhost:1313/tags/host/</link>
+      <link>http://localhost:35501/tags/host/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/host/</guid>
+      <guid>http://localhost:35501/tags/host/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugging Face</title>
-      <link>http://localhost:1313/tags/hugging-face/</link>
+      <link>http://localhost:35501/tags/hugging-face/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/hugging-face/</guid>
+      <guid>http://localhost:35501/tags/hugging-face/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <link>http://localhost:35501/tags/hugo/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>http://localhost:35501/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Human-in-the-Loop</title>
-      <link>http://localhost:1313/tags/human-in-the-loop/</link>
+      <link>http://localhost:35501/tags/human-in-the-loop/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/human-in-the-loop/</guid>
+      <guid>http://localhost:35501/tags/human-in-the-loop/</guid>
       <description></description>
     </item>
     <item>
       <title>IDE</title>
-      <link>http://localhost:1313/tags/ide/</link>
+      <link>http://localhost:35501/tags/ide/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ide/</guid>
+      <guid>http://localhost:35501/tags/ide/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Generation</title>
-      <link>http://localhost:1313/tags/image-generation/</link>
+      <link>http://localhost:35501/tags/image-generation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/image-generation/</guid>
+      <guid>http://localhost:35501/tags/image-generation/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Understanding</title>
-      <link>http://localhost:1313/tags/image-understanding/</link>
+      <link>http://localhost:35501/tags/image-understanding/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/image-understanding/</guid>
+      <guid>http://localhost:35501/tags/image-understanding/</guid>
       <description></description>
     </item>
     <item>
       <title>Implementation</title>
-      <link>http://localhost:1313/tags/implementation/</link>
+      <link>http://localhost:35501/tags/implementation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/implementation/</guid>
+      <guid>http://localhost:35501/tags/implementation/</guid>
       <description></description>
     </item>
     <item>
       <title>Indexing</title>
-      <link>http://localhost:1313/tags/indexing/</link>
+      <link>http://localhost:35501/tags/indexing/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/indexing/</guid>
+      <guid>http://localhost:35501/tags/indexing/</guid>
       <description></description>
     </item>
     <item>
       <title>Inference</title>
-      <link>http://localhost:1313/tags/inference/</link>
+      <link>http://localhost:35501/tags/inference/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/inference/</guid>
+      <guid>http://localhost:35501/tags/inference/</guid>
       <description></description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>http://localhost:1313/tags/introduction/</link>
+      <link>http://localhost:35501/tags/introduction/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/introduction/</guid>
+      <guid>http://localhost:35501/tags/introduction/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>http://localhost:1313/tags/javascript/</link>
+      <link>http://localhost:35501/tags/javascript/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/javascript/</guid>
+      <guid>http://localhost:35501/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Jina AI</title>
-      <link>http://localhost:1313/tags/jina-ai/</link>
+      <link>http://localhost:35501/tags/jina-ai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/jina-ai/</guid>
+      <guid>http://localhost:35501/tags/jina-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>LanceDB</title>
-      <link>http://localhost:1313/tags/lancedb/</link>
+      <link>http://localhost:35501/tags/lancedb/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/lancedb/</guid>
+      <guid>http://localhost:35501/tags/lancedb/</guid>
       <description></description>
     </item>
     <item>
       <title>LangChain</title>
-      <link>http://localhost:1313/tags/langchain/</link>
+      <link>http://localhost:35501/tags/langchain/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/langchain/</guid>
+      <guid>http://localhost:35501/tags/langchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Latency</title>
-      <link>http://localhost:1313/tags/latency/</link>
+      <link>http://localhost:35501/tags/latency/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/latency/</guid>
+      <guid>http://localhost:35501/tags/latency/</guid>
       <description></description>
     </item>
     <item>
       <title>Llama Index</title>
-      <link>http://localhost:1313/tags/llama-index/</link>
+      <link>http://localhost:35501/tags/llama-index/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/llama-index/</guid>
+      <guid>http://localhost:35501/tags/llama-index/</guid>
       <description></description>
     </item>
     <item>
       <title>LlamaIndex</title>
-      <link>http://localhost:1313/tags/llamaindex/</link>
+      <link>http://localhost:35501/tags/llamaindex/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/llamaindex/</guid>
+      <guid>http://localhost:35501/tags/llamaindex/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>http://localhost:35501/tags/llm/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>http://localhost:35501/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM Fundamentals</title>
-      <link>http://localhost:1313/tags/llm-fundamentals/</link>
+      <link>http://localhost:35501/tags/llm-fundamentals/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/llm-fundamentals/</guid>
+      <guid>http://localhost:35501/tags/llm-fundamentals/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM-as-a-Judge</title>
-      <link>http://localhost:1313/tags/llm-as-a-judge/</link>
+      <link>http://localhost:35501/tags/llm-as-a-judge/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/llm-as-a-judge/</guid>
+      <guid>http://localhost:35501/tags/llm-as-a-judge/</guid>
       <description></description>
     </item>
     <item>
       <title>Local AI</title>
-      <link>http://localhost:1313/tags/local-ai/</link>
+      <link>http://localhost:35501/tags/local-ai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/local-ai/</guid>
+      <guid>http://localhost:35501/tags/local-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Local Server</title>
-      <link>http://localhost:1313/tags/local-server/</link>
+      <link>http://localhost:35501/tags/local-server/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/local-server/</guid>
+      <guid>http://localhost:35501/tags/local-server/</guid>
       <description></description>
     </item>
     <item>
       <title>Logging</title>
-      <link>http://localhost:1313/tags/logging/</link>
+      <link>http://localhost:35501/tags/logging/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/logging/</guid>
+      <guid>http://localhost:35501/tags/logging/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>http://localhost:1313/tags/machine-learning/</link>
+      <link>http://localhost:35501/tags/machine-learning/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <guid>http://localhost:35501/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>MCP</title>
-      <link>http://localhost:1313/tags/mcp/</link>
+      <link>http://localhost:35501/tags/mcp/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/mcp/</guid>
+      <guid>http://localhost:35501/tags/mcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Memory</title>
-      <link>http://localhost:1313/tags/memory/</link>
+      <link>http://localhost:35501/tags/memory/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/memory/</guid>
+      <guid>http://localhost:35501/tags/memory/</guid>
       <description></description>
     </item>
     <item>
       <title>Metrics</title>
-      <link>http://localhost:1313/tags/metrics/</link>
+      <link>http://localhost:35501/tags/metrics/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/metrics/</guid>
+      <guid>http://localhost:35501/tags/metrics/</guid>
       <description></description>
     </item>
     <item>
       <title>ML</title>
-      <link>http://localhost:1313/tags/ml/</link>
+      <link>http://localhost:35501/tags/ml/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ml/</guid>
+      <guid>http://localhost:35501/tags/ml/</guid>
       <description></description>
     </item>
     <item>
       <title>ML Engineer</title>
-      <link>http://localhost:1313/tags/ml-engineer/</link>
+      <link>http://localhost:35501/tags/ml-engineer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ml-engineer/</guid>
+      <guid>http://localhost:35501/tags/ml-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Models</title>
-      <link>http://localhost:1313/tags/models/</link>
+      <link>http://localhost:35501/tags/models/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/models/</guid>
+      <guid>http://localhost:35501/tags/models/</guid>
       <description></description>
     </item>
     <item>
       <title>Models and APIs</title>
-      <link>http://localhost:1313/tags/models-and-apis/</link>
+      <link>http://localhost:35501/tags/models-and-apis/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/models-and-apis/</guid>
+      <guid>http://localhost:35501/tags/models-and-apis/</guid>
       <description></description>
     </item>
     <item>
       <title>Moderation</title>
-      <link>http://localhost:1313/tags/moderation/</link>
+      <link>http://localhost:35501/tags/moderation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/moderation/</guid>
+      <guid>http://localhost:35501/tags/moderation/</guid>
       <description></description>
     </item>
     <item>
       <title>MongoDB</title>
-      <link>http://localhost:1313/tags/mongodb/</link>
+      <link>http://localhost:35501/tags/mongodb/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/mongodb/</guid>
+      <guid>http://localhost:35501/tags/mongodb/</guid>
       <description></description>
     </item>
     <item>
       <title>Monitoring</title>
-      <link>http://localhost:1313/tags/monitoring/</link>
+      <link>http://localhost:35501/tags/monitoring/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <guid>http://localhost:35501/tags/monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Agents</title>
-      <link>http://localhost:1313/tags/multi-agents/</link>
+      <link>http://localhost:35501/tags/multi-agents/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/multi-agents/</guid>
+      <guid>http://localhost:35501/tags/multi-agents/</guid>
       <description></description>
     </item>
     <item>
       <title>Multimodal</title>
-      <link>http://localhost:1313/tags/multimodal/</link>
+      <link>http://localhost:35501/tags/multimodal/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/multimodal/</guid>
+      <guid>http://localhost:35501/tags/multimodal/</guid>
       <description></description>
     </item>
     <item>
       <title>Multimodal AI</title>
-      <link>http://localhost:1313/tags/multimodal-ai/</link>
+      <link>http://localhost:35501/tags/multimodal-ai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/multimodal-ai/</guid>
+      <guid>http://localhost:35501/tags/multimodal-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>NLP</title>
-      <link>http://localhost:1313/tags/nlp/</link>
+      <link>http://localhost:35501/tags/nlp/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/nlp/</guid>
+      <guid>http://localhost:35501/tags/nlp/</guid>
       <description></description>
     </item>
     <item>
       <title>NoSQL</title>
-      <link>http://localhost:1313/tags/nosql/</link>
+      <link>http://localhost:35501/tags/nosql/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/nosql/</guid>
+      <guid>http://localhost:35501/tags/nosql/</guid>
       <description></description>
     </item>
     <item>
       <title>Observability</title>
-      <link>http://localhost:1313/tags/observability/</link>
+      <link>http://localhost:35501/tags/observability/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/observability/</guid>
+      <guid>http://localhost:35501/tags/observability/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Weights</title>
-      <link>http://localhost:1313/tags/open-weights/</link>
+      <link>http://localhost:35501/tags/open-weights/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/open-weights/</guid>
+      <guid>http://localhost:35501/tags/open-weights/</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
+      <link>http://localhost:35501/tags/open-source/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/open-source/</guid>
+      <guid>http://localhost:35501/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenAI</title>
-      <link>http://localhost:1313/tags/openai/</link>
+      <link>http://localhost:35501/tags/openai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/openai/</guid>
+      <guid>http://localhost:35501/tags/openai/</guid>
       <description></description>
     </item>
     <item>
       <title>Pinecone</title>
-      <link>http://localhost:1313/tags/pinecone/</link>
+      <link>http://localhost:35501/tags/pinecone/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/pinecone/</guid>
+      <guid>http://localhost:35501/tags/pinecone/</guid>
       <description></description>
     </item>
     <item>
       <title>PostgreSQL</title>
-      <link>http://localhost:1313/tags/postgresql/</link>
+      <link>http://localhost:35501/tags/postgresql/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <guid>http://localhost:35501/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
       <title>Pre-Trained Models</title>
-      <link>http://localhost:1313/tags/pre-trained-models/</link>
+      <link>http://localhost:35501/tags/pre-trained-models/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/pre-trained-models/</guid>
+      <guid>http://localhost:35501/tags/pre-trained-models/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacy</title>
-      <link>http://localhost:1313/tags/privacy/</link>
+      <link>http://localhost:35501/tags/privacy/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/privacy/</guid>
+      <guid>http://localhost:35501/tags/privacy/</guid>
       <description></description>
     </item>
     <item>
       <title>Product</title>
-      <link>http://localhost:1313/tags/product/</link>
+      <link>http://localhost:35501/tags/product/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/product/</guid>
+      <guid>http://localhost:35501/tags/product/</guid>
       <description></description>
     </item>
     <item>
       <title>Product Development</title>
-      <link>http://localhost:1313/tags/product-development/</link>
+      <link>http://localhost:35501/tags/product-development/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/product-development/</guid>
+      <guid>http://localhost:35501/tags/product-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Production</title>
-      <link>http://localhost:1313/tags/production/</link>
+      <link>http://localhost:35501/tags/production/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/production/</guid>
+      <guid>http://localhost:35501/tags/production/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
+      <link>http://localhost:35501/tags/programming/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <guid>http://localhost:35501/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt Injection</title>
-      <link>http://localhost:1313/tags/prompt-injection/</link>
+      <link>http://localhost:35501/tags/prompt-injection/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/prompt-injection/</guid>
+      <guid>http://localhost:35501/tags/prompt-injection/</guid>
       <description></description>
     </item>
     <item>
       <title>Protocol</title>
-      <link>http://localhost:1313/tags/protocol/</link>
+      <link>http://localhost:35501/tags/protocol/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/protocol/</guid>
+      <guid>http://localhost:35501/tags/protocol/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxy</title>
-      <link>http://localhost:1313/tags/proxy/</link>
+      <link>http://localhost:35501/tags/proxy/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/proxy/</guid>
+      <guid>http://localhost:35501/tags/proxy/</guid>
       <description></description>
     </item>
     <item>
       <title>Qdrant</title>
-      <link>http://localhost:1313/tags/qdrant/</link>
+      <link>http://localhost:35501/tags/qdrant/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/qdrant/</guid>
+      <guid>http://localhost:35501/tags/qdrant/</guid>
       <description></description>
     </item>
     <item>
       <title>Quality</title>
-      <link>http://localhost:1313/tags/quality/</link>
+      <link>http://localhost:35501/tags/quality/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/quality/</guid>
+      <guid>http://localhost:35501/tags/quality/</guid>
       <description></description>
     </item>
     <item>
       <title>Quality Assurance</title>
-      <link>http://localhost:1313/tags/quality-assurance/</link>
+      <link>http://localhost:35501/tags/quality-assurance/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/quality-assurance/</guid>
+      <guid>http://localhost:35501/tags/quality-assurance/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG</title>
-      <link>http://localhost:1313/tags/rag/</link>
+      <link>http://localhost:35501/tags/rag/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/rag/</guid>
+      <guid>http://localhost:35501/tags/rag/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG and Vector Databases</title>
-      <link>http://localhost:1313/tags/rag-and-vector-databases/</link>
+      <link>http://localhost:35501/tags/rag-and-vector-databases/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/rag-and-vector-databases/</guid>
+      <guid>http://localhost:35501/tags/rag-and-vector-databases/</guid>
       <description></description>
     </item>
     <item>
       <title>RAGFlow</title>
-      <link>http://localhost:1313/tags/ragflow/</link>
+      <link>http://localhost:35501/tags/ragflow/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ragflow/</guid>
+      <guid>http://localhost:35501/tags/ragflow/</guid>
       <description></description>
     </item>
     <item>
       <title>ReAct</title>
-      <link>http://localhost:1313/tags/react/</link>
+      <link>http://localhost:35501/tags/react/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/react/</guid>
+      <guid>http://localhost:35501/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>Reasoning</title>
-      <link>http://localhost:1313/tags/reasoning/</link>
+      <link>http://localhost:35501/tags/reasoning/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/reasoning/</guid>
+      <guid>http://localhost:35501/tags/reasoning/</guid>
       <description></description>
     </item>
     <item>
       <title>Recommendation Systems</title>
-      <link>http://localhost:1313/tags/recommendation-systems/</link>
+      <link>http://localhost:35501/tags/recommendation-systems/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/recommendation-systems/</guid>
+      <guid>http://localhost:35501/tags/recommendation-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>Regression</title>
-      <link>http://localhost:1313/tags/regression/</link>
+      <link>http://localhost:35501/tags/regression/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/regression/</guid>
+      <guid>http://localhost:35501/tags/regression/</guid>
       <description></description>
     </item>
     <item>
       <title>Remote Server</title>
-      <link>http://localhost:1313/tags/remote-server/</link>
+      <link>http://localhost:35501/tags/remote-server/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/remote-server/</guid>
+      <guid>http://localhost:35501/tags/remote-server/</guid>
       <description></description>
     </item>
     <item>
       <title>Replit</title>
-      <link>http://localhost:1313/tags/replit/</link>
+      <link>http://localhost:35501/tags/replit/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/replit/</guid>
+      <guid>http://localhost:35501/tags/replit/</guid>
       <description></description>
     </item>
     <item>
       <title>Responsibilities</title>
-      <link>http://localhost:1313/tags/responsibilities/</link>
+      <link>http://localhost:35501/tags/responsibilities/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/responsibilities/</guid>
+      <guid>http://localhost:35501/tags/responsibilities/</guid>
       <description></description>
     </item>
     <item>
       <title>Retrieval</title>
-      <link>http://localhost:1313/tags/retrieval/</link>
+      <link>http://localhost:35501/tags/retrieval/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/retrieval/</guid>
+      <guid>http://localhost:35501/tags/retrieval/</guid>
       <description></description>
     </item>
     <item>
       <title>Robustness</title>
-      <link>http://localhost:1313/tags/robustness/</link>
+      <link>http://localhost:35501/tags/robustness/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/robustness/</guid>
+      <guid>http://localhost:35501/tags/robustness/</guid>
       <description></description>
     </item>
     <item>
       <title>Roles</title>
-      <link>http://localhost:1313/tags/roles/</link>
+      <link>http://localhost:35501/tags/roles/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/roles/</guid>
+      <guid>http://localhost:35501/tags/roles/</guid>
       <description></description>
     </item>
     <item>
       <title>Rules</title>
-      <link>http://localhost:1313/tags/rules/</link>
+      <link>http://localhost:35501/tags/rules/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/rules/</guid>
+      <guid>http://localhost:35501/tags/rules/</guid>
       <description></description>
     </item>
     <item>
       <title>Safety</title>
-      <link>http://localhost:1313/tags/safety/</link>
+      <link>http://localhost:35501/tags/safety/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/safety/</guid>
+      <guid>http://localhost:35501/tags/safety/</guid>
       <description></description>
     </item>
     <item>
       <title>Sampling</title>
-      <link>http://localhost:1313/tags/sampling/</link>
+      <link>http://localhost:35501/tags/sampling/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/sampling/</guid>
+      <guid>http://localhost:35501/tags/sampling/</guid>
       <description></description>
     </item>
     <item>
       <title>SDK</title>
-      <link>http://localhost:1313/tags/sdk/</link>
+      <link>http://localhost:35501/tags/sdk/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/sdk/</guid>
+      <guid>http://localhost:35501/tags/sdk/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>http://localhost:35501/tags/security/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>http://localhost:35501/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Semantic Search</title>
-      <link>http://localhost:1313/tags/semantic-search/</link>
+      <link>http://localhost:35501/tags/semantic-search/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/semantic-search/</guid>
+      <guid>http://localhost:35501/tags/semantic-search/</guid>
       <description></description>
     </item>
     <item>
       <title>Sentence Transformers</title>
-      <link>http://localhost:1313/tags/sentence-transformers/</link>
+      <link>http://localhost:35501/tags/sentence-transformers/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/sentence-transformers/</guid>
+      <guid>http://localhost:35501/tags/sentence-transformers/</guid>
       <description></description>
     </item>
     <item>
       <title>Server</title>
-      <link>http://localhost:1313/tags/server/</link>
+      <link>http://localhost:35501/tags/server/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/server/</guid>
+      <guid>http://localhost:35501/tags/server/</guid>
       <description></description>
     </item>
     <item>
       <title>Similarity Search</title>
-      <link>http://localhost:1313/tags/similarity-search/</link>
+      <link>http://localhost:35501/tags/similarity-search/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/similarity-search/</guid>
+      <guid>http://localhost:35501/tags/similarity-search/</guid>
       <description></description>
     </item>
     <item>
       <title>Speech-to-Text</title>
-      <link>http://localhost:1313/tags/speech-to-text/</link>
+      <link>http://localhost:35501/tags/speech-to-text/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/speech-to-text/</guid>
+      <guid>http://localhost:35501/tags/speech-to-text/</guid>
       <description></description>
     </item>
     <item>
       <title>STT</title>
-      <link>http://localhost:1313/tags/stt/</link>
+      <link>http://localhost:35501/tags/stt/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/stt/</guid>
+      <guid>http://localhost:35501/tags/stt/</guid>
       <description></description>
     </item>
     <item>
       <title>Supabase</title>
-      <link>http://localhost:1313/tags/supabase/</link>
+      <link>http://localhost:35501/tags/supabase/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/supabase/</guid>
+      <guid>http://localhost:35501/tags/supabase/</guid>
       <description></description>
     </item>
     <item>
       <title>Testing</title>
-      <link>http://localhost:1313/tags/testing/</link>
+      <link>http://localhost:35501/tags/testing/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/testing/</guid>
+      <guid>http://localhost:35501/tags/testing/</guid>
       <description></description>
     </item>
     <item>
       <title>Tokens</title>
-      <link>http://localhost:1313/tags/tokens/</link>
+      <link>http://localhost:35501/tags/tokens/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/tokens/</guid>
+      <guid>http://localhost:35501/tags/tokens/</guid>
       <description></description>
     </item>
     <item>
       <title>Tracing</title>
-      <link>http://localhost:1313/tags/tracing/</link>
+      <link>http://localhost:35501/tags/tracing/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/tracing/</guid>
+      <guid>http://localhost:35501/tags/tracing/</guid>
       <description></description>
     </item>
     <item>
       <title>Training</title>
-      <link>http://localhost:1313/tags/training/</link>
+      <link>http://localhost:35501/tags/training/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/training/</guid>
+      <guid>http://localhost:35501/tags/training/</guid>
       <description></description>
     </item>
     <item>
       <title>Transformer</title>
-      <link>http://localhost:1313/tags/transformer/</link>
+      <link>http://localhost:35501/tags/transformer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/transformer/</guid>
+      <guid>http://localhost:35501/tags/transformer/</guid>
       <description></description>
     </item>
     <item>
       <title>Transport Layer</title>
-      <link>http://localhost:1313/tags/transport-layer/</link>
+      <link>http://localhost:35501/tags/transport-layer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/transport-layer/</guid>
+      <guid>http://localhost:35501/tags/transport-layer/</guid>
       <description></description>
     </item>
     <item>
       <title>TTS</title>
-      <link>http://localhost:1313/tags/tts/</link>
+      <link>http://localhost:35501/tags/tts/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/tts/</guid>
+      <guid>http://localhost:35501/tags/tts/</guid>
       <description></description>
     </item>
     <item>
       <title>Use Cases</title>
-      <link>http://localhost:1313/tags/use-cases/</link>
+      <link>http://localhost:35501/tags/use-cases/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/use-cases/</guid>
+      <guid>http://localhost:35501/tags/use-cases/</guid>
       <description></description>
     </item>
     <item>
       <title>Vector Database</title>
-      <link>http://localhost:1313/tags/vector-database/</link>
+      <link>http://localhost:35501/tags/vector-database/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/vector-database/</guid>
+      <guid>http://localhost:35501/tags/vector-database/</guid>
       <description></description>
     </item>
     <item>
       <title>Vertex AI</title>
-      <link>http://localhost:1313/tags/vertex-ai/</link>
+      <link>http://localhost:35501/tags/vertex-ai/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/vertex-ai/</guid>
+      <guid>http://localhost:35501/tags/vertex-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Video Understanding</title>
-      <link>http://localhost:1313/tags/video-understanding/</link>
+      <link>http://localhost:35501/tags/video-understanding/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/video-understanding/</guid>
+      <guid>http://localhost:35501/tags/video-understanding/</guid>
       <description></description>
     </item>
     <item>
       <title>Vision API</title>
-      <link>http://localhost:1313/tags/vision-api/</link>
+      <link>http://localhost:35501/tags/vision-api/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/vision-api/</guid>
+      <guid>http://localhost:35501/tags/vision-api/</guid>
       <description></description>
     </item>
     <item>
       <title>Weaviate</title>
-      <link>http://localhost:1313/tags/weaviate/</link>
+      <link>http://localhost:35501/tags/weaviate/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/weaviate/</guid>
+      <guid>http://localhost:35501/tags/weaviate/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
+      <link>http://localhost:35501/tags/web/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/web/</guid>
+      <guid>http://localhost:35501/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Scraping</title>
-      <link>http://localhost:1313/tags/web-scraping/</link>
+      <link>http://localhost:35501/tags/web-scraping/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/web-scraping/</guid>
+      <guid>http://localhost:35501/tags/web-scraping/</guid>
       <description></description>
     </item>
     <item>
       <title>Whisper</title>
-      <link>http://localhost:1313/tags/whisper/</link>
+      <link>http://localhost:35501/tags/whisper/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/whisper/</guid>
+      <guid>http://localhost:35501/tags/whisper/</guid>
       <description></description>
     </item>
     <item>
       <title>Windsurf</title>
-      <link>http://localhost:1313/tags/windsurf/</link>
+      <link>http://localhost:35501/tags/windsurf/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/windsurf/</guid>
+      <guid>http://localhost:35501/tags/windsurf/</guid>
       <description></description>
     </item>
     <item>
       <title>Zero-Shot</title>
-      <link>http://localhost:1313/tags/zero-shot/</link>
+      <link>http://localhost:35501/tags/zero-shot/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/zero-shot/</guid>
+      <guid>http://localhost:35501/tags/zero-shot/</guid>
       <description></description>
     </item>
     <item>
       <title>Headless Server</title>
-      <link>http://localhost:1313/tags/headless-server/</link>
+      <link>http://localhost:35501/tags/headless-server/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/headless-server/</guid>
+      <guid>http://localhost:35501/tags/headless-server/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>http://localhost:35501/tags/linux/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>http://localhost:35501/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Mac Mini</title>
-      <link>http://localhost:1313/tags/mac-mini/</link>
+      <link>http://localhost:35501/tags/mac-mini/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/mac-mini/</guid>
+      <guid>http://localhost:35501/tags/mac-mini/</guid>
       <description></description>
     </item>
     <item>
       <title>MacOS</title>
-      <link>http://localhost:1313/tags/macos/</link>
+      <link>http://localhost:35501/tags/macos/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/macos/</guid>
+      <guid>http://localhost:35501/tags/macos/</guid>
       <description></description>
     </item>
     <item>
       <title>RustDesk</title>
-      <link>http://localhost:1313/tags/rustdesk/</link>
+      <link>http://localhost:35501/tags/rustdesk/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/rustdesk/</guid>
+      <guid>http://localhost:35501/tags/rustdesk/</guid>
       <description></description>
     </item>
     <item>
       <title>SSH</title>
-      <link>http://localhost:1313/tags/ssh/</link>
+      <link>http://localhost:35501/tags/ssh/</link>
       <pubDate>Thu, 30 Jul 2026 10:55:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ssh/</guid>
+      <guid>http://localhost:35501/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>http://localhost:1313/tags/documentation/</link>
+      <link>http://localhost:35501/tags/documentation/</link>
       <pubDate>Wed, 29 Jul 2026 18:40:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/documentation/</guid>
+      <guid>http://localhost:35501/tags/documentation/</guid>
       <description></description>
     </item>
     <item>
       <title>LoveIt</title>
-      <link>http://localhost:1313/tags/loveit/</link>
+      <link>http://localhost:35501/tags/loveit/</link>
       <pubDate>Wed, 29 Jul 2026 18:40:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/loveit/</guid>
+      <guid>http://localhost:35501/tags/loveit/</guid>
       <description></description>
     </item>
     <item>
       <title>Shortcodes</title>
-      <link>http://localhost:1313/tags/shortcodes/</link>
+      <link>http://localhost:35501/tags/shortcodes/</link>
       <pubDate>Wed, 29 Jul 2026 18:40:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/shortcodes/</guid>
+      <guid>http://localhost:35501/tags/shortcodes/</guid>
       <description></description>
     </item>
     <item>
       <title>Inspiration</title>
-      <link>http://localhost:1313/tags/inspiration/</link>
+      <link>http://localhost:35501/tags/inspiration/</link>
       <pubDate>Wed, 29 Jul 2026 17:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/inspiration/</guid>
+      <guid>http://localhost:35501/tags/inspiration/</guid>
       <description></description>
     </item>
     <item>
       <title>Mindset</title>
-      <link>http://localhost:1313/tags/mindset/</link>
+      <link>http://localhost:35501/tags/mindset/</link>
       <pubDate>Wed, 29 Jul 2026 17:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/mindset/</guid>
+      <guid>http://localhost:35501/tags/mindset/</guid>
       <description></description>
     </item>
     <item>
       <title>Quotes</title>
-      <link>http://localhost:1313/tags/quotes/</link>
+      <link>http://localhost:35501/tags/quotes/</link>
       <pubDate>Wed, 29 Jul 2026 17:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/quotes/</guid>
+      <guid>http://localhost:35501/tags/quotes/</guid>
       <description></description>
     </item>
     <item>
       <title>Deep Work</title>
-      <link>http://localhost:1313/tags/deep-work/</link>
+      <link>http://localhost:35501/tags/deep-work/</link>
       <pubDate>Wed, 29 Jul 2026 16:30:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/deep-work/</guid>
+      <guid>http://localhost:35501/tags/deep-work/</guid>
       <description></description>
     </item>
     <item>
       <title>Discipline</title>
-      <link>http://localhost:1313/tags/discipline/</link>
+      <link>http://localhost:35501/tags/discipline/</link>
       <pubDate>Wed, 29 Jul 2026 16:30:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/discipline/</guid>
+      <guid>http://localhost:35501/tags/discipline/</guid>
       <description></description>
     </item>
     <item>
       <title>Self Improvement</title>
-      <link>http://localhost:1313/tags/self-improvement/</link>
+      <link>http://localhost:35501/tags/self-improvement/</link>
       <pubDate>Wed, 29 Jul 2026 16:30:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/self-improvement/</guid>
+      <guid>http://localhost:35501/tags/self-improvement/</guid>
       <description></description>
     </item>
     <item>
       <title>Graph Engineering</title>
-      <link>http://localhost:1313/tags/graph-engineering/</link>
+      <link>http://localhost:35501/tags/graph-engineering/</link>
       <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/graph-engineering/</guid>
+      <guid>http://localhost:35501/tags/graph-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>LangGraph</title>
-      <link>http://localhost:1313/tags/langgraph/</link>
+      <link>http://localhost:35501/tags/langgraph/</link>
       <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/langgraph/</guid>
+      <guid>http://localhost:35501/tags/langgraph/</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Agent Systems</title>
-      <link>http://localhost:1313/tags/multi-agent-systems/</link>
+      <link>http://localhost:35501/tags/multi-agent-systems/</link>
       <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/multi-agent-systems/</guid>
+      <guid>http://localhost:35501/tags/multi-agent-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Engineering</title>
-      <link>http://localhost:1313/tags/software-engineering/</link>
+      <link>http://localhost:35501/tags/software-engineering/</link>
       <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/software-engineering/</guid>
+      <guid>http://localhost:35501/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>System Architecture</title>
-      <link>http://localhost:1313/tags/system-architecture/</link>
+      <link>http://localhost:35501/tags/system-architecture/</link>
       <pubDate>Wed, 29 Jul 2026 16:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/system-architecture/</guid>
+      <guid>http://localhost:35501/tags/system-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Edge</title>
-      <link>http://localhost:1313/tags/microsoft-edge/</link>
+      <link>http://localhost:35501/tags/microsoft-edge/</link>
       <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/microsoft-edge/</guid>
+      <guid>http://localhost:35501/tags/microsoft-edge/</guid>
       <description></description>
     </item>
     <item>
       <title>Reading Experience</title>
-      <link>http://localhost:1313/tags/reading-experience/</link>
+      <link>http://localhost:35501/tags/reading-experience/</link>
       <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/reading-experience/</guid>
+      <guid>http://localhost:35501/tags/reading-experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>http://localhost:1313/tags/workflow/</link>
+      <link>http://localhost:35501/tags/workflow/</link>
       <pubDate>Wed, 29 Jul 2026 15:45:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/workflow/</guid>
+      <guid>http://localhost:35501/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Design System</title>
-      <link>http://localhost:1313/tags/design-system/</link>
+      <link>http://localhost:35501/tags/design-system/</link>
       <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/design-system/</guid>
+      <guid>http://localhost:35501/tags/design-system/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>http://localhost:1313/tags/frontend/</link>
+      <link>http://localhost:35501/tags/frontend/</link>
       <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/frontend/</guid>
+      <guid>http://localhost:35501/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Refactoring UI</title>
-      <link>http://localhost:1313/tags/refactoring-ui/</link>
+      <link>http://localhost:35501/tags/refactoring-ui/</link>
       <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/refactoring-ui/</guid>
+      <guid>http://localhost:35501/tags/refactoring-ui/</guid>
       <description></description>
     </item>
     <item>
       <title>UI Design</title>
-      <link>http://localhost:1313/tags/ui-design/</link>
+      <link>http://localhost:35501/tags/ui-design/</link>
       <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ui-design/</guid>
+      <guid>http://localhost:35501/tags/ui-design/</guid>
       <description></description>
     </item>
     <item>
       <title>UX</title>
-      <link>http://localhost:1313/tags/ux/</link>
+      <link>http://localhost:35501/tags/ux/</link>
       <pubDate>Sun, 26 Jul 2026 22:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ux/</guid>
+      <guid>http://localhost:35501/tags/ux/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Agent</title>
-      <link>http://localhost:1313/tags/ai-agent/</link>
+      <link>http://localhost:35501/tags/ai-agent/</link>
       <pubDate>Sun, 26 Jul 2026 21:38:18 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/ai-agent/</guid>
+      <guid>http://localhost:35501/tags/ai-agent/</guid>
       <description></description>
     </item>
     <item>
       <title>Learning</title>
-      <link>http://localhost:1313/tags/learning/</link>
+      <link>http://localhost:35501/tags/learning/</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/learning/</guid>
+      <guid>http://localhost:35501/tags/learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>http://localhost:1313/tags/resources/</link>
+      <link>http://localhost:35501/tags/resources/</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/resources/</guid>
+      <guid>http://localhost:35501/tags/resources/</guid>
       <description></description>
     </item>
     <item>
       <title>Claude Code</title>
-      <link>http://localhost:1313/tags/claude-code/</link>
+      <link>http://localhost:35501/tags/claude-code/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/claude-code/</guid>
+      <guid>http://localhost:35501/tags/claude-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Django</title>
-      <link>http://localhost:1313/tags/django/</link>
+      <link>http://localhost:35501/tags/django/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/django/</guid>
+      <guid>http://localhost:35501/tags/django/</guid>
       <description></description>
     </item>
     <item>
       <title>Spec-Driven Development</title>
-      <link>http://localhost:1313/tags/spec-driven-development/</link>
+      <link>http://localhost:35501/tags/spec-driven-development/</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/spec-driven-development/</guid>
+      <guid>http://localhost:35501/tags/spec-driven-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Configuration</title>
-      <link>http://localhost:1313/tags/configuration/</link>
+      <link>http://localhost:35501/tags/configuration/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/configuration/</guid>
+      <guid>http://localhost:35501/tags/configuration/</guid>
       <description></description>
     </item>
     <item>
       <title>Installation</title>
-      <link>http://localhost:1313/tags/installation/</link>
+      <link>http://localhost:35501/tags/installation/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>http://localhost:1313/tags/installation/</guid>
+      <guid>http://localhost:35501/tags/installation/</guid>
       <description></description>
     </item>
   </channel>

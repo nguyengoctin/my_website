@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Anki - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/anki/</link>
+        <link>http://localhost:35501/tags/anki/</link>
         <description>Anki - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/anki/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:35501/tags/anki/" rel="self" type="application/rss+xml" /><item>
     <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>
-    <link>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
+    <link>http://localhost:35501/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
     <pubDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</guid>
+    <guid>http://localhost:35501/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</guid>
     <description><![CDATA[<p>Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.</p>]]></description>
 </item>
 </channel>

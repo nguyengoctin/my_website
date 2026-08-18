@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Multi-Agent Systems - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/multi-agent-systems/</link>
+        <link>http://localhost:35501/tags/multi-agent-systems/</link>
         <description>Multi-Agent Systems - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/multi-agent-systems/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:35501/tags/multi-agent-systems/" rel="self" type="application/rss+xml" /><item>
     <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
-    <link>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</link>
+    <link>http://localhost:35501/posts/tu-prompt-engineering-den-graph-engineering/</link>
     <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</guid>
+    <guid>http://localhost:35501/posts/tu-prompt-engineering-den-graph-engineering/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Architecture matters more than the model."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

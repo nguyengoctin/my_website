@@ -1,39 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Python - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/python/</link>
+        <link>http://localhost:35501/tags/python/</link>
         <description>Python - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</lastBuildDate><atom:link href="http://localhost:35501/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Haystack</title>
-    <link>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</link>
+    <link>http://localhost:35501/ai-engineer/09-frameworks-and-tools/haystack/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</guid>
+    <guid>http://localhost:35501/ai-engineer/09-frameworks-and-tools/haystack/</guid>
     <description><![CDATA[Haystack là một framework Python mã nguồn mở giúp bạn xây dựng các tác nhân tìm kiếm và trả lời câu hỏi nhanh chóng.]]></description>
 </item>
 <item>
     <title>Python Cheat Sheet: Cú Pháp Và Thư Viện Căn Bản</title>
-    <link>http://localhost:1313/cheatsheets/python-cheat-sheet/</link>
+    <link>http://localhost:35501/cheatsheets/python-cheat-sheet/</link>
     <pubDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/cheatsheets/python-cheat-sheet/</guid>
+    <guid>http://localhost:35501/cheatsheets/python-cheat-sheet/</guid>
     <description><![CDATA[Cheat sheet tóm tắt cú pháp Python, các cấu trúc dữ liệu tích hợp, xử lý chuỗi và hàm thông dụng.]]></description>
 </item>
 <item>
     <title>Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ</title>
-    <link>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
+    <link>http://localhost:35501/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
+    <guid>http://localhost:35501/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
     <description><![CDATA[Hướng dẫn toàn tập về kiến trúc pipeline thu thập dữ liệu bí mật từ roadmap.sh, thiết kế prompt cho LLM phân đoạn song ngữ và giải quyết các lỗi rendering thực tế trên Hugo Theme LoveIt.]]></description>
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
+    <link>http://localhost:35501/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
+    <guid>http://localhost:35501/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

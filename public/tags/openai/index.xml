@@ -1,79 +1,79 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>OpenAI - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:1313/tags/openai/</link>
+        <link>http://localhost:35501/tags/openai/</link>
         <description>OpenAI - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/openai/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:35501/tags/openai/" rel="self" type="application/rss+xml" /><item>
     <title>OpenAI Embeddings API</title>
-    <link>http://localhost:1313/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/</link>
+    <link>http://localhost:35501/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/</guid>
+    <guid>http://localhost:35501/ai-engineer/04-rag-and-vector-databases/open-ai-embeddings-api/</guid>
     <description><![CDATA[OpenAI Embeddings API cung cấp một cách đơn giản để chuyển đổi văn bản thành các biểu diễn vector số được gọi là embeddings.]]></description>
 </item>
 <item>
     <title>OpenAI AgentKit</title>
-    <link>http://localhost:1313/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/</link>
+    <link>http://localhost:35501/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/</guid>
+    <guid>http://localhost:35501/ai-engineer/06-ai-agents/openai-agentkit-agent-sdk/</guid>
     <description><![CDATA[OpenAI AgentKit là một khung làm việc được thiết kế để đơn giản hóa quá trình tạo các tác nhân AI có thể thực hiện các tác vụ cụ thể bằng cách tận dụng các mô hình ngôn ngữ lớn (LLMs).]]></description>
 </item>
 <item>
     <title>OpenAI Vision API</title>
-    <link>http://localhost:1313/ai-engineer/08-multimodal-ai/openai-vision-api/</link>
+    <link>http://localhost:35501/ai-engineer/08-multimodal-ai/openai-vision-api/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/08-multimodal-ai/openai-vision-api/</guid>
+    <guid>http://localhost:35501/ai-engineer/08-multimodal-ai/openai-vision-api/</guid>
     <description><![CDATA[OpenAI Vision API cho phép các mô hình phân tích và hiểu hình ảnh, cho phép chúng xác định các đối tượng, nhận dạng văn bản và diễn giải nội dung hình ảnh.]]></description>
 </item>
 <item>
     <title>DALL-E API</title>
-    <link>http://localhost:1313/ai-engineer/08-multimodal-ai/dall-e-api/</link>
+    <link>http://localhost:35501/ai-engineer/08-multimodal-ai/dall-e-api/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/08-multimodal-ai/dall-e-api/</guid>
+    <guid>http://localhost:35501/ai-engineer/08-multimodal-ai/dall-e-api/</guid>
     <description><![CDATA[DALL-E API là một công cụ do OpenAI cung cấp cho phép các nhà phát triển tích hợp mô hình tạo hình ảnh DALL-E vào các ứng dụng.]]></description>
 </item>
 <item>
     <title>OpenAI Models (GPT, o-series)</title>
-    <link>http://localhost:1313/ai-engineer/10-models-and-apis/openai-gpt-o-series/</link>
+    <link>http://localhost:35501/ai-engineer/10-models-and-apis/openai-gpt-o-series/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/10-models-and-apis/openai-gpt-o-series/</guid>
+    <guid>http://localhost:35501/ai-engineer/10-models-and-apis/openai-gpt-o-series/</guid>
     <description><![CDATA[Các mô hình OpenAI, bao gồm GPT và &ldquo;o-series&rdquo; (như Whisper), là các mô hình AI pre-trained được cung cấp bởi OpenAI, có thể truy cập thông qua API của họ.]]></description>
 </item>
 <item>
     <title>OpenAI Response API</title>
-    <link>http://localhost:1313/ai-engineer/10-models-and-apis/openai-response-api/</link>
+    <link>http://localhost:35501/ai-engineer/10-models-and-apis/openai-response-api/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/10-models-and-apis/openai-response-api/</guid>
+    <guid>http://localhost:35501/ai-engineer/10-models-and-apis/openai-response-api/</guid>
     <description><![CDATA[OpenAI Response API cho phép các nhà phát triển tương tác với nhiều mô hình AI khác nhau do OpenAI cung cấp.]]></description>
 </item>
 <item>
     <title>OpenAI-compatible APIs</title>
-    <link>http://localhost:1313/ai-engineer/10-models-and-apis/openai-compatible-apis/</link>
+    <link>http://localhost:35501/ai-engineer/10-models-and-apis/openai-compatible-apis/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/10-models-and-apis/openai-compatible-apis/</guid>
+    <guid>http://localhost:35501/ai-engineer/10-models-and-apis/openai-compatible-apis/</guid>
     <description><![CDATA[OpenAI-compatible APIs là các giao diện mô phỏng cấu trúc và chức năng của API OpenAI.]]></description>
 </item>
 <item>
     <title>Codex</title>
-    <link>http://localhost:1313/ai-engineer/12-applications-and-usecases/codex/</link>
+    <link>http://localhost:35501/ai-engineer/12-applications-and-usecases/codex/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/ai-engineer/12-applications-and-usecases/codex/</guid>
+    <guid>http://localhost:35501/ai-engineer/12-applications-and-usecases/codex/</guid>
     <description><![CDATA[Codex là một model AI được tạo bởi OpenAI giúp dịch ngôn ngữ tự nhiên thành code.]]></description>
 </item>
 <item>
     <title>Hướng Dẫn Thực Tế: Cách Thiết Kế Và Xây Dựng AI Agent</title>
-    <link>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
+    <link>http://localhost:35501/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</link>
     <pubDate>Sun, 26 Jul 2026 21:38:18 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
+    <guid>http://localhost:35501/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"AI Agent không phải là một phép màu công nghệ, mà là một hệ thống phần mềm có kiến trúc, ranh giới và quy luật rõ ràng."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

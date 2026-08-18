@@ -136,12 +136,21 @@ main.main {
 
 .mobile-bottom-footer {
     display: none;
-    width: 100%;
-    padding: 0.5rem 0.8rem;
+    position: fixed;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: 480px;
+    padding: 0.4rem 0.8rem;
     justify-content: space-around;
     align-items: center;
     background: var(--background-color, #ffffff);
-    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.12));
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
     z-index: 100;
 }
@@ -165,12 +174,11 @@ main.main {
     .mobile-bottom-footer {
         display: flex !important;
         height: 52px;
-        position: relative;
     }
     .cheatsheet-workspace {
         flex-direction: column;
         gap: 0;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 115px);
         padding: 0.4rem 0;
         box-sizing: border-box;
     }
@@ -420,11 +428,8 @@ main.main {
 
             <!-- Bottom Dock Group: Utility Actions -->
             <div class="dock-section">
-                <button id="btn-zoom-page" class="side-tool-btn" title="Phóng to HD trang đang chọn" aria-label="Smart Zoom Page">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-                <button id="btn-fullscreen" class="side-tool-btn" title="Toàn màn hình" aria-label="Toggle Fullscreen">
-                    <i class="fas fa-expand"></i>
+                <button id="btn-zoom-page" class="side-tool-btn" title="Phóng to HD" aria-label="Smart Zoom Page">
+                    <i class="fas fa-expand-alt"></i>
                 </button>
                 <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở file PDF gốc trong tab mới" aria-label="Open PDF in new tab">
                     <i class="fas fa-external-link-alt"></i>
@@ -473,8 +478,8 @@ main.main {
         <button id="btn-next-mobile" class="side-tool-btn" title="Trang sau">
             <i class="fas fa-chevron-right"></i>
         </button>
-        <button id="btn-fullscreen-mobile" class="side-tool-btn" title="Toàn màn hình">
-            <i class="fas fa-expand"></i>
+        <button id="btn-zoom-page-mobile" class="side-tool-btn" title="Phóng to HD">
+            <i class="fas fa-expand-alt"></i>
         </button>
         <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở PDF tab mới">
             <i class="fas fa-external-link-alt"></i>
@@ -618,12 +623,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             pageDiv.appendChild(canvas);
             container.appendChild(pageDiv);
 
-            // Double click page to open Smart Zoom Pro Reader on Desktop only
+            // Double click page to open Smart Zoom Pro Reader
             pageDiv.addEventListener('dblclick', (e) => {
-                if (window.innerWidth >= 992) {
-                    e.stopPropagation();
-                    openSmartZoomSingleModal(i);
-                }
+                e.stopPropagation();
+                openSmartZoomSingleModal(i);
             });
 
             // Async Background Render
@@ -740,10 +743,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         }
 
-        async function openSmartZoomSingleModal(targetPageNum) {
-            // Disabled on Mobile Viewports (< 992px)
-            if (window.innerWidth < 992) return;
+        const btnZoomPageMobile = document.getElementById('btn-zoom-page-mobile');
 
+        async function openSmartZoomSingleModal(targetPageNum) {
             const target = targetPageNum || (currentPageIndex + 1);
             await renderZoomCanvas(target);
 
@@ -760,6 +762,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         if (btnZoomPage) btnZoomPage.addEventListener('click', () => openSmartZoomSingleModal(currentPageIndex + 1));
+        if (btnZoomPageMobile) btnZoomPageMobile.addEventListener('click', () => openSmartZoomSingleModal(currentPageIndex + 1));
         if (btnZoomClose) btnZoomClose.addEventListener('click', closeSmartZoomModal);
 
         // Next / Prev Page controls directly inside Zoom Overlay!
