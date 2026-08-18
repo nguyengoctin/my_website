@@ -67,6 +67,13 @@ enableEmoji = true
     title = "All Tags"
   [[menu.main]]
     weight = 4
+    identifier = "cheatsheets"
+    name = "Cheatsheets"
+    url = "/cheatsheets/"
+    title = "Technical Flipbook Cheatsheets"
+
+  [[menu.main]]
+    weight = 5
     identifier = "categories"
     name = "Categories"
     url = "/categories/"

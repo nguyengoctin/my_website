@@ -1,0 +1,478 @@
+{{- define "title" }}{{ .Title }} - Cheatsheets - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+<!-- Critical inline styles placed at top to prevent FOUC (Flash of Unstyled Content) before external CSS parses -->
+<style>
+/* Instant layout stabilization */
+#header-desktop,
+#header-mobile,
+.footer {
+    display: none !important;
+}
+
+.wrapper {
+    padding-top: 0 !important;
+}
+main.main {
+    margin-top: 0 !important;
+    padding-top: 0.8rem !important;
+}
+.container {
+    max-width: 100% !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.cheatsheet-single {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto;
+}
+
+.cheatsheet-top-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+.top-bar-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.7;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.top-bar-link:hover {
+    opacity: 1;
+    color: var(--link-hover-color, #4d74eb);
+}
+
+.cheatsheet-workspace {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cheatsheet-side-dock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    background: var(--background-color, #ffffff);
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.side-tool-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color, inherit);
+    opacity: 0.65;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+.side-tool-btn:hover {
+    opacity: 1;
+    border-color: var(--link-hover-color, #4d74eb);
+    color: var(--link-hover-color, #4d74eb);
+    background: var(--border-color, rgba(0, 0, 0, 0.06));
+}
+
+@media (max-width: 991px) {
+    .cheatsheet-workspace {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .cheatsheet-side-dock {
+        flex-direction: row;
+        margin-top: 0.5rem;
+    }
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+#flipbook-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+#flipbook-wrapper:fullscreen {
+    background: var(--background-color, #1a1a1a);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* --- Shimmer Skeleton Loader --- */
+#skeleton-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.skeleton-book {
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    padding: 1.5rem;
+    background: var(--border-color, rgba(0, 0, 0, 0.03));
+}
+
+.skeleton-page {
+    width: 320px;
+    height: 440px;
+    background: var(--background-color, #ffffff);
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skeleton-line {
+    height: 14px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.06) 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    border-radius: 4px;
+}
+.skeleton-line.title {
+    height: 22px;
+    width: 70%;
+}
+.skeleton-line.short {
+    width: 45%;
+}
+
+.skeleton-box {
+    height: 160px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.06) 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+}
+
+.skeleton-text {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+#flipbook-container {
+    display: none;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+#flipbook-controls {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.zen-btn {
+    background: transparent;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.15));
+    color: var(--text-color, inherit);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.65;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+    font-size: 0.85rem;
+    padding: 0;
+}
+.zen-btn:hover {
+    opacity: 1;
+    border-color: var(--link-hover-color, #4d74eb);
+    color: var(--link-hover-color, #4d74eb);
+}
+#page-indicator {
+    font-family: monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    opacity: 0.75;
+    min-width: 60px;
+    text-align: center;
+}
+.page-sheet {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+</style>
+
+<div class="page single cheatsheet-single">
+    <!-- Top Action Bar (Clean & Minimalist) -->
+    <div class="cheatsheet-top-bar">
+        <a href="/cheatsheets/" class="top-bar-link">
+            <i class="fas fa-arrow-left" style="font-size: 0.75rem;"></i> Cheatsheets
+        </a>
+    </div>
+
+    <!-- Main Workspace: Stage + Side Action Dock -->
+    <div class="cheatsheet-workspace">
+        <!-- Flipbook Stage (Clean Canvas Presentation) -->
+        <div id="flipbook-wrapper">
+            <!-- Shimmer Skeleton Loader (Prevents Layout Shift while rendering) -->
+            <div id="skeleton-loader">
+                <div class="skeleton-book">
+                    <div class="skeleton-page">
+                        <div class="skeleton-line title"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line short"></div>
+                        <div class="skeleton-box"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                    </div>
+                    <div class="skeleton-page desktop-only">
+                        <div class="skeleton-line title"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-box"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                </div>
+                <div class="skeleton-text">
+                    <i class="fas fa-circle-notch fa-spin"></i> Đang tải tài liệu PDF...
+                </div>
+            </div>
+            
+            <div id="flipbook-container"></div>
+
+            <!-- Minimalist Navigation Toolbar Below Book -->
+            <div id="flipbook-controls">
+                <button id="btn-prev" class="zen-btn" title="Trang trước (Phím ←)" aria-label="Previous Page">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <span id="page-indicator">
+                    01 / --
+                </span>
+
+                <button id="btn-next" class="zen-btn" title="Trang sau (Phím →)" aria-label="Next Page">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Side Tools Dock (Vertical on Desktop, Bottom on Mobile) -->
+        <aside class="cheatsheet-side-dock" aria-label="Reading Tools">
+            <button id="btn-fullscreen" class="side-tool-btn" title="Toàn màn hình" aria-label="Toggle Fullscreen">
+                <i class="fas fa-expand"></i>
+            </button>
+            <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở file PDF gốc trong tab mới" aria-label="Open PDF in new tab">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{{ .Params.pdf_url }}" download class="side-tool-btn" title="Tải xuống PDF" aria-label="Download PDF">
+                <i class="fas fa-download"></i>
+            </a>
+        </aside>
+    </div>
+
+    {{- if .Content -}}
+        <div class="content" id="content" style="margin-top: 2.5rem; border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08)); padding-top: 1.5rem;">
+            {{- dict "Content" .Content "Ruby" .Params.ruby "Fraction" .Params.fraction "Fontawesome" .Params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+    {{- end -}}
+</div>
+
+<!-- Load StPageFlip & PDF.js from reliable CDNs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+    const pdfUrl = "{{ .Params.pdf_url }}";
+    if (!pdfUrl) return;
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    const wrapper = document.getElementById('flipbook-wrapper');
+    const container = document.getElementById('flipbook-container');
+    const controls = document.getElementById('flipbook-controls');
+    const skeleton = document.getElementById('skeleton-loader');
+    const pageIndicator = document.getElementById('page-indicator');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnFullscreen = document.getElementById('btn-fullscreen');
+
+    try {
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdf = await loadingTask.promise;
+        const numPages = pdf.numPages;
+
+        container.innerHTML = '';
+
+        // Determine base dimensions based on first page aspect ratio
+        const firstPage = await pdf.getPage(1);
+        const origViewport = firstPage.getViewport({ scale: 1.0 });
+        const pdfAspectRatio = origViewport.height / origViewport.width; // e.g. ~1.414 for A4
+
+        const isMobile = window.innerWidth < 768;
+        const availableWidth = isMobile ? (window.innerWidth - 30) : Math.min(window.innerWidth - 180, 1400);
+        const availableHeight = Math.max(window.innerHeight - 150, 520);
+
+        let pageWidth, pageHeight;
+
+        if (isMobile) {
+            // Mobile: 1 single page taking 100% available container width
+            pageWidth = availableWidth;
+            pageHeight = Math.round(pageWidth * pdfAspectRatio);
+        } else {
+            // Desktop 2-page spread: Calculate based on width first for large readable spread
+            pageWidth = Math.floor(availableWidth / 2);
+            pageHeight = Math.round(pageWidth * pdfAspectRatio);
+
+            // Cap height if it exceeds screen height to avoid vertical scrolling
+            if (pageHeight > availableHeight) {
+                pageHeight = availableHeight;
+                pageWidth = Math.round(pageHeight / pdfAspectRatio);
+            }
+        }
+
+        // Render all PDF pages into canvas elements
+        for (let i = 1; i <= numPages; i++) {
+            const page = await pdf.getPage(i);
+            const renderScale = 2.5; // High resolution rendering
+            const viewport = page.getViewport({ scale: renderScale });
+
+            const pageDiv = document.createElement('div');
+            pageDiv.className = 'page-sheet';
+            pageDiv.style.width = pageWidth + 'px';
+            pageDiv.style.height = pageHeight + 'px';
+
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+
+            await page.render({ canvasContext: context, viewport: viewport }).promise;
+            pageDiv.appendChild(canvas);
+            container.appendChild(pageDiv);
+        }
+
+        // Smooth transition from Skeleton Screen to Flipbook Canvas
+        if (skeleton) skeleton.style.display = 'none';
+        container.style.display = 'block';
+        controls.style.display = 'flex';
+
+        // Initialize StPageFlip in fixed mode for exact calculated dimensions
+        const pageFlip = new St.PageFlip(container, {
+            width: pageWidth,
+            height: pageHeight,
+            size: "fixed",
+            minWidth: 280,
+            maxWidth: 900,
+            minHeight: 380,
+            maxHeight: 1300,
+            autoSize: true,
+            maxShadowOpacity: 0.35,
+            showCover: false,
+            mobileScrollSupport: false,
+            usePortrait: isMobile,
+            startPage: 0
+        });
+
+        pageFlip.loadFromHTML(document.querySelectorAll('#flipbook-container .page-sheet'));
+
+        const formatPageNumber = (n) => String(n).padStart(2, '0');
+
+        const updateIndicator = (index) => {
+            const current = index + 1;
+            pageIndicator.innerText = `${formatPageNumber(current)} / ${formatPageNumber(numPages)}`;
+        };
+
+        pageFlip.on('flip', (e) => {
+            updateIndicator(e.data);
+        });
+
+        updateIndicator(0);
+
+        btnPrev.addEventListener('click', () => pageFlip.flipPrev());
+        btnNext.addEventListener('click', () => pageFlip.flipNext());
+
+        // Fullscreen toggle
+        if (btnFullscreen) {
+            btnFullscreen.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    wrapper.requestFullscreen().catch(err => console.error(err));
+                    btnFullscreen.innerHTML = '<i class="fas fa-compress"></i>';
+                } else {
+                    document.exitFullscreen();
+                    btnFullscreen.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            });
+
+            document.addEventListener('fullscreenchange', () => {
+                if (!document.fullscreenElement) {
+                    btnFullscreen.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            });
+        }
+
+        // Keyboard arrow navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                pageFlip.flipPrev();
+            } else if (e.key === 'ArrowRight') {
+                pageFlip.flipNext();
+            }
+        });
+
+    } catch (err) {
+        console.error("Flipbook render error:", err);
+        if (skeleton) skeleton.style.display = 'none';
+        wrapper.innerHTML = `<p style="color: #e74c3c; font-size: 0.85rem; padding: 2rem;"><i class="fas fa-exclamation-triangle"></i> Không thể tải file PDF (${err.message})</p>`;
+    }
+});
+</script>
+{{- end -}}
