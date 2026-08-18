@@ -5,12 +5,140 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
 
 <style>
-.cv-container-aligned {
+/* Ẩn hoàn toàn Footer trên trang CV */
+.footer {
+    display: none !important;
+}
+
+/* Căn giữa trang CV theo cả trục dọc và ngang (Vertical & Horizontal Centering) */
+.wrapper {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+main.main {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0.5rem 0 !important;
+    box-sizing: border-box !important;
+}
+
+.page {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto 0 !important;
+}
+
+.cv-page-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
     width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: auto;
     padding: 0.5rem 0;
     box-sizing: border-box;
+    position: relative;
+}
+
+/* Desktop Left Integrated Dock (Matching Cheatsheet Style) */
+.cv-left-dock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 0.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 5rem;
+    z-index: 20;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[theme=dark] .cv-left-dock {
+    background: #24252b;
+    border-color: #333540;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dock-divider {
+    width: 20px;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0.2rem 0;
+}
+
+[theme=dark] .dock-divider {
+    background: #333540;
+}
+
+/* Unified Side Tool Button (Shared with Cheatsheet) */
+.side-tool-btn {
+    background: transparent;
+    border: none;
+    color: #334155;
+    opacity: 0.95;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+[theme=dark] .side-tool-btn {
+    color: #e2e8f0;
+}
+
+.side-tool-btn:hover,
+.side-tool-btn.active {
+    opacity: 1;
+    color: #4d74eb !important;
+    background: rgba(77, 116, 235, 0.1);
+}
+
+[theme=dark] .side-tool-btn:hover,
+[theme=dark] .side-tool-btn.active {
+    color: #818cf8 !important;
+    background: rgba(129, 140, 248, 0.15);
+}
+
+/* CV Main Content Column */
+.cv-content-column {
+    flex: 1;
+    max-width: 850px;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Scroll Container for Mobile Zoom/Pan */
+.cv-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    padding-bottom: 0.25rem;
+    display: flex;
+    justify-content: center;
 }
 
 .cv-page-card {
@@ -24,10 +152,12 @@
     border: 1px solid #e2e8f0;
     overflow: hidden;
     box-sizing: border-box;
+    transition: min-width 0.2s ease;
 }
 
 [theme=dark] .cv-page-card {
     border-color: #27272a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .cv-page-card canvas {
@@ -35,43 +165,6 @@
     height: auto !important;
     display: block;
     user-select: none;
-}
-
-/* Exact Cheatsheet side-tool-btn Style for Corner Download Button */
-.side-tool-btn.cv-corner-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 25;
-    background: transparent;
-    border: none;
-    color: #111111;
-    opacity: 0.7;
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-decoration: none !important;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-}
-
-.side-tool-btn.cv-corner-btn:hover {
-    opacity: 1;
-    color: #4d74eb !important;
-    background: rgba(0, 0, 0, 0.06);
-}
-
-[theme=dark] .side-tool-btn.cv-corner-btn {
-    color: #e5e7eb;
-}
-
-[theme=dark] .side-tool-btn.cv-corner-btn:hover {
-    color: #818cf8 !important;
-    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Selectable & Copyable PDF Text Layer */
@@ -101,7 +194,7 @@
     color: transparent !important;
 }
 
-/* Dynamic Clickable Link Overlay Layer */
+/* Clickable Links Overlay Layer */
 .cv-link-overlay {
     position: absolute;
     top: 0;
@@ -127,6 +220,7 @@
     outline: 1px solid rgba(77, 116, 235, 0.4);
 }
 
+/* Skeleton Loading Screen */
 .cv-loading {
     display: flex;
     flex-direction: column;
@@ -163,24 +257,122 @@
     0% { background-position: 100% 0; }
     100% { background-position: -100% 0; }
 }
+
+/* Mobile Floating Bottom Dock (Exact Cheatsheet Style) */
+.mobile-bottom-footer {
+    display: none;
+    position: fixed;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 380px;
+    padding: 0.4rem 0.8rem;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    z-index: 100;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[theme=dark] .mobile-bottom-footer {
+    background: rgba(36, 37, 43, 0.92);
+    border-color: #333540;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 768px) {
+    .page,
+    main.main .page {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .cv-left-dock {
+        display: none !important;
+    }
+
+    .mobile-bottom-footer {
+        display: flex !important;
+        height: 52px;
+    }
+
+    .cv-page-layout {
+        padding: 0 0 4.5rem 0 !important;
+        gap: 0 !important;
+    }
+
+    .cv-scroll-wrapper {
+        justify-content: flex-start;
+    }
+
+    /* Phóng to rõ ràng trên mobile với độ rộng tối thiểu 640px */
+    .cv-page-card.zoomed {
+        min-width: 640px;
+    }
+}
 </style>
 
 <div class="page">
-    <div class="cv-container-aligned">
+    <div class="cv-page-layout">
 
-        <!-- Skeleton Loading Screen -->
-        <div id="cv-skeleton" class="cv-loading">
-            <div class="cv-skeleton-line" style="width: 40%; height: 28px; margin-bottom: 0.5rem;"></div>
-            <div class="cv-skeleton-line" style="width: 60%; height: 16px;"></div>
-            <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin: 1rem 0;"></div>
-            <div class="cv-skeleton-line" style="width: 90%; height: 16px;"></div>
-            <div class="cv-skeleton-line" style="width: 75%; height: 16px;"></div>
-            <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin-top: 1rem;"></div>
-            <span style="font-family: Lora, serif; font-size: 0.85rem; color: #828282; margin-top: 0.5rem;"><i class="fas fa-circle-notch fa-spin"></i> Loading CV PDF...</span>
+        <!-- Desktop Left Integrated Dock (Matching Cheatsheet) -->
+        <div class="cv-left-dock">
+            <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download="NGUYEN_NGOC_TIN_CV.pdf" class="side-tool-btn" title="Tải xuống PDF">
+                <i class="fas fa-download"></i>
+            </a>
+            <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở PDF trong tab mới">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <div class="dock-divider"></div>
+            <button type="button" id="dock-zoom-toggle" class="side-tool-btn" title="Phóng to / Thu nhỏ">
+                <i class="fas fa-search-plus"></i>
+            </button>
         </div>
 
-        <div id="cv-page-container" style="display: none;"></div>
+        <!-- CV Content Column -->
+        <div class="cv-content-column">
+            <!-- Skeleton Loading Screen -->
+            <div id="cv-skeleton" class="cv-loading">
+                <div class="cv-skeleton-line" style="width: 40%; height: 28px; margin-bottom: 0.5rem;"></div>
+                <div class="cv-skeleton-line" style="width: 60%; height: 16px;"></div>
+                <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin: 1rem 0;"></div>
+                <div class="cv-skeleton-line" style="width: 90%; height: 16px;"></div>
+                <div class="cv-skeleton-line" style="width: 75%; height: 16px;"></div>
+                <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin-top: 1rem;"></div>
+                <span style="font-family: Lora, serif; font-size: 0.85rem; color: #828282; margin-top: 0.5rem;"><i class="fas fa-circle-notch fa-spin"></i> Đang tải CV PDF...</span>
+            </div>
 
+            <!-- CV Scrollable Canvas Container -->
+            <div class="cv-scroll-wrapper">
+                <div id="cv-page-container" style="display: none;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mobile Floating Bottom Dock (Exact Cheatsheet Style) -->
+    <div class="mobile-bottom-footer">
+        <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download="NGUYEN_NGOC_TIN_CV.pdf" class="side-tool-btn" title="Tải xuống PDF">
+            <i class="fas fa-download"></i>
+        </a>
+        <button type="button" id="mobile-zoom-toggle" class="side-tool-btn" title="Phóng to để đọc">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở toàn màn hình">
+            <i class="fas fa-external-link-alt"></i>
+        </a>
     </div>
 </div>
 
@@ -193,13 +385,43 @@ document.addEventListener('DOMContentLoaded', async function () {
     const pdfUrl = '/cv/NGUYEN_NGOC_TIN_CV.pdf';
     const container = document.getElementById('cv-page-container');
     const skeleton = document.getElementById('cv-skeleton');
+    const dockZoomBtn = document.getElementById('dock-zoom-toggle');
+    const mobileZoomBtn = document.getElementById('mobile-zoom-toggle');
+    let isZoomed = false;
+
+    function toggleZoom() {
+        isZoomed = !isZoomed;
+        const cards = document.querySelectorAll('.cv-page-card');
+        cards.forEach(card => {
+            if (isZoomed) {
+                card.classList.add('zoomed');
+            } else {
+                card.classList.remove('zoomed');
+            }
+        });
+
+        const iconHtml = isZoomed ? '<i class="fas fa-search-minus"></i>' : '<i class="fas fa-search-plus"></i>';
+        if (dockZoomBtn) {
+            dockZoomBtn.innerHTML = iconHtml;
+            if (isZoomed) dockZoomBtn.classList.add('active');
+            else dockZoomBtn.classList.remove('active');
+        }
+        if (mobileZoomBtn) {
+            mobileZoomBtn.innerHTML = iconHtml;
+            if (isZoomed) mobileZoomBtn.classList.add('active');
+            else mobileZoomBtn.classList.remove('active');
+        }
+    }
+
+    if (dockZoomBtn) dockZoomBtn.addEventListener('click', toggleZoom);
+    if (mobileZoomBtn) mobileZoomBtn.addEventListener('click', toggleZoom);
 
     try {
         const loadingTask = pdfjsLib.getDocument(pdfUrl);
         const pdfDoc = await loadingTask.promise;
         const numPages = pdfDoc.numPages;
 
-        const renderScale = Math.min((window.devicePixelRatio || 1.5) * 1.25, 2.2); // Adaptive DPI balance between sharpness and performance
+        const renderScale = Math.min((window.devicePixelRatio || 1.5) * 1.5, 2.5); // High-res rendering
 
         for (let i = 1; i <= numPages; i++) {
             const page = await pdfDoc.getPage(i);
@@ -209,18 +431,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const card = document.createElement('div');
             card.className = 'cv-page-card';
             if (i > 1) {
-                card.style.marginTop = '2rem';
-            }
-
-            // Exactly matching cheatsheet side-tool-btn download button
-            if (i === 1) {
-                const downloadBtn = document.createElement('a');
-                downloadBtn.href = pdfUrl;
-                downloadBtn.download = 'NGUYEN_NGOC_TIN_CV.pdf';
-                downloadBtn.className = 'side-tool-btn cv-corner-btn';
-                downloadBtn.title = 'Tải xuống PDF';
-                downloadBtn.innerHTML = '<i class="fas fa-download"></i>';
-                card.appendChild(downloadBtn);
+                card.style.marginTop = '1.5rem';
             }
 
             const canvas = document.createElement('canvas');
@@ -238,9 +449,13 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             container.appendChild(card);
 
-            // Container width based rendering (takes full 100% of 850px page column)
-            const targetWidth = card.clientWidth || 820;
-            const cssScale = targetWidth / origViewport.width;
+            // Edge-to-edge width rendering for mobile & desktop
+            const screenWidth = window.innerWidth;
+            const baseTargetWidth = screenWidth < 768 
+                ? Math.max(screenWidth - 12, 360) 
+                : Math.min(screenWidth - 32, 850);
+
+            const cssScale = baseTargetWidth / origViewport.width;
             const renderViewport = page.getViewport({ scale: cssScale * renderScale });
             const cssViewport = page.getViewport({ scale: cssScale });
 
@@ -281,9 +496,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                         a.target = '_blank';
                         a.rel = 'noopener noreferrer';
                         a.title = annot.url;
-                        a.style.left = (minX / targetWidth * 100) + '%';
+                        a.style.left = (minX / baseTargetWidth * 100) + '%';
                         a.style.top = (minY / (origViewport.height * cssScale) * 100) + '%';
-                        a.style.width = (width / targetWidth * 100) + '%';
+                        a.style.width = (width / baseTargetWidth * 100) + '%';
                         a.style.height = (height / (origViewport.height * cssScale) * 100) + '%';
                         linkOverlay.appendChild(a);
                     }
@@ -300,7 +515,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (err) {
         console.error('Error rendering CV:', err);
         if (skeleton) {
-            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Unable to load CV PDF. <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download style="color: #111111; text-decoration: underline;">Click here to download PDF</a></span>';
+            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Không thể nạp bản xem trước CV. <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download style="color: #111111; text-decoration: underline;">Bấm vào đây để tải trực tiếp file PDF</a></span>';
         }
     }
 });
