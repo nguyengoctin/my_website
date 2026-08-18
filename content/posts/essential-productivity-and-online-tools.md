@@ -2,6 +2,7 @@
 title: "A Collection of Essential Productivity and Online Tools"
 date: 2026-08-18T08:24:00+07:00
 weight: 2
+pinned: true
 draft: false
 author: "Nguyen Ngoc Tin"
 description: "A curated collection of essential browser extensions, web tools, media utilities, and online services for daily personal workflows."

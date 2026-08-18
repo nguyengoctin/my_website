@@ -37,19 +37,22 @@
     float: right !important;
     width: 32% !important;
     max-width: 250px !important;
+    min-width: 140px !important;
+    aspect-ratio: 1 / 1 !important;
     margin: 0 0 1rem 2rem !important;
 }
 
 .page.home .home-profile .home-avatar {
     padding: 0 !important;
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
     margin: 0 !important;
 }
 
 .page.home .home-profile .home-avatar img {
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
     aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;
     border-radius: 999px !important;
@@ -112,6 +115,15 @@
     .chip-huyen-style .profile-avatar-wrapper {
         float: none !important;
         max-width: 60% !important;
+        margin: 0 auto 1.5rem auto !important;
+        display: block !important;
+    }
+
+    /* Avatar inline bên trong _index.md About section */
+    .page.home .single .content img[alt="Nguyễn Ngọc Tín"] {
+        float: none !important;
+        width: 60% !important;
+        max-width: 180px !important;
         margin: 0 auto 1.5rem auto !important;
         display: block !important;
     }

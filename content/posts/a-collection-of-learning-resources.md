@@ -2,6 +2,7 @@
 title: "A Collection of Learning Resources"
 date: 2026-07-26
 weight: 1
+pinned: true
 draft: false
 author: "Nguyen Ngoc Tin"
 description: "A curated collection of learning resources for Artificial Intelligence, Machine Learning, Data Engineering, Computer Science, and Software Development."

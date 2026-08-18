@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Self Learning - Tag - Nguyen Ngoc Tin</title>
+        <title>Self-Learning - Tag - Nguyen Ngoc Tin</title>
         <link>http://localhost:1313/tags/self-learning/</link>
-        <description>Self Learning - Tag - Nguyen Ngoc Tin</description>
+        <description>Self-Learning - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
             <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/self-learning/" rel="self" type="application/rss+xml" /><item>
     <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>

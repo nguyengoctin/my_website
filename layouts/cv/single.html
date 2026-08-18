@@ -1,0 +1,297 @@
+{{- define "title" }}My CV - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+<!-- PDF.js TextLayer CSS for selectable & copyable text -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
+
+<style>
+.cv-container-aligned {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 0 3rem 0;
+    box-sizing: border-box;
+}
+
+.cv-page-card {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+[theme=dark] .cv-page-card {
+    border-color: #27272a;
+}
+
+.cv-page-card canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    user-select: none;
+}
+
+/* Exact Cheatsheet side-tool-btn Style for Corner Download Button */
+.side-tool-btn.cv-corner-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 25;
+    background: transparent;
+    border: none;
+    color: #111111;
+    opacity: 0.7;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.side-tool-btn.cv-corner-btn:hover {
+    opacity: 1;
+    color: #4d74eb !important;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+[theme=dark] .side-tool-btn.cv-corner-btn {
+    color: #e5e7eb;
+}
+
+[theme=dark] .side-tool-btn.cv-corner-btn:hover {
+    color: #818cf8 !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Selectable & Copyable PDF Text Layer */
+.textLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 1.0;
+    line-height: 1.0;
+    transform-origin: 0 0;
+    z-index: 5;
+}
+
+.textLayer span, .textLayer br {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
+}
+
+.textLayer ::selection {
+    background: rgba(77, 116, 235, 0.35) !important;
+    color: transparent !important;
+}
+
+/* Dynamic Clickable Link Overlay Layer */
+.cv-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.cv-link-overlay a {
+    position: absolute;
+    display: block;
+    pointer-events: auto;
+    border-radius: 3px;
+    background: transparent;
+    transition: background 0.2s ease, outline 0.2s ease;
+    cursor: pointer;
+}
+
+.cv-link-overlay a:hover {
+    background: rgba(77, 116, 235, 0.12);
+    outline: 1px solid rgba(77, 116, 235, 0.4);
+}
+
+.cv-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 500px;
+    width: 100%;
+    background: #ffffff;
+}
+
+[theme=dark] .cv-loading {
+    background: #18181b;
+}
+
+.cv-spinner-circle {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(0,0,0,0.1);
+    border-top-color: #111111;
+    border-radius: 50%;
+    animation: cvSpin 0.8s linear infinite;
+}
+
+[theme=dark] .cv-spinner-circle {
+    border-color: rgba(255,255,255,0.1);
+    border-top-color: #f4f4f5;
+}
+
+@keyframes cvSpin {
+    to { transform: rotate(360deg); }
+}
+</style>
+
+<div class="page">
+    <div class="cv-container-aligned">
+
+        <!-- Skeleton Loading Screen -->
+        <div id="cv-skeleton" class="cv-loading">
+            <div class="cv-spinner-circle"></div>
+            <span style="font-family: Lora, serif; font-size: 0.95rem; color: #828282;">Loading CV...</span>
+        </div>
+
+        <div id="cv-page-container" style="display: none;"></div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const pdfUrl = '/cv/NGUYEN_NGOC_TIN_CV.pdf';
+    const container = document.getElementById('cv-page-container');
+    const skeleton = document.getElementById('cv-skeleton');
+
+    try {
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdfDoc = await loadingTask.promise;
+        const numPages = pdfDoc.numPages;
+
+        const renderScale = 3.0; // Ultra-HD DPI
+
+        for (let i = 1; i <= numPages; i++) {
+            const page = await pdfDoc.getPage(i);
+            const origViewport = page.getViewport({ scale: 1.0 });
+
+            // Create Page Card
+            const card = document.createElement('div');
+            card.className = 'cv-page-card';
+            if (i > 1) {
+                card.style.marginTop = '2rem';
+            }
+
+            // Exactly matching cheatsheet side-tool-btn download button
+            if (i === 1) {
+                const downloadBtn = document.createElement('a');
+                downloadBtn.href = pdfUrl;
+                downloadBtn.download = 'NGUYEN_NGOC_TIN_CV.pdf';
+                downloadBtn.className = 'side-tool-btn cv-corner-btn';
+                downloadBtn.title = 'Tải xuống PDF';
+                downloadBtn.innerHTML = '<i class="fas fa-download"></i>';
+                card.appendChild(downloadBtn);
+            }
+
+            const canvas = document.createElement('canvas');
+            card.appendChild(canvas);
+
+            // Selectable & Copyable Text Layer
+            const textLayerDiv = document.createElement('div');
+            textLayerDiv.className = 'textLayer';
+            card.appendChild(textLayerDiv);
+
+            // Clickable Links Overlay Layer
+            const linkOverlay = document.createElement('div');
+            linkOverlay.className = 'cv-link-overlay';
+            card.appendChild(linkOverlay);
+
+            container.appendChild(card);
+
+            // Container width based rendering (takes full 100% of 850px page column)
+            const targetWidth = card.clientWidth || 820;
+            const cssScale = targetWidth / origViewport.width;
+            const renderViewport = page.getViewport({ scale: cssScale * renderScale });
+            const cssViewport = page.getViewport({ scale: cssScale });
+
+            canvas.width = renderViewport.width;
+            canvas.height = renderViewport.height;
+
+            const ctx = canvas.getContext('2d');
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            await page.render({ canvasContext: ctx, viewport: renderViewport }).promise;
+
+            // Render TextLayer for Selection & Copying
+            try {
+                const textContent = await page.getTextContent();
+                pdfjsLib.renderTextLayer({
+                    textContentSource: textContent,
+                    container: textLayerDiv,
+                    viewport: cssViewport,
+                    textDivs: []
+                });
+            } catch (textErr) {
+                console.warn('TextLayer render error:', textErr);
+            }
+
+            // Extract PDF Annotations & Render Clickable HTML Links
+            try {
+                const annotations = await page.getAnnotations();
+                annotations.forEach(annot => {
+                    if (annot.subtype === 'Link' && annot.url) {
+                        const rect = cssViewport.convertToViewportRectangle(annot.rect);
+                        const minX = Math.min(rect[0], rect[2]);
+                        const minY = Math.min(rect[1], rect[3]);
+                        const width = Math.abs(rect[2] - rect[0]);
+                        const height = Math.abs(rect[3] - rect[1]);
+
+                        const a = document.createElement('a');
+                        a.href = annot.url;
+                        a.target = '_blank';
+                        a.rel = 'noopener noreferrer';
+                        a.title = annot.url;
+                        a.style.left = (minX / targetWidth * 100) + '%';
+                        a.style.top = (minY / (origViewport.height * cssScale) * 100) + '%';
+                        a.style.width = (width / targetWidth * 100) + '%';
+                        a.style.height = (height / (origViewport.height * cssScale) * 100) + '%';
+                        linkOverlay.appendChild(a);
+                    }
+                });
+            } catch (annotErr) {
+                console.warn('Annotation extraction skipped:', annotErr);
+            }
+        }
+
+        // Display page container smoothly
+        if (skeleton) skeleton.style.display = 'none';
+        container.style.display = 'block';
+
+    } catch (err) {
+        console.error('Error rendering CV:', err);
+        if (skeleton) {
+            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Unable to load CV PDF. <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download style="color: #111111; text-decoration: underline;">Click here to download PDF</a></span>';
+        }
+    }
+});
+</script>
+{{- end -}}

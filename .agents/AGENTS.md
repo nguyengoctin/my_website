@@ -38,11 +38,11 @@ Shortcodes trong theme LoveIt. Luôn dùng shortcode thay vì Markdown thô:
 - **Prompt mẫu:** `{{< prompt title="Prompt Mẫu: [Tiêu đề]" >}} Nội dung {{< /prompt >}}` — Không dùng codeblock hay dấu ngoặc kép bên trong
 - **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
-- **Mermaid:** BẮT BUỘC dùng khối mã ```mermaid ... ``` (KHÔNG dùng shortcode `{{< mermaid >}}` vì Hugo Goldmark render-hook sẽ nuốt mất ký tự xuống dòng `\n`, làm toàn bộ mã Mermaid bị dồn thành 1 dòng đơn duy nhất trên giao diện HTML).
-  - Khai báo kiểu biểu đồ (như `flowchart TD`) trên dòng riêng biệt.
-  - Luôn bọc nhãn nút trong dấu ngoặc kép `"..."`.
-  - Nhãn trên mũi tên liên kết BẮT BUỘC dùng cú pháp `A -->|Nhãn| B` (KHÔNG dùng cú pháp `-- "Nhãn" -->` vì sẽ bị văng lỗi parser).
-  - TUYỆT ĐỐI KHÔNG dùng dấu ngoặc đơn `()`, ngoặc vuông `[]` hay ký tự đặc biệt như `&` (phải thay bằng chữ "và" hoặc "and"), `O(n²)` bên trong nhãn nút và nhãn mũi tên.
+- **Mermaid:** BẮT BUỘC dùng khối mã ```mermaid ... ``` (Hugo đã được bổ sung Custom Codeblock Render Hook tại `layouts/_markup/render-codeblock-mermaid.html` để tự động bảo toàn ký tự xuống dòng `\n` và Unescape mã HTML cho thư viện Mermaid JS).
+  - Khai báo kiểu biểu đồ (như `flowchart TD` hoặc `sequenceDiagram`) trên dòng riêng biệt.
+  - Luôn bọc nhãn nút chứa tiếng Việt trong dấu ngoặc kép `"..."`.
+  - Nhãn trên mũi tên liên kết BẮT BUỘC dùng cú pháp `A -->|Nhãn| B` (KHÔNG dùng cú pháp `-- "Nhãn" -->` để tránh lỗi parser).
+  - TUYỆT ĐỐI KHÔNG dùng ký tự đặc biệt như `&` (phải thay bằng chữ "và" hoặc "and") bên trong nhãn nút và nhãn mũi tên.
   - Tách từ khóa `subgraph` và `end` trên từng dòng độc lập.
-  - TUYỆT ĐỐI KHÔNG dùng ID của `subgraph` để nối mũi tên (như `Step1 --> Step2` sẽ gây lỗi parser); bắt buộc phải nối trực tiếp từ node cuối của subgraph này sang node đầu của subgraph khác (ví dụ: `A3 --> B1`).
+  - TUYỆT ĐỐI KHÔNG dùng ID của `subgraph` để nối mũi tên trực tiếp; bắt buộc phải nối từ node con cụ thể của subgraph này sang node con của subgraph khác (ví dụ: `A3 --> B1`).
 - **Code:** Dùng khối mã ` ```ngôn_ngữ ` — luôn có câu giải thích ngữ cảnh trước khi đưa code
