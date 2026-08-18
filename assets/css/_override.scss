@@ -11,11 +11,16 @@ body {
   font-family: "Lora", Georgia, serif !important;
   color: #111111 !important;
   background-color: #fdfdfd !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
 
   &[theme=dark] {
     color: #e5e7eb !important;
     background-color: #18181b !important;
   }
+}
+
+*, *::before, *::after {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 // 7. Search Button & Input: Clean Styling
