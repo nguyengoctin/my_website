@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.">
 <meta name="application-name" content="Nguyen Ngoc Tin">
 <meta name="apple-mobile-web-app-title" content="Nguyen Ngoc Tin">
-<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ngoctin.me/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/" /><link rel="prev" href="https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/" /><link rel="next" href="https://ngoctin.me/posts/essential-productivity-and-online-tools/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d74eb"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ngoctin.me/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/" /><link rel="prev" href="https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/" /><link rel="next" href="https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -269,16 +269,16 @@
 <p>Khi gặp một đoạn văn bản quá khó, chúng ta không dùng AI để dịch thô mà biến AI thành một Senior Engineer đang hướng dẫn trực tiếp. Các mẫu lệnh dưới đây áp dụng Kỹ thuật Feynman và cơ chế neo giữ ngữ cảnh để bóc tách thông tin.</p>
 <h3 id="1-mẫu-lệnh-phân-tích-khái-niệm-hệ-thống">1. Mẫu Lệnh Phân Tích Khái Niệm Hệ Thống</h3>
 <p>Dùng khi cần giải mã các khái niệm kiến trúc phần mềm hoặc hệ thống phân tán.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Mẫu: Phân Tích Khái Niệm Hệ Thống
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Mẫu: Phân Tích Khái Niệm Hệ Thống
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">&lt;context&gt;
+    <div class="prompt-content">&lt;context&gt;
 Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa học Máy tính. Nhiệm vụ của bạn là giải thích đoạn văn bản tiếng Anh chuyên ngành IT và AI sau đây sang tiếng Việt một cách trực quan, tuân thủ nguyên tắc Kỹ thuật Feynman. 
 &lt;/context&gt;
 
@@ -296,16 +296,16 @@ Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa 
 
 <h3 id="2-mẫu-lệnh-giải-mã-khối-mã-nguồn-và-ast">2. Mẫu Lệnh Giải Mã Khối Mã Nguồn và AST</h3>
 <p>Sử dụng khi văn bản tiếng Anh mô tả đan xen với khối code, giúp chúng ta ánh xạ lý thuyết vào luồng thực thi.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Mẫu: Giải Mã Khối Mã Nguồn
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Mẫu: Giải Mã Khối Mã Nguồn
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">&lt;context&gt;
+    <div class="prompt-content">&lt;context&gt;
 Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn lập trình. Tôi đang gặp khó khăn trong việc kết nối giữa văn bản lý thuyết tiếng Anh và đoạn mã nguồn thực thi.
 &lt;/context&gt;
 
@@ -327,16 +327,16 @@ Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn l�
 
 <h3 id="3-mẫu-lệnh-bóc-tách-công-thức-toán-học">3. Mẫu Lệnh Bóc Tách Công Thức Toán Học</h3>
 <p>Chuyên dùng cho các bài báo nghiên cứu AI chứa nhiều phương trình toán học.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Mẫu: Phân Rã Công Thức Toán Học
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Mẫu: Phân Rã Công Thức Toán Học
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">&lt;context&gt;
+    <div class="prompt-content">&lt;context&gt;
 Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng trong Trí tuệ Nhân tạo. Tôi cần bóc tách một phương trình toán học phức tạp thành các khối kiến thức dễ tiêu hóa.
 &lt;/context&gt;
 
@@ -376,34 +376,28 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
         A1[&#34;Tải PDF vào NotebookLM hoặc ZotFlow&#34;] --&gt; A2[&#34;Trích xuất 5 khái niệm cốt lõi bằng tiếng Việt&#34;]
         A2 --&gt; A3[&#34;Bật Immersive Translate DeepL đọc lướt&#34;]
     end
-
     subgraph Step2 [&#34;Bước 2: Đọc Sâu và Giải Mã&#34;]
         B1[&#34;Highlight tạo Backlink trong Obsidian&#34;] --&gt; B2[&#34;Dùng Prompt XML mổ xẻ đoạn khó bằng AI&#34;]
         B2 --&gt; B3[&#34;Tự diễn đạt lại khái niệm bằng tiếng Việt&#34;]
     end
-
     subgraph Step3 [&#34;Bước 3: Khai Thác Câu và SRS&#34;]
         C1[&#34;Tạo thẻ Flashcard theo kỹ thuật Sentence Mining&#34;] --&gt; C2[&#34;Đồng bộ tự động sang Anki qua Yanki&#34;]
         C2 --&gt; C3[&#34;Ôn tập hàng ngày với thuật toán FSRS&#34;]
     end
-
     A3 --&gt; B1
     B3 --&gt; C1">flowchart TD
     subgraph Step1 [&#34;Bước 1: Quét Bối Cảnh&#34;]
         A1[&#34;Tải PDF vào NotebookLM hoặc ZotFlow&#34;] --&gt; A2[&#34;Trích xuất 5 khái niệm cốt lõi bằng tiếng Việt&#34;]
         A2 --&gt; A3[&#34;Bật Immersive Translate DeepL đọc lướt&#34;]
     end
-
     subgraph Step2 [&#34;Bước 2: Đọc Sâu và Giải Mã&#34;]
         B1[&#34;Highlight tạo Backlink trong Obsidian&#34;] --&gt; B2[&#34;Dùng Prompt XML mổ xẻ đoạn khó bằng AI&#34;]
         B2 --&gt; B3[&#34;Tự diễn đạt lại khái niệm bằng tiếng Việt&#34;]
     end
-
     subgraph Step3 [&#34;Bước 3: Khai Thác Câu và SRS&#34;]
         C1[&#34;Tạo thẻ Flashcard theo kỹ thuật Sentence Mining&#34;] --&gt; C2[&#34;Đồng bộ tự động sang Anki qua Yanki&#34;]
         C2 --&gt; C3[&#34;Ôn tập hàng ngày với thuật toán FSRS&#34;]
     end
-
     A3 --&gt; B1
     B3 --&gt; C1</div><h3 id="bước-1-quét-bối-cảnh-để-định-hình-khung-tư-duy">Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy</h3>
 <p>Tải file PDF vào các công cụ như NotebookLM hay ZotFlow và yêu cầu AI trích xuất 5 khái niệm cốt lõi nhất của chương sách bằng tiếng Việt. Đọc qua bản tóm tắt này để bộ não hình thành lược đồ tri thức ban đầu.</p>
@@ -439,7 +433,7 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
     </div>
 
     <div class="post-nav"><a href="/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/" class="prev" rel="prev" title="Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ"><i class="fas fa-angle-left" aria-hidden="true"></i>Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ</a>
-            <a href="/posts/essential-productivity-and-online-tools/" class="next" rel="next" title="A Collection of Essential Productivity and Online Tools">A Collection of Essential Productivity and Online Tools<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+            <a href="/posts/tu-duy-viet-claudemd-thuc-chien/" class="next" rel="next" title="Tối Ưu CLAUDE.md và AGENTS.md: Dựa Trên Số Liệu Thực Nghiệm">Tối Ưu CLAUDE.md và AGENTS.md: Dựa Trên Số Liệu Thực Nghiệm<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -481,6 +475,6 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mermaid@11.5.0/dist/mermaid.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script>
 </body>
 </html>

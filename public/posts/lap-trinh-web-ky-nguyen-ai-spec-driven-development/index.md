@@ -40,19 +40,10 @@ Lạm dụng AI làm suy giảm khả năng tư duy độc lập. Mỗi khi gặ
 
 ## 2. Biến AI thành Mentor hướng dẫn học tập
 
-Để tiếp thu kiến thức mới hiệu quả, hãy biến AI thành một người thầy kiên nhẫn thông qua các quy tắc giao tiếp có định hướng.
+Để tiếp thu kiến thức mới hiệu quả, chúng ta cần biến AI thành một người thầy kiên nhẫn thông qua hai nguyên tắc giao tiếp cốt lõi:
 
-### 1. Hợp đồng học tập và rào chắn giới hạn
-
-{{< prompt title="Prompt Mẫu: Hợp đồng học tập và Guardrails" >}}
-Đóng vai một chuyên gia. Không đưa giải pháp ngay, hãy giải thích nguyên lý để tôi tự viết code.
-{{< /prompt >}}
-
-### 3. Gỡ lỗi theo phương pháp Socratic
-
-{{< prompt title="Prompt Mẫu: Gỡ lỗi gợi mở" >}}
-Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Đừng đưa cho tôi code sửa ngay. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.
-{{< /prompt >}}
+- **Hợp đồng học tập và rào chắn giới hạn:** Yêu cầu mô hình đóng vai chuyên gia hướng dẫn, chỉ giải thích bản chất kiến trúc và nguyên lý vận hành thay vì viết hộ toàn bộ mã nguồn.
+- **Gỡ lỗi theo phương pháp Socratic:** Khi gặp lỗi cú pháp hay traceback, yêu cầu AI đặt ra chuỗi câu hỏi gợi ý từng bước để người học tự lần ra nguyên nhân gốc rễ.
 
 ---
 

@@ -126,14 +126,26 @@
     }
 }
 
-/* 6. Tự động xuống dòng (Word Wrap) cho các thẻ codeblock dạng text (Prompt), 
-   giữ nguyên cuộn ngang cho code lập trình (Python, JS, SQL, HTML...) */
+/* 6. Tự động xuống dòng (Word Wrap) cho các thẻ codeblock dạng Markdown, Text, YAML */
 .highlight .language-text pre,
 .highlight .language-text code,
+.highlight .language-markdown pre,
+.highlight .language-markdown code,
+.highlight .language-md pre,
+.highlight .language-md code,
+.highlight .language-plaintext pre,
+.highlight .language-plaintext code,
+.highlight .language-yaml pre,
+.highlight .language-yaml code,
 .code-block pre.language-text,
-.code-block code.language-text {
+.code-block code.language-text,
+.code-block pre.language-markdown,
+.code-block code.language-markdown,
+.code-block pre.language-md,
+.code-block code.language-md {
     white-space: pre-wrap !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
     overflow-x: auto !important;
 }
 
@@ -256,10 +268,6 @@
     }
 }
 
-/* 4. Custom Blockquote Font Size */
-.single .content blockquote {
-    font-size: 1.5rem !important;
-}
 
 .admonition.quote,
 .admonition.note,

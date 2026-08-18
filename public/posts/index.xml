@@ -4,7 +4,7 @@
         <link>https://ngoctin.me/posts/</link>
         <description>All Blog | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
     <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
     <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
@@ -49,6 +49,15 @@
     </div>
 </div>
 <p><strong>Icon Legend:</strong></p>]]></description>
+</item>
+<item>
+    <title>Tối Ưu CLAUDE.md và AGENTS.md: Dựa Trên Số Liệu Thực Nghiệm</title>
+    <link>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</link>
+    <pubDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"CLAUDE.md không phải bộ nhớ kiến thức, nó là bộ nhớ quy trình. Nó không làm agent thông minh hơn, nhưng nó điều khiển hành vi của agent — và hành vi mới là nơi chúng ta đang đốt tiền."</p>]]></description>
 </item>
 <item>
     <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>
@@ -121,21 +130,6 @@
 </blockquote>
 
 <p>Xã hội hiện đại ngập tràn những lời khuyên vuốt ve dễ chịu: <em>&ldquo;Hãy nhẹ nhàng với bản thân&rdquo;</em>, <em>&ldquo;Cứ thong dong rồi kết quả sẽ đến&rdquo;</em>. Nhưng sự thật là: thế giới này không vận hành bằng sự dịu dàng. Nền kinh tế tri thức không bao giờ trả tiền cho những nỗ lực nửa vời. Khi chúng ta chọn thong dong thay vì ép bản thân vượt qua ngưỡng chịu đựng, chúng ta đang vô tình nhường lại cơ hội bứt phá cho nhóm 1% những người sẵn sàng sống trong áp lực cực hạn.</p>]]></description>
-</item>
-<item>
-    <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
-    <link>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</link>
-    <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"Architecture matters more than the model."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Andrew Ng</cite>
-    </footer>
-</blockquote>
-
-<p>Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:</p>]]></description>
 </item>
 </channel>
 </rss>

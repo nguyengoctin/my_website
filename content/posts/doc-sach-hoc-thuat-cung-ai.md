@@ -44,14 +44,13 @@ flowchart TD
         S1["Bước 1: Survey - Nạp Mục lục và Lời nói đầu"] --> S2["Bước 2: Question - AI tạo 5 câu hỏi định hướng"]
         S2 --> S3["Bước 3: Read - Bóc tách văn bản chống trôi ngữ cảnh giữa"]
     end
-
     subgraph STAGE2 ["Giai Đoạn 2: Interactive Feynman Loop - Thẩm Thấu và Phản Biện"]
         S3 --> F1["Bước 4: Recite - Người đọc tự giải thích cho AI"]
         F1 --> F2["AI phân tích: Điểm đúng, Lỗ hổng, Thuật ngữ rỗng"]
         F2 --> F3{"Đã giải thích bản chất trôi chảy?"}
-        F3 -->|"Còn lỗ hổng hoặc giả định ngầm"| F4["Bước 5: Critical - Vấn đáp Socratic phản biện 1-on-1"]
+        F3 -->|Còn lỗ hổng hoặc giả định ngầm| F4["Bước 5: Critical - Vấn đáp Socratic phản biện"]
         F4 --> F1
-        F3 -->|"Đã hiểu sâu bản chất"| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
+        F3 -->|Đã hiểu sâu bản chất| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
     end
 ```
 

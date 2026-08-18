@@ -131,6 +131,7 @@ This curated collection gathers top-tier courses, documentation, books, and tech
 - **[Brittany Chiang](https://brittanychiang.com/)** <i class="fas fa-globe"></i> — Software Engineer portfolio and design resources
 - **[Josh W. Comeau](https://joshwcomeau.com/)** <i class="fas fa-globe"></i> — Interactive CSS and Web Development tutorials
 - **[StatQuest with Josh Starmer](https://www.youtube.com/c/joshstarmer)** <i class="fab fa-youtube"></i> — Statistics and Machine Learning broken down step by step
+- <i class="fas fa-star"></i> **[Goon's Solo Playbook](https://goonnguyen.substack.com/)** <i class="fas fa-globe"></i> — Practical insights on AI Agents, Solo SaaS building, and software engineering by Duy /zuey/
 - <i class="fas fa-star"></i> **[Dinh Anh Thi Blog](https://dinhanhthi.com/)** <i class="fas fa-globe"></i> — Data Science, Machine Learning, and Software Engineering notes by Dinh Anh Thi
 - **[Yannic Kilcher](https://www.youtube.com/c/yannickilcher)** <i class="fab fa-youtube"></i> — AI paper explanations and machine learning news
 

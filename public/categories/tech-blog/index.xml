@@ -4,7 +4,16 @@
         <link>https://ngoctin.me/categories/tech-blog/</link>
         <description>Tech Blog - Category - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/categories/tech-blog/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/categories/tech-blog/" rel="self" type="application/rss+xml" /><item>
+    <title>Tối Ưu CLAUDE.md và AGENTS.md: Dựa Trên Số Liệu Thực Nghiệm</title>
+    <link>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</link>
+    <pubDate>Tue, 18 Aug 2026 18:32:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>https://ngoctin.me/posts/tu-duy-viet-claudemd-thuc-chien/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"CLAUDE.md không phải bộ nhớ kiến thức, nó là bộ nhớ quy trình. Nó không làm agent thông minh hơn, nhưng nó điều khiển hành vi của agent — và hành vi mới là nơi chúng ta đang đốt tiền."</p>]]></description>
+</item>
+<item>
     <title>Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS</title>
     <link>https://ngoctin.me/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</link>
     <pubDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</pubDate>
@@ -124,21 +133,6 @@
     </div>
 </div>
 <p>Khi đối mặt với các quy trình nghiệp vụ thay đổi liên tục, nhiều lập trình viên thường sa lầy vào việc bảo trì hàng nghìn dòng lệnh <code>if-else</code> lắt léo và dễ sinh lỗi. Cấp độ tiếp theo để giải quyết bài toán này không phải là viết code chặt chẽ hơn, mà là giao quyền cho một <strong>AI Agent</strong> — những thực thể thông minh có khả năng tự động lên kế hoạch, sử dụng công cụ bên ngoài và hoàn thành những chuỗi nhiệm vụ phức tạp mà không cần sự can thiệp liên tục của con người.</p>]]></description>
-</item>
-<item>
-    <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Sưu tầm</cite>
-    </footer>
-</blockquote>
-
-<p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -35,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/doc-sach-hoc-thuat-cung-ai\/"
-        },"genre": "posts","keywords": "Prompt Engineering, AI, Self-learning","wordcount":  2014 ,
+        },"genre": "posts","keywords": "Prompt Engineering, AI, Self-learning","wordcount":  2013 ,
         "url": "https:\/\/ngoctin.me\/posts\/doc-sach-hoc-thuat-cung-ai\/","datePublished": "2026-07-30T12:15:00+07:00","dateModified": "2026-07-30T12:15:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -227,41 +227,39 @@
         S1[&#34;Bước 1: Survey - Nạp Mục lục và Lời nói đầu&#34;] --&gt; S2[&#34;Bước 2: Question - AI tạo 5 câu hỏi định hướng&#34;]
         S2 --&gt; S3[&#34;Bước 3: Read - Bóc tách văn bản chống trôi ngữ cảnh giữa&#34;]
     end
-
     subgraph STAGE2 [&#34;Giai Đoạn 2: Interactive Feynman Loop - Thẩm Thấu và Phản Biện&#34;]
         S3 --&gt; F1[&#34;Bước 4: Recite - Người đọc tự giải thích cho AI&#34;]
         F1 --&gt; F2[&#34;AI phân tích: Điểm đúng, Lỗ hổng, Thuật ngữ rỗng&#34;]
         F2 --&gt; F3{&#34;Đã giải thích bản chất trôi chảy?&#34;}
-        F3 --&gt;|&#34;Còn lỗ hổng hoặc giả định ngầm&#34;| F4[&#34;Bước 5: Critical - Vấn đáp Socratic phản biện 1-on-1&#34;]
+        F3 --&gt;|Còn lỗ hổng hoặc giả định ngầm| F4[&#34;Bước 5: Critical - Vấn đáp Socratic phản biện&#34;]
         F4 --&gt; F1
-        F3 --&gt;|&#34;Đã hiểu sâu bản chất&#34;| R1[&#34;Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm&#34;]
+        F3 --&gt;|Đã hiểu sâu bản chất| R1[&#34;Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm&#34;]
     end">flowchart TD
     subgraph STAGE1 [&#34;Giai Đoạn 1: SQ3R - Định Hướng và Bóc Tách Tri Thức&#34;]
         S1[&#34;Bước 1: Survey - Nạp Mục lục và Lời nói đầu&#34;] --&gt; S2[&#34;Bước 2: Question - AI tạo 5 câu hỏi định hướng&#34;]
         S2 --&gt; S3[&#34;Bước 3: Read - Bóc tách văn bản chống trôi ngữ cảnh giữa&#34;]
     end
-
     subgraph STAGE2 [&#34;Giai Đoạn 2: Interactive Feynman Loop - Thẩm Thấu và Phản Biện&#34;]
         S3 --&gt; F1[&#34;Bước 4: Recite - Người đọc tự giải thích cho AI&#34;]
         F1 --&gt; F2[&#34;AI phân tích: Điểm đúng, Lỗ hổng, Thuật ngữ rỗng&#34;]
         F2 --&gt; F3{&#34;Đã giải thích bản chất trôi chảy?&#34;}
-        F3 --&gt;|&#34;Còn lỗ hổng hoặc giả định ngầm&#34;| F4[&#34;Bước 5: Critical - Vấn đáp Socratic phản biện 1-on-1&#34;]
+        F3 --&gt;|Còn lỗ hổng hoặc giả định ngầm| F4[&#34;Bước 5: Critical - Vấn đáp Socratic phản biện&#34;]
         F4 --&gt; F1
-        F3 --&gt;|&#34;Đã hiểu sâu bản chất&#34;| R1[&#34;Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm&#34;]
+        F3 --&gt;|Đã hiểu sâu bản chất| R1[&#34;Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm&#34;]
     end</div><h2 id="quy-trình-5-bước-sử-dụng-bộ-prompt-thực-chiến">Quy Trình 5 Bước Sử Dụng Bộ Prompt Thực Chiến</h2>
 <p>Bộ 5 prompt thực chiến dưới đây được thiết kế truyền dữ liệu nối tiếp nhau: đầu ra của bước trước làm đầu vào cho bước sau, đảm bảo không bị rời rạc.</p>
 <h3 id="bước-1-khảo-sát-mục-lục-và-tạo-hệ-thống-câu-hỏi-định-hướng-sq3r-survey">Bước 1: Khảo sát mục lục và tạo hệ thống câu hỏi định hướng (SQ3R Survey)</h3>
 <p>Trước khi đọc chi tiết, chúng ta nạp mục lục và lời nói đầu vào AI để xây dựng bộ câu hỏi kích thích tư duy tìm kiếm của não bộ.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Bước 1: Khảo Sát Mục Lục và Tạo Câu Hỏi Định Hướng
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Bước 1: Khảo Sát Mục Lục và Tạo Câu Hỏi Định Hướng
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">Bạn là một Chuyên gia Nhận thức luận. Hãy phân tích mục lục và lời nói đầu của cuốn sách dưới đây để tạo ra một khung định hướng đọc hiểu.
+    <div class="prompt-content">Bạn là một Chuyên gia Nhận thức luận. Hãy phân tích mục lục và lời nói đầu của cuốn sách dưới đây để tạo ra một khung định hướng đọc hiểu.
 
 Dữ liệu đầu vào:
 [DÁN MỤC LỤC VÀ LỜI NÓI ĐẦU Ô ĐÂY]
@@ -274,16 +272,16 @@ Yêu cầu đầu ra:
 
 <h3 id="bước-2-bóc-tách-nội-dung-chương-sách-chống-trôi-ngữ-cảnh-read">Bước 2: Bóc tách nội dung chương sách chống trôi ngữ cảnh (Read)</h3>
 <p>Khi đọc từng chương dài, chúng ta dùng prompt này để ép AI rà soát đồng đều cả 3 vùng đầu, giữa và cuối của tài liệu, tránh bỏ sót các luận điểm quan trọng ở giữa.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Bước 2: Bóc Tách Luận Điểm Đồng Đều Đầu - Giữa - Cuối
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Bước 2: Bóc Tách Luận Điểm Đồng Đều Đầu - Giữa - Cuối
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">Bạn là Chuyên gia Trích xuất Tri thức Ngữ cảnh Dài. Hãy đọc chương sách dưới đây và trích xuất thông tin đồng đều ở cả 3 vùng: Phần Đầu, Phần Giữa và Phần Cuối.
+    <div class="prompt-content">Bạn là Chuyên gia Trích xuất Tri thức Ngữ cảnh Dài. Hãy đọc chương sách dưới đây và trích xuất thông tin đồng đều ở cả 3 vùng: Phần Đầu, Phần Giữa và Phần Cuối.
 
 [DÁN NỘI DUNG CHƯƠNG SÁCH Ô ĐÂY]
 
@@ -296,16 +294,16 @@ Phản hồi bắt buộc tuân theo bảng sau:
 
 <h3 id="bước-3-kích-hoạt-vòng-lặp-feynman-tự-giải-thích-recite">Bước 3: Kích hoạt Vòng lặp Feynman tự giải thích (Recite)</h3>
 <p>Sau khi đọc lướt xong, chúng ta tự viết lại khái niệm theo cách hiểu của mình và gửi cho AI đóng vai người học 10 tuổi để vạch lá tìm sâu các lỗ hổng tư duy.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Bước 3: Vòng Lặp Feynman và Máy Dò Lỗ Hổng Tri Thức
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Bước 3: Vòng Lặp Feynman và Máy Dò Lỗ Hổng Tri Thức
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">Bạn là một Giám khảo Kiểm tra Tri thức theo Phương pháp Feynman. Bạn đóng vai một người học chưa có kiến thức nền tảng, có tư duy logic sắc bén và luôn tìm kiếm sự rõ ràng.
+    <div class="prompt-content">Bạn là một Giám khảo Kiểm tra Tri thức theo Phương pháp Feynman. Bạn đóng vai một người học chưa có kiến thức nền tảng, có tư duy logic sắc bén và luôn tìm kiếm sự rõ ràng.
 
 Tôi đang học về chủ đề [TÊN_KHÁI_NIỆM]. Tôi sẽ tự giải thích khái niệm này theo cách hiểu của tôi. Nhiệm vụ của bạn là phân tích lời giải thích của tôi, chỉ ra các khoảng trống tri thức, các từ ngữ phức tạp tôi dùng nhưng chưa hiểu bản chất, và yêu cầu tôi tinh chỉnh.
 
@@ -320,16 +318,16 @@ Sau khi tôi gửi câu trả lời, hãy phân tích theo 3 góc độ:
 
 <h3 id="bước-4-vấn-đáp-socratic-phá-vỡ-các-giả-định-ngầm-critical-review">Bước 4: Vấn đáp Socratic phá vỡ các giả định ngầm (Critical Review)</h3>
 <p>Đối với các đoạn văn bản triết học hoặc lập luận phức tạp, chúng ta chuyển sang prompt Socratic để AI liên tục đặt câu hỏi phản biện, ép chúng ta phải quay lại tài liệu gốc để đào sâu.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Bước 4: Triết Gia Vấn Đáp Phá Vỡ Giả Định
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Bước 4: Triết Gia Vấn Đáp Phá Vỡ Giả Định
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung cấp câu trả lời, mà là dùng chuỗi câu hỏi vấn đáp để giúp tôi tự nhận ra các giới hạn và mâu thuẫn trong cách hiểu của mình về cuốn sách.
+    <div class="prompt-content">Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung cấp câu trả lời, mà là dùng chuỗi câu hỏi vấn đáp để giúp tôi tự nhận ra các giới hạn và mâu thuẫn trong cách hiểu của mình về cuốn sách.
 
 Đoạn văn bản tôi đang nghiên cứu:
 [DÁN ĐOẠN VĂN BẢN TRONG SÁCH]
@@ -341,16 +339,16 @@ Duy trì cuộc hội thoại vấn đáp này cho đến khi tôi tự rút ra 
 
 <h3 id="bước-5-tổng-hợp-sơ-đồ-và-xây-dựng-ma-trận-tri-thức-review-and-concept-mapping">Bước 5: Tổng hợp sơ đồ và xây dựng ma trận tri thức (Review and Concept Mapping)</h3>
 <p>Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài.</p>
-<div class="prompt-box" style="margin: 1.25rem 0; border: 1px solid #d0d7de; border-radius: 6px; background-color: #f6f8fa; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);">
-    <div class="prompt-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.85rem; background-color: #eef1f5; border-bottom: 1px solid #d0d7de; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace; font-weight: 600; color: #24292f;">
-        <span class="prompt-title" style="display: flex; align-items: center; gap: 0.45rem;">
-            <i class="fas fa-terminal" style="color: #57606a;"></i> Prompt Bước 5: Kiến Trúc Sư Chuyển Đổi Ma Trận Khái Niệm
+<div class="prompt-box">
+    <div class="prompt-header">
+        <span class="prompt-title">
+            <i class="fas fa-terminal"></i> Prompt Bước 5: Kiến Trúc Sư Chuyển Đổi Ma Trận Khái Niệm
         </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border: 1px solid #d0d7de; border-radius: 4px; background: #ffffff; color: #57606a; font-size: 0.78rem; font-family: system-ui, -apple-system, sans-serif; font-weight: 500; cursor: pointer;" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
+        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
             <i class="far fa-copy"></i> <span>Copy</span>
         </button>
     </div>
-    <div class="prompt-content" style="padding: 0.85rem 1rem; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 0.875rem; line-height: 1.5; color: #1f2328; white-space: pre-wrap; word-break: break-word;">Bạn là một Kiến trúc sư Tri thức. Nhiệm vụ của bạn là chuyển đổi các đoạn văn bản tuyến tính thành ma trận quan hệ mạng lưới nhằm phục vụ việc ghi nhớ thị giác và xây dựng sơ đồ tư duy.
+    <div class="prompt-content">Bạn là một Kiến trúc sư Tri thức. Nhiệm vụ của bạn là chuyển đổi các đoạn văn bản tuyến tính thành ma trận quan hệ mạng lưới nhằm phục vụ việc ghi nhớ thị giác và xây dựng sơ đồ tư duy.
 
 [DÁN NỘI DUNG SÁCH CẦN MÔ HÌNH HÓA]
 
@@ -428,6 +426,6 @@ Hãy chuyển đổi nội dung trên thành cấu trúc dữ liệu sau:
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/mhchem.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mermaid@11.5.0/dist/mermaid.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script>
 </body>
 </html>

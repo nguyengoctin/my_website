@@ -1,48 +1,64 @@
-# Quy Tắc Viết Blog Chia Sẻ Kiến Thức
+# AGENTS.md — Quy Chuẩn Vận Hành và Viết Blog
 
-## Triết Lý & Phong Cách Viết
+## 1. Core Commands
 
-- **Xưng hô "Chúng ta":** Dùng "chúng ta" khi khám phá khái niệm và chia sẻ hành trình học hỏi — người viết và người đọc cùng đồng hành. Tránh giọng dạy đời hay khoảng cách "tôi - bạn".
-- **Tinh gọn & Mật độ thông tin:** Nếu nói được trong một đoạn văn, đừng dùng một trang A4. Không mở bài hay kết bài rườm rà.
-- **Cấm ngoặc đơn dịch nghĩa:** TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()` để dịch từ inline. Dùng tiếng Việt tự nhiên hoặc giữ nguyên thuật ngữ tiếng Anh.
-- **Cấm dùng ký tự `&` trong TOÀN BỘ bài viết:** TUYỆT ĐỐI KHÔNG dùng `&` ở bất kỳ đâu (tiêu đề bài viết, tiêu đề mục, nội dung văn bản, prompt mẫu hay nhãn sơ đồ Mermaid). Luôn luôn dùng chữ "và" cho văn bản tiếng Việt hoặc chữ "and" cho cụm từ/bài viết tiếng Anh để thay thế (trừ đường dẫn URL hoặc khối mã code).
-- **Cấu trúc rõ ràng & Dễ lướt:** Phân chia tiêu đề H2/H3 cụ thể. Trình bày bài toán trước, giải pháp và bài học thực tế theo sau.
-- **Mở bài bằng bài toán, không phải bằng giới thiệu:** Câu đầu tiên phải khiến người đọc thấy ngay vấn đề đang được giải quyết. Không mở bằng "Biết đến X bao giờ chưa?" hay "Hôm nay chúng ta sẽ tìm hiểu…".
-- **Đặt người đọc vào bối cảnh trước khi giải pháp:** Xác định rõ bài toán, ai sẽ gặp và tại sao nó khó. Đừng nhảy thẳng vào giải pháp khi người đọc chưa đồng cảm với vấn đề.
-- **Tiêu đề cụ thể & Chân thực (Quy tắc Reddit / Tech Community):**
-  - **Tránh tuyệt đối Clickbait / Marketing:** Không dùng từ thổi phồng (*Game-changer, Ultimate, Shocking, Bí kíp, Toàn tập*). Độc giả kỹ thuật sẽ nghi ngờ chất lượng bài viết.
-  - **Tập trung vào Giá trị & Giải pháp cụ thể:** Nói thẳng bài viết giải quyết vấn đề gì, mang lại bài học hoặc bài toán thực tế nào (*Cách xử lý X khi dùng Y*, *Bài học từ Z*).
-  - **Mô hình Đặt tiêu đề Thực chiến (Reddit Style):**
-    - *Kỹ thuật / Tutorial:* "Cách [Giải quyết bài toán cụ thể] bằng [Công nghệ]" hoặc "[Công nghệ X]: Từ [Khái niệm A] đến [Giải pháp B]"
-    - *Góc nhìn / Trải nghiệm:* "Bài Học Từ [Trải nghiệm/Chuyên gia]: [Thông điệp cốt lõi]" hoặc "Tại Sao [Quan niệm phổ biến] Lại Không Hiệu Quả?"
-    - *Tổng hợp / Tài nguyên:* "[Chủ đề]: Những [Tài nguyên/Câu nói] Định Hình Tư Duy [Chuyên môn]"
-  - **Cấm ngoặc đơn dịch nghĩa hay từ phụ thừa:** Không dùng ngoặc đơn để giải thích từ tiếng Anh ngay tiêu đề (*VD: không viết "Các Câu Nói (Quotes)"*).
-- **Viết cho "bản thân quá khứ":** Chọn chủ đề từ những khái niệm mà bản thân từng bế tắc. Bài viết tốt nhất là bài viết bạn ước gì được đọc khi còn mới học.
-- **Góc nhìn độc quyền:** Đừng viết lại tài liệu chính thức. Chia sẻ insight từ thực tế triển khai — sai lầm, edge case, và bài học "hidden gem" chỉ người có kinh nghiệm thực chiến mới biết.
-- **Bằng chứng hơn tuyên bố:** Dùng ví dụ code, sơ đồ kiến trúc để minh họa thay vì chỉ khẳng định suông. "Show, don't tell."
-- **Hiểu bản chất, đừng chỉ biết tên:** Diễn giải khái niệm bằng ngôn ngữ của mình — nếu chỉ lặp lại định nghĩa từ để biết cái tên, đó không phải hiểu.
-- **Dạy cách tư duy, không chỉ đưa ra đáp án:** Mỗi bài viết nên trang bị cho người đọc một framework tư duy, không chỉ một giải pháp cụ thể để copy-paste.
-- **Thất bại là dữ liệu:** Chia sẻ cả những gì đã không hoạt động và lý do tại sao — những bài học từ thất bại thường có giá trị hơn thành công.
-- **Phân loại bài viết để áp dụng chuẩn phù hợp:**
-  - **Bài viết Kỹ thuật / Hướng dẫn (Tech Blog):** Áp dụng nghiêm ngặt quy chuẩn cấu trúc Bài toán $\to$ Giải pháp $\to$ Bài học thực tế. Tinh gọn, đi thẳng vào bản chất kỹ thuật và ví dụ minh họa.
-  - **Bài viết Tản văn / Góc nhìn / Trích dẫn (Mindset, Think, Review):** Tôn trọng tuyệt đối 100% nội dung, văn phong, mạch cảm xúc và cấu trúc truyền đạt của tác giả/bài gốc. Chỉ áp dụng các quy chuẩn trình bày shortcodes (`quote`, `admonition`, `image`, `link`) để làm sạch giao diện, TUYỆT ĐỐI KHÔNG tự ý tóm tắt, cắt bỏ hay biến bài viết thành các bullet points khô khan.
-- **Trích dẫn nguồn:** Khi tham khảo nghiên cứu hay quan điểm người khác, dẫn nguồn giải thích rõ ràng. Điều này xây dựng uy tín và tôn trọng người đọc.
-- **Chấp nhận bài viết chưa hoàn hảo:** Strive to be right, but don't fear being wrong. Bài viết có lỗ hổng khi đăng vẫn có giá trị hơn không đăng. Cộng đồng sẽ giúp chỉnh sửa.
+- **Dev Server:** `hugo server -D` (xem trực tiếp thay đổi trên môi trường local)
+- **Kiểm tra Build:** `hugo --buildDrafts` (bắt buộc chạy để thẩm định cú pháp trước khi hoàn tất)
+- **Build Production:** `hugo --gc --minify`
 
-## Cú Pháp Trình Bày Nội Dung
+## 2. Definition of Done (Checklist Hoàn Thành)
 
-Shortcodes trong theme LoveIt. Luôn dùng shortcode thay vì Markdown thô:
+Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc phải thỏa mãn:
+1. Lệnh `hugo --buildDrafts` biên dịch thành công 100%, không phát sinh lỗi render hay shortcode.
+2. Tiêu đề và nội dung TUYỆT ĐỐI KHÔNG chứa ký tự `&` (phải thay bằng chữ "và" hoặc "and").
+3. TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()` để dịch nghĩa inline (dùng tiếng Việt tự nhiên hoặc giữ nguyên thuật ngữ tiếng Anh gốc).
+4. Xưng hô "chúng ta" xuyên suốt bài viết, giữ vai trò đồng hành cùng người đọc.
+5. Frontmatter đầy đủ: `title`, `date`, `description`, `tags`, `categories`, `author`, `draft`.
+6. Toàn bộ sơ đồ Mermaid và Shortcode tuân thủ đúng cú pháp quy định.
+
+## 3. Vùng Cấm Can Thiệp (Protected Areas)
+
+- Không tự ý sửa đổi file cấu hình `hugo.toml` hoặc cấu trúc theme gốc nếu không có yêu cầu cụ thể.
+- Không tự ý chạy các lệnh Git can thiệp trực tiếp vào lịch sử commit (`git push`, `git reset --hard`).
+
+## 4. Triết Lý và Cấu Trúc Bài Viết
+
+- **Mở bài trực diện bằng bài toán:** Câu đầu tiên phải đưa người đọc vào vấn đề kỹ thuật hoặc bài toán thực tế cần giải quyết. Tuyệt đối không mở bài rườm rà hay chào hỏi thừa.
+- **Bố cục chuẩn Tech Blog:**
+  - Bài toán và bối cảnh thực tế $\to$ Bằng chứng số liệu và phân tích bản chất $\to$ Giải pháp và cấu hình mẫu $\to$ Bài học đúc kết.
+- **Tiêu đề cụ thể, chân thực (Reddit Style):**
+  - Không dùng từ thổi phồng, clickbait (Toàn tập, Bí kíp, Ultimate, Game-changer).
+  - Định dạng chuẩn: *"Cách [Giải quyết bài toán cụ thể] bằng [Công nghệ]"* hoặc *"[Chủ đề]: Từ [Bản chất] đến [Giải pháp]"*.
+  - Không dùng ngoặc đơn giải thích từ tiếng Anh ngay tiêu đề.
+- **Show, Don't Tell:** Dùng ví dụ code, bảng dữ liệu, và sơ đồ trực quan thay vì chỉ khẳng định suông.
+- **Phân loại bài viết:**
+  - *Tech Blog (Kỹ thuật/Hướng dẫn):* Tinh gọn, đi thẳng vào bản chất kỹ thuật, tuân thủ cấu trúc bài toán $\to$ giải pháp.
+  - *Tản văn / Góc nhìn / Trích dẫn (Mindset, Review):* Tôn trọng 100% nội dung, văn phong và cảm xúc bài gốc; chỉ dùng shortcodes để làm đẹp giao diện, không tự ý tóm tắt cắt xén.
+
+## 5. Quy Chuẩn Shortcodes và Cú Pháp
 
 - **Callout:** `{{< admonition type="note|tip|warning|danger|info|success|question|failure|bug|example|abstract" title="Tiêu đề" >}} Nội dung {{< /admonition >}}`
-- **Quote:** `{{< quote author="Tên" >}} Nội dung {{< /quote >}}` — Không ghi author thì hiển thị `— Sưu tầm`
-- **Prompt mẫu:** `{{< prompt title="Prompt Mẫu: [Tiêu đề]" >}} Nội dung {{< /prompt >}}` — Không dùng codeblock hay dấu ngoặc kép bên trong
-- **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
+- **Quote:** `{{< quote author="Tên Tác Giả" >}} Nội dung {{< /quote >}}` — Không ghi author thì hiển thị `— Sưu tầm`
+- **Prompt Mẫu:** `{{< prompt title="Prompt Mẫu: [Tên]" >}} Nội dung prompt không chứa codeblock lồng {{< /prompt >}}`
+  - Chỉ sử dụng khung `prompt` cho các bộ câu lệnh hoàn chỉnh, đa bước hoặc có cấu trúc rõ ràng.
+  - TUYỆT ĐỐI KHÔNG bọc các câu ngắn 1–2 dòng rời rạc vào khung prompt (dùng bullet point hoặc callout).
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
-- **Mermaid:** BẮT BUỘC dùng khối mã ```mermaid ... ``` (Hugo đã được bổ sung Custom Codeblock Render Hook tại `layouts/_markup/render-codeblock-mermaid.html` để tự động bảo toàn ký tự xuống dòng `\n` và Unescape mã HTML cho thư viện Mermaid JS).
-  - Khai báo kiểu biểu đồ (như `flowchart TD` hoặc `sequenceDiagram`) trên dòng riêng biệt.
-  - Luôn bọc nhãn nút chứa tiếng Việt trong dấu ngoặc kép `"..."`.
-  - Nhãn trên mũi tên liên kết BẮT BUỘC dùng cú pháp `A -->|Nhãn| B` (KHÔNG dùng cú pháp `-- "Nhãn" -->` để tránh lỗi parser).
-  - TUYỆT ĐỐI KHÔNG dùng ký tự đặc biệt như `&` (phải thay bằng chữ "và" hoặc "and") bên trong nhãn nút và nhãn mũi tên.
-  - Tách từ khóa `subgraph` và `end` trên từng dòng độc lập.
-  - TUYỆT ĐỐI KHÔNG dùng ID của `subgraph` để nối mũi tên trực tiếp; bắt buộc phải nối từ node con cụ thể của subgraph này sang node con của subgraph khác (ví dụ: `A3 --> B1`).
-- **Code:** Dùng khối mã ` ```ngôn_ngữ ` — luôn có câu giải thích ngữ cảnh trước khi đưa code
+- **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
+- **Ghim bài viết:** Thêm `pinned: true` vào frontmatter để tự động hiển thị biểu tượng ghim bên phải tiêu đề trên trang chủ và danh sách.
+- **Typography & Heading:** Toàn bộ tiêu đề bài viết và heading dùng font `Lora` với độ đậm `font-weight: 500` (Medium) tinh gọn, thanh lịch.
+- **Mermaid JS:** Bắt buộc dùng khối mã ` ```mermaid `:
+  - **Khai báo loại biểu đồ:** Dòng đầu tiên là `flowchart TD`, `flowchart LR`, hoặc `sequenceDiagram` (nằm trên một dòng độc lập).
+  - **Định dạng Node (Hộp văn bản):**
+    - Hộp chữ nhật chuẩn: `NodeID["Nội dung tiếng Việt hoặc Unicode"]` (luôn dùng cặp ngoặc vuông `["..."]` bọc dấu nháy kép cho mọi node có dấu tiếng Việt hoặc khoảng trắng).
+    - Nút hình thoi điều kiện: `NodeID{"Nội dung quyết định"}`.
+    - `NodeID` bắt buộc là chuỗi ký tự ASCII đơn giản (ví dụ: `A`, `B`, `Step1`, `Node1`), TUYỆT ĐỐI KHÔNG dùng từ khóa hệ thống (như `end`, `subgraph`, `graph`).
+  - **Nhãn trên mũi tên liên kết:**
+    - Cú pháp chuẩn: `A -->|Nhãn văn bản thuần túy| B` (hoặc `A --> B` nếu không cần nhãn).
+    - TUYỆT ĐỐI KHÔNG đặt dấu nháy kép `"` bên trong cặp thanh đứng `|...|` (ví dụ SAI: `-->|"Nhãn"|`, ĐÚNG: `-->|Nhãn|`).
+    - TUYỆT ĐỐI KHÔNG dùng dấu phẩy `,`, dấu gạch chéo `/` trong nhãn mũi tên (dùng từ thay thế: `hoặc`, `và`, dấu gạch ngang `-`).
+  - **TUYỆT ĐỐI KHÔNG để dòng trống (Empty Line) bên trong khối mã Mermaid:** Toàn bộ các dòng định nghĩa trong khối ` ```mermaid ` phải liên tục, không chèn dòng trống giữa các node hoặc giữa các `subgraph`.
+  - **TUYỆT ĐỐI KHÔNG dùng ký tự `&` trong toàn bộ biểu đồ:** Thay bằng chữ "và" hoặc chữ "and".
+  - **Quy tắc Subgraph:**
+    - Khai báo: `subgraph ID ["Tên Hiển Thị"]` và `end` trên từng dòng độc lập.
+    - Không nối mũi tên trực tiếp vào `ID` của subgraph; bắt buộc phải nối từ node con cụ thể bên trong.
+- **Code Block:** Luôn có câu dẫn ngữ cảnh trước khi đưa khối mã ` ```ngôn_ngữ `. Toàn bộ các khối mã Markdown, Text, YAML tự động bẻ dòng theo chuẩn `white-space: pre-wrap`.

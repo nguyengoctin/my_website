@@ -39,8 +39,12 @@
                         {{- range .Pages -}}
                             <article class="archive-item" style="margin-left: 2.5rem;">
                                 <a href="{{ .RelPermalink }}" class="archive-item-link">
-                                    {{- if .Params.pinned -}}<i class="fas fa-thumbtack pinned-icon" title="Pinned Post"></i>{{- end -}}
                                     {{- .Title | emojify -}}
+                                    {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
+                                        <span class="pinned-post-icon" title="Bài viết được ghim" style="margin-left: 0.35rem; font-size: 0.85em; color: #ec4899; display: inline-flex; align-items: center; vertical-align: middle;">
+                                            <i class="fas fa-thumbtack" style="transform: rotate(35deg);" aria-hidden="true"></i>
+                                        </span>
+                                    {{- end -}}
                                 </a>
                                 <span class="archive-item-date">
                                     {{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}

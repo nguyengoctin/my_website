@@ -161,17 +161,14 @@ flowchart TD
         A1["Tải PDF vào NotebookLM hoặc ZotFlow"] --> A2["Trích xuất 5 khái niệm cốt lõi bằng tiếng Việt"]
         A2 --> A3["Bật Immersive Translate DeepL đọc lướt"]
     end
-
     subgraph Step2 ["Bước 2: Đọc Sâu và Giải Mã"]
         B1["Highlight tạo Backlink trong Obsidian"] --> B2["Dùng Prompt XML mổ xẻ đoạn khó bằng AI"]
         B2 --> B3["Tự diễn đạt lại khái niệm bằng tiếng Việt"]
     end
-
     subgraph Step3 ["Bước 3: Khai Thác Câu và SRS"]
         C1["Tạo thẻ Flashcard theo kỹ thuật Sentence Mining"] --> C2["Đồng bộ tự động sang Anki qua Yanki"]
         C2 --> C3["Ôn tập hàng ngày với thuật toán FSRS"]
     end
-
     A3 --> B1
     B3 --> C1
 ```
