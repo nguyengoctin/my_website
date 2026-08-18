@@ -6,15 +6,20 @@ title: "Nguyen Ngoc Tin"
 
 <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" style="float: right; width: 32%; max-width: 220px; min-width: 120px; aspect-ratio: 1/1; object-fit: cover; border-radius: 999px; margin: 0 0 1rem 2rem; display: block;">
 
-Hi, I'm **Nguyễn Ngọc Tín**, a fresh graduate in **Information Technology** (majoring in Information Systems) from Saigon University, based in Ho Chi Minh City, Vietnam.
+Hi, I'm **Nguyễn Ngọc Tín**, an Information Systems graduate from Saigon University, based in Ho Chi Minh City, Vietnam.
 
-I've always been driven by a relentless curiosity — a constant need to break things down and understand how they truly work beneath the surface. My goal is to become an **AI Engineer**, working at the intersection of robust backend architecture and intelligent systems.
+I’m deeply curious about how software works under the hood — from database internals to API architecture. My goal is to become an **AI Engineer**, bridging the gap between scalable backend systems and practical AI/LLM applications.
 
-This site is my personal space to document what I learn, share technical insights, and refine my thinking along the journey.
+**What I'm focused on:**
+- **Backend & Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
+- **Applied AI:** Experimenting with LLM integration, agentic workflows, and data-driven systems.
 
-{{< typeit class="home-quote-typeit" >}}
-“The important thing is not to stop questioning.” — Albert Einstein
-{{< /typeit >}}
+**What I’m doing right now:**  
+Currently building practical side-projects, deep-diving into backend performance optimization, and documenting technical post-mortems on this blog.
+
+When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
+
+Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories), check out my [GitHub](https://github.com/ngoctinn), or connect with me on [LinkedIn](https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/)!
 
 ---
 
