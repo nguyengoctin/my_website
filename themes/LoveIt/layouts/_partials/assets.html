@@ -90,8 +90,8 @@
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
 
-{{- /* TypeIt */ -}}
-{{- with (.Scratch.Get "this").typeitMap -}}
+{{- $typeitMap := (.Scratch.Get "this").typeitMap | default (.Scratch.Get "typeitMap") -}}
+{{- with $typeitMap -}}
     {{- $typeit := $.Site.Params.typeit -}}
     {{- $source := $cdn.typeitJS | default "lib/typeit/index.umd.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}

@@ -137,22 +137,18 @@ main.main {
 .mobile-bottom-footer {
     display: none;
     position: fixed;
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 24px);
-    max-width: 480px;
-    padding: 0.4rem 0.8rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.4rem 1rem;
     justify-content: space-around;
     align-items: center;
     background: var(--background-color, #ffffff);
-    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.12));
-    border-radius: 24px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
     box-sizing: border-box;
     z-index: 100;
+    padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
 }
 
 @media (max-width: 991px) {
@@ -478,9 +474,6 @@ main.main {
         <button id="btn-next-mobile" class="side-tool-btn" title="Trang sau">
             <i class="fas fa-chevron-right"></i>
         </button>
-        <button id="btn-zoom-page-mobile" class="side-tool-btn" title="Phóng to HD">
-            <i class="fas fa-expand-alt"></i>
-        </button>
         <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở PDF tab mới">
             <i class="fas fa-external-link-alt"></i>
         </a>
@@ -538,9 +531,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     const btnNext = document.getElementById('btn-next');
     const btnPrevMobile = document.getElementById('btn-prev-mobile');
     const btnNextMobile = document.getElementById('btn-next-mobile');
-    
-    const btnFullscreen = document.getElementById('btn-fullscreen');
-    const btnFullscreenMobile = document.getElementById('btn-fullscreen-mobile');
     
     const btnZoomPage = document.getElementById('btn-zoom-page');
 
@@ -723,6 +713,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const ctx = zoomCanvas.getContext('2d');
                 await page.render({ canvasContext: ctx, viewport: hdViewport }).promise;
 
+                // LRU Cache eviction: limit cache to max 5 pages to prevent memory leaks
+                if (zoomCanvasCache.size >= 5) {
+                    const oldestKey = zoomCanvasCache.keys().next().value;
+                    zoomCanvasCache.delete(oldestKey);
+                }
+
                 // Cache offscreen canvas
                 const offscreenCanvas = document.createElement('canvas');
                 offscreenCanvas.width = hdViewport.width;
@@ -743,8 +739,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         }
 
-        const btnZoomPageMobile = document.getElementById('btn-zoom-page-mobile');
-
         async function openSmartZoomSingleModal(targetPageNum) {
             const target = targetPageNum || (currentPageIndex + 1);
             await renderZoomCanvas(target);
@@ -762,7 +756,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         if (btnZoomPage) btnZoomPage.addEventListener('click', () => openSmartZoomSingleModal(currentPageIndex + 1));
-        if (btnZoomPageMobile) btnZoomPageMobile.addEventListener('click', () => openSmartZoomSingleModal(currentPageIndex + 1));
         if (btnZoomClose) btnZoomClose.addEventListener('click', closeSmartZoomModal);
 
         // Next / Prev Page controls directly inside Zoom Overlay!
@@ -824,24 +817,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             zoomStage.scrollTop = scrollTop - walkY;
         });
 
-        // Fullscreen toggle
-        const toggleFullscreen = () => {
-            if (!document.fullscreenElement) {
-                wrapper.requestFullscreen().catch(err => console.error(err));
-            } else {
-                document.exitFullscreen();
-            }
-        };
-
-        if (btnFullscreen) btnFullscreen.addEventListener('click', toggleFullscreen);
-        if (btnFullscreenMobile) btnFullscreenMobile.addEventListener('click', toggleFullscreen);
-
-        document.addEventListener('fullscreenchange', () => {
-            const isFS = !!document.fullscreenElement;
-            const icon = isFS ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
-            if (btnFullscreen) btnFullscreen.innerHTML = icon;
-            if (btnFullscreenMobile) btnFullscreenMobile.innerHTML = icon;
-        });
 
         // Keyboard navigation inside Zoom Overlay
         document.addEventListener('keydown', (e) => {

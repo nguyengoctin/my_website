@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Machine Learning - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:35501/tags/machine-learning/</link>
+        <link>https://ngoctin.me/tags/machine-learning/</link>
         <description>Machine Learning - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:35501/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/machine-learning/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
-    <link>http://localhost:35501/posts/a-collection-of-learning-resources/</link>
+    <link>https://ngoctin.me/posts/a-collection-of-learning-resources/</link>
     <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:35501/posts/a-collection-of-learning-resources/</guid>
+    <guid>https://ngoctin.me/posts/a-collection-of-learning-resources/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"You do not rise to the level of your goals. You fall to the level of your systems."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -29,18 +29,18 @@
 </item>
 <item>
     <title>AI Agents</title>
-    <link>http://localhost:35501/ai-engineer/06-ai-agents/ai-agents/</link>
+    <link>https://ngoctin.me/ai-engineer/06-ai-agents/ai-agents/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:35501/ai-engineer/06-ai-agents/ai-agents/</guid>
+    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/ai-agents/</guid>
     <description><![CDATA[Trong kỹ thuật AI, &ldquo;tác nhân&rdquo; đề cập đến các hệ thống hoặc thành phần tự trị có thể nhận thức môi trường của chúng, đưa ra quyết định và thực hiện hành động để đạt được các mục tiêu cụ thể.]]></description>
 </item>
 <item>
     <title>Hugging Face</title>
-    <link>http://localhost:35501/ai-engineer/09-frameworks-and-tools/hugging-face/</link>
+    <link>https://ngoctin.me/ai-engineer/09-frameworks-and-tools/hugging-face/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:35501/ai-engineer/09-frameworks-and-tools/hugging-face/</guid>
+    <guid>https://ngoctin.me/ai-engineer/09-frameworks-and-tools/hugging-face/</guid>
     <description><![CDATA[Hugging Face là một công ty AI hàng đầu và nền tảng mã nguồn mở cung cấp các công cụ, mô hình và thư viện cho NLP, thị giác máy tính và các tác vụ ML khác.]]></description>
 </item>
 </channel>

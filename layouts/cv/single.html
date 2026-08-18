@@ -7,16 +7,16 @@
 <style>
 .cv-container-aligned {
     width: 100%;
-    max-width: 100%;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 0.5rem 0 3rem 0;
+    padding: 0.5rem 0;
     box-sizing: border-box;
 }
 
 .cv-page-card {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 850px;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 4px;
@@ -131,33 +131,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    min-height: 500px;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    min-height: 600px;
     width: 100%;
     background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
 }
 
 [theme=dark] .cv-loading {
     background: #18181b;
+    border-color: #27272a;
 }
 
-.cv-spinner-circle {
-    width: 36px;
-    height: 36px;
-    border: 3px solid rgba(0,0,0,0.1);
-    border-top-color: #111111;
-    border-radius: 50%;
-    animation: cvSpin 0.8s linear infinite;
+.cv-skeleton-line {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.05) 63%);
+    background-size: 400% 100%;
+    animation: cvShimmer 1.4s ease infinite;
+    border-radius: 4px;
 }
 
-[theme=dark] .cv-spinner-circle {
-    border-color: rgba(255,255,255,0.1);
-    border-top-color: #f4f4f5;
+[theme=dark] .cv-skeleton-line {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.10) 37%, rgba(255,255,255,0.04) 63%);
+    background-size: 400% 100%;
 }
 
-@keyframes cvSpin {
-    to { transform: rotate(360deg); }
+@keyframes cvShimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
 }
 </style>
 
@@ -166,8 +170,13 @@
 
         <!-- Skeleton Loading Screen -->
         <div id="cv-skeleton" class="cv-loading">
-            <div class="cv-spinner-circle"></div>
-            <span style="font-family: Lora, serif; font-size: 0.95rem; color: #828282;">Loading CV...</span>
+            <div class="cv-skeleton-line" style="width: 40%; height: 28px; margin-bottom: 0.5rem;"></div>
+            <div class="cv-skeleton-line" style="width: 60%; height: 16px;"></div>
+            <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin: 1rem 0;"></div>
+            <div class="cv-skeleton-line" style="width: 90%; height: 16px;"></div>
+            <div class="cv-skeleton-line" style="width: 75%; height: 16px;"></div>
+            <div class="cv-skeleton-line" style="width: 100%; height: 140px; margin-top: 1rem;"></div>
+            <span style="font-family: Lora, serif; font-size: 0.85rem; color: #828282; margin-top: 0.5rem;"><i class="fas fa-circle-notch fa-spin"></i> Loading CV PDF...</span>
         </div>
 
         <div id="cv-page-container" style="display: none;"></div>
@@ -190,7 +199,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const pdfDoc = await loadingTask.promise;
         const numPages = pdfDoc.numPages;
 
-        const renderScale = 3.0; // Ultra-HD DPI
+        const renderScale = Math.min((window.devicePixelRatio || 1.5) * 1.25, 2.2); // Adaptive DPI balance between sharpness and performance
 
         for (let i = 1; i <= numPages; i++) {
             const page = await pdfDoc.getPage(i);

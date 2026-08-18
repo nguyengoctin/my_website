@@ -77,7 +77,6 @@ enableEmoji = true
   [[menu.main]]
     weight = 5
     identifier = "cv"
-    pre = "<i class='fas fa-file-alt'></i>"
     name = "My CV"
     url = "/cv/"
     title = "Curriculum Vitae"

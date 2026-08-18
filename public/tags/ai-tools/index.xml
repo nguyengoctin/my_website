@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AI Tools - Tag - Nguyen Ngoc Tin</title>
-        <link>http://localhost:35501/tags/ai-tools/</link>
+        <link>https://ngoctin.me/tags/ai-tools/</link>
         <description>AI Tools - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:35501/tags/ai-tools/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/ai-tools/" rel="self" type="application/rss+xml" /><item>
     <title>Windsurf</title>
-    <link>http://localhost:35501/ai-engineer/12-applications-and-usecases/windsurf/</link>
+    <link>https://ngoctin.me/ai-engineer/12-applications-and-usecases/windsurf/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:35501/ai-engineer/12-applications-and-usecases/windsurf/</guid>
+    <guid>https://ngoctin.me/ai-engineer/12-applications-and-usecases/windsurf/</guid>
     <description><![CDATA[Windsurf là một công cụ được thiết kế đặc biệt để tăng cường khả năng điều hướng và hiểu code trong các codebase lớn.]]></description>
 </item>
 <item>
     <title>Cursor</title>
-    <link>http://localhost:35501/ai-engineer/12-applications-and-usecases/cursor/</link>
+    <link>https://ngoctin.me/ai-engineer/12-applications-and-usecases/cursor/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:35501/ai-engineer/12-applications-and-usecases/cursor/</guid>
+    <guid>https://ngoctin.me/ai-engineer/12-applications-and-usecases/cursor/</guid>
     <description><![CDATA[Cursor là một trình soạn thảo code hỗ trợ bởi AI được thiết kế để tăng năng suất cho lập trình viên.]]></description>
 </item>
 </channel>
