@@ -4,7 +4,7 @@
         <link>http://localhost:1313/posts/</link>
         <description>All Blog | Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 10:10:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>A Collection of Learning Resources</title>
     <link>http://localhost:1313/posts/a-collection-of-learning-resources/</link>
     <pubDate>Sun, 26 Jul 2026 00:00:00 &#43;0000</pubDate>
@@ -23,6 +23,29 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">This curated collection gathers top-tier courses, documentation, books, and technical tools across Artificial Intelligence, Computer Science, and Software Development. Resources are updated and organized periodically by category.</div>
+    </div>
+</div>
+<p><strong>Icon Legend:</strong></p>]]></description>
+</item>
+<item>
+    <title>A Collection of Essential Productivity and Online Tools</title>
+    <link>http://localhost:1313/posts/essential-productivity-and-online-tools/</link>
+    <pubDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/essential-productivity-and-online-tools/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Give me a lever long enough and a place to stand, and I will move the earth. Tools are the levers of the modern software mind."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Naval Ravikant</cite>
+    </footer>
+</blockquote>
+
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Tools Collection Overview<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This curated collection gathers my essential browser extensions, web tools, media utilities, and daily productivity services. Resources are updated and organized periodically by category.</div>
     </div>
 </div>
 <p><strong>Icon Legend:</strong></p>]]></description>
@@ -113,21 +136,6 @@
 </blockquote>
 
 <p>Nhiều lập trình viên hiện nay đang mắc kẹt khi ứng dụng AI của họ thỉnh thoảng lại rơi vào vòng lặp vô hạn, hoặc gọi API bừa bãi đến mức treo cả hệ thống. Để giải quyết triệt để cơn ác mộng này, phương thức chúng ta thiết kế các hệ thống AI đã buộc phải trải qua 4 bước dịch chuyển kiến trúc cốt lõi:</p>]]></description>
-</item>
-<item>
-    <title>Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI</title>
-    <link>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</link>
-    <pubDate>Wed, 29 Jul 2026 15:45:00 &#43;0700</pubDate>
-    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>http://localhost:1313/posts/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai/</guid>
-    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
-    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Công cụ tốt nhất nhiều khi không phải là thứ gì đó thật phức tạp hay đắt tiền, mà là thứ ngay trước mắt nhưng chúng ta vô tình bỏ qua."</p>
-    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
-        <cite style="font-style: normal;">— Sưu tầm</cite>
-    </footer>
-</blockquote>
-
-<p>Trước đây, mỗi lần đối mặt với một tài liệu PDF tiếng Anh dày cộp — từ tài liệu kỹ thuật, bài báo khoa học đến sách chuyên ngành — nhiều người trong chúng ta thường có một cảm giác ngại ngầm.</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -59,12 +59,14 @@ enableEmoji = true
     name = "Blog"
     url = "/posts/"
     title = "Blog Posts"
+
   [[menu.main]]
     weight = 3
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
     title = "All Tags"
+
   [[menu.main]]
     weight = 4
     identifier = "cheatsheets"
@@ -142,15 +144,11 @@ enableEmoji = true
       bio = """
 ## ABOUT
 
-Hello, my name is **Nguyễn Ngọc Tín**. I'm a software engineer based in Ho Chi Minh City, Vietnam. I graduated from Saigon University with an **Engineer in Information Technology** degree, majoring in **Information Systems**.
+Hi, I'm **Nguyễn Ngọc Tín**, a fresh graduate in **Information Technology** (majoring in Information Systems) from Saigon University, based in Ho Chi Minh City, Vietnam.
 
-I'm a curious guy. I like to learn something new every day, and lately that curiosity has been pulling me in two directions — building backend systems and figuring out how to make AI actually useful in real products. I spend most of my time writing APIs, designing databases, and tinkering with things like LLM applications, RAG pipelines, and AI agents. My go-to tools are **Python, Java, TypeScript, FastAPI, PostgreSQL, Docker, and AWS**, but I try not to get too attached to any specific stack. Tools come and go; understanding the fundamentals is what sticks.
+I've always been driven by a relentless curiosity — a constant need to break things down and understand how they truly work beneath the surface. My goal is to become an **AI Engineer**, working at the intersection of robust backend architecture and intelligent systems.
 
-Whenever I pick up something new, I start from official docs and first principles. No shortcuts, no skipping ahead. I care more about understanding *why* things work than just knowing *how* to use them.
-
-This website is my digital garden — a place where I keep study notes, architecture concepts, code snippets, and technical write-ups as I learn.
-
-Outside of engineering, I read across technology, science, psychology, and literature.
+This site is my personal space to document what I learn, share technical insights, and refine my thinking along the journey.
 
 ---
 

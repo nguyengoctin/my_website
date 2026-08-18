@@ -5,6 +5,7 @@
             <loc>http://localhost:1313/backend/01-general/how-does-the-internet-work/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/ai-engineer/01-introduction/introduction/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/posts/a-collection-of-learning-resources/</loc><lastmod>2026-07-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>http://localhost:1313/posts/essential-productivity-and-online-tools/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://localhost:1313/backend/01-general/general-javascript/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/ai-engineer/01-introduction/what-is-an-ai-engineer/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/ai-engineer/01-introduction/ai-engineer-vs-ml-engineer/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -363,18 +364,44 @@
             <loc>http://localhost:1313/backend/21-scaling-databases/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/backend/22-nosql-databases/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/backend/23-building-for-scale/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/tags/cheatsheet/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/categories/cheatsheets/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/cheatsheets/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/tags/devops/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/tags/git/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/cheatsheets/git-cheatsheet/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2026-08-18T07:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/cheatsheet/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/categories/cheatsheets/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/devops/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/git/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/git-cheat-sheet/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/version-control/</loc><lastmod>2026-08-18T09:43:03&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/database/</loc><lastmod>2026-08-18T09:43:02&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/query/</loc><lastmod>2026-08-18T09:43:02&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/sql/</loc><lastmod>2026-08-18T09:43:02&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/sql-cheat-sheet/</loc><lastmod>2026-08-18T09:43:02&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/data-science/</loc><lastmod>2026-08-18T09:43:01&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/python/</loc><lastmod>2026-08-18T09:43:01&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/python-cheat-sheet/</loc><lastmod>2026-08-18T09:43:01&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/scripting/</loc><lastmod>2026-08-18T09:43:01&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/backend/</loc><lastmod>2026-08-18T09:43:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/java/</loc><lastmod>2026-08-18T09:43:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/java-cheat-sheet/</loc><lastmod>2026-08-18T09:43:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/oop/</loc><lastmod>2026-08-18T09:43:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/algorithms/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/c&#43;&#43;/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/data-structures/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/dsa/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/interview/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/cheatsheets/top-30-dsa-interview-cpp/</loc><lastmod>2026-08-18T08:50:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/browser-extensions/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/media/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/productivity/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/categories/resources/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/tools/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/utilities/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/web-development/</loc><lastmod>2026-08-18T08:24:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://localhost:1313/tags/ai/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/anki/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/posts/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/obsidian/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/prompt-engineering/</loc><lastmod>2026-08-01T10:10:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -399,7 +426,6 @@
             <loc>http://localhost:1313/tags/automation/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/autonomous-systems/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/categories/backend/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/tags/backend/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/backend/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/bias/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/career/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -501,7 +527,6 @@
             <loc>http://localhost:1313/tags/prompt-injection/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/protocol/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/proxy/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/tags/python/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/qdrant/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/quality/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/quality-assurance/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -533,7 +558,6 @@
             <loc>http://localhost:1313/tags/supabase/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/testing/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/tokens/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/tags/tools/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/tracing/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/training/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/transformer/</loc><lastmod>2026-08-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -562,7 +586,6 @@
             <loc>http://localhost:1313/posts/theme-documentation-built-in-shortcodes.vi/</loc><lastmod>2026-07-29T18:40:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/loveit/</loc><lastmod>2026-07-29T18:40:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/shortcodes/</loc><lastmod>2026-07-29T18:40:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/tags/web-development/</loc><lastmod>2026-07-29T18:40:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/posts/quotes/</loc><lastmod>2026-07-29T17:15:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/inspiration/</loc><lastmod>2026-07-29T17:15:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/mindset/</loc><lastmod>2026-07-29T17:15:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -572,7 +595,6 @@
             <loc>http://localhost:1313/tags/deep-work/</loc><lastmod>2026-07-29T16:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/discipline/</loc><lastmod>2026-07-29T16:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/categories/mindset/</loc><lastmod>2026-07-29T16:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://localhost:1313/tags/productivity/</loc><lastmod>2026-07-29T16:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/self-improvement/</loc><lastmod>2026-07-29T16:30:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/graph-engineering/</loc><lastmod>2026-07-29T16:15:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://localhost:1313/tags/langgraph/</loc><lastmod>2026-07-29T16:15:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -594,9 +616,7 @@
             <loc>http://localhost:1313/tags/ux/</loc><lastmod>2026-07-26T22:00:00&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/tags/ai-agent/</loc><lastmod>2026-07-26T21:38:18&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/posts/huong-dan-thiet-ke-va-xay-dung-ai-agents/</loc><lastmod>2026-07-26T21:38:18&#43;07:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>http://localhost:1313/tags/data-science/</loc><lastmod>2026-07-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/tags/learning/</loc><lastmod>2026-07-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>http://localhost:1313/categories/resources/</loc><lastmod>2026-07-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/tags/resources/</loc><lastmod>2026-07-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/tags/claude-code/</loc><lastmod>2026-07-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://localhost:1313/tags/django/</loc><lastmod>2026-07-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>

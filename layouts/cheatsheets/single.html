@@ -10,76 +10,90 @@
     display: none !important;
 }
 
+html, body {
+    overflow: hidden !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 .wrapper {
     padding-top: 0 !important;
+    height: 100vh !important;
+    overflow: hidden !important;
 }
 main.main {
     margin-top: 0 !important;
-    padding-top: 0.8rem !important;
+    padding: 0.5rem !important;
+    height: 100vh !important;
+    box-sizing: border-box;
 }
 .container {
     max-width: 100% !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+    padding: 0 !important;
+    height: 100% !important;
 }
 
 .cheatsheet-single {
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 auto;
-}
-
-.cheatsheet-top-bar {
+    height: 100% !important;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0.8rem;
-}
-.top-bar-link {
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    opacity: 0.7;
-    color: inherit;
-    transition: opacity 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-.top-bar-link:hover {
-    opacity: 1;
-    color: var(--link-hover-color, #4d74eb);
+    flex-direction: column;
 }
 
+/* Master Layout: Workspace taking 100% viewport height without scroll */
 .cheatsheet-workspace {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
+    height: 100%;
 }
 
-.cheatsheet-side-dock {
+/* Left Integrated Dock: Contains Back button, Navigation Page control, Fullscreen & Download */
+.cheatsheet-left-dock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 0.8rem 0.5rem;
     background: var(--background-color, #ffffff);
     border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    height: calc(100vh - 1.5rem);
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.dock-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.dock-divider {
+    width: 20px;
+    height: 1px;
+    background: var(--border-color, rgba(0, 0, 0, 0.1));
+    margin: 0.2rem 0;
 }
 
 .side-tool-btn {
     background: transparent;
     border: none;
     color: var(--text-color, inherit);
-    opacity: 0.65;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
+    opacity: 0.7;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -88,24 +102,82 @@ main.main {
     font-size: 0.9rem;
     transition: all 0.2s ease;
 }
-.side-tool-btn:hover {
+.side-tool-btn:hover,
+.side-tool-btn.active {
     opacity: 1;
-    border-color: var(--link-hover-color, #4d74eb);
     color: var(--link-hover-color, #4d74eb);
     background: var(--border-color, rgba(0, 0, 0, 0.06));
 }
 
+#dock-page-indicator {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    opacity: 0.8;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    padding: 0.4rem 0;
+}
+
+/* Mobile Clean Layout: Explicit Header & Footer Split Layout */
+.mobile-top-header {
+    display: none;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color, #ffffff);
+    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    box-sizing: border-box;
+}
+
+.mobile-bottom-footer {
+    display: none;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--background-color, #ffffff);
+    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    box-sizing: border-box;
+}
+
 @media (max-width: 991px) {
+    html, body, .wrapper, main.main {
+        overflow: hidden !important;
+        height: 100vh !important;
+    }
+    main.main {
+        padding: 0 !important;
+    }
+    .cheatsheet-left-dock {
+        display: none !important;
+    }
+    .mobile-top-header {
+        display: flex !important;
+        height: 48px;
+    }
+    .mobile-bottom-footer {
+        display: flex !important;
+        height: 52px;
+    }
     .cheatsheet-workspace {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0;
+        height: calc(100vh - 100px);
+        padding: 0.4rem 0;
+        box-sizing: border-box;
     }
-    .cheatsheet-side-dock {
-        flex-direction: row;
-        margin-top: 0.5rem;
+    #dock-page-indicator-mobile {
+        font-family: monospace;
+        font-size: 0.85rem;
+        font-weight: 600;
+        opacity: 0.85;
     }
-    .desktop-only {
-        display: none !important;
+    .stpageflip-page {
+        cursor: default !important;
     }
 }
 
@@ -115,24 +187,14 @@ main.main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 520px;
     margin: 0;
     padding: 0;
-    transition: background 0.3s ease;
     width: 100%;
-}
-#flipbook-wrapper:fullscreen {
-    background: var(--background-color, #1a1a1a);
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: auto;
+    height: 100%;
+    flex: 1;
 }
 
-/* --- Shimmer Skeleton Loader --- */
+/* --- Shimmer Skeleton Loader Specs --- */
 #skeleton-loader {
     display: flex;
     flex-direction: column;
@@ -140,7 +202,8 @@ main.main {
     justify-content: center;
     gap: 1.2rem;
     width: 100%;
-    padding: 1rem 0;
+    height: 100%;
+    z-index: 5;
 }
 
 .skeleton-book {
@@ -161,11 +224,12 @@ main.main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 .skeleton-line {
     height: 14px;
-    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.06) 63%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.14) 37%, rgba(0,0,0,0.06) 63%);
     background-size: 400% 100%;
     animation: shimmer 1.4s ease infinite;
     border-radius: 4px;
@@ -180,7 +244,7 @@ main.main {
 
 .skeleton-box {
     height: 160px;
-    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.06) 63%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.14) 37%, rgba(0,0,0,0.06) 63%);
     background-size: 400% 100%;
     animation: shimmer 1.4s ease infinite;
     border-radius: 6px;
@@ -189,7 +253,8 @@ main.main {
 
 .skeleton-text {
     font-size: 0.85rem;
-    opacity: 0.6;
+    font-weight: 500;
+    opacity: 0.7;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -203,62 +268,154 @@ main.main {
 #flipbook-container {
     display: none;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
-}
-#flipbook-controls {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.2rem;
-    font-size: 0.9rem;
+    position: relative;
+    margin: 0 auto;
 }
 
-.zen-btn {
-    background: transparent;
-    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.15));
-    color: var(--text-color, inherit);
+/* StPageFlip Official CSS Rules */
+.stpageflip-page {
+    background-color: #ffffff;
+    cursor: zoom-in;
+}
+
+/* --- Smart Zoom Single Page HD Viewer Specs --- */
+#smart-zoom-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 99999;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+#smart-zoom-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.zoom-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.zoom-controls-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.zoom-action-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #ffffff;
     width: 34px;
     height: 34px;
-    border-radius: 50%;
-    display: inline-flex;
+    border-radius: 8px;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0.65;
-    transition: opacity 0.2s ease, border-color 0.2s ease;
-    font-size: 0.85rem;
-    padding: 0;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
 }
-.zen-btn:hover {
-    opacity: 1;
-    border-color: var(--link-hover-color, #4d74eb);
-    color: var(--link-hover-color, #4d74eb);
+.zoom-action-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #4d74eb;
 }
-#page-indicator {
-    font-family: monospace;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    opacity: 0.75;
-    min-width: 60px;
-    text-align: center;
+
+.zoom-stage-container {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.5rem;
+    cursor: grab;
+    user-select: none;
 }
-.page-sheet {
-    background-color: #ffffff;
-    overflow: hidden;
+.zoom-stage-container:active {
+    cursor: grabbing;
+}
+
+#smart-zoom-canvas {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    background: #ffffff;
+    transform-origin: top center;
+    transition: transform 0.1s ease-out;
 }
 </style>
 
 <div class="page single cheatsheet-single">
-    <!-- Top Action Bar (Clean & Minimalist) -->
-    <div class="cheatsheet-top-bar">
-        <a href="/cheatsheets/" class="top-bar-link">
-            <i class="fas fa-arrow-left" style="font-size: 0.75rem;"></i> Cheatsheets
+    <!-- Mobile Top Header Bar -->
+    <header class="mobile-top-header" aria-label="Mobile Navigation">
+        <a href="/cheatsheets/" class="side-tool-btn" title="Quay lại danh sách Cheatsheets">
+            <i class="fas fa-arrow-left"></i>
         </a>
-    </div>
+        <span id="dock-page-indicator-mobile">01 / --</span>
+    </header>
 
-    <!-- Main Workspace: Stage + Side Action Dock -->
+    <!-- Main Integrated Workspace -->
     <div class="cheatsheet-workspace">
-        <!-- Flipbook Stage (Clean Canvas Presentation) -->
+        <!-- Desktop Integrated Left Dock -->
+        <aside class="cheatsheet-left-dock" aria-label="Reading Dock">
+            <!-- Top Dock Group: Back to Cheatsheets -->
+            <div class="dock-section">
+                <a href="/cheatsheets/" class="side-tool-btn" title="Quay lại danh sách Cheatsheets" aria-label="Back to Cheatsheets">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+
+            <div class="dock-divider"></div>
+
+            <!-- Middle Dock Group: Page Navigation & Page Counter -->
+            <div class="dock-section">
+                <button id="btn-prev" class="side-tool-btn" title="Trang trước (Phím ←)" aria-label="Previous Page">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+
+                <span id="dock-page-indicator">
+                    01 / --
+                </span>
+
+                <button id="btn-next" class="side-tool-btn" title="Trang sau (Phím →)" aria-label="Next Page">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+
+            <div class="dock-divider"></div>
+
+            <!-- Bottom Dock Group: Utility Actions -->
+            <div class="dock-section">
+                <button id="btn-zoom-page" class="side-tool-btn" title="Phóng to HD trang đang chọn" aria-label="Smart Zoom Page">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button id="btn-fullscreen" class="side-tool-btn" title="Toàn màn hình" aria-label="Toggle Fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở file PDF gốc trong tab mới" aria-label="Open PDF in new tab">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="{{ .Params.pdf_url }}" download class="side-tool-btn" title="Tải xuống PDF" aria-label="Download PDF">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Flipbook Stage (Maximum Vertical Height Allocation) -->
         <div id="flipbook-wrapper">
             <!-- Shimmer Skeleton Loader (Prevents Layout Shift while rendering) -->
             <div id="skeleton-loader">
@@ -285,35 +442,46 @@ main.main {
             </div>
             
             <div id="flipbook-container"></div>
-
-            <!-- Minimalist Navigation Toolbar Below Book -->
-            <div id="flipbook-controls">
-                <button id="btn-prev" class="zen-btn" title="Trang trước (Phím ←)" aria-label="Previous Page">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <span id="page-indicator">
-                    01 / --
-                </span>
-
-                <button id="btn-next" class="zen-btn" title="Trang sau (Phím →)" aria-label="Next Page">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
         </div>
+    </div>
 
-        <!-- Floating Side Tools Dock (Vertical on Desktop, Bottom on Mobile) -->
-        <aside class="cheatsheet-side-dock" aria-label="Reading Tools">
-            <button id="btn-fullscreen" class="side-tool-btn" title="Toàn màn hình" aria-label="Toggle Fullscreen">
-                <i class="fas fa-expand"></i>
-            </button>
-            <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở file PDF gốc trong tab mới" aria-label="Open PDF in new tab">
-                <i class="fas fa-external-link-alt"></i>
-            </a>
-            <a href="{{ .Params.pdf_url }}" download class="side-tool-btn" title="Tải xuống PDF" aria-label="Download PDF">
-                <i class="fas fa-download"></i>
-            </a>
-        </aside>
+    <!-- Mobile Bottom Navigation Footer Bar -->
+    <footer class="mobile-bottom-footer" aria-label="Mobile Controls">
+        <button id="btn-prev-mobile" class="side-tool-btn" title="Trang trước">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="btn-next-mobile" class="side-tool-btn" title="Trang sau">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button id="btn-fullscreen-mobile" class="side-tool-btn" title="Toàn màn hình">
+            <i class="fas fa-expand"></i>
+        </button>
+        <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở PDF tab mới">
+            <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="{{ .Params.pdf_url }}" download class="side-tool-btn" title="Tải xuống PDF">
+            <i class="fas fa-download"></i>
+        </a>
+    </footer>
+
+    <!-- Smart Zoom Single Page HD Viewer Overlay Specs -->
+    <div id="smart-zoom-overlay">
+        <header class="zoom-top-bar">
+            <div id="zoom-page-title">Trang 01 / -- (Chế độ Phóng To HD)</div>
+            <div class="zoom-controls-group">
+                <button id="btn-zoom-prev-overlay" class="zoom-action-btn" title="Trang trước (←)"><i class="fas fa-chevron-left"></i></button>
+                <button id="btn-zoom-next-overlay" class="zoom-action-btn" title="Trang sau (→)"><i class="fas fa-chevron-right"></i></button>
+                <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.2); margin: 0 0.2rem;"></div>
+                <button id="btn-zoom-out-overlay" class="zoom-action-btn" title="Thu nhỏ (-)"><i class="fas fa-minus"></i></button>
+                <span id="zoom-level-text">135%</span>
+                <button id="btn-zoom-in-overlay" class="zoom-action-btn" title="Phóng to (+)"><i class="fas fa-plus"></i></button>
+                <button id="btn-zoom-reset-overlay" class="zoom-action-btn" title="Về 100%"><i class="fas fa-sync-alt"></i></button>
+                <button id="btn-zoom-close-overlay" class="zoom-action-btn" title="Đóng (Esc)"><i class="fas fa-times"></i></button>
+            </div>
+        </header>
+        <div class="zoom-stage-container" id="zoom-stage-container">
+            <canvas id="smart-zoom-canvas"></canvas>
+        </div>
     </div>
 
     {{- if .Content -}}
@@ -336,136 +504,347 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const wrapper = document.getElementById('flipbook-wrapper');
     const container = document.getElementById('flipbook-container');
-    const controls = document.getElementById('flipbook-controls');
     const skeleton = document.getElementById('skeleton-loader');
-    const pageIndicator = document.getElementById('page-indicator');
+    
+    const pageIndicator = document.getElementById('dock-page-indicator');
+    const pageIndicatorMobile = document.getElementById('dock-page-indicator-mobile');
+    
     const btnPrev = document.getElementById('btn-prev');
     const btnNext = document.getElementById('btn-next');
+    const btnPrevMobile = document.getElementById('btn-prev-mobile');
+    const btnNextMobile = document.getElementById('btn-next-mobile');
+    
     const btnFullscreen = document.getElementById('btn-fullscreen');
+    const btnFullscreenMobile = document.getElementById('btn-fullscreen-mobile');
+    
+    const btnZoomPage = document.getElementById('btn-zoom-page');
+
+    // Smart Zoom Overlay Elements
+    const zoomOverlay = document.getElementById('smart-zoom-overlay');
+    const zoomStage = document.getElementById('zoom-stage-container');
+    const zoomCanvas = document.getElementById('smart-zoom-canvas');
+    const zoomPageTitle = document.getElementById('zoom-page-title');
+    const zoomLevelText = document.getElementById('zoom-level-text');
+    
+    const btnZoomIn = document.getElementById('btn-zoom-in-overlay');
+    const btnZoomOut = document.getElementById('btn-zoom-out-overlay');
+    const btnZoomReset = document.getElementById('btn-zoom-reset-overlay');
+    const btnZoomClose = document.getElementById('btn-zoom-close-overlay');
+    const btnZoomPrev = document.getElementById('btn-zoom-prev-overlay');
+    const btnZoomNext = document.getElementById('btn-zoom-next-overlay');
+
+    let pageFlipInstance = null;
+    let pdfDocInstance = null;
+    let currentPageIndex = 0;
+    let zoomedPageNumber = 1;
+
+    // Zoom State
+    let currentZoomRatio = 1.35;
+    let isMouseDown = false;
+    let startX = 0, startY = 0, scrollLeft = 0, scrollTop = 0;
+    
+    // Memory Performance HD Zoom Cache
+    const zoomCanvasCache = new Map();
 
     try {
         const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        const pdf = await loadingTask.promise;
-        const numPages = pdf.numPages;
+        pdfDocInstance = await loadingTask.promise;
+        const numPages = pdfDocInstance.numPages;
 
         container.innerHTML = '';
 
         // Determine base dimensions based on first page aspect ratio
-        const firstPage = await pdf.getPage(1);
+        const firstPage = await pdfDocInstance.getPage(1);
         const origViewport = firstPage.getViewport({ scale: 1.0 });
         const pdfAspectRatio = origViewport.height / origViewport.width; // e.g. ~1.414 for A4
 
-        const isMobile = window.innerWidth < 768;
-        const availableWidth = isMobile ? (window.innerWidth - 30) : Math.min(window.innerWidth - 180, 1400);
-        const availableHeight = Math.max(window.innerHeight - 150, 520);
-
+        const isMobile = window.innerWidth < 992;
+        
         let pageWidth, pageHeight;
 
         if (isMobile) {
-            // Mobile: 1 single page taking 100% available container width
-            pageWidth = availableWidth;
-            pageHeight = Math.round(pageWidth * pdfAspectRatio);
-        } else {
-            // Desktop 2-page spread: Calculate based on width first for large readable spread
-            pageWidth = Math.floor(availableWidth / 2);
-            pageHeight = Math.round(pageWidth * pdfAspectRatio);
+            const availableMobileHeight = window.innerHeight - 120;
+            pageHeight = Math.min(availableMobileHeight, 640);
+            pageWidth = Math.round(pageHeight / pdfAspectRatio);
 
-            // Cap height if it exceeds screen height to avoid vertical scrolling
-            if (pageHeight > availableHeight) {
-                pageHeight = availableHeight;
-                pageWidth = Math.round(pageHeight / pdfAspectRatio);
+            const maxMobileWidth = window.innerWidth - 20;
+            if (pageWidth > maxMobileWidth) {
+                pageWidth = maxMobileWidth;
+                pageHeight = Math.round(pageWidth * pdfAspectRatio);
+            }
+        } else {
+            pageHeight = Math.floor(window.innerHeight * 0.94);
+            pageWidth = Math.round(pageHeight / pdfAspectRatio);
+
+            const availableWidth = Math.min(window.innerWidth - 120, 1600);
+            if (pageWidth * 2 > availableWidth) {
+                pageWidth = Math.floor(availableWidth / 2);
+                pageHeight = Math.round(pageWidth * pdfAspectRatio);
             }
         }
 
-        // Render all PDF pages into canvas elements
+        // Fast Asynchronous Parallel Page Rendering Pipeline
+        const renderScale = Math.min(window.devicePixelRatio || 1.5, 2.0);
+        
         for (let i = 1; i <= numPages; i++) {
-            const page = await pdf.getPage(i);
-            const renderScale = 2.5; // High resolution rendering
-            const viewport = page.getViewport({ scale: renderScale });
-
             const pageDiv = document.createElement('div');
-            pageDiv.className = 'page-sheet';
+            pageDiv.className = 'stpageflip-page';
+            pageDiv.setAttribute('data-density', 'soft');
+            pageDiv.setAttribute('data-page-num', i);
             pageDiv.style.width = pageWidth + 'px';
             pageDiv.style.height = pageHeight + 'px';
 
             const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            canvas.style.width = '100%';
-            canvas.style.height = '100%';
-
-            await page.render({ canvasContext: context, viewport: viewport }).promise;
             pageDiv.appendChild(canvas);
             container.appendChild(pageDiv);
+
+            // Double click page to open Smart Zoom Pro Reader on Desktop only
+            pageDiv.addEventListener('dblclick', (e) => {
+                if (window.innerWidth >= 992) {
+                    e.stopPropagation();
+                    openSmartZoomSingleModal(i);
+                }
+            });
+
+            // Async Background Render
+            pdfDocInstance.getPage(i).then(page => {
+                const viewport = page.getViewport({ scale: renderScale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                const context = canvas.getContext('2d');
+                page.render({ canvasContext: context, viewport: viewport });
+            });
         }
 
-        // Smooth transition from Skeleton Screen to Flipbook Canvas
-        if (skeleton) skeleton.style.display = 'none';
-        container.style.display = 'block';
-        controls.style.display = 'flex';
-
-        // Initialize StPageFlip in fixed mode for exact calculated dimensions
-        const pageFlip = new St.PageFlip(container, {
+        // Initialize StPageFlip strictly according to official StPageFlip documentation
+        pageFlipInstance = new St.PageFlip(container, {
             width: pageWidth,
             height: pageHeight,
-            size: "fixed",
-            minWidth: 280,
-            maxWidth: 900,
-            minHeight: 380,
-            maxHeight: 1300,
+            size: isMobile ? "fixed" : "stretch",
+            minWidth: isMobile ? 200 : 260,
+            maxWidth: isMobile ? 500 : 900,
+            minHeight: isMobile ? 280 : 360,
+            maxHeight: isMobile ? 750 : 1300,
             autoSize: true,
-            maxShadowOpacity: 0.35,
+            maxShadowOpacity: 0.3,
             showCover: false,
-            mobileScrollSupport: false,
+            mobileScrollSupport: true,
             usePortrait: isMobile,
+            flippingTime: 600,
             startPage: 0
         });
 
-        pageFlip.loadFromHTML(document.querySelectorAll('#flipbook-container .page-sheet'));
+        pageFlipInstance.loadFromHTML(document.querySelectorAll('#flipbook-container .stpageflip-page'));
+
+        // Smooth transition: Hide Skeleton Screen ONLY when StPageFlip is fully ready
+        if (skeleton) skeleton.style.display = 'none';
+        container.style.display = 'block';
 
         const formatPageNumber = (n) => String(n).padStart(2, '0');
 
         const updateIndicator = (index) => {
+            currentPageIndex = index;
             const current = index + 1;
-            pageIndicator.innerText = `${formatPageNumber(current)} / ${formatPageNumber(numPages)}`;
+            const text = `${formatPageNumber(current)} / ${formatPageNumber(numPages)}`;
+            if (pageIndicator) pageIndicator.innerText = text;
+            if (pageIndicatorMobile) pageIndicatorMobile.innerText = text;
         };
 
-        pageFlip.on('flip', (e) => {
+        pageFlipInstance.on('flip', (e) => {
             updateIndicator(e.data);
         });
 
         updateIndicator(0);
 
-        btnPrev.addEventListener('click', () => pageFlip.flipPrev());
-        btnNext.addEventListener('click', () => pageFlip.flipNext());
+        if (btnPrev) btnPrev.addEventListener('click', () => pageFlipInstance.flipPrev());
+        if (btnNext) btnNext.addEventListener('click', () => pageFlipInstance.flipNext());
+        if (btnPrevMobile) btnPrevMobile.addEventListener('click', () => pageFlipInstance.flipPrev());
+        if (btnNextMobile) btnNextMobile.addEventListener('click', () => pageFlipInstance.flipNext());
 
-        // Fullscreen toggle
-        if (btnFullscreen) {
-            btnFullscreen.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    wrapper.requestFullscreen().catch(err => console.error(err));
-                    btnFullscreen.innerHTML = '<i class="fas fa-compress"></i>';
-                } else {
-                    document.exitFullscreen();
-                    btnFullscreen.innerHTML = '<i class="fas fa-expand"></i>';
+        // --- High Performance Smart Zoom Single Page HD Viewer Engine ---
+        function applyZoomTransform() {
+            zoomCanvas.style.transform = `scale(${currentZoomRatio})`;
+            zoomLevelText.innerText = `${Math.round(currentZoomRatio * 100)}%`;
+        }
+
+        async function renderZoomCanvas(pageNum) {
+            if (!pdfDocInstance || pageNum < 1 || pageNum > numPages) return;
+            zoomedPageNumber = pageNum;
+
+            zoomPageTitle.innerText = `Trang ${formatPageNumber(pageNum)} / ${formatPageNumber(numPages)} (Bản Siêu Nét HD)`;
+
+            // Check On-Demand HD Memory Cache
+            if (zoomCanvasCache.has(pageNum)) {
+                const cachedCanvas = zoomCanvasCache.get(pageNum);
+                zoomCanvas.width = cachedCanvas.width;
+                zoomCanvas.height = cachedCanvas.height;
+                zoomCanvas.style.width = cachedCanvas.styleWidth;
+                zoomCanvas.style.height = cachedCanvas.styleHeight;
+                const ctx = zoomCanvas.getContext('2d');
+                ctx.drawImage(cachedCanvas.canvas, 0, 0);
+            } else {
+                const page = await pdfDocInstance.getPage(pageNum);
+                const ultraHDScale = 2.5; // Optimized 250% scale for fast rendering and high sharpness
+                const hdViewport = page.getViewport({ scale: ultraHDScale });
+
+                const fitWidth = Math.min(window.innerWidth * 0.85, 960);
+                const fitHeight = Math.round(fitWidth * (hdViewport.height / hdViewport.width));
+
+                zoomCanvas.width = hdViewport.width;
+                zoomCanvas.height = hdViewport.height;
+                zoomCanvas.style.width = fitWidth + 'px';
+                zoomCanvas.style.height = fitHeight + 'px';
+
+                const ctx = zoomCanvas.getContext('2d');
+                await page.render({ canvasContext: ctx, viewport: hdViewport }).promise;
+
+                // Cache offscreen canvas
+                const offscreenCanvas = document.createElement('canvas');
+                offscreenCanvas.width = hdViewport.width;
+                offscreenCanvas.height = hdViewport.height;
+                offscreenCanvas.getContext('2d').drawImage(zoomCanvas, 0, 0);
+                zoomCanvasCache.set(pageNum, {
+                    canvas: offscreenCanvas,
+                    width: hdViewport.width,
+                    height: hdViewport.height,
+                    styleWidth: fitWidth + 'px',
+                    styleHeight: fitHeight + 'px'
+                });
+            }
+            
+            // Sync page flip instance to match current zoomed page
+            if (pageFlipInstance && pageFlipInstance.getCurrentPageIndex() !== (pageNum - 1)) {
+                pageFlipInstance.flip(pageNum - 1);
+            }
+        }
+
+        async function openSmartZoomSingleModal(targetPageNum) {
+            // Disabled on Mobile Viewports (< 992px)
+            if (window.innerWidth < 992) return;
+
+            const target = targetPageNum || (currentPageIndex + 1);
+            await renderZoomCanvas(target);
+
+            currentZoomRatio = 1.35; // Default 135% zoom ratio
+            applyZoomTransform();
+
+            zoomOverlay.classList.add('show');
+            zoomStage.scrollTop = 0;
+            zoomStage.scrollLeft = 0;
+        }
+
+        function closeSmartZoomModal() {
+            zoomOverlay.classList.remove('show');
+        }
+
+        if (btnZoomPage) btnZoomPage.addEventListener('click', () => openSmartZoomSingleModal(currentPageIndex + 1));
+        if (btnZoomClose) btnZoomClose.addEventListener('click', closeSmartZoomModal);
+
+        // Next / Prev Page controls directly inside Zoom Overlay!
+        if (btnZoomPrev) {
+            btnZoomPrev.addEventListener('click', () => {
+                if (zoomedPageNumber > 1) {
+                    renderZoomCanvas(zoomedPageNumber - 1);
                 }
             });
-
-            document.addEventListener('fullscreenchange', () => {
-                if (!document.fullscreenElement) {
-                    btnFullscreen.innerHTML = '<i class="fas fa-expand"></i>';
+        }
+        if (btnZoomNext) {
+            btnZoomNext.addEventListener('click', () => {
+                if (zoomedPageNumber < numPages) {
+                    renderZoomCanvas(zoomedPageNumber + 1);
                 }
             });
         }
 
-        // Keyboard arrow navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                pageFlip.flipPrev();
-            } else if (e.key === 'ArrowRight') {
-                pageFlip.flipNext();
+        // Zoom Controls (+ / - / Reset)
+        if (btnZoomIn) {
+            btnZoomIn.addEventListener('click', () => {
+                currentZoomRatio = Math.min(3.0, currentZoomRatio + 0.25);
+                applyZoomTransform();
+            });
+        }
+        if (btnZoomOut) {
+            btnZoomOut.addEventListener('click', () => {
+                currentZoomRatio = Math.max(0.8, currentZoomRatio - 0.25);
+                applyZoomTransform();
+            });
+        }
+        if (btnZoomReset) {
+            btnZoomReset.addEventListener('click', () => {
+                currentZoomRatio = 1.0;
+                applyZoomTransform();
+            });
+        }
+
+        // Click & Drag Native Scroll Panning
+        zoomStage.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX - zoomStage.offsetLeft;
+            startY = e.pageY - zoomStage.offsetTop;
+            scrollLeft = zoomStage.scrollLeft;
+            scrollTop = zoomStage.scrollTop;
+        });
+
+        zoomStage.addEventListener('mouseleave', () => { isMouseDown = false; });
+        zoomStage.addEventListener('mouseup', () => { isMouseDown = false; });
+
+        zoomStage.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            e.preventDefault();
+            const x = e.pageX - zoomStage.offsetLeft;
+            const y = e.pageY - zoomStage.offsetTop;
+            const walkX = (x - startX) * 1.5;
+            const walkY = (y - startY) * 1.5;
+            zoomStage.scrollLeft = scrollLeft - walkX;
+            zoomStage.scrollTop = scrollTop - walkY;
+        });
+
+        // Fullscreen toggle
+        const toggleFullscreen = () => {
+            if (!document.fullscreenElement) {
+                wrapper.requestFullscreen().catch(err => console.error(err));
+            } else {
+                document.exitFullscreen();
             }
+        };
+
+        if (btnFullscreen) btnFullscreen.addEventListener('click', toggleFullscreen);
+        if (btnFullscreenMobile) btnFullscreenMobile.addEventListener('click', toggleFullscreen);
+
+        document.addEventListener('fullscreenchange', () => {
+            const isFS = !!document.fullscreenElement;
+            const icon = isFS ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
+            if (btnFullscreen) btnFullscreen.innerHTML = icon;
+            if (btnFullscreenMobile) btnFullscreenMobile.innerHTML = icon;
+        });
+
+        // Keyboard navigation inside Zoom Overlay
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeSmartZoomModal();
+            } else if (e.key === 'ArrowLeft') {
+                if (zoomOverlay.classList.contains('show')) {
+                    if (zoomedPageNumber > 1) renderZoomCanvas(zoomedPageNumber - 1);
+                } else {
+                    pageFlipInstance.flipPrev();
+                }
+            } else if (e.key === 'ArrowRight') {
+                if (zoomOverlay.classList.contains('show')) {
+                    if (zoomedPageNumber < numPages) renderZoomCanvas(zoomedPageNumber + 1);
+                } else {
+                    pageFlipInstance.flipNext();
+                }
+            }
+        });
+
+        // Cleanup instance on page unload according to official API docs
+        window.addEventListener('beforeunload', () => {
+            if (pageFlipInstance) {
+                pageFlipInstance.destroy();
+            }
+            zoomCanvasCache.clear();
         });
 
     } catch (err) {

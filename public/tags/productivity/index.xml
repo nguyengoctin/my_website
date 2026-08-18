@@ -4,7 +4,30 @@
         <link>http://localhost:1313/tags/productivity/</link>
         <description>Productivity - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/productivity/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/productivity/" rel="self" type="application/rss+xml" /><item>
+    <title>A Collection of Essential Productivity and Online Tools</title>
+    <link>http://localhost:1313/posts/essential-productivity-and-online-tools/</link>
+    <pubDate>Tue, 18 Aug 2026 08:24:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/essential-productivity-and-online-tools/</guid>
+    <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
+    <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; color: #2c3e50; text-align: left;">"Give me a lever long enough and a place to stand, and I will move the earth. Tools are the levers of the modern software mind."</p>
+    <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
+        <cite style="font-style: normal;">— Naval Ravikant</cite>
+    </footer>
+</blockquote>
+
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <i class="icon far fa-pen-to-square" aria-hidden="true"></i>Tools Collection Overview<i class="details-icon fas fa-angle-right" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This curated collection gathers my essential browser extensions, web tools, media utilities, and daily productivity services. Resources are updated and organized periodically by category.</div>
+    </div>
+</div>
+<p><strong>Icon Legend:</strong></p>]]></description>
+</item>
+<item>
     <title>Ảo Tưởng Về Sự Nhẹ Nhàng Và Bài Học Kỷ Luật Lạnh Lùng Từ Michael Phelps</title>
     <link>http://localhost:1313/posts/ao-tuong-ve-su-nhe-nhang-va-tu-duy-olympic/</link>
     <pubDate>Wed, 29 Jul 2026 16:30:00 &#43;0700</pubDate>

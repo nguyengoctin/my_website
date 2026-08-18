@@ -4,13 +4,21 @@
         <link>http://localhost:1313/tags/python/</link>
         <description>Python - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Haystack</title>
     <link>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
     <guid>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</guid>
     <description><![CDATA[Haystack là một framework Python mã nguồn mở giúp bạn xây dựng các tác nhân tìm kiếm và trả lời câu hỏi nhanh chóng.]]></description>
+</item>
+<item>
+    <title>Python Cheat Sheet: Cú Pháp Và Thư Viện Căn Bản</title>
+    <link>http://localhost:1313/cheatsheets/python-cheat-sheet/</link>
+    <pubDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/cheatsheets/python-cheat-sheet/</guid>
+    <description><![CDATA[Cheat sheet tóm tắt cú pháp Python, các cấu trúc dữ liệu tích hợp, xử lý chuỗi và hàm thông dụng.]]></description>
 </item>
 <item>
     <title>Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ</title>
