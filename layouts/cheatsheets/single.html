@@ -54,7 +54,7 @@ main.main {
     height: 100%;
 }
 
-/* Left Integrated Dock: Contains Back button, Navigation Page control, Fullscreen & Download */
+/* Left Integrated Dock: Contains Back button, Navigation Page control, Download */
 .cheatsheet-left-dock {
     display: flex;
     flex-direction: column;
@@ -62,13 +62,20 @@ main.main {
     justify-content: space-between;
     gap: 0.8rem;
     padding: 0.8rem 0.5rem;
-    background: var(--background-color, #ffffff);
-    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     height: calc(100vh - 1.5rem);
     box-sizing: border-box;
     z-index: 10;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[theme=dark] .cheatsheet-left-dock {
+    background: #24252b;
+    border-color: #333540;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 .dock-section {
@@ -82,15 +89,19 @@ main.main {
 .dock-divider {
     width: 20px;
     height: 1px;
-    background: var(--border-color, rgba(0, 0, 0, 0.1));
+    background: #e2e8f0;
     margin: 0.2rem 0;
+}
+
+[theme=dark] .dock-divider {
+    background: #333540;
 }
 
 .side-tool-btn {
     background: transparent;
     border: none;
-    color: var(--text-color, inherit);
-    opacity: 0.7;
+    color: #334155;
+    opacity: 0.95;
     width: 38px;
     height: 38px;
     border-radius: 10px;
@@ -99,56 +110,85 @@ main.main {
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: all 0.2s ease;
 }
+
+[theme=dark] .side-tool-btn {
+    color: #e2e8f0;
+}
+
 .side-tool-btn:hover,
 .side-tool-btn.active {
     opacity: 1;
-    color: var(--link-hover-color, #4d74eb);
-    background: var(--border-color, rgba(0, 0, 0, 0.06));
+    color: #4d74eb;
+    background: rgba(77, 116, 235, 0.1);
+}
+
+[theme=dark] .side-tool-btn:hover,
+[theme=dark] .side-tool-btn.active {
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.15);
 }
 
 #dock-page-indicator {
     font-family: monospace;
     font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    opacity: 0.8;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #475569;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
     padding: 0.4rem 0;
 }
 
-/* Mobile Clean Layout: Explicit Header & Footer Split Layout */
+[theme=dark] #dock-page-indicator {
+    color: #94a3b8;
+}
+
+/* Mobile Clean Layout: Floating Minimal Sheet Bar */
 .mobile-top-header {
     display: none;
     width: 100%;
     padding: 0.5rem 0.8rem;
     justify-content: space-between;
     align-items: center;
-    background: var(--background-color, #ffffff);
-    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
     box-sizing: border-box;
     z-index: 100;
+}
+
+[theme=dark] .mobile-top-header {
+    background: #1c1d22;
+    border-bottom-color: #333540;
 }
 
 .mobile-bottom-footer {
     display: none;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 420px;
     padding: 0.4rem 1rem;
     justify-content: space-around;
     align-items: center;
-    background: var(--background-color, #ffffff);
-    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
     z-index: 100;
-    padding-bottom: calc(0.4rem + env(safe-area-inset-bottom, 0px));
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[theme=dark] .mobile-bottom-footer {
+    background: #24252b;
+    border-color: #333540;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 991px) {
@@ -235,20 +275,30 @@ main.main {
     gap: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background: var(--border-color, rgba(0, 0, 0, 0.03));
+    max-width: 95vw;
+    box-sizing: border-box;
+}
+
+[theme=dark] .skeleton-book {
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .skeleton-page {
-    width: 320px;
-    height: 440px;
+    width: min(42vw, 540px);
+    height: min(84vh, 780px);
     background: var(--background-color, #ffffff);
     border-radius: 4px;
-    padding: 1.5rem;
+    padding: 1.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     box-sizing: border-box;
+}
+
+[theme=dark] .skeleton-page {
+    background: #24252b;
 }
 
 .skeleton-line {
@@ -257,6 +307,11 @@ main.main {
     background-size: 400% 100%;
     animation: shimmer 1.4s ease infinite;
     border-radius: 4px;
+}
+
+[theme=dark] .skeleton-line {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.10) 37%, rgba(255,255,255,0.04) 63%);
+    background-size: 400% 100%;
 }
 .skeleton-line.title {
     height: 22px;
@@ -598,8 +653,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         }
 
-        // Fast Asynchronous Parallel Page Rendering Pipeline
-        const renderScale = Math.min(window.devicePixelRatio || 1.5, 2.0);
+        // Fast Progressive Rendering Pipeline: Render initial 4 pages first for instant display
+        const renderScale = Math.min(window.devicePixelRatio || 1.5, 1.8);
         
         for (let i = 1; i <= numPages; i++) {
             const pageDiv = document.createElement('div');
@@ -618,18 +673,39 @@ document.addEventListener("DOMContentLoaded", async function () {
                 e.stopPropagation();
                 openSmartZoomSingleModal(i);
             });
-
-            // Async Background Render
-            pdfDocInstance.getPage(i).then(page => {
-                const viewport = page.getViewport({ scale: renderScale });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-                canvas.style.width = '100%';
-                canvas.style.height = '100%';
-                const context = canvas.getContext('2d');
-                page.render({ canvasContext: context, viewport: viewport });
-            });
         }
+
+        // Render first 4 visible pages immediately to ensure instantaneous display
+        const initialPagesToRender = Math.min(4, numPages);
+        for (let i = 1; i <= initialPagesToRender; i++) {
+            const page = await pdfDocInstance.getPage(i);
+            const canvas = container.querySelectorAll('.stpageflip-page canvas')[i - 1];
+            const viewport = page.getViewport({ scale: renderScale });
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            const context = canvas.getContext('2d');
+            await page.render({ canvasContext: context, viewport: viewport }).promise;
+        }
+
+        // Render remaining pages asynchronously in background without blocking UI
+        setTimeout(() => {
+            for (let i = initialPagesToRender + 1; i <= numPages; i++) {
+                pdfDocInstance.getPage(i).then(page => {
+                    const canvas = container.querySelectorAll('.stpageflip-page canvas')[i - 1];
+                    if (canvas) {
+                        const viewport = page.getViewport({ scale: renderScale });
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+                        canvas.style.width = '100%';
+                        canvas.style.height = '100%';
+                        const context = canvas.getContext('2d');
+                        page.render({ canvasContext: context, viewport: viewport });
+                    }
+                });
+            }
+        }, 100);
 
         // Initialize StPageFlip strictly according to official StPageFlip documentation
         pageFlipInstance = new St.PageFlip(container, {
