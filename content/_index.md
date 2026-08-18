@@ -2,9 +2,7 @@
 title: "Nguyen Ngoc Tin"
 ---
 
-
 ## ABOUT
-
 
 <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" style="float: right; width: 32%; max-width: 220px; min-width: 120px; aspect-ratio: 1/1; object-fit: cover; border-radius: 999px; margin: 0 0 1rem 2rem; display: block;">
 
@@ -13,6 +11,10 @@ Hi, I'm **Nguyễn Ngọc Tín**, a fresh graduate in **Information Technology**
 I've always been driven by a relentless curiosity — a constant need to break things down and understand how they truly work beneath the surface. My goal is to become an **AI Engineer**, working at the intersection of robust backend architecture and intelligent systems.
 
 This site is my personal space to document what I learn, share technical insights, and refine my thinking along the journey.
+
+{{< typeit class="home-quote-typeit" >}}
+“The important thing is not to stop questioning.” — Albert Einstein
+{{< /typeit >}}
 
 ---
 

@@ -139,12 +139,12 @@ enableEmoji = true
   [params.home]
     rss = 10
     [params.home.profile]
-      enable = true
+      enable = false
       avatarURL = ""
       social = false
       title = ""
-      subtitle = "Two things are infinite, the universe and human stupidity; and I'm not sure about the universe. — Albert Einstein"
-      typeit = true
+      subtitle = ""
+      typeit = false
 
   # Social links config
   [params.social]

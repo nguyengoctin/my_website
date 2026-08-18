@@ -46,34 +46,28 @@ h2 {
   }
 }
 
-// TypeIt Subtitle — câu quote tâm đắc trên trang chủ
-.home-profile,
-.home[data-home=posts] .home-profile {
-  padding-top: 1.5rem !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
+// TypeIt Quote — câu quote tâm đắc trên trang chủ (dưới phần ABOUT)
+.home-quote-typeit,
+.home-subtitle {
   text-align: left !important;
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.05rem !important;
+  font-style: italic !important;
+  color: #555555 !important;
+  padding: 0 !important;
+  margin: 1.25rem 0 !important;
+  line-height: 1.7 !important;
 
-  .home-subtitle {
-    text-align: left !important;
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 1.05rem !important;
-    font-style: italic !important;
-    color: #555555 !important;
-    padding: 0 !important;
-    margin: 0 0 1.5rem 0 !important;
-    line-height: 1.7 !important;
+  [theme=dark] & {
+    color: #a0a0a0 !important;
+  }
 
-    [theme=dark] & {
-      color: #a0a0a0 !important;
-    }
-
-    .typeit-cursor {
-      color: #828282 !important;
-      font-style: normal !important;
-    }
+  .typeit-cursor {
+    color: #828282 !important;
+    font-style: normal !important;
   }
 }
+
 
 
 hr {
