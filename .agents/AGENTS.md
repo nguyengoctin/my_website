@@ -39,9 +39,7 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
 
 - **Callout:** `{{< admonition type="note|tip|warning|danger|info|success|question|failure|bug|example|abstract" title="Tiêu đề" >}} Nội dung {{< /admonition >}}`
 - **Quote:** `{{< quote author="Tên Tác Giả" >}} Nội dung {{< /quote >}}` — Không ghi author thì hiển thị `— Sưu tầm`
-- **Prompt Mẫu:** `{{< prompt title="Prompt Mẫu: [Tên]" >}} Nội dung prompt không chứa codeblock lồng {{< /prompt >}}`
-  - Chỉ sử dụng khung `prompt` cho các bộ câu lệnh hoàn chỉnh, đa bước hoặc có cấu trúc rõ ràng.
-  - TUYỆT ĐỐI KHÔNG bọc các câu ngắn 1–2 dòng rời rạc vào khung prompt (dùng bullet point hoặc callout).
+- **Prompt Mẫu:** Sử dụng khối mã Markdown chuẩn ```` ```text ```` (hoặc ```` ```markdown ````), luôn có câu dẫn ngữ cảnh rõ ràng trước khối mã. Không dùng shortcode riêng biệt cho prompt.
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
 - **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
 - **Ghim bài viết:** Thêm `pinned: true` vào frontmatter để tự động hiển thị biểu tượng ghim bên phải tiêu đề trên trang chủ và danh sách.

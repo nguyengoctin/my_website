@@ -31,11 +31,11 @@ Thay vì nhảy ra một cửa sổ popup lơ lửng che mất nội dung, một
 ### 2. AI Copilot — Trợ lý giải thích thuật ngữ tại chỗ
 Có những đoạn văn mà dù dịch từng từ sang tiếng Việt, chúng ta vẫn thấy mơ hồ vì chứa các thuật ngữ chuyên ngành trừu tượng. 
 
-Những lúc đó, thay vì chỉ dịch đơn thuần, chúng ta chọn **Ask Copilot**. Ngay lập tức, khung chat AI bên cạnh sẽ giải thích bản chất khái niệm đó bằng văn phong ngắn gọn, dễ hiểu, thậm chí đưa ra ví dụ minh họa trực tiếp cho đoạn văn vừa chọn.
+Những lúc đó, thay vì chỉ dịch đơn thuần, chúng ta chọn **Ask Copilot** với câu lệnh mẫu:
 
-{{< prompt title="Prompt Mẫu: Giải thích thuật ngữ chuyên ngành trong PDF" >}}
+```text
 Giải thích đoạn văn bản sau đây bằng tiếng Việt một cách trực quan, ngắn gọn trong 2 câu, lấy 1 ví dụ thực tế liên quan đến phát triển phần mềm: {{selected_text}}
-{{< /prompt >}}
+```
 
 ### 3. Tắt Mini Menu — Trả lại sự tối giản cho trang sách
 Mặc định khi bôi đen chữ, trình duyệt sẽ hiện một thanh menu nhỏ lơ lửng ngay tại con trỏ. Ban đầu chúng ta có thể thấy khá vướng mắt vì che mất dòng chữ bên dưới.

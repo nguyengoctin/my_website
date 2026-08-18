@@ -35,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/doc-sach-hoc-thuat-cung-ai\/"
-        },"genre": "posts","keywords": "Prompt Engineering, AI, Self-learning","wordcount":  2013 ,
+        },"genre": "posts","keywords": "Prompt Engineering, AI, Self-learning","wordcount":  1945 ,
         "url": "https:\/\/ngoctin.me\/posts\/doc-sach-hoc-thuat-cung-ai\/","datePublished": "2026-07-30T12:15:00+07:00","dateModified": "2026-07-30T12:15:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -249,115 +249,85 @@
     end</div><h2 id="quy-trình-5-bước-sử-dụng-bộ-prompt-thực-chiến">Quy Trình 5 Bước Sử Dụng Bộ Prompt Thực Chiến</h2>
 <p>Bộ 5 prompt thực chiến dưới đây được thiết kế truyền dữ liệu nối tiếp nhau: đầu ra của bước trước làm đầu vào cho bước sau, đảm bảo không bị rời rạc.</p>
 <h3 id="bước-1-khảo-sát-mục-lục-và-tạo-hệ-thống-câu-hỏi-định-hướng-sq3r-survey">Bước 1: Khảo sát mục lục và tạo hệ thống câu hỏi định hướng (SQ3R Survey)</h3>
-<p>Trước khi đọc chi tiết, chúng ta nạp mục lục và lời nói đầu vào AI để xây dựng bộ câu hỏi kích thích tư duy tìm kiếm của não bộ.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 1: Khảo Sát Mục Lục và Tạo Câu Hỏi Định Hướng
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Bạn là một Chuyên gia Nhận thức luận. Hãy phân tích mục lục và lời nói đầu của cuốn sách dưới đây để tạo ra một khung định hướng đọc hiểu.
-
-Dữ liệu đầu vào:
-[DÁN MỤC LỤC VÀ LỜI NÓI ĐẦU Ô ĐÂY]
-
-Yêu cầu đầu ra:
-1. Khung Kiến Trúc Tri Thức: Tóm tắt 3 đến 5 trụ cột nội dung chính của cuốn sách.
-2. 5 Câu Hỏi Định Hướng SQ3R: Đặt 5 câu hỏi trọng tâm mà người đọc bắt buộc phải tìm được câu trả lời sau khi hoàn thành cuốn sách.
-3. Danh Sách Thuật Ngữ Tiềm Năng: Liệt kê các khái niệm cốt lõi cần chú ý.</div>
-</div>
-
+<p>Trước khi đọc chi tiết, chúng ta nạp mục lục và lời nói đầu vào AI để xây dựng bộ câu hỏi kích thích tư duy tìm kiếm của não bộ:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Bạn là một Chuyên gia Nhận thức luận. Hãy phân tích mục lục và lời nói đầu của cuốn sách dưới đây để tạo ra một khung định hướng đọc hiểu.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dữ liệu đầu vào:
+</span></span><span class="line"><span class="cl">[DÁN MỤC LỤC VÀ LỜI NÓI ĐẦU Ô ĐÂY]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Yêu cầu đầu ra:
+</span></span><span class="line"><span class="cl">1. Khung Kiến Trúc Tri Thức: Tóm tắt 3 đến 5 trụ cột nội dung chính của cuốn sách.
+</span></span><span class="line"><span class="cl">2. 5 Câu Hỏi Định Hướng SQ3R: Đặt 5 câu hỏi trọng tâm mà người đọc bắt buộc phải tìm được câu trả lời sau khi hoàn thành cuốn sách.
+</span></span><span class="line"><span class="cl">3. Danh Sách Thuật Ngữ Tiềm Năng: Liệt kê các khái niệm cốt lõi cần chú ý.</span></span></code></pre></div></div>
 <h3 id="bước-2-bóc-tách-nội-dung-chương-sách-chống-trôi-ngữ-cảnh-read">Bước 2: Bóc tách nội dung chương sách chống trôi ngữ cảnh (Read)</h3>
-<p>Khi đọc từng chương dài, chúng ta dùng prompt này để ép AI rà soát đồng đều cả 3 vùng đầu, giữa và cuối của tài liệu, tránh bỏ sót các luận điểm quan trọng ở giữa.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 2: Bóc Tách Luận Điểm Đồng Đều Đầu - Giữa - Cuối
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Bạn là Chuyên gia Trích xuất Tri thức Ngữ cảnh Dài. Hãy đọc chương sách dưới đây và trích xuất thông tin đồng đều ở cả 3 vùng: Phần Đầu, Phần Giữa và Phần Cuối.
-
-[DÁN NỘI DUNG CHƯƠNG SÁCH Ô ĐÂY]
-
-Phản hồi bắt buộc tuân theo bảng sau:
-- Vị trí (Phần Đầu / Phần Giữa / Phần Cuối)
-- Luận Điểm Cốt Lõi
-- Bằng Chứng Thực Chứng Hoặc Lập Luận Bổ Trợ
-- 3 Chi Tiết Quan Trọng Nhất Nằm Ở Giữa Văn Bản</div>
-</div>
-
+<p>Khi đọc từng chương dài, chúng ta dùng prompt này để ép AI rà soát đồng đều cả 3 vùng đầu, giữa và cuối của tài liệu, tránh bỏ sót các luận điểm quan trọng ở giữa:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Bạn là Chuyên gia Trích xuất Tri thức Ngữ cảnh Dài. Hãy đọc chương sách dưới đây và trích xuất thông tin đồng đều ở cả 3 vùng: Phần Đầu, Phần Giữa và Phần Cuối.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[DÁN NỘI DUNG CHƯƠNG SÁCH Ô ĐÂY]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Phản hồi bắt buộc tuân theo bảng sau:
+</span></span><span class="line"><span class="cl">- Vị trí (Phần Đầu / Phần Giữa / Phần Cuối)
+</span></span><span class="line"><span class="cl">- Luận Điểm Cốt Lõi
+</span></span><span class="line"><span class="cl">- Bằng Chứng Thực Chứng Hoặc Lập Luận Bổ Trợ
+</span></span><span class="line"><span class="cl">- 3 Chi Tiết Quan Trọng Nhất Nằm Ở Giữa Văn Bản</span></span></code></pre></div></div>
 <h3 id="bước-3-kích-hoạt-vòng-lặp-feynman-tự-giải-thích-recite">Bước 3: Kích hoạt Vòng lặp Feynman tự giải thích (Recite)</h3>
-<p>Sau khi đọc lướt xong, chúng ta tự viết lại khái niệm theo cách hiểu của mình và gửi cho AI đóng vai người học 10 tuổi để vạch lá tìm sâu các lỗ hổng tư duy.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 3: Vòng Lặp Feynman và Máy Dò Lỗ Hổng Tri Thức
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Bạn là một Giám khảo Kiểm tra Tri thức theo Phương pháp Feynman. Bạn đóng vai một người học chưa có kiến thức nền tảng, có tư duy logic sắc bén và luôn tìm kiếm sự rõ ràng.
-
-Tôi đang học về chủ đề [TÊN_KHÁI_NIỆM]. Tôi sẽ tự giải thích khái niệm này theo cách hiểu của tôi. Nhiệm vụ của bạn là phân tích lời giải thích của tôi, chỉ ra các khoảng trống tri thức, các từ ngữ phức tạp tôi dùng nhưng chưa hiểu bản chất, và yêu cầu tôi tinh chỉnh.
-
-Bắt đầu bằng việc xác nhận ngắn gọn: &#34;Tôi đã sẵn sàng. Hãy giải thích khái niệm [TÊN_KHÁI_NIỆM] cho tôi như thể tôi là một học sinh 10 tuổi.&#34;
-Sau khi tôi gửi câu trả lời, hãy phân tích theo 3 góc độ:
-1. Điểm chính xác: Những phần tôi đã hiểu đúng.
-2. Lỗ hổng Tri thức: Những phần tôi giải thích sai, bịa đặt hoặc bỏ sót.
-3. Thuật ngữ dư thừa: Những từ ngữ chuyên ngành tôi dùng mà không giải thích được cơ chế.
-
-Đặt lại cho tôi đúng 2 câu hỏi làm rõ tập trung vào lỗ hổng lớn nhất. Chờ tôi trả lời rồi mới tiếp tục vòng lặp.</div>
-</div>
-
+<p>Sau khi đọc lướt xong, chúng ta tự viết lại khái niệm theo cách hiểu của mình và gửi cho AI đóng vai người học 10 tuổi để vạch lá tìm sâu các lỗ hổng tư duy:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Bạn là một Giám khảo Kiểm tra Tri thức theo Phương pháp Feynman. Bạn đóng vai một người học chưa có kiến thức nền tảng, có tư duy logic sắc bén và luôn tìm kiếm sự rõ ràng.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Tôi đang học về chủ đề [TÊN_KHÁI_NIỆM]. Tôi sẽ tự giải thích khái niệm này theo cách hiểu của tôi. Nhiệm vụ của bạn là phân tích lời giải thích của tôi, chỉ ra các khoảng trống tri thức, các từ ngữ phức tạp tôi dùng nhưng chưa hiểu bản chất, và yêu cầu tôi tinh chỉnh.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Bắt đầu bằng việc xác nhận ngắn gọn: &#34;Tôi đã sẵn sàng. Hãy giải thích khái niệm [TÊN_KHÁI_NIỆM] cho tôi như thể tôi là một học sinh 10 tuổi.&#34;
+</span></span><span class="line"><span class="cl">Sau khi tôi gửi câu trả lời, hãy phân tích theo 3 góc độ:
+</span></span><span class="line"><span class="cl">1. Điểm chính xác: Những phần tôi đã hiểu đúng.
+</span></span><span class="line"><span class="cl">2. Lỗ hổng Tri thức: Những phần tôi giải thích sai, bịa đặt hoặc bỏ sót.
+</span></span><span class="line"><span class="cl">3. Thuật ngữ dư thừa: Những từ ngữ chuyên ngành tôi dùng mà không giải thích được cơ chế.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Đặt lại cho tôi đúng 2 câu hỏi làm rõ tập trung vào lỗ hổng lớn nhất. Chờ tôi trả lời rồi mới tiếp tục vòng lặp.</span></span></code></pre></div></div>
 <h3 id="bước-4-vấn-đáp-socratic-phá-vỡ-các-giả-định-ngầm-critical-review">Bước 4: Vấn đáp Socratic phá vỡ các giả định ngầm (Critical Review)</h3>
-<p>Đối với các đoạn văn bản triết học hoặc lập luận phức tạp, chúng ta chuyển sang prompt Socratic để AI liên tục đặt câu hỏi phản biện, ép chúng ta phải quay lại tài liệu gốc để đào sâu.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 4: Triết Gia Vấn Đáp Phá Vỡ Giả Định
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung cấp câu trả lời, mà là dùng chuỗi câu hỏi vấn đáp để giúp tôi tự nhận ra các giới hạn và mâu thuẫn trong cách hiểu của mình về cuốn sách.
-
-Đoạn văn bản tôi đang nghiên cứu:
-[DÁN ĐOẠN VĂN BẢN TRONG SÁCH]
-
-Không tóm tắt lại đoạn văn bản. Hãy đưa ra 1 câu hỏi duy nhất đánh thẳng vào giả định ẩn sâu nhất mà tác giả hoặc tôi đang thừa nhận trong đoạn văn trên.
-Chờ câu trả lời của tôi. Khi tôi trả lời, hãy sử dụng kỹ thuật Bác bỏ Socratic để chỉ ra điểm mâu thuẫn logic trong câu trả lời của tôi và đặt câu hỏi tiếp theo.
-Duy trì cuộc hội thoại vấn đáp này cho đến khi tôi tự rút ra được bản chất gốc rễ của vấn đề.</div>
-</div>
-
+<p>Đối với các đoạn văn bản triết học hoặc lập luận phức tạp, chúng ta chuyển sang prompt Socratic để AI liên tục đặt câu hỏi phản biện, ép chúng ta phải quay lại tài liệu gốc để đào sâu:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung cấp câu trả lời, mà là dùng chuỗi câu hỏi vấn đáp để giúp tôi tự nhận ra các giới hạn và mâu thuẫn trong cách hiểu của mình về cuốn sách.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Đoạn văn bản tôi đang nghiên cứu:
+</span></span><span class="line"><span class="cl">[DÁN ĐOẠN VĂN BẢN TRONG SÁCH]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Không tóm tắt lại đoạn văn bản. Hãy đưa ra 1 câu hỏi duy nhất đánh thẳng vào giả định ẩn sâu nhất mà tác giả hoặc tôi đang thừa nhận trong đoạn văn trên.
+</span></span><span class="line"><span class="cl">Chờ câu trả lời của tôi. Khi tôi trả lời, hãy sử dụng kỹ thuật Bác bỏ Socratic để chỉ ra điểm mâu thuẫn logic trong câu trả lời của tôi và đặt câu hỏi tiếp theo.
+</span></span><span class="line"><span class="cl">Duy trì cuộc hội thoại vấn đáp này cho đến khi tôi tự rút ra được bản chất gốc rễ của vấn đề.</span></span></code></pre></div></div>
 <h3 id="bước-5-tổng-hợp-sơ-đồ-và-xây-dựng-ma-trận-tri-thức-review-and-concept-mapping">Bước 5: Tổng hợp sơ đồ và xây dựng ma trận tri thức (Review and Concept Mapping)</h3>
-<p>Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 5: Kiến Trúc Sư Chuyển Đổi Ma Trận Khái Niệm
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Bạn là một Kiến trúc sư Tri thức. Nhiệm vụ của bạn là chuyển đổi các đoạn văn bản tuyến tính thành ma trận quan hệ mạng lưới nhằm phục vụ việc ghi nhớ thị giác và xây dựng sơ đồ tư duy.
-
-[DÁN NỘI DUNG SÁCH CẦN MÔ HÌNH HÓA]
-
-Hãy chuyển đổi nội dung trên thành cấu trúc dữ liệu sau:
-1. Ma Trận Tương Quan Khái Niệm: Trình bày mối quan hệ nối tiếp, đối lập hoặc nguyên nhân giữa các khái niệm.
-2. Cây Tri Thức Cấu Trúc: Gồm các khái niệm trụ cột và các nhánh cấu thành.
-3. Kịch Bản Tự Kiểm Tra Siêu Nhận Thức: Tạo 2 tình huống thực tế yêu cầu người đọc phải áp dụng đúng cây tri thức trên để giải quyết vấn đề.</div>
-</div>
-
+<p>Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Bạn là một Kiến trúc sư Tri thức. Nhiệm vụ của bạn là chuyển đổi các đoạn văn bản tuyến tính thành ma trận quan hệ mạng lưới nhằm phục vụ việc ghi nhớ thị giác và xây dựng sơ đồ tư duy.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[DÁN NỘI DUNG SÁCH CẦN MÔ HÌNH HÓA]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Hãy chuyển đổi nội dung trên thành cấu trúc dữ liệu sau:
+</span></span><span class="line"><span class="cl">1. Ma Trận Tương Quan Khái Niệm: Trình bày mối quan hệ nối tiếp, đối lập hoặc nguyên nhân giữa các khái niệm.
+</span></span><span class="line"><span class="cl">2. Cây Tri Thức Cấu Trúc: Gồm các khái niệm trụ cột và các nhánh cấu thành.
+</span></span><span class="line"><span class="cl">3. Kịch Bản Tự Kiểm Tra Siêu Nhận Thức: Tạo 2 tình huống thực tế yêu cầu người đọc phải áp dụng đúng cây tri thức trên để giải quyết vấn đề.</span></span></code></pre></div></div>
 <h2 id="kết-luận">Kết Luận</h2>
 <p>Việc làm chủ các kỹ thuật tạo câu lệnh không chỉ cải thiện chất lượng câu trả lời của hệ thống AI mà còn tái định hình toàn bộ cách chúng ta tư duy và xử lý thông tin. Từ một người đọc thụ động, chúng ta trở thành những kiến trúc sư tri thức, sử dụng công nghệ mô phỏng đa chiều để tự rà soát, phản biện và mở rộng năng lực nhận thức của chính mình.</p>
 </div><div class="post-footer" id="post-footer">

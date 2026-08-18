@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai\/"
-        },"genre": "posts","keywords": "Productivity, Workflow, AI, Reading Experience, Microsoft Edge","wordcount":  702 ,
+        },"genre": "posts","keywords": "Productivity, Workflow, AI, Reading Experience, Microsoft Edge","wordcount":  657 ,
         "url": "https:\/\/ngoctin.me\/posts\/doc-tai-lieu-tieng-anh-sieu-toc-voi-microsoft-edge-va-ai\/","datePublished": "2026-07-29T15:45:00+07:00","dateModified": "2026-07-29T15:45:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -217,19 +217,13 @@
     </figure>
 <h3 id="2-ai-copilot--trợ-lý-giải-thích-thuật-ngữ-tại-chỗ">2. AI Copilot — Trợ lý giải thích thuật ngữ tại chỗ</h3>
 <p>Có những đoạn văn mà dù dịch từng từ sang tiếng Việt, chúng ta vẫn thấy mơ hồ vì chứa các thuật ngữ chuyên ngành trừu tượng.</p>
-<p>Những lúc đó, thay vì chỉ dịch đơn thuần, chúng ta chọn <strong>Ask Copilot</strong>. Ngay lập tức, khung chat AI bên cạnh sẽ giải thích bản chất khái niệm đó bằng văn phong ngắn gọn, dễ hiểu, thậm chí đưa ra ví dụ minh họa trực tiếp cho đoạn văn vừa chọn.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Giải thích thuật ngữ chuyên ngành trong PDF
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Giải thích đoạn văn bản sau đây bằng tiếng Việt một cách trực quan, ngắn gọn trong 2 câu, lấy 1 ví dụ thực tế liên quan đến phát triển phần mềm: {{selected_text}}</div>
-</div>
-
+<p>Những lúc đó, thay vì chỉ dịch đơn thuần, chúng ta chọn <strong>Ask Copilot</strong> với câu lệnh mẫu:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Giải thích đoạn văn bản sau đây bằng tiếng Việt một cách trực quan, ngắn gọn trong 2 câu, lấy 1 ví dụ thực tế liên quan đến phát triển phần mềm: {{selected_text}}</span></span></code></pre></div></div>
 <h3 id="3-tắt-mini-menu--trả-lại-sự-tối-giản-cho-trang-sách">3. Tắt Mini Menu — Trả lại sự tối giản cho trang sách</h3>
 <p>Mặc định khi bôi đen chữ, trình duyệt sẽ hiện một thanh menu nhỏ lơ lửng ngay tại con trỏ. Ban đầu chúng ta có thể thấy khá vướng mắt vì che mất dòng chữ bên dưới.</p>
 <p>Sau khi vào <strong>Cài đặt $\to$ Giao diện $\to$ Menu ngữ cảnh</strong> và <strong>Tắt dòng Show mini menu when selecting text</strong>, trang sách trở nên sạch sẽ tuyệt đối. Chúng ta toàn quyền kiểm soát khi nào cần dịch chỉ bằng một cú nhấp chuột phải.</p>

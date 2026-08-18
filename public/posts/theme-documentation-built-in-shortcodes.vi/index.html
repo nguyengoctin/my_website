@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/theme-documentation-built-in-shortcodes.vi\/"
-        },"genre": "posts","keywords": "Hugo, LoveIt, Shortcodes, Web Development, Documentation","wordcount":  1102 ,
+        },"genre": "posts","keywords": "Hugo, LoveIt, Shortcodes, Web Development, Documentation","wordcount":  997 ,
         "url": "https:\/\/ngoctin.me\/posts\/theme-documentation-built-in-shortcodes.vi\/","datePublished": "2026-07-29T18:40:00+07:00","dateModified": "2026-07-29T18:40:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -170,7 +170,7 @@
             &nbsp;·&nbsp;
             <time datetime="2026-07-29">Jul 29, 2026</time>
             &nbsp;·&nbsp;
-            <span>6 min read</span>&nbsp;·&nbsp;<a href="/categories/tech-blog/" style="color: #828282; margin-left: 0.5rem;">in Tech Blog</a></div><div class="details toc" id="toc-static"  data-kept="">
+            <span>5 min read</span>&nbsp;·&nbsp;<a href="/categories/tech-blog/" style="color: #828282; margin-left: 0.5rem;">in Tech Blog</a></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
@@ -187,11 +187,6 @@
         <li><a href="#cú-pháp-markdown-1">Cú pháp Markdown:</a></li>
       </ul>
     </li>
-    <li><a href="#3-khung-câu-lệnh-prompt">3. KHUNG CÂU LỆNH PROMPT</a>
-      <ul>
-        <li><a href="#cú-pháp-markdown-2">Cú pháp Markdown:</a></li>
-      </ul>
-    </li>
     <li><a href="#4-sơ-đồ-động-mermaid">4. SƠ ĐỒ ĐỘNG MERMAID</a>
       <ul>
         <li><a href="#cú-pháp-shortcode">Cú pháp Shortcode:</a></li>
@@ -199,37 +194,37 @@
     </li>
     <li><a href="#5-tùy-chỉnh-kiểu-dáng-cơ-bản-style">5. TÙY CHỈNH KIỂU DÁNG CƠ BẢN STYLE</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-3">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-2">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#6-hiệu-ứng-gõ-chữ-tự-động-typeit">6. HIỆU ỨNG GÕ CHỮ TỰ ĐỘNG TYPEIT</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-4">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-3">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#7-thẻ-phiên-bản-version">7. THẺ PHIÊN BẢN VERSION</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-5">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-4">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#8-thẻ-nhân-vật-person">8. THẺ NHÂN VẬT PERSON</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-6">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-5">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#9-liên-kết-tùy-chỉnh-link">9. LIÊN KẾT TÙY CHỈNH LINK</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-7">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-6">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#10-hình-ảnh-nâng-cao-image">10. HÌNH ẢNH NÂNG CAO IMAGE</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-8">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-7">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#11-biểu-đồ-echarts">11. BIỂU ĐỒ ECHARTS</a>
       <ul>
-        <li><a href="#cú-pháp-markdown-9">Cú pháp Markdown:</a></li>
+        <li><a href="#cú-pháp-markdown-8">Cú pháp Markdown:</a></li>
       </ul>
     </li>
     <li><a href="#12-bảng-tổng-hợp-danh-sách-17-shortcodes">12. BẢNG TỔNG HỢP DANH SÁCH 17 SHORTCODES</a></li>
@@ -316,30 +311,6 @@
 </span></span><span class="line"><span class="cl">Nội dung câu trích dẫn...
 </span></span><span class="line"><span class="cl">{{&lt; /quote &gt;}}</span></span></code></pre></div></div>
 <hr>
-<h2 id="3-khung-câu-lệnh-prompt">3. KHUNG CÂU LỆNH PROMPT</h2>
-<p>Shortcode <code>prompt</code> tạo khung chứa câu lệnh mẫu dạng Script, chuẩn font monospace, không đánh số dòng và tích hợp nút Copy 1-click.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Hướng dẫn gỡ lỗi Socratic
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.</div>
-</div>
-
-<h3 id="cú-pháp-markdown-2">Cú pháp Markdown:</h3>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-markdown">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{&lt; prompt title=&#34;Prompt Mẫu: Tiêu đề câu lệnh&#34; &gt;}}
-</span></span><span class="line"><span class="cl">Nội dung câu lệnh prompt ở đây...
-</span></span><span class="line"><span class="cl">{{&lt; /prompt &gt;}}</span></span></code></pre></div></div>
-<hr>
 <h2 id="4-sơ-đồ-động-mermaid">4. SƠ ĐỒ ĐỘNG MERMAID</h2>
 <p>Sử dụng khối mã <code>```mermaid</code> cho phép tạo sơ đồ quy trình, luồng dữ liệu hoặc biểu đồ trình tự trực quan.</p>
 <div class="mermaid" id="id-1" data-content="flowchart LR
@@ -374,7 +345,7 @@
 <h2 id="5-tùy-chỉnh-kiểu-dáng-cơ-bản-style">5. TÙY CHỈNH KIỂU DÁNG CƠ BẢN STYLE</h2>
 <p>Shortcode <code>style</code> giúp chúng ta can thiệp trực tiếp các thuộc tính CSS cho một đoạn văn bản hoặc khối nội dung.</p>
 <p id="id-3">Đoạn văn này được tùy chỉnh màu đỏ nổi bật và chữ in đậm thông qua shortcode style.</p>
-<h3 id="cú-pháp-markdown-3">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-2">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -388,7 +359,7 @@
 <p>Shortcode <code>typeit</code> tạo hiệu ứng gõ phím hoạt hình cho văn bản hoặc đoạn mã nguồn.</p>
 <div class="typeit"><div id="id-4"></div></div>
 
-<h3 id="cú-pháp-markdown-4">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-3">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -426,7 +397,7 @@
         alt="LoveIt DEPRECATED | 0.1.0"
         title="LoveIt DEPRECATED | 0.1.0" /></a></li>
 </ul>
-<h3 id="cú-pháp-markdown-5">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-4">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -438,7 +409,7 @@
 <h2 id="8-thẻ-nhân-vật-person">8. THẺ NHÂN VẬT PERSON</h2>
 <p>Shortcode <code>person</code> giúp tạo thẻ giới thiệu thông tin cá nhân hoặc tác giả dạng card.</p>
 <span class="h-card person-mention"><a href="https://github.com/ngoctinn" class="u-url url" title="Backend Engineer"><img class="u-photo photo" src="/images/avatar.webp" alt="Nguyễn Ngọc Tín">&#8201;<span class="p-name fn">Nguyễn Ngọc Tín</span></a></span>
-<h3 id="cú-pháp-markdown-6">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-5">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -449,7 +420,7 @@
 <h2 id="9-liên-kết-tùy-chỉnh-link">9. LIÊN KẾT TÙY CHỈNH LINK</h2>
 <p>Shortcode <code>link</code> hỗ trợ tạo liên kết nâng cao kèm thuộc tính hiển thị.</p>
 <a href="https://github.com/ngoctinn" title="Ghé thăm tài khoản GitHub" target="_blank" rel="noopener noreffer ">Truy cập GitHub cá nhân</a>
-<h3 id="cú-pháp-markdown-7">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-6">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -469,7 +440,7 @@
             alt="Ảnh đại diện" width="150px" />
     </a><figcaption class="image-caption">Ảnh đại diện Nguyễn Ngọc Tín</figcaption>
     </figure>
-<h3 id="cú-pháp-markdown-8">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-7">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -480,7 +451,7 @@
 <h2 id="11-biểu-đồ-echarts">11. BIỂU ĐỒ ECHARTS</h2>
 <p>Shortcode <code>echarts</code> render các biểu đồ thống kê trực quan dạng Bar, Line hoặc Pie bằng cấu trúc dữ liệu JSON.</p>
 <div class="echarts" id="id-5" style="width: 100%; height: 30rem;"></div>
-<h3 id="cú-pháp-markdown-9">Cú pháp Markdown:</h3>
+<h3 id="cú-pháp-markdown-8">Cú pháp Markdown:</h3>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-markdown">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
@@ -509,11 +480,6 @@
           <td style="text-align: left"><strong>quote</strong></td>
           <td style="text-align: left">Khung trích dẫn sang trọng kèm tác giả</td>
           <td style="text-align: left"><code>{{&lt; quote author=&quot;Tên Tác Giả&quot; &gt;}}...{{&lt; /quote &gt;}}</code></td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><strong>prompt</strong></td>
-          <td style="text-align: left">Khung chứa câu lệnh mẫu kèm nút Copy</td>
-          <td style="text-align: left"><code>{{&lt; prompt title=&quot;Prompt&quot; &gt;}}...{{&lt; /prompt &gt;}}</code></td>
       </tr>
       <tr>
           <td style="text-align: left"><strong>mermaid</strong></td>

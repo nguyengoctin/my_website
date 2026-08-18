@@ -57,9 +57,9 @@ Xây dựng Agent tốn kém Token Cost, có độ trễ cao và mang tính Non-
    - **Orchestration Tools:** Đóng gói Agent khác thành công cụ để Agent sếp điều phối.
 3. **Instructions - Chỉ dẫn:** Định nghĩa kịch bản vận hành bằng cách chuyển đổi SOP doanh nghiệp thành các bước đánh số rõ ràng, bao phủ cả các trường hợp lỗi Edge Cases.
 
-{{< prompt title="Prompt Mẫu: Meta-Prompt chuyển đổi SOP thành System Instructions" >}}
+```text
 Bạn là một chuyên gia viết chỉ dẫn cho LLM agent. Hãy chuyển đổi tài liệu trợ giúp sau đây thành bộ chỉ dẫn được đánh số rõ ràng, không mơ hồ, hoạt động như mệnh lệnh điều hướng cho agent: {{help_center_doc}}
-{{< /prompt >}}
+```
 
 ---
 

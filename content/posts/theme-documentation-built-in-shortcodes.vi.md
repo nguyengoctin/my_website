@@ -68,22 +68,6 @@ Nội dung câu trích dẫn...
 
 ---
 
-## 3. KHUNG CÂU LỆNH PROMPT
-
-Shortcode `prompt` tạo khung chứa câu lệnh mẫu dạng Script, chuẩn font monospace, không đánh số dòng và tích hợp nút Copy 1-click.
-
-{{< prompt title="Prompt Mẫu: Hướng dẫn gỡ lỗi Socratic" >}}
-Tôi gặp lỗi này khi chạy ứng dụng Django: [dán traceback]. Hãy đặt cho tôi 3 câu hỏi gợi ý từng bước để giúp tôi tự tìm ra nguyên nhân gốc rễ.
-{{< /prompt >}}
-
-### Cú pháp Markdown:
-```markdown
-{{</* prompt title="Prompt Mẫu: Tiêu đề câu lệnh" */>}}
-Nội dung câu lệnh prompt ở đây...
-{{</* /prompt */>}}
-```
-
----
 
 ## 4. SƠ ĐỒ ĐỘNG MERMAID
 
@@ -224,7 +208,6 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 | :--- | :--- | :--- |
 | **admonition** | Tạo khung thông báo phân loại | `{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}` |
 | **quote** | Khung trích dẫn sang trọng kèm tác giả | `{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}` |
-| **prompt** | Khung chứa câu lệnh mẫu kèm nút Copy | `{{</* prompt title="Prompt" */>}}...{{</* /prompt */>}}` |
 | **mermaid** | Vẽ sơ đồ quy trình và trình tự | ` {{< mermaid >}} flowchart LR ... {{< /mermaid >}} ` |
 | **style** | Định dạng CSS trực tiếp cho văn bản | `{{</* style "color: red;" p */>}}...{{</* /style */>}}` |
 | **typeit** | Hiệu ứng gõ chữ hoạt hình | `{{</* typeit */>}}Hello World{{</* /typeit */>}}` |

@@ -71,7 +71,7 @@ Khi gặp một đoạn văn bản quá khó, chúng ta không dùng AI để d�
 
 Dùng khi cần giải mã các khái niệm kiến trúc phần mềm hoặc hệ thống phân tán.
 
-{{< prompt title="Prompt Mẫu: Phân Tích Khái Niệm Hệ Thống" >}}
+```text
 <context>
 Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa học Máy tính. Nhiệm vụ của bạn là giải thích đoạn văn bản tiếng Anh chuyên ngành IT và AI sau đây sang tiếng Việt một cách trực quan, tuân thủ nguyên tắc Kỹ thuật Feynman. 
 </context>
@@ -86,13 +86,13 @@ Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa 
 <input_text>
 [Dán đoạn văn bản tiếng Anh từ PDF hoặc EPUB vào đây]
 </input_text>
-{{< /prompt >}}
+```
 
 ### 2. Mẫu Lệnh Giải Mã Khối Mã Nguồn và AST
 
-Sử dụng khi văn bản tiếng Anh mô tả đan xen với khối code, giúp chúng ta ánh xạ lý thuyết vào luồng thực thi.
+Sử dụng khi văn bản tiếng Anh mô tả đan xen với khối code, giúp chúng ta ánh xạ lý thuyết vào luồng thực thi:
 
-{{< prompt title="Prompt Mẫu: Giải Mã Khối Mã Nguồn" >}}
+```text
 <context>
 Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn lập trình. Tôi đang gặp khó khăn trong việc kết nối giữa văn bản lý thuyết tiếng Anh và đoạn mã nguồn thực thi.
 </context>
@@ -111,13 +111,13 @@ Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn l�
 <surrounding_text>
 [Dán đoạn tiếng Anh mô tả phía trên và dưới đoạn code vào đây]
 </surrounding_text>
-{{< /prompt >}}
+```
 
 ### 3. Mẫu Lệnh Bóc Tách Công Thức Toán Học
 
-Chuyên dùng cho các bài báo nghiên cứu AI chứa nhiều phương trình toán học.
+Chuyên dùng cho các bài báo nghiên cứu AI chứa nhiều phương trình toán học:
 
-{{< prompt title="Prompt Mẫu: Phân Rã Công Thức Toán Học" >}}
+```text
 <context>
 Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng trong Trí tuệ Nhân tạo. Tôi cần bóc tách một phương trình toán học phức tạp thành các khối kiến thức dễ tiêu hóa.
 </context>
@@ -131,7 +131,7 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
 <equation_context>
 [Dán đoạn mô tả công thức toán học vào đây]
 </equation_context>
-{{< /prompt >}}
+```
 
 ## Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining và Thuật Toán FSRS
 

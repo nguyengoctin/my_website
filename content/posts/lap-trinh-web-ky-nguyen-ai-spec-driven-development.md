@@ -76,9 +76,9 @@ sequenceDiagram
 ```
 
 #### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief và Specs)
-Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.
+Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến:
 
-{{< prompt title="Prompt Bước 1: Khởi tạo Project Brief và Technical Specs" >}}
+```text
 Tôi muốn xây dựng một dự án [Tên ứng dụng]. Hãy đóng vai một Principal System Architect và phỏng vấn tôi từng câu hỏi một để làm rõ:
 1. Mục tiêu kinh doanh và User Stories.
 2. Luồng nghiệp vụ chính.
@@ -86,24 +86,24 @@ Tôi muốn xây dựng một dự án [Tên ứng dụng]. Hãy đóng vai mộ
 4. Ràng buộc bảo mật và Hiệu năng.
 
 Hãy đặt 3 câu hỏi làm rõ trước khi xuất bản nháp đầu tiên.
-{{< /prompt >}}
+```
 
 #### Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả — Phương pháp Columbo
-Áp dụng phương pháp điều tra Columbo — yêu cầu AI thẩm vấn tài liệu đặc tả để phát hiện các trường hợp biên và rủi ro kiến trúc trước khi chạm vào mã nguồn.
+Áp dụng phương pháp điều tra Columbo — yêu cầu AI thẩm vấn tài liệu đặc tả để phát hiện các trường hợp biên và rủi ro kiến trúc trước khi chạm vào mã nguồn:
 
-{{< prompt title="Prompt Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả" >}}
+```text
 Đọc file specs/feature-brief.md và codebase hiện tại. Đóng vai một Principal Engineer khắt khe, hãy rà soát và chỉ ra:
 1. Các trường hợp biên Edge cases chưa được bao phủ trong brief.
 2. Rủi ro xung đột kiến trúc hoặc lãng phí truy vấn (N+1 query, Race condition).
 3. 3 điểm mơ hồ nhất trong tài liệu cần tôi làm rõ ngay.
 
 Đừng viết code. Chỉ tập trung phỏng vấn để hoàn thiện brief.
-{{< /prompt >}}
+```
 
 #### Bước 3: Kích hoạt chế độ lập kế hoạch Plan Mode
-Sử dụng các công cụ như Claude Code hoặc Cursor ở chế độ Plan Mode để buộc AI phân tích codebase và phác thảo `plan.md`.
+Sử dụng các công cụ như Claude Code hoặc Cursor ở chế độ Plan Mode để buộc AI phân tích codebase và phác thảo `plan.md`:
 
-{{< prompt title="Prompt Bước 3: Lập kế hoạch kỹ thuật plan.md" >}}
+```text
 Dựa trên specs/feature-brief.md đã chốt, hãy phác thảo file plan.md cho tính năng này.
 
 Nội dung plan.md phải bao gồm:
@@ -112,12 +112,12 @@ Nội dung plan.md phải bao gồm:
 3. Kế hoạch kiểm thử tự động (Unit test và Integration test).
 
 Lưu ý: CHƯA viết mã nguồn chi tiết. Chỉ tập trung vào kiến trúc kế hoạch.
-{{< /prompt >}}
+```
 
 #### Bước 4: Phân rã thành danh sách Task độc lập — Atomic Tasks
-Chia `plan.md` thành các bước nhỏ, mỗi bước có tiêu chuẩn nghiệm thu rõ ràng.
+Chia `plan.md` thành các bước nhỏ, mỗi bước có tiêu chuẩn nghiệm thu rõ ràng:
 
-{{< prompt title="Prompt Bước 4: Phân rã danh sách Task độc lập" >}}
+```text
 Đọc plan.md và tạo file tasks.md chia kế hoạch thành các nhiệm vụ độc lập Atomic Tasks.
 
 Mỗi task cần có:
@@ -126,38 +126,38 @@ Mỗi task cần có:
 - Lệnh kiểm thử tự động để xác nhận hoàn thành.
 
 Đảm bảo mỗi task có dung lượng vừa đủ để triển khai trong 1 lượt tương tác mà không bị tràn context.
-{{< /prompt >}}
+```
 
 #### Bước 5: Thực thi mã nguồn tuần tự — Sequential Execution
-Cho phép AI CLI thực thi từng nhiệm vụ đã phê duyệt theo phạm vi giới hạn.
+Cho phép AI CLI thực thi từng nhiệm vụ đã phê duyệt theo phạm vi giới hạn:
 
-{{< prompt title="Prompt Bước 5: Thực thi mã nguồn theo từng Task" >}}
+```text
 Hãy thực hiện Task 1.1 trong file tasks.md.
 
 Quy tắc thực thi:
 1. Chỉ sửa đổi các file được chỉ định cho Task 1.1.
 2. Không tự ý viết mã cho các task tiếp theo.
 3. Sau khi viết code, hãy trình bày diffs và giải thích ngắn gọn lý do chọn giải pháp này.
-{{< /prompt >}}
+```
 
 #### Bước 6: Kiểm thử tự động và Nghiệm thu (Verification và Review)
-Chạy bộ kiểm thử tự động unit test để đảm bảo mã nguồn tuân thủ đúng tiêu chí nghiệm thu Acceptance Criteria.
+Chạy bộ kiểm thử tự động unit test để đảm bảo mã nguồn tuân thủ đúng tiêu chí nghiệm thu Acceptance Criteria:
 
-{{< prompt title="Prompt Bước 6: Kiểm thử tự động và Acceptance Review" >}}
+```text
 Đã hoàn thành Task 1.1. Hãy hỗ trợ kiểm thử và rà soát:
 1. Viết bộ unit test bao phủ các kịch bản thành công và thất bại cho Task 1.1.
 2. Chạy lệnh test và phân tích kết quả.
 3. Review mã nguồn vừa viết so với tiêu chí Acceptance Criteria trong specs/feature-brief.md.
 
 Nếu phát hiện lỗi hoặc thiếu sót, hãy đề xuất hướng sửa đổi tối giản.
-{{< /prompt >}}
+```
 
 ---
 
 ## 4. Bộ sưu tập Prompt thực chiến
 
 ### 1. Phân tích bài toán ban đầu
-{{< prompt title="Prompt Mẫu: One-Shot Khởi tạo Dự án" >}}
+```text
 Tôi đang xây dựng ứng dụng web Django tên là TallyApp. Hãy đọc kỹ project-brief.md và design.md.
 
 Trước khi tạo code, hãy phân tích:
@@ -173,20 +173,20 @@ Sau khi phân tích:
 8. Danh sách URLs.
 
 Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã cơ bản.
-{{< /prompt >}}
+```
 
 ### 2. Viết kiểm thử tự động
-{{< prompt title="Prompt Mẫu: Viết Unit Test" >}}
+```text
 Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc validation, giá trị mặc định và các ràng buộc. Tập trung vào các trường hợp biên và kịch bản lỗi.
-{{< /prompt >}}
+```
 
 ### 3. Phê duyệt và rà soát mã nguồn
-{{< prompt title="Prompt Mẫu: Code Review" >}}
+```text
 Hãy review lại tính năng vừa triển khai so với spec và tiêu chuẩn ban đầu:
 1. Yêu cầu nào còn thiếu?
 2. Có sự phức tạp không cần thiết nào không?
 3. Trường hợp kiểm thử nào còn bỏ ngỏ?
-{{< /prompt >}}
+```
 
 ---
 

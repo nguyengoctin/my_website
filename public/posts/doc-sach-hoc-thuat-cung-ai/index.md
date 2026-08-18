@@ -55,9 +55,9 @@ Bộ 5 prompt thực chiến dưới đây được thiết kế truyền dữ l
 
 ### Bước 1: Khảo sát mục lục và tạo hệ thống câu hỏi định hướng (SQ3R Survey)
 
-Trước khi đọc chi tiết, chúng ta nạp mục lục và lời nói đầu vào AI để xây dựng bộ câu hỏi kích thích tư duy tìm kiếm của não bộ.
+Trước khi đọc chi tiết, chúng ta nạp mục lục và lời nói đầu vào AI để xây dựng bộ câu hỏi kích thích tư duy tìm kiếm của não bộ:
 
-{{< prompt title="Prompt Bước 1: Khảo Sát Mục Lục và Tạo Câu Hỏi Định Hướng" >}}
+```text
 Bạn là một Chuyên gia Nhận thức luận. Hãy phân tích mục lục và lời nói đầu của cuốn sách dưới đây để tạo ra một khung định hướng đọc hiểu.
 
 Dữ liệu đầu vào:
@@ -67,13 +67,13 @@ Yêu cầu đầu ra:
 1. Khung Kiến Trúc Tri Thức: Tóm tắt 3 đến 5 trụ cột nội dung chính của cuốn sách.
 2. 5 Câu Hỏi Định Hướng SQ3R: Đặt 5 câu hỏi trọng tâm mà người đọc bắt buộc phải tìm được câu trả lời sau khi hoàn thành cuốn sách.
 3. Danh Sách Thuật Ngữ Tiềm Năng: Liệt kê các khái niệm cốt lõi cần chú ý.
-{{< /prompt >}}
+```
 
 ### Bước 2: Bóc tách nội dung chương sách chống trôi ngữ cảnh (Read)
 
-Khi đọc từng chương dài, chúng ta dùng prompt này để ép AI rà soát đồng đều cả 3 vùng đầu, giữa và cuối của tài liệu, tránh bỏ sót các luận điểm quan trọng ở giữa.
+Khi đọc từng chương dài, chúng ta dùng prompt này để ép AI rà soát đồng đều cả 3 vùng đầu, giữa và cuối của tài liệu, tránh bỏ sót các luận điểm quan trọng ở giữa:
 
-{{< prompt title="Prompt Bước 2: Bóc Tách Luận Điểm Đồng Đều Đầu - Giữa - Cuối" >}}
+```text
 Bạn là Chuyên gia Trích xuất Tri thức Ngữ cảnh Dài. Hãy đọc chương sách dưới đây và trích xuất thông tin đồng đều ở cả 3 vùng: Phần Đầu, Phần Giữa và Phần Cuối.
 
 [DÁN NỘI DUNG CHƯƠNG SÁCH Ô ĐÂY]
@@ -83,13 +83,13 @@ Phản hồi bắt buộc tuân theo bảng sau:
 - Luận Điểm Cốt Lõi
 - Bằng Chứng Thực Chứng Hoặc Lập Luận Bổ Trợ
 - 3 Chi Tiết Quan Trọng Nhất Nằm Ở Giữa Văn Bản
-{{< /prompt >}}
+```
 
 ### Bước 3: Kích hoạt Vòng lặp Feynman tự giải thích (Recite)
 
-Sau khi đọc lướt xong, chúng ta tự viết lại khái niệm theo cách hiểu của mình và gửi cho AI đóng vai người học 10 tuổi để vạch lá tìm sâu các lỗ hổng tư duy.
+Sau khi đọc lướt xong, chúng ta tự viết lại khái niệm theo cách hiểu của mình và gửi cho AI đóng vai người học 10 tuổi để vạch lá tìm sâu các lỗ hổng tư duy:
 
-{{< prompt title="Prompt Bước 3: Vòng Lặp Feynman và Máy Dò Lỗ Hổng Tri Thức" >}}
+```text
 Bạn là một Giám khảo Kiểm tra Tri thức theo Phương pháp Feynman. Bạn đóng vai một người học chưa có kiến thức nền tảng, có tư duy logic sắc bén và luôn tìm kiếm sự rõ ràng.
 
 Tôi đang học về chủ đề [TÊN_KHÁI_NIỆM]. Tôi sẽ tự giải thích khái niệm này theo cách hiểu của tôi. Nhiệm vụ của bạn là phân tích lời giải thích của tôi, chỉ ra các khoảng trống tri thức, các từ ngữ phức tạp tôi dùng nhưng chưa hiểu bản chất, và yêu cầu tôi tinh chỉnh.
@@ -101,13 +101,13 @@ Sau khi tôi gửi câu trả lời, hãy phân tích theo 3 góc độ:
 3. Thuật ngữ dư thừa: Những từ ngữ chuyên ngành tôi dùng mà không giải thích được cơ chế.
 
 Đặt lại cho tôi đúng 2 câu hỏi làm rõ tập trung vào lỗ hổng lớn nhất. Chờ tôi trả lời rồi mới tiếp tục vòng lặp.
-{{< /prompt >}}
+```
 
 ### Bước 4: Vấn đáp Socratic phá vỡ các giả định ngầm (Critical Review)
 
-Đối với các đoạn văn bản triết học hoặc lập luận phức tạp, chúng ta chuyển sang prompt Socratic để AI liên tục đặt câu hỏi phản biện, ép chúng ta phải quay lại tài liệu gốc để đào sâu.
+Đối với các đoạn văn bản triết học hoặc lập luận phức tạp, chúng ta chuyển sang prompt Socratic để AI liên tục đặt câu hỏi phản biện, ép chúng ta phải quay lại tài liệu gốc để đào sâu:
 
-{{< prompt title="Prompt Bước 4: Triết Gia Vấn Đáp Phá Vỡ Giả Định" >}}
+```text
 Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung cấp câu trả lời, mà là dùng chuỗi câu hỏi vấn đáp để giúp tôi tự nhận ra các giới hạn và mâu thuẫn trong cách hiểu của mình về cuốn sách.
 
 Đoạn văn bản tôi đang nghiên cứu:
@@ -116,13 +116,13 @@ Bạn là Triết gia Socratic. Mục tiêu của bạn không phải là cung c
 Không tóm tắt lại đoạn văn bản. Hãy đưa ra 1 câu hỏi duy nhất đánh thẳng vào giả định ẩn sâu nhất mà tác giả hoặc tôi đang thừa nhận trong đoạn văn trên.
 Chờ câu trả lời của tôi. Khi tôi trả lời, hãy sử dụng kỹ thuật Bác bỏ Socratic để chỉ ra điểm mâu thuẫn logic trong câu trả lời của tôi và đặt câu hỏi tiếp theo.
 Duy trì cuộc hội thoại vấn đáp này cho đến khi tôi tự rút ra được bản chất gốc rễ của vấn đề.
-{{< /prompt >}}
+```
 
 ### Bước 5: Tổng hợp sơ đồ và xây dựng ma trận tri thức (Review and Concept Mapping)
 
-Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài.
+Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài:
 
-{{< prompt title="Prompt Bước 5: Kiến Trúc Sư Chuyển Đổi Ma Trận Khái Niệm" >}}
+```text
 Bạn là một Kiến trúc sư Tri thức. Nhiệm vụ của bạn là chuyển đổi các đoạn văn bản tuyến tính thành ma trận quan hệ mạng lưới nhằm phục vụ việc ghi nhớ thị giác và xây dựng sơ đồ tư duy.
 
 [DÁN NỘI DUNG SÁCH CẦN MÔ HÌNH HÓA]
@@ -131,7 +131,7 @@ Hãy chuyển đổi nội dung trên thành cấu trúc dữ liệu sau:
 1. Ma Trận Tương Quan Khái Niệm: Trình bày mối quan hệ nối tiếp, đối lập hoặc nguyên nhân giữa các khái niệm.
 2. Cây Tri Thức Cấu Trúc: Gồm các khái niệm trụ cột và các nhánh cấu thành.
 3. Kịch Bản Tự Kiểm Tra Siêu Nhận Thức: Tạo 2 tình huống thực tế yêu cầu người đọc phải áp dụng đúng cây tri thức trên để giải quyết vấn đề.
-{{< /prompt >}}
+```
 
 ## Kết Luận
 

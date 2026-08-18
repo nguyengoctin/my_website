@@ -38,7 +38,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/lap-trinh-web-ky-nguyen-ai-spec-driven-development\/"
-        },"genre": "posts","keywords": "AI, Prompt Engineering, Web Development, Spec-Driven Development, Cursor, Claude Code, Workflow, Django, Python","wordcount":  1671 ,
+        },"genre": "posts","keywords": "AI, Prompt Engineering, Web Development, Spec-Driven Development, Cursor, Claude Code, Workflow, Django, Python","wordcount":  1586 ,
         "url": "https:\/\/ngoctin.me\/posts\/lap-trinh-web-ky-nguyen-ai-spec-driven-development\/","datePublished": "2026-07-24T00:00:00+00:00","dateModified": "2026-07-24T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -283,182 +283,128 @@
     Dev-&gt;&gt;AI: 4. Chia nhỏ danh sách task độc lập
     Dev-&gt;&gt;AI: 5. Thực thi mã nguồn theo từng task
     Dev-&gt;&gt;Code: 6. Chạy unit test và nghiệm thu</div><h4 id="bước-1-khởi-tạo-tài-liệu-đặc-tả-project-brief-và-specs">Bước 1: Khởi tạo tài liệu đặc tả (Project Brief và Specs)</h4>
-<p>Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là <strong>Non-goals</strong> để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 1: Khởi tạo Project Brief và Technical Specs
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Tôi muốn xây dựng một dự án [Tên ứng dụng]. Hãy đóng vai một Principal System Architect và phỏng vấn tôi từng câu hỏi một để làm rõ:
-1. Mục tiêu kinh doanh và User Stories.
-2. Luồng nghiệp vụ chính.
-3. Giả định kỹ thuật và Data Schema đề xuất.
-4. Ràng buộc bảo mật và Hiệu năng.
-
-Hãy đặt 3 câu hỏi làm rõ trước khi xuất bản nháp đầu tiên.</div>
-</div>
-
+<p>Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là <strong>Non-goals</strong> để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Tôi muốn xây dựng một dự án [Tên ứng dụng]. Hãy đóng vai một Principal System Architect và phỏng vấn tôi từng câu hỏi một để làm rõ:
+</span></span><span class="line"><span class="cl">1. Mục tiêu kinh doanh và User Stories.
+</span></span><span class="line"><span class="cl">2. Luồng nghiệp vụ chính.
+</span></span><span class="line"><span class="cl">3. Giả định kỹ thuật và Data Schema đề xuất.
+</span></span><span class="line"><span class="cl">4. Ràng buộc bảo mật và Hiệu năng.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Hãy đặt 3 câu hỏi làm rõ trước khi xuất bản nháp đầu tiên.</span></span></code></pre></div></div>
 <h4 id="bước-2-phỏng-vấn-rà-soát-lỗ-hổng-đặc-tả--phương-pháp-columbo">Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả — Phương pháp Columbo</h4>
-<p>Áp dụng phương pháp điều tra Columbo — yêu cầu AI thẩm vấn tài liệu đặc tả để phát hiện các trường hợp biên và rủi ro kiến trúc trước khi chạm vào mã nguồn.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 2: Phỏng vấn rà soát lỗ hổng đặc tả
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Đọc file specs/feature-brief.md và codebase hiện tại. Đóng vai một Principal Engineer khắt khe, hãy rà soát và chỉ ra:
-1. Các trường hợp biên Edge cases chưa được bao phủ trong brief.
-2. Rủi ro xung đột kiến trúc hoặc lãng phí truy vấn (N&#43;1 query, Race condition).
-3. 3 điểm mơ hồ nhất trong tài liệu cần tôi làm rõ ngay.
-
-Đừng viết code. Chỉ tập trung phỏng vấn để hoàn thiện brief.</div>
-</div>
-
+<p>Áp dụng phương pháp điều tra Columbo — yêu cầu AI thẩm vấn tài liệu đặc tả để phát hiện các trường hợp biên và rủi ro kiến trúc trước khi chạm vào mã nguồn:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Đọc file specs/feature-brief.md và codebase hiện tại. Đóng vai một Principal Engineer khắt khe, hãy rà soát và chỉ ra:
+</span></span><span class="line"><span class="cl">1. Các trường hợp biên Edge cases chưa được bao phủ trong brief.
+</span></span><span class="line"><span class="cl">2. Rủi ro xung đột kiến trúc hoặc lãng phí truy vấn (N+1 query, Race condition).
+</span></span><span class="line"><span class="cl">3. 3 điểm mơ hồ nhất trong tài liệu cần tôi làm rõ ngay.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Đừng viết code. Chỉ tập trung phỏng vấn để hoàn thiện brief.</span></span></code></pre></div></div>
 <h4 id="bước-3-kích-hoạt-chế-độ-lập-kế-hoạch-plan-mode">Bước 3: Kích hoạt chế độ lập kế hoạch Plan Mode</h4>
-<p>Sử dụng các công cụ như Claude Code hoặc Cursor ở chế độ Plan Mode để buộc AI phân tích codebase và phác thảo <code>plan.md</code>.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 3: Lập kế hoạch kỹ thuật plan.md
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Dựa trên specs/feature-brief.md đã chốt, hãy phác thảo file plan.md cho tính năng này.
-
-Nội dung plan.md phải bao gồm:
-1. Danh sách các file cần tạo mới [NEW], chỉnh sửa [MODIFY] hoặc xóa [DELETE].
-2. Chi tiết thay đổi về Data Models, Migration, API Endpoints và Services.
-3. Kế hoạch kiểm thử tự động (Unit test và Integration test).
-
-Lưu ý: CHƯA viết mã nguồn chi tiết. Chỉ tập trung vào kiến trúc kế hoạch.</div>
-</div>
-
+<p>Sử dụng các công cụ như Claude Code hoặc Cursor ở chế độ Plan Mode để buộc AI phân tích codebase và phác thảo <code>plan.md</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Dựa trên specs/feature-brief.md đã chốt, hãy phác thảo file plan.md cho tính năng này.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Nội dung plan.md phải bao gồm:
+</span></span><span class="line"><span class="cl">1. Danh sách các file cần tạo mới [NEW], chỉnh sửa [MODIFY] hoặc xóa [DELETE].
+</span></span><span class="line"><span class="cl">2. Chi tiết thay đổi về Data Models, Migration, API Endpoints và Services.
+</span></span><span class="line"><span class="cl">3. Kế hoạch kiểm thử tự động (Unit test và Integration test).
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Lưu ý: CHƯA viết mã nguồn chi tiết. Chỉ tập trung vào kiến trúc kế hoạch.</span></span></code></pre></div></div>
 <h4 id="bước-4-phân-rã-thành-danh-sách-task-độc-lập--atomic-tasks">Bước 4: Phân rã thành danh sách Task độc lập — Atomic Tasks</h4>
-<p>Chia <code>plan.md</code> thành các bước nhỏ, mỗi bước có tiêu chuẩn nghiệm thu rõ ràng.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 4: Phân rã danh sách Task độc lập
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Đọc plan.md và tạo file tasks.md chia kế hoạch thành các nhiệm vụ độc lập Atomic Tasks.
-
-Mỗi task cần có:
-- ID và tên task rõ ràng (ví dụ: Task 1.1: Create Migration for Survey Model).
-- Tiêu chuẩn nghiệm thu cụ thể Acceptance Criteria.
-- Lệnh kiểm thử tự động để xác nhận hoàn thành.
-
-Đảm bảo mỗi task có dung lượng vừa đủ để triển khai trong 1 lượt tương tác mà không bị tràn context.</div>
-</div>
-
+<p>Chia <code>plan.md</code> thành các bước nhỏ, mỗi bước có tiêu chuẩn nghiệm thu rõ ràng:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Đọc plan.md và tạo file tasks.md chia kế hoạch thành các nhiệm vụ độc lập Atomic Tasks.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Mỗi task cần có:
+</span></span><span class="line"><span class="cl">- ID và tên task rõ ràng (ví dụ: Task 1.1: Create Migration for Survey Model).
+</span></span><span class="line"><span class="cl">- Tiêu chuẩn nghiệm thu cụ thể Acceptance Criteria.
+</span></span><span class="line"><span class="cl">- Lệnh kiểm thử tự động để xác nhận hoàn thành.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Đảm bảo mỗi task có dung lượng vừa đủ để triển khai trong 1 lượt tương tác mà không bị tràn context.</span></span></code></pre></div></div>
 <h4 id="bước-5-thực-thi-mã-nguồn-tuần-tự--sequential-execution">Bước 5: Thực thi mã nguồn tuần tự — Sequential Execution</h4>
-<p>Cho phép AI CLI thực thi từng nhiệm vụ đã phê duyệt theo phạm vi giới hạn.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 5: Thực thi mã nguồn theo từng Task
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Hãy thực hiện Task 1.1 trong file tasks.md.
-
-Quy tắc thực thi:
-1. Chỉ sửa đổi các file được chỉ định cho Task 1.1.
-2. Không tự ý viết mã cho các task tiếp theo.
-3. Sau khi viết code, hãy trình bày diffs và giải thích ngắn gọn lý do chọn giải pháp này.</div>
-</div>
-
+<p>Cho phép AI CLI thực thi từng nhiệm vụ đã phê duyệt theo phạm vi giới hạn:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Hãy thực hiện Task 1.1 trong file tasks.md.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Quy tắc thực thi:
+</span></span><span class="line"><span class="cl">1. Chỉ sửa đổi các file được chỉ định cho Task 1.1.
+</span></span><span class="line"><span class="cl">2. Không tự ý viết mã cho các task tiếp theo.
+</span></span><span class="line"><span class="cl">3. Sau khi viết code, hãy trình bày diffs và giải thích ngắn gọn lý do chọn giải pháp này.</span></span></code></pre></div></div>
 <h4 id="bước-6-kiểm-thử-tự-động-và-nghiệm-thu-verification-và-review">Bước 6: Kiểm thử tự động và Nghiệm thu (Verification và Review)</h4>
-<p>Chạy bộ kiểm thử tự động unit test để đảm bảo mã nguồn tuân thủ đúng tiêu chí nghiệm thu Acceptance Criteria.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Bước 6: Kiểm thử tự động và Acceptance Review
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Đã hoàn thành Task 1.1. Hãy hỗ trợ kiểm thử và rà soát:
-1. Viết bộ unit test bao phủ các kịch bản thành công và thất bại cho Task 1.1.
-2. Chạy lệnh test và phân tích kết quả.
-3. Review mã nguồn vừa viết so với tiêu chí Acceptance Criteria trong specs/feature-brief.md.
-
-Nếu phát hiện lỗi hoặc thiếu sót, hãy đề xuất hướng sửa đổi tối giản.</div>
-</div>
-
+<p>Chạy bộ kiểm thử tự động unit test để đảm bảo mã nguồn tuân thủ đúng tiêu chí nghiệm thu Acceptance Criteria:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Đã hoàn thành Task 1.1. Hãy hỗ trợ kiểm thử và rà soát:
+</span></span><span class="line"><span class="cl">1. Viết bộ unit test bao phủ các kịch bản thành công và thất bại cho Task 1.1.
+</span></span><span class="line"><span class="cl">2. Chạy lệnh test và phân tích kết quả.
+</span></span><span class="line"><span class="cl">3. Review mã nguồn vừa viết so với tiêu chí Acceptance Criteria trong specs/feature-brief.md.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Nếu phát hiện lỗi hoặc thiếu sót, hãy đề xuất hướng sửa đổi tối giản.</span></span></code></pre></div></div>
 <hr>
 <h2 id="4-bộ-sưu-tập-prompt-thực-chiến">4. Bộ sưu tập Prompt thực chiến</h2>
 <h3 id="1-phân-tích-bài-toán-ban-đầu">1. Phân tích bài toán ban đầu</h3>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: One-Shot Khởi tạo Dự án
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Tôi đang xây dựng ứng dụng web Django tên là TallyApp. Hãy đọc kỹ project-brief.md và design.md.
-
-Trước khi tạo code, hãy phân tích:
-1. Trình bày lại yêu cầu bài toán.
-2. Các điểm chưa rõ ràng.
-3. Giả định kỹ thuật.
-4. Rủi ro tiềm ẩn.
-
-Sau khi phân tích:
-5. Chia giai đoạn phát triển.
-6. Đề xuất cấu trúc Django apps.
-7. Thiết kế data models.
-8. Danh sách URLs.
-
-Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã cơ bản.</div>
-</div>
-
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Tôi đang xây dựng ứng dụng web Django tên là TallyApp. Hãy đọc kỹ project-brief.md và design.md.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Trước khi tạo code, hãy phân tích:
+</span></span><span class="line"><span class="cl">1. Trình bày lại yêu cầu bài toán.
+</span></span><span class="line"><span class="cl">2. Các điểm chưa rõ ràng.
+</span></span><span class="line"><span class="cl">3. Giả định kỹ thuật.
+</span></span><span class="line"><span class="cl">4. Rủi ro tiềm ẩn.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Sau khi phân tích:
+</span></span><span class="line"><span class="cl">5. Chia giai đoạn phát triển.
+</span></span><span class="line"><span class="cl">6. Đề xuất cấu trúc Django apps.
+</span></span><span class="line"><span class="cl">7. Thiết kế data models.
+</span></span><span class="line"><span class="cl">8. Danh sách URLs.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Chỉ sau khi tôi xác nhận bản phân tích này, bạn mới bắt đầu tạo mã cơ bản.</span></span></code></pre></div></div>
 <h3 id="2-viết-kiểm-thử-tự-động">2. Viết kiểm thử tự động</h3>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Viết Unit Test
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc validation, giá trị mặc định và các ràng buộc. Tập trung vào các trường hợp biên và kịch bản lỗi.</div>
-</div>
-
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Đây là Django model cho Survey: [dán code model]. Hãy viết unit tests xác minh các quy tắc validation, giá trị mặc định và các ràng buộc. Tập trung vào các trường hợp biên và kịch bản lỗi.</span></span></code></pre></div></div>
 <h3 id="3-phê-duyệt-và-rà-soát-mã-nguồn">3. Phê duyệt và rà soát mã nguồn</h3>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Code Review
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">Hãy review lại tính năng vừa triển khai so với spec và tiêu chuẩn ban đầu:
-1. Yêu cầu nào còn thiếu?
-2. Có sự phức tạp không cần thiết nào không?
-3. Trường hợp kiểm thử nào còn bỏ ngỏ?</div>
-</div>
-
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Hãy review lại tính năng vừa triển khai so với spec và tiêu chuẩn ban đầu:
+</span></span><span class="line"><span class="cl">1. Yêu cầu nào còn thiếu?
+</span></span><span class="line"><span class="cl">2. Có sự phức tạp không cần thiết nào không?
+</span></span><span class="line"><span class="cl">3. Trường hợp kiểm thử nào còn bỏ ngỏ?</span></span></code></pre></div></div>
 <hr>
 <h2 id="lời-kết">Lời kết</h2>
 <p>Lập trình viên trong thập kỷ tới không định vị giá trị ở tốc độ gõ bàn phím hay khả năng thuộc lòng cú pháp. Chúng ta thành công nhờ 3 năng lực cốt lõi:</p>

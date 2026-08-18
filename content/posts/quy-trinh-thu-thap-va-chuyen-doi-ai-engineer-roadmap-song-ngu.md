@@ -100,7 +100,9 @@ Xử lý 174 bài học riêng lẻ từng bài một thông qua API sẽ mất 
 
 Giải pháp tối ưu của chúng ta là phân chia xử lý theo từng **Batch 20 bài học**. Mô hình được lựa chọn là `gemini-3.1-flash-lite` thông qua Google Gemini API, mang lại tốc độ xử lý vượt trội (trung bình 25 đến 35 giây cho mỗi batch 20 bài) với mức chi phí vô cùng tiết kiệm.
 
-{{< prompt title="Prompt Mẫu: Phân Đoạn và Dịch Thuật Song Ngữ Batch" >}}
+Dưới đây là cấu trúc System Prompt mẫu được sử dụng cho toàn bộ pipeline:
+
+```text
 You are a bilingual content processor. Process the following lessons from the AI Engineer Roadmap.
 
 For EACH lesson, you must:
@@ -142,7 +144,7 @@ toc: true
 ## References
 - https://roadmap.sh/ai-engineer (Node: [label])
 <<<LESSON_END>>>
-{{< /prompt >}}
+```
 
 ---
 

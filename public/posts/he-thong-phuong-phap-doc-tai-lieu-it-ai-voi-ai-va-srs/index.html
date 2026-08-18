@@ -37,7 +37,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ngoctin.me\/posts\/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs\/"
-        },"genre": "posts","keywords": "AI, Self-learning, Obsidian, Prompt Engineering, Anki","wordcount":  2681 ,
+        },"genre": "posts","keywords": "AI, Self-learning, Obsidian, Prompt Engineering, Anki","wordcount":  2655 ,
         "url": "https:\/\/ngoctin.me\/posts\/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs\/","datePublished": "2026-08-01T10:10:00+07:00","dateModified": "2026-08-01T10:10:00+07:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -269,88 +269,70 @@
 <p>Khi gặp một đoạn văn bản quá khó, chúng ta không dùng AI để dịch thô mà biến AI thành một Senior Engineer đang hướng dẫn trực tiếp. Các mẫu lệnh dưới đây áp dụng Kỹ thuật Feynman và cơ chế neo giữ ngữ cảnh để bóc tách thông tin.</p>
 <h3 id="1-mẫu-lệnh-phân-tích-khái-niệm-hệ-thống">1. Mẫu Lệnh Phân Tích Khái Niệm Hệ Thống</h3>
 <p>Dùng khi cần giải mã các khái niệm kiến trúc phần mềm hoặc hệ thống phân tán.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Phân Tích Khái Niệm Hệ Thống
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">&lt;context&gt;
-Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa học Máy tính. Nhiệm vụ của bạn là giải thích đoạn văn bản tiếng Anh chuyên ngành IT và AI sau đây sang tiếng Việt một cách trực quan, tuân thủ nguyên tắc Kỹ thuật Feynman. 
-&lt;/context&gt;
-
-&lt;instructions&gt;
-1. Dịch thuật gắn bối cảnh: Cung cấp bản dịch tiếng Việt của đoạn văn bản. Các thuật ngữ kỹ thuật lõi bắt buộc phải được giữ lại bằng tiếng Anh trong ngoặc đơn ở lần xuất hiện đầu tiên (Ví dụ: Sự tắc nghẽn (Bottleneck)).
-2. Trích xuất Cốt lõi: Tóm gọn nguyên lý hoạt động của khái niệm này trong tối đa 2 câu định nghĩa nguyên tử.
-3. Giải thích Ẩn dụ: Xây dựng một ví dụ thực tế trong đời sống (không sử dụng thuật ngữ máy tính) để minh họa cơ chế hoạt động, giúp giảm tải lượng nhận thức cho người đọc.
-4. Neo giữ sự thật: Chỉ giải thích dựa trên phạm vi của văn bản gốc. Tuyệt đối không sáng tạo thêm các tính năng hoặc cơ chế không được tác giả đề cập trong văn bản để tránh ảo giác AI.
-&lt;/instructions&gt;
-
-&lt;input_text&gt;
-[Dán đoạn văn bản tiếng Anh từ PDF hoặc EPUB vào đây]
-&lt;/input_text&gt;</div>
-</div>
-
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;context&gt;
+</span></span><span class="line"><span class="cl">Bạn là một Kiến trúc sư Hệ thống kiêm Chuyên gia Sư phạm Khoa học Máy tính. Nhiệm vụ của bạn là giải thích đoạn văn bản tiếng Anh chuyên ngành IT và AI sau đây sang tiếng Việt một cách trực quan, tuân thủ nguyên tắc Kỹ thuật Feynman. 
+</span></span><span class="line"><span class="cl">&lt;/context&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;instructions&gt;
+</span></span><span class="line"><span class="cl">1. Dịch thuật gắn bối cảnh: Cung cấp bản dịch tiếng Việt của đoạn văn bản. Các thuật ngữ kỹ thuật lõi bắt buộc phải được giữ lại bằng tiếng Anh trong ngoặc đơn ở lần xuất hiện đầu tiên (Ví dụ: Sự tắc nghẽn (Bottleneck)).
+</span></span><span class="line"><span class="cl">2. Trích xuất Cốt lõi: Tóm gọn nguyên lý hoạt động của khái niệm này trong tối đa 2 câu định nghĩa nguyên tử.
+</span></span><span class="line"><span class="cl">3. Giải thích Ẩn dụ: Xây dựng một ví dụ thực tế trong đời sống (không sử dụng thuật ngữ máy tính) để minh họa cơ chế hoạt động, giúp giảm tải lượng nhận thức cho người đọc.
+</span></span><span class="line"><span class="cl">4. Neo giữ sự thật: Chỉ giải thích dựa trên phạm vi của văn bản gốc. Tuyệt đối không sáng tạo thêm các tính năng hoặc cơ chế không được tác giả đề cập trong văn bản để tránh ảo giác AI.
+</span></span><span class="line"><span class="cl">&lt;/instructions&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;input_text&gt;
+</span></span><span class="line"><span class="cl">[Dán đoạn văn bản tiếng Anh từ PDF hoặc EPUB vào đây]
+</span></span><span class="line"><span class="cl">&lt;/input_text&gt;</span></span></code></pre></div></div>
 <h3 id="2-mẫu-lệnh-giải-mã-khối-mã-nguồn-và-ast">2. Mẫu Lệnh Giải Mã Khối Mã Nguồn và AST</h3>
-<p>Sử dụng khi văn bản tiếng Anh mô tả đan xen với khối code, giúp chúng ta ánh xạ lý thuyết vào luồng thực thi.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Giải Mã Khối Mã Nguồn
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">&lt;context&gt;
-Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn lập trình. Tôi đang gặp khó khăn trong việc kết nối giữa văn bản lý thuyết tiếng Anh và đoạn mã nguồn thực thi.
-&lt;/context&gt;
-
-&lt;instructions&gt;
-1. Ánh xạ Cú pháp: Đối chiếu các biến, hàm, cấu trúc dữ liệu hoặc lớp trong đoạn code với các định nghĩa lý thuyết được nhắc đến trong văn bản tiếng Anh xung quanh.
-2. Dịch ngược Luồng thực thi: Trình bày từng bước logic của đoạn code bằng tiếng Việt.
-3. Điểm mù Thiết kế: Chỉ ra 1 đến 2 rủi ro có thể khiến đoạn mã này thất bại nếu triển khai trong môi trường thực tế, dựa trên ngữ cảnh mà tác giả nhắc tới.
-4. Cấm thao tác: Đừng tối ưu hóa hoặc viết lại đoạn code trừ khi có yêu cầu. Tập trung vào việc giải thích triết lý thiết kế đằng sau đoạn mã.
-&lt;/instructions&gt;
-
-&lt;code_snippet&gt;
-[Dán đoạn mã nguồn vào đây]
-&lt;/code_snippet&gt;
-
-&lt;surrounding_text&gt;
-[Dán đoạn tiếng Anh mô tả phía trên và dưới đoạn code vào đây]
-&lt;/surrounding_text&gt;</div>
-</div>
-
+<p>Sử dụng khi văn bản tiếng Anh mô tả đan xen với khối code, giúp chúng ta ánh xạ lý thuyết vào luồng thực thi:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;context&gt;
+</span></span><span class="line"><span class="cl">Bạn là một Kỹ sư Phần mềm đóng vai trò người hướng dẫn lập trình. Tôi đang gặp khó khăn trong việc kết nối giữa văn bản lý thuyết tiếng Anh và đoạn mã nguồn thực thi.
+</span></span><span class="line"><span class="cl">&lt;/context&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;instructions&gt;
+</span></span><span class="line"><span class="cl">1. Ánh xạ Cú pháp: Đối chiếu các biến, hàm, cấu trúc dữ liệu hoặc lớp trong đoạn code với các định nghĩa lý thuyết được nhắc đến trong văn bản tiếng Anh xung quanh.
+</span></span><span class="line"><span class="cl">2. Dịch ngược Luồng thực thi: Trình bày từng bước logic của đoạn code bằng tiếng Việt.
+</span></span><span class="line"><span class="cl">3. Điểm mù Thiết kế: Chỉ ra 1 đến 2 rủi ro có thể khiến đoạn mã này thất bại nếu triển khai trong môi trường thực tế, dựa trên ngữ cảnh mà tác giả nhắc tới.
+</span></span><span class="line"><span class="cl">4. Cấm thao tác: Đừng tối ưu hóa hoặc viết lại đoạn code trừ khi có yêu cầu. Tập trung vào việc giải thích triết lý thiết kế đằng sau đoạn mã.
+</span></span><span class="line"><span class="cl">&lt;/instructions&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;code_snippet&gt;
+</span></span><span class="line"><span class="cl">[Dán đoạn mã nguồn vào đây]
+</span></span><span class="line"><span class="cl">&lt;/code_snippet&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;surrounding_text&gt;
+</span></span><span class="line"><span class="cl">[Dán đoạn tiếng Anh mô tả phía trên và dưới đoạn code vào đây]
+</span></span><span class="line"><span class="cl">&lt;/surrounding_text&gt;</span></span></code></pre></div></div>
 <h3 id="3-mẫu-lệnh-bóc-tách-công-thức-toán-học">3. Mẫu Lệnh Bóc Tách Công Thức Toán Học</h3>
-<p>Chuyên dùng cho các bài báo nghiên cứu AI chứa nhiều phương trình toán học.</p>
-<div class="prompt-box">
-    <div class="prompt-header">
-        <span class="prompt-title">
-            <i class="fas fa-terminal"></i> Prompt Mẫu: Phân Rã Công Thức Toán Học
-        </span>
-        <button type="button" class="prompt-copy-btn" title="Copy prompt" onclick="navigator.clipboard.writeText(this.closest('.prompt-box').querySelector('.prompt-content').innerText); const span=this.querySelector('span'); span.innerText='Copied!'; setTimeout(() => span.innerText='Copy', 2000);">
-            <i class="far fa-copy"></i> <span>Copy</span>
-        </button>
-    </div>
-    <div class="prompt-content">&lt;context&gt;
-Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng trong Trí tuệ Nhân tạo. Tôi cần bóc tách một phương trình toán học phức tạp thành các khối kiến thức dễ tiêu hóa.
-&lt;/context&gt;
-
-&lt;instructions&gt;
-1. Biểu diễn Công thức: Trình bày lại công thức bằng định dạng LaTeX tiêu chuẩn.
-2. Bóc tách Biến số: Lập bảng phân tách từng ký hiệu, biến số, trọng số và hằng số trong công thức kèm định nghĩa tiếng Việt trực quan.
-3. Phân tích Động lực học: Phân tích tương quan nếu biến số cốt lõi tiến tới vô cùng hoặc giảm về 0 thì toàn bộ mô hình Học máy sẽ phản ứng thế nào.
-&lt;/instructions&gt;
-
-&lt;equation_context&gt;
-[Dán đoạn mô tả công thức toán học vào đây]
-&lt;/equation_context&gt;</div>
-</div>
-
+<p>Chuyên dùng cho các bài báo nghiên cứu AI chứa nhiều phương trình toán học:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;context&gt;
+</span></span><span class="line"><span class="cl">Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng trong Trí tuệ Nhân tạo. Tôi cần bóc tách một phương trình toán học phức tạp thành các khối kiến thức dễ tiêu hóa.
+</span></span><span class="line"><span class="cl">&lt;/context&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;instructions&gt;
+</span></span><span class="line"><span class="cl">1. Biểu diễn Công thức: Trình bày lại công thức bằng định dạng LaTeX tiêu chuẩn.
+</span></span><span class="line"><span class="cl">2. Bóc tách Biến số: Lập bảng phân tách từng ký hiệu, biến số, trọng số và hằng số trong công thức kèm định nghĩa tiếng Việt trực quan.
+</span></span><span class="line"><span class="cl">3. Phân tích Động lực học: Phân tích tương quan nếu biến số cốt lõi tiến tới vô cùng hoặc giảm về 0 thì toàn bộ mô hình Học máy sẽ phản ứng thế nào.
+</span></span><span class="line"><span class="cl">&lt;/instructions&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;equation_context&gt;
+</span></span><span class="line"><span class="cl">[Dán đoạn mô tả công thức toán học vào đây]
+</span></span><span class="line"><span class="cl">&lt;/equation_context&gt;</span></span></code></pre></div></div>
 <h2 id="ghi-nhớ-dài-hạn-bằng-kỹ-thuật-sentence-mining-và-thuật-toán-fsrs">Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining và Thuật Toán FSRS</h2>
 <p>Sau khi giải mã đoạn văn bản hóc húa bằng AI, kiến thức mới chỉ dừng lại ở bộ nhớ ngắn hạn. Để biến thuật ngữ và mẫu câu tiếng Anh kỹ thuật thành phản xạ tự nhiên, chúng ta áp dụng phương pháp Sentence Mining — đưa cả câu chứa ngữ cảnh vào hệ thống thẻ ghi nhớ (flashcard) thay vì học từ đơn lẻ.</p>
 <h3 id="ưu-thế-của-thuật-toán-fsrs-so-với-sm-2">Ưu Thế Của Thuật Toán FSRS So Với SM-2</h3>
