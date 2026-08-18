@@ -133,7 +133,7 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
 </equation_context>
 {{< /prompt >}}
 
-## Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining Và Thuật Toán FSRS
+## Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining và Thuật Toán FSRS
 
 Sau khi giải mã đoạn văn bản hóc húa bằng AI, kiến thức mới chỉ dừng lại ở bộ nhớ ngắn hạn. Để biến thuật ngữ và mẫu câu tiếng Anh kỹ thuật thành phản xạ tự nhiên, chúng ta áp dụng phương pháp Sentence Mining — đưa cả câu chứa ngữ cảnh vào hệ thống thẻ ghi nhớ (flashcard) thay vì học từ đơn lẻ.
 
@@ -160,7 +160,7 @@ Thay vì tạo thẻ thủ công, chúng ta dùng Obsidian làm nơi quản lý 
 
 Để hợp nhất công cụ và phương pháp luận vào thực tế, chúng ta tuân thủ quy trình 3 bước chuẩn hóa dưới đây mỗi khi bắt đầu một chương sách mới.
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
     subgraph Step1 ["Bước 1: Quét Bối Cảnh"]
         A1["Tải PDF vào NotebookLM hoặc ZotFlow"] --> A2["Trích xuất 5 khái niệm cốt lõi bằng tiếng Việt"]
@@ -177,23 +177,23 @@ flowchart TD
         C2 --> C3["Ôn tập hàng ngày với thuật toán FSRS"]
     end
 
-    Step1 --> Step2
-    Step2 --> Step3
-{{< /mermaid >}}
+    A3 --> B1
+    B3 --> C1
+```
 
 ### Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy
 
-Tải file PDF vào các công cụ như NotebookLM hay ZotFlow và yêu cầu AI trích xuất 5 khái niệm cốt lõi nhất của chương sách bằng tiếng Việt. Đọc qua bản tóm tắt này để bộ脑 hình thành lược đồ tri thức ban đầu. 
+Tải file PDF vào các công cụ như NotebookLM hay ZotFlow và yêu cầu AI trích xuất 5 khái niệm cốt lõi nhất của chương sách bằng tiếng Việt. Đọc qua bản tóm tắt này để bộ não hình thành lược đồ tri thức ban đầu. 
 
 Sau đó, bật Immersive Translate với engine DeepL và tiến hành đọc lướt toàn bộ chương sách. Bản dịch tiếng Việt chạy song song bên dưới sẽ xóa bỏ hoàn toàn tải lượng ngoại lai, giúp chúng ta nắm trọn cấu trúc chương sách với tốc độ cao.
 
-### Bước 2: Đọc Sâu Và Mổ Xẻ Điểm Nghẽn Kỹ Thuật
+### Bước 2: Đọc Sâu và Mổ Xẻ Điểm Nghẽn Kỹ Thuật
 
 Khi chạm đến những đoạn lý thuyết hóc húa, công thức toán học hoặc khối mã nguồn phức tạp, dùng công cụ highlight của ZotFlow hay PDF++ để tạo liên kết về file ghi chú trong Obsidian.
 
 Sao chép đoạn văn bản tiếng Anh gốc vào ChatGPT hoặc Claude, áp dụng các mẫu lệnh XML tương ứng ở trên để AI giải thích bản chất. Sau khi đọc xong lời giải thích từ AI, tuyệt đối không copy-paste nguyên văn. Chúng ta phải tự tóm tắt lại nguyên lý bằng ngôn ngữ của chính mình vào Obsidian. Bước tự diễn đạt này là bắt buộc để kích hoạt tải lượng hữu ích và khắc ghi bản chất vấn đề.
 
-### Bước 3: Khai Thác Câu Và Đồng Bộ Hệ Thống SRS
+### Bước 3: Khai Thác Câu và Đồng Bộ Hệ Thống SRS
 
 Chuyển các ghi chú thuật ngữ trong Obsidian thành dạng thẻ Sentence Mining: mặt trước chứa câu tiếng Anh nguyên bản trích ra từ tài liệu, mặt sau chứa phần giải thích tiếng Việt tinh gọn cùng liên kết trỏ ngược về trang PDF gốc.
 

@@ -14,12 +14,12 @@ Bài viết này tổng hợp giải pháp kỹ thuật triệt để giúp gi�
 
 ## 1. Bài toán Headless Server trên macOS
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
     A["Máy Linux Client"] -->|"SSH (Port 22)"| B["Mac Mini Headless Server"]
     A -->|"RustDesk GUI (Direct IP / Relay)"| B
     B --- C["HDMI Dummy Plug (Khóa GPU 60Hz 1080p)"]
-{{< /mermaid >}}
+```
 
 Khi không nhận diện được màn hình vật lý cắm trực tiếp, macOS sẽ tự động tắt hoặc hạ xung nhịp GPU để tiết kiệm năng lượng. Hệ quả là giao diện truyền về qua các công cụ remote desktop bị giật lag nghiêm trọng. Đồng thời, việc cài đặt RustDesk dạng System Service ngầm trên macOS thường bị cơ chế bảo mật phần cứng bóp hiệu năng render xuống 2–5 FPS.
 

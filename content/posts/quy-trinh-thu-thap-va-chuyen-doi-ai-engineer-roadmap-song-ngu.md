@@ -52,12 +52,12 @@ Trang web roadmap.sh được xây dựng dưới dạng ứng dụng single-pag
 - **Endpoint 2 (Lấy nội dung chi tiết bài học):** `https://roadmap.sh/ai-engineer/{nodeId}.json`  
   Endpoint này trả về dữ liệu JSON chứa toàn bộ nội dung bài học dưới dạng Markdown gốc (trong trường `description`), danh sách tài liệu đọc thêm (trong trường `resources`) và thông tin cập nhật.
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
     A["Roadmap JSON Endpoint"] -->|Tải 174 Node IDs| B["Danh Sách Bài Học"]
     B -->|Lặp qua từng Node ID| C["Node Content Endpoint"]
     C -->|Trích xuất Markdown gốc và Resources| D["Lưu Dữ Liệu Thô Local"]
-{{< /mermaid >}}
+```
 
 Dưới đây là đoạn mã Python rút gọn được chúng ta sử dụng để tải toàn bộ dữ liệu thô về máy:
 

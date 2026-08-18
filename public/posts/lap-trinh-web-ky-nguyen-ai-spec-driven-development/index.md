@@ -62,7 +62,7 @@ Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm **
 
 ### Quy trình 6 bước phối hợp với AI Sidekick
 
-{{< mermaid >}}
+```mermaid
 sequenceDiagram
     autonumber
     actor Dev as Developer
@@ -75,7 +75,7 @@ sequenceDiagram
     Dev->>AI: 4. Chia nhỏ danh sách task độc lập
     Dev->>AI: 5. Thực thi mã nguồn theo từng task
     Dev->>Code: 6. Chạy unit test và nghiệm thu
-{{< /mermaid >}}
+```
 
 #### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief và Specs)
 Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến.

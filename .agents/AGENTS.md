@@ -5,7 +5,7 @@
 - **Xưng hô "Chúng ta":** Dùng "chúng ta" khi khám phá khái niệm và chia sẻ hành trình học hỏi — người viết và người đọc cùng đồng hành. Tránh giọng dạy đời hay khoảng cách "tôi - bạn".
 - **Tinh gọn & Mật độ thông tin:** Nếu nói được trong một đoạn văn, đừng dùng một trang A4. Không mở bài hay kết bài rườm rà.
 - **Cấm ngoặc đơn dịch nghĩa:** TUYỆT ĐỐI KHÔNG dùng ngoặc đơn `()` để dịch từ inline. Dùng tiếng Việt tự nhiên hoặc giữ nguyên thuật ngữ tiếng Anh.
-- **Cấm dùng ký tự `&` trong TOÀN BỘ bài viết:** TUYỆT ĐỐI KHÔNG dùng `&` ở bất kỳ đâu (tiêu đề bài viết, tiêu đề mục, nội dung văn bản, prompt mẫu hay nhãn sơ đồ Mermaid). Luôn luôn dùng chữ "và" để thay thế (trừ đường dẫn URL hoặc khối mã code).
+- **Cấm dùng ký tự `&` trong TOÀN BỘ bài viết:** TUYỆT ĐỐI KHÔNG dùng `&` ở bất kỳ đâu (tiêu đề bài viết, tiêu đề mục, nội dung văn bản, prompt mẫu hay nhãn sơ đồ Mermaid). Luôn luôn dùng chữ "và" cho văn bản tiếng Việt hoặc chữ "and" cho cụm từ/bài viết tiếng Anh để thay thế (trừ đường dẫn URL hoặc khối mã code).
 - **Cấu trúc rõ ràng & Dễ lướt:** Phân chia tiêu đề H2/H3 cụ thể. Trình bày bài toán trước, giải pháp và bài học thực tế theo sau.
 - **Mở bài bằng bài toán, không phải bằng giới thiệu:** Câu đầu tiên phải khiến người đọc thấy ngay vấn đề đang được giải quyết. Không mở bằng "Biết đến X bao giờ chưa?" hay "Hôm nay chúng ta sẽ tìm hiểu…".
 - **Đặt người đọc vào bối cảnh trước khi giải pháp:** Xác định rõ bài toán, ai sẽ gặp và tại sao nó khó. Đừng nhảy thẳng vào giải pháp khi người đọc chưa đồng cảm với vấn đề.
@@ -26,7 +26,7 @@
 - **Phân loại bài viết để áp dụng chuẩn phù hợp:**
   - **Bài viết Kỹ thuật / Hướng dẫn (Tech Blog):** Áp dụng nghiêm ngặt quy chuẩn cấu trúc Bài toán $\to$ Giải pháp $\to$ Bài học thực tế. Tinh gọn, đi thẳng vào bản chất kỹ thuật và ví dụ minh họa.
   - **Bài viết Tản văn / Góc nhìn / Trích dẫn (Mindset, Think, Review):** Tôn trọng tuyệt đối 100% nội dung, văn phong, mạch cảm xúc và cấu trúc truyền đạt của tác giả/bài gốc. Chỉ áp dụng các quy chuẩn trình bày shortcodes (`quote`, `admonition`, `image`, `link`) để làm sạch giao diện, TUYỆT ĐỐI KHÔNG tự ý tóm tắt, cắt bỏ hay biến bài viết thành các bullet points khô khan.
-- **Trích dẫn nguồn:** Khi tham khảo nghiên cứu hay quan điểm người khác, dẫn nguồn rõ ràng. Điều này xây dựng uy tín và tôn trọng người đọc.
+- **Trích dẫn nguồn:** Khi tham khảo nghiên cứu hay quan điểm người khác, dẫn nguồn giải thích rõ ràng. Điều này xây dựng uy tín và tôn trọng người đọc.
 - **Chấp nhận bài viết chưa hoàn hảo:** Strive to be right, but don't fear being wrong. Bài viết có lỗ hổng khi đăng vẫn có giá trị hơn không đăng. Cộng đồng sẽ giúp chỉnh sửa.
 
 ## Cú Pháp Trình Bày Nội Dung
@@ -38,10 +38,11 @@ Shortcodes trong theme LoveIt. Luôn dùng shortcode thay vì Markdown thô:
 - **Prompt mẫu:** `{{< prompt title="Prompt Mẫu: [Tiêu đề]" >}} Nội dung {{< /prompt >}}` — Không dùng codeblock hay dấu ngoặc kép bên trong
 - **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
-- **Mermaid:** BẮT BUỘC dùng shortcode cặp `{{< mermaid >}} ... {{< /mermaid >}}` (KHÔNG dùng khối mã ```mermaid thô).
+- **Mermaid:** BẮT BUỘC dùng khối mã ```mermaid ... ``` (KHÔNG dùng shortcode `{{< mermaid >}}` vì Hugo Goldmark render-hook sẽ nuốt mất ký tự xuống dòng `\n`, làm toàn bộ mã Mermaid bị dồn thành 1 dòng đơn duy nhất trên giao diện HTML).
   - Khai báo kiểu biểu đồ (như `flowchart TD`) trên dòng riêng biệt.
   - Luôn bọc nhãn nút trong dấu ngoặc kép `"..."`.
   - Nhãn trên mũi tên liên kết BẮT BUỘC dùng cú pháp `A -->|Nhãn| B` (KHÔNG dùng cú pháp `-- "Nhãn" -->` vì sẽ bị văng lỗi parser).
-  - TUYỆT ĐỐI KHÔNG dùng dấu ngoặc đơn `()`, ngoặc vuông `[]` hay ký tự đặc biệt như `&` (phải thay bằng chữ "và"), `O(n²)` bên trong nhãn nút và nhãn mũi tên.
+  - TUYỆT ĐỐI KHÔNG dùng dấu ngoặc đơn `()`, ngoặc vuông `[]` hay ký tự đặc biệt như `&` (phải thay bằng chữ "và" hoặc "and"), `O(n²)` bên trong nhãn nút và nhãn mũi tên.
   - Tách từ khóa `subgraph` và `end` trên từng dòng độc lập.
+  - TUYỆT ĐỐI KHÔNG dùng ID của `subgraph` để nối mũi tên (như `Step1 --> Step2` sẽ gây lỗi parser); bắt buộc phải nối trực tiếp từ node cuối của subgraph này sang node đầu của subgraph khác (ví dụ: `A3 --> B1`).
 - **Code:** Dùng khối mã ` ```ngôn_ngữ ` — luôn có câu giải thích ngữ cảnh trước khi đưa code

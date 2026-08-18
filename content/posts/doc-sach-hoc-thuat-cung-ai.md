@@ -38,7 +38,7 @@ Bên cạnh cấu trúc câu lệnh, việc kiểm soát tham số đóng vai tr
 
 Để quy trình đọc hiểu không bị đứt gãy, chúng ta kết hợp hai phương pháp giáo dục học kinh điển vào một luồng dữ liệu khép kín: SQ3R xử lý định hướng vĩ mô và bóc tách tài liệu, trong khi Vòng lặp Feynman tương tác đóng vai trò máy vạch lá tìm sâu các lỗ hổng tri thức.
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
     subgraph STAGE1 ["Giai Đoạn 1: SQ3R - Định Hướng và Bóc Tách Tri Thức"]
         S1["Bước 1: Survey - Nạp Mục lục và Lời nói đầu"] --> S2["Bước 2: Question - AI tạo 5 câu hỏi định hướng"]
@@ -53,7 +53,7 @@ flowchart TD
         F4 --> F1
         F3 -->|"Đã hiểu sâu bản chất"| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
     end
-{{< /mermaid >}}
+```
 
 ## Quy Trình 5 Bước Sử Dụng Bộ Prompt Thực Chiến
 
@@ -124,7 +124,7 @@ Chờ câu trả lời của tôi. Khi tôi trả lời, hãy sử dụng kỹ t
 Duy trì cuộc hội thoại vấn đáp này cho đến khi tôi tự rút ra được bản chất gốc rễ của vấn đề.
 {{< /prompt >}}
 
-### Bước 5: Tổng hợp sơ đồ và xây dựng ma trận tri thức (Review & Concept Mapping)
+### Bước 5: Tổng hợp sơ đồ và xây dựng ma trận tri thức (Review and Concept Mapping)
 
 Ở bước cuối cùng, chúng ta yêu cầu AI chuyển đổi toàn bộ tri thức đã thẩm thấu thành ma trận mối quan hệ và cây tri thức trực quan để ghi nhớ lâu dài.
 

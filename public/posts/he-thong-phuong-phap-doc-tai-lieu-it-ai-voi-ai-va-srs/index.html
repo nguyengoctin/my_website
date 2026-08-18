@@ -14,7 +14,7 @@
     <meta property="article:published_time" content="2026-08-01T10:10:00+07:00">
     <meta property="article:modified_time" content="2026-08-01T10:10:00+07:00">
     <meta property="article:tag" content="AI">
-    <meta property="article:tag" content="Self-Learning">
+    <meta property="article:tag" content="Self Learning">
     <meta property="article:tag" content="Obsidian">
     <meta property="article:tag" content="Prompt Engineering">
     <meta property="article:tag" content="Anki">
@@ -163,7 +163,7 @@
         <li><a href="#3-mẫu-lệnh-bóc-tách-công-thức-toán-học">3. Mẫu Lệnh Bóc Tách Công Thức Toán Học</a></li>
       </ul>
     </li>
-    <li><a href="#ghi-nhớ-dài-hạn-bằng-kỹ-thuật-sentence-mining-và-thuật-toán-fsrs">Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining Và Thuật Toán FSRS</a>
+    <li><a href="#ghi-nhớ-dài-hạn-bằng-kỹ-thuật-sentence-mining-và-thuật-toán-fsrs">Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining và Thuật Toán FSRS</a>
       <ul>
         <li><a href="#ưu-thế-của-thuật-toán-fsrs-so-với-sm-2">Ưu Thế Của Thuật Toán FSRS So Với SM-2</a></li>
         <li><a href="#tự-động-hóa-đồng-bộ-từ-obsidian-sang-anki">Tự Động Hóa Đồng Bộ Từ Obsidian Sang Anki</a></li>
@@ -172,8 +172,8 @@
     <li><a href="#quy-trình-sop-3-bước-thực-hành-cho-một-chương-sách-it-và-ai">Quy Trình SOP 3 Bước Thực Hành Cho Một Chương Sách IT và AI</a>
       <ul>
         <li><a href="#bước-1-quét-bối-cảnh-để-định-hình-khung-tư-duy">Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy</a></li>
-        <li><a href="#bước-2-đọc-sâu-và-mổ-xẻ-điểm-nghẽn-kỹ-thuật">Bước 2: Đọc Sâu Và Mổ Xẻ Điểm Nghẽn Kỹ Thuật</a></li>
-        <li><a href="#bước-3-khai-thác-câu-và-đồng-bộ-hệ-thống-srs">Bước 3: Khai Thác Câu Và Đồng Bộ Hệ Thống SRS</a></li>
+        <li><a href="#bước-2-đọc-sâu-và-mổ-xẻ-điểm-nghẽn-kỹ-thuật">Bước 2: Đọc Sâu và Mổ Xẻ Điểm Nghẽn Kỹ Thuật</a></li>
+        <li><a href="#bước-3-khai-thác-câu-và-đồng-bộ-hệ-thống-srs">Bước 3: Khai Thác Câu và Đồng Bộ Hệ Thống SRS</a></li>
       </ul>
     </li>
   </ul>
@@ -317,7 +317,7 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
 &lt;/equation_context&gt;</div>
 </div>
 
-<h2 id="ghi-nhớ-dài-hạn-bằng-kỹ-thuật-sentence-mining-và-thuật-toán-fsrs">Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining Và Thuật Toán FSRS</h2>
+<h2 id="ghi-nhớ-dài-hạn-bằng-kỹ-thuật-sentence-mining-và-thuật-toán-fsrs">Ghi Nhớ Dài Hạn Bằng Kỹ Thuật Sentence Mining và Thuật Toán FSRS</h2>
 <p>Sau khi giải mã đoạn văn bản hóc húa bằng AI, kiến thức mới chỉ dừng lại ở bộ nhớ ngắn hạn. Để biến thuật ngữ và mẫu câu tiếng Anh kỹ thuật thành phản xạ tự nhiên, chúng ta áp dụng phương pháp Sentence Mining — đưa cả câu chứa ngữ cảnh vào hệ thống thẻ ghi nhớ (flashcard) thay vì học từ đơn lẻ.</p>
 <h3 id="ưu-thế-của-thuật-toán-fsrs-so-với-sm-2">Ưu Thế Của Thuật Toán FSRS So Với SM-2</h3>
 <p>Các thuật toán lặp lại ngắt quãng cũ như SM-2 trong Anki thường khiến người học bị quá tải thẻ ôn tập hàng ngày. Hệ thống hiện đại đã chuyển sang thuật toán FSRS (Free Spaced Repetition Scheduler).</p>
@@ -353,8 +353,8 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
         C2 --&gt; C3[&#34;Ôn tập hàng ngày với thuật toán FSRS&#34;]
     end
 
-    Step1 --&gt; Step2
-    Step2 --&gt; Step3">flowchart TD
+    A3 --&gt; B1
+    B3 --&gt; C1">flowchart TD
     subgraph Step1 [&#34;Bước 1: Quét Bối Cảnh&#34;]
         A1[&#34;Tải PDF vào NotebookLM hoặc ZotFlow&#34;] --&gt; A2[&#34;Trích xuất 5 khái niệm cốt lõi bằng tiếng Việt&#34;]
         A2 --&gt; A3[&#34;Bật Immersive Translate DeepL đọc lướt&#34;]
@@ -370,15 +370,14 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
         C2 --&gt; C3[&#34;Ôn tập hàng ngày với thuật toán FSRS&#34;]
     end
 
-    Step1 --&gt; Step2
-    Step2 --&gt; Step3</div>
-<h3 id="bước-1-quét-bối-cảnh-để-định-hình-khung-tư-duy">Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy</h3>
-<p>Tải file PDF vào các công cụ như NotebookLM hay ZotFlow và yêu cầu AI trích xuất 5 khái niệm cốt lõi nhất của chương sách bằng tiếng Việt. Đọc qua bản tóm tắt này để bộ脑 hình thành lược đồ tri thức ban đầu.</p>
+    A3 --&gt; B1
+    B3 --&gt; C1</div><h3 id="bước-1-quét-bối-cảnh-để-định-hình-khung-tư-duy">Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy</h3>
+<p>Tải file PDF vào các công cụ như NotebookLM hay ZotFlow và yêu cầu AI trích xuất 5 khái niệm cốt lõi nhất của chương sách bằng tiếng Việt. Đọc qua bản tóm tắt này để bộ não hình thành lược đồ tri thức ban đầu.</p>
 <p>Sau đó, bật Immersive Translate với engine DeepL và tiến hành đọc lướt toàn bộ chương sách. Bản dịch tiếng Việt chạy song song bên dưới sẽ xóa bỏ hoàn toàn tải lượng ngoại lai, giúp chúng ta nắm trọn cấu trúc chương sách với tốc độ cao.</p>
-<h3 id="bước-2-đọc-sâu-và-mổ-xẻ-điểm-nghẽn-kỹ-thuật">Bước 2: Đọc Sâu Và Mổ Xẻ Điểm Nghẽn Kỹ Thuật</h3>
+<h3 id="bước-2-đọc-sâu-và-mổ-xẻ-điểm-nghẽn-kỹ-thuật">Bước 2: Đọc Sâu và Mổ Xẻ Điểm Nghẽn Kỹ Thuật</h3>
 <p>Khi chạm đến những đoạn lý thuyết hóc húa, công thức toán học hoặc khối mã nguồn phức tạp, dùng công cụ highlight của ZotFlow hay PDF++ để tạo liên kết về file ghi chú trong Obsidian.</p>
 <p>Sao chép đoạn văn bản tiếng Anh gốc vào ChatGPT hoặc Claude, áp dụng các mẫu lệnh XML tương ứng ở trên để AI giải thích bản chất. Sau khi đọc xong lời giải thích từ AI, tuyệt đối không copy-paste nguyên văn. Chúng ta phải tự tóm tắt lại nguyên lý bằng ngôn ngữ của chính mình vào Obsidian. Bước tự diễn đạt này là bắt buộc để kích hoạt tải lượng hữu ích và khắc ghi bản chất vấn đề.</p>
-<h3 id="bước-3-khai-thác-câu-và-đồng-bộ-hệ-thống-srs">Bước 3: Khai Thác Câu Và Đồng Bộ Hệ Thống SRS</h3>
+<h3 id="bước-3-khai-thác-câu-và-đồng-bộ-hệ-thống-srs">Bước 3: Khai Thác Câu và Đồng Bộ Hệ Thống SRS</h3>
 <p>Chuyển các ghi chú thuật ngữ trong Obsidian thành dạng thẻ Sentence Mining: mặt trước chứa câu tiếng Anh nguyên bản trích ra từ tài liệu, mặt sau chứa phần giải thích tiếng Việt tinh gọn cùng liên kết trỏ ngược về trang PDF gốc.</p>
 <p>Chạy plugin đồng bộ để đẩy toàn bộ thẻ sang Anki. Mỗi ngày, dành từ 15 đến 20 phút ôn tập theo đúng lịch trình của thuật toán FSRS.</p>
 <p>Nhờ chuỗi quy trình khép kín này, rào cản ngoại ngữ được gỡ bỏ bằng công cụ đọc song ngữ, tư duy kỹ thuật được khai thông bằng prompt AI chuyên biệt, và toàn bộ tri thức được lưu trữ vĩnh viễn vào trí nhớ dài hạn.</p>
@@ -399,7 +398,7 @@ Bạn là một Nhà Khoa học Dữ liệu chuyên về Toán Ứng dụng tron
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/self-learning/">Self-Learning</a>,&nbsp;<a href="/tags/obsidian/">Obsidian</a>,&nbsp;<a href="/tags/prompt-engineering/">Prompt Engineering</a>,&nbsp;<a href="/tags/anki/">Anki</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/self-learning/">Self Learning</a>,&nbsp;<a href="/tags/obsidian/">Obsidian</a>,&nbsp;<a href="/tags/prompt-engineering/">Prompt Engineering</a>,&nbsp;<a href="/tags/anki/">Anki</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
