@@ -62,12 +62,10 @@
     <div class="post-footer">
         <a href="{{ .RelPermalink }}">{{ T "readMore" }}</a>
         {{- with .Params.tags -}}
-            <div class="post-tags">
-                <i class="fas fa-tags" aria-hidden="true"></i>&nbsp;
-                {{- range $index, $value := . -}}
-                    {{- if gt $index 0 }},&nbsp;{{ end -}}
-                    {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
+            <div class="post-tags" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+                {{- range . -}}
+                    {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+                    <a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a>
                 {{- end -}}
             </div>
         {{- end -}}

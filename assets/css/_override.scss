@@ -398,67 +398,100 @@ hr {
   }
 }
 
-// 5. Meta Text, Reading Time & Pill Tags
-.post-meta, .post-tags, .post-category, .post-author, .post-reading-time {
-  font-family: "Lora", Georgia, serif !important;
-  color: #64748b !important;
-  font-size: 0.88rem;
-  
-  [theme=dark] & {
+// ==========================================================
+// 5. UNIFIED GLOBAL TAG SYSTEM (Consistent Soft Gray Badges)
+// Matches Project Tags across all Pages: Home, Posts, Topics, Footers
+// ==========================================================
+
+.timeline-tag,
+.tag-pill,
+.post-tags a,
+.post-footer .post-tags a,
+.summary .post-tags a,
+.tag-cloud-tags a,
+.tag-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.1rem 0.48rem !important;
+  border-radius: 4px !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  margin: 0.12rem 0.2rem 0.12rem 0 !important;
+  transition: all 0.15s ease !important;
+  vertical-align: middle !important;
+  box-shadow: none !important;
+
+  sup {
     color: #94a3b8 !important;
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    margin-left: 0.3rem !important;
+    top: 0 !important;
+    vertical-align: baseline !important;
   }
-  
-  a {
-    color: #64748b !important;
-    
-    [theme=dark] & {
-      color: #94a3b8 !important;
+
+  [theme=dark] & {
+    color: #cbd5e1 !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+
+    sup {
+      color: #64748b !important;
     }
-    
-    &:hover {
-      color: #1337a6 !important;
-      text-decoration: underline !important;
+  }
+
+  &:hover {
+    color: #ffffff !important;
+    background-color: #4d74eb !important;
+    border-color: #4d74eb !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+
+    sup {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    [theme=dark] & {
+      color: #ffffff !important;
+      background-color: #4d74eb !important;
+      border-color: #4d74eb !important;
     }
   }
 }
 
-// Modern Clean Badge Pill Tags
-.post-tags-pills {
+.tag-cloud-tags {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 0.4rem !important;
-  margin-top: 0.6rem !important;
+  gap: 0.45rem !important;
+  margin: 1rem 0 2rem !important;
 
-  .tag-pill {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    font-size: 0.78rem !important;
-    font-weight: 500 !important;
-    color: #475569 !important;
-    background-color: #f1f5f9 !important;
-    border: 1px solid #e2e8f0 !important;
-    padding: 0.15rem 0.55rem !important;
-    border-radius: 6px !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease !important;
+  a {
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
 
-    [theme=dark] & {
-      color: #cbd5e1 !important;
-      background-color: rgba(255, 255, 255, 0.06) !important;
-      border-color: rgba(255, 255, 255, 0.1) !important;
+    &:hover, &:focus, &:active {
+      transform: translateY(-1px) !important;
     }
+  }
+}
 
-    &:hover {
-      color: #ffffff !important;
-      background-color: #4d74eb !important;
-      border-color: #4d74eb !important;
-      text-decoration: none !important;
+.post-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
 
-      [theme=dark] & {
-        color: #ffffff !important;
-        background-color: #6366f1 !important;
-        border-color: #6366f1 !important;
-      }
-    }
+  i {
+    color: #94a3b8 !important;
+    margin-right: 0.2rem !important;
+    font-size: 0.85rem !important;
   }
 }
 
@@ -592,9 +625,87 @@ blockquote:not(.custom-quote) {
   }
 }
 
-// Trang chủ: avatar bên trong About không có border-radius của theme
-.page.home .single .content img {
-  box-shadow: none !important;
+// ==========================================================
+// Personal Bio Floating Avatar (Chip Huyen Editorial Style)
+// ==========================================================
+.bio-container {
+  display: block !important;
+  position: relative !important;
+  clear: both !important;
+  margin-bottom: 1.25rem !important;
+
+  p {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.9rem !important;
+    color: #2c3e50 !important;
+
+    [theme=dark] & {
+      color: #e2e8f0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bio-avatar,
+img.bio-avatar {
+  float: right !important;
+  width: 195px !important;
+  height: 195px !important;
+  max-width: 195px !important;
+  min-width: 195px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  object-position: center 15% !important;
+  border-radius: 50% !important;
+  shape-outside: circle(50%) !important;
+  margin: 0.1rem 0 1rem 1.6rem !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1) !important;
+  display: block !important;
+  clear: none !important;
+  border: none !important;
+
+  [theme=dark] & {
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 155px !important;
+    height: 155px !important;
+    max-width: 155px !important;
+    min-width: 155px !important;
+    margin: 0.1rem 0 0.8rem 1.2rem !important;
+    shape-outside: circle(50%) !important;
+  }
+
+  @media (max-width: 600px) {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px !important;
+    min-width: 140px !important;
+    margin: 0.1rem 0 0.65rem 1rem !important;
+    shape-outside: circle(50%) !important;
+  }
+
+  @media (max-width: 420px) {
+    width: 125px !important;
+    height: 125px !important;
+    max-width: 125px !important;
+    min-width: 125px !important;
+    margin: 0.05rem 0 0.5rem 0.8rem !important;
+    shape-outside: circle(50%) !important;
+  }
 }
 
 // 7. 100% UNIFIED LINK COLOR SYSTEM ACROSS ENTIRE WEBSITE (Including Profile Bio, Contact, Articles, Tables)
@@ -1582,5 +1693,48 @@ img.lazyloaded {
   }
 }
 
+// ==========================================================
+// UNIFIED TAGS STYLE (Forcing Gray Style across all components)
+// ==========================================================
+body a.tag-pill,
+body .post-tags a,
+body .post-footer .post-tags a,
+body .summary .post-tags a,
+body .tag-cloud-tags a,
+body .timeline-tag,
+body .tag-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.12rem 0.55rem !important;
+  border-radius: 4px !important;
+  line-height: 1.4 !important;
+  text-decoration: none !important;
+  margin: 0.12rem 0.2rem 0.12rem 0 !important;
+  transition: all 0.15s ease !important;
+  vertical-align: middle !important;
+  box-shadow: none !important;
+  
+  &:hover {
+    background-color: #e2e8f0 !important;
+    color: #334155 !important;
+    text-decoration: none !important;
+    border-color: #cbd5e1 !important;
+  }
 
-
+  [theme=dark] & {
+    color: #cbd5e1 !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.12) !important;
+      color: #f8fafc !important;
+    }
+  }
+}

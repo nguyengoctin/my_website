@@ -68,12 +68,11 @@
     {{- /* Footer */ -}}
     <div class="post-footer">
         {{- with .Params.tags -}}
-            <div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;
-                {{- range $index, $value := . -}}
-                    {{- if gt $index 0 }},&nbsp;{{ end -}}
-                    {{- $tag := $.Site.GetPage (printf "tags/%v" ($value | urlize)) -}}
-                    <a href="{{ $tag.RelPermalink }}">{{ $tag.Title | default $value }}</a>
+            <div class="post-tags" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
+                <i class="fas fa-tags fa-fw" aria-hidden="true" style="color: #64748b; font-size: 0.8rem; margin-right: 0.2rem;"></i>
+                {{- range . -}}
+                    {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+                    <a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a>
                 {{- end -}}
             </div>
         {{- end -}}

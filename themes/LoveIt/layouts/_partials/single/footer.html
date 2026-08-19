@@ -50,13 +50,11 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags">
+        <section class="post-tags" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;">
             {{- with .Params.tags -}}
-                <i class="fas fa-tags" aria-hidden="true"></i>&nbsp;
-                {{- range $index, $value := . -}}
-                    {{- if gt $index 0 }},&nbsp;{{ end -}}
-                    {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
+                {{- range . -}}
+                    {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+                    <a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a>
                 {{- end -}}
             {{- end -}}
         </section>

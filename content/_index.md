@@ -4,11 +4,11 @@ title: "Nguyen Ngoc Tin"
 
 ## ABOUT
 
-<img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" style="float: right; width: 32%; max-width: 220px; min-width: 120px; aspect-ratio: 1/1; object-fit: cover; border-radius: 999px; margin: 0 0 1rem 2rem; display: block;">
-
-Hi, I'm **Nguyễn Ngọc Tín**, an Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.
-
-I’m deeply curious about how software works under the hood — from database internals to API architecture. My goal is to become an **AI Engineer**, bridging the gap between scalable backend systems and practical AI/LLM applications.
+<div class="bio-container">
+  <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
+  <p>I'm Nguyễn Ngọc Tín, an Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
+  <p>I’m deeply curious about how software works under the hood — from database internals to API architecture. My goal is to become an AI Engineer, bridging the gap between scalable backend systems and practical AI/LLM applications.</p>
+</div>
 
 **What I'm focused on:**
 - **Backend and Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
@@ -98,8 +98,9 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
     <div class="timeline-right">
       <h3 class="timeline-title">Bachelor of Information Technology</h3>
       <div class="timeline-desc">
-        Major: <strong>Information Systems</strong><br>
-        Cumulative GPA: <strong>2.96 / 4.0</strong> (7.58 / 10.0) &nbsp;•&nbsp; TOEIC: <strong>625 / 990</strong><br>
+        Major: Information Systems<br>
+        Cumulative GPA: 2.96 / 4.0 (7.58 / 10.0)<br>
+        TOEIC: 625 / 990<br>
         Studied core foundations in Software Engineering, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
       </div>
       <div class="timeline-tags">

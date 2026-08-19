@@ -55,7 +55,7 @@
             <div class="post-tags-pills">
                 {{- range . -}}
                     {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
-                    <a href="{{ $tag.RelPermalink }}" class="tag-pill">#{{ $tag.Title }}</a>
+                    <a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a>
                 {{- end -}}
             </div>
         {{- end -}}
