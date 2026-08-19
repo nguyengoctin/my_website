@@ -147,7 +147,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
 
 <div class="timeline-box">
 
-  <!-- Project 1: Zalo Mini App Online Ordering -->
+  <!-- Project 1: Zalo Mini App Online Ordering-->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/zalo-logo.svg" alt="Zalo Mini App Logo" class="timeline-logo">
