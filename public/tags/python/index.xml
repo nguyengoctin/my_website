@@ -1,39 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Python - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/python/</link>
+        <link>http://localhost:1313/tags/python/</link>
         <description>Python - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</lastBuildDate><atom:link href="https://ngoctin.me/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Haystack</title>
-    <link>https://ngoctin.me/ai-engineer/09-frameworks-and-tools/haystack/</link>
+    <link>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/09-frameworks-and-tools/haystack/</guid>
+    <guid>http://localhost:1313/ai-engineer/09-frameworks-and-tools/haystack/</guid>
     <description><![CDATA[Haystack là một framework Python mã nguồn mở giúp bạn xây dựng các tác nhân tìm kiếm và trả lời câu hỏi nhanh chóng.]]></description>
 </item>
 <item>
     <title>Python Cheat Sheet: Cú Pháp Và Thư Viện Căn Bản</title>
-    <link>https://ngoctin.me/cheatsheets/python-cheat-sheet/</link>
+    <link>http://localhost:1313/cheatsheets/python-cheat-sheet/</link>
     <pubDate>Tue, 18 Aug 2026 09:43:01 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/cheatsheets/python-cheat-sheet/</guid>
+    <guid>http://localhost:1313/cheatsheets/python-cheat-sheet/</guid>
     <description><![CDATA[Cheat sheet tóm tắt cú pháp Python, các cấu trúc dữ liệu tích hợp, xử lý chuỗi và hàm thông dụng.]]></description>
 </item>
 <item>
     <title>Quy Trình Tự Động Thu Thập và Chuyển Đổi AI Engineer Roadmap Sang Markdown Song Ngữ</title>
-    <link>https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
+    <link>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
+    <guid>http://localhost:1313/posts/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu/</guid>
     <description><![CDATA[Hướng dẫn toàn tập về kiến trúc pipeline thu thập dữ liệu bí mật từ roadmap.sh, thiết kế prompt cho LLM phân đoạn song ngữ và giải quyết các lỗi rendering thực tế trên Hugo Theme LoveIt.]]></description>
 </item>
 <item>
     <title>Lập Trình Web Kỷ Nguyên AI: Đừng &#39;Vibe Code&#39;, Hãy Làm Chủ Spec-Driven Development!</title>
-    <link>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
+    <link>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</link>
     <pubDate>Fri, 24 Jul 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
+    <guid>http://localhost:1313/posts/lap-trinh-web-ky-nguyen-ai-spec-driven-development/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"AI sẽ không thay thế lập trình viên. Nhưng lập trình viên biết dùng AI sẽ thay thế những lập trình viên không biết dùng AI."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">
@@ -42,6 +42,30 @@
 </blockquote>
 
 <p>Bước vào kỷ nguyên AI, chỉ với vài câu lệnh gửi tới ChatGPT, Cursor hay Claude Code, một hệ thống RESTful API phức tạp đã hiện ra trong vài giây. Thế nhưng, nếu chúng ta sa vào lối làm việc <strong>Vibe Coding</strong> — gõ prompt ngẫu hứng, copy-paste mã nguồn và dán traceback bảo AI sửa hộ — chúng ta sẽ hoàn toàn mất kiểm soát khi dự án mở rộng hoặc phát sinh sự cố trên môi trường thực tế.</p>]]></description>
+</item>
+<item>
+    <title>Bilingual Movie Learn: Nền tảng học tiếng Anh qua phim với Google Gemini API</title>
+    <link>http://localhost:1313/posts/bilingual-movie-learning-platform/</link>
+    <pubDate>Fri, 20 Mar 2026 10:00:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/bilingual-movie-learning-platform/</guid>
+    <description><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/USj7dpTuOZI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>Việc học tiếng Anh qua phim ảnh rất hiệu quả nhưng người học thường gặp khó khăn khi tra cứu từ vựng và cấu trúc câu phức tạp trong ngữ cảnh hội thoại thực tế. Việc chuyển đổi qua lại giữa trình phát video và từ điển làm gián đoạn trải nghiệm xem phim. Dự án Bilingual Movie Learn được xây dựng để tạo ra một trình phát video thông minh, tích hợp phụ đề song ngữ tương tác và phân tích ngôn ngữ tức thì bằng AI.</p>]]></description>
+</item>
+<item>
+    <title>Lexi: Xây dựng AI English Speaking Tutor với Serverless Architecture và Amazon Bedrock</title>
+    <link>http://localhost:1313/posts/lexi-ai-english-tutor/</link>
+    <pubDate>Sun, 15 Mar 2026 10:00:00 &#43;0700</pubDate>
+    <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+    <guid>http://localhost:1313/posts/lexi-ai-english-tutor/</guid>
+    <description><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/qPlBFtEk3pM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>Bài toán thực tế trong việc học giao tiếp tiếng Anh là người học thường thiếu môi trường phản xạ tự nhiên và ngần ngại khi nói chuyện trực tiếp với người bản xứ. Các giải pháp gia sư truyền thống chi phí cao và khó linh hoạt theo thời gian cá nhân. Dự án Lexi được thiết kế để giải quyết triệt để vấn đề này bằng cách xây dựng một gia sư AI giao tiếp theo luồng âm thanh thời gian thực, có khả năng phân tích lỗi sai ngữ pháp và phản hồi ngữ cảnh ngay lập tức.</p>]]></description>
 </item>
 </channel>
 </rss>

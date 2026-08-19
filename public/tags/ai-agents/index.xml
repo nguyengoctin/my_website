@@ -1,63 +1,63 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AI Agents - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/ai-agents/</link>
+        <link>http://localhost:1313/tags/ai-agents/</link>
         <description>AI Agents - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/ai-agents/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ai-agents/" rel="self" type="application/rss+xml" /><item>
     <title>AI Agents</title>
-    <link>https://ngoctin.me/ai-engineer/06-ai-agents/ai-agents/</link>
+    <link>http://localhost:1313/ai-engineer/06-ai-agents/ai-agents/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/ai-agents/</guid>
+    <guid>http://localhost:1313/ai-engineer/06-ai-agents/ai-agents/</guid>
     <description><![CDATA[Trong kỹ thuật AI, &ldquo;tác nhân&rdquo; đề cập đến các hệ thống hoặc thành phần tự trị có thể nhận thức môi trường của chúng, đưa ra quyết định và thực hiện hành động để đạt được các mục tiêu cụ thể.]]></description>
 </item>
 <item>
     <title>Tools &amp; Function Calling in AI Agents</title>
-    <link>https://ngoctin.me/ai-engineer/06-ai-agents/tools-function-calling/</link>
+    <link>http://localhost:1313/ai-engineer/06-ai-agents/tools-function-calling/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/tools-function-calling/</guid>
+    <guid>http://localhost:1313/ai-engineer/06-ai-agents/tools-function-calling/</guid>
     <description><![CDATA[Công cụ và gọi hàm trang bị cho các tác nhân AI khả năng tương tác với thế giới thực và truy cập thông tin bên ngoài.]]></description>
 </item>
 <item>
     <title>Agents Use Cases</title>
-    <link>https://ngoctin.me/ai-engineer/06-ai-agents/agents-usecases/</link>
+    <link>http://localhost:1313/ai-engineer/06-ai-agents/agents-usecases/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/agents-usecases/</guid>
+    <guid>http://localhost:1313/ai-engineer/06-ai-agents/agents-usecases/</guid>
     <description><![CDATA[Các tác nhân AI có nhiều trường hợp sử dụng khác nhau, từ hỗ trợ khách hàng, tự động hóa quy trình làm việc, an ninh mạng, tài chính, tiếp thị, bán hàng và hơn thế nữa.]]></description>
 </item>
 <item>
     <title>Manual Implementation of AI Agents</title>
-    <link>https://ngoctin.me/ai-engineer/06-ai-agents/manual-implementation/</link>
+    <link>http://localhost:1313/ai-engineer/06-ai-agents/manual-implementation/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/manual-implementation/</guid>
+    <guid>http://localhost:1313/ai-engineer/06-ai-agents/manual-implementation/</guid>
     <description><![CDATA[Việc triển khai thủ công các tác nhân AI bao gồm việc xây dựng logic và hành vi của chúng từ đầu, mà không phụ thuộc nhiều vào các khung làm việc được xây dựng sẵn hoặc các công cụ tự động.]]></description>
 </item>
 <item>
     <title>Multi-Agent Systems</title>
-    <link>https://ngoctin.me/ai-engineer/06-ai-agents/multi-agents/</link>
+    <link>http://localhost:1313/ai-engineer/06-ai-agents/multi-agents/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/06-ai-agents/multi-agents/</guid>
+    <guid>http://localhost:1313/ai-engineer/06-ai-agents/multi-agents/</guid>
     <description><![CDATA[Hệ thống đa tác nhân liên quan đến hành vi phối hợp của nhiều tác nhân thông minh trong một môi trường.]]></description>
 </item>
 <item>
     <title>Google ADK</title>
-    <link>https://ngoctin.me/ai-engineer/10-models-and-apis/google-adk/</link>
+    <link>http://localhost:1313/ai-engineer/10-models-and-apis/google-adk/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/10-models-and-apis/google-adk/</guid>
+    <guid>http://localhost:1313/ai-engineer/10-models-and-apis/google-adk/</guid>
     <description><![CDATA[Google Agent Development Kit (ADK) là một framework được thiết kế để giúp các nhà phát triển xây dựng, kiểm thử và triển khai các tác nhân AI.]]></description>
 </item>
 <item>
     <title>Từ Prompt Engineering Đến Graph Engineering: Sự Trỗi Dậy Của Hệ Thống AI Đa Tác Vụ</title>
-    <link>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</link>
+    <link>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</link>
     <pubDate>Wed, 29 Jul 2026 16:15:00 &#43;0700</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/posts/tu-prompt-engineering-den-graph-engineering/</guid>
+    <guid>http://localhost:1313/posts/tu-prompt-engineering-den-graph-engineering/</guid>
     <description><![CDATA[<blockquote class="custom-quote" style="margin: 1.35rem 0; padding: 0.95rem 1.35rem; border-left: 4px solid #4d74eb; background: rgba(77, 116, 235, 0.05); border-radius: 0 6px 6px 0; text-align: left;">
     <p style="margin: 0 0 0.45rem 0; font-size: 1.125rem; line-height: 1.65; font-style: italic; text-align: left;">"Architecture matters more than the model."</p>
     <footer style="font-style: normal; text-align: right; font-weight: 600; color: #4d74eb; font-size: 0.9rem; margin-top: 0.35rem;">

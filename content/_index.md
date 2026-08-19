@@ -11,11 +11,11 @@ Hi, I'm **Nguyễn Ngọc Tín**, an Information Technology graduate from Saigon
 I’m deeply curious about how software works under the hood — from database internals to API architecture. My goal is to become an **AI Engineer**, bridging the gap between scalable backend systems and practical AI/LLM applications.
 
 **What I'm focused on:**
-- **Backend & Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
+- **Backend and Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
 - **Applied AI:** Experimenting with LLM integration, agentic workflows, and data-driven systems.
 
 **What I’m doing right now:**
-Currently building practical side-projects, deep-diving into backend performance optimization, and documenting technical post-mortems on this blog.
+Currently building practical side-projects, deep-diving into backend performance optimization, and documenting technical notes, experiments, and system design post-mortems.
 
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
 
@@ -40,4 +40,206 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
     <div><strong>Status:</strong> Available for Backend Engineer, AI Engineer, and Cloud Engineer roles</div>
     <div><strong>Timezone:</strong> ICT (UTC+7)</div>
   </div>
+</div>
+
+---
+
+## EXPERIENCES
+
+<div class="timeline-box">
+
+  <!-- Experience 1: FCAJ AWS -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/aws-logo.svg" alt="AWS Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">First Cloud AI Journey</span>
+        <span class="timeline-time">Mar — May 2026</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">Cloud Application Development Intern</h3>
+      <div class="timeline-desc">
+        First Cloud AI Journey (FCAJ) is an intensive Cloud and AI development program supported by Amazon Web Services (AWS) Vietnam.
+        <ul>
+          <li>Engineered and deployed an event-driven serverless prototype using Python and AWS Lambda to optimize backend transactions.</li>
+          <li>Authored architectural blueprints, API documentation, and setup guides for serverless services to standardize workflows.</li>
+          <li>Integrated core AWS services into automated CI/CD pipelines, managing environment consistency and version control with Git.</li>
+        </ul>
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Python</span>
+        <span class="timeline-tag">AWS Lambda</span>
+        <span class="timeline-tag">AWS SAM</span>
+        <span class="timeline-tag">API Gateway</span>
+        <span class="timeline-tag">DynamoDB</span>
+        <span class="timeline-tag">Amazon Bedrock</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## EDUCATION
+
+<div class="timeline-box">
+
+  <!-- Education 1: Saigon University -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/sgu-logo.png" alt="Saigon University Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Saigon University</span>
+        <span class="timeline-time">2021 — Jun 2026</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">Bachelor of Information Technology</h3>
+      <div class="timeline-desc">
+        Major: <strong>Information Systems</strong> &nbsp;•&nbsp; Cumulative GPA: <strong>7.58 / 10.0</strong> &nbsp;•&nbsp; TOEIC: <strong>625 / 990</strong>
+        <br>
+        Studied core foundations in Software Engineering, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Information Systems</span>
+        <span class="timeline-tag">Python</span>
+        <span class="timeline-tag">Java</span>
+        <span class="timeline-tag">C++</span>
+        <span class="timeline-tag">PostgreSQL</span>
+        <span class="timeline-tag">Linux</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education 2: Self-learning -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/study-icon-25.png" alt="Self-learning Icon" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Self-learning</span>
+        <span class="timeline-time">2021 — present</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">Computer Science and AI Engineering</h3>
+      <div class="timeline-desc">
+        Self-directed deep learning focusing on backend system design, microservices, cloud-native architectures, vector databases, and applied LLM agentic workflows.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">System Design</span>
+        <span class="timeline-tag">Backend Architecture</span>
+        <span class="timeline-tag">FastAPI</span>
+        <span class="timeline-tag">LLMs</span>
+        <span class="timeline-tag">RAG</span>
+        <span class="timeline-tag">AWS</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## PROJECTS
+
+<div class="timeline-box">
+
+  <!-- Project 1: Lexi -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/lexi-logo.png" alt="Lexi Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Lexi</span>
+        <span class="timeline-time">Mar — May 2026</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        <a href="/posts/lexi-ai-english-tutor/">Lexi – AI-Powered English Speaking Tutor</a>
+      </h3>
+      <div class="timeline-desc">
+        An interactive AI English speaking platform powered by a serverless backend. Designed and implemented an event-driven serverless architecture utilizing AWS SAM, API Gateway, Lambda, and DynamoDB Single-Table schema for real-time AI audio streaming and contextual grammar analysis.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Next.js</span>
+        <span class="timeline-tag">TypeScript</span>
+        <span class="timeline-tag">TailwindCSS</span>
+        <span class="timeline-tag">Python</span>
+        <span class="timeline-tag">AWS SAM</span>
+        <span class="timeline-tag">Amazon Bedrock</span>
+        <span class="timeline-tag">DynamoDB</span>
+      </div>
+      <div class="timeline-links">
+        <a href="/posts/lexi-ai-english-tutor/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Bilingual Movie Learning Platform -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/movie-logo.svg" alt="Movie Learn Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Movie Learn</span>
+        <span class="timeline-time">Mar 2026 — Present</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        <a href="/posts/bilingual-movie-learning-platform/">Bilingual Movie-Based English Learning Platform</a>
+      </h3>
+      <div class="timeline-desc">
+        A full-stack language learning web platform that synchronizes bilingual subtitles with video dialogues. Integrates Google Gemini API to generate contextual grammar explanations and vocabulary definitions directly from movie transcripts.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Next.js</span>
+        <span class="timeline-tag">TypeScript</span>
+        <span class="timeline-tag">FastAPI</span>
+        <span class="timeline-tag">Python</span>
+        <span class="timeline-tag">SQLite</span>
+        <span class="timeline-tag">Google Gemini API</span>
+        <span class="timeline-tag">Docker</span>
+      </div>
+      <div class="timeline-links">
+        <a href="/posts/bilingual-movie-learning-platform/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3: Ngọc Tín Site -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/logo.png" alt="Ngọc Tín Site Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Ngọc Tín Site</span>
+        <span class="timeline-time">2026 — Present</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        <a href="/posts/personal-hugo-technical-blog/">Personal Technical Notes and Engineering Portfolio</a>
+      </h3>
+      <div class="timeline-desc">
+        High-performance personal technical notes platform built with Hugo static site generator. Features a custom SCSS editorial design system, client-side Lunr.js search, interactive flipbook cheatsheets, and automated CI/CD deployment.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Hugo</span>
+        <span class="timeline-tag">SCSS</span>
+        <span class="timeline-tag">JavaScript</span>
+        <span class="timeline-tag">HTML5</span>
+        <span class="timeline-tag">GitHub Pages</span>
+        <span class="timeline-tag">Lunr.js</span>
+      </div>
+      <div class="timeline-links">
+        <a href="/posts/personal-hugo-technical-blog/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+        <a href="https://ngoctin.me" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+      </div>
+    </div>
+  </div>
+
 </div>

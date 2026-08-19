@@ -160,29 +160,80 @@ hr {
   font-family: "Lora", Georgia, serif !important;
   
   .header-title {
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 24px !important;
-    font-weight: 400 !important;
-    color: #424242 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
+    overflow: visible !important;
 
-    a {
-      color: #424242 !important;
-      font-weight: 400 !important;
-      text-decoration: none !important;
+    .header-title-pre {
+      margin-right: 0.25rem !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      opacity: 0.95 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      vertical-align: top !important;
+      transform: translateY(-4px) !important;
+      line-height: 1 !important;
+    }
+
+    .header-title-post {
+      margin-left: 0.3rem !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      opacity: 0.95 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      vertical-align: top !important;
+      transform: translateY(-4px) !important;
+      line-height: 1 !important;
+    }
+
+    .nav-blue {
+      color: #4d74eb !important;
 
       [theme=dark] & {
-        color: #e5e7eb !important;
+        color: #60a5fa !important;
+      }
+    }
+
+    .nav-pink, .nav-site-pink {
+      color: #ec4899 !important;
+
+      [theme=dark] & {
+        color: #f472b6 !important;
+      }
+    }
+
+    .nav-site-pink {
+      margin-left: 0.15rem !important;
+      font-weight: 700 !important;
+    }
+
+    a {
+      color: #4d74eb !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      letter-spacing: -0.3px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      line-height: 1.1 !important;
+      padding-bottom: 2px !important;
+      background-image: linear-gradient(90deg, #4d74eb 0%, #4d74eb 70%, #ec4899 70%, #ec4899 100%) !important;
+      background-size: 0% 1px !important;
+      background-repeat: no-repeat !important;
+      background-position: left 100% !important;
+      transition: background-size 0.2s ease !important;
+
+      [theme=dark] & {
+        color: #60a5fa !important;
       }
 
       &:hover {
-        text-decoration: underline !important;
-        color: #111111 !important;
-
-        [theme=dark] & {
-          color: #ffffff !important;
-        }
+        text-decoration: none !important;
+        background-size: 100% 1px !important;
       }
     }
   }
@@ -1144,20 +1195,26 @@ img.lazyloaded {
 }
 
 // Header skeleton bar
-.psk-header {
+.psk-header-wrap {
   width: 100%;
-  height: 56px;
   border-bottom: 1px solid #e2e8f0;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  gap: 2rem;
-  flex-shrink: 0;
-  box-sizing: border-box;
 
   [theme=dark] & {
     border-bottom-color: #2d2f38;
   }
+}
+
+.psk-header {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 // Body skeleton area
@@ -1221,4 +1278,242 @@ img.lazyloaded {
     border-bottom: none;
   }
 }
+
+// ==========================================================
+// Home Page Timeline Style (Experiences, Education, Projects)
+// ==========================================================
+
+.timeline-box {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+
+  [theme=dark] & {
+    background: #18181b;
+    border-color: #27272a;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.timeline-row {
+  display: flex;
+  padding: 1.5rem 1.6rem;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 1.75rem;
+  align-items: flex-start;
+  transition: background-color 0.15s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #fafbfd;
+
+    [theme=dark] & {
+      background-color: #1f2026;
+    }
+  }
+
+  [theme=dark] & {
+    border-bottom-color: #27272a;
+  }
+}
+
+.timeline-left {
+  width: 150px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+
+  .timeline-logo {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+    object-fit: contain;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    [theme=dark] & {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .timeline-org-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.1rem;
+  }
+
+  .timeline-org {
+    display: block;
+    width: 100%;
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111111;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+
+    [theme=dark] & {
+      color: #f3f4f6;
+    }
+  }
+
+  .timeline-time {
+    display: block;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    color: #828282;
+    line-height: 1.25;
+
+    [theme=dark] & {
+      color: #9ca3af;
+    }
+  }
+}
+
+
+.timeline-right {
+  flex: 1;
+  min-width: 0;
+
+  .timeline-title {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: #111111 !important;
+    margin: 0 0 0.45rem 0 !important;
+    line-height: 1.35 !important;
+
+    [theme=dark] & {
+      color: #f3f4f6 !important;
+    }
+
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+
+      &:hover {
+        color: #4d74eb !important;
+        text-decoration: underline !important;
+
+        [theme=dark] & {
+          color: #60a5fa !important;
+        }
+      }
+    }
+  }
+
+  .timeline-desc {
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.65;
+    margin-bottom: 0.6rem;
+
+    [theme=dark] & {
+      color: #cbd5e1;
+    }
+
+    ul {
+      margin: 0.35rem 0 0 0 !important;
+      padding-left: 1.2rem !important;
+
+      li {
+        margin-bottom: 0.25rem !important;
+        line-height: 1.6 !important;
+      }
+    }
+  }
+
+  .timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    margin-top: 0.65rem;
+
+    .timeline-tag {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #475569;
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 0.12rem 0.55rem;
+      border-radius: 4px;
+      line-height: 1.4;
+
+      [theme=dark] & {
+        color: #cbd5e1;
+        background-color: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+
+  .timeline-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.65rem;
+    font-size: 0.88rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 500;
+      text-decoration: none !important;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+
+      i {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .timeline-row {
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .timeline-left {
+    width: 100%;
+    min-width: 100%;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.85rem;
+
+    .timeline-logo {
+      margin-bottom: 0;
+      width: 42px;
+      height: 42px;
+    }
+
+    .timeline-org-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
 

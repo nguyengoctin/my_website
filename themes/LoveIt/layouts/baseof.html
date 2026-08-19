@@ -32,11 +32,13 @@
 
         {{- /* Page Transition Skeleton Overlay */ -}}
         <div id="page-skeleton-overlay" aria-hidden="true">
-            <div class="psk-header">
-                <div class="psk-block" style="width:120px;height:22px;border-radius:4px;"></div>
-                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;margin-left:auto;"></div>
-                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
-                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
+            <div class="psk-header-wrap">
+                <div class="psk-header">
+                    <div class="psk-block" style="width:120px;height:22px;border-radius:4px;"></div>
+                    <div class="psk-block" style="width:60px;height:16px;border-radius:4px;margin-left:auto;"></div>
+                    <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
+                    <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
+                </div>
             </div>
             <div class="psk-body">
                 <div class="psk-block" style="width:45%;height:28px;border-radius:4px;align-self:flex-start;"></div>
@@ -118,6 +120,18 @@
                 hideSkeleton();
             }
         })();
+        </script>
+
+        {{- /* Global Reading Progress Bar */ -}}
+        <div id="reading-progress" style="position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, #4d74eb 0%, #4d74eb 70%, #ec4899 70%, #ec4899 100%); z-index: 9999; width: 0%; transition: width 0.1s ease-out;"></div>
+        <script>
+          window.addEventListener('scroll', function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (height > 0) ? (winScroll / height) * 100 : 0;
+            var bar = document.getElementById('reading-progress');
+            if (bar) bar.style.width = scrolled + '%';
+          });
         </script>
 
         {{- /* Body wrapper */ -}}

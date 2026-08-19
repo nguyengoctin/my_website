@@ -56,9 +56,9 @@ enableEmoji = true
   [[menu.main]]
     weight = 2
     identifier = "posts"
-    name = "Blog"
+    name = "Notes"
     url = "/posts/"
-    title = "Blog Posts"
+    title = "Technical Notes"
 
   [[menu.main]]
     weight = 3
@@ -109,9 +109,9 @@ enableEmoji = true
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = "Nguyễn Ngọc Tín"
       pre = ""
-      post = ""
+      name = 'Ngọc Tín <span class="nav-site-pink">Site</span>'
+      post = '<span class="nav-blue">&lt;/</span><span class="nav-pink">&gt;</span>'
       typeit = false
 
   # Footer config

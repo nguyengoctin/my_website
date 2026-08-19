@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>LLM - Tag - Nguyen Ngoc Tin</title>
-        <link>https://ngoctin.me/tags/llm/</link>
+        <link>http://localhost:1313/tags/llm/</link>
         <description>LLM - Tag - Nguyen Ngoc Tin</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
-            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ngoctin.me/tags/llm/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster><lastBuildDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/llm/" rel="self" type="application/rss+xml" /><item>
     <title>LLMs</title>
-    <link>https://ngoctin.me/ai-engineer/02-llm-fundamentals/large-language-model-llm/</link>
+    <link>http://localhost:1313/ai-engineer/02-llm-fundamentals/large-language-model-llm/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/02-llm-fundamentals/large-language-model-llm/</guid>
+    <guid>http://localhost:1313/ai-engineer/02-llm-fundamentals/large-language-model-llm/</guid>
     <description><![CDATA[LLMs, hay Large Language Models, là các mô hình AI tiên tiến được huấn luyện trên các tập dữ liệu khổng lồ để hiểu và tạo ra văn bản giống con người.]]></description>
 </item>
 <item>
     <title>Tokens in Large Language Models</title>
-    <link>https://ngoctin.me/ai-engineer/02-llm-fundamentals/tokens/</link>
+    <link>http://localhost:1313/ai-engineer/02-llm-fundamentals/tokens/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/02-llm-fundamentals/tokens/</guid>
+    <guid>http://localhost:1313/ai-engineer/02-llm-fundamentals/tokens/</guid>
     <description><![CDATA[Tokens là các đơn vị văn bản cơ bản mà LLMs xử lý, được tạo ra bằng cách chia văn bản thành các thành phần nhỏ hơn như từ, từ con hoặc ký tự.]]></description>
 </item>
 <item>
     <title>How LLMs Work</title>
-    <link>https://ngoctin.me/ai-engineer/02-llm-fundamentals/how-llms-work/</link>
+    <link>http://localhost:1313/ai-engineer/02-llm-fundamentals/how-llms-work/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/02-llm-fundamentals/how-llms-work/</guid>
+    <guid>http://localhost:1313/ai-engineer/02-llm-fundamentals/how-llms-work/</guid>
     <description><![CDATA[Các mô hình ngôn ngữ lớn (LLMs) là các hệ thống AI tinh vi được huấn luyện trên lượng lớn dữ liệu văn bản để hiểu, tạo và thao tác ngôn ngữ con người.]]></description>
 </item>
 <item>
     <title>Open vs Closed Source Models</title>
-    <link>https://ngoctin.me/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/</link>
+    <link>http://localhost:1313/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/</guid>
+    <guid>http://localhost:1313/ai-engineer/02-llm-fundamentals/closed-vs-open-source-models/</guid>
     <description><![CDATA[Các mô hình mã nguồn mở có sẵn miễn phí để tùy chỉnh và cộng tác, thúc đẩy tính minh bạch và linh hoạt, trong khi các mô hình đóng là độc quyền, mang lại sự dễ sử dụng nhưng hạn chế sửa đổi và tính minh bạch.]]></description>
 </item>
 <item>
     <title>Sampling Parameters</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/sampling-parameters/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/sampling-parameters/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/sampling-parameters/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/sampling-parameters/</guid>
     <description><![CDATA[Sampling parameters là các cài đặt kiểm soát tính ngẫu nhiên và sự sáng tạo của văn bản được tạo bởi LLM.]]></description>
 </item>
 <item>
     <title>Temperature</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/temperature/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/temperature/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/temperature/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/temperature/</guid>
     <description><![CDATA[Temperature là một tham số được sử dụng trong các language models để kiểm soát tính ngẫu nhiên của văn bản được tạo ra.]]></description>
 </item>
 <item>
     <title>External Memory</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/external-memory/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/external-memory/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/external-memory/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/external-memory/</guid>
     <description><![CDATA[External memory, trong ngữ cảnh của các large language models (LLMs), đề cập đến các cơ chế cho phép các model này truy cập và sử dụng thông tin được lưu trữ bên ngoài các tham số nội bộ của chúng.]]></description>
 </item>
 <item>
     <title>RAG and Dynamic Filters</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/rag-dynamic-filters/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/rag-dynamic-filters/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/rag-dynamic-filters/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/rag-dynamic-filters/</guid>
     <description><![CDATA[Retrieval-Augmented Generation (RAG) tăng cường các Large Language Models (LLMs) bằng cách cung cấp cho chúng thông tin liên quan, cập nhật từ các nguồn bên ngoài.]]></description>
 </item>
 <item>
     <title>Context Compaction</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/context-compaction/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/context-compaction/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/context-compaction/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/context-compaction/</guid>
     <description><![CDATA[Context compaction là một kỹ thuật được sử dụng để giảm độ dài của ngữ cảnh được cung cấp cho một large language model (LLM) mà không làm mất đi thông tin liên quan.]]></description>
 </item>
 <item>
     <title>Context Isolation</title>
-    <link>https://ngoctin.me/ai-engineer/03-prompt-engineering/context-isolation/</link>
+    <link>http://localhost:1313/ai-engineer/03-prompt-engineering/context-isolation/</link>
     <pubDate>Sat, 01 Aug 2026 00:00:00 &#43;0000</pubDate>
     <author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-    <guid>https://ngoctin.me/ai-engineer/03-prompt-engineering/context-isolation/</guid>
+    <guid>http://localhost:1313/ai-engineer/03-prompt-engineering/context-isolation/</guid>
     <description><![CDATA[Context isolation là việc giữ cho các tác vụ hoặc lĩnh vực kiến thức khác nhau tách biệt khi làm việc với các large language models (LLMs).]]></description>
 </item>
 </channel>

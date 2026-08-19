@@ -2,75 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Nguyen Ngoc Tin</title>
-    <link>https://ngoctin.me/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Nguyen Ngoc Tin</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</managingEditor>
     <webMaster>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</webMaster>
     <lastBuildDate>Tue, 18 Aug 2026 18:32:00 +0700</lastBuildDate>
-    <atom:link href="https://ngoctin.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech Blog</title>
-      <link>https://ngoctin.me/categories/tech-blog/</link>
+      <link>http://localhost:1313/categories/tech-blog/</link>
       <pubDate>Tue, 18 Aug 2026 18:32:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/tech-blog/</guid>
+      <guid>http://localhost:1313/categories/tech-blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Cheatsheets</title>
-      <link>https://ngoctin.me/categories/cheatsheets/</link>
+      <link>http://localhost:1313/categories/cheatsheets/</link>
       <pubDate>Tue, 18 Aug 2026 09:43:03 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/cheatsheets/</guid>
+      <guid>http://localhost:1313/categories/cheatsheets/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>https://ngoctin.me/categories/resources/</link>
+      <link>http://localhost:1313/categories/resources/</link>
       <pubDate>Tue, 18 Aug 2026 08:24:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/resources/</guid>
+      <guid>http://localhost:1313/categories/resources/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Engineer</title>
-      <link>https://ngoctin.me/categories/ai-engineer/</link>
+      <link>http://localhost:1313/categories/ai-engineer/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/ai-engineer/</guid>
+      <guid>http://localhost:1313/categories/ai-engineer/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>https://ngoctin.me/categories/automation/</link>
+      <link>http://localhost:1313/categories/automation/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/automation/</guid>
+      <guid>http://localhost:1313/categories/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Backend</title>
-      <link>https://ngoctin.me/categories/backend/</link>
+      <link>http://localhost:1313/categories/backend/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/backend/</guid>
+      <guid>http://localhost:1313/categories/backend/</guid>
       <description></description>
     </item>
     <item>
       <title>Quotes</title>
-      <link>https://ngoctin.me/categories/quotes/</link>
+      <link>http://localhost:1313/categories/quotes/</link>
       <pubDate>Wed, 29 Jul 2026 17:15:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/quotes/</guid>
+      <guid>http://localhost:1313/categories/quotes/</guid>
       <description></description>
     </item>
     <item>
       <title>Mindset</title>
-      <link>https://ngoctin.me/categories/mindset/</link>
+      <link>http://localhost:1313/categories/mindset/</link>
       <pubDate>Wed, 29 Jul 2026 16:30:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/mindset/</guid>
+      <guid>http://localhost:1313/categories/mindset/</guid>
       <description></description>
     </item>
     <item>
       <title>Think</title>
-      <link>https://ngoctin.me/categories/think/</link>
+      <link>http://localhost:1313/categories/think/</link>
       <pubDate>Sun, 26 Jul 2026 22:50:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
-      <guid>https://ngoctin.me/categories/think/</guid>
+      <guid>http://localhost:1313/categories/think/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/categories/projects/</link>
+      <pubDate>Wed, 01 Apr 2026 10:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/categories/projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/categories/web-development/</link>
+      <pubDate>Wed, 01 Apr 2026 10:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/categories/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Engineering</title>
+      <link>http://localhost:1313/categories/ai-engineering/</link>
+      <pubDate>Fri, 20 Mar 2026 10:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Architecture</title>
+      <link>http://localhost:1313/categories/system-architecture/</link>
+      <pubDate>Sun, 15 Mar 2026 10:00:00 +0700</pubDate><author>ngoctin.work@gmail.com (Nguyen Ngoc Tin)</author>
+      <guid>http://localhost:1313/categories/system-architecture/</guid>
       <description></description>
     </item>
   </channel>
