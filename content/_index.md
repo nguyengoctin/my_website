@@ -98,8 +98,8 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
     <div class="timeline-right">
       <h3 class="timeline-title">Bachelor of Information Technology</h3>
       <div class="timeline-desc">
-        Major: <strong>Information Systems</strong> &nbsp;•&nbsp; Cumulative GPA: <strong>7.58 / 10.0</strong> &nbsp;•&nbsp; TOEIC: <strong>625 / 990</strong>
-        <br>
+        Major: <strong>Information Systems</strong><br>
+        Cumulative GPA: <strong>2.96 / 4.0</strong> (7.58 / 10.0) &nbsp;•&nbsp; TOEIC: <strong>625 / 990</strong><br>
         Studied core foundations in Software Engineering, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
       </div>
       <div class="timeline-tags">
@@ -146,6 +146,38 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
 
 <div class="timeline-box">
 
+  <!-- Project 1: Zalo Mini App Online Ordering -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/zalo-logo.svg" alt="Zalo Mini App Logo" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Zalo Mini App</span>
+        <span class="timeline-time">Aug 2026 — Present</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        Online Menu and Ordering Platform (Zalo Mini App)
+      </h3>
+      <div class="timeline-desc">
+        An online menu browsing and food ordering application engineered for restaurants and food businesses on the Zalo Mini App ecosystem, powered by a Python and Django backend.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Django</span>
+        <span class="timeline-tag">Python</span>
+        <span class="timeline-tag">Zalo Mini App</span>
+        <span class="timeline-tag">React</span>
+        <span class="timeline-tag">TypeScript</span>
+        <span class="timeline-tag">PostgreSQL</span>
+        <span class="timeline-tag">RESTful API</span>
+        <span class="timeline-tag">TailwindCSS</span>
+      </div>
+      <div class="timeline-links">
+        <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600; color: #d97706; background: rgba(245, 158, 11, 0.12); padding: 0.18rem 0.6rem; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.25);"><i class="fas fa-hammer"></i> In Active Development</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Project 1: Lexi -->
   <div class="timeline-row">
     <div class="timeline-left">
@@ -172,7 +204,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
         <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/lexi-ai-english-tutor/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="/posts/lexi-ai-english-tutor/"><i class="fas fa-file-alt"></i> Read More</a>
         <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
       </div>
     </div>
@@ -181,7 +213,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Project 2: Bilingual Movie Learning Platform -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/movie-logo.svg" alt="Movie Learn Logo" class="timeline-logo">
+      <img src="/images/movie-logo.png" alt="Movie Learn Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Movie Learn</span>
         <span class="timeline-time">Mar 2026 — Present</span>
@@ -204,7 +236,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
         <span class="timeline-tag">Docker</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bilingual-movie-learning-platform/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="/posts/bilingual-movie-learning-platform/"><i class="fas fa-file-alt"></i> Read More</a>
         <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
       </div>
     </div>
@@ -213,7 +245,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Project 3: Ngọc Tín Site -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/logo.png" alt="Ngọc Tín Site Logo" class="timeline-logo">
+      <img src="/images/og-cover.png" alt="Ngọc Tín Site Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Ngọc Tín Site</span>
         <span class="timeline-time">2026 — Present</span>
@@ -235,7 +267,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
         <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/personal-hugo-technical-blog/"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="/posts/personal-hugo-technical-blog/"><i class="fas fa-file-alt"></i> Read More</a>
         <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
         <a href="https://ngoctin.me" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
       </div>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120">
+  <style>
+    .zalo-bold { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 76px; font-weight: 800; fill: #0068ff; }
+    .zalo-light { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 76px; font-weight: 300; fill: #0068ff; letter-spacing: -0.5px; }
+  </style>
+  <text x="10" y="88">
+    <tspan class="zalo-bold">Zalo</tspan>
+    <tspan dx="16" class="zalo-light">MiniApp</tspan>
+  </text>
+</svg>

@@ -193,21 +193,24 @@ main.main > .container {
 .cv-loading {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    gap: 1.1rem;
+    padding: 2.5rem 2rem;
     width: 100%;
-    min-height: 60vh;
+    aspect-ratio: 612 / 792;
+    min-height: 920px;
     background: #ffffff;
     border-radius: 4px;
     border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
 }
 
 [theme=dark] .cv-loading {
     background: #18181b;
     border-color: #27272a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .cv-skeleton-line {
@@ -232,15 +235,42 @@ main.main > .container {
 <div class="page">
     <!-- Skeleton Loading Screen -->
     <div id="cv-skeleton" class="cv-loading">
-        <div class="cv-skeleton-line" style="width: 40%; height: 28px; margin-bottom: 0.5rem;"></div>
-        <div class="cv-skeleton-line" style="width: 60%; height: 16px;"></div>
-        <div class="cv-skeleton-line" style="width: 100%; height: 18%; margin: 1rem 0;"></div>
-        <div class="cv-skeleton-line" style="width: 90%; height: 16px;"></div>
-        <div class="cv-skeleton-line" style="width: 75%; height: 16px;"></div>
-        <div class="cv-skeleton-line" style="width: 100%; height: 18%; margin-top: 1rem;"></div>
-        <div class="cv-skeleton-line" style="width: 85%; height: 16px;"></div>
-        <div class="cv-skeleton-line" style="width: 70%; height: 16px;"></div>
-        <span style="font-family: Lora, serif; font-size: 0.85rem; color: #828282; margin-top: auto;"><i class="fas fa-circle-notch fa-spin"></i> Đang tải CV PDF...</span>
+        <!-- Header Section -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+            <div class="cv-skeleton-line" style="width: 38%; height: 26px;"></div>
+            <div class="cv-skeleton-line" style="width: 65%; height: 14px;"></div>
+            <div class="cv-skeleton-line" style="width: 50%; height: 13px;"></div>
+        </div>
+        <div class="cv-skeleton-line" style="width: 100%; height: 2px; margin-bottom: 0.3rem;"></div>
+
+        <!-- Section 1: Summary -->
+        <div class="cv-skeleton-line" style="width: 25%; height: 18px;"></div>
+        <div class="cv-skeleton-line" style="width: 98%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 94%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 82%; height: 13px; margin-bottom: 0.4rem;"></div>
+
+        <!-- Section 2: Experiences -->
+        <div class="cv-skeleton-line" style="width: 30%; height: 18px;"></div>
+        <div class="cv-skeleton-line" style="width: 88%; height: 14px;"></div>
+        <div class="cv-skeleton-line" style="width: 96%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 92%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 85%; height: 13px; margin-bottom: 0.4rem;"></div>
+
+        <!-- Section 3: Projects -->
+        <div class="cv-skeleton-line" style="width: 28%; height: 18px;"></div>
+        <div class="cv-skeleton-line" style="width: 85%; height: 14px;"></div>
+        <div class="cv-skeleton-line" style="width: 95%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 90%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 78%; height: 13px; margin-bottom: 0.4rem;"></div>
+
+        <!-- Section 4: Education & Skills -->
+        <div class="cv-skeleton-line" style="width: 26%; height: 18px;"></div>
+        <div class="cv-skeleton-line" style="width: 90%; height: 13px;"></div>
+        <div class="cv-skeleton-line" style="width: 80%; height: 13px;"></div>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: auto; padding-top: 1rem; font-family: Lora, serif; font-size: 0.85rem; color: #828282;">
+            <i class="fas fa-circle-notch fa-spin"></i> Đang tải CV PDF...
+        </div>
     </div>
 
     <!-- CV Canvas Container -->
