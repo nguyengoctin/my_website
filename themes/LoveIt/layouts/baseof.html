@@ -30,6 +30,96 @@
 
         <div id="mask"></div>
 
+        {{- /* Page Transition Skeleton Overlay */ -}}
+        <div id="page-skeleton-overlay" aria-hidden="true">
+            <div class="psk-header">
+                <div class="psk-block" style="width:120px;height:22px;border-radius:4px;"></div>
+                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;margin-left:auto;"></div>
+                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
+                <div class="psk-block" style="width:60px;height:16px;border-radius:4px;"></div>
+            </div>
+            <div class="psk-body">
+                <div class="psk-block" style="width:45%;height:28px;border-radius:4px;align-self:flex-start;"></div>
+                <div class="psk-card">
+                    <div class="psk-block" style="height:20px;width:75%;"></div>
+                    <div class="psk-block" style="height:14px;width:40%;"></div>
+                    <div class="psk-block" style="height:14px;width:95%;"></div>
+                    <div class="psk-block" style="height:14px;width:85%;"></div>
+                </div>
+                <div class="psk-card">
+                    <div class="psk-block" style="height:20px;width:65%;"></div>
+                    <div class="psk-block" style="height:14px;width:40%;"></div>
+                    <div class="psk-block" style="height:14px;width:90%;"></div>
+                    <div class="psk-block" style="height:14px;width:80%;"></div>
+                </div>
+                <div class="psk-card">
+                    <div class="psk-block" style="height:20px;width:70%;"></div>
+                    <div class="psk-block" style="height:14px;width:38%;"></div>
+                    <div class="psk-block" style="height:14px;width:88%;"></div>
+                    <div class="psk-block" style="height:14px;width:78%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        (function () {
+            var overlay = document.getElementById('page-skeleton-overlay');
+            var hideTimer = null;
+
+            function showSkeleton() {
+                if (!overlay) return;
+                clearTimeout(hideTimer);
+                overlay.classList.add('visible');
+            }
+
+            function hideSkeleton() {
+                if (!overlay) return;
+                overlay.classList.remove('visible');
+            }
+
+            // Hiện skeleton khi click link nội bộ (không phải anchor, không phải external, không phải download)
+            document.addEventListener('click', function (e) {
+                var target = e.target.closest('a[href]');
+                if (!target) return;
+                var href = target.getAttribute('href');
+                if (!href) return;
+
+                // Bỏ qua: link ngoài, anchor, javascript:, download, ctrl+click, middle click
+                if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+                if (target.hasAttribute('download')) return;
+                if (target.getAttribute('target') === '_blank') return;
+                if (href.startsWith('javascript:')) return;
+                if (href.startsWith('#')) return;
+                if (href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+                // Chỉ link cùng origin
+                try {
+                    var url = new URL(href, window.location.origin);
+                    if (url.origin !== window.location.origin) return;
+                    if (url.pathname === window.location.pathname && url.hash) return;
+                } catch (err) { return; }
+
+                showSkeleton();
+
+                // Safety fallback: ẩn sau 4s nếu navigate không xảy ra
+                hideTimer = setTimeout(hideSkeleton, 4000);
+            });
+
+            // Ẩn skeleton khi page mới đã load (bao gồm back/forward cache)
+            window.addEventListener('pageshow', function () {
+                clearTimeout(hideTimer);
+                hideSkeleton();
+            });
+
+            // Ẩn khi DOM đã sẵn sàng (phòng trường hợp bfcache)
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', hideSkeleton);
+            } else {
+                hideSkeleton();
+            }
+        })();
+        </script>
+
         {{- /* Body wrapper */ -}}
         <div class="wrapper">
             {{- partial "header.html" . -}}

@@ -1117,3 +1117,108 @@ img.lazyloaded {
   }
 }
 
+// ==========================================================
+// Page Transition Skeleton Overlay
+// Hiện khi user click link nội bộ, ẩn sau khi page load
+// ==========================================================
+
+#page-skeleton-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+
+  [theme=dark] & {
+    background: #1c1d22;
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// Header skeleton bar
+.psk-header {
+  width: 100%;
+  height: 56px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  [theme=dark] & {
+    border-bottom-color: #2d2f38;
+  }
+}
+
+// Body skeleton area
+.psk-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 2rem;
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+// Skeleton shimmer block shared
+.psk-block {
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 25%,
+    rgba(0, 0, 0, 0.11) 37%,
+    rgba(0, 0, 0, 0.05) 63%
+  );
+  background-size: 400% 100%;
+  animation: pskShimmer 1.3s ease infinite;
+  flex-shrink: 0;
+
+  [theme=dark] & {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 25%,
+      rgba(255, 255, 255, 0.09) 37%,
+      rgba(255, 255, 255, 0.04) 63%
+    );
+    background-size: 400% 100%;
+  }
+}
+
+@keyframes pskShimmer {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+// Post card skeleton
+.psk-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+
+  [theme=dark] & {
+    border-bottom-color: #2d2f38;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
