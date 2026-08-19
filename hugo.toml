@@ -89,6 +89,11 @@ enableEmoji = true
   description = "Personal website and blog of Nguyen Ngoc Tin"
   images = ["/images/og-cover.png"]
 
+  # SEO & Social Open Graph config (Facebook, LinkedIn, Twitter, Zalo)
+  [params.seo]
+    image = "/images/og-cover.png"
+    thumbnailUrl = "/images/og-cover.png"
+
   # App config & Favicon
   [params.app]
     title = "Nguyen Ngoc Tin"
