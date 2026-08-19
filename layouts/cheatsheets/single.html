@@ -224,9 +224,6 @@ main.main {
         font-weight: 600;
         opacity: 0.85;
     }
-    .stpageflip-page {
-        cursor: default !important;
-    }
 
     /* Mobile Single Page Skeleton */
     .skeleton-book {
@@ -354,7 +351,7 @@ main.main {
 /* StPageFlip Official CSS Rules */
 .stpageflip-page {
     background-color: #ffffff;
-    cursor: zoom-in;
+    cursor: pointer;
 }
 
 /* --- Smart Zoom Single Page HD Viewer Specs --- */
@@ -668,11 +665,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             pageDiv.appendChild(canvas);
             container.appendChild(pageDiv);
 
-            // Double click page to open Smart Zoom Pro Reader
-            pageDiv.addEventListener('dblclick', (e) => {
-                e.stopPropagation();
-                openSmartZoomSingleModal(i);
-            });
         }
 
         // Render first 4 visible pages immediately to ensure instantaneous display
