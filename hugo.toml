@@ -21,6 +21,33 @@ enableEmoji = true
   category = "categories"
   tag = "tags"
 
+# Module Mounts: Expose static/images to Hugo Asset Pipeline for Image Processing
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+
 # Outputs required for Lunr search indexing
 [outputs]
   home = ["HTML", "RSS", "JSON"]

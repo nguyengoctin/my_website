@@ -19,27 +19,22 @@ Currently building practical side-projects, deep-diving into backend performance
 
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
 
-Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories), check out my [GitHub](https://github.com/ngoctinn), or connect with me on [LinkedIn](https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/)!
-
----
-
-## CONTACT
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 0.8rem;">
-  <div>
-    <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 2;">
-      <li><i class="fab fa-github" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">github.com/ngoctinn</a></li>
-      <li><i class="fab fa-linkedin" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">linkedin.com/in/tin-nguyen-ngoc</a></li>
-      <li><i class="fab fa-facebook" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">facebook.com/tin.nguyenngoc.56808</a></li>
-      <li><i class="fas fa-envelope" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a></li>
-      <li><i class="fas fa-comment-dots" style="color: #424242; width: 1.2rem; text-align: center; margin-right: 0.4rem;"></i> <a href="tel:0397662903">0397662903</a> <span style="font-size: 0.85rem; color: #828282;">(Zalo only)</span></li>
-    </ul>
-  </div>
-  <div class="contact-info-right" style="border-left: 1px solid #f0f0f0; padding-left: 1.5rem; font-size: 0.92rem; line-height: 1.9;">
-    <div><strong>Location:</strong> Ho Chi Minh City, Vietnam</div>
-    <div><strong>Status:</strong> Available for Backend Engineer, AI Engineer, and Cloud Engineer roles</div>
-    <div><strong>Timezone:</strong> ICT (UTC+7)</div>
-  </div>
+<div class="about-contact-row" style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+  <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email me">
+    <i class="fas fa-envelope"></i> ngoctin.work@gmail.com
+  </a>
+  <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener" class="contact-chip" title="Facebook">
+    <i class="fab fa-facebook"></i> Facebook
+  </a>
+  <a href="tel:0397662903" class="contact-chip" title="Phone or Zalo">
+    <i class="fas fa-comment-dots"></i> 0397662903 <span class="chip-sub">Zalo</span>
+  </a>
 </div>
 
 ---
@@ -51,7 +46,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Experience 1: FCAJ AWS -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/aws-logo.svg" alt="AWS Logo" class="timeline-logo">
+      <img src="/images/aws-logo.webp" alt="First Cloud AI Journey AWS Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">First Cloud AI Journey</span>
         <span class="timeline-time">Mar — May 2026</span>
@@ -89,7 +84,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Education 1: Saigon University -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/sgu-logo.png" alt="Saigon University Logo" class="timeline-logo">
+      <img src="/images/sgu-logo.webp" alt="Saigon University Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Saigon University</span>
         <span class="timeline-time">2021 — Jun 2026</span>
@@ -117,7 +112,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Education 2: Self-learning -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/study-icon-25.png" alt="Self-learning Icon" class="timeline-logo">
+      <img src="/images/study-icon-25.webp" alt="Self-learning Icon" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Self-learning</span>
         <span class="timeline-time">2021 — present</span>
@@ -182,7 +177,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Project 1: Lexi -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/lexi-logo.png" alt="Lexi Logo" class="timeline-logo">
+      <img src="/images/lexi-logo.webp" alt="Lexi Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Lexi</span>
         <span class="timeline-time">Mar — May 2026</span>
@@ -214,7 +209,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Project 2: Bilingual Movie Learning Platform -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/movie-logo.png" alt="Movie Learn Logo" class="timeline-logo">
+      <img src="/images/movie-logo.webp" alt="Movie Learn Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Movie Learn</span>
         <span class="timeline-time">Mar 2026 — Present</span>
@@ -246,7 +241,7 @@ Feel free to explore my [Projects](https://github.com/ngoctinn?tab=repositories)
   <!-- Project 3: Ngọc Tín Site -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/og-cover.png" alt="Ngọc Tín Site Cover" class="timeline-logo">
+      <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Ngọc Tín Site</span>
         <span class="timeline-time">2026 — Present</span>
