@@ -60,6 +60,24 @@
             </div>
         </div>
     </div>
+    <script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.getElementById('search-toggle-desktop');
+            var input = document.getElementById('search-input-desktop');
+            var header = document.getElementById('header-desktop');
+            if (toggle && input) {
+                toggle.addEventListener('click', function(e) {
+                    if (header) header.classList.add('open');
+                    setTimeout(function() {
+                        input.focus();
+                        input.select();
+                    }, 40);
+                });
+            }
+        });
+    })();
+    </script>
 </header>
 
 {{- /* Mobile header */ -}}

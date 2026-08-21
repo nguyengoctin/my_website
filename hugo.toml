@@ -143,7 +143,7 @@ enableEmoji = true
       logo = ""
       pre = ""
       name = 'Ngọc Tín <span class="nav-site-pink">Site</span>'
-      post = '<span class="nav-blue">&lt;/</span><span class="nav-pink">&gt;</span>'
+      post = ""
       typeit = false
 
   # Footer config

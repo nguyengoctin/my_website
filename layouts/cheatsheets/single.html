@@ -27,7 +27,7 @@ html, body {
 }
 main.main {
     margin-top: 0 !important;
-    padding: 0.5rem !important;
+    padding: 0 !important;
     height: 100vh !important;
     height: 100dvh !important;
     box-sizing: border-box;
@@ -62,13 +62,20 @@ main.main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0;
     width: 100%;
     height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
 }
 
-/* Left Integrated Dock: Contains Back button, Navigation Page control, Download */
+/* Left Integrated Dock: Floating on Left, does not steal width or create gaps */
 .cheatsheet-left-dock {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,11 +85,12 @@ main.main {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-    height: calc(100vh - 1.5rem);
-    height: calc(100dvh - 1.5rem);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    height: auto;
+    max-height: calc(100vh - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
     box-sizing: border-box;
-    z-index: 10;
+    z-index: 20;
     transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
@@ -704,10 +712,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             pageWidth = targetWidth;
             pageHeight = targetHeight;
         } else {
-            pageHeight = Math.floor(window.innerHeight * 0.94);
+            // Desktop: 100% full chiều cao màn hình từ mép trên xuống mép dưới
+            pageHeight = window.innerHeight;
             pageWidth = Math.round(pageHeight / pdfAspectRatio);
 
-            const availableWidth = Math.min(window.innerWidth - 120, 1600);
+            const availableWidth = window.innerWidth;
             if (pageWidth * 2 > availableWidth) {
                 pageWidth = Math.floor(availableWidth / 2);
                 pageHeight = Math.round(pageWidth * pdfAspectRatio);
