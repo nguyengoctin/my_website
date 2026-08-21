@@ -490,33 +490,61 @@ hr {
   }
 }
 
-// 6. Markdown Blockquotes (>) - Clean, Readable Editorial Style for Conclusions / Notes
-blockquote:not(.custom-quote) {
+// ==========================================================
+// 6. Unified Modern Quote & Blockquote Card Styling
+// ==========================================================
+blockquote,
+.custom-quote {
+  position: relative !important;
   font-family: "Lora", Georgia, serif !important;
-  color: #334155 !important;
+  color: #1e293b !important;
   text-align: left !important;
   border: none !important;
-  border-left: 3.5px solid #4d74eb !important;
-  padding: 0.75rem 1.2rem !important;
-  margin: 1.35rem 0 !important;
-  font-size: 1rem !important;
+  padding: 1.35rem 1.65rem 1.25rem 1.65rem !important;
+  margin: 1.75rem 0 !important;
+  font-size: 1.05rem !important;
   font-weight: 400 !important;
-  line-height: 1.7 !important;
+  line-height: 1.75 !important;
   font-style: normal !important;
-  background-color: #f8fafc !important;
-  border-radius: 0 6px 6px 0 !important;
+  background-color: #edf2f7 !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+
+  // Floating Oversized Quote Mark at Top-Left Corner
+  &::before {
+    content: "\f10d"; // FontAwesome fa-quote-left
+    font-family: "Font Awesome 5 Free", "FontAwesome" !important;
+    font-weight: 900 !important;
+    position: absolute !important;
+    top: -13px !important;
+    left: 18px !important;
+    font-size: 1.4rem !important;
+    line-height: 1 !important;
+    color: #94a3b8 !important;
+    background: transparent !important;
+    z-index: 2 !important;
+  }
 
   [theme=dark] & {
     color: #e2e8f0 !important;
-    border-left-color: #60a5fa !important;
-    background-color: rgba(255, 255, 255, 0.04) !important;
+    background-color: #23252d !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+
+    &::before {
+      color: #64748b !important;
+    }
   }
 
-  p {
-    margin-bottom: 0 !important;
-    line-height: 1.7 !important;
+  p, .quote-content {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.75 !important;
     color: inherit !important;
     font-style: normal !important;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
   }
 
   strong {
@@ -527,43 +555,14 @@ blockquote:not(.custom-quote) {
       color: #f8fafc !important;
     }
   }
-}
 
-// 6b. Shortcode Quote ({{< quote >}}) - Beautiful Callout Quote with Author
-.custom-quote {
-  font-family: "Lora", Georgia, serif !important;
-  margin: 1.35rem 0 !important;
-  padding: 0.95rem 1.35rem !important;
-  border-left: 4px solid #4d74eb !important;
-  background: rgba(77, 116, 235, 0.05) !important;
-  border-radius: 0 6px 6px 0 !important;
-  text-align: left !important;
-
-  [theme=dark] & {
-    background: rgba(77, 116, 235, 0.1) !important;
-    border-left-color: #60a5fa !important;
-  }
-
-  p {
-    margin: 0 0 0.45rem 0 !important;
-    font-size: 1.125rem !important;
-    line-height: 1.65 !important;
-    font-style: italic !important;
-    text-align: left !important;
-    color: #1e293b !important;
-
-    [theme=dark] & {
-      color: #e2e8f0 !important;
-    }
-  }
-
-  footer {
+  footer, .quote-footer {
     font-style: normal !important;
     text-align: right !important;
     font-weight: 600 !important;
     color: #4d74eb !important;
     font-size: 0.9rem !important;
-    margin-top: 0.35rem !important;
+    margin-top: 0.65rem !important;
 
     [theme=dark] & {
       color: #818cf8 !important;

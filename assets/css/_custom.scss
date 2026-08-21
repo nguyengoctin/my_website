@@ -218,3 +218,101 @@
    MASONRY GRID FOR CATEGORIES (Stacked Columns)
    ========================================================================== */
 /* Masonry Layout styling relies on flexbox defined in layout template */
+
+/* ==========================================================================
+   MODERN MINIMAL QUOTE & BLOCKQUOTE CARD STYLING (MATCH USER DESIGN)
+   ========================================================================== */
+.single .content blockquote,
+.content blockquote,
+blockquote,
+.custom-quote,
+.admonition.quote {
+    position: relative !important;
+    font-family: "Lora", Georgia, serif !important;
+    color: #1e293b !important;
+    text-align: left !important;
+    border: none !important;
+    border-left: none !important;
+    padding: 1.35rem 1.65rem 1.25rem 1.65rem !important;
+    margin: 1.75rem 0 !important;
+    font-size: 1.05rem !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    font-style: normal !important;
+    background-color: #eef2f6 !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+
+    // Floating Oversized Quote Mark at Top-Left Corner
+    &::before {
+        content: "\f10d" !important; // FontAwesome fa-quote-left
+        font-family: "Font Awesome 5 Free", "FontAwesome" !important;
+        font-weight: 900 !important;
+        position: absolute !important;
+        top: -13px !important;
+        left: 18px !important;
+        font-size: 1.4rem !important;
+        line-height: 1 !important;
+        color: #94a3b8 !important;
+        background: transparent !important;
+        z-index: 2 !important;
+    }
+
+    [theme=dark] & {
+        color: #e2e8f0 !important;
+        background-color: #23252d !important;
+        border: 1px solid rgba(255, 255, 255, 0.06) !important;
+
+        &::before {
+            color: #64748b !important;
+        }
+    }
+
+    p, .quote-content, .admonition-content {
+        margin-top: 0 !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.75 !important;
+        color: inherit !important;
+        font-style: normal !important;
+        font-size: inherit !important;
+        padding: 0 !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    strong {
+        color: #0f172a !important;
+        font-weight: 600 !important;
+
+        [theme=dark] & {
+            color: #f8fafc !important;
+        }
+    }
+
+    footer, .quote-footer {
+        font-style: normal !important;
+        text-align: right !important;
+        font-weight: 600 !important;
+        color: #4d74eb !important;
+        font-size: 0.9rem !important;
+        margin-top: 0.65rem !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+
+        [theme=dark] & {
+            color: #818cf8 !important;
+        }
+
+        cite {
+            font-style: normal !important;
+        }
+    }
+
+    .admonition-title {
+        display: none !important;
+    }
+}
