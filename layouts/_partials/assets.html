@@ -1,0 +1,17 @@
+{{- $isCheatsheet := and (eq .Kind "page") (eq .Section "cheatsheets") -}}
+{{- if not $isCheatsheet -}}
+    {{- partial "assets-default.html" . -}}
+{{- else -}}
+    {{- /* Cheatsheet flipbook: chỉ tải asset thiết yếu (theme.js + config + script/style riêng của trang), bỏ search/lightgallery/KaTeX/sharer/clipboard/lazysizes... để tránh cạnh tranh băng thông & parse với render PDF */ -}}
+    {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+    {{- $config := dict -}}
+    {{- dict "Content" ($config | jsonify | printf "window.config=%s;") | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- dict "Source" "js/theme.js" "JSBuild" true "Minify" true "TargetPath" "js/theme.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- with (.Scratch.Get "this").scriptArr -}}
+        {{- delimit . "\n" | dict "Content" | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}
+    {{- end -}}
+    {{- range (.Scratch.Get "this").script -}}
+        {{- partial "plugin/script.html" . -}}
+    {{- end -}}
+    {{- partial "plugin/analytics.html" . -}}
+{{- end -}}

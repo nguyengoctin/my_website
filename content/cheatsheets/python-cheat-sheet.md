@@ -6,6 +6,6 @@ description: "Cheat sheet tóm tắt cú pháp Python, các cấu trúc dữ li�
 tags: ["Python", "Cheatsheet", "Data Science", "Scripting"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/python-cheat-sheet.pdf"
-pages_count: 2
+pages_count: 14
 icon: "fab fa-python"
 ---

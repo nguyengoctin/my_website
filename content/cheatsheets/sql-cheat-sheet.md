@@ -6,6 +6,6 @@ description: "Cheat sheet tra cứu nhanh các câu lệnh SQL căn bản đến
 tags: ["SQL", "Database", "Cheatsheet", "Query"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/sql-cheat-sheet.pdf"
-pages_count: 2
+pages_count: 11
 icon: "fas fa-database"
 ---

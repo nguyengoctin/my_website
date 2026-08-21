@@ -6,6 +6,6 @@ description: "Cheat sheet tổng hợp kiến thức Java cốt lõi, lập trì
 tags: ["Java", "OOP", "Cheatsheet", "Backend"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/java-cheat-sheet.pdf"
-pages_count: 2
+pages_count: 18
 icon: "fab fa-java"
 ---
