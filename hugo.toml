@@ -121,12 +121,12 @@ enableEmoji = true
   dateFormat = "2006-01-02"
   title = "Nguyễn Ngọc Tín"
   description = "Personal website and blog of Nguyen Ngoc Tin"
-  images = ["/images/og-cover.jpg"]
+  images = ["/images/og-cover.png"]
 
   # SEO & Social Open Graph config (Facebook, LinkedIn, Twitter, Zalo)
   [params.seo]
-    image = "/images/og-cover.jpg"
-    thumbnailUrl = "/images/og-cover.jpg"
+    image = "/images/og-cover.png"
+    thumbnailUrl = "/images/og-cover.png"
 
   # App config & Favicon
   [params.app]
