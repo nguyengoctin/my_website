@@ -1,29 +1,48 @@
 # Danh sách audio NotebookLM để nghe trên trang /listen/
 #
 # CÁCH THÊM AUDIO MỚI:
-#   1. Upload file lên Internet Archive item "suc-manh-co-san-pin-django-6"
-#      (hướng dẫn ở scripts/upload-notebooklm-audio.sh)
+#   1. Upload file lên Internet Archive item "NotebookLM-audio"
 #   2. Thêm 1 entry bên dưới với url là link file đã percent-encode:
-#      https://archive.org/download/suc-manh-co-san-pin-django-6/<ten-file>.m4a
+#      https://archive.org/download/NotebookLM-audio/<ten-file>.m4a
 #
 # url rỗng => entry vẫn hiển thị nhưng bị đánh dấu "chưa có link".
 
-- title: "Biến AI thành gia sư lập trình"
-  date: "2026-08-23"
-  size: "30 MB"
-  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/Bi%E1%BA%BFn_AI_th%C3%A0nh_gia_s%C6%B0_l%E1%BA%ADp_tr%C3%ACnh.m4a"
-
-- title: "Kiến trúc bộ não tác nhân AI"
+- title: "30 Agents Every AI Engineer Must Build"
   date: "2026-08-23"
   size: "36 MB"
-  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/Ki%E1%BA%BFn_tr%C3%BAc_b%E1%BB%99_n%C3%A3o_t%C3%A1c_nh%C3%A2n_AI.m4a"
+  url: "https://archive.org/download/NotebookLM-audio/30%20Agents%20Every%20AI%20Engineer%20Must%20Build.m4a"
 
-- title: "Sức mạnh có sẵn pin Django 6"
-  date: "2026-08-23"
-  size: "44 MB"
-  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/S%E1%BB%A9c_m%E1%BA%A1nh_c%C3%B3_s%E1%BA%B5n_pin_Django_6.m4a"
-
-- title: "Sự thật về nghề kỹ sư AI"
+- title: "AI Engineering – Chip Huyen"
   date: "2026-08-23"
   size: "33 MB"
-  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/S%E1%BB%B1_th%E1%BA%ADt_v%E1%BB%81_ngh%E1%BB%81_k%E1%BB%B9_s%C6%B0_AI.m4a"
+  url: "https://archive.org/download/NotebookLM-audio/AI%20Engineering%20-%20Chip%20Huyen.m4a"
+
+- title: "Bức xúc không làm ta vô can"
+  date: "2026-08-23"
+  size: "28 MB"
+  url: "https://archive.org/download/NotebookLM-audio/B%E1%BB%A9c%20x%C3%BAc%20kh%C3%B4ng%20l%C3%A0m%20ta%20v%C3%B4%20can.m4a"
+
+- title: "How to Be Yourself"
+  date: "2026-08-23"
+  size: "39 MB"
+  url: "https://archive.org/download/NotebookLM-audio/How%20to%20Be%20Yourself.m4a"
+
+- title: "Software Engineering at Google"
+  date: "2026-08-23"
+  size: "27 MB"
+  url: "https://archive.org/download/NotebookLM-audio/Software%20Engineering%20at%20Google.m4a"
+
+- title: "System Design Interview"
+  date: "2026-08-23"
+  size: "44 MB"
+  url: "https://archive.org/download/NotebookLM-audio/System_Design_Interview.m4a"
+
+- title: "Web Dev with an AI Sidekick"
+  date: "2026-08-23"
+  size: "30 MB"
+  url: "https://archive.org/download/NotebookLM-audio/Web%20Dev%20with%20an%20AI%20Sidekick.m4a"
+
+- title: "Web Development with Django 6"
+  date: "2026-08-23"
+  size: "44 MB"
+  url: "https://archive.org/download/NotebookLM-audio/Web%20Development%20with%20Django%206.m4a"
