@@ -61,3 +61,13 @@
   date: "2026-08-23"
   size: "25 MB"
   url: "https://archive.org/download/NotebookLM-audio/Deep_Work.m4a"
+
+- title: "Designing_Data-Intensive_Applications"
+  date: "2026-08-23"
+  size: "32"
+  url: "https://archive.org/download/NotebookLM-audio/Designing_Data-Intensive_Applications.m4a"
+
+- title: "Make_It_Stick"
+  date: "2026-08-23"
+  size: "32"
+  url: "https://archive.org/download/NotebookLM-audio/Make_It_Stick.m4a"
