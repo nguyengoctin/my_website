@@ -1,0 +1,803 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+<style>
+.listen-page {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ---------- Sticky player ---------- */
+.listen-player-card {
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1rem 1.25rem 0.9rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[theme=dark] .listen-player-card {
+    background: #24252b;
+    border-color: #333540;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+#listen-now-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+[theme=dark] #listen-now-title {
+    color: #e2e8f0;
+}
+
+#listen-now-title .listen-placeholder {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+/* Progress bar */
+.lp-progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+
+.lp-progress {
+    position: relative;
+    flex: 1;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    touch-action: none;
+    outline-offset: 3px;
+}
+
+.lp-track,
+.lp-buffered,
+.lp-fill {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.lp-track { width: 100%; background: #e2e8f0; }
+.lp-buffered { width: 0; background: rgba(77, 116, 235, 0.18); }
+.lp-fill { width: 0; background: #4d74eb; }
+
+[theme=dark] .lp-track { background: #3d3f4a; }
+[theme=dark] .lp-buffered { background: rgba(129, 140, 248, 0.22); }
+[theme=dark] .lp-fill { background: #818cf8; }
+
+.lp-thumb {
+    position: absolute;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #4d74eb;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease;
+}
+
+[theme=dark] .lp-thumb { background: #818cf8; }
+
+.lp-progress:hover .lp-thumb,
+.lp-progress:focus-visible .lp-thumb { transform: translateX(-50%) scale(1.25); }
+
+.lp-time {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    min-width: 4ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Transport controls */
+.lp-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lp-btn {
+    height: 36px;
+    min-width: 36px;
+    padding: 0 0.55rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: transparent;
+    color: #334155;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.lp-btn:hover {
+    border-color: #4d74eb;
+    color: #4d74eb;
+    background: rgba(77, 116, 235, 0.08);
+}
+
+.lp-btn:focus-visible {
+    outline: 2px solid #4d74eb;
+    outline-offset: 2px;
+}
+
+[theme=dark] .lp-btn { border-color: #3d3f4a; color: #cbd5e1; }
+
+[theme=dark] .lp-btn:hover {
+    border-color: #818cf8;
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.12);
+}
+
+.lp-btn-skip {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+#btn-play {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: #4d74eb;
+    color: #ffffff;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+    transition: transform 0.15s ease, background 0.2s ease;
+}
+
+#btn-play:hover { background: #3b62d8; transform: scale(1.06); }
+[theme=dark] #btn-play { background: #6478f0; }
+[theme=dark] #btn-play:hover { background: #7c8ef5; }
+
+#btn-speed {
+    font-weight: 700;
+    min-width: 52px;
+}
+
+.lp-spacer { flex: 1; }
+
+.lp-hint {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin: 0.6rem 0 0;
+    text-align: center;
+}
+
+@media (hover: none) {
+    .lp-hint { display: none; }
+}
+
+/* ---------- Playlist ---------- */
+.listen-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.listen-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.85rem 1.1rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+[theme=dark] .listen-item {
+    background: #24252b;
+    border-color: #333540;
+}
+
+.listen-item:hover {
+    border-color: #4d74eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(77, 116, 235, 0.12);
+}
+
+[theme=dark] .listen-item:hover {
+    border-color: #818cf8;
+}
+
+.listen-item.active {
+    border-color: #4d74eb;
+    background: rgba(77, 116, 235, 0.06);
+}
+
+[theme=dark] .listen-item.active {
+    border-color: #818cf8;
+    background: rgba(129, 140, 248, 0.08);
+}
+
+.listen-item.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.listen-item.disabled:hover {
+    border-color: #e2e8f0;
+    transform: none;
+    box-shadow: none;
+}
+
+[theme=dark] .listen-item.disabled:hover {
+    border-color: #333540;
+}
+
+.listen-item-num {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+    min-width: 2ch;
+}
+
+.listen-item-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: transparent;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+[theme=dark] .listen-item-icon {
+    border-color: #3d3f4a;
+    color: #cbd5e1;
+}
+
+.listen-item.active .listen-item-icon {
+    border-color: #4d74eb;
+    color: #4d74eb;
+    background: rgba(77, 116, 235, 0.1);
+}
+
+[theme=dark] .listen-item.active .listen-item-icon {
+    border-color: #818cf8;
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.15);
+}
+
+.listen-item-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.listen-item-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+[theme=dark] .listen-item-title {
+    color: #e2e8f0;
+}
+
+.listen-item-meta {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin: 0.15rem 0 0;
+}
+
+.listen-resume-badge {
+    display: none;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #4d74eb;
+    background: rgba(77, 116, 235, 0.12);
+    border-radius: 6px;
+    padding: 0.1rem 0.45rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+
+[theme=dark] .listen-resume-badge {
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.16);
+}
+
+.listen-item.resume .listen-resume-badge { display: inline-block; }
+
+.listen-item-dl {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.listen-item-dl:hover {
+    color: #4d74eb;
+    background: rgba(77, 116, 235, 0.08);
+}
+
+[theme=dark] .listen-item-dl:hover {
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.12);
+}
+</style>
+
+<div class="page single listen-page">
+    <h1 class="single-title">{{ .Title | emojify }}</h1>
+
+    {{- with .Params.description -}}
+        <p style="opacity: 0.75;">{{ . }}</p>
+    {{- end -}}
+
+    <div class="listen-player-card">
+        <p id="listen-now-title"><span class="listen-placeholder">Chọn một tập để bắt đầu nghe...</span></p>
+
+        <div class="lp-progress-wrap">
+            <span class="lp-time" id="lp-cur">0:00</span>
+            <div class="lp-progress" id="lp-progress" role="slider"
+                 aria-label="Vị trí phát"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                 aria-valuetext="0%" tabindex="0">
+                <div class="lp-track"></div>
+                <div class="lp-buffered" id="lp-buffered"></div>
+                <div class="lp-fill" id="lp-fill"></div>
+                <div class="lp-thumb" id="lp-thumb"></div>
+            </div>
+            <span class="lp-time" id="lp-dur">--:--</span>
+        </div>
+
+        <div class="lp-controls">
+            <button id="btn-play" class="lp-btn" aria-label="Phát hoặc tạm dừng" disabled>
+                <i class="fas fa-play" aria-hidden="true"></i>
+            </button>
+            <button id="btn-back" class="lp-btn lp-btn-skip" aria-label="Lùi lại 15 giây" disabled>
+                <i class="fas fa-rotate-left" aria-hidden="true"></i>15
+            </button>
+            <button id="btn-fwd" class="lp-btn lp-btn-skip" aria-label="Tiến 15 giây" disabled>
+                15<i class="fas fa-rotate-right" aria-hidden="true"></i>
+            </button>
+            <div class="lp-spacer"></div>
+            <button id="btn-prev" class="lp-btn" aria-label="Tập trước đó">
+                <i class="fas fa-backward-step" aria-hidden="true"></i>
+            </button>
+            <button id="btn-next" class="lp-btn" aria-label="Tập kế tiếp">
+                <i class="fas fa-forward-step" aria-hidden="true"></i>
+            </button>
+            <button id="btn-speed" class="lp-btn" aria-label="Thay đổi tốc độ phát">1×</button>
+        </div>
+
+        <audio id="listen-audio" preload="none">Trình duyệt của bạn không hỗ trợ phát audio.</audio>
+
+        <p class="lp-hint">Space: phát/dừng · ← →: lùi/tiến 15s · ↑ ↓: đổi tập · L: đổi tốc độ</p>
+    </div>
+
+    <ul class="listen-list" id="listen-list">
+        {{- range $i, $ep := site.Data.notebooklm -}}
+            <li class="listen-item{{ if not $ep.url }} disabled{{ end }}"
+                data-src="{{ $ep.url }}"
+                data-title="{{ $ep.title }}"
+                data-index="{{ $i }}">
+                <span class="listen-item-num">{{ printf "%02d" (add $i 1) }}</span>
+                <button class="listen-item-icon" aria-hidden="true" tabindex="-1">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="listen-item-body">
+                    <p class="listen-item-title">{{ $ep.title }}<span class="listen-resume-badge" data-resume-for="{{ $i }}">Tiếp tục</span></p>
+                    <p class="listen-item-meta">
+                        {{ $ep.date }} · {{ $ep.size }}{{ if not $ep.url }} · chưa có link{{ end }}
+                    </p>
+                </div>
+                {{- with $ep.url -}}
+                    <a class="listen-item-dl" href="{{ . }}" download
+                       aria-label="Tải xuống {{ $ep.title }}">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                    </a>
+                {{- end -}}
+            </li>
+        {{- end -}}
+    </ul>
+
+    {{- if .Content -}}
+        <div class="content" id="content" style="margin-top: 2rem;">
+            {{- dict "Content" .Content "Ruby" .Params.ruby "Fraction" .Params.fraction "Fontawesome" .Params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+    {{- end -}}
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+
+    var LS_PREFIX = "nblm-";
+    var SKIP_SECONDS = 15;
+    var RATES = [1, 1.25, 1.5, 1.75, 2, 0.75];
+    var SAVE_INTERVAL = 5;
+
+    var audio = document.getElementById("listen-audio");
+    var nowTitle = document.getElementById("listen-now-title");
+    var elCur = document.getElementById("lp-cur");
+    var elDur = document.getElementById("lp-dur");
+    var elFill = document.getElementById("lp-fill");
+    var elThumb = document.getElementById("lp-thumb");
+    var elBuffered = document.getElementById("lp-buffered");
+    var progressBar = document.getElementById("lp-progress");
+
+    var btnPlay = document.getElementById("btn-play");
+    var btnBack = document.getElementById("btn-back");
+    var btnFwd = document.getElementById("btn-fwd");
+    var btnPrev = document.getElementById("btn-prev");
+    var btnNext = document.getElementById("btn-next");
+    var btnSpeed = document.getElementById("btn-speed");
+
+    var items = Array.prototype.slice.call(
+        document.querySelectorAll(".listen-item:not(.disabled)")
+    );
+
+    var currentIndex = -1;
+    var currentRateIdx = 0;
+    var pendingSeek = null;
+    var lastSavedAt = -Infinity;
+
+    /* ---------- Helpers ---------- */
+
+    function fmt(sec) {
+        if (!isFinite(sec)) return "--:--";
+        sec = Math.max(0, Math.floor(sec));
+        var h = Math.floor(sec / 3600);
+        var m = Math.floor((sec % 3600) / 60);
+        var s = sec % 60;
+        var mm = h ? String(m).padStart(2, "0") : String(m);
+        return (h ? h + ":" : "") + mm + ":" + String(s).padStart(2, "0");
+    }
+
+    function lsGet(key) {
+        try { return localStorage.getItem(LS_PREFIX + key); } catch (e) { return null; }
+    }
+
+    function lsSet(key, val) {
+        try { localStorage.setItem(LS_PREFIX + key, val); } catch (e) {}
+    }
+
+    function savedPos(idx) {
+        var v = parseFloat(lsGet("pos-" + idx));
+        return isNaN(v) ? 0 : v;
+    }
+
+    /* Restore persisted speed */
+    var savedRate = parseFloat(lsGet("rate"));
+    if (!isNaN(savedRate)) {
+        var ri = RATES.indexOf(savedRate);
+        currentRateIdx = ri >= 0 ? ri : 0;
+    }
+    audio.playbackRate = RATES[currentRateIdx];
+    btnSpeed.textContent = RATES[currentRateIdx].toFixed(2).replace(/\.?0+$/, "") + "×";
+
+    /* Mark resumable episodes (saved position > 60s, not near the end) */
+    var lastPlayed = parseInt(lsGet("last"), 10);
+    items.forEach(function (item) {
+        var idx = parseInt(item.dataset.index, 10);
+        var pos = savedPos(idx);
+        var badge = document.querySelector('[data-resume-for="' + idx + '"]');
+        if (badge && pos > 60) {
+            badge.textContent = "Tiếp tục " + fmt(pos);
+            badge.parentElement.closest(".listen-item").classList.add("resume");
+        }
+    });
+
+    /* ---------- Transport ---------- */
+
+    function updateTransportEnabled() {
+        [btnPlay, btnBack, btnFwd].forEach(function (b) {
+            b.disabled = currentIndex === -1;
+        });
+    }
+
+    function updateIcons() {
+        var playing = !audio.paused && !audio.ended && currentIndex !== -1;
+        btnPlay.querySelector("i").className =
+            playing ? "fas fa-pause" : "fas fa-play";
+        btnPlay.setAttribute(
+            "aria-label",
+            playing ? "Tạm dừng" : "Phát"
+        );
+        items.forEach(function (item, i) {
+            var icon = item.querySelector(".listen-item-icon i");
+            if (icon) {
+                icon.className =
+                    i === currentIndex && playing ? "fas fa-pause" : "fas fa-play";
+            }
+            item.classList.toggle("active", i === currentIndex);
+        });
+    }
+
+    function setNowTitle(text, isPlaceholder) {
+        nowTitle.innerHTML = isPlaceholder
+            ? '<span class="listen-placeholder"></span>'
+            : "";
+        if (isPlaceholder) {
+            nowTitle.firstChild.textContent = text;
+        } else {
+            nowTitle.textContent = text;
+        }
+    }
+
+    function resetProgress() {
+        elCur.textContent = "0:00";
+        elDur.textContent = "--:--";
+        elFill.style.width = "0%";
+        elThumb.style.left = "0%";
+        elBuffered.style.width = "0%";
+        progressBar.setAttribute("aria-valuenow", "0");
+        progressBar.setAttribute("aria-valuetext", "0%");
+    }
+
+    function loadTrack(item, autoplay) {
+        var idx = parseInt(item.dataset.index, 10);
+        var isNew = currentIndex !== idx;
+
+        currentIndex = idx;
+        lsSet("last", String(idx));
+
+        if (isNew) {
+            resetProgress();
+            audio.src = item.dataset.src;
+            /* Browsers may reset playbackRate on source change */
+            audio.playbackRate = RATES[currentRateIdx];
+
+            var pos = savedPos(idx);
+            if (pos > 60) pendingSeek = pos;
+
+            setNowTitle("Đang phát: " + item.dataset.title, false);
+
+            var badge = document.querySelector('[data-resume-for="' + idx + '"]');
+            if (badge) {
+                badge.parentElement.closest(".listen-item").classList.remove("resume");
+            }
+        } else {
+            setNowTitle("Đang phát: " + item.dataset.title, false);
+        }
+
+        updateTransportEnabled();
+        updateIcons();
+
+        if (autoplay !== false) {
+            audio.play().catch(function () {});
+        }
+    }
+
+    function playPause() {
+        if (currentIndex === -1) {
+            if (items.length) loadTrack(items[0], true);
+            return;
+        }
+        if (audio.paused) {
+            audio.play().catch(function () {});
+        } else {
+            audio.pause();
+        }
+    }
+
+    function step(dir) {
+        if (!items.length) return;
+        var next = currentIndex === -1
+            ? 0
+            : Math.min(items.length - 1, Math.max(0, currentIndex + dir));
+        if (next === currentIndex && dir > 0) return;
+        loadTrack(items[next], true);
+    }
+
+    function seekBy(sec) {
+        if (!isFinite(audio.duration)) return;
+        audio.currentTime = Math.min(
+            audio.duration - 1,
+            Math.max(0, audio.currentTime + sec)
+        );
+    }
+
+    /* ---------- Progress UI ---------- */
+
+    function renderProgress() {
+        if (!isFinite(audio.duration) || audio.duration <= 0) return;
+        var pct = (audio.currentTime / audio.duration) * 100;
+        elFill.style.width = pct + "%";
+        elThumb.style.left = pct + "%";
+        elCur.textContent = fmt(audio.currentTime);
+        elDur.textContent = fmt(audio.duration);
+        progressBar.setAttribute("aria-valuemax", "100");
+        progressBar.setAttribute("aria-valuenow", pct.toFixed(1));
+        progressBar.setAttribute(
+            "aria-valuetext",
+            fmt(audio.currentTime) + " / " + fmt(audio.duration)
+        );
+    }
+
+    function renderBuffered() {
+        if (!audio.buffered || !audio.buffered.length || !isFinite(audio.duration)) return;
+        var end = audio.buffered.end(audio.buffered.length - 1);
+        elBuffered.style.width = ((end / audio.duration) * 100) + "%";
+    }
+
+    function seekToPointer(clientX) {
+        var rect = progressBar.getBoundingClientRect();
+        var ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+        if (isFinite(audio.duration)) {
+            audio.currentTime = ratio * audio.duration;
+            renderProgress();
+        }
+    }
+
+    var dragging = false;
+    progressBar.addEventListener("pointerdown", function (e) {
+        dragging = true;
+        progressBar.setPointerCapture(e.pointerId);
+        seekToPointer(e.clientX);
+    });
+    progressBar.addEventListener("pointermove", function (e) {
+        if (dragging) seekToPointer(e.clientX);
+    });
+    progressBar.addEventListener("pointerup", function () { dragging = false; });
+    progressBar.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") { seekBy(-SKIP_SECONDS); e.preventDefault(); }
+        if (e.key === "ArrowRight") { seekBy(SKIP_SECONDS); e.preventDefault(); }
+    });
+
+    /* ---------- Position persistence ---------- */
+
+    function savePosition(force) {
+        if (currentIndex === -1 || !isFinite(audio.currentTime)) return;
+        var t = audio.currentTime;
+        if (!force && Math.abs(t - lastSavedAt) < SAVE_INTERVAL) return;
+        lastSavedAt = t;
+        lsSet("pos-" + currentIndex, String(Math.floor(t)));
+    }
+
+    window.addEventListener("pagehide", function () { savePosition(true); });
+
+    /* ---------- Media Session API (lock screen / media keys) ---------- */
+
+    if ("mediaSession" in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({ title: "NotebookLM Audio" });
+        try {
+            navigator.mediaSession.setActionHandler("play", function () { audio.play(); });
+            navigator.mediaSession.setActionHandler("pause", function () { audio.pause(); });
+            navigator.mediaSession.setActionHandler("previoustrack", function () { step(-1); });
+            navigator.mediaSession.setActionHandler("nexttrack", function () { step(1); });
+            navigator.mediaSession.setActionHandler("seekbackward", function (d) {
+                seekBy(-(d.seekOffset || SKIP_SECONDS));
+            });
+            navigator.mediaSession.setActionHandler("seekforward", function (d) {
+                seekBy(d.seekOffset || SKIP_SECONDS);
+            });
+        } catch (e) {}
+    }
+
+    /* ---------- Events ---------- */
+
+    items.forEach(function (item) {
+        item.addEventListener("click", function () { loadTrack(item, true); });
+        var dl = item.querySelector(".listen-item-dl");
+        if (dl) dl.addEventListener("click", function (e) { e.stopPropagation(); });
+    });
+
+    btnPlay.addEventListener("click", playPause);
+    btnBack.addEventListener("click", function () { seekBy(-SKIP_SECONDS); });
+    btnFwd.addEventListener("click", function () { seekBy(SKIP_SECONDS); });
+    btnPrev.addEventListener("click", function () { step(-1); });
+    btnNext.addEventListener("click", function () { step(1); });
+
+    btnSpeed.addEventListener("click", cycleRate);
+
+    function cycleRate() {
+        currentRateIdx = (currentRateIdx + 1) % RATES.length;
+        var r = RATES[currentRateIdx];
+        audio.playbackRate = r;
+        lsSet("rate", String(r));
+        btnSpeed.textContent = r.toFixed(2).replace(/\.?0+$/, "") + "×";
+    }
+
+    audio.addEventListener("loadedmetadata", function () {
+        if (audio.playbackRate !== RATES[currentRateIdx]) {
+            audio.playbackRate = RATES[currentRateIdx];
+        }
+        if (pendingSeek !== null && pendingSeek < audio.duration - 10) {
+            audio.currentTime = pendingSeek;
+        }
+        pendingSeek = null;
+        renderProgress();
+        updateIcons();
+    });
+
+    audio.addEventListener("timeupdate", function () {
+        if (!dragging) renderProgress();
+        savePosition(false);
+    });
+
+    audio.addEventListener("progress", renderBuffered);
+    audio.addEventListener("play", updateIcons);
+    audio.addEventListener("pause", updateIcons);
+
+    audio.addEventListener("ended", function () {
+        savePosition(true);
+        lsSet("pos-" + currentIndex, "0"); /* finished -> restart next time */
+        if (currentIndex + 1 < items.length) {
+            loadTrack(items[currentIndex + 1], true);
+        } else {
+            updateIcons();
+        }
+    });
+
+    /* ---------- Keyboard shortcuts ---------- */
+
+    document.addEventListener("keydown", function (e) {
+        var tag = (e.target.tagName || "").toLowerCase();
+        var typing =
+            tag === "input" || tag === "textarea" ||
+            e.target.isContentEditable || tag === "select";
+        if (typing) return;
+
+        switch (e.code) {
+            case "Space":
+            case "KeyK":
+                if (tag === "button" && e.code === "Space") return; /* native click */
+                e.preventDefault();
+                playPause();
+                break;
+            case "ArrowLeft":
+                e.preventDefault();
+                seekBy(-SKIP_SECONDS);
+                break;
+            case "ArrowRight":
+                e.preventDefault();
+                seekBy(SKIP_SECONDS);
+                break;
+            case "ArrowUp":
+                e.preventDefault();
+                step(-1);
+                break;
+            case "ArrowDown":
+                e.preventDefault();
+                step(1);
+                break;
+            case "KeyL":
+                cycleRate();
+                break;
+        }
+    });
+
+    updateTransportEnabled();
+});
+</script>
+{{- end -}}

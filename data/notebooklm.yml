@@ -1,0 +1,29 @@
+# Danh sách audio NotebookLM để nghe trên trang /listen/
+#
+# CÁCH THÊM AUDIO MỚI:
+#   1. Upload file lên Internet Archive item "suc-manh-co-san-pin-django-6"
+#      (hướng dẫn ở scripts/upload-notebooklm-audio.sh)
+#   2. Thêm 1 entry bên dưới với url là link file đã percent-encode:
+#      https://archive.org/download/suc-manh-co-san-pin-django-6/<ten-file>.m4a
+#
+# url rỗng => entry vẫn hiển thị nhưng bị đánh dấu "chưa có link".
+
+- title: "Biến AI thành gia sư lập trình"
+  date: "2026-08-23"
+  size: "30 MB"
+  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/Bi%E1%BA%BFn_AI_th%C3%A0nh_gia_s%C6%B0_l%E1%BA%ADp_tr%C3%ACnh.m4a"
+
+- title: "Kiến trúc bộ não tác nhân AI"
+  date: "2026-08-23"
+  size: "36 MB"
+  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/Ki%E1%BA%BFn_tr%C3%BAc_b%E1%BB%99_n%C3%A3o_t%C3%A1c_nh%C3%A2n_AI.m4a"
+
+- title: "Sức mạnh có sẵn pin Django 6"
+  date: "2026-08-23"
+  size: "44 MB"
+  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/S%E1%BB%A9c_m%E1%BA%A1nh_c%C3%B3_s%E1%BA%B5n_pin_Django_6.m4a"
+
+- title: "Sự thật về nghề kỹ sư AI"
+  date: "2026-08-23"
+  size: "33 MB"
+  url: "https://archive.org/download/suc-manh-co-san-pin-django-6/S%E1%BB%B1_th%E1%BA%ADt_v%E1%BB%81_ngh%E1%BB%81_k%E1%BB%B9_s%C6%B0_AI.m4a"

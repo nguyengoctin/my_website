@@ -283,7 +283,7 @@ main.main > .container {
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
-    const pdfUrl = '/cv/NGUYEN_NGOC_TIN_CV.pdf';
+    const pdfUrl = '/cv/Nguyen_Ngoc_Tin-CV.pdf';
     const container = document.getElementById('cv-page-container');
     const skeleton = document.getElementById('cv-skeleton');
 
@@ -310,10 +310,10 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const fab = document.createElement('div');
                 fab.className = 'cv-fab';
                 fab.innerHTML = `
-                    <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download="NGUYEN_NGOC_TIN_CV.pdf" class="cv-tool-btn" title="Tải xuống PDF">
+                    <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="cv-tool-btn" title="Tải xuống PDF">
                         <i class="fas fa-download"></i>
                     </a>
-                    <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-tool-btn" title="Mở PDF trong tab mới">
+                    <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-tool-btn" title="Mở PDF trong tab mới">
                         <i class="fas fa-external-link-alt"></i>
                     </a>`;
                 card.appendChild(fab);
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     } catch (err) {
         console.error('Error rendering CV:', err);
         if (skeleton) {
-            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Không thể nạp bản xem trước CV. <a href="/cv/NGUYEN_NGOC_TIN_CV.pdf" download style="color: #111111; text-decoration: underline;">Bấm vào đây để tải trực tiếp file PDF</a></span>';
+            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Không thể nạp bản xem trước CV. <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download style="color: #111111; text-decoration: underline;">Bấm vào đây để tải trực tiếp file PDF</a></span>';
         }
     }
 });

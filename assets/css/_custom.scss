@@ -489,3 +489,18 @@ blockquote,
     padding: 0 12px !important;
     box-sizing: border-box !important;
 }
+/* Audio shortcode ({{< audio >}}) */
+.audio-embed {
+    margin: 1.2rem 0;
+
+    audio {
+        display: block;
+        width: 100%;
+    }
+
+    figcaption {
+        margin-top: 0.35rem;
+        font-size: 0.85rem;
+        opacity: 0.75;
+    }
+}

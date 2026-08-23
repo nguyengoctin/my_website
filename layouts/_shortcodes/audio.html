@@ -1,0 +1,35 @@
+{{- /*
+    Nhúng 1 tập audio (resource local hoặc URL remote).
+
+    Cách dùng:
+      {{< audio src="https://archive.org/download/ngoctin-notebooklm/ten-file.m4a" >}}
+      {{< audio src="ten-file.m4a" title="Tiêu đề tập" >}}
+      {{< audio src="ten-file.m4a" preload="none" title="Tiêu đề" >}}
+
+    Tham số:
+      src      (bắt buộc) đường dẫn resource trong page bundle / assets/, hoặc URL đầy đủ
+      title    (tuỳ chọn) hiển thị dưới dạng figcaption
+      preload  (tuỳ chọn) "metadata" (mặc định) | "none" | "auto"
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- if not $src -}}
+    {{- errorf "shortcode 'audio': thiếu tham số bắt buộc 'src' (file %s)" .Position -}}
+{{- end -}}
+
+{{- /* Ưu tiên resource cục bộ để tự suy ra MIME type; không tìm thấy => coi là URL remote */ -}}
+{{- $res := or (.Page.Resources.GetMatch $src) (resources.GetMatch $src) -}}
+{{- $preload := .Get "preload" | default "metadata" -}}
+
+<figure class="audio-embed">
+    <audio controls preload="{{ $preload }}">
+        {{- with $res -}}
+            <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+        {{- else -}}
+            <source src="{{ $src }}">
+        {{- end -}}
+        Trình duyệt của bạn không hỗ trợ phát audio.
+    </audio>
+    {{- with .Get "title" -}}
+        <figcaption>{{ . }}</figcaption>
+    {{- end -}}
+</figure>

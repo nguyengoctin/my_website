@@ -102,11 +102,18 @@ enableEmoji = true
     title = "All Categories and Tags"
 
   [[menu.main]]
-    weight = 5
+    weight = 6
     identifier = "cv"
     name = "My CV"
     url = "/cv/"
     title = "Curriculum Vitae"
+
+  [[menu.main]]
+    weight = 5
+    identifier = "listen"
+    name = "Listen"
+    url = "/listen/"
+    title = "NotebookLM Audio"
 
 # Parameters config for LoveIt theme
 [params]
