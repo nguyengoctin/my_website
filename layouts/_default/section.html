@@ -3,25 +3,63 @@
 {{- end -}}
 
 {{- define "content" -}}
-    {{- if .Content -}}
-        <div class="page single">
-            <h1 class="single-title animate__animated animate__flipInX">
-                {{- .Title | emojify -}}
-            </h1>
-            <div class="content" id="content">
-                {{- .Content -}}
-            </div>
-        </div>
-    {{- else -}}
-        <div class="page archive">
-            {{- /* Title */ -}}
-            <h2 class="single-title animate__animated animate__pulse animate__faster">
-                {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" -}}
-            </h2>
+    <div class="page archive">
+        {{- /* Title */ -}}
+        <h2 class="single-title animate__animated animate__pulse animate__faster">
+            {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" -}}
+        </h2>
 
-            {{- /* Paginate Standard Blog Posts */ -}}
-            {{- if .Pages -}}
-                {{- $pages := .Pages.GroupByDate "2006" -}}
+        {{- /* Topics (Top tags phổ biến + Nút Xem thêm) */ -}}
+        {{- $allTags := $.Site.Taxonomies.tags.ByCount -}}
+        {{- if $allTags -}}
+            <div class="tag-cloud-tags" style="margin: 0.8rem 0 1.6rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
+                {{- range first 8 $allTags -}}
+                    <a href="{{ .Page.RelPermalink }}" class="tag-pill">{{ .Page.Title }} <sup>{{ .Count }}</sup></a>
+                {{- end -}}
+                {{- if gt (len $allTags) 8 -}}
+                    <a href="{{ "/tags/" | relLangURL }}" class="tag-pill" style="font-weight: 600; color: #4d74eb; border-style: dashed;" title="Xem tất cả chủ đề">
+                        Xem thêm &gt;&gt;
+                    </a>
+                {{- end -}}
+            </div>
+        {{- end -}}
+
+        {{- /* Paged / Grouped Timeline */ -}}
+        {{- if .Pages -}}
+            {{- /* 1. Bài viết được Ghim lên đầu tiên (Pinned Posts) */ -}}
+            {{- $pinnedPages := where .Pages ".Params.pinned" true -}}
+            {{- if not $pinnedPages -}}
+                {{- $pinnedPages = where .Pages ".Params.weight" "lt" 100 -}}
+                {{- $pinnedPages = where $pinnedPages ".Params.weight" "gt" 0 -}}
+            {{- end -}}
+
+            {{- with $pinnedPages -}}
+                <h3 class="group-title" style="color: #ec4899; display: flex; align-items: center; gap: 0.4rem;">
+                    <i class="fas fa-thumbtack" style="font-size: 0.85em; transform: rotate(35deg);" aria-hidden="true"></i> Ghim
+                </h3>
+                {{- range . -}}
+                    <article class="archive-item">
+                        <a href="{{ .RelPermalink }}" class="archive-item-link">
+                            {{- .Title | emojify -}}
+                            <span class="pinned-post-icon" title="Bài viết được ghim" style="margin-left: 0.35rem; font-size: 0.85em; color: #ec4899; display: inline-flex; align-items: center; vertical-align: middle;">
+                                <i class="fas fa-thumbtack" style="transform: rotate(35deg); color: #ec4899;" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <span class="archive-item-date">
+                            {{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
+                        </span>
+                    </article>
+                {{- end -}}
+            {{- end -}}
+
+            {{- /* 2. Dòng thời gian thông thường theo Năm & Tháng */ -}}
+            {{- $regularPages := .Pages -}}
+            {{- if $pinnedPages -}}
+                {{- $regularPages = .Pages | complement $pinnedPages -}}
+            {{- end -}}
+
+            {{- if $regularPages -}}
+                {{- $pages := $regularPages.GroupByDate "2006" -}}
                 {{- with .Site.Params.section.paginate | default .Site.Params.paginate -}}
                     {{- $pages = $.Paginate $pages . -}}
                 {{- else -}}
@@ -30,21 +68,15 @@
                 {{- range $pages.PageGroups -}}
                     <h3 class="group-title">{{ .Key }}</h3>
                     
-                    {{- /* Group by Month */ -}}
                     {{- $monthGroups := .Pages.GroupByDate "01" -}}
                     {{- range $monthGroups -}}
-                        <h4 class="group-month" style="margin-left: 1.5rem; font-size: 1.1rem; margin-top: 1rem; margin-bottom: 0.5rem; opacity: 0.8; color: var(--text-color);">
+                        <h4 class="group-month" style="margin-left: 1.5rem; font-size: 1.05rem; margin-top: 1rem; margin-bottom: 0.5rem; opacity: 0.85; font-weight: 500;">
                             Tháng {{ .Key }}
                         </h4>
                         {{- range .Pages -}}
                             <article class="archive-item" style="margin-left: 2.5rem;">
                                 <a href="{{ .RelPermalink }}" class="archive-item-link">
                                     {{- .Title | emojify -}}
-                                    {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
-                                        <span class="pinned-post-icon" title="Bài viết được ghim" style="margin-left: 0.35rem; font-size: 0.85em; color: #ec4899; display: inline-flex; align-items: center; vertical-align: middle;">
-                                            <i class="fas fa-thumbtack" style="transform: rotate(35deg);" aria-hidden="true"></i>
-                                        </span>
-                                    {{- end -}}
                                 </a>
                                 <span class="archive-item-date">
                                     {{- $.Site.Params.section.dateFormat | default "01-02" | .Date.Format -}}
@@ -55,6 +87,6 @@
                 {{- end -}}
                 {{- partial "paginator.html" . -}}
             {{- end -}}
-        </div>
-    {{- end -}}
+        {{- end -}}
+    </div>
 {{- end -}}
