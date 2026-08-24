@@ -45,10 +45,12 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
 - **Ghim bài viết:** Thêm `pinned: true` vào frontmatter để tự động hiển thị biểu tượng ghim bên phải tiêu đề trên trang chủ và danh sách.
 - **Typography & Heading:** Toàn bộ tiêu đề bài viết và heading dùng font `Lora` với độ đậm `font-weight: 500` (Medium) tinh gọn, thanh lịch.
 - **Mermaid JS:** Bắt buộc dùng khối mã ` ```mermaid `:
-  - **Khai báo loại biểu đồ:** Dòng đầu tiên là `flowchart TD`, `flowchart LR`, hoặc `sequenceDiagram` (nằm trên một dòng độc lập).
+  - **Cấu hình Theme Toàn Cục:** Hệ thống đã tự động inject theme indigo và cấu hình `themeVariables` toàn cục (light/dark mode) tại `layouts/_partials/plugin/mermaid.html`. TUYỆT ĐỐI KHÔNG chèn thủ công `%%{init}%%` vào bài viết để tránh trùng lặp và xung đột dark mode.
+  - **Khai báo loại biểu đồ:** Dòng đầu tiên trong khối ` ```mermaid ` là `flowchart TD`, `flowchart LR`, hoặc `sequenceDiagram` (nằm trên một dòng độc lập).
   - **Định dạng Node (Hộp văn bản):**
     - Hộp chữ nhật chuẩn: `NodeID["Nội dung tiếng Việt hoặc Unicode"]` (luôn dùng cặp ngoặc vuông `["..."]` bọc dấu nháy kép cho mọi node có dấu tiếng Việt hoặc khoảng trắng).
-    - Nút hình thoi điều kiện: `NodeID{"Nội dung quyết định"}`.
+    - **TUYỆT ĐỐI KHÔNG bắt đầu nội dung node bằng số kèm dấu chấm** (ví dụ SAI: `["1. Bước một"]`, `["2. Bước hai"]` sẽ gây lỗi `Unsupported markdown: list` của Mermaid 11+. ĐÚNG: `["Lớp 1: Bước một"]`, `["Nhóm 1: Bước một"]` hoặc `["(1) Bước một"]`).
+    - Nút hình thoi điều kiện: `NodeID{"Câu hỏi ngắn gọn"}`. TUYỆT ĐỐI chỉ để câu hỏi ngắn dưới 20 ký tự (ví dụ: `Check{"Có --add-tests?"}`), không nhét cả câu văn dài vào nút hình thoi để tránh bị đè tràn góc nhọn.
     - `NodeID` bắt buộc là chuỗi ký tự ASCII đơn giản (ví dụ: `A`, `B`, `Step1`, `Node1`), TUYỆT ĐỐI KHÔNG dùng từ khóa hệ thống (như `end`, `subgraph`, `graph`).
   - **Nhãn trên mũi tên liên kết:**
     - Cú pháp chuẩn: `A -->|Nhãn văn bản thuần túy| B` (hoặc `A --> B` nếu không cần nhãn).
@@ -56,7 +58,10 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
     - TUYỆT ĐỐI KHÔNG dùng dấu phẩy `,`, dấu gạch chéo `/` trong nhãn mũi tên (dùng từ thay thế: `hoặc`, `và`, dấu gạch ngang `-`).
   - **TUYỆT ĐỐI KHÔNG để dòng trống (Empty Line) bên trong khối mã Mermaid:** Toàn bộ các dòng định nghĩa trong khối ` ```mermaid ` phải liên tục, không chèn dòng trống giữa các node hoặc giữa các `subgraph`.
   - **TUYỆT ĐỐI KHÔNG dùng ký tự `&` trong toàn bộ biểu đồ:** Thay bằng chữ "và" hoặc chữ "and".
-  - **Quy tắc Subgraph:**
-    - Khai báo: `subgraph ID ["Tên Hiển Thị"]` và `end` trên từng dòng độc lập.
+  - **Quy tắc Bố Cục và Subgraph (Chống Bè Ngang - Chống Thu Nhỏ Chữ):**
+    - TUYỆT ĐỐI KHÔNG nối từ 1 node cha tỏa ra quá 3 node con nằm ngang cùng 1 hàng (sẽ khiến biểu đồ quá rộng và bị scale nhỏ li ti).
+    - Khi có từ 4 node trở lên, BẮT BUỘC chia thành các `subgraph` xếp dọc (`direction TB`) đặt cạnh nhau để tạo bố cục 2 cột cân đối.
+    - Khai báo Subgraph: `subgraph ID ["Tên Hiển Thị"]` và `end` trên từng dòng độc lập.
     - Không nối mũi tên trực tiếp vào `ID` của subgraph; bắt buộc phải nối từ node con cụ thể bên trong.
+- **CSS Mermaid — Quy tắc cứng:** CSS chỉ được kiểm soát `.mermaid` container (display, overflow, margin). TUYỆT ĐỐI KHÔNG ghi đè `font-size`, `font-weight`, `font-family` vào các thẻ `text`, `.nodeLabel`, `.edgeLabel` bên trong SVG — vì Mermaid JS tính toán bounding box trước khi render; can thiệp CSS sau đó sẽ làm chữ lệch và bị cắt xén khỏi viền node.
 - **Code Block:** Luôn có câu dẫn ngữ cảnh trước khi đưa khối mã ` ```ngôn_ngữ `. Toàn bộ các khối mã Markdown, Text, YAML tự động bẻ dòng theo chuẩn `white-space: pre-wrap`.

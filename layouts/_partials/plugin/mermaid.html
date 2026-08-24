@@ -1,0 +1,67 @@
+{{- $content := .Content | htmlUnescape -}}
+{{- $id := dict "Content" $content "Scratch" .Page.Scratch | partial "function/id.html" -}}
+<div class="mermaid" id="{{ $id }}" data-content="{{ $content }}">{{ $content }}</div>
+{{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
+{{- .Page.Store.Set "mermaid" true -}}
+{{- if not (.Page.Store.Get "mermaidThemePatchInjected") -}}
+<script>
+/**
+ * Global Mermaid Theme Config — injected once per page.
+ * Monkey-patches mermaid.initialize() to inject indigo themeVariables
+ * for light mode, while preserving dark mode behavior from LoveIt theme.js.
+ * This runs BEFORE theme.js loads mermaid, using a setter trap on window.mermaid.
+ */
+(function () {
+  var _mermaid;
+  var _lightConfig = {
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#f5f7ff',
+      primaryBorderColor: '#6366f1',
+      primaryTextColor: '#1e1b4b',
+      lineColor: '#6366f1',
+      edgeLabelBackground: '#ffffff',
+      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      fontSize: '14.5px'
+    },
+    flowchart: {
+      nodePadding: 20,
+      nodeSpacing: 45,
+      rankSpacing: 45,
+      curve: 'basis',
+      htmlLabels: true
+    }
+  };
+
+  function patchInitialize(m) {
+    var origInit = m.initialize.bind(m);
+    m.initialize = function (cfg) {
+      var isDark = cfg && cfg.theme === 'dark';
+      var patched = isDark
+        ? Object.assign({}, cfg, { flowchart: { nodePadding: 20, htmlLabels: true } })
+        : Object.assign({}, cfg, _lightConfig);
+      return origInit(patched);
+    };
+  }
+
+  // If mermaid is already loaded, patch immediately
+  if (window.mermaid && typeof window.mermaid.initialize === 'function') {
+    patchInitialize(window.mermaid);
+  } else {
+    // Otherwise trap the setter — fires when mermaid.min.js assigns to window.mermaid
+    Object.defineProperty(window, 'mermaid', {
+      configurable: true,
+      enumerable: true,
+      get: function () { return _mermaid; },
+      set: function (m) {
+        _mermaid = m;
+        if (m && typeof m.initialize === 'function') {
+          patchInitialize(m);
+        }
+      }
+    });
+  }
+})();
+</script>
+{{- .Page.Store.Set "mermaidThemePatchInjected" true -}}
+{{- end -}}

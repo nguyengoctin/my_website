@@ -1,10 +1,10 @@
 ---
-title: "Coding Friend: Kỷ Luật Kỹ Thuật Phần Mềm Cho Lập Trình Cùng AI"
+title: "Hướng Dẫn Coding Friend: Mô Tả 26 Skills và Best Practices Thực Chiến"
 date: 2026-08-24T15:30:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"
-description: "Phân tích toàn diện kiến trúc hai gói độc lập, cơ chế Context Handoff giữa 12 custom subagents, hệ thống bộ nhớ 3 tầng với 2 MCP servers và quy trình phát triển kỷ luật chuẩn kỹ thuật phần mềm cùng Coding Friend."
-tags: ["AI Coding", "Coding Friend", "Claude Code", "Codex CLI", "Antigravity", "TDD", "Software Engineering", "Workflow"]
+description: "Mô tả chi tiết và hướng dẫn sử dụng toàn diện 26 skills của Coding Friend, kèm sơ đồ luồng trực quan, rõ ràng và các kinh nghiệm thực tế (Best Practices) khi lập trình cùng AI."
+tags: ["AI Coding", "Coding Friend", "Claude Code", "Best Practices", "Workflow", "TDD", "Productivity"]
 categories: ["Tech Blog"]
 ---
 
@@ -13,222 +13,330 @@ AI viết code rất nhanh, nhưng con người mới là người chịu trách
 {{< /quote >}}
 
 {{< admonition type="tip" title="Nguồn Tham Khảo Chính Thức" >}}
-Toàn bộ nội dung, kiến trúc và quy trình trong bài viết được trích xuất và tổng hợp chuẩn xác từ {{< link href="https://cf.dinhanhthi.com/docs" content="Tài liệu chính thức Coding Friend" >}} và kho mã nguồn mở của tác giả **Anh-Thi Dinh**.
+Bài viết được tổng hợp và chuẩn hóa từ toàn bộ tài liệu chính thức của {{< link href="https://cf.dinhanhthi.com/docs" content="Coding Friend Documentation" >}} do tác giả **Anh-Thi Dinh** phát triển.
 {{< /admonition >}}
 
-Trong kỷ nguyên "Vibe Coding" — nơi lập trình viên phó mặc việc sinh mã cho các trợ lý AI — đa số chúng ta đều nhanh chóng đối mặt với 2 vấn đề lớn:
-1. **Thất thoát tri thức dự án:** Qua nhiều phiên làm việc, không ai còn nhớ các quyết định kiến trúc, quy ước đặt tên hay những lỗi ngầm đã từng xử lý.
-2. **Khoảng trống học tập của con người:** AI viết code, con người chỉ việc bấm chấp thuận mà không thực sự hiểu bản chất, dần dần đánh mất khả năng làm chủ mã nguồn.
+Khi lập trình cùng các AI Coding Agent như Claude Code hay Codex CLI, chúng ta rất dễ gặp phải tình trạng: AI sinh code nhanh nhưng mất kiểm soát, tạo ra lỗi ngầm, sửa lan man hoặc nhanh chóng làm tràn bộ nhớ ngữ cảnh.
 
-**Coding Friend (CF)** ra đời như một bộ công cụ tinh gọn nhằm mang lại **kỷ luật kỹ thuật phần mềm**: Lập kế hoạch có phản biện $\to$ Test-Driven Development $\to$ Systematic Debugging $\to$ Code Review chuyên sâu 5 tầng $\to$ Ghi nhớ tri thức và Học tập.
+**Coding Friend (CF)** sinh ra để giải quyết bài toán này. Đây là bộ công cụ thực chiến giúp chúng ta định hình một quy trình làm việc kỷ luật, rõ ràng và dễ tiếp cận: **Khám phá $\to$ Lập kế hoạch $\to$ Viết code có kiểm thử $\to$ Đánh giá an toàn $\to$ Ghi nhớ tri thức**.
 
----
-
-## 1. Kiến trúc phân tách hai gói độc lập
-
-Coding Friend áp dụng nguyên lý phân tách trách nhiệm rất rõ ràng giữa tầng **Quy trình lõi (Plugin)** và tầng **Công cụ hỗ trợ (CLI)**:
-
-```mermaid
-flowchart TD
-    CF["Coding Friend Ecosystem"] --> Plugin["Plugin: coding-friend"]
-    CF --> CLI["CLI: coding-friend-cli"]
-    Plugin --> P1["26 Skills thực chiến"]
-    Plugin --> P2["12 Custom Subagents"]
-    Plugin --> P3["Security Hooks và Rule Enforcers"]
-    CLI --> C1["Memory MCP Server: Port / Unix Socket"]
-    CLI --> C2["Learn MCP Server và Website Local: Port 3333"]
-    CLI --> C3["Statusline Monitor và Analytics"]
-```
-
-- **Plugin (`coding-friend`)**: Chứa toàn bộ logic quy trình, prompt định tuyến và các hook bảo mật. Plugin hoạt động độc lập 100%. Nếu không cài CLI, hệ thống tự động chuyển sang chế độ dự phòng bằng lệnh `grep` trên thư mục `docs/memory/`.
-- **CLI (`coding-friend-cli`)**: Đóng vai trò là cầu nối tăng tốc độ truy xuất bộ nhớ qua SQLite FTS5 kết hợp Vector Search, quản trị cấu hình, đồng bộ phiên làm việc và khởi chạy website tra cứu kiến thức học tập tại cổng `3333`.
+Dưới đây là cẩm nang mô tả chi tiết toàn bộ 26 skills, sơ đồ luồng hoạt động trực quan và các kinh nghiệm thực tế hữu ích nhất khi làm việc cùng Coding Friend hàng ngày.
 
 ---
 
-## 2. Hệ thống 12 Custom Subagents và Cơ chế Context Handoff
+## 1. Coding Friend là gì và cách bắt đầu trong 5 phút
 
-Coding Friend không dùng một prompt chung cho mọi việc, mà điều phối các **Subagent chuyên trách** chạy trong các phiên cô lập nhằm tối ưu dung lượng ngữ cảnh và độ chính xác:
+Coding Friend gồm 2 thành phần chính hoạt động song hành:
+1. **Plugin (`coding-friend`):** Chứa toàn bộ câu lệnh và quy trình tự động hỗ trợ cho Claude Code hoặc Codex CLI.
+2. **CLI (`coding-friend-cli`):** Bộ công cụ dòng lệnh `cf` hỗ trợ tăng tốc tìm kiếm bộ nhớ dự án và lưu trữ bài học cá nhân.
 
-```mermaid
-flowchart TD
-    User["Yêu cầu từ người dùng"] --> Plan["Skill: /cf-plan"]
-    Plan --> Explorer["cf-explorer: Quét Codebase"]
-    Explorer -->|Ghi file JSON| Ctx["docs/context/task-id.json"]
-    Ctx -->|Đọc ngữ cảnh| Planner["cf-planner: Thiết kế giải pháp"]
-    Planner -->|Cập nhật task| Ctx
-    Ctx -->|Nhận việc| Implementer["cf-implementer: Code chuẩn TDD"]
-    Implementer --> Reviewer["cf-reviewer: Điều phối đánh giá"]
-    Reviewer --> R1["cf-reviewer-plan: Bám sát kế hoạch"]
-    Reviewer --> R2["cf-reviewer-security: Lỗ hổng bảo mật"]
-    Reviewer --> R3["cf-reviewer-quality: Clean code và Slop"]
-    Reviewer --> R4["cf-reviewer-tests: Độ bao phủ kiểm thử"]
-    Reviewer --> R5["cf-reviewer-rules: Tuân thủ quy ước"]
-    R1 --> Reducer["cf-reviewer-reducer: Lọc trùng và xếp hạng"]
-    R2 --> Reducer
-    R3 --> Reducer
-    R4 --> Reducer
-    R5 --> Reducer
-```
-
-### Bản chất kỹ thuật của Context Handoff
-Khi chuyển giao công việc giữa các Agent, việc chuyển tiếp toàn bộ chuỗi hội thoại văn bản sẽ làm bùng nổ số lượng token và gây nhiễu ngữ cảnh. Coding Friend giải quyết bài toán này bằng cơ chế **Context Handoff qua file JSON có cấu trúc**:
-1. `cf-explorer` quét dự án và ghi kết quả vào `docs/context/<task-id>.json`.
-2. `cf-planner` đọc file JSON này để lên kế hoạch và bổ sung các task thực thi.
-3. `cf-implementer` đọc trực tiếp các thông số kỹ thuật từ file JSON để tiến hành viết code.
-4. Sau khi hoàn tất hoặc cần thử lại, trạng thái thực thi được cập nhật trực tiếp vào file JSON với khóa `previous_failure`.
-
-### Danh mục 12 Subagents chuyên trách
-
-| Tên Subagent | Model Mặc Định | Nhiệm Vụ Kỹ Thuật Trọng Tâm |
-| :--- | :--- | :--- |
-| `cf-explorer` | Haiku | Khám phá cấu trúc dự án, tìm file liên quan và trích xuất code mẫu. |
-| `cf-planner` | Sonnet / Opus | Brainstorm 2 đến 3 hướng tiếp cận kèm ưu nhược điểm và rủi ro rollback. |
-| `cf-implementer` | Sonnet | Viết code thực thi theo chu trình TDD (Red $\to$ Green $\to$ Refactor). |
-| `cf-reviewer` | Sonnet | Điều phối dàn chuyên gia review đa tầng song song. |
-| `cf-reviewer-plan` | Sonnet | Đánh giá mức độ bám sát thiết kế và phát hiện task bị bỏ sót. |
-| `cf-reviewer-security` | Sonnet | Quét lỗ hổng bảo mật, OWASP, SQL Injection và rò rỉ dữ liệu. |
-| `cf-reviewer-quality` | Haiku | Phát hiện mã nguồn rác, logic thừa và cấu trúc phức tạp hóa. |
-| `cf-reviewer-tests` | Haiku | Đánh giá độ bao phủ kiểm thử, ca biên và dữ liệu giả lập. |
-| `cf-reviewer-rules` | Haiku | Kiểm tra tuân thủ các quy tắc trong `CLAUDE.md` và `AGENTS.md`. |
-| `cf-reviewer-reducer` | Haiku | Hợp nhất kết quả từ 5 chuyên gia, loại bỏ trùng lặp và phân loại độ nghiêm trọng. |
-| `cf-writer` | Haiku | Soạn thảo tài liệu kỹ thuật tinh gọn và file markdown phụ trợ. |
-| `cf-writer-deep` | Sonnet | Rút trích tri thức chuyên sâu và tạo tài liệu học tập đa chiều. |
-
----
-
-## 3. Hệ thống bộ nhớ 3 tầng và 2 MCP Servers
-
-Coding Friend xây dựng cơ chế quản trị tri thức bền vững thông qua 2 MCP Server và 3 tầng lưu trữ:
-
-```mermaid
-flowchart TD
-    subgraph MCPLayer ["Tầng Giao Thức MCP"]
-        LearnMCP["coding-friend-learn<br/>Toàn cục: ~/.coding-friend/learn"]
-        MemoryMCP["coding-friend-memory<br/>Từng dự án: docs/memory/"]
-    end
-    subgraph StorageTiers ["3 Tầng Lưu Trữ Memory"]
-        T1["Tier 1: SQLite FTS5 + Transformers.js Vector Search"]
-        T2["Tier 2: MiniSearch Memory Daemon"]
-        T3["Tier 3: Markdown Plain Text + Grep Fallback"]
-    end
-    MemoryMCP --> T1
-    MemoryMCP --> T2
-    MemoryMCP --> T3
-```
-
-### So sánh 3 Tầng Lưu Trữ Bộ Nhớ (Memory Tiers)
-
-1. **Tier 1 (Full - Khuyến nghị):** Kết hợp tìm kiếm toàn văn SQLite FTS5 (BM25) và tìm kiếm ngữ nghĩa qua mô hình nhúng cục bộ Transformers.js (`Xenova/all-MiniLM-L6-v2` hoặc Ollama). Kết quả được xếp hạng lại bằng thuật toán Reciprocal Rank Fusion.
-2. **Tier 2 (Lite):** Chạy tiến trình nền `MiniSearch daemon`, phù hợp cho các môi trường không cài được thư viện native SQLite.
-3. **Tier 3 (Markdown):** Quét trực tiếp qua các file markdown trong `docs/memory/` bằng lệnh `grep`. Hoạt động ngay lập tức mà không cần bất kỳ cài đặt phụ thuộc nào.
-
-### Phân biệt 2 MCP Server Độc Lập
-
-- **`coding-friend-learn` (Toàn cục):** Đăng ký ở phạm vi người dùng (`--scope user`), phục vụ việc tra cứu và tích lũy bài học kỹ thuật dùng chung cho mọi dự án tại `~/.coding-friend/learn/`.
-- **`coding-friend-memory` (Từng dự án):** Đăng ký ở phạm vi người dùng nhưng tự động giải quyết đường dẫn dự án thực tế tại runtime thông qua biến môi trường `CLAUDE_PROJECT_DIR`. Điều này giúp cô lập hoàn toàn bộ nhớ giữa các kho mã nguồn khác nhau mà không cần cấu hình file `.mcp.json` thủ công cho từng repo.
-
----
-
-## 4. Lá chắn bảo mật đa tầng và Quy trình Auto-Approve
-
-Để đảm bảo AI không vô tình truy cập các tệp nhạy cảm hoặc thực thi các lệnh nguy hiểm, Coding Friend thiết lập hệ thống bảo vệ nhiều lớp:
-
-```mermaid
-flowchart TD
-    ToolCall["AI gọi một công cụ thực thi"] --> SecurityHooks{"Security Hooks Check"}
-    SecurityHooks -->|Khớp file nhạy cảm| Block["Chặn ngay: privacy-block.sh"]
-    SecurityHooks -->|Hợp lệ| Step1{"Bước 1: Khớp Quy Tắc"}
-    Step1 -->|Khớp Allow List| AutoAllow["Tự động cho phép chạy"]
-    Step1 -->|Khớp Deny List| Deny["Chặn đứng và cảnh báo"]
-    Step1 -->|Chưa xác định| Step2{"Bước 2: Kiểm Tra Thư Mục"}
-    Step2 -->|Trong thư mục làm việc| AutoAllow
-    Step2 -->|Ngoài thư mục làm việc| AskUser["Hỏi xác nhận từ người dùng"]
-    Step2 -->|Lệnh shell không rõ| Step3{"Bước 3: LLM Classifier"}
-    Step3 -->|Phân loại: SAFE| AutoAllow
-    Step3 -->|Phân loại: DANGEROUS| Deny
-    Step3 -->|Phân loại: NEEDS_REVIEW| AskUser
-```
-
-### 1. Privacy Block Hook (`privacy-block.sh`)
-Tự động chặn đứng quyền truy cập vào các file chứa thông tin nhạy cảm:
-- Toàn bộ file `.env` (ngoại trừ `.env.example`).
-- Các file chứng chỉ và khóa bảo mật: `.pem`, `.key`, `id_rsa`.
-- Thư mục cấu hình xác thực cá nhân: `~/.ssh/`, `~/.aws/`.
-
-### 2. Pipeline Auto-Approve 3 bước
-- **Bước 1 (Khớp quy tắc tức thì):** So khớp tiền tố lệnh với danh sách an toàn đã biết (ví dụ: `git status`, `pnpm test`) hoặc danh sách cấm phá hoại.
-- **Bước 2 (Kiểm tra ranh giới thư mục):** Sử dụng `path.resolve()` để xác định thao tác ghi file có nằm trong phạm vi dự án hay không, ngăn chặn triệt để tấn công vượt quyền thư mục (`../../etc/passwd`).
-- **Bước 3 (Bộ phân loại LLM chuyên dụng):** Sử dụng Claude Sonnet đóng gói đầu vào trong thẻ `<tool_input>` nhằm chống lại các cuộc tấn công chèn mã lệnh Prompt Injection, phân loại thao tác thành `SAFE`, `DANGEROUS` hoặc `NEEDS_REVIEW`.
-
----
-
-## 5. Hỗ trợ song hành: Claude Code và Codex CLI
-
-Coding Friend hỗ trợ cả hai nền tảng AI CLI hàng đầu với kiến trúc tích hợp phù hợp cho từng môi trường:
-
-| Đặc Điểm Kiến Trúc | Claude Code | Codex CLI |
-| :--- | :--- | :--- |
-| **Cú pháp gọi Skill** | `/cf-plan`, `/cf-review` | `$cf-plan`, `$cf-review` |
-| **Phạm vi cấu hình MCP** | Cấu hình toàn cục tại User Scope | Cấu hình cục bộ tại `.codex/config.toml` |
-| **Định nghĩa Subagent** | Load trực tiếp từ Markdown trong plugin | Biên dịch thành file `.codex/agents/*.toml` |
-| **Ánh xạ mức độ tư duy** | `haiku` $\to$ `sonnet` $\to$ `opus` | `low` $\to$ `medium` $\to$ `high` |
-| **Cơ chế Auto-Approve** | Pipeline 3 bước kết hợp LLM Classifier | Kiểm tra tất định theo quy tắc tĩnh |
-
----
-
-## 6. Mở rộng quy trình với Custom Skill Guides
-
-Chúng ta có thể dễ dàng mở rộng bất kỳ skill có sẵn nào mà không cần chỉnh sửa mã nguồn của plugin thông qua lệnh `cf guide`:
+Chúng ta có thể cài đặt nhanh qua npm:
 
 ```bash
-# Tạo file hướng dẫn tùy biến cho skill cf-commit
-cf guide create cf-commit
+# Cài đặt công cụ dòng lệnh
+npm i -g coding-friend-cli
+
+# Khởi tạo dự án
+cf init
 ```
 
-Cấu trúc file `.coding-friend/skills/cf-commit-custom/SKILL.md` hỗ trợ 3 phần mở rộng:
-- **`## Before`**: Các bước tiền xử lý chạy trước khi quy trình mặc định bắt đầu (ví dụ: tự động chạy kiểm tra định dạng).
-- **`## Rules`**: Các quy định bổ sung được áp dụng xuyên suốt quy trình (ví dụ: chuẩn đặt tên commit riêng của công ty).
-- **`## After`**: Các bước hậu xử lý sau khi hoàn thành (ví dụ: gửi thông báo qua webhook).
+```mermaid
+flowchart TD
+    Scan["Bước 1: Quét và nạp tri thức<br/><code>/cf-scan</code>"] --> Plan["Bước 2: Lập kế hoạch thực thi<br/><code>/cf-plan</code>"]
+    Plan --> Code["Bước 3: Viết code và kiểm thử<br/><code>cf-tdd</code>"]
+    Code --> Review["Bước 4: Đánh giá mã nguồn<br/><code>/cf-review</code>"]
+    Review --> Ship["Bước 5: Đóng gói và phát hành<br/><code>/cf-ship</code>"]
+```
 
 ---
 
-## 7. Bảng tra cứu toàn diện 26 Skills và Token Footprint
+## 2. Mô tả chi tiết toàn bộ 26 Skills của Coding Friend
 
-Dưới đây là bảng tổng hợp toàn bộ 26 skills của Coding Friend kèm mức độ chiếm dụng ngữ cảnh đầu vào (Prompt Footprint): `⚡` (Thấp, dưới 2k tokens), `⚡⚡` (Trung bình, 2k đến 6k tokens), `⚡⚡⚡` (Cao, trên 6k tokens).
+Hệ sinh thái Coding Friend được tổ chức thành 7 nhóm kỹ năng chuyên biệt để phục vụ trọn vẹn vòng đời phát triển phần mềm:
 
-| Lệnh / Skill | Loại Kích Hoạt | Footprint | Mục Đích Sử Dụng Chi Tiết |
-| :--- | :--- | :---: | :--- |
-| `/cf-plan` | Lệnh thủ công | `⚡⚡⚡` | Khám phá dự án, brainstorm và lập kế hoạch thực thi theo từng pha. |
-| `/cf-plan-resume` | Lệnh thủ công | `⚡⚡` | Tiếp tục thực hiện kế hoạch dang dở từ điểm dừng gần nhất. |
-| `/cf-advise` | Lệnh thủ công | `⚡⚡` | Phỏng vấn cố vấn ra quyết định kiến trúc (không viết code hay lập kế hoạch). |
-| `/cf-tdd` | Tự động / Lệnh | `⚡` | Phát triển tính năng theo chu trình kiểm thử Red $\to$ Green $\to$ Refactor. |
-| `/cf-verification` | Tự động | `⚡` | Bắt buộc chạy kiểm thử xác minh thực tế trước khi báo hoàn thành task. |
-| `/cf-fix` | Tự động / Lệnh | `⚡⚡` | Sửa lỗi nhanh nhưng tuân thủ tái hiện và kiểm chứng khoa học. |
-| `/cf-sys-debug` | Tự động / Lệnh | `⚡⚡⚡` | Quy trình điều tra và khoanh vùng lỗi hệ thống phức tạp 4 pha. |
-| `/cf-review` | Tự động / Lệnh | `⚡⚡⚡` | Điều phối dàn 5 chuyên gia đánh giá toàn diện mã nguồn. |
-| `/cf-review-out` | Lệnh thủ công | `⚡⚡` | Xuất gói prompt review kèm diff để gửi sang AI bên ngoài hoặc chuyên gia. |
-| `/cf-review-in` | Lệnh thủ công | `⚡` | Đọc kết quả review từ bên ngoài và tự động tạo kế hoạch vá lỗi. |
-| `/cf-commit` | Tự động / Lệnh | `⚡` | Phân tích thay đổi, quét rò rỉ bí mật và tạo Conventional Commit. |
-| `/cf-ship` | Lệnh thủ công | `⚡` | Quy trình hoàn chỉnh: Kiểm thử $\to$ Commit $\to$ Push $\to$ Tạo Pull Request. |
-| `/cf-remember` | Tự động / Lệnh | `⚡` | Lưu trữ quyết định kiến trúc và quy ước vào `docs/memory/`. |
-| `/cf-ask` | Lệnh thủ công | `⚡` | Hỏi đáp nhanh về luồng hoạt động của dự án và lưu vào bộ nhớ. |
-| `/cf-learn` | Tự động / Lệnh | `⚡⚡` | Rút trích bài học kinh nghiệm sau buổi làm việc cho con người ôn tập. |
-| `/cf-teach` | Lệnh thủ công | `⚡⚡` | Giảng giải bản chất kỹ thuật theo lối kể chuyện đàm đạo sâu sắc. |
-| `/cf-research` | Lệnh thủ công | `⚡⚡⚡` | Nghiên cứu công nghệ chuyên sâu kết hợp tìm kiếm dữ liệu trên web. |
-| `/cf-optimize` | Tự động / Lệnh | `⚡⚡` | Quy trình tối ưu hiệu năng có đo lường trước và sau khi tinh chỉnh. |
-| `/cf-design` | Lệnh thủ công | `⚡⚡` | Thiết kế và tinh chỉnh giao diện bám sát Design System của dự án. |
-| `/cf-scan` | Lệnh thủ công | `⚡⚡⚡` | Quét toàn bộ kho mã nguồn để khởi tạo bộ nhớ tri thức ban đầu. |
-| `/cf-session` | Lệnh thủ công | `⚡` | Đóng gói phiên làm việc để chuyển đổi mượt mà sang máy tính khác. |
-| `/cf-checkpoint` | Lệnh thủ công | `⚡` | Lưu ảnh chụp ngữ cảnh hiện tại để nạp lại vào phiên làm việc mới. |
-| `/cf-checkpoint-from` | Lệnh thủ công | `⚡` | Nạp lại ngữ cảnh từ file checkpoint đã lưu trước đó. |
-| `/cf-later-do` | Lệnh thủ công | `⚡` | Duyệt và giải quyết danh sách các việc phụ đã hoãn trong `docs/later/`. |
-| `/cf-warm` | Lệnh thủ công | `⚡` | Tóm tắt nhanh lịch sử commit khi quay trở lại dự án sau thời gian vắng mặt. |
-| `/cf-help` | Tự động / Lệnh | `⚡` | Tra cứu hướng dẫn sử dụng và thông tin về toàn bộ hệ sinh thái Coding Friend. |
+```mermaid
+flowchart TD
+    CF["Coding Friend<br/>Hệ Sinh Thái 26 Skills"]
+
+    subgraph DevGroup ["Nhóm Kỹ Thuật và Lập Trình"]
+        direction TB
+        G1["Nhóm 1<br/>Khám Phá và Định Hướng"]
+        G2["Nhóm 2<br/>Lập Kế Hoạch - Planning"]
+        G3["Nhóm 3<br/>Lập Trình và Kiểm Thử"]
+        G4["Nhóm 4<br/>Sửa Lỗi và Tối Ưu"]
+        G1 --> G2 --> G3 --> G4
+    end
+
+    subgraph WorkGroup ["Nhóm Quy Trình và Quản Trị"]
+        direction TB
+        G5["Nhóm 5<br/>Đánh Giá Mã Nguồn - Review"]
+        G6["Nhóm 6<br/>Quản Trị Git và Phát Hành"]
+        G7["Nhóm 7<br/>Bộ Nhớ và Học Tập"]
+        G5 --> G6 --> G7
+    end
+
+    CF --> G1
+    CF --> G5
+```
 
 ---
 
-## 8. Bài học đúc kết khi ứng dụng Coding Friend
+### Nhóm 1: Khám phá và Định hướng (Discovery & Advisory)
 
-1. **Kế hoạch đi trước, code theo sau:** Luôn dành thời gian cho `/cf-plan` hoặc `/cf-advise` để làm rõ các góc khuất kiến trúc trước khi để AI gõ phím.
-2. **Context cô lập là chìa khóa:** Sử dụng các Subagent chuyên trách và file trung gian để giữ cho ngữ cảnh của phiên làm việc luôn tinh gọn, tránh hiện tượng suy giảm chú ý của mô hình.
-3. **Chuyển hóa tri thức thành tài sản:** Sử dụng song song `/cf-remember` (để AI hiểu dự án hơn trong tương lai) và `/cf-learn` (để chính chúng ta không ngừng nâng cao trình độ chuyên môn).
+1. **`/cf-scan` (Khám phá và khởi tạo bộ nhớ):**  
+   Quét toàn bộ cấu trúc dự án, nhận diện framework, công nghệ và các pattern có sẵn để khởi tạo bộ nhớ ngữ cảnh ban đầu vào `docs/memory/`.
+2. **`/cf-advise` (Cố vấn quyết định kiến trúc):**  
+   Thực hiện phỏng vấn từng câu một để làm rõ bài toán và đưa ra khuyến nghị phân tích đa chiều (ưu điểm, nhược điểm, phương án thay thế). Skill này chỉ cố vấn, không sinh code hay tạo kế hoạch.
+3. **`/cf-research` (Nghiên cứu công nghệ chuyên sâu):**  
+   Nghiên cứu kỹ lưỡng một chủ đề, thư viện hoặc giải pháp kỹ thuật kết hợp tìm kiếm dữ liệu trên web và lưu kết quả vào `docs/research/`.
+4. **`/cf-ask` (Hỏi đáp nhanh về codebase):**  
+   Tìm kiếm và phân tích luồng code để trả lời các câu hỏi thắc mắc của bạn về kiến trúc dự án.
+5. **`/cf-help` (Hướng dẫn và tra cứu tính năng):**  
+   Tra cứu nhanh cách sử dụng các skill, agent và quy trình trong hệ sinh thái Coding Friend.
+
+---
+
+### Nhóm 2: Lập kế hoạch (Planning & Context Management)
+
+```mermaid
+flowchart TD
+    UserReq["Yêu cầu tính năng mới"] --> ModeCheck{"Chọn chế độ?"}
+    ModeCheck -->|Mặc định: Phỏng vấn| PlanNormal["/cf-plan"]
+    ModeCheck -->|Task nhỏ: Nhanh| PlanFast["/cf-plan --fast"]
+    ModeCheck -->|Refactor lớn: Rollback| PlanHard["/cf-plan --hard"]
+    ModeCheck -->|Tự hành: Tự động hóa| PlanAuto["/cf-plan --auto"]
+    PlanNormal --> Output["Lưu file kế hoạch<br/>tại docs/plans/"]
+    PlanFast --> InlineOutput["Theo dõi checklist<br/>trực tiếp trong chat"]
+    PlanHard --> Output
+    PlanAuto --> Output
+```
+
+6. **`/cf-plan` (Lập kế hoạch triển khai):**  
+   Khám phá dự án, đối chiếu yêu cầu, brainstorm 2 đến 3 hướng giải quyết kỹ thuật và tạo kế hoạch từng bước cụ thể.
+7. **`/cf-plan-resume` (Tiếp tục kế hoạch dang dở):**  
+   Đọc lại file kế hoạch đã lưu trong `docs/plans/` và tiếp tục thực hiện từ vị trí đang dừng lại.
+8. **`/cf-checkpoint` (Lưu snapshot ngữ cảnh):**  
+   Lưu ảnh chụp trạng thái làm việc hiện tại vào một file ngắn gọn để có thể khôi phục trong phiên làm việc mới.
+9. **`/cf-checkpoint-from` (Khôi phục ngữ cảnh từ snapshot):**  
+   Nạp lại bối cảnh từ file checkpoint đã lưu trước đó để tiếp tục tác vụ một cách liền mạch.
+10. **`/cf-session` (Đồng bộ phiên làm việc):**  
+    Lưu phiên làm việc để có thể chuyển sang máy tính khác tiếp tục code.
+11. **`/cf-later-do` (Quản lý việc tồn đọng):**  
+    Duyệt và xử lý dần danh sách các công việc phụ phát sinh đã được hoãn lại trong `docs/later/`.
+
+---
+
+### Nhóm 3: Lập trình và Kiểm thử (Coding & Testing)
+
+```mermaid
+flowchart TD
+    StartDev["Bắt đầu viết code"] --> CheckTest{"Có cờ --add-tests?"}
+    CheckTest -->|Có: Chu trình TDD| Red["Bước 1: RED<br/>Viết test fail trước"]
+    Red --> Green["Bước 2: GREEN<br/>Viết code để test pass"]
+    Green --> Refactor["Bước 3: REFACTOR<br/>Tối ưu và dọn dẹp mã nguồn"]
+    CheckTest -->|Không: Code trực tiếp| Direct["Thực thi và kiểm tra<br/>trên test có sẵn"]
+    Refactor --> Verify["cf-verification<br/>Chạy test thực tế"]
+    Direct --> Verify
+```
+
+12. **`cf-tdd` (Lập trình chuẩn Test-Driven Development):**  
+    Tự động kích hoạt khi viết code. Khi có cờ `--add-tests` (hoặc cấu hình `tdd: true`), bắt buộc AI phải viết test fail trước (RED), sau đó viết code để test pass (GREEN) và cuối cùng tối ưu mã nguồn (REFACTOR).
+13. **`cf-verification` (Xác minh trước khi bàn giao):**  
+    Bắt buộc AI phải chạy lệnh build hoặc test thực tế trên máy tính để chứng minh code hoạt động tốt trước khi báo hoàn thành với người dùng.
+14. **`/cf-design` (Thiết kế và chuẩn hóa giao diện UI):**  
+    Quét các mẫu giao diện có sẵn, trích xuất Design System và xây dựng component mới đồng bộ với phong cách chung của dự án.
+
+---
+
+### Nhóm 4: Sửa lỗi và Tối ưu (Debugging & Optimization)
+
+```mermaid
+flowchart TD
+    Bug["Phát hiện lỗi kỹ thuật"] --> Step1["Pha 1: Tái hiện lỗi<br/>và khoanh vùng nguyên nhân"]
+    Step1 --> Step2["Pha 2: Đặt giả thuyết<br/>kỹ thuật rõ ràng"]
+    Step2 --> Step3["Pha 3: Sửa mã nguồn<br/>tối thiểu và chạy test"]
+    Step3 --> Step4["Pha 4: Ghi bài học<br/>vào docs/memory/bugs/"]
+```
+
+15. **`/cf-fix` (Sửa lỗi nhanh có kiểm chứng):**  
+    Tái hiện lỗi, khoanh vùng nguyên nhân và sửa chữa có kiểm tra lại bằng test, tránh việc sửa mò lan man.
+16. **`/cf-sys-debug` (Điều tra lỗi hệ thống phức tạp):**  
+    Quy trình sửa lỗi 4 pha nghiêm ngặt dành cho các lỗi khó tái hiện, lỗi hồi quy hoặc lỗi liên quan đến nhiều module.
+17. **`/cf-optimize` (Tối ưu hóa hiệu năng):**  
+    Đo lường chỉ số benchmark trước khi sửa, tiến hành tối ưu hóa thuật toán hoặc truy vấn và đo lại để so sánh hiệu quả.
+
+---
+
+### Nhóm 5: Đánh giá mã nguồn (Multi-Layer Code Review)
+
+```mermaid
+flowchart TD
+    Diff["Mã nguồn vừa thay đổi"] --> ReviewPipeline["Điều phối review: /cf-review"]
+
+    subgraph ColA ["Đánh Giá Chuyên Sâu"]
+        direction TB
+        L1["Lớp 1: Đánh giá bảo mật<br/>và rò rỉ dữ liệu"]
+        L2["Lớp 2: Đánh giá độ bám sát<br/>kế hoạch ban đầu"]
+        L3["Lớp 3: Đánh giá Clean Code<br/>và code thừa"]
+        L1 --> L2 --> L3
+    end
+
+    subgraph ColB ["Kiểm Thử và Quy Chuẩn"]
+        direction TB
+        L4["Lớp 4: Đánh giá độ bao phủ<br/>kiểm thử tự động"]
+        L5["Lớp 5: Kiểm tra tuân thủ<br/>quy ước dự án"]
+        L4 --> L5
+    end
+
+    ReviewPipeline --> L1
+    ReviewPipeline --> L4
+
+    L3 --> Merge["Tổng hợp báo cáo<br/>phân loại vấn đề"]
+    L5 --> Merge
+```
+
+18. **`/cf-review` (Review mã nguồn 5 lớp):**  
+    Điều phối đánh giá độc lập về bảo mật, chất lượng code, độ bao phủ test, bám sát kế hoạch và tuân thủ quy tắc dự án.
+19. **`/cf-review-out` (Đóng gói review cho bên ngoài):**  
+    Tạo file prompt chứa diff và ngữ cảnh để gửi sang Gemini, ChatGPT hoặc nhờ đồng nghiệp review chéo.
+20. **`/cf-review-in` (Nhập kết quả review từ bên ngoài):**  
+    Đọc file kết quả đánh giá từ bên ngoài và tự động tạo danh sách công việc cần sửa chữa.
+
+
+---
+
+### Nhóm 6: Quản trị Git và Phát hành (Git & Release)
+
+21. **`/cf-commit` (Tạo commit thông minh):**  
+    Phân tích thay đổi trong diff, quét kiểm tra rò rỉ secret hoặc API key và tạo Conventional Commit ngắn gọn, chuẩn xác.
+22. **`/cf-ship` (Phát hành trọn gói một lệnh):**  
+    Thực hiện liên hoàn: Chạy kiểm thử xác minh $\to$ Tạo commit $\to$ Đẩy lên nhánh Git $\to$ Mở Pull Request.
+23. **`/cf-warm` (Cập nhật tiến độ sau khi vắng mặt):**  
+    Tóm tắt nhanh các thay đổi trong lịch sử Git của dự án kể từ lần cuối bạn làm việc.
+
+---
+
+### Nhóm 7: Bộ nhớ và Học tập (Memory & Learning)
+
+24. **`/cf-remember` (Lưu tri thức dự án cho AI):**  
+    Ghi nhớ các quyết định kiến trúc, quy ước đặt tên và kinh nghiệm sửa bug vào `docs/memory/` để AI đọc lại trong các phiên sau.
+25. **`/cf-learn` (Rút trích ghi chú học tập cho con người):**  
+    Trích xuất những kiến thức, cú pháp và khái niệm mới thành tài liệu học tập cá nhân.
+26. **`/cf-teach` (Giải thích chuyên sâu dạng trò chuyện):**  
+    AI đóng vai trò như một người bạn kỹ sư giàu kinh nghiệm, phân tích sâu về lý do chọn giải pháp, các phương án bị loại trừ và bài học rút ra.
+
+---
+
+## 3. Các Best Practices quan trọng nhất trong thực tế
+
+### 1. Luôn lập kế hoạch trước khi code (`/cf-plan`)
+Đối với bất kỳ tác vụ nào lớn hơn việc sửa một dòng code, chúng ta nên bắt đầu bằng `/cf-plan`. Lập kế hoạch trước giúp AI nắm bắt đầy đủ bối cảnh, hiểu cấu trúc thư mục và giảm thiểu rủi ro sửa sai.
+
+```bash
+# Chế độ tiêu chuẩn: Phỏng vấn, tìm hiểu codebase và đưa ra phương án tối ưu
+/cf-plan Xây dựng hệ thống xác thực người dùng bằng JWT
+
+# Chế độ Fast (--fast): Bỏ qua bước hỏi đáp, đi thẳng vào checklist cho task nhỏ
+/cf-plan --fast Thêm endpoint /healthz kiểm tra trạng thái server
+
+# Chế độ Hard (--hard): Đào sâu rủi ro, lên phương án rollback (dành cho refactor lớn)
+/cf-plan --hard Chuyển đổi toàn bộ API từ REST sang GraphQL
+
+# Chế độ Autopilot (--auto): AI tự làm từ đầu đến cuối (Code -> Review -> Fix -> Commit)
+/cf-plan --auto Tạo giao diện trang hồ sơ cá nhân
+```
+
+{{< admonition type="note" title="Khi Nào Không Cần Dùng /cf-plan?" >}}
+Với các tác vụ cực kỳ đơn giản như sửa lỗi chính tả, đổi màu một nút bấm hoặc sửa 1–2 dòng code, chúng ta không cần dùng `/cf-plan` mà chỉ cần mô tả trực tiếp yêu cầu cho AI.
+{{< /admonition >}}
+
+---
+
+### 2. Viết câu lệnh cụ thể, có phạm vi rõ ràng
+AI hoạt động hiệu quả nhất khi nhận được yêu cầu cụ thể kèm đường dẫn file hoặc thông báo lỗi thực tế.
+
+- ❌ **Tránh viết chung chung:**
+  ```text
+  /cf-fix Lỗi đăng nhập rồi
+  ```
+- ✅ **Nên viết rõ ràng và kèm ngữ cảnh:**
+  ```text
+  /cf-fix API /api/login trả về lỗi 401 khi cookie phiên làm việc đã hết hạn trong file src/auth/session.ts
+  ```
+
+---
+
+### 3. Quét dự án vào bộ nhớ ngay khi bắt đầu (`/cf-scan`)
+Khi mở một dự án mới hoặc kho mã nguồn lớn, hãy chạy `/cf-scan` đầu tiên. AI sẽ đọc tổng quan cấu trúc, nhận diện framework và lưu các hiểu biết cốt lõi vào `docs/memory/` để dùng lại cho các câu lệnh sau này.
+
+```bash
+/cf-scan Dự án web e-commerce viết bằng Next.js, Prisma và Stripe
+```
+
+---
+
+### 4. Chia nhỏ commit, commit thường xuyên (`/cf-commit`)
+Đừng gom toàn bộ công việc của cả ngày vào một commit khổng lồ. Hãy chạy `/cf-commit` ngay sau mỗi bước hoàn thành nhỏ. Lệnh này sẽ tự động phân tích diff và tạo commit message chuẩn:
+
+```bash
+# Sau khi hoàn thành tạo API endpoint
+/cf-commit
+
+# Sau khi viết xong bộ unit test
+/cf-commit
+
+# Sau khi cập nhật tài liệu
+/cf-commit
+```
+
+---
+
+### 5. Luôn review mã nguồn trước khi merge (`/cf-review`)
+Trước khi đóng gói bàn giao, hãy chạy `/cf-review` để AI kiểm tra chéo mã nguồn theo nhiều tiêu chí (bảo mật, chất lượng code, độ bao phủ test và tuân thủ quy ước dự án).
+
+```bash
+# Review toàn bộ các thay đổi chưa commit
+/cf-review
+
+# Hoặc review riêng một thư mục nhạy cảm
+/cf-review src/auth/
+```
+
+---
+
+### 6. Ghi nhớ bài học và lưu trữ quyết định (`/cf-remember` và `/cf-learn`)
+Để tránh việc phiên làm việc sau AI lại mắc cùng một lỗi cũ hoặc quên mất quy ước của nhóm:
+
+- **Dành cho AI (`/cf-remember`):** Lưu các quyết định kỹ thuật vào `docs/memory/` để AI tự đọc lại trong tương lai.
+  ```bash
+  /cf-remember Chúng ta dùng Redis thay vì Memcached vì cần tính năng Pub/Sub cho thông báo thời gian thực
+  ```
+- **Dành cho bản thân (`/cf-learn` và `/cf-teach`):**
+  - `/cf-learn`: Rút trích ghi chú học tập ngắn gọn.
+  - `/cf-teach`: Yêu cầu AI giải thích lại toàn bộ bản chất kiến trúc và bài học rút ra theo phong cách trò chuyện dễ hiểu.
+
+---
+
+### 7. Quản lý dung lượng ngữ cảnh thông minh (Context Management)
+Ngữ cảnh của các mô hình AI luôn có giới hạn. Để đạt hiệu suất cao và tiết kiệm chi phí:
+
+1. **Mở phiên mới cho tác vụ mới:** Không nên dùng tiếp một phiên làm việc đã quá dài cho một tính năng hoàn toàn khác.
+2. **Chỉ định chính xác đường dẫn file:** Thay vì bảo "hãy xem phần auth", hãy viết rõ "hãy xem file `src/auth/middleware.ts`".
+3. **Cách dùng lệnh `/compact` chuẩn xác:** Khi thanh ngữ cảnh gần đầy, hãy hướng dẫn rõ ràng cho lệnh nén:
+
+```bash
+# ✅ Cách nén ngữ cảnh đúng: Chỉ định rõ thông tin cần giữ lại
+/compact giữ lại kế hoạch ban đầu, yêu cầu của tôi, các thay đổi chính và danh sách việc còn lại
+
+# ❌ Tránh gõ lệnh /compact trơ trọi vì AI có thể tóm tắt mất các chi tiết quan trọng!
+```
+
+---
+
+## 4. Tóm tắt cốt lõi
+
+Việc lập trình cùng AI chỉ thực sự mang lại hiệu quả cao khi chúng ta có phương pháp kiểm soát đúng đắn:
+- **Lập kế hoạch trước (`/cf-plan`)** để định hình kiến trúc.
+- **Yêu cầu rõ ràng, commit nhỏ thường xuyên (`/cf-commit`)** để dễ kiểm soát.
+- **Review kỹ lưỡng (`/cf-review`)** để chặn đứng lỗi phát sinh.
+- **Tích lũy tri thức (`/cf-remember`, `/cf-learn`)** để cả AI và chúng ta đều giỏi hơn qua từng ngày.
