@@ -1,0 +1,672 @@
+// ==========================================================
+// 8. MINIMAL HIGH-DENSITY CONTACT STRIP (Reddit / Editorial UX)
+// ==========================================================
+.contact-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 0.8rem 0 1.2rem;
+  transition: all 0.2s ease;
+
+  [theme=dark] & {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.contact-status-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.8125rem;
+  color: #64748b;
+
+  [theme=dark] & {
+    color: #94a3b8;
+  }
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 500;
+  color: #1e293b;
+
+  [theme=dark] & {
+    color: #e2e8f0;
+  }
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  display: inline-block;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.contact-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.contact-links-row,
+.about-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+// 8. Color-Coded Distinct Icons for Learning Resources Page
+.fa-youtube, .fa-youtube-square { color: #ff0000 !important; }
+.fa-star { color: #f59e0b !important; }
+.fa-graduation-cap { color: #2563eb !important; }
+.fa-book { color: #8b5cf6 !important; }
+.fa-globe { color: #10b981 !important; }
+.fa-check-circle { color: #16a34a !important; }
+.fa-github {
+  color: #24292e !important;
+  [theme=dark] & { color: #f0f6fc !important; }
+}
+
+// 9. Categories Page (Magazine Grid Cards & Left-Aligned Title)
+.page.archive {
+  .single-title {
+    text-align: left !important; /* Left-align "ALL CATEGORIES" */
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.4rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    font-weight: 600 !important;
+    color: #111111 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+
+    [theme=dark] & {
+      color: #e5e7eb !important;
+    }
+  }
+
+  .categories-card {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-top: 1rem !important;
+
+    .card-item {
+      width: 100% !important;
+      min-height: auto !important;
+      margin-top: 0 !important;
+      padding: 1.25rem 1.4rem !important;
+      border: 1px solid #e8e8e8 !important;
+      border-radius: 8px !important;
+      background-color: #ffffff !important;
+      box-sizing: border-box !important;
+
+      [theme=dark] & {
+        border-color: #27272a !important;
+        background-color: #18181b !important;
+      }
+
+      .card-item-wrapper {
+        width: 100% !important;
+      }
+
+      .card-item-title {
+        font-family: "Lora", Georgia, serif !important;
+        font-size: 1.15rem !important;
+        font-weight: 400 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.8rem !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+        padding-bottom: 0.5rem !important;
+
+        [theme=dark] & {
+          border-bottom-color: #27272a !important;
+        }
+
+        a {
+          color: #111111 !important;
+          text-decoration: none !important;
+
+          [theme=dark] & {
+            color: #f3f4f6 !important;
+          }
+
+          &:hover {
+            color: #1337a6 !important;
+            text-decoration: underline !important;
+          }
+
+          i {
+            color: #828282 !important;
+            margin-right: 0.4rem !important;
+          }
+        }
+      }
+
+      .archive-item {
+        margin: 0.5rem 0 !important;
+
+        .archive-item-link {
+          font-family: "Lora", Georgia, serif !important;
+          font-size: 0.95rem !important;
+          color: #424242 !important;
+          text-decoration: none !important;
+
+          [theme=dark] & {
+            color: #d1d5db !important;
+          }
+
+          &:hover {
+            color: #1337a6 !important;
+            text-decoration: underline !important;
+
+            [theme=dark] & {
+              color: #93c5fd !important;
+            }
+          }
+        }
+      }
+
+      .more-post a {
+        font-family: "Lora", Georgia, serif !important;
+        font-size: 0.85rem !important;
+        color: #4d74eb !important;
+        text-decoration: none !important;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
+
+// 10. Mobile Navigation Menu (Modern Minimal UX Best Practices)
+#header-mobile {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07) !important;
+
+  [theme=dark] & {
+    background-color: rgba(24, 24, 27, 0.98) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .header-wrapper {
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+
+    @media (max-width: 768px) {
+      padding: 0 12px !important;
+    }
+
+    .header-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      font-size: 19px !important;
+      font-weight: 700 !important;
+      white-space: nowrap !important;
+
+      a {
+        color: #4d74eb !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        letter-spacing: -0.3px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+
+        [theme=dark] & {
+          color: #60a5fa !important;
+        }
+      }
+
+      .nav-site-pink {
+        color: #ec4899 !important;
+        font-weight: 700 !important;
+        margin-left: 0.15rem !important;
+
+        [theme=dark] & {
+          color: #f472b6 !important;
+        }
+      }
+
+      .header-title-pre,
+      .header-title-post {
+        margin-left: 0.3rem !important;
+        font-weight: 700 !important;
+        font-size: 0.95em !important;
+        opacity: 0.95 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        vertical-align: middle !important;
+        transform: none !important;
+        line-height: 1 !important;
+        letter-spacing: -0.5px !important;
+      }
+
+      .header-title-pre {
+        margin-left: 0 !important;
+        margin-right: 0.3rem !important;
+      }
+
+      .nav-blue {
+        color: #4d74eb !important;
+
+        [theme=dark] & {
+          color: #60a5fa !important;
+        }
+      }
+
+      .nav-pink {
+        color: #ec4899 !important;
+
+        [theme=dark] & {
+          color: #f472b6 !important;
+        }
+      }
+    }
+
+    .menu-toggle span {
+      background-color: #111111 !important;
+
+      [theme=dark] & {
+        background-color: #e5e7eb !important;
+      }
+    }
+  }
+}
+
+.menu#menu-mobile {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  padding: 0.75rem 1.25rem 1.25rem 1.25rem !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
+
+  [theme=dark] & {
+    background-color: #1c1d22 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  // Modern Clean Search Bar at Top of Mobile Menu
+  .search-wrapper {
+    margin: 0.25rem 0 1rem 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+
+    .search.mobile {
+      background-color: #f4f4f5 !important;
+      border: 1px solid transparent !important;
+      border-radius: 8px !important;
+      height: 2.75rem !important;
+      transition: all 0.2s ease !important;
+
+      [theme=dark] & {
+        background-color: rgba(255, 255, 255, 0.06) !important;
+      }
+
+      &:focus-within {
+        border-color: #111111 !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05) !important;
+
+        [theme=dark] & {
+          background-color: #1c1d22 !important;
+          border-color: #e5e7eb !important;
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08) !important;
+        }
+      }
+
+      input {
+        font-family: "Lora", Georgia, serif !important;
+        font-size: 0.95rem !important;
+        color: #111111 !important;
+        background: transparent !important;
+        padding-left: 2.4rem !important;
+
+        [theme=dark] & {
+          color: #f3f4f6 !important;
+        }
+      }
+
+      .search-button i {
+        color: #64748b !important;
+      }
+    }
+
+    .search-cancel {
+      font-family: "Lora", Georgia, serif !important;
+      color: #64748b !important;
+      font-size: 0.9rem !important;
+
+      &:hover {
+        color: #111111 !important;
+      }
+
+      [theme=dark] & {
+        color: #9ca3af !important;
+
+        &:hover {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+
+  // Navigation Links List
+  .mobile-nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    border-top: 1px solid #f1f5f9 !important;
+    padding-top: 0.5rem !important;
+
+    [theme=dark] & {
+      border-top-color: #27272a !important;
+    }
+
+    .menu-item {
+      font-family: "Lora", Georgia, serif !important;
+      font-size: 1.08rem !important;
+      font-weight: 400 !important;
+      color: #1e293b !important;
+      padding: 0.75rem 0.6rem !important;
+      margin: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      text-decoration: none !important;
+      border-radius: 6px !important;
+      border-bottom: 1px solid #f8fafc !important;
+      transition: all 0.15s ease !important;
+
+      [theme=dark] & {
+        color: #e2e8f0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.03) !important;
+      }
+
+      .menu-item-inner {
+        display: inline-flex !important;
+        align-items: center !important;
+
+        i, svg {
+          margin-right: 0.8rem !important;
+          font-size: 0.95rem !important;
+          width: 1.25rem !important;
+          text-align: center !important;
+          color: #94a3b8 !important;
+          opacity: 0.8 !important;
+          transition: all 0.15s ease !important;
+        }
+
+        [theme=dark] & {
+          i, svg {
+            color: #64748b !important;
+          }
+        }
+      }
+
+      .menu-item-arrow {
+        font-size: 0.75rem !important;
+        color: #cbd5e1 !important;
+        transition: transform 0.15s ease, color 0.15s ease !important;
+
+        [theme=dark] & {
+          color: #475569 !important;
+        }
+      }
+
+      &:hover {
+        background-color: #f8fafc !important;
+        color: #111111 !important;
+        text-decoration: none !important;
+
+        .menu-item-arrow {
+          transform: translateX(3px) !important;
+          color: #111111 !important;
+        }
+
+        [theme=dark] & {
+          background-color: #27272a !important;
+          color: #ffffff !important;
+
+          .menu-item-arrow {
+            color: #ffffff !important;
+          }
+        }
+      }
+
+      &.active {
+        color: #4d74eb !important;
+        font-weight: 600 !important;
+
+        .menu-item-inner i {
+          color: #4d74eb !important;
+          opacity: 1 !important;
+        }
+
+        .menu-item-arrow {
+          color: #4d74eb !important;
+        }
+
+        [theme=dark] & {
+          color: #818cf8 !important;
+
+          .menu-item-inner i {
+            color: #818cf8 !important;
+          }
+
+          .menu-item-arrow {
+            color: #818cf8 !important;
+          }
+        }
+      }
+
+      // Special Style for My CV in Mobile Menu
+      &[href*="/cv/"] {
+        font-weight: 700 !important;
+        color: #ec4899 !important;
+
+        [theme=dark] & {
+          color: #f472b6 !important;
+        }
+      }
+    }
+  }
+
+  // Theme Switcher Row at Bottom
+  .mobile-bottom-row {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+    border-top: 1px solid #f1f5f9 !important;
+
+    [theme=dark] & {
+      border-top-color: #27272a !important;
+    }
+
+    .theme-switch {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0.65rem 0.8rem !important;
+      border-radius: 6px !important;
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      color: #334155 !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+
+      [theme=dark] & {
+        background: #27272a !important;
+        border-color: #3f3f46 !important;
+        color: #e2e8f0 !important;
+      }
+
+      .theme-switch-label {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+
+        i {
+          color: #64748b !important;
+          font-size: 0.95rem !important;
+
+          [theme=dark] & {
+            color: #fbbf24 !important;
+          }
+        }
+      }
+
+      &:hover {
+        border-color: #cbd5e1 !important;
+        color: #111111 !important;
+
+        [theme=dark] & {
+          border-color: #52525b !important;
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+}
+
+// 15. CV Page Layout Alignment & Compact Footer
+body:has(.cv-container-aligned) .footer {
+  margin-top: 1rem !important; /* Compact distance between CV and Footer */
+}
+
+// 16. Universal Image & Post List Skeleton Shimmer System
+.featured-image-preview {
+  position: relative;
+  background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.10) 37%, rgba(0,0,0,0.04) 63%);
+  background-size: 400% 100%;
+  animation: globalSkeletonShimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  min-height: 180px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  [theme=dark] & {
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 37%, rgba(255,255,255,0.03) 63%);
+    background-size: 400% 100%;
+  }
+}
+
+img.lazyload,
+img.lazyloading {
+  background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.05) 63%) !important;
+  background-size: 400% 100% !important;
+  animation: globalSkeletonShimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+  border-radius: 4px;
+
+  [theme=dark] & {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.10) 37%, rgba(255,255,255,0.04) 63%) !important;
+    background-size: 400% 100% !important;
+  }
+}
+
+img.lazyloaded {
+  animation: fadeInImage 0.35s ease-in-out forwards !important;
+}
+
+/* Page List & Article Item Instant Skeleton Shell */
+.summary.single {
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+@keyframes globalSkeletonShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes fadeInImage {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}// 17. Minimalist Pagination (Clean Neutral Typography, No Shadow, No Bright Colors)
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.2rem !important;
+  margin: 1.5rem 0 0.5rem 0 !important;
+  padding: 0 !important;
+
+  li {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+
+    &:before, &:after {
+      display: none !important;
+    }
+
+    .page-link, a {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: "Lora", Georgia, serif !important;
+      font-size: 0.9rem !important;
+      font-weight: 400 !important;
+      color: #828282 !important;
+      background: transparent !important;
+      border: none !important;
+      text-decoration: none !important;
+      padding: 0.2rem 0.4rem !important;
+      transition: color 0.2s ease !important;
+
+      [theme=dark] & {
+        color: #9ca3af !important;
+      }
+    }
+
+    &:hover:not(.active) {
+      .page-link, a {
+        color: #111111 !important;
+        text-decoration: underline !important;
+
+        [theme=dark] & {
+          color: #ffffff !important;
+        }
+      }
+    }
+
+    &.active {
+      .page-link, a {
+        color: #111111 !important;
+        font-weight: 700 !important;
+        border-bottom: 2px solid #111111 !important;
+        border-radius: 0 !important;
+
+        [theme=dark] & {
+          color: #ffffff !important;
+          border-bottom-color: #ffffff !important;
+        }
+      }
+    }
+  }
+}
+

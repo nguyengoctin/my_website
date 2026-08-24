@@ -1,0 +1,279 @@
+// ==========================================================
+// 6. Unified Modern Quote & Blockquote Styling (No Card)
+// ==========================================================
+blockquote,
+.custom-quote {
+  position: relative !important;
+  font-family: "Lora", Georgia, serif !important;
+  color: #1e293b !important;
+  text-align: left !important;
+  border: none !important;
+  border-left: none !important;
+  padding: 0.5rem 0 !important;
+  margin: 2rem 0 !important;
+  font-size: 1.38rem !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+  font-style: normal !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  box-shadow: none !important;
+
+  [theme=dark] & {
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .quote-content {
+    margin: 0 !important;
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.38rem !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    color: #1e293b !important;
+    font-style: italic !important;
+
+    [theme=dark] & {
+      color: #e2e8f0 !important;
+    }
+
+    .quote-text {
+      font-style: italic !important;
+      font-weight: 500 !important;
+
+      p {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-style: italic !important;
+        font-weight: 500 !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+        color: inherit !important;
+      }
+
+      p + p {
+        display: block !important;
+        margin-top: 0.85rem !important;
+      }
+    }
+
+    .quote-mark {
+      font-family: Georgia, "Times New Roman", serif !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+      font-size: 2.6em !important;
+      line-height: 0 !important;
+      color: #94a3b8 !important;
+      display: inline !important;
+      user-select: none !important;
+      vertical-align: -0.22em !important;
+
+      [theme=dark] & {
+        color: #64748b !important;
+      }
+
+      &.quote-open {
+        margin-right: 0.4rem !important;
+      }
+
+      &.quote-close {
+        margin-left: 0.35rem !important;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.8 !important;
+    color: inherit !important;
+    font-style: italic !important;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  strong {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+
+    [theme=dark] & {
+      color: #f8fafc !important;
+    }
+  }
+
+  footer, .quote-footer {
+    font-style: normal !important;
+    text-align: left !important;
+    font-weight: 400 !important;
+    color: #64748b !important;
+    font-size: 1.05rem !important;
+    margin-top: 0.95rem !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+
+    [theme=dark] & {
+      color: #94a3b8 !important;
+    }
+
+    cite {
+      font-style: normal !important;
+      font-weight: 500 !important;
+      color: inherit !important;
+    }
+  }
+}
+
+// 7. General Content & Article Typography (Balanced Line Height & Harmonious Spacing)
+.single .content {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+
+  p {
+    margin-top: 0 !important;
+    margin-bottom: 1.05rem !important;
+    line-height: 1.75 !important;
+  }
+
+  // Gắn kết tự nhiên giữa đoạn dẫn và danh sách ngay sau nó
+  p + ul,
+  p + ol {
+    margin-top: -0.45rem !important;
+  }
+
+  ul, ol {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1.05rem !important;
+    padding-left: 1.4rem !important;
+
+    li {
+      margin-bottom: 0.35rem !important;
+      line-height: 1.7 !important;
+
+      p {
+        margin-bottom: 0.35rem !important;
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  // Clearfix: tránh float avatar tràn ra ngoài container
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// ==========================================================
+// Personal Bio Floating Avatar (Chip Huyen Editorial Style)
+// ==========================================================
+.bio-container {
+  display: block !important;
+  position: relative !important;
+  clear: both !important;
+  margin-bottom: 1.25rem !important;
+
+  p {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.9rem !important;
+    color: #2c3e50 !important;
+
+    [theme=dark] & {
+      color: #e2e8f0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bio-avatar,
+img.bio-avatar {
+  float: right !important;
+  width: 195px !important;
+  height: 195px !important;
+  max-width: 195px !important;
+  min-width: 195px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  object-position: center 15% !important;
+  border-radius: 50% !important;
+  shape-outside: circle(50%) !important;
+  margin: 0.1rem 0 1rem 1.6rem !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1) !important;
+  display: block !important;
+  clear: none !important;
+  border: none !important;
+
+  [theme=dark] & {
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 155px !important;
+    height: 155px !important;
+    max-width: 155px !important;
+    min-width: 155px !important;
+    margin: 0.1rem 0 0.8rem 1.2rem !important;
+    shape-outside: circle(50%) !important;
+  }
+
+  @media (max-width: 600px) {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px !important;
+    min-width: 140px !important;
+    margin: 0.1rem 0 0.65rem 1rem !important;
+    shape-outside: circle(50%) !important;
+  }
+
+  @media (max-width: 420px) {
+    width: 125px !important;
+    height: 125px !important;
+    max-width: 125px !important;
+    min-width: 125px !important;
+    margin: 0.05rem 0 0.5rem 0.8rem !important;
+    shape-outside: circle(50%) !important;
+  }
+}
+
+// 7. 100% UNIFIED INLINE LINK COLOR SYSTEM (Giữ nguyên style cho Buttons/Chips/Nav)
+a:not(.contact-chip):not(.btn-action):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
+.single .content a:not(.contact-chip):not(.btn-action):not(.tag-pill) {
+  color: #4d74eb !important;
+  transition: color 0.2s ease;
+
+  [theme=dark] & {
+    color: #60a5fa !important;
+  }
+
+  &:hover {
+    color: #1337a6 !important;
+    text-decoration: underline !important;
+
+    [theme=dark] & {
+      color: #93c5fd !important;
+    }
+  }
+}
+

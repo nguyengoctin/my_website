@@ -1,0 +1,419 @@
+
+body {
+  font-family: "Lora", Georgia, serif !important;
+  color: #111111 !important;
+  background-color: #fdfdfd !important;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+
+  &[theme=dark] {
+    color: #e6e8ec !important;
+    background-color: #1c1d22 !important; /* Soft Slate Charcoal background - Flattering & Comfortable for long reading */
+  }
+}
+
+*, *::before, *::after {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+// 7. Search Button & Input: Clean Styling
+.search input {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.search .search-button i {
+  color: #64748b !important;
+}
+
+.search .search-button:hover i {
+  color: #111111 !important;
+
+  [theme=dark] & {
+    color: #ffffff !important;
+  }
+}
+
+.search.mobile input {
+  font-family: "Lora", Georgia, serif !important;
+}
+
+
+// 1. Headings & Divider Lines
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", Georgia, serif !important;
+  font-weight: 500 !important;
+}
+
+.single-title {
+  font-family: "Lora", Georgia, serif !important;
+  font-weight: 500 !important;
+}
+
+h1 {
+  font-size: 1.75rem !important;
+  font-weight: 500 !important;
+  color: #111111 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
+
+  [theme=dark] & {
+    color: #f3f4f6 !important;
+  }
+}
+
+h2 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 1rem !important;
+  color: #111111 !important;
+
+  [theme=dark] & {
+    color: #e5e7eb !important;
+  }
+}
+
+h3 {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  margin-top: 1.4rem !important;
+  margin-bottom: 0.75rem !important;
+  color: #111111 !important;
+
+  [theme=dark] & {
+    color: #e5e7eb !important;
+  }
+}
+
+h4, h5, h6 {
+  font-weight: 500 !important;
+  color: #111111 !important;
+
+  [theme=dark] & {
+    color: #e5e7eb !important;
+  }
+}
+
+// TypeIt Quote — câu quote tâm đắc trên trang chủ (dưới phần ABOUT)
+.home-quote-typeit,
+.home-subtitle {
+  text-align: left !important;
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: #334155 !important;
+  padding: 0 !important;
+  margin: 1.5rem 0 !important;
+  line-height: 1.75 !important;
+
+  [theme=dark] & {
+    color: #e2e8f0 !important;
+  }
+
+  .typeit-cursor {
+    color: #4d74eb !important;
+    font-style: normal !important;
+
+    [theme=dark] & {
+      color: #818cf8 !important;
+    }
+  }
+}
+
+// Quote & Blockquote Dark Mode Readability
+blockquote, .custom-quote {
+  [theme=dark] & {
+    color: #e2e8f0 !important;
+
+    p, span, cite {
+      color: #e2e8f0 !important;
+    }
+  }
+}
+
+
+
+hr {
+  border: none !important;
+  border-top: 1px solid #e8e8e8 !important;
+  margin: 1.2rem 0 !important;
+
+  [theme=dark] & {
+    border-top-color: #27272a !important;
+  }
+}
+
+// 2. Navigation Bar & Logo ("Nguyễn Ngọc Tín" - Underline on Hover, No Dot)
+.header-wrapper {
+  font-family: "Lora", Georgia, serif !important;
+  
+  .header-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+
+    .header-title-pre,
+    .header-title-post {
+      margin-left: 0.35rem !important;
+      font-weight: 700 !important;
+      font-size: 0.95em !important;
+      opacity: 0.95 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      vertical-align: middle !important;
+      transform: none !important;
+      line-height: 1 !important;
+      letter-spacing: -0.5px !important;
+    }
+
+    .header-title-pre {
+      margin-left: 0 !important;
+      margin-right: 0.35rem !important;
+    }
+
+    .nav-blue {
+      color: #4d74eb !important;
+
+      [theme=dark] & {
+        color: #60a5fa !important;
+      }
+    }
+
+    .nav-pink, .nav-site-pink {
+      color: #ec4899 !important;
+
+      [theme=dark] & {
+        color: #f472b6 !important;
+      }
+    }
+
+    .nav-site-pink {
+      margin-left: 0.15rem !important;
+      font-weight: 700 !important;
+    }
+
+    a {
+      color: #4d74eb !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      letter-spacing: -0.3px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      line-height: 1.1 !important;
+      padding-bottom: 2px !important;
+      background-image: linear-gradient(90deg, #4d74eb 0%, #4d74eb 70%, #ec4899 70%, #ec4899 100%) !important;
+      background-size: 0% 1px !important;
+      background-repeat: no-repeat !important;
+      background-position: left 100% !important;
+      transition: background-size 0.2s ease !important;
+
+      [theme=dark] & {
+        color: #60a5fa !important;
+      }
+
+      &:hover {
+        text-decoration: none !important;
+        background-size: 100% 1px !important;
+      }
+    }
+  }
+
+  .menu .menu-item {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    margin: 0 0.6rem !important;
+    color: #111111 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+
+    [theme=dark] & {
+      color: #e5e7eb !important;
+    }
+
+    &:hover {
+      text-decoration: underline !important;
+      color: #111111 !important;
+      font-weight: 400 !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &.theme-switch:hover {
+      text-decoration: none !important;
+    }
+
+    &.active {
+      font-weight: 400 !important;
+      color: #111111 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &[href*="/cv/"] {
+      font-weight: 700 !important;
+      color: #ec4899 !important; /* Standout Rose/Pink accent on primary blue tone */
+
+      [theme=dark] & {
+        color: #f472b6 !important;
+      }
+
+      &:hover {
+        color: #db2777 !important;
+        text-decoration: underline !important;
+
+        [theme=dark] & {
+          color: #f687b3 !important;
+        }
+      }
+    }
+
+    &.delimiter {
+      display: none !important;
+    }
+  }
+}
+
+// 3. TOC Table of Contents: Light Muted Gray (13px), ONLY Active is Blue (#4d74eb), Hover is Bold + Underline
+.toc-content, #toc-auto, #toc-static {
+  a {
+    font-family: "Lora", Georgia, serif !important;
+    font-size: 0.8125rem !important; /* 13px small text */
+    font-weight: 400 !important;
+    color: #828282 !important; /* Muted light gray */
+    text-decoration: none !important;
+    transition: color 0.2s ease, font-weight 0.1s ease;
+
+    [theme=dark] & {
+      color: #9ca3af !important;
+    }
+
+    &:hover {
+      color: #111111 !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #ffffff !important;
+      }
+    }
+
+    &.active {
+      color: #4d74eb !important; /* ONLY active scrolled/clicked section turns Blue */
+      font-weight: 700 !important;
+      text-decoration: none !important;
+
+      [theme=dark] & {
+        color: #60a5fa !important;
+      }
+    }
+  }
+}
+
+// 4. Article Summary Cards: Spacing & Divider Line
+.summary.single {
+  margin-bottom: 1.3rem !important;
+  padding-bottom: 1rem !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+
+  [theme=dark] & {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+.summary .single-title {
+  font-family: "Lora", Georgia, serif !important;
+  font-size: 1.25rem;
+  font-weight: 500 !important;
+
+  a {
+    color: #111111 !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+
+    [theme=dark] & {
+      color: #f3f4f6 !important;
+    }
+
+    &:hover {
+      color: #1337a6 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #93c5fd !important;
+      }
+    }
+  }
+}
+
+// Compact & neat post titles specifically on Home Page
+.page.home .summary .single-title {
+  font-size: 1.125rem !important; /* 18px neat & compact */
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.35rem !important;
+
+  a {
+    font-weight: 500 !important;
+  }
+}
+
+// Clean Summary Preview: Hide Quotes, Admonitions & Callouts in Post Summary Cards
+.summary .content {
+  blockquote,
+  .custom-quote,
+  .details,
+  .admonition {
+    display: none !important;
+  }
+}
+
+
+
+.tag-cloud-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.45rem !important;
+  margin: 1rem 0 2rem !important;
+
+  a {
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
+
+    &:hover, &:focus, &:active {
+      transform: translateY(-1px) !important;
+    }
+  }
+}
+
+.post-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+
+  i {
+    color: #94a3b8 !important;
+    margin-right: 0.2rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+

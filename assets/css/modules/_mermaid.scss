@@ -1,0 +1,34 @@
+// ==========================================================
+// Mermaid Diagram — Container & Text Overflow Fix
+// ==========================================================
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 2.25rem auto;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    /* Cứu cánh triệt để: Cho phép text hiển thị tràn viền box thay vì bị cắt xén */
+    foreignObject {
+      overflow: visible !important;
+
+      div {
+        overflow: visible !important;
+        white-space: normal !important;
+        text-align: center !important;
+      }
+    }
+  }
+}
+
+
