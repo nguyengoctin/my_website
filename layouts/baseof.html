@@ -1,0 +1,87 @@
+{{- partial "init.html" . -}}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+        {{- partial "head/meta.html" . -}}
+        {{- partial "head/link.html" . -}}
+        {{- partial "head/seo.html" . -}}
+    </head>
+    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+        {{- /* Check theme isDark before body rendering */ -}}
+        {{- $theme := .Site.Params.defaulttheme -}}
+        <script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || '{{ $theme }}';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div>
+
+        {{- /* Global Reading Progress Bar (Ultra-thin 1.5px, GPU Accelerated) */ -}}
+        <div id="reading-progress" style="position: fixed; top: 0; left: 0; width: 100%; height: 1.5px; z-index: 9999; transform-origin: 0 50%; transform: scaleX(0); will-change: transform; pointer-events: none; background: linear-gradient(90deg, #4d74eb 0%, #4d74eb 60%, #ec4899 100%);"></div>
+        <script>
+          (function() {
+            var bar = document.getElementById('reading-progress');
+            if (!bar) return;
+            var ticking = false;
+            function updateProgress() {
+              var winScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var progress = height > 0 ? Math.min(Math.max(winScroll / height, 0), 1) : 0;
+              bar.style.transform = 'scaleX(' + progress + ')';
+              ticking = false;
+            }
+            window.addEventListener('scroll', function() {
+              if (!ticking) {
+                window.requestAnimationFrame(updateProgress);
+                ticking = true;
+              }
+            }, { passive: true });
+            window.addEventListener('resize', function() {
+              window.requestAnimationFrame(updateProgress);
+            }, { passive: true });
+          })();
+        </script>
+
+        {{- /* Body wrapper */ -}}
+        <div class="wrapper">
+            {{- partial "header.html" . -}}
+            <main class="main">
+                <div class="container">
+                    {{- block "content" . }}{{ end -}}
+                </div>
+            </main>
+            {{- partial "footer.html" . -}}
+        </div>
+
+        <div id="fixed-buttons">
+            {{- /* top button */ -}}
+            <a href="#" id="back-to-top" class="fixed-button" title="{{ T `backToTop` }}">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden">
+            {{- /* comment button */ -}}
+            <a href="#" id="view-comments" class="fixed-button" title="{{ T `viewComments` }}">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        {{- /* Load JavaScript scripts and CSS */ -}}
+        {{- partial "assets.html" . -}}
+    </body>
+</html>
