@@ -41,7 +41,7 @@ Nội dung...
 Nội dung trích dẫn...
 {{< /quote >}}
 ```
-Nếu không ghi `author` sẽ tự động hiển thị `— Sưu tầm`.
+Nếu không ghi `author` thì chỉ hiển thị câu trích dẫn, không hiển thị dòng tác giả.
 
 **Khung Prompt mẫu:**
 ```

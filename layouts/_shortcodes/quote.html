@@ -1,14 +1,12 @@
 {{- $author := cond .IsNamedParams (.Get "author") (.Get 0) -}}
-{{- $content := trim .Inner "\n" -}}
+{{- $content := trim .Inner "\n\r " -}}
 <blockquote class="custom-quote">
-    <div class="quote-content">{{ $content | markdownify }}</div>
+    <div class="quote-content">
+        <span class="quote-mark quote-open">“</span><span class="quote-text">{{ $content | markdownify }}</span><span class="quote-mark quote-close">”</span>
+    </div>
     {{- if $author -}}
     <footer class="quote-footer">
         <cite>— {{ $author }}</cite>
-    </footer>
-    {{- else -}}
-    <footer class="quote-footer">
-        <cite>— Sưu tầm</cite>
     </footer>
     {{- end -}}
 </blockquote>

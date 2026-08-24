@@ -38,7 +38,7 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
 ## 5. Quy Chuẩn Shortcodes và Cú Pháp
 
 - **Callout:** `{{< admonition type="note|tip|warning|danger|info|success|question|failure|bug|example|abstract" title="Tiêu đề" >}} Nội dung {{< /admonition >}}`
-- **Quote:** `{{< quote author="Tên Tác Giả" >}} Nội dung {{< /quote >}}` — Không ghi author thì hiển thị `— Sưu tầm`
+- **Quote:** `{{< quote author="Tên Tác Giả" >}} Nội dung {{< /quote >}}` — Nếu không ghi `author` thì chỉ hiển thị trích dẫn (không hiển thị dòng tác giả)
 - **Prompt Mẫu:** Sử dụng khối mã Markdown chuẩn ```` ```text ```` (hoặc ```` ```markdown ````), luôn có câu dẫn ngữ cảnh rõ ràng trước khối mã. Không dùng shortcode riêng biệt cho prompt.
 - **Link:** `{{< link href="https://..." content="Tên hiển thị" >}}`
 - **Hình ảnh:** `{{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}`

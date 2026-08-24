@@ -98,21 +98,27 @@ Mức độ chênh lệch lên đến hơn 100 lần. Khả năng tuân thủ m�
 
 Tuy nhiên, đối với phần mô tả tổng quan dự án và cây thư mục, nhóm nghiên cứu đếm số bước mà Agent cần thực hiện trước khi chạm vào file đầu tiên cần sửa trong pull request. Kết quả cho thấy sự xuất hiện của phần tổng quan hoàn toàn không giúp giảm số bước tìm kiếm file. Thậm chí 100% file do Sonnet-4.5 tự tạo qua lệnh `/init` đều chứa phần tổng quan thừa thãi này.
 
-> **Kết luận:** Hãy viết mệnh lệnh thao tác rõ ràng. Không viết văn tả cảnh hay vẽ lại cây thư mục.
+{{< quote >}}
+Hãy viết mệnh lệnh thao tác rõ ràng. Không viết văn tả cảnh hay vẽ lại cây thư mục.
+{{< /quote >}}
 
 ### Quy tắc 2: File ngữ cảnh chỉ có giá trị khi là Nguồn sự thật duy nhất
 Nhóm nghiên cứu ETH đã tiến hành một thử nghiệm đặc biệt: Xóa sạch toàn bộ tài liệu trong thư mục `docs/`, các file markdown hướng dẫn và code ví dụ có sẵn trong repo sau khi đã tạo file quy tắc, rồi cho Agent chạy lại.
 
 Trong môi trường không còn tài liệu trùng lặp, hiệu quả của file quy tắc tăng thêm 2,7%. Điều này chỉ ra rằng Agent không cần chúng ta thuật lại những gì nó có thể tự đọc được từ mã nguồn. Nó chỉ cần những thông tin mà nó không thể tự suy luận.
 
-> **Kết luận:** Trước khi viết bất kỳ dòng nào, hãy tự hỏi: Agent có thể dùng lệnh `grep`, `cat` hay đọc `package.json` để tìm ra không? Nếu tìm được, hãy loại bỏ khỏi file quy tắc.
+{{< quote >}}
+Trước khi viết bất kỳ dòng nào, hãy tự hỏi: Agent có thể dùng lệnh grep, cat hay đọc package.json để tìm ra không? Nếu tìm được, hãy loại bỏ khỏi file quy tắc.
+{{< /quote >}}
 
 ### Quy tắc 3: Mỗi dòng đều tốn chi phí, phải ngăn chặn một hành vi tốn kém
 Dữ liệu từ ETH Zurich cho thấy sự xuất hiện của file quy tắc khiến Agent tốn thêm từ 2,45 đến 3,92 bước tư duy cho mỗi bài toán, đẩy chi phí tăng hơn 20%. Khi nhìn thấy quá nhiều ràng buộc mơ hồ, mô hình kích hoạt cơ chế suy luận thích ứng Adaptive Reasoning, khiến nó thăm dò nhiều hơn và suy nghĩ phức tạp hơn mức cần thiết.
 
 Tuy nhiên, trong nghiên cứu của Khatri, kho lưu trữ `opshin` có một dòng cảnh báo ngắn gọn: *"Chạy toàn bộ bộ test mất hơn 20 phút"*. Dòng cảnh báo duy nhất này giúp Claude giảm 24% thời gian chạy thực tế và giảm số lần chạy mù quáng cả bộ test từ 3,67 lần xuống còn 1,67 lần.
 
-> **Kết luận:** Mỗi dòng quy tắc đưa vào phải trả lời được câu hỏi: *"Dòng này giúp ngăn chặn hành vi tốn kém cụ thể nào của Agent?"* Nếu không trả lời được, dòng đó đang là chi phí lãng phí.
+{{< quote >}}
+Mỗi dòng quy tắc đưa vào phải trả lời được câu hỏi: Dòng này giúp ngăn chặn hành vi tốn kém cụ thể nào của Agent? Nếu không trả lời được, dòng đó đang là chi phí lãng phí.
+{{< /quote >}}
 
 ---
 
@@ -239,4 +245,6 @@ File quy tắc cấu hình cho AI Agent nên được xem như một file mã ng
 4. **Chuyển các quy tắc an toàn sang công cụ tất định:** Sử dụng Git hooks, CI/CD và cấu hình phân quyền thay vì dựa vào file markdown.
 {{< /admonition >}}
 
-Hãy nhớ rằng: **File quy tắc không dạy cho Agent kỹ năng mới, nó chỉ trang bị quy trình thực thi chuẩn xác.** Viết đúng phần quy trình và lược bỏ phần văn phong rườm rà là cách hiệu quả nhất để làm chủ các AI Coding Agent trong kỷ nguyên lập trình hiện đại.
+{{< quote >}}
+File quy tắc không dạy cho Agent kỹ năng mới, nó chỉ trang bị quy trình thực thi chuẩn xác. Viết đúng phần quy trình và lược bỏ phần văn phong rườm rà là cách hiệu quả nhất để làm chủ các AI Coding Agent trong kỷ nguyên lập trình hiện đại.
+{{< /quote >}}
