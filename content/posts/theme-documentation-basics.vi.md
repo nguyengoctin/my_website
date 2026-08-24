@@ -63,7 +63,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
 | Nhánh hoặc phiên bản LoveIt | Phiên bản Hugo được hỗ trợ |
 | :--- | :--- |
-| **master** (Unstable) | $\ge$ 0.128.0 |
+| **master** (Unstable) | ≥ 0.128.0 |
 | **0.3.X** (Khuyên dùng) | 0.128.0 - 0.145.0 |
 | **0.2.X** (Cũ/Outdated) | 0.68.0 - 0.127.0 |
 
@@ -574,19 +574,19 @@ Giao diện LoveIt hoàn toàn tương thích với chế độ đa ngôn ngữ 
 
 | Ngôn ngữ | Mã Hugo | Thuộc tính lang HTML | Hỗ trợ Lunr.js |
 | :--- | :--- | :--- | :--- |
-| **Tiếng Anh (English)** | `en` | `en` | $\checkmark$ |
-| **Tiếng Trung Giản thể** | `zh-cn` | `zh-CN` | $\checkmark$ |
-| **Tiếng Trung Phồn thể** | `zh-tw` | `zh-TW` | $\checkmark$ |
-| **Tiếng Pháp (French)** | `fr` | `fr` | $\checkmark$ |
-| **Tiếng Ba Lan (Polish)** | `pl` | `pl` | $\checkmark$ |
-| **Tiếng Bồ Đào Nha (Brazil)** | `pt-br` | `pt-BR` | $\checkmark$ |
-| **Tiếng Ý (Italian)** | `it` | `it` | $\checkmark$ |
-| **Tiếng Tây Ban Nha** | `es` | `es` | $\checkmark$ |
-| **Tiếng Đức (German)** | `de` | `de` | $\checkmark$ |
-| **Tiếng Nga (Russian)** | `ru` | `ru` | $\checkmark$ |
-| **Tiếng Việt (Vietnamese)** | `vi` | `vi` | $\checkmark$ |
-| **Tiếng Nhật (Japanese)** | `ja` | `ja` | $\checkmark$ |
-| **Tiếng Hàn (Korean)** | `ko` | `ko` | $\checkmark$ |
+| **Tiếng Anh (English)** | `en` | `en` | ✓ |
+| **Tiếng Trung Giản thể** | `zh-cn` | `zh-CN` | ✓ |
+| **Tiếng Trung Phồn thể** | `zh-tw` | `zh-TW` | ✓ |
+| **Tiếng Pháp (French)** | `fr` | `fr` | ✓ |
+| **Tiếng Ba Lan (Polish)** | `pl` | `pl` | ✓ |
+| **Tiếng Bồ Đào Nha (Brazil)** | `pt-br` | `pt-BR` | ✓ |
+| **Tiếng Ý (Italian)** | `it` | `it` | ✓ |
+| **Tiếng Tây Ban Nha** | `es` | `es` | ✓ |
+| **Tiếng Đức (German)** | `de` | `de` | ✓ |
+| **Tiếng Nga (Russian)** | `ru` | `ru` | ✓ |
+| **Tiếng Việt (Vietnamese)** | `vi` | `vi` | ✓ |
+| **Tiếng Nhật (Japanese)** | `ja` | `ja` | ✓ |
+| **Tiếng Hàn (Korean)** | `ko` | `ko` | ✓ |
 
 ### 4.2 Cấu hình Cơ bản
 

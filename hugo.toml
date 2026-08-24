@@ -202,15 +202,15 @@ enableEmoji = true
       keepStatic = false
       auto = true
 
-    # KaTeX math support
+    # KaTeX math support (Tắt hoàn toàn để tối ưu hiệu năng và độ gọn nhẹ)
     [params.page.math]
-      enable = true
+      enable = false
       inlineLeftDelimiter = ""
       inlineRightDelimiter = ""
       blockLeftDelimiter = ""
       blockRightDelimiter = ""
-      copyTex = true
-      mhchem = true
+      copyTex = false
+      mhchem = false
 
     # Code block config
     [params.page.code]

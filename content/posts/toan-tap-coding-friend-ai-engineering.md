@@ -18,7 +18,7 @@ Bài viết được tổng hợp và chuẩn hóa từ toàn bộ tài liệu c
 
 Khi lập trình cùng các AI Coding Agent như Claude Code hay Codex CLI, chúng ta rất dễ gặp phải tình trạng: AI sinh code nhanh nhưng mất kiểm soát, tạo ra lỗi ngầm, sửa lan man hoặc nhanh chóng làm tràn bộ nhớ ngữ cảnh.
 
-**Coding Friend (CF)** sinh ra để giải quyết bài toán này. Đây là bộ công cụ thực chiến giúp chúng ta định hình một quy trình làm việc kỷ luật, rõ ràng và dễ tiếp cận: **Khám phá $\to$ Lập kế hoạch $\to$ Viết code có kiểm thử $\to$ Đánh giá an toàn $\to$ Ghi nhớ tri thức**.
+**Coding Friend (CF)** sinh ra để giải quyết bài toán này. Đây là bộ công cụ thực chiến giúp chúng ta định hình một quy trình làm việc kỷ luật, rõ ràng và dễ tiếp cận: **Khám phá → Lập kế hoạch → Viết code có kiểm thử → Đánh giá an toàn → Ghi nhớ tri thức**.
 
 Dưới đây là cẩm nang mô tả chi tiết toàn bộ 26 skills, sơ đồ luồng hoạt động trực quan và các kinh nghiệm thực tế hữu ích nhất khi làm việc cùng Coding Friend hàng ngày.
 
@@ -210,7 +210,7 @@ flowchart TD
 21. **`/cf-commit` (Tạo commit thông minh):**  
     Phân tích thay đổi trong diff, quét kiểm tra rò rỉ secret hoặc API key và tạo Conventional Commit ngắn gọn, chuẩn xác.
 22. **`/cf-ship` (Phát hành trọn gói một lệnh):**  
-    Thực hiện liên hoàn: Chạy kiểm thử xác minh $\to$ Tạo commit $\to$ Đẩy lên nhánh Git $\to$ Mở Pull Request.
+    Thực hiện liên hoàn: Chạy kiểm thử xác minh → Tạo commit → Đẩy lên nhánh Git → Mở Pull Request.
 23. **`/cf-warm` (Cập nhật tiến độ sau khi vắng mặt):**  
     Tóm tắt nhanh các thay đổi trong lịch sử Git của dự án kể từ lần cuối bạn làm việc.
 

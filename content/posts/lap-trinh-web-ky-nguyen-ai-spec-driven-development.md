@@ -32,7 +32,9 @@ Vibe Coding là thói quen lập trình hoàn toàn dựa vào cảm xúc và s�
 
 ### 2. Phương trình hiệu suất lập trình AI
 
-$$\text{Năng Lực Thực Tế} = \text{Kiến Thức Nền Tảng} \times \text{Năng Lực Điều Khiển AI}$$
+```text
+Năng Lực Thực Tế = Kiến Thức Nền Tảng × Năng Lực Điều Khiển AI
+```
 
 - **Nền tảng chắc chắn:** AI giúp nhân bản năng suất lên gấp 5 đến 10 lần.
 - **Nền tảng bằng 0:** AI chỉ nhân bản sự bối rối, tạo ra đống code chắp vá và nguy cơ rò rỉ bảo mật.

@@ -29,7 +29,7 @@ Microsoft Edge vốn có sẵn trên hệ điều hành, nhưng nhiều người
 Dưới đây là 3 điểm chạm thay đổi hoàn toàn thói quen đọc tài liệu tiếng Anh của chúng ta:
 
 ### 1. Dịch thuật Sidebar song song — Giữ trọn dòng suy nghĩ
-Khi gặp một đoạn văn tiếng Anh phức tạp, chúng ta chỉ cần bôi đen và **chuột phải $\to$ Dịch đoạn văn đã chọn**.
+Khi gặp một đoạn văn tiếng Anh phức tạp, chúng ta chỉ cần bôi đen và **chuột phải → Dịch đoạn văn đã chọn**.
 
 Thay vì nhảy ra một cửa sổ popup lơ lửng che mất nội dung, một thanh **Sidebar bên phải** trượt ra rất gọn gàng. Văn bản gốc và bản dịch tiếng Việt hiển thị song song với nhau. Mắt chúng ta chỉ cần liếc nhẹ sang phải để đối chiếu rồi đọc tiếp, trang sách hoàn toàn giữ nguyên vị trí.
 
@@ -47,7 +47,7 @@ Giải thích đoạn văn bản sau đây bằng tiếng Việt một cách tr�
 ### 3. Tắt Mini Menu — Trả lại sự tối giản cho trang sách
 Mặc định khi bôi đen chữ, trình duyệt sẽ hiện một thanh menu nhỏ lơ lửng ngay tại con trỏ. Ban đầu chúng ta có thể thấy khá vướng mắt vì che mất dòng chữ bên dưới.
 
-Sau khi vào **Cài đặt $\to$ Giao diện $\to$ Menu ngữ cảnh** và **Tắt dòng Show mini menu when selecting text**, trang sách trở nên sạch sẽ tuyệt đối. Chúng ta toàn quyền kiểm soát khi nào cần dịch chỉ bằng một cú nhấp chuột phải.
+Sau khi vào **Cài đặt → Giao diện → Menu ngữ cảnh** và **Tắt dòng Show mini menu when selecting text**, trang sách trở nên sạch sẽ tuyệt đối. Chúng ta toàn quyền kiểm soát khi nào cần dịch chỉ bằng một cú nhấp chuột phải.
 
 ---
 

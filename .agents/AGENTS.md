@@ -25,14 +25,14 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
 
 - **Mở bài trực diện bằng bài toán:** Câu đầu tiên phải đưa người đọc vào vấn đề kỹ thuật hoặc bài toán thực tế cần giải quyết. Tuyệt đối không mở bài rườm rà hay chào hỏi thừa.
 - **Bố cục chuẩn Tech Blog:**
-  - Bài toán và bối cảnh thực tế $\to$ Bằng chứng số liệu và phân tích bản chất $\to$ Giải pháp và cấu hình mẫu $\to$ Bài học đúc kết.
+  - Bài toán và bối cảnh thực tế → Bằng chứng số liệu và phân tích bản chất → Giải pháp và cấu hình mẫu → Bài học đúc kết.
 - **Tiêu đề cụ thể, chân thực (Reddit Style):**
   - Không dùng từ thổi phồng, clickbait (Toàn tập, Bí kíp, Ultimate, Game-changer).
   - Định dạng chuẩn: *"Cách [Giải quyết bài toán cụ thể] bằng [Công nghệ]"* hoặc *"[Chủ đề]: Từ [Bản chất] đến [Giải pháp]"*.
   - Không dùng ngoặc đơn giải thích từ tiếng Anh ngay tiêu đề.
 - **Show, Don't Tell:** Dùng ví dụ code, bảng dữ liệu, và sơ đồ trực quan thay vì chỉ khẳng định suông.
 - **Phân loại bài viết:**
-  - *Tech Blog (Kỹ thuật/Hướng dẫn):* Tinh gọn, đi thẳng vào bản chất kỹ thuật, tuân thủ cấu trúc bài toán $\to$ giải pháp.
+  - *Tech Blog (Kỹ thuật/Hướng dẫn):* Tinh gọn, đi thẳng vào bản chất kỹ thuật, tuân thủ cấu trúc bài toán → giải pháp.
   - *Tản văn / Góc nhìn / Trích dẫn (Mindset, Review):* Tôn trọng 100% nội dung, văn phong và cảm xúc bài gốc; chỉ dùng shortcodes để làm đẹp giao diện, không tự ý tóm tắt cắt xén.
 
 ## 5. Quy Chuẩn Shortcodes và Cú Pháp

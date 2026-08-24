@@ -2,6 +2,17 @@ $font-serif: "Lora", Georgia, serif !default;
 $font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
 
 // ==========================================================
+// UNIFIED BRAND COLOR SYSTEM
+// ==========================================================
+$brand-primary: #4d74eb;            // Primary Royal Blue (Light mode)
+$brand-primary-hover: #1337a6;      // Deep Blue on hover (Light mode)
+$brand-primary-dark: #60a5fa;       // Sky Blue (Dark mode)
+$brand-primary-dark-hover: #93c5fd; // Soft Blue on hover (Dark mode)
+
+$brand-pink: #ec4899;               // Rose/Pink Accent (Light mode)
+$brand-pink-dark: #f472b6;          // Rose/Pink Accent (Dark mode)
+
+// ==========================================================
 // Chip Huyen Exact Design System (Classic Serif Magazine Style)
 // ==========================================================
 
@@ -682,15 +693,9 @@ img.bio-avatar {
   }
 }
 
-// 7. 100% UNIFIED LINK COLOR SYSTEM ACROSS ENTIRE WEBSITE (Including Profile Bio, Contact, Articles, Tables)
-a, a:link, a:visited, 
-.profile .bio a, 
-.contact-links-grid a, 
-.home a, 
-.single .content a, 
-table a, 
-.page-footer a, 
-.post-footer a {
+// 7. 100% UNIFIED INLINE LINK COLOR SYSTEM (Giữ nguyên style cho Buttons/Chips/Nav)
+a:not(.contact-chip):not(.btn-action):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
+.single .content a:not(.contact-chip):not(.btn-action):not(.tag-pill) {
   color: #4d74eb !important;
   transition: color 0.2s ease;
 

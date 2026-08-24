@@ -264,20 +264,26 @@
   }
 }
 
-// Inline Code Styling
+// Inline Code Styling (Tone Rose / Pink Accent sang trọng, tương phản cao, dễ đọc)
 code:not(pre code) {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-  font-size: 0.88em !important;
-  padding: 0.15em 0.4em !important;
+  display: inline !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.85em !important;
+  font-weight: 500 !important;
+  padding: 0.12em 0.4em !important;
+  margin: 0 0.15em !important;
   border-radius: 5px !important;
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-  border: 1px solid #e2e8f0 !important;
+  background-color: #fdf2f8 !important; /* Soft rose tint (Tailwind rose-50) */
+  color: #be185d !important;            /* Deep readable rose/pink (Tailwind rose-700) */
+  border: 1px solid #fbcfe8 !important; /* Subtle rose-200 border */
+  vertical-align: 0.04em !important;
+  box-decoration-break: clone !important;
+  -webkit-box-decoration-break: clone !important;
 
   [theme=dark] & {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    color: #e2e8f0 !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(244, 114, 182, 0.12) !important; /* Muted rose dark background */
+    color: #f472b6 !important;                               /* Bright legible pink accent (Tailwind pink-400) */
+    border-color: rgba(244, 114, 182, 0.25) !important;
   }
 }
 
