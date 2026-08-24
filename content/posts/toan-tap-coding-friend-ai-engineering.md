@@ -42,11 +42,11 @@ cf init
 
 ```mermaid
 flowchart TD
-    Scan["`Bước 1: Quét tri thức (/cf-scan)`"]
-    Plan["`Bước 2: Lập kế hoạch (/cf-plan)`"]
-    Review["`Bước 4: Đánh giá mã (/cf-review)`"]
-    Code["`Bước 3: Code và kiểm thử (cf-tdd)`"]
-    Ship["`Bước 5: Phát hành (/cf-ship)`"]
+    Scan["`Bước 1:<br/>Quét tri thức (/cf-scan)`"]
+    Plan["`Bước 2:<br/>Lập kế hoạch (/cf-plan)`"]
+    Review["`Bước 4:<br/>Đánh giá mã (/cf-review)`"]
+    Code["`Bước 3:<br/>Code và kiểm thử (cf-tdd)`"]
+    Ship["`Bước 5:<br/>Phát hành (/cf-ship)`"]
     Scan --> Plan
     Scan --> Review
     Plan --> Code
@@ -62,14 +62,14 @@ Hệ sinh thái Coding Friend được tổ chức thành 7 nhóm kỹ năng chu
 
 ```mermaid
 flowchart TD
-    CF["`Coding Friend: Hệ Sinh Thái 26 Skills`"]
-    CF --> G1["`Nhóm 1: Khám Phá và Định Hướng`"]
-    CF --> G5["`Nhóm 5: Đánh Giá Mã Nguồn - Review`"]
-    G1 --> G2["`Nhóm 2: Lập Kế Hoạch - Planning`"]
-    G2 --> G3["`Nhóm 3: Lập Trình và Kiểm Thử`"]
-    G3 --> G4["`Nhóm 4: Sửa Lỗi và Tối Ưu`"]
-    G5 --> G6["`Nhóm 6: Quản Trị Git và Phát Hành`"]
-    G6 --> G7["`Nhóm 7: Bộ Nhớ và Học Tập`"]
+    CF["`Coding Friend:<br/>Hệ Sinh Thái 26 Skills`"]
+    CF --> G1["`Nhóm 1:<br/>Khám Phá và Định Hướng`"]
+    CF --> G5["`Nhóm 5:<br/>Đánh Giá Mã Nguồn - Review`"]
+    G1 --> G2["`Nhóm 2:<br/>Lập Kế Hoạch - Planning`"]
+    G2 --> G3["`Nhóm 3:<br/>Lập Trình và Kiểm Thử`"]
+    G3 --> G4["`Nhóm 4:<br/>Sửa Lỗi và Tối Ưu`"]
+    G5 --> G6["`Nhóm 6:<br/>Quản Trị Git và Phát Hành`"]
+    G6 --> G7["`Nhóm 7:<br/>Bộ Nhớ và Học Tập`"]
 ```
 
 ---
@@ -93,14 +93,14 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    UserReq["`Yêu cầu tính năng mới`"]
+    UserReq["`Yêu cầu<br/>tính năng mới`"]
     ModeCheck{"`Chọn chế độ?`"}
-    PlanNormal["`/cf-plan (Chuẩn)`"]
-    PlanFast["`/cf-plan --fast`"]
-    PlanHard["`/cf-plan --hard`"]
-    PlanAuto["`/cf-plan --auto`"]
-    Output["`Lưu file docs/plans/`"]
-    InlineOutput["`Theo dõi checklist trong chat`"]
+    PlanNormal["`/cf-plan<br/>(Chuẩn)`"]
+    PlanFast["`/cf-plan<br/>(--fast)`"]
+    PlanHard["`/cf-plan<br/>(--hard)`"]
+    PlanAuto["`/cf-plan<br/>(--auto)`"]
+    Output["`Lưu file<br/>docs/plans/`"]
+    InlineOutput["`Theo dõi checklist<br/>trong chat`"]
     UserReq --> ModeCheck
     ModeCheck -->|Phỏng vấn| PlanNormal
     ModeCheck -->|Nhanh| PlanFast
@@ -131,13 +131,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    StartDev["`Bắt đầu viết code`"]
-    CheckTest{"`Có cờ --add-tests?`"}
-    Red["`Bước 1: RED (Viết test fail)`"]
-    Green["`Bước 2: GREEN (Viết code pass)`"]
-    Refactor["`Bước 3: REFACTOR (Tối ưu mã)`"]
+    StartDev["`Bắt đầu<br/>viết code`"]
+    CheckTest{"`Có cờ<br/>--add-tests?`"}
+    Red["`Bước 1: RED<br/>(Viết test fail)`"]
+    Green["`Bước 2: GREEN<br/>(Viết code pass)`"]
+    Refactor["`Bước 3: REFACTOR<br/>(Tối ưu mã)`"]
     Direct["`Code trực tiếp`"]
-    Verify["`cf-verification (Kiểm tra)`"]
+    Verify["`cf-verification<br/>(Kiểm tra)`"]
     StartDev --> CheckTest
     CheckTest -->|Có: Chu trình TDD| Red
     Red --> Green
@@ -160,11 +160,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Bug["`Phát hiện lỗi kỹ thuật`"]
-    Step1["`Pha 1: Tái hiện lỗi`"]
-    Step2["`Pha 2: Đặt giả thuyết`"]
-    Step3["`Pha 3: Sửa mã nguồn`"]
-    Step4["`Pha 4: Lưu vào memory`"]
+    Bug["`Phát hiện<br/>lỗi kỹ thuật`"]
+    Step1["`Pha 1:<br/>Tái hiện lỗi`"]
+    Step2["`Pha 2:<br/>Đặt giả thuyết`"]
+    Step3["`Pha 3:<br/>Sửa mã nguồn`"]
+    Step4["`Pha 4:<br/>Lưu vào memory`"]
     Bug --> Step1
     Bug --> Step2
     Step1 --> Step3
@@ -185,13 +185,13 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Diff["`Mã nguồn thay đổi`"]
-    L1["`Lớp 1: Bảo mật`"]
-    L2["`Lớp 2: Kế hoạch`"]
-    L3["`Lớp 3: Clean Code`"]
-    L4["`Lớp 4: Kiểm thử`"]
-    L5["`Lớp 5: Quy ước`"]
-    Merge["`Báo cáo tổng hợp`"]
+    Diff["`Mã nguồn<br/>thay đổi`"]
+    L1["`Lớp 1:<br/>Bảo mật`"]
+    L2["`Lớp 2:<br/>Kế hoạch`"]
+    L3["`Lớp 3:<br/>Clean Code`"]
+    L4["`Lớp 4:<br/>Kiểm thử`"]
+    L5["`Lớp 5:<br/>Quy ước`"]
+    Merge["`Báo cáo<br/>tổng hợp`"]
     Diff --> L1
     Diff --> L4
     L1 --> L2

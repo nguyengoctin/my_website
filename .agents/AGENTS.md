@@ -50,6 +50,7 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
   - **Định dạng Node (Hộp văn bản):**
     - Hộp chữ nhật chuẩn: `NodeID["Nội dung tiếng Việt hoặc Unicode"]` (luôn dùng cặp ngoặc vuông `["..."]` bọc dấu nháy kép cho mọi node có dấu tiếng Việt hoặc khoảng trắng).
     - **TUYỆT ĐỐI KHÔNG bắt đầu nội dung node bằng số kèm dấu chấm** (ví dụ SAI: `["1. Bước một"]`, `["2. Bước hai"]` sẽ gây lỗi `Unsupported markdown: list` của Mermaid 11+. ĐÚNG: `["Lớp 1: Bước một"]`, `["Nhóm 1: Bước một"]` hoặc `["(1) Bước một"]`).
+    - **Tiến trình (Bước, Pha, Nhóm, Lớp) BẮT BUỘC dùng `<br/>` để xuống dòng:** Đối với các node có tiền tố tiến trình như `Bước X:`, `Pha X:`, `Nhóm X:`, `Lớp X:` hoặc nội dung dài, bắt buộc chèn `<br/>` ngay sau dấu hai chấm (ví dụ: `NodeID["`Bước 1:<br/>Quét tri thức`"]`) để hộp node hiển thị vuông vắn, không bị kéo bè ngang hoặc tràn khung trên mobile.
     - Nút hình thoi điều kiện: `NodeID{"Câu hỏi ngắn gọn"}`. TUYỆT ĐỐI chỉ để câu hỏi ngắn dưới 20 ký tự (ví dụ: `Check{"Có --add-tests?"}`), không nhét cả câu văn dài vào nút hình thoi để tránh bị đè tràn góc nhọn.
     - `NodeID` bắt buộc là chuỗi ký tự ASCII đơn giản (ví dụ: `A`, `B`, `Step1`, `Node1`), TUYỆT ĐỐI KHÔNG dùng từ khóa hệ thống (như `end`, `subgraph`, `graph`).
   - **Nhãn trên mũi tên liên kết:**

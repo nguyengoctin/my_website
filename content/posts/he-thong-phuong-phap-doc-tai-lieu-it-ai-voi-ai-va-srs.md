@@ -162,15 +162,15 @@ Thay vì tạo thẻ thủ công, chúng ta dùng Obsidian làm nơi quản lý 
 
 ```mermaid
 flowchart TD
-    A1["`Tải PDF vào NotebookLM`"]
-    A2["`Trích xuất 5 khái niệm cốt lõi`"]
-    A3["`Đọc lướt qua Immersive Translate`"]
-    B1["`Highlight và tạo Backlink`"]
-    B2["`Mổ xẻ đoạn khó bằng AI`"]
-    B3["`Tự diễn đạt lại khái niệm`"]
-    C1["`Sentence Mining`"]
-    C2["`Đồng bộ tự động sang Anki`"]
-    C3["`Ôn tập với thuật toán FSRS`"]
+    A1["`Tải PDF vào<br/>NotebookLM`"]
+    A2["`Trích xuất 5<br/>khái niệm cốt lõi`"]
+    A3["`Đọc lướt qua<br/>Immersive Translate`"]
+    B1["`Highlight và<br/>tạo Backlink`"]
+    B2["`Mổ xẻ đoạn<br/>khó bằng AI`"]
+    B3["`Tự diễn đạt<br/>lại khái niệm`"]
+    C1["`Sentence<br/>Mining`"]
+    C2["`Đồng bộ tự động<br/>sang Anki`"]
+    C3["`Ôn tập với<br/>thuật toán FSRS`"]
     A1 --> A2
     A2 --> A3
     A1 --> B1
