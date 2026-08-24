@@ -111,31 +111,38 @@
 
   .archive-item {
     display: flex !important;
-    align-items: baseline !important;
+    align-items: center !important;
     justify-content: space-between !important;
     gap: 1rem !important;
-    margin: 0.4rem 0 !important;
+    margin: 0.35rem 0 !important;
     padding: 0.15rem 0 !important;
 
     .archive-item-link {
       flex: 1 1 auto !important;
       min-width: 0 !important;
-      white-space: normal !important;
-      overflow-wrap: break-word !important;
-      word-break: break-word !important;
-      text-overflow: clip !important;
-      line-height: 1.45 !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+      text-overflow: ellipsis !important;
+      line-height: 1.4 !important;
+
+      .pinned-post-icon {
+        flex-shrink: 0 !important;
+      }
     }
 
     .archive-item-date {
       flex-shrink: 0 !important;
       width: auto !important;
-      min-width: 4.5rem !important;
+      min-width: 4rem !important;
       text-align: right !important;
       white-space: nowrap !important;
       font-variant-numeric: tabular-nums !important;
       font-size: 0.9em !important;
-      opacity: 0.85;
+      color: #828282 !important;
+
+      [theme=dark] & {
+        color: #9ca3af !important;
+      }
     }
   }
 
