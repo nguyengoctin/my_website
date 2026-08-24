@@ -1,5 +1,5 @@
 ---
-title: "Cost & Latency Monitoring"
+title: "Cost and Latency Monitoring"
 description: "Cost and latency monitoring tracks token usage, the resulting financial cost, and response times across your AI system."
 summary: "Giám sát chi phí và độ trễ theo dõi việc sử dụng token, chi phí tài chính và thời gian phản hồi trong hệ thống AI của bạn."
 slug: "costlatency-monitoring"

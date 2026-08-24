@@ -1,5 +1,5 @@
 ---
-title: "10. Models & APIs"
+title: "10. Models and APIs"
 description: "Các bài học thuộc chuyên mục 10. Models & APIs."
 weight: 1000
 date: 2026-08-01

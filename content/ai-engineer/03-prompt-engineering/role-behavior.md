@@ -1,5 +1,5 @@
 ---
-title: "Role & Behavior"
+title: "Role and Behavior"
 description: "System prompting involves crafting instructions that define the AI model's role, personality, and overall behavior when interacting with users."
 summary: "System prompting liên quan đến việc tạo ra các hướng dẫn xác định vai trò, tính cách và hành vi tổng thể của mô hình AI khi tương tác với người dùng."
 slug: "role-behavior"

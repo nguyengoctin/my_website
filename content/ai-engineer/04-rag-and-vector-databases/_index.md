@@ -1,5 +1,5 @@
 ---
-title: "04. RAG & Vector Databases"
+title: "04. RAG and Vector Databases"
 description: "Các bài học thuộc chuyên mục 04. RAG & Vector Databases."
 weight: 400
 date: 2026-08-01

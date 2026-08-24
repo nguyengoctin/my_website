@@ -1,5 +1,5 @@
 ---
-title: "Tracing & Logging"
+title: "Tracing and Logging"
 description: "Tracing records the full lifecycle of a request through your AI system, from the initial user input through any intermediate LLM calls, tool uses, or retrieval steps, all the way to the final response."
 summary: "Tracing ghi lại toàn bộ vòng đời của một yêu cầu thông qua hệ thống AI của bạn, từ đầu vào ban đầu của người dùng qua bất kỳ cuộc gọi LLM trung gian, việc sử dụng công cụ hoặc các bước truy xuất, cho đến phản hồi cuối cùng."
 slug: "tracing-logging"

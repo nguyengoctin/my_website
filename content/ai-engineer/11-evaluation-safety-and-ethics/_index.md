@@ -1,5 +1,5 @@
 ---
-title: "11. Evaluation, Safety & Ethics"
+title: "11. Evaluation, Safety and Ethics"
 description: "Các bài học thuộc chuyên mục 11. Evaluation, Safety & Ethics."
 weight: 1100
 date: 2026-08-01

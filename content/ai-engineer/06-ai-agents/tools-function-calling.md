@@ -1,5 +1,5 @@
 ---
-title: "Tools & Function Calling in AI Agents"
+title: "Tools and Function Calling in AI Agents"
 description: "Tools and function calling equip AI agents with the ability to interact with the real world and access external information."
 summary: "Công cụ và gọi hàm trang bị cho các tác nhân AI khả năng tương tác với thế giới thực và truy cập thông tin bên ngoài."
 slug: "tools-function-calling"

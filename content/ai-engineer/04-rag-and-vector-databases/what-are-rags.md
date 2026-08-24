@@ -1,5 +1,5 @@
 ---
-title: "RAG & Implementation"
+title: "RAG and Implementation"
 description: "Retrieval-Augmented Generation (RAG) combines information retrieval with language generation to produce more accurate, context-aware responses."
 summary: "Retrieval-Augmented Generation (RAG) kết hợp việc truy xuất thông tin với tạo ngôn ngữ để tạo ra các phản hồi chính xác hơn và nhận biết ngữ cảnh."
 slug: "what-are-rags"

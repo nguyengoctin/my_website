@@ -1,5 +1,5 @@
 ---
-title: "09. Frameworks & Tools"
+title: "09. Frameworks and Tools"
 description: "Các bài học thuộc chuyên mục 09. Frameworks & Tools."
 weight: 900
 date: 2026-08-01

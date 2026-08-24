@@ -1,5 +1,5 @@
 ---
-title: "Cẩm Nang Git & GitHub Toàn Tập"
+title: "Cẩm Nang Git và GitHub Toàn Tập"
 date: 2026-08-20T12:00:00+07:00
 draft: false
 description: "Cẩm nang toàn tập về Git và GitHub, từ lệnh cơ bản, quản lý nhánh, rebase đến quy trình làm việc nhóm chuyên nghiệp."
