@@ -1,5 +1,5 @@
 // ==========================================================
-// 6. Unified Modern Quote & Blockquote Styling (No Card)
+// 1. QUOTE & BLOCKQUOTE STYLING (No-Card Modern Minimalist)
 // ==========================================================
 blockquote,
 .custom-quote {
@@ -8,7 +8,6 @@ blockquote,
   color: #1e293b !important;
   text-align: left !important;
   border: none !important;
-  border-left: none !important;
   padding: 0.5rem 0 !important;
   margin: 2rem 0 !important;
   font-size: 1.38rem !important;
@@ -17,7 +16,6 @@ blockquote,
   font-style: normal !important;
   background-color: transparent !important;
   border-radius: 0 !important;
-  box-sizing: border-box !important;
   box-shadow: none !important;
 
   [theme=dark] & {
@@ -129,7 +127,9 @@ blockquote,
   }
 }
 
-// 7. General Content & Article Typography (Balanced Line Height & Harmonious Spacing)
+// ==========================================================
+// 2. ARTICLE CONTENT TYPOGRAPHY & SPACING
+// ==========================================================
 .single .content {
   font-family: "Lora", Georgia, serif !important;
   font-size: 1.05rem !important;
@@ -141,7 +141,6 @@ blockquote,
     line-height: 1.75 !important;
   }
 
-  // Gắn kết tự nhiên giữa đoạn dẫn và danh sách ngay sau nó
   p + ul,
   p + ol {
     margin-top: -0.45rem !important;
@@ -166,7 +165,6 @@ blockquote,
     }
   }
 
-  // Clearfix: tránh float avatar tràn ra ngoài container
   &::after {
     content: "";
     display: table;
@@ -175,7 +173,7 @@ blockquote,
 }
 
 // ==========================================================
-// Personal Bio Floating Avatar (Chip Huyen Editorial Style)
+// 3. EDITORIAL BIO FLOATING AVATAR (Chip Huyen Style)
 // ==========================================================
 .bio-container {
   display: block !important;
@@ -235,7 +233,6 @@ img.bio-avatar {
     max-width: 155px !important;
     min-width: 155px !important;
     margin: 0.1rem 0 0.8rem 1.2rem !important;
-    shape-outside: circle(50%) !important;
   }
 
   @media (max-width: 600px) {
@@ -244,7 +241,6 @@ img.bio-avatar {
     max-width: 140px !important;
     min-width: 140px !important;
     margin: 0.1rem 0 0.65rem 1rem !important;
-    shape-outside: circle(50%) !important;
   }
 
   @media (max-width: 420px) {
@@ -253,11 +249,12 @@ img.bio-avatar {
     max-width: 125px !important;
     min-width: 125px !important;
     margin: 0.05rem 0 0.5rem 0.8rem !important;
-    shape-outside: circle(50%) !important;
   }
 }
 
-// 7. 100% UNIFIED INLINE LINK COLOR SYSTEM (Giữ nguyên style cho Buttons/Chips/Nav)
+// ==========================================================
+// 4. UNIFIED INLINE LINK SYSTEM
+// ==========================================================
 a:not(.contact-chip):not(.btn-action):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
 .single .content a:not(.contact-chip):not(.btn-action):not(.tag-pill) {
   color: #4d74eb !important;
@@ -276,4 +273,3 @@ a:not(.contact-chip):not(.btn-action):not(.tag-pill):not(.timeline-tag):not(.tag
     }
   }
 }
-

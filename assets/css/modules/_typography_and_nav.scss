@@ -1,4 +1,6 @@
-
+// ==========================================================
+// 1. GLOBAL BODY & THEME VARIABLES
+// ==========================================================
 body {
   font-family: "Lora", Georgia, serif !important;
   color: #111111 !important;
@@ -7,7 +9,7 @@ body {
 
   &[theme=dark] {
     color: #e6e8ec !important;
-    background-color: #1c1d22 !important; /* Soft Slate Charcoal background - Flattering & Comfortable for long reading */
+    background-color: #1c1d22 !important;
   }
 }
 
@@ -15,36 +17,10 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-// 7. Search Button & Input: Clean Styling
-.search input {
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-.search .search-button i {
-  color: #64748b !important;
-}
-
-.search .search-button:hover i {
-  color: #111111 !important;
-
-  [theme=dark] & {
-    color: #ffffff !important;
-  }
-}
-
-.search.mobile input {
-  font-family: "Lora", Georgia, serif !important;
-}
-
-
-// 1. Headings & Divider Lines
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lora", Georgia, serif !important;
-  font-weight: 500 !important;
-}
-
+// ==========================================================
+// 2. HEADINGS & TYPOGRAPHY HIERARCHY
+// ==========================================================
+h1, h2, h3, h4, h5, h6,
 .single-title {
   font-family: "Lora", Georgia, serif !important;
   font-weight: 500 !important;
@@ -97,7 +73,17 @@ h4, h5, h6 {
   }
 }
 
-// TypeIt Quote — câu quote tâm đắc trên trang chủ (dưới phần ABOUT)
+hr {
+  border: none !important;
+  border-top: 1px solid #e8e8e8 !important;
+  margin: 1.2rem 0 !important;
+
+  [theme=dark] & {
+    border-top-color: #27272a !important;
+  }
+}
+
+// Home quote TypeIt
 .home-quote-typeit,
 .home-subtitle {
   text-align: left !important;
@@ -124,30 +110,9 @@ h4, h5, h6 {
   }
 }
 
-// Quote & Blockquote Dark Mode Readability
-blockquote, .custom-quote {
-  [theme=dark] & {
-    color: #e2e8f0 !important;
-
-    p, span, cite {
-      color: #e2e8f0 !important;
-    }
-  }
-}
-
-
-
-hr {
-  border: none !important;
-  border-top: 1px solid #e8e8e8 !important;
-  margin: 1.2rem 0 !important;
-
-  [theme=dark] & {
-    border-top-color: #27272a !important;
-  }
-}
-
-// 2. Navigation Bar & Logo ("Nguyễn Ngọc Tín" - Underline on Hover, No Dot)
+// ==========================================================
+// 3. DESKTOP NAVIGATION BAR & LOGO ("Nguyễn Ngọc Tín")
+// ==========================================================
 .header-wrapper {
   font-family: "Lora", Georgia, serif !important;
   
@@ -245,7 +210,6 @@ hr {
     &:hover {
       text-decoration: underline !important;
       color: #111111 !important;
-      font-weight: 400 !important;
 
       [theme=dark] & {
         color: #ffffff !important;
@@ -257,7 +221,6 @@ hr {
     }
 
     &.active {
-      font-weight: 400 !important;
       color: #111111 !important;
       text-decoration: underline !important;
 
@@ -268,7 +231,7 @@ hr {
 
     &[href*="/cv/"] {
       font-weight: 700 !important;
-      color: #ec4899 !important; /* Standout Rose/Pink accent on primary blue tone */
+      color: #ec4899 !important;
 
       [theme=dark] & {
         color: #f472b6 !important;
@@ -276,7 +239,6 @@ hr {
 
       &:hover {
         color: #db2777 !important;
-        text-decoration: underline !important;
 
         [theme=dark] & {
           color: #f687b3 !important;
@@ -290,13 +252,15 @@ hr {
   }
 }
 
-// 3. TOC Table of Contents: Light Muted Gray (13px), ONLY Active is Blue (#4d74eb), Hover is Bold + Underline
+// ==========================================================
+// 4. TOC TABLE OF CONTENTS
+// ==========================================================
 .toc-content, #toc-auto, #toc-static {
   a {
     font-family: "Lora", Georgia, serif !important;
-    font-size: 0.8125rem !important; /* 13px small text */
+    font-size: 0.8125rem !important;
     font-weight: 400 !important;
-    color: #828282 !important; /* Muted light gray */
+    color: #828282 !important;
     text-decoration: none !important;
     transition: color 0.2s ease, font-weight 0.1s ease;
 
@@ -315,7 +279,7 @@ hr {
     }
 
     &.active {
-      color: #4d74eb !important; /* ONLY active scrolled/clicked section turns Blue */
+      color: #4d74eb !important;
       font-weight: 700 !important;
       text-decoration: none !important;
 
@@ -326,7 +290,9 @@ hr {
   }
 }
 
-// 4. Article Summary Cards: Spacing & Divider Line
+// ==========================================================
+// 5. SUMMARY POST CARDS (Home & List)
+// ==========================================================
 .summary.single {
   margin-bottom: 1.3rem !important;
   padding-bottom: 1rem !important;
@@ -362,20 +328,14 @@ hr {
   }
 }
 
-// Compact & neat post titles specifically on Home Page
 .page.home .summary .single-title {
-  font-size: 1.125rem !important; /* 18px neat & compact */
+  font-size: 1.125rem !important;
   line-height: 1.45 !important;
   font-weight: 500 !important;
   margin-top: 0.15rem !important;
   margin-bottom: 0.35rem !important;
-
-  a {
-    font-weight: 500 !important;
-  }
 }
 
-// Clean Summary Preview: Hide Quotes, Admonitions & Callouts in Post Summary Cards
 .summary .content {
   blockquote,
   .custom-quote,
@@ -384,36 +344,3 @@ hr {
     display: none !important;
   }
 }
-
-
-
-.tag-cloud-tags {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 0.45rem !important;
-  margin: 1rem 0 2rem !important;
-
-  a {
-    margin: 0 !important;
-    position: static !important;
-    transform: none !important;
-
-    &:hover, &:focus, &:active {
-      transform: translateY(-1px) !important;
-    }
-  }
-}
-
-.post-tags {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 0.35rem !important;
-
-  i {
-    color: #94a3b8 !important;
-    margin-right: 0.2rem !important;
-    font-size: 0.85rem !important;
-  }
-}
-
