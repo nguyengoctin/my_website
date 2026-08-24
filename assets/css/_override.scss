@@ -1761,20 +1761,6 @@ body .tag-badge {
     transition: color 0.15s ease !important;
   }
 
-  .topic-count {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 0.68rem !important;
-    font-weight: 600 !important;
-    color: #64748b !important;
-    background: rgba(0, 0, 0, 0.05) !important;
-    border-radius: 9999px !important;
-    padding: 0.05rem 0.35rem !important;
-    margin-left: 0.25rem !important;
-    line-height: 1.1 !important;
-  }
-
   &:hover {
     background-color: #e2e8f0 !important;
     color: #1e293b !important;
@@ -1783,11 +1769,6 @@ body .tag-badge {
 
     i {
       color: #1e293b !important;
-    }
-
-    .topic-count {
-      color: #1e293b !important;
-      background: rgba(0, 0, 0, 0.1) !important;
     }
   }
 }
@@ -1815,11 +1796,6 @@ body[theme=dark] .tag-badge {
     color: #94a3b8 !important;
   }
 
-  .topic-count {
-    color: #94a3b8 !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-  }
-
   &:hover {
     background-color: rgba(255, 255, 255, 0.12) !important;
     color: #f8fafc !important;
@@ -1827,11 +1803,6 @@ body[theme=dark] .tag-badge {
 
     i {
       color: #f8fafc !important;
-    }
-
-    .topic-count {
-      color: #f8fafc !important;
-      background: rgba(255, 255, 255, 0.2) !important;
     }
   }
 }
