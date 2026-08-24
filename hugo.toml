@@ -85,7 +85,7 @@ enableEmoji = true
     identifier = "posts"
     name = "Notes"
     url = "/posts/"
-    title = "Technical Notes"
+    title = "Technical Notes & Articles"
 
   [[menu.main]]
     weight = 3
@@ -96,24 +96,17 @@ enableEmoji = true
 
   [[menu.main]]
     weight = 4
-    identifier = "categories"
-    name = "Topics"
-    url = "/categories/"
-    title = "All Categories and Tags"
-
-  [[menu.main]]
-    weight = 6
-    identifier = "cv"
-    name = "My CV"
-    url = "/cv/"
-    title = "Curriculum Vitae"
-
-  [[menu.main]]
-    weight = 5
     identifier = "listen"
     name = "Listen"
     url = "/listen/"
     title = "NotebookLM Audio"
+
+  [[menu.main]]
+    weight = 5
+    identifier = "cv"
+    name = "My CV"
+    url = "/cv/"
+    title = "Curriculum Vitae"
 
 # Parameters config for LoveIt theme
 [params]

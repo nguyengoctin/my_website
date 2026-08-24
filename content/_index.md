@@ -4,6 +4,15 @@ title: "Nguyen Ngoc Tin"
 
 ## ABOUT
 
+<div class="home-quick-nav" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
+  <a href="#about" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-user"></i> About</a>
+  <a href="#experiences" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-briefcase"></i> Experiences</a>
+  <a href="#education" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="#projects" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-laptop-code"></i> Projects</a>
+  <a href="/posts/" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-pen-nib"></i> Recent Notes</a>
+  <a href="/roadmaps/" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-map-signs"></i> Roadmaps</a>
+</div>
+
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <p>I'm Nguyễn Ngọc Tín, an Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>

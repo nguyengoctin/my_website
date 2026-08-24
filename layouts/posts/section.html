@@ -19,6 +19,18 @@
                 {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" -}}
             </h2>
 
+            {{- /* Quick Category & Tag Discovery Pills */ -}}
+            {{- with .Site.Taxonomies.categories -}}
+                <div class="posts-quick-topics" style="margin: 1rem 0 1.8rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+                    <span style="font-size: 0.85rem; color: #828282; margin-right: 0.3rem;"><i class="fas fa-folder-open"></i> Topics:</span>
+                    {{- range $name, $taxonomy := . -}}
+                        <a href="{{ $taxonomy.Page.RelPermalink }}" class="tag-pill" style="margin: 0;">
+                            {{ $taxonomy.Page.Title }} <sup>{{ $taxonomy.Count }}</sup>
+                        </a>
+                    {{- end -}}
+                </div>
+            {{- end -}}
+
             {{- /* Paginate Standard Blog Posts */ -}}
             {{- if .Pages -}}
                 {{- $pages := .Pages.GroupByDate "2006" -}}
