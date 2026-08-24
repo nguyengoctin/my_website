@@ -36,9 +36,9 @@ flowchart TD
     FE --> Gateway
     Gateway --> Lambda
     Lambda --> Bedrock
-    Bedrock --> Lambda
     Lambda --> Dynamo
-    Lambda --> FE
+    Bedrock --> FE
+    Dynamo --> FE
 ```
 
 ## Kết quả đạt được

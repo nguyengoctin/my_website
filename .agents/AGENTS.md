@@ -58,6 +58,9 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
     - TUYỆT ĐỐI KHÔNG dùng dấu phẩy `,`, dấu gạch chéo `/` trong nhãn mũi tên (dùng từ thay thế: `hoặc`, `và`, dấu gạch ngang `-`).
   - **TUYỆT ĐỐI KHÔNG để dòng trống (Empty Line) bên trong khối mã Mermaid:** Toàn bộ các dòng định nghĩa trong khối ` ```mermaid ` phải liên tục, không chèn dòng trống giữa các node hoặc giữa các `subgraph`.
   - **TUYỆT ĐỐI KHÔNG dùng ký tự `&` trong toàn bộ biểu đồ:** Thay bằng chữ "và" hoặc chữ "and".
+  - **Quy tắc Bố Cục Cân Đối (Tối thiểu 2 node / hàng):**
+    - **TUYỆT ĐỐI KHÔNG xếp luồng đơn điệu 1 hàng dọc từ trên xuống dưới** (tạo cảm giác sơ đồ dài lê thê và trống trải hai bên).
+    - Bắt buộc chia nhánh cân đối (`A --> B` và `A --> C`), tạo cấu trúc 2 cột hoặc đa nhánh để mỗi tầng luôn có tối thiểu 2 node nằm song song.
   - **Quy tắc Bố Cục và Liên Kết Node (KHÔNG ĐÓNG KHUNG NHÓM SUBGRAPH):**
     - **TUYỆT ĐỐI KHÔNG dùng `subgraph` đóng khung nhóm** (gây sinh ra các đường viền bao quanh khổng lồ và làm lệch bố cục).
     - Tạo bố cục tự nhiên bằng các liên kết trực tiếp giữa các node (`A --> B`, `A --> C`, `B --> D...`).

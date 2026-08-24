@@ -44,12 +44,12 @@ cf init
 flowchart TD
     Scan["`Bước 1: Quét tri thức (/cf-scan)`"]
     Plan["`Bước 2: Lập kế hoạch (/cf-plan)`"]
-    Code["`Bước 3: Code và kiểm thử (cf-tdd)`"]
     Review["`Bước 4: Đánh giá mã (/cf-review)`"]
+    Code["`Bước 3: Code và kiểm thử (cf-tdd)`"]
     Ship["`Bước 5: Phát hành (/cf-ship)`"]
     Scan --> Plan
-    Plan --> Code
     Scan --> Review
+    Plan --> Code
     Review --> Ship
     Code --> Ship
 ```
@@ -166,8 +166,8 @@ flowchart TD
     Step3["`Pha 3: Sửa mã nguồn`"]
     Step4["`Pha 4: Lưu vào memory`"]
     Bug --> Step1
-    Step1 --> Step2
-    Bug --> Step3
+    Bug --> Step2
+    Step1 --> Step3
     Step2 --> Step3
     Step3 --> Step4
 ```
