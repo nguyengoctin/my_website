@@ -4,15 +4,6 @@ title: "Nguyen Ngoc Tin"
 
 ## ABOUT
 
-<div class="home-quick-nav" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
-  <a href="#about" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-user"></i> About</a>
-  <a href="#experiences" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-briefcase"></i> Experiences</a>
-  <a href="#education" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-graduation-cap"></i> Education</a>
-  <a href="#projects" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-laptop-code"></i> Projects</a>
-  <a href="/posts/" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-pen-nib"></i> Recent Notes</a>
-  <a href="/roadmaps/" class="tag-pill" style="margin: 0; padding: 0.2rem 0.65rem;"><i class="fas fa-map-signs"></i> Roadmaps</a>
-</div>
-
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <p>I'm Nguyễn Ngọc Tín, an Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
@@ -178,7 +169,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
-        <span style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600; color: #d97706; background: rgba(245, 158, 11, 0.12); padding: 0.18rem 0.6rem; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.25);"><i class="fas fa-hammer"></i> In Active Development</span>
+        <span class="status-badge status-warning"><i class="fas fa-hammer"></i> In Active Development</span>
       </div>
     </div>
   </div>
@@ -209,8 +200,8 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/lexi-ai-english-tutor/"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
+        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
       </div>
     </div>
   </div>
@@ -241,8 +232,8 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Docker</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bilingual-movie-learning-platform/"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
+        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
+        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
       </div>
     </div>
   </div>
@@ -272,9 +263,9 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/personal-hugo-technical-blog/"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source Code</a>
-        <a href="https://ngoctin.me" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
+        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
+        <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="fas fa-external-link-alt"></i> Live Site</a>
       </div>
     </div>
   </div>

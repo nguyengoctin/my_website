@@ -391,72 +391,7 @@ hr {
   }
 }
 
-// ==========================================================
-// 5. UNIFIED GLOBAL TAG SYSTEM (Consistent Soft Gray Badges)
-// Matches Project Tags across all Pages: Home, Posts, Topics, Footers
-// ==========================================================
 
-.timeline-tag,
-.tag-pill,
-.post-tags a,
-.post-footer .post-tags a,
-.summary .post-tags a,
-.tag-cloud-tags a,
-.tag-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 500 !important;
-  color: #475569 !important;
-  background-color: #f1f5f9 !important;
-  border: 1px solid #e2e8f0 !important;
-  padding: 0.1rem 0.48rem !important;
-  border-radius: 4px !important;
-  line-height: 1.35 !important;
-  text-decoration: none !important;
-  margin: 0.12rem 0.2rem 0.12rem 0 !important;
-  transition: all 0.15s ease !important;
-  vertical-align: middle !important;
-  box-shadow: none !important;
-
-  sup {
-    color: #94a3b8 !important;
-    font-size: 0.7rem !important;
-    font-weight: 600 !important;
-    margin-left: 0.3rem !important;
-    top: 0 !important;
-    vertical-align: baseline !important;
-  }
-
-  [theme=dark] & {
-    color: #cbd5e1 !important;
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-
-    sup {
-      color: #64748b !important;
-    }
-  }
-
-  &:hover {
-    color: #ffffff !important;
-    background-color: #4d74eb !important;
-    border-color: #4d74eb !important;
-    text-decoration: none !important;
-    transform: translateY(-1px) !important;
-
-    sup {
-      color: rgba(255, 255, 255, 0.9) !important;
-    }
-
-    [theme=dark] & {
-      color: #ffffff !important;
-      background-color: #4d74eb !important;
-      border-color: #4d74eb !important;
-    }
-  }
-}
 
 .tag-cloud-tags {
   display: flex !important;
@@ -843,81 +778,13 @@ table a,
   opacity: 0.9;
 }
 
-.contact-links-row {
+.contact-links-row,
+.about-contact-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.45rem;
-}
-
-.contact-chip {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.4rem !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 0.78rem !important;
-  font-weight: 500 !important;
-  color: #334155 !important;
-  background-color: #ffffff !important;
-  border: 1px solid #cbd5e1 !important;
-  border-radius: 6px !important;
-  padding: 0.25rem 0.6rem !important;
-  line-height: 1.3 !important;
-  text-decoration: none !important;
-  transition: all 0.15s ease !important;
-
-  i {
-    font-size: 0.82rem !important;
-    color: #64748b !important;
-    transition: color 0.15s ease !important;
-  }
-
-  .chip-sub {
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: #059669;
-    background: rgba(16, 185, 129, 0.12);
-    padding: 0.05rem 0.3rem;
-    border-radius: 3px;
-    margin-left: 0.15rem;
-  }
-
-  [theme=dark] & {
-    color: #e2e8f0 !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(255, 255, 255, 0.12) !important;
-
-    i {
-      color: #94a3b8 !important;
-    }
-
-    .chip-sub {
-      color: #34d399;
-      background: rgba(16, 185, 129, 0.2);
-    }
-  }
-
-  &:hover {
-    color: #4d74eb !important;
-    border-color: #4d74eb !important;
-    background-color: rgba(77, 116, 235, 0.06) !important;
-    text-decoration: none !important;
-    transform: translateY(-1px);
-
-    i {
-      color: #4d74eb !important;
-    }
-
-    [theme=dark] & {
-      color: #60a5fa !important;
-      border-color: #60a5fa !important;
-      background-color: rgba(96, 165, 250, 0.12) !important;
-
-      i {
-        color: #60a5fa !important;
-      }
-    }
-  }
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 // 8. Color-Coded Distinct Icons for Learning Resources Page
@@ -1691,24 +1558,6 @@ img.lazyloaded {
     gap: 0.35rem;
     align-items: center;
     margin-top: 0.65rem;
-
-    .timeline-tag {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #475569;
-      background-color: #f1f5f9;
-      border: 1px solid #e2e8f0;
-      padding: 0.12rem 0.55rem;
-      border-radius: 4px;
-      line-height: 1.4;
-
-      [theme=dark] & {
-        color: #cbd5e1;
-        background-color: rgba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.1);
-      }
-    }
   }
 
 
@@ -1775,8 +1624,112 @@ img.lazyloaded {
 }
 
 // ==========================================================
-// UNIFIED TAGS STYLE (Forcing Gray Style across all components)
+// UNIFIED BADGE / TAG / CHIP DESIGN SYSTEM (Primer & Linear Standards)
 // ==========================================================
+
+// 1. Interactive Action Buttons & Chips (.contact-chip, .timeline-links a, .btn-action)
+.contact-chip,
+.timeline-links a,
+.btn-action,
+body a.contact-chip,
+body a.btn-action {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 0.8125rem !important; /* 13px */
+  font-weight: 500 !important;
+  color: #334155 !important;
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.28rem 0.72rem !important;
+  border-radius: 6px !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  transition: all 0.15s ease !important;
+
+  i {
+    font-size: 0.82rem !important;
+    color: #64748b !important;
+    transition: color 0.15s ease !important;
+  }
+
+  .chip-sub {
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    padding: 0.05rem 0.35rem !important;
+    border-radius: 4px !important;
+    margin-left: 0.15rem !important;
+  }
+
+  &:hover {
+    background-color: #ffffff !important;
+    border-color: #4d74eb !important;
+    color: #4d74eb !important;
+    box-shadow: 0 2px 6px rgba(77, 116, 235, 0.1) !important;
+    transform: translateY(-1px) !important;
+    text-decoration: none !important;
+
+    i {
+      color: #4d74eb !important;
+    }
+
+    .chip-sub {
+      color: #4d74eb !important;
+      background: rgba(77, 116, 235, 0.1) !important;
+    }
+  }
+}
+
+// Action Buttons Dark Mode
+[theme=dark] .contact-chip,
+[theme=dark] .timeline-links a,
+[theme=dark] .btn-action,
+body[theme=dark] a.contact-chip,
+body[theme=dark] a.btn-action,
+body[theme=dark] .timeline-links a {
+  color: #e2e8f0 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+
+  i {
+    color: #94a3b8 !important;
+  }
+
+  .chip-sub {
+    color: #94a3b8 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: #60a5fa !important;
+    color: #60a5fa !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+
+    i {
+      color: #60a5fa !important;
+    }
+
+    .chip-sub {
+      color: #60a5fa !important;
+      background: rgba(96, 165, 250, 0.15) !important;
+    }
+  }
+}
+
+// 2. Metadata Content Tags & Tech Stack Pills (.tag-pill, .timeline-tag, .post-tags a)
+.tag-pill,
+.timeline-tag,
+.tag-badge,
+.post-tags a,
+.post-footer .post-tags a,
+.summary .post-tags a,
+.tag-cloud-tags a,
 body a.tag-pill,
 body .post-tags a,
 body .post-footer .post-tags a,
@@ -1786,14 +1739,15 @@ body .timeline-tag,
 body .tag-badge {
   display: inline-flex !important;
   align-items: center !important;
+  gap: 0.35rem !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 0.72rem !important;
+  font-size: 0.75rem !important;
   font-weight: 500 !important;
   color: #475569 !important;
   background-color: #f1f5f9 !important;
   border: 1px solid #e2e8f0 !important;
-  padding: 0.12rem 0.55rem !important;
-  border-radius: 4px !important;
+  padding: 0.16rem 0.55rem !important;
+  border-radius: 5px !important;
   line-height: 1.4 !important;
   text-decoration: none !important;
   margin: 0.12rem 0.2rem 0.12rem 0 !important;
@@ -1801,23 +1755,131 @@ body .tag-badge {
   vertical-align: middle !important;
   box-shadow: none !important;
   
-  &:hover {
-    background-color: #e2e8f0 !important;
-    color: #334155 !important;
-    text-decoration: none !important;
-    border-color: #cbd5e1 !important;
+  i {
+    font-size: 0.75rem !important;
+    color: #64748b !important;
+    transition: color 0.15s ease !important;
   }
 
-  [theme=dark] & {
-    color: #cbd5e1 !important;
-    background-color: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.12) !important;
-      color: #f8fafc !important;
+  .topic-count {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 9999px !important;
+    padding: 0.05rem 0.35rem !important;
+    margin-left: 0.25rem !important;
+    line-height: 1.1 !important;
+  }
+
+  &:hover {
+    background-color: #e2e8f0 !important;
+    color: #1e293b !important;
+    text-decoration: none !important;
+    border-color: #cbd5e1 !important;
+
+    i {
+      color: #1e293b !important;
+    }
+
+    .topic-count {
+      color: #1e293b !important;
+      background: rgba(0, 0, 0, 0.1) !important;
     }
   }
+}
+
+// Content Tags Dark Mode
+[theme=dark] .tag-pill,
+[theme=dark] .timeline-tag,
+[theme=dark] .tag-badge,
+[theme=dark] .post-tags a,
+[theme=dark] .post-footer .post-tags a,
+[theme=dark] .summary .post-tags a,
+[theme=dark] .tag-cloud-tags a,
+body[theme=dark] a.tag-pill,
+body[theme=dark] .post-tags a,
+body[theme=dark] .post-footer .post-tags a,
+body[theme=dark] .summary .post-tags a,
+body[theme=dark] .tag-cloud-tags a,
+body[theme=dark] .timeline-tag,
+body[theme=dark] .tag-badge {
+  color: #cbd5e1 !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  
+  i {
+    color: #94a3b8 !important;
+  }
+
+  .topic-count {
+    color: #94a3b8 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: #f8fafc !important;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+
+    i {
+      color: #f8fafc !important;
+    }
+
+    .topic-count {
+      color: #f8fafc !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
+  }
+}
+
+// 3. Status Badges (.status-badge)
+.status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  padding: 0.15rem 0.6rem !important;
+  border-radius: 9999px !important;
+  line-height: 1.3 !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+
+  i {
+    font-size: 0.75rem !important;
+  }
+
+  &.status-warning {
+    color: #b45309 !important;
+    background: rgba(245, 158, 11, 0.12) !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  }
+
+  &.status-success {
+    color: #047857 !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  }
+}
+
+// Status Badges Dark Mode
+[theme=dark] .status-badge.status-warning,
+body[theme=dark] .status-badge.status-warning {
+  color: #fbbf24 !important;
+  background: rgba(245, 158, 11, 0.18) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[theme=dark] .status-badge.status-success,
+body[theme=dark] .status-badge.status-success {
+  color: #34d399 !important;
+  background: rgba(16, 185, 129, 0.18) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
 }
 
 // ==========================================================
