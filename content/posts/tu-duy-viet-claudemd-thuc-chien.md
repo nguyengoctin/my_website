@@ -70,11 +70,17 @@ AI bản chất đã sở hữu khối lượng kiến thức rất lớn từ q
 
 ```mermaid
 flowchart TD
-    A["Bài Toán Lập Trình Phức Tạp"] --> B{"Bản Chất Vấn Đề"}
-    B -->|Thiếu kỹ năng hoặc logic| C["Nghẽn Ở Năng Lực Mô Hình"]
-    B -->|Sai lệnh build hoặc vùng cấm| D["Nghẽn Ở Quy Trình Thực Thi"]
-    C -->|Giải pháp đúng| E["Chia nhỏ task hoặc đổi model"]
-    D -->|Giải pháp đúng| F["CLAUDE.md tinh gọn và công cụ tất định"]
+    A["`Bài toán lập trình phức tạp`"]
+    B{"`Bản chất vấn đề?`"}
+    C["`Nghẽn ở năng lực mô hình`"]
+    D["`Nghẽn ở quy trình thực thi`"]
+    E["`Chia nhỏ task hoặc đổi model`"]
+    F["`CLAUDE.md tinh gọn và tất định`"]
+    A --> B
+    B -->|Thiếu logic| C
+    B -->|Sai lệnh build| D
+    C -->|Giải pháp| E
+    D -->|Giải pháp| F
 ```
 
 Khi Agent viết sai kiến trúc hoặc tạo ra lỗi logic, việc bổ sung 300 dòng markdown mô tả kiến trúc không thể cứu vãn tình hình. Động thái đúng đắn là chia nhỏ bài toán thành các phần độc lập, định nghĩa đặc tả rõ ràng hơn, tái cấu trúc codebase cho thân thiện với Agent, hoặc chuyển sang mô hình có năng lực lý luận cao hơn.
@@ -128,11 +134,17 @@ Sự nhầm lẫn nguy hiểm nhất khi thiết lập quy tắc cho AI Agent l�
 
 ```mermaid
 flowchart TD
-    A["Yêu Cầu Quản Lý AI Agent"] --> B{"Phân Loại Bản Chất Quy Tắc"}
-    B -->|Quy tắc an toàn sinh tử| C["Cưỡng Chế - Enforcement"]
-    B -->|Quy chuẩn và lệnh thao tác| D["Hướng Dẫn - Guidance"]
-    C -->|Giải pháp tất định| E["Git Hooks, CI Pipeline và permissions.deny"]
-    D -->|Giải pháp ngữ cảnh| F["File CLAUDE.md và AGENTS.md"]
+    A["`Yêu cầu quản lý AI Agent`"]
+    B{"`Phân loại quy tắc?`"}
+    C["`Cưỡng chế (Enforcement)`"]
+    D["`Hướng dẫn (Guidance)`"]
+    E["`Git Hooks, CI và permissions`"]
+    F["`CLAUDE.md và AGENTS.md`"]
+    A --> B
+    B -->|Sinh tử| C
+    B -->|Thao tác| D
+    C -->|Tất định| E
+    D -->|Ngữ cảnh| F
 ```
 
 - **Hướng dẫn mềm Guidance:** File `CLAUDE.md` hoặc `AGENTS.md` chỉ đóng vai trò định hướng cách gọi lệnh, định dạng kiểm thử và chỉ định các thư mục cấm can thiệp.

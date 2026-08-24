@@ -54,9 +54,13 @@ Trang web roadmap.sh được xây dựng dưới dạng ứng dụng single-pag
 
 ```mermaid
 flowchart TD
-    A["Roadmap JSON Endpoint"] --> B["Danh Sách 174 Bài Học"]
-    A --> C["Node Content Endpoint"]
-    B --> D["Lưu Dữ Liệu Thô Local"]
+    A["`Roadmap JSON Endpoint`"]
+    B["`Danh sách 174 bài học`"]
+    C["`Node Content Endpoint`"]
+    D["`Lưu dữ liệu thô Local`"]
+    A --> B
+    A --> C
+    B --> D
     C --> D
 ```
 

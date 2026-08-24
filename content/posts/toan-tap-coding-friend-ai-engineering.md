@@ -42,10 +42,15 @@ cf init
 
 ```mermaid
 flowchart TD
-    Scan["Bước 1: Quét và nạp tri thức<br/><code>/cf-scan</code>"] --> Plan["Bước 2: Lập kế hoạch<br/><code>/cf-plan</code>"]
-    Plan --> Code["Bước 3: Viết code và kiểm thử<br/><code>cf-tdd</code>"]
-    Scan --> Review["Bước 4: Đánh giá mã nguồn<br/><code>/cf-review</code>"]
-    Review --> Ship["Bước 5: Đóng gói và phát hành<br/><code>/cf-ship</code>"]
+    Scan["`Bước 1: Quét tri thức (/cf-scan)`"]
+    Plan["`Bước 2: Lập kế hoạch (/cf-plan)`"]
+    Code["`Bước 3: Code và kiểm thử (cf-tdd)`"]
+    Review["`Bước 4: Đánh giá mã (/cf-review)`"]
+    Ship["`Bước 5: Phát hành (/cf-ship)`"]
+    Scan --> Plan
+    Plan --> Code
+    Scan --> Review
+    Review --> Ship
     Code --> Ship
 ```
 
@@ -88,13 +93,21 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    UserReq["Yêu cầu tính năng mới"] --> ModeCheck{"Chọn chế độ?"}
-    ModeCheck -->|Mặc định: Phỏng vấn| PlanNormal["/cf-plan"]
-    ModeCheck -->|Task nhỏ: Nhanh| PlanFast["/cf-plan --fast"]
-    ModeCheck -->|Refactor lớn: Rollback| PlanHard["/cf-plan --hard"]
-    ModeCheck -->|Tự hành: Tự động hóa| PlanAuto["/cf-plan --auto"]
-    PlanNormal --> Output["Lưu file kế hoạch<br/>tại docs/plans/"]
-    PlanFast --> InlineOutput["Theo dõi checklist<br/>trực tiếp trong chat"]
+    UserReq["`Yêu cầu tính năng mới`"]
+    ModeCheck{"`Chọn chế độ?`"}
+    PlanNormal["`/cf-plan (Chuẩn)`"]
+    PlanFast["`/cf-plan --fast`"]
+    PlanHard["`/cf-plan --hard`"]
+    PlanAuto["`/cf-plan --auto`"]
+    Output["`Lưu file docs/plans/`"]
+    InlineOutput["`Theo dõi checklist trong chat`"]
+    UserReq --> ModeCheck
+    ModeCheck -->|Phỏng vấn| PlanNormal
+    ModeCheck -->|Nhanh| PlanFast
+    ModeCheck -->|Rollback| PlanHard
+    ModeCheck -->|Tự động hóa| PlanAuto
+    PlanNormal --> Output
+    PlanFast --> InlineOutput
     PlanHard --> Output
     PlanAuto --> Output
 ```
@@ -118,12 +131,19 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    StartDev["Bắt đầu viết code"] --> CheckTest{"Có cờ --add-tests?"}
-    CheckTest -->|Có: Chu trình TDD| Red["Bước 1: RED<br/>Viết test fail trước"]
-    Red --> Green["Bước 2: GREEN<br/>Viết code để test pass"]
-    Green --> Refactor["Bước 3: REFACTOR<br/>Tối ưu và dọn dẹp mã nguồn"]
-    CheckTest -->|Không: Code trực tiếp| Direct["Thực thi và kiểm tra<br/>trên test có sẵn"]
-    Refactor --> Verify["cf-verification<br/>Chạy test thực tế"]
+    StartDev["`Bắt đầu viết code`"]
+    CheckTest{"`Có cờ --add-tests?`"}
+    Red["`Bước 1: RED (Viết test fail)`"]
+    Green["`Bước 2: GREEN (Viết code pass)`"]
+    Refactor["`Bước 3: REFACTOR (Tối ưu mã)`"]
+    Direct["`Code trực tiếp`"]
+    Verify["`cf-verification (Kiểm tra)`"]
+    StartDev --> CheckTest
+    CheckTest -->|Có: Chu trình TDD| Red
+    Red --> Green
+    Green --> Refactor
+    CheckTest -->|Không: Trực tiếp| Direct
+    Refactor --> Verify
     Direct --> Verify
 ```
 
@@ -140,11 +160,16 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Bug["Phát hiện lỗi kỹ thuật"] --> Step1["Pha 1: Tái hiện lỗi"]
-    Step1 --> Step2["Pha 2: Đặt giả thuyết"]
-    Bug --> Step3["Pha 3: Sửa mã nguồn"]
+    Bug["`Phát hiện lỗi kỹ thuật`"]
+    Step1["`Pha 1: Tái hiện lỗi`"]
+    Step2["`Pha 2: Đặt giả thuyết`"]
+    Step3["`Pha 3: Sửa mã nguồn`"]
+    Step4["`Pha 4: Lưu vào memory`"]
+    Bug --> Step1
+    Step1 --> Step2
+    Bug --> Step3
     Step2 --> Step3
-    Step3 --> Step4["Pha 4: Ghi bài học vào memory"]
+    Step3 --> Step4
 ```
 
 15. **`/cf-fix` (Sửa lỗi nhanh có kiểm chứng):**  
@@ -160,12 +185,19 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Diff["Mã nguồn vừa thay đổi"] --> L1["Lớp 1: Đánh giá bảo mật"]
-    Diff --> L4["Lớp 4: Độ bao phủ kiểm thử"]
-    L1 --> L2["Lớp 2: Bám sát kế hoạch"]
-    L4 --> L5["Lớp 5: Tuân thủ quy ước"]
-    L2 --> L3["Lớp 3: Clean Code"]
-    L3 --> Merge["Tổng hợp báo cáo phân loại"]
+    Diff["`Mã nguồn thay đổi`"]
+    L1["`Lớp 1: Bảo mật`"]
+    L2["`Lớp 2: Kế hoạch`"]
+    L3["`Lớp 3: Clean Code`"]
+    L4["`Lớp 4: Kiểm thử`"]
+    L5["`Lớp 5: Quy ước`"]
+    Merge["`Báo cáo tổng hợp`"]
+    Diff --> L1
+    Diff --> L4
+    L1 --> L2
+    L4 --> L5
+    L2 --> L3
+    L3 --> Merge
     L5 --> Merge
 ```
 

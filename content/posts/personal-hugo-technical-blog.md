@@ -21,10 +21,15 @@ Trong kỷ nguyên của các trang web cồng kềnh chứa nhiều JavaScript 
 
 ```mermaid
 flowchart TD
-    MD["Nội dung Markdown bài viết"] --> Hugo["Hugo Compiler"]
-    SCSS["Hệ thống SCSS tùy biến"] --> Hugo
-    Hugo -->|Generate Static HTML| Dist["Thư mục public"]
-    Dist -->|Automated Deploy| GHPages["GitHub Pages"]
+    MD["`Markdown bài viết`"]
+    SCSS["`Hệ thống SCSS`"]
+    Hugo["`Hugo Compiler`"]
+    Dist["`Thư mục public`"]
+    GHPages["`GitHub Pages`"]
+    MD --> Hugo
+    SCSS --> Hugo
+    Hugo -->|Static HTML| Dist
+    Dist -->|Deploy| GHPages
 ```
 
 ## Kết quả đạt được

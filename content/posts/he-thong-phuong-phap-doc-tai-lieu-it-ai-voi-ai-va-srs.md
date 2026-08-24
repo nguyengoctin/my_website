@@ -162,15 +162,24 @@ Thay vì tạo thẻ thủ công, chúng ta dùng Obsidian làm nơi quản lý 
 
 ```mermaid
 flowchart TD
-    A1["Tải PDF vào NotebookLM"] --> A2["Trích xuất 5 khái niệm cốt lõi"]
-    A2 --> A3["Bật Immersive Translate đọc lướt"]
-    A1 --> B1["Highlight và tạo Backlink"]
+    A1["`Tải PDF vào NotebookLM`"]
+    A2["`Trích xuất 5 khái niệm cốt lõi`"]
+    A3["`Đọc lướt qua Immersive Translate`"]
+    B1["`Highlight và tạo Backlink`"]
+    B2["`Mổ xẻ đoạn khó bằng AI`"]
+    B3["`Tự diễn đạt lại khái niệm`"]
+    C1["`Sentence Mining`"]
+    C2["`Đồng bộ tự động sang Anki`"]
+    C3["`Ôn tập với thuật toán FSRS`"]
+    A1 --> A2
+    A2 --> A3
+    A1 --> B1
     A3 --> B1
-    B1 --> B2["Mổ xẻ đoạn khó bằng AI"]
-    B2 --> B3["Tự diễn đạt lại khái niệm"]
-    B3 --> C1["Khai thác câu Sentence Mining"]
-    C1 --> C2["Đồng bộ tự động sang Anki"]
-    C2 --> C3["Ôn tập với thuật toán FSRS"]
+    B1 --> B2
+    B2 --> B3
+    B3 --> C1
+    C1 --> C2
+    C2 --> C3
 ```
 
 ### Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy

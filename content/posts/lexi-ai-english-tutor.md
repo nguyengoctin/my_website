@@ -26,11 +26,16 @@ Bài toán thực tế trong việc học giao tiếp tiếng Anh là người h
 
 ```mermaid
 flowchart TD
-    User["Người dùng phát âm"] --> FE["Next.js Frontend"]
-    FE --> Gateway["AWS API Gateway"]
-    Gateway --> Lambda["AWS Lambda Engine"]
-    User --> Dynamo["DynamoDB Single Table"]
-    Lambda --> Bedrock["Amazon Bedrock LLM"]
+    User["`Người dùng phát âm`"]
+    FE["`Next.js Frontend`"]
+    Gateway["`AWS API Gateway`"]
+    Lambda["`AWS Lambda Engine`"]
+    Bedrock["`Amazon Bedrock LLM`"]
+    Dynamo["`DynamoDB Single Table`"]
+    User --> FE
+    FE --> Gateway
+    Gateway --> Lambda
+    Lambda --> Bedrock
     Bedrock --> Lambda
     Lambda --> Dynamo
     Lambda --> FE

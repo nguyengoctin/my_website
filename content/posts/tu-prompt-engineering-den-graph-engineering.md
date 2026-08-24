@@ -42,9 +42,13 @@ Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RA
 
 ```mermaid
 flowchart LR
-    A["System Prompt"] --> B["MCP Tools"]
-    B --> C["History"]
-    C --> D["Context Rot"]
+    A["`System Prompt`"]
+    B["`MCP Tools`"]
+    C["`History`"]
+    D["`Context Rot`"]
+    A --> B
+    B --> C
+    C --> D
 ```
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
@@ -56,11 +60,16 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    Supervisor["Supervisor"] --> NodeA["Research Agent"]
-    Supervisor --> NodeB["Coder Agent"]
-    NodeA --> SharedState["Shared State"]
+    Supervisor["`Supervisor`"]
+    NodeA["`Research Agent`"]
+    NodeB["`Coder Agent`"]
+    SharedState["`Shared State`"]
+    Checkpoint["`Checkpoint`"]
+    Supervisor --> NodeA
+    Supervisor --> NodeB
+    NodeA --> SharedState
     NodeB --> SharedState
-    SharedState --> Checkpoint["Checkpoint"]
+    SharedState --> Checkpoint
 ```
 
 - **Nút Nodes:** Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.

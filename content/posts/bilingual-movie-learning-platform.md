@@ -23,11 +23,16 @@ Việc học tiếng Anh qua phim ảnh rất hiệu quả nhưng người học
 
 ```mermaid
 flowchart LR
-    Sub["Phụ đề SRT Song ngữ"] --> Sync["Engine Đồng bộ Trình phát"]
-    Sync --> UI["Next.js Video Player"]
-    UI -->|Click từ vựng| API["FastAPI Backend"]
-    API -->|Prompt Ngữ cảnh| Gemini["Google Gemini API"]
-    Gemini -->|Giải thích ngữ nghĩa| UI
+    Sub["`Phụ đề SRT song ngữ`"]
+    Sync["`Engine đồng bộ`"]
+    UI["`Next.js Video Player`"]
+    API["`FastAPI Backend`"]
+    Gemini["`Google Gemini API`"]
+    Sub --> Sync
+    Sync --> UI
+    UI -->|Click từ| API
+    API -->|Prompt ngữ cảnh| Gemini
+    Gemini -->|Giải thích nghĩa| UI
 ```
 
 ## Bài học kinh nghiệm
