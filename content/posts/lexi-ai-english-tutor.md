@@ -26,13 +26,14 @@ Bài toán thực tế trong việc học giao tiếp tiếng Anh là người h
 
 ```mermaid
 flowchart TD
-    User["Người dùng phát âm"] -->|Audio Stream| FE["Next.js Frontend"]
-    FE -->|WebSocket Stream| Gateway["AWS API Gateway"]
-    Gateway -->|Invoke Event| Lambda["AWS Lambda Engine"]
-    Lambda -->|Context Call| Bedrock["Amazon Bedrock LLM"]
-    Bedrock -->|AI Response| Lambda
-    Lambda -->|Save State| Dynamo["DynamoDB Single Table"]
-    Lambda -->|TTS Audio| FE
+    User["Người dùng phát âm"] --> FE["Next.js Frontend"]
+    FE --> Gateway["AWS API Gateway"]
+    Gateway --> Lambda["AWS Lambda Engine"]
+    User --> Dynamo["DynamoDB Single Table"]
+    Lambda --> Bedrock["Amazon Bedrock LLM"]
+    Bedrock --> Lambda
+    Lambda --> Dynamo
+    Lambda --> FE
 ```
 
 ## Kết quả đạt được

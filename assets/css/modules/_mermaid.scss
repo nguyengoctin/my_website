@@ -1,34 +1,45 @@
 // ==========================================================
-// Mermaid Diagram — Container & Text Overflow Fix
+// Mermaid Diagram — Container & Responsive Natural Sizing
 // ==========================================================
 .mermaid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin: 2.25rem auto;
-  padding: 1rem 0.5rem;
-  width: 100%;
-  box-sizing: border-box;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  margin: 2rem auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 
   svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    display: block !important;
+    width: auto !important;
+    max-width: 80% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: filter 0.2s ease !important;
+    color: inherit !important;
 
-    /* Cứu cánh triệt để: Cho phép text hiển thị tràn viền box thay vì bị cắt xén */
-    foreignObject {
-      overflow: visible !important;
-
-      div {
-        overflow: visible !important;
-        white-space: normal !important;
-        text-align: center !important;
-      }
+    @media (max-width: 768px) {
+      max-width: 100% !important;
     }
   }
 }
 
-
+// ==========================================================
+// Blazing Fast Zero-JS Dark Mode (via GPU Filters)
+// ==========================================================
+[theme=dark] {
+  .mermaid svg {
+    // Đảo cực màu 93%, xoay 180 độ để bảo toàn các sắc xanh dương, đẩy nhẹ độ sáng
+    filter: invert(0.93) hue-rotate(180deg) brightness(1.05) contrast(1.05) !important;
+  }
+}

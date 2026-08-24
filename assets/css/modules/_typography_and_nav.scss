@@ -210,6 +210,7 @@ hr {
     &:hover {
       text-decoration: underline !important;
       color: #111111 !important;
+      font-weight: 400 !important;
 
       [theme=dark] & {
         color: #ffffff !important;
@@ -342,5 +343,42 @@ hr {
   .details,
   .admonition {
     display: none !important;
+  }
+}
+
+// ==========================================================
+// 6. TIMELINE ARCHIVE ITEM LINKS (Chuẩn gạch chân khi hover)
+// ==========================================================
+.archive-item {
+  margin-bottom: 0.35rem;
+
+  .archive-item-link {
+    font-family: "Lora", Georgia, serif !important;
+    color: #4d74eb !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease;
+
+    [theme=dark] & {
+      color: #60a5fa !important;
+    }
+
+    &:hover {
+      color: #1337a6 !important;
+      text-decoration: underline !important;
+
+      [theme=dark] & {
+        color: #93c5fd !important;
+      }
+    }
+  }
+
+  .archive-item-date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: #828282 !important;
+    font-size: 0.85rem !important;
+
+    [theme=dark] & {
+      color: #9ca3af !important;
+    }
   }
 }

@@ -40,18 +40,15 @@ Bên cạnh cấu trúc câu lệnh, việc kiểm soát tham số đóng vai tr
 
 ```mermaid
 flowchart TD
-    subgraph STAGE1 ["Giai Đoạn 1: SQ3R - Định Hướng và Bóc Tách Tri Thức"]
-        S1["Bước 1: Survey - Nạp Mục lục và Lời nói đầu"] --> S2["Bước 2: Question - AI tạo 5 câu hỏi định hướng"]
-        S2 --> S3["Bước 3: Read - Bóc tách văn bản chống trôi ngữ cảnh giữa"]
-    end
-    subgraph STAGE2 ["Giai Đoạn 2: Interactive Feynman Loop - Thẩm Thấu và Phản Biện"]
-        S3 --> F1["Bước 4: Recite - Người đọc tự giải thích cho AI"]
-        F1 --> F2["AI phân tích: Điểm đúng, Lỗ hổng, Thuật ngữ rỗng"]
-        F2 --> F3{"Đã giải thích bản chất trôi chảy?"}
-        F3 -->|Còn lỗ hổng hoặc giả định ngầm| F4["Bước 5: Critical - Vấn đáp Socratic phản biện"]
-        F4 --> F1
-        F3 -->|Đã hiểu sâu bản chất| R1["Bước 6: Review - Kiến tạo Ma trận Tri thức và Cây khái niệm"]
-    end
+    S1["Bước 1: Survey - Nạp mục lục"] --> S2["Bước 2: Question - 5 câu hỏi định hướng"]
+    S2 --> S3["Bước 3: Read - Bóc tách văn bản"]
+    S1 --> F1["Bước 4: Recite - Giải thích cho AI"]
+    S3 --> F1
+    F1 --> F2["AI phân tích lỗ hổng tri thức"]
+    F2 --> F3{"Đã hiểu sâu bản chất?"}
+    F3 -->|Chưa vững| F4["Bước 5: Vấn đáp phản biện"]
+    F4 --> F1
+    F3 -->|Đã hiểu vững| R1["Bước 6: Ma trận tri thức"]
 ```
 
 ## Quy Trình 5 Bước Sử Dụng Bộ Prompt Thực Chiến

@@ -42,10 +42,11 @@ cf init
 
 ```mermaid
 flowchart TD
-    Scan["Bước 1: Quét và nạp tri thức<br/><code>/cf-scan</code>"] --> Plan["Bước 2: Lập kế hoạch thực thi<br/><code>/cf-plan</code>"]
+    Scan["Bước 1: Quét và nạp tri thức<br/><code>/cf-scan</code>"] --> Plan["Bước 2: Lập kế hoạch<br/><code>/cf-plan</code>"]
     Plan --> Code["Bước 3: Viết code và kiểm thử<br/><code>cf-tdd</code>"]
-    Code --> Review["Bước 4: Đánh giá mã nguồn<br/><code>/cf-review</code>"]
+    Scan --> Review["Bước 4: Đánh giá mã nguồn<br/><code>/cf-review</code>"]
     Review --> Ship["Bước 5: Đóng gói và phát hành<br/><code>/cf-ship</code>"]
+    Code --> Ship
 ```
 
 ---
@@ -56,27 +57,14 @@ Hệ sinh thái Coding Friend được tổ chức thành 7 nhóm kỹ năng chu
 
 ```mermaid
 flowchart TD
-    CF["Coding Friend<br/>Hệ Sinh Thái 26 Skills"]
-
-    subgraph DevGroup ["Nhóm Kỹ Thuật và Lập Trình"]
-        direction TB
-        G1["Nhóm 1<br/>Khám Phá và Định Hướng"]
-        G2["Nhóm 2<br/>Lập Kế Hoạch - Planning"]
-        G3["Nhóm 3<br/>Lập Trình và Kiểm Thử"]
-        G4["Nhóm 4<br/>Sửa Lỗi và Tối Ưu"]
-        G1 --> G2 --> G3 --> G4
-    end
-
-    subgraph WorkGroup ["Nhóm Quy Trình và Quản Trị"]
-        direction TB
-        G5["Nhóm 5<br/>Đánh Giá Mã Nguồn - Review"]
-        G6["Nhóm 6<br/>Quản Trị Git và Phát Hành"]
-        G7["Nhóm 7<br/>Bộ Nhớ và Học Tập"]
-        G5 --> G6 --> G7
-    end
-
-    CF --> G1
-    CF --> G5
+    CF["`Coding Friend: Hệ Sinh Thái 26 Skills`"]
+    CF --> G1["`Nhóm 1: Khám Phá và Định Hướng`"]
+    CF --> G5["`Nhóm 5: Đánh Giá Mã Nguồn - Review`"]
+    G1 --> G2["`Nhóm 2: Lập Kế Hoạch - Planning`"]
+    G2 --> G3["`Nhóm 3: Lập Trình và Kiểm Thử`"]
+    G3 --> G4["`Nhóm 4: Sửa Lỗi và Tối Ưu`"]
+    G5 --> G6["`Nhóm 6: Quản Trị Git và Phát Hành`"]
+    G6 --> G7["`Nhóm 7: Bộ Nhớ và Học Tập`"]
 ```
 
 ---
@@ -152,10 +140,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Bug["Phát hiện lỗi kỹ thuật"] --> Step1["Pha 1: Tái hiện lỗi<br/>và khoanh vùng nguyên nhân"]
-    Step1 --> Step2["Pha 2: Đặt giả thuyết<br/>kỹ thuật rõ ràng"]
-    Step2 --> Step3["Pha 3: Sửa mã nguồn<br/>tối thiểu và chạy test"]
-    Step3 --> Step4["Pha 4: Ghi bài học<br/>vào docs/memory/bugs/"]
+    Bug["Phát hiện lỗi kỹ thuật"] --> Step1["Pha 1: Tái hiện lỗi"]
+    Step1 --> Step2["Pha 2: Đặt giả thuyết"]
+    Bug --> Step3["Pha 3: Sửa mã nguồn"]
+    Step2 --> Step3
+    Step3 --> Step4["Pha 4: Ghi bài học vào memory"]
 ```
 
 15. **`/cf-fix` (Sửa lỗi nhanh có kiểm chứng):**  
@@ -171,27 +160,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Diff["Mã nguồn vừa thay đổi"] --> ReviewPipeline["Điều phối review: /cf-review"]
-
-    subgraph ColA ["Đánh Giá Chuyên Sâu"]
-        direction TB
-        L1["Lớp 1: Đánh giá bảo mật<br/>và rò rỉ dữ liệu"]
-        L2["Lớp 2: Đánh giá độ bám sát<br/>kế hoạch ban đầu"]
-        L3["Lớp 3: Đánh giá Clean Code<br/>và code thừa"]
-        L1 --> L2 --> L3
-    end
-
-    subgraph ColB ["Kiểm Thử và Quy Chuẩn"]
-        direction TB
-        L4["Lớp 4: Đánh giá độ bao phủ<br/>kiểm thử tự động"]
-        L5["Lớp 5: Kiểm tra tuân thủ<br/>quy ước dự án"]
-        L4 --> L5
-    end
-
-    ReviewPipeline --> L1
-    ReviewPipeline --> L4
-
-    L3 --> Merge["Tổng hợp báo cáo<br/>phân loại vấn đề"]
+    Diff["Mã nguồn vừa thay đổi"] --> L1["Lớp 1: Đánh giá bảo mật"]
+    Diff --> L4["Lớp 4: Độ bao phủ kiểm thử"]
+    L1 --> L2["Lớp 2: Bám sát kế hoạch"]
+    L4 --> L5["Lớp 5: Tuân thủ quy ước"]
+    L2 --> L3["Lớp 3: Clean Code"]
+    L3 --> Merge["Tổng hợp báo cáo phân loại"]
     L5 --> Merge
 ```
 

@@ -58,10 +58,9 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
     - TUYỆT ĐỐI KHÔNG dùng dấu phẩy `,`, dấu gạch chéo `/` trong nhãn mũi tên (dùng từ thay thế: `hoặc`, `và`, dấu gạch ngang `-`).
   - **TUYỆT ĐỐI KHÔNG để dòng trống (Empty Line) bên trong khối mã Mermaid:** Toàn bộ các dòng định nghĩa trong khối ` ```mermaid ` phải liên tục, không chèn dòng trống giữa các node hoặc giữa các `subgraph`.
   - **TUYỆT ĐỐI KHÔNG dùng ký tự `&` trong toàn bộ biểu đồ:** Thay bằng chữ "và" hoặc chữ "and".
-  - **Quy tắc Bố Cục và Subgraph (Chống Bè Ngang - Chống Thu Nhỏ Chữ):**
-    - TUYỆT ĐỐI KHÔNG nối từ 1 node cha tỏa ra quá 3 node con nằm ngang cùng 1 hàng (sẽ khiến biểu đồ quá rộng và bị scale nhỏ li ti).
-    - Khi có từ 4 node trở lên, BẮT BUỘC chia thành các `subgraph` xếp dọc (`direction TB`) đặt cạnh nhau để tạo bố cục 2 cột cân đối.
-    - Khai báo Subgraph: `subgraph ID ["Tên Hiển Thị"]` và `end` trên từng dòng độc lập.
-    - Không nối mũi tên trực tiếp vào `ID` của subgraph; bắt buộc phải nối từ node con cụ thể bên trong.
+  - **Quy tắc Bố Cục và Liên Kết Node (KHÔNG ĐÓNG KHUNG NHÓM SUBGRAPH):**
+    - **TUYỆT ĐỐI KHÔNG dùng `subgraph` đóng khung nhóm** (gây sinh ra các đường viền bao quanh khổng lồ và làm lệch bố cục).
+    - Tạo bố cục tự nhiên bằng các liên kết trực tiếp giữa các node (`A --> B`, `A --> C`, `B --> D...`).
+    - Nối các node theo chiều dọc hoặc chia luồng nhánh cân đối để sơ đồ hiển thị gọn gàng, tự nhiên và không bị phình to.
 - **CSS Mermaid — Quy tắc cứng:** CSS chỉ được kiểm soát `.mermaid` container (display, overflow, margin). TUYỆT ĐỐI KHÔNG ghi đè `font-size`, `font-weight`, `font-family` vào các thẻ `text`, `.nodeLabel`, `.edgeLabel` bên trong SVG — vì Mermaid JS tính toán bounding box trước khi render; can thiệp CSS sau đó sẽ làm chữ lệch và bị cắt xén khỏi viền node.
 - **Code Block:** Luôn có câu dẫn ngữ cảnh trước khi đưa khối mã ` ```ngôn_ngữ `. Toàn bộ các khối mã Markdown, Text, YAML tự động bẻ dòng theo chuẩn `white-space: pre-wrap`.

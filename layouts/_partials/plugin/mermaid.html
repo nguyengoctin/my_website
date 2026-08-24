@@ -6,14 +6,15 @@
 {{- if not (.Page.Store.Get "mermaidThemePatchInjected") -}}
 <script>
 /**
- * Global Mermaid Theme Config — injected once per page.
- * Monkey-patches mermaid.initialize() to inject indigo themeVariables
- * for light mode, while preserving dark mode behavior from LoveIt theme.js.
- * This runs BEFORE theme.js loads mermaid, using a setter trap on window.mermaid.
+ * Global Mermaid Theme Config — Official Mermaid v11
+ * We initialize a base Light Mode theme. Dark Mode coloring is handled
+ * instantaneously and zero-cost via pure CSS overrides in _mermaid.scss.
  */
 (function () {
   var _mermaid;
-  var _lightConfig = {
+  var _baseConfig = {
+    startOnLoad: false,
+    securityLevel: 'loose',
     theme: 'base',
     themeVariables: {
       primaryColor: '#f5f7ff',
@@ -21,34 +22,36 @@
       primaryTextColor: '#1e1b4b',
       lineColor: '#6366f1',
       edgeLabelBackground: '#ffffff',
+      tertiaryColor: '#ffffff',
       fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      fontSize: '14.5px'
+      fontSize: '15.5px'
     },
     flowchart: {
       nodePadding: 20,
-      nodeSpacing: 45,
-      rankSpacing: 45,
+      nodeSpacing: 50,
+      rankSpacing: 50,
       curve: 'basis',
-      htmlLabels: true
+      htmlLabels: false,
+      markdownAutoWrap: true,
+      wrappingWidth: 200
     }
   };
 
-  function patchInitialize(m) {
+  function patchMermaid(m) {
+    if (m._patched) return;
+    m._patched = true;
+
+    // We no longer monkey-patch `m.run()` to avoid massive UI lag.
+    // Instead, CSS takes care of instant Dark Mode switching.
     var origInit = m.initialize.bind(m);
     m.initialize = function (cfg) {
-      var isDark = cfg && cfg.theme === 'dark';
-      var patched = isDark
-        ? Object.assign({}, cfg, { flowchart: { nodePadding: 20, htmlLabels: true } })
-        : Object.assign({}, cfg, _lightConfig);
-      return origInit(patched);
+      return origInit(Object.assign({}, cfg, _baseConfig));
     };
   }
 
-  // If mermaid is already loaded, patch immediately
   if (window.mermaid && typeof window.mermaid.initialize === 'function') {
-    patchInitialize(window.mermaid);
+    patchMermaid(window.mermaid);
   } else {
-    // Otherwise trap the setter — fires when mermaid.min.js assigns to window.mermaid
     Object.defineProperty(window, 'mermaid', {
       configurable: true,
       enumerable: true,
@@ -56,7 +59,7 @@
       set: function (m) {
         _mermaid = m;
         if (m && typeof m.initialize === 'function') {
-          patchInitialize(m);
+          patchMermaid(m);
         }
       }
     });
