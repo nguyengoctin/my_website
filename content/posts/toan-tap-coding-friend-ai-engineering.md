@@ -42,15 +42,19 @@ cf init
 
 ```mermaid
 flowchart TD
-    Scan["`Bước 1:<br/>Quét tri thức (/cf-scan)`"]
-    Plan["`Bước 2:<br/>Lập kế hoạch (/cf-plan)`"]
-    Review["`Bước 4:<br/>Đánh giá mã (/cf-review)`"]
-    Code["`Bước 3:<br/>Code và kiểm thử (cf-tdd)`"]
-    Ship["`Bước 5:<br/>Phát hành (/cf-ship)`"]
+    Scan["(1) Quét tri thức<br/>/cf-scan khám phá"]
+    Plan["(2) Lập kế hoạch<br/>/cf-plan kiến trúc"]
+    Code["(3) Lập trình TDD<br/>cf-tdd và verification"]
+    Review["(4) Đánh giá mã<br/>/cf-review 5 lớp"]
+    Ship["(5) Tự động phát hành<br/>/cf-ship mở PR"]
+    Learn["(6) Ghi nhớ tri thức<br/>/cf-remember và learn"]
     Scan --> Plan
-    Scan --> Review
     Plan --> Code
+    Code --> Review
     Review --> Ship
+    Ship --> Learn
+    Scan --> Code
+    Plan --> Review
     Code --> Ship
 ```
 
@@ -62,14 +66,23 @@ Hệ sinh thái Coding Friend được tổ chức thành 7 nhóm kỹ năng chu
 
 ```mermaid
 flowchart TD
-    CF["`Coding Friend:<br/>Hệ Sinh Thái 26 Skills`"]
-    CF --> G1["`Nhóm 1:<br/>Khám Phá và Định Hướng`"]
-    CF --> G5["`Nhóm 5:<br/>Đánh Giá Mã Nguồn - Review`"]
-    G1 --> G2["`Nhóm 2:<br/>Lập Kế Hoạch - Planning`"]
-    G2 --> G3["`Nhóm 3:<br/>Lập Trình và Kiểm Thử`"]
-    G3 --> G4["`Nhóm 4:<br/>Sửa Lỗi và Tối Ưu`"]
-    G5 --> G6["`Nhóm 6:<br/>Quản Trị Git và Phát Hành`"]
-    G6 --> G7["`Nhóm 7:<br/>Bộ Nhớ và Học Tập`"]
+    CF["Coding Friend Core<br/>Hệ sinh thái 26 Skills"]
+    G1["Nhóm 1: Khám phá<br/>/cf-scan, advise, research"]
+    G2["Nhóm 2: Kế hoạch<br/>/cf-plan, checkpoint"]
+    G3["Nhóm 3: Lập trình<br/>cf-tdd, verification"]
+    G4["Nhóm 4: Sửa lỗi<br/>/cf-fix, optimize"]
+    G5["Nhóm 5: Đánh giá<br/>/cf-review 5 lớp"]
+    G6["Nhóm 6: Quản trị Git<br/>/cf-commit, ship"]
+    G7["Nhóm 7: Bộ nhớ<br/>/cf-remember, learn"]
+    CF --> G1
+    CF --> G2
+    CF --> G3
+    G1 --> G4
+    G2 --> G5
+    G3 --> G6
+    G4 --> G7
+    G5 --> G7
+    G6 --> G7
 ```
 
 ---
@@ -93,19 +106,19 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    UserReq["`Yêu cầu<br/>tính năng mới`"]
-    ModeCheck{"`Chọn chế độ?`"}
-    PlanNormal["`/cf-plan<br/>(Chuẩn)`"]
-    PlanFast["`/cf-plan<br/>(--fast)`"]
-    PlanHard["`/cf-plan<br/>(--hard)`"]
-    PlanAuto["`/cf-plan<br/>(--auto)`"]
-    Output["`Lưu file<br/>docs/plans/`"]
-    InlineOutput["`Theo dõi checklist<br/>trong chat`"]
+    UserReq["Yêu cầu tính năng mới<br/>Mô tả bài toán"]
+    ModeCheck{"Phân loại chế độ?<br/>Quy mô và mức độ kiểm soát"}
+    PlanNormal["/cf-plan Chuẩn<br/>Phỏng vấn và lên kế hoạch"]
+    PlanFast["/cf-plan --fast<br/>Checklist nhanh gọn"]
+    PlanHard["/cf-plan --hard<br/>Đào sâu rủi ro rollback"]
+    PlanAuto["/cf-plan --auto<br/>Tự động hóa trọn gói"]
+    Output["Lưu file kế hoạch<br/>docs/plans/plan.md"]
+    InlineOutput["Theo dõi tiến độ<br/>Checklist trực tiếp"]
     UserReq --> ModeCheck
-    ModeCheck -->|Phỏng vấn| PlanNormal
-    ModeCheck -->|Nhanh| PlanFast
-    ModeCheck -->|Rollback| PlanHard
-    ModeCheck -->|Tự động hóa| PlanAuto
+    ModeCheck -->|Tiêu chuẩn| PlanNormal
+    ModeCheck -->|Nhanh gọn| PlanFast
+    ModeCheck -->|Rủi ro cao| PlanHard
+    ModeCheck -->|Tự động| PlanAuto
     PlanNormal --> Output
     PlanFast --> InlineOutput
     PlanHard --> Output
@@ -131,18 +144,18 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    StartDev["`Bắt đầu<br/>viết code`"]
-    CheckTest{"`Có cờ<br/>--add-tests?`"}
-    Red["`Bước 1: RED<br/>(Viết test fail)`"]
-    Green["`Bước 2: GREEN<br/>(Viết code pass)`"]
-    Refactor["`Bước 3: REFACTOR<br/>(Tối ưu mã)`"]
-    Direct["`Code trực tiếp`"]
-    Verify["`cf-verification<br/>(Kiểm tra)`"]
+    StartDev["Bắt đầu lập trình<br/>Hiện thực hóa kế hoạch"]
+    CheckTest{"Có cờ --add-tests?<br/>Bật chế độ TDD"}
+    Red["Bước 1: RED<br/>Viết bài kiểm thử thất bại"]
+    Green["Bước 2: GREEN<br/>Viết code để kiểm thử đạt"]
+    Refactor["Bước 3: REFACTOR<br/>Tối ưu và làm sạch mã"]
+    Direct["Lập trình trực tiếp<br/>Hiện thực theo yêu cầu"]
+    Verify["Xác minh nghiệm thu<br/>cf-verification kiểm tra thực tế"]
     StartDev --> CheckTest
-    CheckTest -->|Có: Chu trình TDD| Red
+    CheckTest -->|Có cờ TDD| Red
+    CheckTest -->|Không cờ| Direct
     Red --> Green
     Green --> Refactor
-    CheckTest -->|Không: Trực tiếp| Direct
     Refactor --> Verify
     Direct --> Verify
 ```
@@ -160,16 +173,19 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Bug["`Phát hiện<br/>lỗi kỹ thuật`"]
-    Step1["`Pha 1:<br/>Tái hiện lỗi`"]
-    Step2["`Pha 2:<br/>Đặt giả thuyết`"]
-    Step3["`Pha 3:<br/>Sửa mã nguồn`"]
-    Step4["`Pha 4:<br/>Lưu vào memory`"]
+    Bug["(1) Phát hiện lỗi<br/>Traceback và Hiện tượng"]
+    Step1["(2) Pha 1: Tái hiện<br/>Viết bài kiểm thử"]
+    Step2["(3) Pha 2: Giả thuyết<br/>Khoanh vùng nguyên nhân"]
+    Step3["(4) Pha 3: Sửa mã<br/>Thay đổi tối giản"]
+    Step4["(5) Pha 4: Lưu tri thức<br/>Ghi vào docs/memory"]
+    Verify["(6) Nghiệm thu<br/>Chạy kiểm tra tự động"]
     Bug --> Step1
-    Bug --> Step2
-    Step1 --> Step3
-    Step2 --> Step3
+    Step1 --> Step2
+    Bug --> Step3
+    Step1 --> Step4
+    Step2 --> Verify
     Step3 --> Step4
+    Step4 --> Verify
 ```
 
 15. **`/cf-fix` (Sửa lỗi nhanh có kiểm chứng):**  
@@ -185,19 +201,20 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    Diff["`Mã nguồn<br/>thay đổi`"]
-    L1["`Lớp 1:<br/>Bảo mật`"]
-    L2["`Lớp 2:<br/>Kế hoạch`"]
-    L3["`Lớp 3:<br/>Clean Code`"]
-    L4["`Lớp 4:<br/>Kiểm thử`"]
-    L5["`Lớp 5:<br/>Quy ước`"]
-    Merge["`Báo cáo<br/>tổng hợp`"]
+    Diff["Mã nguồn thay đổi<br/>Git Diff và Pull Request"]
+    L1["Lớp 1: Bảo mật<br/>Quét secret và auth"]
+    L2["Lớp 2: Kế hoạch<br/>Bám sát plan.md"]
+    L3["Lớp 3: Clean Code<br/>Chuẩn hóa cú pháp"]
+    L4["Lớp 4: Kiểm thử<br/>Độ bao phủ test"]
+    L5["Lớp 5: Quy ước<br/>Quy tắc dự án"]
+    Merge["Báo cáo tổng hợp<br/>Nghiệm thu toàn diện"]
     Diff --> L1
-    Diff --> L4
-    L1 --> L2
-    L4 --> L5
-    L2 --> L3
+    Diff --> L2
+    Diff --> L3
+    L1 --> L4
+    L2 --> L5
     L3 --> Merge
+    L4 --> Merge
     L5 --> Merge
 ```
 

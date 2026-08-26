@@ -16,19 +16,19 @@ Hệ thống được thiết kế theo mô hình kiến trúc phân tầng rõ 
 
 ```mermaid
 flowchart TD
-    Client["Zalo Mini App Client<br/>(React 18 và ZMP SDK)"]
-    Gateway["API Gateway / Nginx<br/>(HTTPS Reverse Proxy)"]
-    DjangoAPI["Django REST Backend<br/>(Auth, Menu, Order, Shipping, Voucher)"]
-    AdminPanel["Django Admin Portal<br/>(Quản trị đơn và thực đơn)"]
-    PostgresDB[("PostgreSQL 16<br/>(Source of Truth)")]
-    RedisCache[("Redis 7 và Celery<br/>(Cache và Async Tasks)")]
-    ZaloOpenAPI["Zalo OpenAPI và ZNS<br/>(OAuth, SĐT, Thông báo OA)"]
-    VietQRService["VietQR Engine<br/>(Sinh mã thanh toán NAPAS)"]
+    Client["Zalo Mini App Client<br/>React 18 và ZMP SDK"]
+    AdminPanel["Django Admin Portal<br/>Quản trị đơn và thực đơn"]
+    Gateway["API Gateway Proxy<br/>Nginx HTTPS"]
+    DjangoAPI["Django REST Core<br/>Menu, Order, Shipping, Voucher"]
+    PostgresDB[("PostgreSQL 16 DB<br/>Single Source of Truth")]
+    RedisCache[("Redis 7 và Celery<br/>Cache và Async Queue")]
+    ZaloOpenAPI["Zalo OpenAPI và ZNS<br/>OAuth và Thông báo OA"]
+    VietQRService["VietQR Engine<br/>Sinh mã thanh toán NAPAS"]
     Client --> Gateway
+    AdminPanel --> Gateway
     Gateway --> DjangoAPI
     DjangoAPI --> PostgresDB
     DjangoAPI --> RedisCache
-    AdminPanel --> PostgresDB
     DjangoAPI --> ZaloOpenAPI
     DjangoAPI --> VietQRService
 ```
@@ -47,13 +47,17 @@ flowchart TD
 Trong mô hình F&B, giá bán sản phẩm, danh mục topping hoặc địa chỉ cửa hàng có thể thay đổi liên tục theo thời gian. Nếu chỉ lưu khóa ngoại `product_id` đơn thuần, các báo cáo tài chính hoặc lịch sử đơn hàng cũ sẽ bị sai lệch khi giá món biến động.
 
 ```mermaid
-flowchart LR
-    CartInput["Giỏ hàng Frontend<br/>(Product ID và Topping ID)"]
-    AtomicTx{"transaction.atomic()<br/>Bắt đầu lưu đơn"}
-    SnapPrice["Snapshot Đơn giá<br/>(Tên món, Giá gốc, Giá Topping)"]
-    SnapAddr["Snapshot Địa chỉ<br/>(Tên người nhận, SĐT, Tọa độ GPS)"]
-    OrderRecord[("Bản ghi Đơn hàng Bất biến<br/>(Status PENDING)")]
+flowchart TD
+    CartInput["Giỏ hàng Mini App<br/>Product ID và Topping ID"]
+    AddrInput["Địa chỉ GPS<br/>Tọa độ và Số điện thoại"]
+    VoucherInput["Mã Voucher<br/>Chiết khấu giảm giá"]
+    AtomicTx{"transaction.atomic()<br/>Bảo toàn dữ liệu"}
+    SnapPrice["Snapshot Đơn giá<br/>Tên món, Giá gốc, Topping"]
+    SnapAddr["Snapshot Địa chỉ<br/>Tên nhận hàng và GPS"]
+    OrderRecord[("Đơn hàng Bất biến<br/>Status PENDING")]
     CartInput --> AtomicTx
+    AddrInput --> AtomicTx
+    VoucherInput --> AtomicTx
     AtomicTx --> SnapPrice
     AtomicTx --> SnapAddr
     SnapPrice --> OrderRecord
@@ -73,9 +77,23 @@ Khi mạng di động chập chờn, người dùng có thể vô tình bấm n�
 
 Hệ thống tích hợp trực tiếp khả năng lấy tọa độ GPS từ Zalo SDK và tính toán khoảng cách đường chim bay đến vị trí cửa hàng bằng công thức Haversine ngay tại backend:
 
-$$d = 2r \arcsin \left( \sqrt{\sin^2\left(\frac{\Delta \varphi}{2}\right) + \cos(\varphi_1) \cos(\varphi_2) \sin^2\left(\frac{\Delta \lambda}{2}\right)} \right)$$
+```python
+def calculate_haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    """Tính khoảng cách đường tròn lớn theo km giữa 2 tọa độ GPS."""
+    earth_radius_km = 6371.0
+    lat1_rad, lon1_rad = math.radians(lat1), math.radians(lon1)
+    lat2_rad, lon2_rad = math.radians(lat2), math.radians(lon2)
 
-Khoảng cách tính toán sau đó được so khớp với bảng định mức cước phí nhiều nấc của quán (ví dụ: dưới 2km đồng giá 15.000đ, mỗi km tiếp theo cộng thêm 5.000đ), giúp minh bạch chi phí vận chuyển trước khi khách hàng tiến hành thanh toán.
+    dlat = lat2_rad - lat1_rad
+    dlon = lon2_rad - lon1_rad
+
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    return earth_radius_km * c
+```
+
+Khoảng cách tính toán sau đó được nhân với hệ số bù trừ cung đường thực tế và so khớp với bảng định mức cước phí nhiều nấc của quán (ví dụ: dưới 2km đồng giá 10.000đ, từ 2km đến 5km là 15.000đ), giúp minh bạch chi phí vận chuyển trước khi khách hàng tiến hành thanh toán.
 
 ### 4. Quy chuẩn thiết kế Zalo Design System
 
@@ -93,12 +111,12 @@ Hệ thống mang lại trải nghiệm mượt mà, trực quan từ khâu xem 
 
 | 1. Trang chủ & Thực đơn | 2. Tùy chọn món ăn (Sheet 80vh) | 3. Giỏ hàng & Tóm tắt |
 | :---: | :---: | :---: |
-| <img src="/images/posts/bep-di-6/mobile/01_home.png" width="240" alt="Trang chủ Bếp Dì 6" /> | <img src="/images/posts/bep-di-6/mobile/02_product_detail.png" width="240" alt="Tùy chọn món ăn" /> | <img src="/images/posts/bep-di-6/mobile/03_cart.png" width="240" alt="Giỏ hàng" /> |
+| <img src="/images/posts/bep-di-6/mobile/01_home.webp" width="240" alt="Trang chủ Bếp Dì 6" /> | <img src="/images/posts/bep-di-6/mobile/02_product_detail.webp" width="240" alt="Tùy chọn món ăn" /> | <img src="/images/posts/bep-di-6/mobile/03_cart.webp" width="240" alt="Giỏ hàng" /> |
 | *Thực đơn phân tầng theo danh mục món* | *Tùy chọn topping, kích cỡ & ghi chú* | *Kiểm tra số lượng và tổng tiền* |
 
 | 4. Thanh toán & VietQR | 5. Danh sách Địa chỉ | 6. Modal thêm địa chỉ GPS |
 | :---: | :---: | :---: |
-| <img src="/images/posts/bep-di-6/mobile/04_checkout.png" width="240" alt="Thanh toán đơn hàng" /> | <img src="/images/posts/bep-di-6/mobile/05_select_location.png" width="240" alt="Địa chỉ nhận hàng" /> | <img src="/images/posts/bep-di-6/mobile/06_add_address_modal.png" width="240" alt="Thêm địa chỉ mới" /> |
+| <img src="/images/posts/bep-di-6/mobile/04_checkout.webp" width="240" alt="Thanh toán đơn hàng" /> | <img src="/images/posts/bep-di-6/mobile/05_select_location.webp" width="240" alt="Địa chỉ nhận hàng" /> | <img src="/images/posts/bep-di-6/mobile/06_add_address_modal.webp" width="240" alt="Thêm địa chỉ mới" /> |
 | *Tự sinh mã VietQR chuẩn số tiền* | *Lưu trữ nhiều địa chỉ giao hàng* | *Định vị GPS Zalo tự động điền địa chỉ* |
 
 ---
@@ -107,20 +125,20 @@ Hệ thống mang lại trải nghiệm mượt mà, trực quan từ khâu xem 
 
 Cổng quản trị Django Admin được tùy biến trực quan, hỗ trợ đội ngũ vận hành theo dõi và xử lý đơn hàng tức thì:
 
-| Đăng nhập Quản trị Bảo mật | Dashboard Tổng quan Doanh thu |
-| :---: | :---: |
-| <img src="/images/posts/bep-di-6/admin/login.png" width="450" alt="Admin Login" /> | <img src="/images/posts/bep-di-6/admin/01_admin_dashboard.png" width="450" alt="Admin Dashboard" /> |
-| *Xác thực an toàn và phân quyền nhân viên* | *Theo dõi tổng quan đơn hàng và doanh số* |
+#### 1. Đăng nhập Quản trị Bảo mật
+{{< image src="/images/posts/bep-di-6/admin/login.webp" caption="Xác thực an toàn và phân quyền nhân viên theo vai trò" alt="Admin Login Bếp Dì 6" >}}
 
-| Danh sách Đơn hàng Thời gian thực | Chi tiết Snapshot Đơn hàng |
-| :---: | :---: |
-| <img src="/images/posts/bep-di-6/admin/02_admin_orders.png" width="450" alt="Admin Orders" /> | <img src="/images/posts/bep-di-6/admin/03_admin_order_detail.png" width="450" alt="Admin Order Detail" /> |
-| *Bộ lọc trạng thái đơn và tìm kiếm mã đơn* | *Xem dữ liệu snapshot giá và vị trí giao hàng* |
+#### 2. Dashboard Tổng quan Doanh thu
+{{< image src="/images/posts/bep-di-6/admin/01_admin_dashboard.webp" caption="Theo dõi tổng quan đơn hàng, doanh số và trạng thái xử lý" alt="Admin Dashboard Bếp Dì 6" >}}
 
-| Quản lý Thực đơn và Nhóm Tùy chọn Món |
-| :---: |
-| <img src="/images/posts/bep-di-6/admin/04_admin_products.png" width="650" alt="Admin Products" /> |
-| *Quản lý danh mục món ăn, định giá bán và thiết lập nhóm topping linh hoạt* |
+#### 3. Danh sách Đơn hàng Thời gian thực
+{{< image src="/images/posts/bep-di-6/admin/02_admin_orders.webp" caption="Bộ lọc trạng thái đơn, tìm kiếm mã đơn và xác nhận thanh toán" alt="Admin Orders Bếp Dì 6" >}}
+
+#### 4. Chi tiết Snapshot Đơn hàng
+{{< image src="/images/posts/bep-di-6/admin/03_admin_order_detail.webp" caption="Dữ liệu snapshot giá bán bất biến, chi tiết topping và tọa độ giao hàng" alt="Admin Order Detail Bếp Dì 6" >}}
+
+#### 5. Quản lý Thực đơn và Nhóm Tùy chọn Món
+{{< image src="/images/posts/bep-di-6/admin/04_admin_products.webp" caption="Quản lý danh mục món ăn, định giá bán và thiết lập nhóm topping linh hoạt" alt="Admin Products Bếp Dì 6" >}}
 
 ## Kết quả đạt được và Hướng mở rộng
 

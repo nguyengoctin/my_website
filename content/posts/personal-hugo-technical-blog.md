@@ -21,15 +21,17 @@ Trong kỷ nguyên của các trang web cồng kềnh chứa nhiều JavaScript 
 
 ```mermaid
 flowchart TD
-    MD["`Markdown bài viết`"]
-    SCSS["`Hệ thống SCSS`"]
-    Hugo["`Hugo Compiler`"]
-    Dist["`Thư mục public`"]
-    GHPages["`GitHub Pages`"]
+    MD["Markdown Bài viết<br/>Nội dung và Metadata"]
+    SCSS["SCSS Design System<br/>Tokens và Typography"]
+    Assets["Static Assets<br/>Hình ảnh và JS Lunr"]
+    Hugo["Hugo Core Engine<br/>Biên dịch tĩnh siêu tốc"]
+    Dist["Thư mục Public<br/>HTML và Asset tối ưu"]
+    GHPages["GitHub Pages CDN<br/>Phát hành toàn cầu"]
     MD --> Hugo
     SCSS --> Hugo
-    Hugo -->|Static HTML| Dist
-    Dist -->|Deploy| GHPages
+    Assets --> Hugo
+    Hugo --> Dist
+    Dist --> GHPages
 ```
 
 ## Kết quả đạt được

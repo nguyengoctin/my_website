@@ -41,14 +41,18 @@ Nhận Mục Tiêu → Suy Luận → Gọi Công Cụ → Đánh Giá Kết Qu�
 Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RAM, chứ không phải ổ cứng lưu trữ cố định.
 
 ```mermaid
-flowchart LR
-    A["`System Prompt`"]
-    B["`MCP Tools`"]
-    C["`History`"]
-    D["`Context Rot`"]
-    A --> B
-    B --> C
-    C --> D
+flowchart TD
+    Prompt["System Prompt<br/>Chỉ dẫn và Quy tắc"]
+    Tools["MCP Tools<br/>50-60 công cụ"]
+    History["Conversation History<br/>Lịch sử hội thoại dài"]
+    Bloat["Context Bloat<br/>55.000 tokens khởi đầu"]
+    Rot["Attention Dilution<br/>Suy thoái chú ý 33%"]
+    Waste["Token Waste<br/>Lãng phí chi phí"]
+    Prompt --> Bloat
+    Tools --> Bloat
+    History --> Bloat
+    Bloat --> Rot
+    Bloat --> Waste
 ```
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
@@ -60,15 +64,18 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    Supervisor["`Supervisor`"]
-    NodeA["`Research Agent`"]
-    NodeB["`Coder Agent`"]
-    SharedState["`Shared State`"]
-    Checkpoint["`Checkpoint`"]
+    Supervisor["Supervisor Agent<br/>Phân tích và Điều phối"]
+    NodeA["Research Agent<br/>Quét dữ liệu"]
+    NodeB["Coder Agent<br/>Viết mã nguồn"]
+    NodeC["Reviewer Agent<br/>Thẩm định chất lượng"]
+    SharedState["Shared State Storage<br/>Bộ nhớ trạng thái chung"]
+    Checkpoint["Durable Checkpoint<br/>Điểm khôi phục phiên"]
     Supervisor --> NodeA
     Supervisor --> NodeB
+    Supervisor --> NodeC
     NodeA --> SharedState
     NodeB --> SharedState
+    NodeC --> SharedState
     SharedState --> Checkpoint
 ```
 

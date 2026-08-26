@@ -70,17 +70,18 @@ AI bản chất đã sở hữu khối lượng kiến thức rất lớn từ q
 
 ```mermaid
 flowchart TD
-    A["`Bài toán lập trình phức tạp`"]
-    B{"`Bản chất vấn đề?`"}
-    C["`Nghẽn ở năng lực mô hình`"]
-    D["`Nghẽn ở quy trình thực thi`"]
-    E["`Chia nhỏ task hoặc đổi model`"]
-    F["`CLAUDE.md tinh gọn và tất định`"]
-    A --> B
-    B -->|Thiếu logic| C
-    B -->|Sai lệnh build| D
-    C -->|Giải pháp| E
-    D -->|Giải pháp| F
+    Prob["Bài toán lập trình phức tạp<br/>Traceback và bug logic"]
+    Check{"Phân loại điểm nghẽn?<br/>Năng lực hay quy trình"}
+    Cap["Nghẽn ở năng lực mô hình<br/>Thiếu logic và reasoning"]
+    Proc["Nghẽn ở quy trình thực thi<br/>Sai lệnh build và format"]
+    SolCap["Giải pháp năng lực<br/>Chia nhỏ task hoặc đổi model"]
+    SolProc["Giải pháp quy trình<br/>CLAUDE.md tinh gọn tất định"]
+    Prob --> Check
+    Check -->|Thiếu logic| Cap
+    Check -->|Sai lệnh build| Proc
+    Cap --> SolCap
+    Proc --> SolProc
+    SolCap --> SolProc
 ```
 
 Khi Agent viết sai kiến trúc hoặc tạo ra lỗi logic, việc bổ sung 300 dòng markdown mô tả kiến trúc không thể cứu vãn tình hình. Động thái đúng đắn là chia nhỏ bài toán thành các phần độc lập, định nghĩa đặc tả rõ ràng hơn, tái cấu trúc codebase cho thân thiện với Agent, hoặc chuyển sang mô hình có năng lực lý luận cao hơn.
@@ -134,17 +135,18 @@ Sự nhầm lẫn nguy hiểm nhất khi thiết lập quy tắc cho AI Agent l�
 
 ```mermaid
 flowchart TD
-    A["`Yêu cầu quản lý AI Agent`"]
-    B{"`Phân loại quy tắc?`"}
-    C["`Cưỡng chế (Enforcement)`"]
-    D["`Hướng dẫn (Guidance)`"]
-    E["`Git Hooks, CI và permissions`"]
-    F["`CLAUDE.md và AGENTS.md`"]
-    A --> B
-    B -->|Sinh tử| C
-    B -->|Thao tác| D
-    C -->|Tất định| E
-    D -->|Ngữ cảnh| F
+    Req["Yêu cầu quản lý AI Agent<br/>An toàn và Hiệu quả"]
+    CheckRule{"Phân loại tính chất?<br/>Cưỡng chế hay Hướng dẫn"}
+    Enforce["Cưỡng chế cứng (Enforcement)<br/>An toàn sinh tử bắt buộc"]
+    Guide["Hướng dẫn mềm (Guidance)<br/>Định hướng thao tác"]
+    Tools["Công cụ tất định<br/>Git Hooks, CI/CD, Permissions"]
+    Files["File ngữ cảnh<br/>CLAUDE.md và AGENTS.md"]
+    Req --> CheckRule
+    CheckRule -->|Sinh tử| Enforce
+    CheckRule -->|Thao tác| Guide
+    Enforce --> Tools
+    Guide --> Files
+    Tools --> Files
 ```
 
 - **Hướng dẫn mềm Guidance:** File `CLAUDE.md` hoặc `AGENTS.md` chỉ đóng vai trò định hướng cách gọi lệnh, định dạng kiểm thử và chỉ định các thư mục cấm can thiệp.

@@ -22,17 +22,19 @@ Việc học tiếng Anh qua phim ảnh rất hiệu quả nhưng người học
 ## Kiến trúc xử lý phụ đề và AI
 
 ```mermaid
-flowchart LR
-    Sub["`Phụ đề SRT song ngữ`"]
-    Sync["`Engine đồng bộ`"]
-    UI["`Next.js Video Player`"]
-    API["`FastAPI Backend`"]
-    Gemini["`Google Gemini API`"]
+flowchart TD
+    Sub["Phụ đề SRT song ngữ<br/>Thời gian và Nội dung"]
+    Sync["Engine đồng bộ video<br/>Khớp phụ đề mili-giây"]
+    UI["Next.js Video Player<br/>Giao diện tương tác"]
+    API["FastAPI Backend<br/>Tra cứu và xử lý prompt"]
+    Gemini["Google Gemini API<br/>Phân tích văn cảnh"]
+    DictDB[("SQLite Database<br/>Lưu từ vựng cá nhân")]
     Sub --> Sync
     Sync --> UI
-    UI -->|Click từ| API
-    API -->|Prompt ngữ cảnh| Gemini
-    Gemini -->|Giải thích nghĩa| UI
+    UI --> API
+    API --> Gemini
+    API --> DictDB
+    Gemini --> UI
 ```
 
 ## Bài học kinh nghiệm

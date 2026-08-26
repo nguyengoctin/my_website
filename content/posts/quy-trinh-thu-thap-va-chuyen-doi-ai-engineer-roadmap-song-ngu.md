@@ -54,14 +54,13 @@ Trang web roadmap.sh được xây dựng dưới dạng ứng dụng single-pag
 
 ```mermaid
 flowchart TD
-    A["`Roadmap JSON Endpoint`"]
-    B["`Danh sách 174 bài học`"]
-    C["`Node Content Endpoint`"]
-    D["`Lưu dữ liệu thô Local`"]
-    A --> B
-    A --> C
-    B --> D
-    C --> D
+    RoadmapAPI["Roadmap Master API<br/>Cấu trúc 174 bài học"]
+    NodeAPI["Node Content API<br/>Nội dung chi tiết từng bài"]
+    PythonEngine["Python Fetch Engine<br/>Thu thập và Xử lý"]
+    RawData[("Local Storage<br/>JSON thô 174 bài")]
+    RoadmapAPI --> PythonEngine
+    NodeAPI --> PythonEngine
+    PythonEngine --> RawData
 ```
 
 Dưới đây là đoạn mã Python rút gọn được chúng ta sử dụng để tải toàn bộ dữ liệu thô về máy:
