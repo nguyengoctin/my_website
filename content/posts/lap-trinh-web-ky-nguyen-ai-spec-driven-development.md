@@ -68,7 +68,6 @@ sequenceDiagram
     actor Dev as Developer
     participant AI as AI Sidekick
     participant Code as Codebase
-
     Dev->>Dev: 1. Viết tài liệu project-brief và design
     Dev->>AI: 2. Phỏng vấn rà soát lỗ hổng đặc tả
     Dev->>AI: 3. Lập kế hoạch triển khai plan.md

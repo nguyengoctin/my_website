@@ -71,7 +71,7 @@ AI bản chất đã sở hữu khối lượng kiến thức rất lớn từ q
 ```mermaid
 flowchart TD
     Prob["Bài toán lập trình phức tạp<br/>Traceback và bug logic"]
-    Check{"Phân loại điểm nghẽn?<br/>Năng lực hay quy trình"}
+    Check{"Điểm nghẽn ở đâu?"}
     Cap["Nghẽn ở năng lực mô hình<br/>Thiếu logic và reasoning"]
     Proc["Nghẽn ở quy trình thực thi<br/>Sai lệnh build và format"]
     SolCap["Giải pháp năng lực<br/>Chia nhỏ task hoặc đổi model"]
@@ -136,7 +136,7 @@ Sự nhầm lẫn nguy hiểm nhất khi thiết lập quy tắc cho AI Agent l�
 ```mermaid
 flowchart TD
     Req["Yêu cầu quản lý AI Agent<br/>An toàn và Hiệu quả"]
-    CheckRule{"Phân loại tính chất?<br/>Cưỡng chế hay Hướng dẫn"}
+    CheckRule{"Tính chất quy tắc?"}
     Enforce["Cưỡng chế cứng (Enforcement)<br/>An toàn sinh tử bắt buộc"]
     Guide["Hướng dẫn mềm (Guidance)<br/>Định hướng thao tác"]
     Tools["Công cụ tất định<br/>Git Hooks, CI/CD, Permissions"]

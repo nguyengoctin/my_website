@@ -52,7 +52,7 @@ flowchart TD
     Tools --> Bloat
     History --> Bloat
     Bloat --> Rot
-    Bloat --> Waste
+    Rot --> Waste
 ```
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.

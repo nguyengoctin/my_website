@@ -18,14 +18,14 @@ Bài toán thực tế trong việc học giao tiếp tiếng Anh là người h
 
 ```mermaid
 flowchart TD
-    ClientApp["Next.js Client<br/>(Vercel Hosting)"]
-    APIGateway["AWS API Gateway<br/>(Cognito JWT Authorizer)"]
-    HandlerLayer["Lambda Handlers Layer<br/>(BaseHandler Generic)"]
-    ControllerLayer["Controllers và Presenters<br/>(Request Validation)"]
-    UseCaseLayer["Application Use Cases<br/>(Business Logic)"]
-    DomainLayer["Domain Entities<br/>(Pure Python Objects)"]
-    DynamoRepo["DynamoDB Repositories<br/>(Single Table Persistence)"]
-    AIServices["AWS AI Services<br/>(Bedrock, Transcribe, Polly)"]
+    ClientApp["Next.js Client<br/>Vercel Hosting"]
+    APIGateway["AWS API Gateway<br/>Cognito JWT Authorizer"]
+    HandlerLayer["Lambda Handlers Layer<br/>BaseHandler Generic"]
+    ControllerLayer["Controllers và Presenters<br/>Request Validation"]
+    UseCaseLayer["Application Use Cases<br/>Business Logic Core"]
+    DomainLayer["Domain Entities<br/>Pure Python Objects"]
+    DynamoRepo["DynamoDB Repositories<br/>Single Table Persistence"]
+    AIServices["AWS AI Services<br/>Bedrock, Transcribe, Polly"]
     ClientApp --> APIGateway
     APIGateway --> HandlerLayer
     HandlerLayer --> ControllerLayer
@@ -69,10 +69,8 @@ class MyHandler(BaseHandler[MyController]):
 
 ### Tối ưu truy vấn với Global Secondary Index (GSI1)
 
-Nhằm phục vụ tính năng nhắc nhở ôn tập từ vựng ngắt quãng Spaced Repetition System mỗi ngày, chúng ta thiết lập thêm chỉ mục phụ GSI1:
+Một lỗi phổ biến khi thiết kế DynamoDB là tạo quá nhiều bảng riêng lẻ rồi phải dùng hàm Scan toàn bộ bảng. Bằng việc thiết kế khóa phân vùng đảo ngược `GSI1_PK = TYPE#FLASHCARD` và `GSI1_SK = USER#{user_id}#DUE#{due_date}`, chúng ta có thể:
 
-- **GSI1PK:** `FLASHCARD#DUE`
-- **GSI1SK:** `{YYYY-MM-DD}#USER#{user_id}`
 - **Ứng dụng:** Hệ thống có thể quét toàn bộ các từ vựng cần ôn trong ngày của một học viên cụ thể với một câu lệnh Query duy nhất, loại bỏ hoàn toàn thao tác Scan tốn kém tài nguyên.
 
 ## Quy trình Xử lý Luồng Thoại Thời gian thực
@@ -87,12 +85,10 @@ flowchart TD
     BedrockLLM["(4) Não bộ AI<br/>Amazon Bedrock Claude"]
     PollyTTS["(5) Tổng hợp giọng<br/>Amazon Polly TTS"]
     AudioReturn["(6) Tai nghe<br/>Học viên phản xạ"]
-    UserVoice --> Transcribe
-    Transcribe --> PollyTTS
-    WSSGateway --> BedrockLLM
-    BedrockLLM --> AudioReturn
     UserVoice --> WSSGateway
+    WSSGateway --> Transcribe
     Transcribe --> BedrockLLM
+    BedrockLLM --> PollyTTS
     PollyTTS --> AudioReturn
 ```
 

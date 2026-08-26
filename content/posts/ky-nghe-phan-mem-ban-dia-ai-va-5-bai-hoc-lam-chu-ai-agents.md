@@ -35,15 +35,14 @@ flowchart TD
     Prompt["(1) System Prompt<br/>Chỉ dẫn và Ràng buộc"]
     Tools["(2) Công cụ MCP<br/>Khai báo Tool schema"]
     History["(3) Lịch sử hội thoại<br/>Đoạn chat và kết quả"]
-    Fatigue["(4) Mệt mỏi chú ý<br/>Attention O(n²) suy thoái"]
-    DumbZone["(5) Vùng ngớ ngẩn<br/>Quên và sinh lỗi hồi quy"]
-    CostWaste["(6) Lãng phí chi phí<br/>Trôi ngữ cảnh nghiêm trọng"]
-    Prompt --> Fatigue
-    Tools --> Fatigue
-    History --> Fatigue
-    Fatigue --> DumbZone
-    Fatigue --> CostWaste
-    DumbZone --> CostWaste
+    Bloat["(4) Context Bloat<br/>Tích lũy token O(n²)"]
+    Rot["(5) Attention Dilution<br/>Suy thoái chú ý và Quên"]
+    Waste["(6) Tech Slop và Lãng phí<br/>Lỗi hồi quy nghiêm trọng"]
+    Prompt --> Bloat
+    Tools --> Bloat
+    History --> Bloat
+    Bloat --> Rot
+    Rot --> Waste
 ```
 
 Mô hình LLM hoạt động tương tự nhân vật trong phim *Memento*: liên tục quên và mất phương hướng khi bối cảnh quá dài. Để giữ AI luôn ở trong **Vùng thông minh** (Smart Zone - dưới 100k tokens), chúng ta áp dụng 3 nguyên tắc sống còn:
@@ -68,10 +67,10 @@ flowchart TD
     PR["(6) Pull Request<br/>Nghiệm thu tất định"]
     User --> ACI
     ACI --> Tools
-    Tools --> Workspace
+    ACI --> Workspace
     Tools --> Sandbox
+    Workspace --> Sandbox
     Sandbox --> PR
-    Workspace --> PR
 ```
 
 ### Chiến lược AGENTS.md lồng nhau trong Monorepo
@@ -81,31 +80,29 @@ Trong các dự án lớn, chúng ta đặt các tệp `AGENTS.md` tại từng 
 | :--- | :--- |
 | **IDE & Editors** | Cursor, Zed, Windsurf, VS Code, JetBrains Junie |
 | **Agents & CLI** | Claude Code, Aider, Devin, Gemini CLI, OpenAI Codex, RooCode |
-| **Doanh nghiệp** | GitHub Copilot Workspace, Factory, Augment Code, Google Jules |
 
 ---
 
-## 3. Năm Mẫu Thiết Kế Hệ Thống Tác Nhân (Agentic Patterns)
+## 3. Năm Mẫu Thiết Kế Hệ Thống Đa Tác Nhân Cốt Lõi
 
-Theo khung phân loại của Anthropic, chúng ta phân định ranh giới rõ ràng:
-- **Workflows:** Quy trình xác định bằng đường dẫn mã nguồn cứng (predefined code paths), ưu tiên tính dự báo cao và độ trễ thấp.
-- **Agents:** Tác nhân tự chủ, tự điều phối quy trình và sử dụng công cụ dựa trên phản hồi môi trường.
+Thay vì để AI tự động mò mẫm trong một "vòng lặp đen" (Black-box loop), chúng ta áp dụng 5 mẫu kiến trúc điều phối tất định:
 
 ```mermaid
 flowchart TD
-    Chain["(1) Prompt Chaining<br/>Chuỗi tuần tự từng bước"]
-    Route["(2) Routing thông minh<br/>Điều hướng model phù hợp"]
-    Parallel["(3) Song song hóa<br/>Sectioning và Voting"]
-    Orchestrator["(4) Điều phối Worker<br/>Trưởng nhóm phân bổ việc"]
-    Evaluator["(5) Vòng lặp phản biện<br/>Generator và Evaluator"]
-    Output["(6) Kết quả nghiệm thu<br/>Mã nguồn chuẩn xác"]
-    Chain --> Route
-    Route --> Parallel
-    Parallel --> Orchestrator
-    Orchestrator --> Evaluator
-    Evaluator --> Output
-    Chain --> Orchestrator
-    Route --> Evaluator
+    Task["Yêu cầu bài toán<br/>Từ Product và Kỹ sư"]
+    Route{"Bộ định tuyến<br/>Phân loại độ khó"}
+    Simple["Mô hình nhẹ (Haiku, Flash)<br/>Prompt Chaining tuần tự"]
+    Complex["Mô hình mạnh (Sonnet, GPT-4o)<br/>Orchestrator điều phối"]
+    Workers["Worker Agents song song<br/>Xử lý từng module độc lập"]
+    Eval["Evaluator độc lập<br/>Phản biện và kiểm thử"]
+    Output["Mã nguồn hoàn chỉnh<br/>Sẵn sàng tích hợp"]
+    Task --> Route
+    Route -->|Tác vụ đơn giản| Simple
+    Route -->|Kiến trúc phức tạp| Complex
+    Complex --> Workers
+    Workers --> Eval
+    Simple --> Eval
+    Eval --> Output
 ```
 
 1. **Prompt Chaining:** Chia nhỏ tác vụ phức tạp thành chuỗi các bước đơn giản để tối đa hóa độ chính xác.
@@ -123,8 +120,8 @@ Lập trình kiểu "Prompt-first" thường thất bại vì thiếu một Ngu�
 ```mermaid
 flowchart TD
     Const["(1) Constitution<br/>Ranh giới tiêu chuẩn"]
-    Spec["(2) Specify & Clarify<br/>Kịch bản và Grill Me"]
-    Plan["(3) Plan & Tasks<br/>Kiến trúc và chia nhỏ"]
+    Spec["(2) Specify và Clarify<br/>Kịch bản và Grill Me"]
+    Plan["(3) Plan và Tasks<br/>Kiến trúc và chia nhỏ"]
     Impl["(4) Implementation<br/>Tracer Bullets lát cắt dọc"]
     Validate["(5) Validation<br/>Đối chiếu đặc tả gốc"]
     Merge["(6) Ship to Main<br/>Hoàn tất tính năng"]
@@ -133,8 +130,6 @@ flowchart TD
     Plan --> Impl
     Impl --> Validate
     Validate --> Merge
-    Const --> Plan
-    Spec --> Impl
 ```
 
 ### Kỹ thuật "Grill Me" (Phỏng vấn ngược)
@@ -162,18 +157,14 @@ Nguyên nhân là do AI có xu hướng "gian lận" để vượt qua bài test
 ```mermaid
 flowchart TD
     ASTMap["(1) Bản đồ AST<br/>Phân tích cây phụ thuộc"]
-    DeepMod["(2) Module sâu<br/>Giao diện tinh gọn"]
-    ShallowMod["(3) Tránh Module nông<br/>Ngăn ngừa phân mảnh"]
-    ImpactTest["(4) Khoanh vùng Test<br/>Chạy test trúng đích"]
-    Refactor["(5) Tối ưu mã nguồn<br/>Bảo toàn kiến trúc"]
-    StableProd["(6) Production ổn định<br/>Không lỗi hồi quy"]
+    DeepMod["(2) Thiết kế Module sâu<br/>Giao diện đơn giản"]
+    ImpactTest["(3) Khoanh vùng Test<br/>Chạy test trúng đích"]
+    Refactor["(4) AI thực thi an toàn<br/>Không làm đứt gãy phụ thuộc"]
+    StableProd["(5) Production ổn định<br/>Triệt tiêu lỗi hồi quy"]
     ASTMap --> DeepMod
     DeepMod --> ImpactTest
-    ShallowMod -.-> ASTMap
     ImpactTest --> Refactor
     Refactor --> StableProd
-    ASTMap --> ImpactTest
-    DeepMod --> StableProd
 ```
 
 ### Triết lý Deep Modules của John Ousterhout
@@ -190,17 +181,15 @@ flowchart TD
 flowchart TD
     DayShift["(1) Day Shift (Người)<br/>Phỏng vấn và lập RFCs"]
     SpecBacklog["(2) Backlog Đặc tả<br/>Đóng gói task chuẩn ACI"]
-    SandCastle["(3) Sand Castle Core<br/>Git Worktrees cô lập"]
-    NightShift["(4) Night Shift (AI)<br/>Chạy ngầm đa tác nhân"]
-    MergeAgent["(5) Merger Agent<br/>Giải quyết xung đột type"]
-    MorningReview["(6) Nghiệm thu sáng<br/>Review PR đã qua test"]
+    NightShift["(3) Night Shift (AI)<br/>Chạy ngầm đa tác nhân"]
+    SandCastle["(4) Git Worktrees<br/>Sandbox Docker cô lập"]
+    MergeAgent["(5) Merger Agent<br/>Giải quyết xung đột và Test"]
+    MorningReview["(6) Nghiệm thu sáng<br/>Review PR sẵn sàng"]
     DayShift --> SpecBacklog
-    SpecBacklog --> SandCastle
-    SandCastle --> NightShift
-    NightShift --> MergeAgent
+    SpecBacklog --> NightShift
+    NightShift --> SandCastle
+    SandCastle --> MergeAgent
     MergeAgent --> MorningReview
-    DayShift --> SandCastle
-    NightShift --> MorningReview
 ```
 
 - **Môi trường Sandbox cô lập:** Mọi Agent chạy trong Docker container thông qua Git Worktrees, bảo đảm không can thiệp vào mã nguồn chính khi chưa được kiểm chứng.

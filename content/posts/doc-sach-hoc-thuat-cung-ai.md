@@ -48,9 +48,7 @@ flowchart TD
     R1["(6) Bước 6: Review<br/>Ma trận tri thức"]
     S1 --> S2
     S2 --> S3
-    S1 --> F1
-    S2 --> F2
-    S3 --> R1
+    S3 --> F1
     F1 --> F2
     F2 --> R1
 ```

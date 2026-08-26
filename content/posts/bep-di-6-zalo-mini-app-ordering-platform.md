@@ -27,10 +27,14 @@ flowchart TD
     Client --> Gateway
     AdminPanel --> Gateway
     Gateway --> DjangoAPI
+    Client --> DjangoAPI
+    AdminPanel --> DjangoAPI
     DjangoAPI --> PostgresDB
     DjangoAPI --> RedisCache
     DjangoAPI --> ZaloOpenAPI
     DjangoAPI --> VietQRService
+    PostgresDB --> ZaloOpenAPI
+    RedisCache --> VietQRService
 ```
 
 ### Thành phần kiến trúc
@@ -51,7 +55,7 @@ flowchart TD
     CartInput["Giỏ hàng Mini App<br/>Product ID và Topping ID"]
     AddrInput["Địa chỉ GPS<br/>Tọa độ và Số điện thoại"]
     VoucherInput["Mã Voucher<br/>Chiết khấu giảm giá"]
-    AtomicTx{"transaction.atomic()<br/>Bảo toàn dữ liệu"}
+    AtomicTx{"transaction.atomic()"}
     SnapPrice["Snapshot Đơn giá<br/>Tên món, Giá gốc, Topping"]
     SnapAddr["Snapshot Địa chỉ<br/>Tên nhận hàng và GPS"]
     OrderRecord[("Đơn hàng Bất biến<br/>Status PENDING")]

@@ -162,25 +162,21 @@ Thay vì tạo thẻ thủ công, chúng ta dùng Obsidian làm nơi quản lý 
 
 ```mermaid
 flowchart TD
-    A1["Bước 1.1: Bối cảnh<br/>Nạp PDF vào NotebookLM"]
-    A2["Bước 1.2: Tri thức<br/>Trích xuất 5 khái niệm"]
-    A3["Bước 1.3: Đọc lướt<br/>Immersive Translate"]
-    B1["Bước 2.1: Ghi chú<br/>Highlight và Backlink"]
-    B2["Bước 2.2: Đọc sâu<br/>Mổ xẻ đoạn khó bằng AI"]
-    B3["Bước 2.3: Thẩm thấu<br/>Tự diễn đạt khái niệm"]
-    C1["Bước 3.1: Khai thác<br/>Sentence Mining"]
-    C2["Bước 3.2: Đồng bộ<br/>Đẩy tự động sang Anki"]
-    C3["Bước 3.3: Ghi nhớ<br/>Ôn tập thuật toán FSRS"]
+    A1["Bước 1.1:<br/>Bối cảnh (NotebookLM)"]
+    A2["Bước 1.2:<br/>Tri thức (5 khái niệm)"]
+    A3["Bước 1.3:<br/>Đọc lướt (Immersive)"]
+    B1["Bước 2.1:<br/>Ghi chú (Backlink)"]
+    B2["Bước 2.2:<br/>Đọc sâu (Mổ xẻ AI)"]
+    B3["Bước 2.3:<br/>Thẩm thấu (Tự diễn đạt)"]
+    C1["Bước 3.1:<br/>Khai thác (Mining)"]
+    C2["Bước 3.2:<br/>Đồng bộ (Đẩy Anki)"]
+    C3["Bước 3.3:<br/>Ghi nhớ (Ôn tập FSRS)"]
     A1 --> A2
     A2 --> A3
-    A1 --> B1
-    A2 --> B2
-    A3 --> B3
+    A3 --> B1
     B1 --> B2
     B2 --> B3
-    B1 --> C1
-    B2 --> C2
-    B3 --> C3
+    B3 --> C1
     C1 --> C2
     C2 --> C3
 ```

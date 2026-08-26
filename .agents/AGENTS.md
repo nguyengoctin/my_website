@@ -45,7 +45,11 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
 - **Ghim bài viết:** Thêm `pinned: true` vào frontmatter để tự động hiển thị biểu tượng ghim bên phải tiêu đề trên trang chủ và danh sách.
 - **Typography & Heading:** Toàn bộ tiêu đề bài viết và heading dùng font `Lora` với độ đậm `font-weight: 500` (Medium) tinh gọn, thanh lịch.
 - **Mermaid JS:** Bắt buộc dùng khối mã ` ```mermaid `:
-  - **Cấu hình Theme Toàn Cục:** Hệ thống đã tự động inject theme indigo và cấu hình `themeVariables` toàn cục (light/dark mode) tại `layouts/_partials/plugin/mermaid.html`. TUYỆT ĐỐI KHÔNG chèn thủ công `%%{init}%%` vào bài viết để tránh trùng lặp và xung đột dark mode.
+  - **4 Nguyên Nhân Kỹ Thuật Cốt Lõi Cần Tránh:**
+    1. *Thiếu cấu hình Theme/Token màu:* Không khởi tạo Mermaid trơn mà bắt buộc qua partial `layouts/_partials/plugin/mermaid.html` (đã inject `theme: 'base'`, `securityLevel: 'loose'`, `themeVariables` indigo và CSS Dark Mode GPU filter tức thì). Tuyệt đối không chèn thủ công `%%{init}%%` vào bài viết.
+    2. *Xung đột Markdown Parser (Goldmark Render Hook):* Hugo Goldmark được cấu hình tự động biên dịch khối ` ```mermaid ` thành thẻ `<div class="mermaid" id="..." data-content="...">` qua Render Hook `render-codeblock-mermaid.html`.
+    3. *Lỗi cú pháp ký tự đặc biệt trong nhãn:* Nhãn node chứa dấu ngoặc `()`, `[]`, dấu tiếng Việt hoặc khoảng trắng BẮT BUỘC phải bọc trong cặp dấu nháy kép `["..."]`. Ví dụ ĐÚNG: `NodeID["Bước 1 (Khởi tạo)"]`.
+    4. *Vấn đề Render Timing & Dark Mode:* Khi chuyển theme, hệ thống sử dụng bộ lọc CSS GPU Filter trên container `.mermaid svg` để đổi màu tức thì 0ms, không re-render lại SVG làm giật lag giao diện.
   - **Khai báo loại biểu đồ:** Dòng đầu tiên trong khối ` ```mermaid ` là `flowchart TD`, `flowchart LR`, hoặc `sequenceDiagram` (nằm trên một dòng độc lập).
   - **Định dạng Node (Hộp văn bản):**
     - Hộp chữ nhật chuẩn: `NodeID["Nội dung tiếng Việt hoặc Unicode"]` (luôn dùng cặp ngoặc vuông `["..."]` bọc dấu nháy kép cho mọi node có dấu tiếng Việt hoặc khoảng trắng).
@@ -59,16 +63,10 @@ Mỗi khi tạo mới hoặc chỉnh sửa bài viết/tính năng, bắt buộc
     - TUYỆT ĐỐI KHÔNG dùng dấu phẩy `,`, dấu gạch chéo `/` trong nhãn mũi tên (dùng từ thay thế: `hoặc`, `và`, dấu gạch ngang `-`).
   - **TUYỆT ĐỐI KHÔNG để dòng trống (Empty Line) bên trong khối mã Mermaid:** Toàn bộ các dòng định nghĩa trong khối ` ```mermaid ` phải liên tục, không chèn dòng trống giữa các node hoặc giữa các `subgraph`.
   - **TUYỆT ĐỐI KHÔNG dùng ký tự `&` trong toàn bộ biểu đồ:** Thay bằng chữ "và" hoặc chữ "and".
-  - **Quy tắc Bố Cục Cân Đối (Lưới 3 hoặc 4 cột song song):**
-    - **TUYỆT ĐỐI KHÔNG xếp luồng đơn điệu 1 trục thẳng tuột từ trên xuống dưới** (ví dụ chuỗi $A \rightarrow B \rightarrow C \rightarrow D \rightarrow E \rightarrow F$ sẽ bị Mermaid ép thành 1 cột dọc hẹp 6 tầng, dẫn đến chiều cao quá lớn và chữ bị phóng to khổng lồ).
-    - **Kỹ thuật tạo Lưới 3 cột x 2 hàng:** Chia luồng thành 2 hàng ngang song song:
-      - Nối ngang các node cùng tầng: `A --> C`, `C --> E` (hàng 1: 3 node).
-      - Nối ngang các node tầng dưới: `B --> D`, `D --> F` (hàng 2: 3 node).
-      - Nối dọc các cột tương ứng: `A --> B`, `C --> D`, `E --> F`.
-      - Kết quả: Mermaid bắt buộc phải render thành bảng lưới chữ nhật chuẩn 3 cột x 2 hàng, kích thước tự động co lại nhỏ gọn, sắc nét và cực kỳ thanh lịch.
-  - **Quy tắc Bố Cục và Liên Kết Node (KHÔNG ĐÓNG KHUNG NHÓM SUBGRAPH):**
+  - **Quy tắc Bố Cục và Ngữ Nghĩa Thực Tế (Semantic Truth):**
+    - **Tôn trọng tuyệt đối luồng nghiệp vụ thực tế:** Biểu đồ phải phản ánh chính xác 100% bản chất luồng dữ liệu hoặc tiến trình thực tế. TUYỆT ĐỐI KHÔNG tự ý nối chéo các node nhân tạo chỉ để ép layout thành lưới làm sai lệch bản chất logic.
+    - **Quy trình tuần tự tuyến tính (Pipeline 1 → 2 → 3 → 4...):** Nối đúng theo thứ tự logic liên tục `A --> B --> C --> D --> E...` hoặc dùng `flowchart LR` (trái sang phải) nếu muốn dàn hàng ngang gọn gàng.
+    - **Quy trình phân nhánh / Kiến trúc đa tầng:** Thể hiện rõ các nhánh song song, hội tụ hoặc cây phân cấp thực tế (`A --> B`, `A --> C`, `B --> D`, `C --> D...`).
     - **TUYỆT ĐỐI KHÔNG dùng `subgraph` đóng khung nhóm** (gây sinh ra các đường viền bao quanh khổng lồ và làm lệch bố cục).
-    - Tạo bố cục tự nhiên bằng các liên kết trực tiếp giữa các node (`A --> B`, `A --> C`, `B --> D...`).
-    - Nối các node theo chiều dọc hoặc chia luồng nhánh cân đối để sơ đồ hiển thị gọn gàng, tự nhiên và không bị phình to.
 - **CSS Mermaid — Quy tắc cứng:** CSS chỉ được kiểm soát `.mermaid` container (display, overflow, margin). TUYỆT ĐỐI KHÔNG ghi đè `font-size`, `font-weight`, `font-family` vào các thẻ `text`, `.nodeLabel`, `.edgeLabel` bên trong SVG — vì Mermaid JS tính toán bounding box trước khi render; can thiệp CSS sau đó sẽ làm chữ lệch và bị cắt xén khỏi viền node.
 - **Code Block:** Luôn có câu dẫn ngữ cảnh trước khi đưa khối mã ` ```ngôn_ngữ `. Toàn bộ các khối mã Markdown, Text, YAML tự động bẻ dòng theo chuẩn `white-space: pre-wrap`.
