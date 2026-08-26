@@ -56,7 +56,7 @@ flowchart TD
 ```
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
-- **Attention Dilution - Suy thoái chú ý:** Do độ phức tạp tính toán `O(n²)`, hiện tượng *Lost in the Middle* làm suy giảm khả năng tuân thủ quy tắc từ **73% ở lượt 5 xuống chỉ còn 33% ở lượt 16**.
+- **Attention Dilution - Suy thoái chú ý:** Do độ phức tạp tính toán $O(n^2)$, hiện tượng *Lost in the Middle* làm suy giảm khả năng tuân thủ quy tắc từ **73% ở lượt 5 xuống chỉ còn 33% ở lượt 16**.
 
 ---
 

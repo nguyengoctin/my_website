@@ -102,16 +102,18 @@
 {{- $math := $params.math -}}
 {{- $hasMathContent := false -}}
 {{- with .RawContent -}}
-    {{- if or (findRE `\$\$[\s\S]+?\$\$` .) (findRE `\\begin\{(equation|align|alignat|gather|CD)\*?\}` .) (findRE `\\[a-zA-Z]+\{[^}]*\}` .) -}}
+    {{- if or (findRE `\$\$[\s\S]+?\$\$` .) (findRE `(?:\s|^)\$([^\$\n]+?)\$(?:[\s,\.\?!;:]|$)` .) (findRE `\\begin\{(equation|align|alignat|gather|CD)\*?\}` .) (findRE `\\[a-zA-Z]+\{[^}]*\}` .) -}}
         {{- $hasMathContent = true -}}
     {{- end -}}
 {{- end -}}
 {{- if eq $math true -}}
     {{- $math = .Site.Params.page.math | default dict -}}
-{{- else if or (eq $math false) (and (ne $math true) (not $hasMathContent)) -}}
+{{- else if eq $math false -}}
     {{- $math = dict "enable" false -}}
-{{- else if and (not $math) $hasMathContent -}}
-    {{- $math = .Site.Params.page.math | default dict -}}
+{{- else if and (ne $math false) $hasMathContent -}}
+    {{- $math = dict "enable" true "copyTex" false "mhchem" false -}}
+{{- else -}}
+    {{- $math = dict "enable" false -}}
 {{- end -}}
 {{- if $math.enable -}}
     {{- $source := $cdn.katexCSS | default "lib/katex/katex.min.css" -}}
