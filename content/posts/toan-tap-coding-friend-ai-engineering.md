@@ -1,4 +1,5 @@
 ---
+pinned: true
 title: "Coding Friend: Cẩm Nang Kỹ Thuật Tra Cứu Từ Cài Đặt đến 26 Skills"
 date: 2026-08-24T15:30:00+07:00
 draft: false
@@ -6,7 +7,6 @@ author: "Nguyen Ngoc Tin"
 description: "Handbook tra cứu thực chiến toàn diện về Coding Friend v0.42 — bao gồm cài đặt đa nền tảng, cấu hình đầy đủ, hệ thống bộ nhớ 3 tầng, 8 Lifecycle Hooks, 12 Agents, 26 Skills và 18 CLI Commands."
 tags: ["AI Coding", "Coding Friend", "Claude Code", "Best Practices", "Workflow", "TDD", "Productivity"]
 categories: ["Tech Blog"]
-pinned: true
 ---
 
 {{< quote author="Coding Friend Docs (Anh-Thi Dinh)" >}}
