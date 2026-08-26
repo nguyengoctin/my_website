@@ -153,23 +153,23 @@ When I’m not writing code, you’ll probably find me reading technical books, 
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        Online Menu and Ordering Platform (Zalo Mini App)
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Online Ordering Platform (Zalo Mini App)</a>
       </h3>
       <div class="timeline-desc">
-        An online menu browsing and food ordering application engineered for restaurants and food businesses on the Zalo Mini App ecosystem, powered by a Python and Django backend.
+        A full-stack F&B online ordering system engineered for the Zalo Mini App ecosystem. Features menu tiering, immutable order snapshotting, automated VietQR dynamic payment generation, GPS Haversine shipping calculation, and an enterprise Django Admin portal.
       </div>
       <div class="timeline-tags">
+        <span class="timeline-tag">Zalo Mini App</span>
         <span class="timeline-tag">Django</span>
         <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">Zalo Mini App</span>
         <span class="timeline-tag">React</span>
         <span class="timeline-tag">TypeScript</span>
         <span class="timeline-tag">PostgreSQL</span>
-        <span class="timeline-tag">RESTful API</span>
+        <span class="timeline-tag">Redis</span>
         <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
-        <span class="status-badge status-warning"><i class="fas fa-hammer"></i> In Active Development</span>
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="fas fa-file-alt"></i> Read Case Study</a>
       </div>
     </div>
   </div>
