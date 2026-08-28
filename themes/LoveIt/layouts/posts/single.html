@@ -53,7 +53,7 @@
         {{- end -}}
         {{- with $image -}}
             <div class="featured-image">
-                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
+                {{- dict "Src" . "Title" $.Description "Resources" $.Resources "Page" $ | partial "plugin/img.html" -}}
             </div>
         {{- end -}}
 

@@ -4,11 +4,15 @@
 {{- $height := .Height -}}
 {{- $small := .SrcSmall | default $src -}}
 {{- $large := .SrcLarge | default $src -}}
+{{- $page := .Page | default nil -}}
 
 {{- with dict "Path" $src "Resources" .Resources | partial "function/resource.html" -}}
     {{- if not (eq .MediaType.SubType "svg") -}}
         {{- $width = $width | default .Width -}}
         {{- $height = $height | default .Height -}}
+        {{- with $page -}}
+            {{- .Scratch.SetInMap "this" "lazysizes" true -}}
+        {{- end -}}
         {{- if gt .Width 1200 -}}
             {{- $small = (.Resize "600x webp").RelPermalink -}}
             {{- $src = (.Resize "900x webp").RelPermalink -}}
@@ -37,6 +41,9 @@
 
 {{- $alt := .Alt | default .Title | default $src -}}
 {{- $loading := resources.Get "svg/loading.svg" | minify -}}
+{{- if and $page .Linked -}}
+    {{- $page.Scratch.SetInMap "this" "lightgallery" true -}}
+{{- end -}}
 {{- if .Linked -}}
     <a class="lightgallery" href="{{ $large | safeURL }}" title="{{ .Title | default $alt }}" data-thumbnail="{{ $small | safeURL }}"{{ with .Caption }} data-sub-html="<h2>{{ . }}</h2>{{ with $.Title }}<p>{{ . }}</p>{{ end }}"{{ end }}{{ with .Rel }} rel="{{ . }}"{{ end }}>
         <img

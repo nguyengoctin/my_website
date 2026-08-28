@@ -52,8 +52,8 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
 
 # Menu config
 [menu]
@@ -232,7 +232,7 @@ enableEmoji = true
 [markup]
   [markup.highlight]
     codeFences = true
-    guessSyntax = true
+    guessSyntax = false
     lineNos = true
     lineNumbersInTable = true
     noClasses = false

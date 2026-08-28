@@ -1,0 +1,31 @@
+{
+  "task_id": "2026-08-28-hugo-site-performance-optimization",
+  "objective": "Optimize all actionable performance issues found in the Hugo site audit",
+  "baseline": {
+    "build_time_seconds": 2.416,
+    "pages": 1372,
+    "processed_images": 173,
+    "top_templates": [
+      "single.html",
+      "term.rss.xml",
+      "_partials/rss/item.html",
+      "_partials/assets.html",
+      "_partials/assets-default.html",
+      "_partials/function/content.html"
+    ]
+  },
+  "hotspots": [
+    "Site-wide asset loading in layouts/_partials/assets-default.html",
+    "Font preconnect/preload payload in layouts/_partials/head/link.html",
+    "Content transform regex work in themes/LoveIt/layouts/_partials/function/content.html",
+    "Syntax guessing in hugo.toml",
+    "RSS generation in themes/LoveIt/layouts/term.rss.xml and themes/LoveIt/layouts/_partials/rss/item.html",
+    "Open Graph and meta template lookups in layouts/partials/opengraph.html and layouts/partials/head/meta.html",
+    "Responsive image resizing in layouts/_partials/plugin/img.html"
+  ],
+  "assumptions": [
+    "Search must remain available site-wide.",
+    "Taxonomy RSS feeds are not required by external consumers unless later verified otherwise.",
+    "Visual design should remain intact unless a performance win clearly justifies a change."
+  ]
+}

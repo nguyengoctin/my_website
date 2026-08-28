@@ -1,6 +1,7 @@
 {{- $share := (.Scratch.Get "params").share | default dict -}}
 
 {{- if $share.enable -}}
+    {{- .Scratch.SetInMap "this" "share" true -}}
     {{- /* 001: X */ -}}
     {{- if $share.X | default $share.Twitter -}}
         {{- $socialX := .Site.Params.Social.X | default .Site.Params.Social.Twitter -}}

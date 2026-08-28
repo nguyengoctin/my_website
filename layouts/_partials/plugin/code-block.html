@@ -3,6 +3,9 @@
 {{- $params := .Page.Scratch.Get "params" -}}
 {{- $maxShownLines := $params.code.maxShownLines | default 10 | int -}}
 {{- $copy := $params.code.copy | default true -}}
+{{- if and .Page $copy -}}
+    {{- .Page.Scratch.SetInMap "this" "clipboard" true -}}
+{{- end -}}
 {{- $lines := split $content "\n" | len -}}
 {{- $isNoLineNoLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw") $lang -}}
 {{- $options := dict "lineNoStart" 1 "lineNos" (not $isNoLineNoLang) -}}
