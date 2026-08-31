@@ -22,7 +22,7 @@ Currently building practical side-projects, deep-diving into backend performance
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
 
 <div class="about-contact-row">
-  <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="contact-chip" title="Download 1-Page PDF Resume">
+  <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-chip" title="Xem trước và Tải CV (PDF)">
     <i class="ti ti-file-type-pdf"></i> <span>Resume (PDF)</span>
   </a>
   <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com">

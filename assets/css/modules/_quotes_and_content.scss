@@ -4,49 +4,39 @@
 blockquote,
 .custom-quote {
   position: relative !important;
-  font-family: "Lora", Georgia, serif !important;
-  color: #1e293b !important;
+  font-family: var(--font-serif) !important;
+  color: var(--clr-text) !important;
   text-align: left !important;
   border: none !important;
   padding: 0.5rem 0 !important;
   margin: 2rem 0 !important;
-  font-size: 1.38rem !important;
-  font-weight: 500 !important;
-  line-height: 1.8 !important;
+  font-size: var(--fs-xl) !important;
+  font-weight: var(--fw-medium) !important;
+  line-height: var(--lh-relaxed) !important;
   font-style: normal !important;
   background-color: transparent !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 
-  [theme=dark] & {
-    color: #e2e8f0 !important;
-    background-color: transparent !important;
-    border: none !important;
-  }
-
   .quote-content {
     margin: 0 !important;
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 1.38rem !important;
-    font-weight: 500 !important;
-    line-height: 1.8 !important;
-    color: #1e293b !important;
+    font-family: var(--font-serif) !important;
+    font-size: var(--fs-xl) !important;
+    font-weight: var(--fw-medium) !important;
+    line-height: var(--lh-relaxed) !important;
+    color: var(--clr-text) !important;
     font-style: italic !important;
-
-    [theme=dark] & {
-      color: #e2e8f0 !important;
-    }
 
     .quote-text {
       font-style: italic !important;
-      font-weight: 500 !important;
+      font-weight: var(--fw-medium) !important;
 
       p {
         display: inline !important;
         margin: 0 !important;
         padding: 0 !important;
         font-style: italic !important;
-        font-weight: 500 !important;
+        font-weight: var(--fw-medium) !important;
         font-size: inherit !important;
         line-height: inherit !important;
         color: inherit !important;
@@ -61,17 +51,13 @@ blockquote,
     .quote-mark {
       font-family: Georgia, "Times New Roman", serif !important;
       font-style: normal !important;
-      font-weight: 700 !important;
+      font-weight: var(--fw-bold) !important;
       font-size: 2.6em !important;
       line-height: 0 !important;
-      color: #94a3b8 !important;
+      color: var(--clr-text-3) !important;
       display: inline !important;
       user-select: none !important;
       vertical-align: -0.22em !important;
-
-      [theme=dark] & {
-        color: #64748b !important;
-      }
 
       &.quote-open {
         margin-right: 0.4rem !important;
@@ -86,7 +72,7 @@ blockquote,
   p {
     margin-top: 0 !important;
     margin-bottom: 0.5rem !important;
-    line-height: 1.8 !important;
+    line-height: var(--lh-relaxed) !important;
     color: inherit !important;
     font-style: italic !important;
 
@@ -96,32 +82,24 @@ blockquote,
   }
 
   strong {
-    color: #0f172a !important;
-    font-weight: 600 !important;
-
-    [theme=dark] & {
-      color: #f8fafc !important;
-    }
+    color: var(--clr-text) !important;
+    font-weight: var(--fw-semibold) !important;
   }
 
   footer, .quote-footer {
     font-style: normal !important;
     text-align: left !important;
-    font-weight: 400 !important;
-    color: #64748b !important;
-    font-size: 1.05rem !important;
+    font-weight: var(--fw-regular) !important;
+    color: var(--clr-text-2) !important;
+    font-size: var(--fs-md) !important;
     margin-top: 0.95rem !important;
     padding: 0 !important;
     border: none !important;
     background: transparent !important;
 
-    [theme=dark] & {
-      color: #94a3b8 !important;
-    }
-
     cite {
       font-style: normal !important;
-      font-weight: 500 !important;
+      font-weight: var(--fw-medium) !important;
       color: inherit !important;
     }
   }
@@ -131,16 +109,18 @@ blockquote,
 // 2. ARTICLE CONTENT TYPOGRAPHY & SPACING
 // ==========================================================
 .single .content {
-  font-family: "Lora", Georgia, serif !important;
-  font-size: 1.08rem !important;
-  line-height: 1.85 !important;
-  word-spacing: 0.04em;
+  font-family: var(--font-serif) !important;
+  font-size: var(--fs-base) !important;
+  line-height: var(--lh-relaxed) !important;
+  letter-spacing: var(--ls-normal);
+  word-spacing: var(--ws-normal);
 
   p {
     margin-top: 0 !important;
     margin-bottom: 1.25rem !important;
-    line-height: 1.85 !important;
-    word-spacing: 0.04em;
+    line-height: var(--lh-relaxed) !important;
+    letter-spacing: var(--ls-normal);
+    word-spacing: var(--ws-normal);
   }
 
   p + ul,
@@ -155,7 +135,7 @@ blockquote,
 
     li {
       margin-bottom: 0.45rem !important;
-      line-height: 1.8 !important;
+      line-height: var(--lh-relaxed) !important;
 
       p {
         margin-bottom: 0.45rem !important;
@@ -175,7 +155,7 @@ blockquote,
 }
 
 // ==========================================================
-// 3. EDITORIAL BIO FLOAT AVATAR (Giàn trải chữ xung quanh avatar)
+// 3. EDITORIAL BIO FLOAT AVATAR (Rounded Square Modern Style)
 // ==========================================================
 .bio-container {
   display: block !important;
@@ -190,21 +170,31 @@ blockquote,
   .bio-avatar,
   img.bio-avatar {
     float: right !important;
-    width: 175px !important;
-    height: 175px !important;
-    max-width: 175px !important;
-    min-width: 175px !important;
+    width: 195px !important;
+    height: 195px !important;
+    max-width: 195px !important;
+    min-width: 195px !important;
     aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;
     object-position: center 15% !important;
-    border-radius: 50% !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 36px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
     display: block !important;
     margin: 0.15rem 0 1rem 1.75rem !important;
     border: none !important;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+
+    &:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
+    }
 
     [theme=dark] & {
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+
+      &:hover {
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+      }
     }
   }
 
@@ -212,16 +202,12 @@ blockquote,
     display: block !important;
 
     p {
-      font-family: "Lora", Georgia, serif !important;
-      font-size: 1.08rem !important;
-      line-height: 1.85 !important;
+      font-family: var(--font-serif) !important;
+      font-size: var(--fs-base) !important;
+      line-height: var(--lh-relaxed) !important;
       margin-top: 0 !important;
       margin-bottom: 1.15rem !important;
-      color: #2c3e50 !important;
-
-      [theme=dark] & {
-        color: #e2e8f0 !important;
-      }
+      color: var(--clr-text) !important;
 
       &:last-child {
         margin-bottom: 0 !important;
@@ -234,12 +220,17 @@ blockquote,
 
     .bio-avatar,
     img.bio-avatar {
-      width: 125px !important;
-      height: 125px !important;
-      max-width: 125px !important;
-      min-width: 125px !important;
+      width: 140px !important;
+      height: 140px !important;
+      max-width: 140px !important;
+      min-width: 140px !important;
+      border-radius: 26px !important;
       margin: 0.1rem 0 0.65rem 1.15rem !important;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
+
+      [theme=dark] & {
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+      }
     }
 
     .bio-text p {
@@ -252,10 +243,11 @@ blockquote,
   @media (max-width: 420px) {
     .bio-avatar,
     img.bio-avatar {
-      width: 110px !important;
-      height: 110px !important;
-      max-width: 110px !important;
-      min-width: 110px !important;
+      width: 120px !important;
+      height: 120px !important;
+      max-width: 120px !important;
+      min-width: 120px !important;
+      border-radius: 22px !important;
       margin: 0.1rem 0 0.5rem 0.85rem !important;
     }
 
@@ -291,13 +283,12 @@ a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-
 }
 
 // Ngăn icon bị gạch chân lệch so với text khi link chứa icon
-a i:not(.theme-icon-dark i):not(.theme-icon-light i),
-a .sys-icon:not(.theme-icon-dark):not(.theme-icon-light),
+a i:not(.theme-icon-dark i):not(.theme-icon-light i):not(.theme-icon-auto i),
+a .sys-icon:not(.theme-icon-dark):not(.theme-icon-light):not(.theme-icon-auto),
 a .details-icon,
-a [class^="ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i),
-a [class*=" ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i) {
+a [class^="ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i):not(.theme-icon-auto i),
+a [class*=" ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i):not(.theme-icon-auto i) {
   display: inline-block;
   text-decoration: none !important;
   vertical-align: middle;
 }
-

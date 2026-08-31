@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  font-family: "Lora", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 0.8125rem;
   color: #64748b;
 
@@ -95,7 +95,7 @@
 .page.archive {
   .single-title {
     text-align: left !important;
-    font-family: "Lora", Georgia, serif !important;
+    font-family: var(--font-serif) !important;
     font-size: 1.4rem !important;
     text-transform: uppercase !important;
     letter-spacing: 0.04em !important;
@@ -167,7 +167,7 @@
       }
 
       .card-item-title {
-        font-family: "Lora", Georgia, serif !important;
+        font-family: var(--font-serif) !important;
         font-size: 1.15rem !important;
         font-weight: 400 !important;
         margin-top: 0 !important;
@@ -240,7 +240,7 @@
       }
 
       input {
-        font-family: "Lora", Georgia, serif !important;
+        font-family: var(--font-serif) !important;
         font-size: 0.95rem !important;
         color: #111111 !important;
         background: transparent !important;
@@ -257,7 +257,7 @@
     }
 
     .search-cancel {
-      font-family: "Lora", Georgia, serif !important;
+      font-family: var(--font-serif) !important;
       color: #64748b !important;
       font-size: 0.9rem !important;
 
@@ -286,7 +286,7 @@
     }
 
     .menu-item {
-      font-family: "Lora", Georgia, serif !important;
+      font-family: var(--font-serif) !important;
       font-size: 1.08rem !important;
       font-weight: 400 !important;
       color: #1e293b !important;
@@ -411,7 +411,7 @@
       background: #f8fafc !important;
       border: 1px solid #e2e8f0 !important;
       color: #334155 !important;
-      font-family: "Lora", Georgia, serif !important;
+      font-family: var(--font-serif) !important;
       font-size: 0.9rem !important;
       font-weight: 500 !important;
       text-decoration: none !important;
@@ -526,7 +526,7 @@ img.lazyloaded {
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      font-family: "Lora", Georgia, serif !important;
+      font-family: var(--font-serif) !important;
       font-size: 0.9rem !important;
       font-weight: 400 !important;
       color: #828282 !important;

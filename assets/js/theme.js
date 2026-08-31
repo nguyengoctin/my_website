@@ -98,6 +98,7 @@ class Theme {
                 const themeVal = this.isDark ? 'dark' : 'light';
                 document.documentElement.setAttribute('theme', themeVal);
                 document.documentElement.setAttribute('data-theme', themeVal);
+                document.documentElement.setAttribute('data-cfg-theme', newTheme);
                 document.documentElement.style.colorScheme = themeVal;
                 document.body.setAttribute('theme', themeVal);
                 document.body.setAttribute('cfg-theme', newTheme);

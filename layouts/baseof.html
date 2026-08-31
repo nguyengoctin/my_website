@@ -22,6 +22,7 @@
             var themeVal = isDark ? 'dark' : 'light';
             document.documentElement.setAttribute('theme', themeVal);
             document.documentElement.setAttribute('data-theme', themeVal);
+            document.documentElement.setAttribute('data-cfg-theme', theme);
             document.documentElement.style.backgroundColor = isDark ? '#1c1d22' : '#fdfdfd';
             document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
           })();
@@ -31,8 +32,9 @@
         <script>
           (function() {
             var themeVal = document.documentElement.getAttribute('theme') || 'dark';
+            var cfgTheme = window.localStorage?.getItem('theme') || '{{ $theme }}';
             document.body.setAttribute('theme', themeVal);
-            document.body.setAttribute('cfg-theme', window.localStorage?.getItem('theme') || '{{ $theme }}');
+            document.body.setAttribute('cfg-theme', cfgTheme);
           })();
         </script>
 

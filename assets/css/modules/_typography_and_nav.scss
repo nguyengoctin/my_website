@@ -1,25 +1,60 @@
 // ==========================================================
 // 1. DESIGN TOKEN SYSTEM — Single Source of Truth
 // ==========================================================
+:root {
+  // --- Typography Tokens (Design Token System) ---
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  // --- Font Weights (Loaded directly via Google Fonts CSS2) ---
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  // --- Font Sizes (Modular Scale) ---
+  --fs-xs: 0.75rem; // 12px
+  --fs-sm: 0.85rem; // 13.6px
+  --fs-base: 1.0625rem; // 17px (Kích thước vàng đọc văn xuôi)
+  --fs-md: 1.15rem; // 18.4px
+  --fs-lg: 1.25rem; // 20px
+  --fs-xl: 1.38rem; // 22px
+  --fs-2xl: 1.75rem; // 28px
+
+  // --- Line Heights ---
+  --lh-tight: 1.25;
+  --lh-snug: 1.45;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+  --lh-loose: 1.85;
+
+  // --- Spacing & Kerning Tokens ---
+  --ls-normal: normal;
+  --ls-heading: 0.015em;
+  --ls-caps: 0.04em;
+  --ws-normal: 0.08em; // Tăng nhẹ khoảng cách từ đồng bộ (editorial breathing room)
+}
+
 // LIGHT MODE tokens
 :root,
 html[theme=light],
 body[theme=light] {
   // --- Background tiers (elevation hierarchy) ---
-  --clr-bg:         #fdfdfd;  // T0: Page background
-  --clr-surface:    #ffffff;  // T1: Card, panel, modal surface
-  --clr-surface-2:  #f8fafc;  // T2: Input, code bg, table header, hover row
-  --clr-surface-3:  #f1f5f9;  // T3: Chip, badge, tag pill bg
-  --clr-surface-4:  #e2e8f0;  // T4: Divider, subtle border bg
+  --clr-bg: #fdfdfd; // T0: Page background
+  --clr-surface: #ffffff; // T1: Card, panel, modal surface
+  --clr-surface-2: #f8fafc; // T2: Input, code bg, table header, hover row
+  --clr-surface-3: #f1f5f9; // T3: Chip, badge, tag pill bg
+  --clr-surface-4: #e2e8f0; // T4: Divider, subtle border bg
 
   // --- Border ---
-  --clr-border:     #e2e8f0;  // Default border
-  --clr-border-2:   #edf0f4;  // Lighter border (timeline rows)
+  --clr-border: #e2e8f0; // Default border
+  --clr-border-2: #edf0f4; // Lighter border (timeline rows)
 
   // --- Text ---
-  --clr-text:       #111111;  // Primary text
-  --clr-text-2:     #475569;  // Secondary / muted text
-  --clr-text-3:     #94a3b8;  // Placeholder / disabled text
+  --clr-text: #111111; // Primary text
+  --clr-text-2: #475569; // Secondary / muted text
+  --clr-text-3: #94a3b8; // Placeholder / disabled text
 
   // --- Theme flag for JS ---
   color-scheme: light;
@@ -29,20 +64,20 @@ body[theme=light] {
 html[theme=dark],
 body[theme=dark] {
   // --- Background tiers ---
-  --clr-bg:         #1c1d22;  // T0: Page background
-  --clr-surface:    #23252c;  // T1: Card, panel (+3% lighter)
-  --clr-surface-2:  #2b2e38;  // T2: Input, hover row (+6% lighter)
-  --clr-surface-3:  #33363f;  // T3: Chip, badge (+9% lighter)
-  --clr-surface-4:  #3a3d48;  // T4: Active/selected (+12%)
+  --clr-bg: #1c1d22; // T0: Page background
+  --clr-surface: #23252c; // T1: Card, panel (+3% lighter)
+  --clr-surface-2: #2b2e38; // T2: Input, hover row (+6% lighter)
+  --clr-surface-3: #33363f; // T3: Chip, badge (+9% lighter)
+  --clr-surface-4: #3a3d48; // T4: Active/selected (+12%)
 
   // --- Border ---
-  --clr-border:     rgba(255,255,255,0.10);
-  --clr-border-2:   rgba(255,255,255,0.06);
+  --clr-border: rgba(255, 255, 255, 0.10);
+  --clr-border-2: rgba(255, 255, 255, 0.06);
 
   // --- Text ---
-  --clr-text:       #e6e8ec;  // Primary text
-  --clr-text-2:     #a1a9b8;  // Secondary / muted
-  --clr-text-3:     #636b7e;  // Placeholder / disabled
+  --clr-text: #e6e8ec; // Primary text
+  --clr-text-2: #a1a9b8; // Secondary / muted
+  --clr-text-3: #636b7e; // Placeholder / disabled
 
   // --- Theme flag ---
   color-scheme: dark;
@@ -51,34 +86,49 @@ body[theme=dark] {
 // html & body base — use tokens
 html {
   background-color: var(--clr-bg, #fdfdfd);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Lora", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  letter-spacing: var(--ls-normal);
+  word-spacing: var(--ws-normal);
   color: var(--clr-text, #111111) !important;
   background-color: var(--clr-bg, #fdfdfd) !important;
-  word-spacing: 0.035em;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
 }
 
 .search-placeholder-text {
   color: var(--clr-text-3);
 }
 
-// Global Tabler Icons Sizing (matching sample site aesthetics)
-[class^="ti-"], [class*=" ti-"] {
+// Global Tabler Icons Sizing
+[class^="ti-"],
+[class*=" ti-"] {
   font-family: 'tabler-icons' !important;
-  font-size: 1.35em !important; /* Tăng size icon gốc */
-  stroke-width: 2.2 !important; /* Dày hơn */
+  font-size: 1.35em !important;
+  stroke-width: 2.2 !important;
   line-height: 1 !important;
 }
 
 // Chỉ underline cho chữ, không underline cho icon
-a i[class^="ti-"], a i[class*=" ti-"] {
+a i[class^="ti-"],
+a i[class*=" ti-"] {
   display: inline-block;
   text-decoration: none !important;
   vertical-align: middle;
 }
-.ti, .sys-icon svg {
+
+.ti,
+.sys-icon svg {
   display: inline-block;
 }
 
@@ -90,138 +140,148 @@ a i[class^="ti-"], a i[class*=" ti-"] {
   display: inline-block;
   vertical-align: middle;
 }
+
 .theme-switch .sys-icon svg {
   width: 1.25rem;
   height: 1.25rem;
 }
+
+// Ẩn toàn bộ icon giao diện theo mặc định
+.theme-icon-auto,
+.theme-icon-light,
 .theme-icon-dark,
-a .theme-icon-dark,
-[theme=light] .theme-icon-dark,
-[theme=light] a .theme-icon-dark,
-html[theme=light] .theme-icon-dark,
-body[theme=light] .theme-icon-dark {
+a .theme-icon-auto,
+a .theme-icon-light,
+a .theme-icon-dark {
   display: none !important;
 }
 
-.theme-icon-light,
-a .theme-icon-light,
-[theme=light] .theme-icon-light,
-[theme=light] a .theme-icon-light,
-html[theme=light] .theme-icon-light,
-body[theme=light] .theme-icon-light {
+// 1. Chế độ Hệ thống (Auto / System Desktop Monitor)
+[cfg-theme=auto] .theme-icon-auto,
+[cfg-theme=auto] a .theme-icon-auto,
+html[data-cfg-theme=auto] .theme-icon-auto,
+body[cfg-theme=auto] .theme-icon-auto,
+body:not([cfg-theme]) .theme-icon-auto,
+html:not([data-cfg-theme]) .theme-icon-auto {
   display: inline-flex !important;
 }
 
-[theme=dark] .theme-icon-light,
-[theme=dark] a .theme-icon-light,
-html[theme=dark] .theme-icon-light,
-body[theme=dark] .theme-icon-light {
-  display: none !important;
+// 2. Chế độ Sáng (Light / Sun)
+[cfg-theme=light] .theme-icon-light,
+[cfg-theme=light] a .theme-icon-light,
+html[data-cfg-theme=light] .theme-icon-light,
+body[cfg-theme=light] .theme-icon-light {
+  display: inline-flex !important;
 }
 
-[theme=dark] .theme-icon-dark,
-[theme=dark] a .theme-icon-dark,
-html[theme=dark] .theme-icon-dark,
-body[theme=dark] .theme-icon-dark {
+// 3. Chế độ Tối (Dark / Moon)
+[cfg-theme=dark] .theme-icon-dark,
+[cfg-theme=dark] a .theme-icon-dark,
+html[data-cfg-theme=dark] .theme-icon-dark,
+body[cfg-theme=dark] .theme-icon-dark {
   display: inline-flex !important;
 }
 
 // ==========================================================
 // 2. HEADINGS & TYPOGRAPHY HIERARCHY
 // ==========================================================
-html, body, h1, h2, h3, h4, h5, h6,
-.single-title, .content, .summary, .timeline-title,
-.menu-item, .contact-chip, .btn-action, .timeline-tag, .tag-pill,
-.toc-content, .home-quote-typeit, .home-subtitle, .summary .single-title {
-  font-family: "Lora", Georgia, serif !important;
-  word-spacing: 0.035em;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.single-title,
+.content,
+.summary,
+.timeline-title,
+.menu-item,
+.contact-chip,
+.btn-action,
+.timeline-tag,
+.tag-pill,
+.toc-content,
+.home-quote-typeit,
+.home-subtitle,
+.summary .single-title {
+  font-family: var(--font-serif) !important;
+  letter-spacing: var(--ls-normal);
+  word-spacing: var(--ws-normal);
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .single-title {
-  font-weight: 600 !important;
+  font-weight: var(--fw-semibold) !important;
 }
 
 h1 {
-  font-size: 1.75rem !important;
-  font-weight: 500 !important;
-  color: #111111 !important;
+  font-size: var(--fs-2xl) !important;
+  font-weight: var(--fw-medium) !important;
+  line-height: var(--lh-tight) !important;
+  color: var(--clr-text) !important;
   margin-top: 1.5rem !important;
   margin-bottom: 1rem !important;
-
-  [theme=dark] & {
-    color: #f3f4f6 !important;
-  }
 }
 
 h2 {
-  font-size: 1.35rem !important;
-  font-weight: 600 !important;
+  font-size: var(--fs-xl) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-snug) !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: var(--ls-caps) !important;
   margin-top: 1.75rem !important;
   margin-bottom: 1rem !important;
-  color: #111111 !important;
-
-  [theme=dark] & {
-    color: #e5e7eb !important;
-  }
+  color: var(--clr-text) !important;
 }
 
 h3 {
-  font-size: 1.15rem !important;
-  font-weight: 500 !important;
+  font-size: var(--fs-md) !important;
+  font-weight: var(--fw-medium) !important;
+  line-height: var(--lh-snug) !important;
   margin-top: 1.4rem !important;
   margin-bottom: 0.75rem !important;
-  color: #111111 !important;
-
-  [theme=dark] & {
-    color: #e5e7eb !important;
-  }
+  color: var(--clr-text) !important;
 }
 
-h4, h5, h6 {
-  font-weight: 500 !important;
-  color: #111111 !important;
-
-  [theme=dark] & {
-    color: #e5e7eb !important;
-  }
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-medium) !important;
+  color: var(--clr-text) !important;
 }
 
 hr {
   border: none !important;
-  border-top: 1px solid #e8e8e8 !important;
+  border-top: 1px solid var(--clr-border) !important;
   margin: 1.2rem 0 !important;
-
-  [theme=dark] & {
-    border-top-color: #27272a !important;
-  }
 }
 
 // Home quote TypeIt
 .home-quote-typeit,
 .home-subtitle {
   text-align: left !important;
-  font-family: "Lora", Georgia, serif !important;
-  font-size: 1.2rem !important;
-  font-weight: 500 !important;
+  font-family: var(--font-serif) !important;
+  font-size: var(--fs-lg) !important;
+  font-weight: var(--fw-medium) !important;
   font-style: italic !important;
-  color: #334155 !important;
+  color: var(--clr-text-2) !important;
   padding: 0 !important;
   margin: 1.5rem 0 !important;
-  line-height: 1.75 !important;
-
-  [theme=dark] & {
-    color: #e2e8f0 !important;
-  }
+  line-height: var(--lh-relaxed) !important;
 
   .typeit-cursor {
-    color: #4d74eb !important;
+    color: var(--brand-primary, #4d74eb) !important;
     font-style: normal !important;
 
     [theme=dark] & {
-      color: #818cf8 !important;
+      color: var(--brand-primary-dark, #818cf8) !important;
     }
   }
 }
@@ -229,22 +289,19 @@ hr {
 // ==========================================================
 // 3. DESKTOP NAVIGATION BAR & LOGO ("Nguyễn Ngọc Tín")
 // ==========================================================
-#header-desktop, #header-mobile {
-  background: #fdfdfd !important;
+#header-desktop,
+#header-mobile {
+  background: var(--clr-bg) !important;
   box-shadow: none !important;
   border: none !important;
   border-bottom: none !important;
-
-  [theme=dark] & {
-    background: #18181b !important;
-  }
 }
 
 .header-wrapper {
   justify-content: space-between !important;
   gap: 1rem !important;
   border-bottom: 1px solid var(--clr-border) !important;
-  max-width: 850px !important; /* Khớp với chiều rộng nội dung 850px */
+  max-width: 850px !important;
   margin: 0 auto !important;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -256,10 +313,10 @@ hr {
     align-items: center !important;
     justify-content: flex-end !important;
   }
-  
+
   .header-title {
     font-size: 22px !important;
-    font-weight: 700 !important;
+    font-weight: var(--fw-bold) !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     overflow: visible !important;
@@ -267,7 +324,7 @@ hr {
     .header-title-pre,
     .header-title-post {
       margin-left: 0.35rem !important;
-      font-weight: 700 !important;
+      font-weight: var(--fw-bold) !important;
       font-size: 0.95em !important;
       opacity: 0.95 !important;
       display: inline-flex !important;
@@ -275,7 +332,7 @@ hr {
       vertical-align: middle !important;
       transform: none !important;
       line-height: 1 !important;
-      letter-spacing: -0.5px !important;
+      letter-spacing: var(--ls-normal) !important;
     }
 
     .header-title-pre {
@@ -291,7 +348,8 @@ hr {
       }
     }
 
-    .nav-pink, .nav-site-pink {
+    .nav-pink,
+    .nav-site-pink {
       color: #ec4899 !important;
 
       [theme=dark] & {
@@ -301,14 +359,14 @@ hr {
 
     .nav-site-pink {
       margin-left: 0.15rem !important;
-      font-weight: 700 !important;
+      font-weight: var(--fw-bold) !important;
     }
 
     a {
       color: #4d74eb !important;
-      font-weight: 700 !important;
+      font-weight: var(--fw-bold) !important;
       text-decoration: none !important;
-      letter-spacing: -0.3px !important;
+      letter-spacing: var(--ls-normal) !important;
       display: inline-flex !important;
       align-items: center !important;
       line-height: 1.1 !important;
@@ -327,10 +385,10 @@ hr {
 
   .menu .menu-item {
     font-size: 1.05rem !important;
-    font-weight: 500 !important;
+    font-weight: var(--fw-medium) !important;
     padding: 0 0.6rem !important;
     margin: 0 0.15rem !important;
-    color: #64748b !important;
+    color: var(--clr-text-2) !important;
     background: transparent !important;
     transition: all 0.2s ease !important;
     text-decoration: none !important;
@@ -340,30 +398,18 @@ hr {
     vertical-align: middle !important;
     line-height: 1 !important;
 
-    [theme=dark] & {
-      color: #94a3b8 !important;
-    }
-
     &:hover {
-      color: #0f172a !important;
+      color: var(--clr-text) !important;
       text-decoration: underline dotted !important;
       text-underline-offset: 4px;
-
-      [theme=dark] & {
-        color: #f8fafc !important;
-      }
     }
 
     &.active {
-      color: #0f172a !important;
-      font-weight: 700 !important;
+      color: var(--clr-text) !important;
+      font-weight: var(--fw-bold) !important;
       border-bottom: none !important;
       text-decoration: underline dotted !important;
       text-underline-offset: 4px;
-
-      [theme=dark] & {
-        color: #f8fafc !important;
-      }
     }
 
     &.theme-switch,
@@ -382,7 +428,7 @@ hr {
     }
 
     &[href*="/cv/"] {
-      font-weight: 700 !important;
+      font-weight: var(--fw-bold) !important;
       color: #ec4899 !important;
 
       [theme=dark] & {
@@ -406,7 +452,8 @@ hr {
     }
   }
 
-  .menu-item.delimiter, .delimiter {
+  .menu-item.delimiter,
+  .delimiter {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
@@ -435,7 +482,6 @@ hr {
       text-decoration: none !important;
       background: transparent !important;
       background-color: transparent !important;
-      transform: rotate(15deg);
     }
   }
 }
@@ -456,30 +502,30 @@ hr {
   &::-webkit-scrollbar {
     width: 3px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.15);
     border-radius: 3px;
   }
+
   [theme=dark] &::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
   }
 
   .toc-title {
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 0.95rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.05em !important;
+    font-family: var(--font-serif) !important;
+    font-size: var(--fs-sm) !important;
+    font-weight: var(--fw-bold) !important;
+    letter-spacing: var(--ls-caps) !important;
     text-transform: uppercase !important;
-    color: #111111 !important;
+    color: var(--clr-text) !important;
     margin: 0.5rem 0 0.75rem 0 !important;
-
-    [theme=dark] & {
-      color: #f1f5f9 !important;
-    }
   }
 }
 
-.toc-content, #toc-auto, #toc-static {
+.toc-content,
+#toc-auto,
+#toc-static {
   .toc-content {
     overflow-wrap: normal !important;
     word-break: normal !important;
@@ -499,31 +545,23 @@ hr {
           overflow: hidden !important;
           text-overflow: ellipsis !important;
           max-width: 100% !important;
-          font-family: "Lora", Georgia, serif !important;
+          font-family: var(--font-serif) !important;
           font-size: 0.8125rem !important;
-          font-weight: 400 !important;
-          color: #828282 !important;
+          font-weight: var(--fw-regular) !important;
+          color: var(--clr-text-2) !important;
           text-decoration: none !important;
           transition: color 0.15s ease, font-weight 0.1s ease;
 
-          [theme=dark] & {
-            color: #9ca3af !important;
-          }
-
           &:hover {
-            color: #111111 !important;
-            font-weight: 600 !important;
+            color: var(--clr-text) !important;
+            font-weight: var(--fw-semibold) !important;
             text-decoration: underline dotted !important;
             text-underline-offset: 3px;
-
-            [theme=dark] & {
-              color: #ffffff !important;
-            }
           }
 
           &.active {
             color: #4d74eb !important;
-            font-weight: 700 !important;
+            font-weight: var(--fw-bold) !important;
             text-decoration: none !important;
 
             [theme=dark] & {
@@ -534,7 +572,7 @@ hr {
       }
     }
 
-    > nav > ul {
+    >nav>ul {
       padding-left: 0 !important;
     }
   }
@@ -546,21 +584,18 @@ hr {
 .summary.single {
   margin-bottom: 1.3rem !important;
   padding-bottom: 1rem !important;
-  border-bottom: 1px solid #f1f5f9 !important;
-
-  [theme=dark] & {
-    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
-  }
+  border-bottom: 1px solid var(--clr-border) !important;
 }
 
 .summary .single-title {
-  font-family: "Lora", Georgia, serif !important;
-  font-size: 1.25rem;
-  font-weight: 500 !important;
+  font-family: var(--font-serif) !important;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium) !important;
+  line-height: var(--lh-snug) !important;
 
   a {
     color: #4d74eb !important;
-    font-weight: 500 !important;
+    font-weight: var(--fw-medium) !important;
     text-decoration: none !important;
     transition: color 0.15s ease, text-decoration 0.15s ease;
 
@@ -582,13 +617,14 @@ hr {
 
 .page.home .summary .single-title {
   font-size: 1.125rem !important;
-  line-height: 1.45 !important;
-  font-weight: 500 !important;
+  line-height: var(--lh-snug) !important;
+  font-weight: var(--fw-medium) !important;
   margin-top: 0.15rem !important;
   margin-bottom: 0.35rem !important;
 }
 
 .summary .content {
+
   blockquote,
   .custom-quote,
   .details,
@@ -618,20 +654,16 @@ hr {
   }
 }
 
-// Post Meta line styling matching steipete.me
+// Post Meta line styling
 .summary .post-meta {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-  font-size: 0.85rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: var(--fs-sm) !important;
   font-style: italic !important;
-  color: #64748b !important;
+  color: var(--clr-text-2) !important;
   margin-bottom: 0.8rem !important;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  [theme=dark] & {
-    color: #94a3b8 !important;
-  }
 
   i.ti {
     font-size: 1.1em;
@@ -667,13 +699,9 @@ hr {
   }
 
   .archive-item-date {
-    font-family: "Lora", Georgia, serif !important;
-    color: #828282 !important;
-    font-size: 0.85rem !important;
-
-    [theme=dark] & {
-      color: #9ca3af !important;
-    }
+    font-family: var(--font-serif) !important;
+    color: var(--clr-text-2) !important;
+    font-size: var(--fs-sm) !important;
   }
 }
 
@@ -694,10 +722,10 @@ hr {
   text-decoration: none !important;
   border: none !important;
   border-radius: 0 !important;
-  font-weight: 600 !important;
+  font-weight: var(--fw-semibold) !important;
   font-size: 0.95rem !important;
   transition: color 0.15s ease !important;
-  font-family: "Lora", Georgia, serif !important;
+  font-family: var(--font-serif) !important;
 
   [theme=dark] & {
     color: #60a5fa !important;
@@ -724,5 +752,3 @@ hr {
     }
   }
 }
-
-

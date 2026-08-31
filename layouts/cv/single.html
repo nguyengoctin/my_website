@@ -3,24 +3,18 @@
 {{- define "content" -}}
 {{ $cv := hugo.Data.cv }}
 <div class="cv-page-wrapper">
-  <!-- Action Toolbar (Web only) -->
-  <div class="cv-toolbar">
-    <div class="cv-toolbar-info">
-      <span class="cv-badge">Engineering Resume</span>
-      <span class="cv-badge-sub">Single-Column ATS Standard</span>
-    </div>
-    <div class="cv-toolbar-actions">
-      <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="btn-cv-action primary" title="Tải file PDF bản in chuẩn A4">
-        <i class="ti ti-file-type-pdf"></i> <span>Download PDF</span>
+  <!-- Main Resume Sheet (A4 Format) -->
+  <article class="cv-sheet">
+    <!-- On-Sheet Floating Actions (Icon-only Clean) -->
+    <div class="cv-sheet-actions">
+      <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-sheet-action" title="Xem trước và Tải file PDF" aria-label="Xem trước và Tải file PDF">
+        <i class="ti ti-file-type-pdf"></i>
       </a>
-      <button onclick="window.print()" class="btn-cv-action" title="In hoặc lưu file PDF trực tiếp">
-        <i class="ti ti-printer"></i> <span>Print / Save PDF</span>
+      <button onclick="window.print()" class="btn-sheet-action" title="In hoặc lưu file PDF trực tiếp" aria-label="In hoặc lưu PDF">
+        <i class="ti ti-printer"></i>
       </button>
     </div>
-  </div>
 
-  <!-- Main Resume Sheet -->
-  <article class="cv-sheet">
     <!-- Header -->
     <header class="cv-header">
       <h1 class="cv-name">{{ $cv.basics.name }}</h1>
@@ -43,7 +37,7 @@
         <div class="cv-item-header">
           <div>
             <strong class="cv-item-title">{{ .institution }}</strong>
-            <span class="cv-item-loc">| <em>{{ .location }}</em></span>
+            <span class="cv-item-loc"> — <em>{{ .location }}</em></span>
           </div>
           <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
         </div>
@@ -51,10 +45,13 @@
           <span>{{ .degree }}</span>
           {{ with .major }} — <span>Major: {{ . }}</span>{{ end }}
         </div>
+        {{ if or .gpa .language_proficiency }}
         <div class="cv-item-meta">
           {{ with .gpa }}<span>Cumulative GPA: {{ . }}</span>{{ end }}
-          {{ with .language_proficiency }} | <span>Language Proficiency: {{ . }}</span>{{ end }}
+          {{ if and .gpa .language_proficiency }} | {{ end }}
+          {{ with .language_proficiency }}<span>Language Proficiency: {{ . }}</span>{{ end }}
         </div>
+        {{ end }}
       </div>
       {{ end }}
     </section>
@@ -81,8 +78,8 @@
         <div class="cv-item-header">
           <div>
             <strong class="cv-item-title">{{ .company }}</strong>
-            <span class="cv-item-role">| <em>{{ .position }}</em></span>
-            {{ with .location }}<span class="cv-item-loc">| <em>{{ . }}</em></span>{{ end }}
+            <span class="cv-item-role"> — <em>{{ .position }}</em></span>
+            {{ with .location }}<div class="cv-item-loc-sub"><em>{{ . }}</em></div>{{ end }}
           </div>
           <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
         </div>
@@ -105,11 +102,12 @@
         <div class="cv-item-header">
           <div>
             <strong class="cv-item-title">{{ .name }}</strong>
-            {{ with .tech_stack }}<span class="cv-item-tech">| <em>{{ . }}</em></span>{{ end }}
-            <span class="cv-project-links">
-              {{ with .github_url }}| <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[Link GitHub]</a>{{ end }}
-              {{ with .demo_url }}| <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[Demo Video]</a>{{ end }}
-            </span>
+            {{ with .tech_stack }}<span class="cv-item-tech"> | <em>{{ . }}</em></span>{{ end }}
+            <div class="cv-project-links">
+              {{ with .github_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>{{ end }}
+              {{ with .case_study_url }}<span class="sep">|</span><a href="{{ . }}" target="_blank" rel="noopener noreferrer">Case Study</a>{{ end }}
+              {{ with .demo_url }}<span class="sep">|</span><a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo Video</a>{{ end }}
+            </div>
           </div>
           <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
         </div>

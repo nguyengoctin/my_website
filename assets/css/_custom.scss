@@ -82,11 +82,11 @@ body.theme-transitioning *::after {
 .footer {
     padding: 1.5rem 0 1.5rem 0 !important;
     margin-top: 1.5rem !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-    font-family: "Lora", Georgia, serif !important;
+    border-top: 1px solid var(--clr-border, rgba(0, 0, 0, 0.08)) !important;
+    font-family: var(--font-serif) !important;
 
     [theme=dark] & {
-        border-top-color: rgba(255, 255, 255, 0.1) !important;
+        border-top-color: var(--clr-border, rgba(255, 255, 255, 0.1)) !important;
     }
 }
 
@@ -331,145 +331,7 @@ table {
    ========================================================================== */
 /* Masonry Layout styling relies on flexbox defined in layout template */
 
-/* ==========================================================================
-   MODERN MINIMAL QUOTE & BLOCKQUOTE STYLING (NO CARD, LARGER TEXT & ICONS)
-   ========================================================================== */
-.single .content blockquote,
-.content blockquote,
-blockquote,
-.custom-quote,
-.admonition.quote {
-    position: relative !important;
-    font-family: "Lora", Georgia, serif !important;
-    color: #1e293b !important;
-    text-align: left !important;
-    border: none !important;
-    border-left: none !important;
-    padding: 0.5rem 0 !important;
-    margin: 2rem 0 !important;
-    font-size: 1.38rem !important;
-    font-weight: 500 !important;
-    line-height: 1.8 !important;
-    font-style: normal !important;
-    background-color: transparent !important;
-    border-radius: 0 !important;
-    box-sizing: border-box !important;
-    box-shadow: none !important;
-
-    [theme=dark] & {
-        color: #e2e8f0 !important;
-        background-color: transparent !important;
-        border: none !important;
-    }
-
-    .quote-content {
-        margin: 0 !important;
-        font-family: "Lora", Georgia, serif !important;
-        font-size: 1.38rem !important;
-        font-weight: 500 !important;
-        line-height: 1.8 !important;
-        color: #1e293b !important;
-        font-style: italic !important;
-
-        [theme=dark] & {
-            color: #e2e8f0 !important;
-        }
-
-        .quote-text {
-            font-style: italic !important;
-            font-weight: 500 !important;
-
-            p {
-                display: inline !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                font-style: italic !important;
-                font-weight: 500 !important;
-                font-size: inherit !important;
-                line-height: inherit !important;
-                color: inherit !important;
-            }
-
-            p + p {
-                display: block !important;
-                margin-top: 0.85rem !important;
-            }
-        }
-
-        .quote-mark {
-            font-family: Georgia, "Times New Roman", serif !important;
-            font-style: normal !important;
-            font-weight: 700 !important;
-            font-size: 2.6em !important;
-            line-height: 0 !important;
-            color: #94a3b8 !important;
-            display: inline !important;
-            user-select: none !important;
-            vertical-align: -0.22em !important;
-
-            [theme=dark] & {
-                color: #64748b !important;
-            }
-
-            &.quote-open {
-                margin-right: 0.4rem !important;
-            }
-
-            &.quote-close {
-                margin-left: 0.35rem !important;
-            }
-        }
-    }
-
-    p, .admonition-content {
-        margin-top: 0 !important;
-        margin-bottom: 0.5rem !important;
-        line-height: 1.8 !important;
-        color: inherit !important;
-        font-style: italic !important;
-        font-size: inherit !important;
-        padding: 0 !important;
-
-        &:last-child {
-            margin-bottom: 0 !important;
-        }
-    }
-
-    strong {
-        color: #0f172a !important;
-        font-weight: 600 !important;
-
-        [theme=dark] & {
-            color: #f8fafc !important;
-        }
-    }
-
-    footer, .quote-footer {
-        font-style: normal !important;
-        text-align: left !important;
-        font-weight: 400 !important;
-        color: #64748b !important;
-        font-size: 1.05rem !important;
-        margin-top: 0.95rem !important;
-        padding: 0 !important;
-        border: none !important;
-        background: transparent !important;
-
-        [theme=dark] & {
-            color: #94a3b8 !important;
-        }
-
-        cite {
-            font-style: normal !important;
-            font-weight: 500 !important;
-            color: inherit !important;
-        }
-    }
-
-    .admonition-title {
-        display: none !important;
-    }
-}
+/* Note: Quote styling is unified in modules/_quotes_and_content.scss */
 
 /* ==========================================================================
    DESKTOP HEADER & SEARCH: BALANCED SPACING & VERTICAL DIVIDER

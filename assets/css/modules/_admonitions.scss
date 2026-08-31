@@ -15,7 +15,7 @@ body .page .single .content .admonition,
   transition: background-color 0.2s ease, border-color 0.2s ease !important;
 
   .admonition-title {
-    font-family: "Lora", Georgia, serif !important;
+    font-family: var(--font-serif) !important;
     font-weight: 600 !important;
     font-size: 0.95rem !important;
     padding: 0.65rem 1.15rem 0.65rem 2.4rem !important;
@@ -45,7 +45,7 @@ body .page .single .content .admonition,
   .admonition-content {
     padding: 0.95rem 1.15rem !important;
     margin: 0 !important;
-    font-family: "Lora", Georgia, serif !important;
+    font-family: var(--font-serif) !important;
     font-size: 1rem !important;
     line-height: 1.75 !important;
     color: #334155 !important; // Slate-700 readable neutral text for light mode
