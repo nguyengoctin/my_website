@@ -50,8 +50,10 @@
             class="lazyload{{ with .Class }} {{ . }}{{ end }}"
             src="{{ $loading.RelPermalink }}"
             data-src="{{ $src | safeURL }}"
+            {{- if or (ne $small $src) (ne $large $src) }}
             data-srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
             data-sizes="auto"
+            {{- end }}
             alt="{{ $alt }}"
             loading="lazy"
             decoding="async"
@@ -63,8 +65,10 @@
         class="lazyload{{ with .Class }} {{ . }}{{ end }}"
         src="{{ $loading.RelPermalink }}"
         data-src="{{ $src | safeURL }}"
+        {{- if or (ne $small $src) (ne $large $src) }}
         data-srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
         data-sizes="auto"
+        {{- end }}
         alt="{{ $alt }}"
         title="{{ .Title | default $alt }}"
         loading="lazy"
