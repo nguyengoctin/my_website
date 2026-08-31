@@ -5,9 +5,11 @@ title: "Nguyen Ngoc Tin"
 ## ABOUT
 
 <div class="bio-container">
+  <div class="bio-text">
+    <p>I'm Nguyễn Ngọc Tín, a software builder and Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
+    <p>I’m deeply curious about how software works under the hood — from database internals to API architecture. My focus centers on robust backend engineering, scalable architectures, and practical AI/LLM integration.</p>
+  </div>
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
-  <p>I'm Nguyễn Ngọc Tín, an Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
-  <p>I’m deeply curious about how software works under the hood — from database internals to API architecture. My goal is to become an AI Engineer, bridging the gap between scalable backend systems and practical AI/LLM applications.</p>
 </div>
 
 **What I'm focused on:**
@@ -20,8 +22,11 @@ Currently building practical side-projects, deep-diving into backend performance
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
 
 <div class="about-contact-row" style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
-  <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email me">
-    <i class="fas fa-envelope"></i> ngoctin.work@gmail.com
+  <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="contact-chip" title="Download 1-Page PDF Resume">
+    <i class="fas fa-file-pdf"></i> Resume (PDF)
+  </a>
+  <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com">
+    <i class="fas fa-envelope"></i> Email
   </a>
   <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile">
     <i class="fab fa-github"></i> GitHub
@@ -94,8 +99,6 @@ When I’m not writing code, you’ll probably find me reading technical books, 
       <h3 class="timeline-title">Bachelor of Information Technology</h3>
       <div class="timeline-desc">
         Major: Information Systems<br>
-        Cumulative GPA: 2.96 / 4.0 (7.58 / 10.0)<br>
-        TOEIC: 625 / 990<br>
         Studied core foundations in Software Engineering, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
       </div>
       <div class="timeline-tags">
@@ -105,31 +108,6 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">C++</span>
         <span class="timeline-tag">PostgreSQL</span>
         <span class="timeline-tag">Linux</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Education 2: Self-learning -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/study-icon-25.webp" alt="Self-learning Icon" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-org">Self-learning</span>
-        <span class="timeline-time">2021 — present</span>
-      </div>
-    </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">Computer Science and AI Engineering</h3>
-      <div class="timeline-desc">
-        Self-directed deep learning focusing on backend system design, microservices, cloud-native architectures, vector databases, and applied LLM agentic workflows.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">System Design</span>
-        <span class="timeline-tag">Backend Architecture</span>
-        <span class="timeline-tag">FastAPI</span>
-        <span class="timeline-tag">LLMs</span>
-        <span class="timeline-tag">RAG</span>
-        <span class="timeline-tag">AWS</span>
       </div>
     </div>
   </div>
@@ -156,7 +134,12 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Online Ordering Platform (Zalo Mini App)</a>
       </h3>
       <div class="timeline-desc">
-        A full-stack F&B online ordering system engineered for the Zalo Mini App ecosystem. Features menu tiering, immutable order snapshotting, automated VietQR dynamic payment generation, GPS Haversine shipping calculation, and an enterprise Django Admin portal.
+        A full-stack food ordering platform tailored for the Zalo Mini App ecosystem.
+        <ul>
+          <li><strong>Problem:</strong> Seamless ordering and payment flow within Zalo webview constraints without relying on third-party payment gateways.</li>
+          <li><strong>Architecture:</strong> Django REST API with immutable order snapshotting and automated VietQR dynamic payment generation.</li>
+          <li><strong>Constraints:</strong> Real-time Haversine GPS delivery calculation and strict bundle size optimization for the Zalo container runtime.</li>
+        </ul>
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Zalo Mini App</span>
@@ -188,7 +171,12 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/lexi-ai-english-tutor/">Lexi – AI-Powered English Speaking Tutor</a>
       </h3>
       <div class="timeline-desc">
-        An interactive AI English speaking platform powered by a serverless backend. Designed and implemented an event-driven serverless architecture utilizing AWS SAM, API Gateway, Lambda, and DynamoDB Single-Table schema for real-time AI audio streaming and contextual grammar analysis.
+        An interactive AI English speaking platform powered by an AWS serverless backend.
+        <ul>
+          <li><strong>Problem:</strong> Real-time voice conversation practice requiring low latency, natural contextual responses, and cost efficiency.</li>
+          <li><strong>Architecture:</strong> Event-driven architecture on AWS SAM, API Gateway, Lambda Python, Amazon Bedrock Claude, and DynamoDB Single-Table schema.</li>
+          <li><strong>Constraints:</strong> Mitigating serverless cold-start latency and handling bidirectional audio streaming synchronization.</li>
+        </ul>
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -220,7 +208,12 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/bilingual-movie-learning-platform/">Bilingual Movie-Based English Learning Platform</a>
       </h3>
       <div class="timeline-desc">
-        A full-stack language learning web platform that synchronizes bilingual subtitles with video dialogues. Integrates Google Gemini API to generate contextual grammar explanations and vocabulary definitions directly from movie transcripts.
+        A full-stack language learning web platform that synchronizes bilingual subtitles with video dialogues.
+        <ul>
+          <li><strong>Problem:</strong> Fragmented language learning from movies lacking real-time grammar breakdown and contextual vocabulary lookup.</li>
+          <li><strong>Architecture:</strong> FastAPI backend synchronizing subtitle timestamp offsets and querying Google Gemini API for on-the-fly grammatical analysis.</li>
+          <li><strong>Constraints:</strong> Frame-accurate subtitle track synchronization across diverse video media containers.</li>
+        </ul>
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -252,7 +245,12 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/personal-hugo-technical-blog/">Personal Technical Notes and Engineering Portfolio</a>
       </h3>
       <div class="timeline-desc">
-        High-performance personal technical notes platform built with Hugo static site generator. Features a custom SCSS editorial design system, client-side Lunr.js search, interactive flipbook cheatsheets, and automated CI/CD deployment.
+        A high-performance personal technical notes and engineering portfolio platform.
+        <ul>
+          <li><strong>Problem:</strong> Building a distraction-free, ultra-fast digital garden for deep technical notes without bulky CMS runtime overhead.</li>
+          <li><strong>Architecture:</strong> Hugo static site engine paired with a modular SCSS design system, client-side Lunr.js indexing, and automated GitHub Actions CI/CD.</li>
+          <li><strong>Constraints:</strong> Achieving perfect 100/100 Lighthouse performance metrics with zero heavy client framework dependencies.</li>
+        </ul>
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Hugo</span>

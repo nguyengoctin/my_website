@@ -173,82 +173,75 @@ blockquote,
 }
 
 // ==========================================================
-// 3. EDITORIAL BIO FLOATING AVATAR (Chip Huyen Style)
+// 3. EDITORIAL BIO FLEX AVATAR
 // ==========================================================
 .bio-container {
-  display: block !important;
-  position: relative !important;
-  clear: both !important;
-  margin-bottom: 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  margin-bottom: 1.5rem !important;
 
-  p {
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 1.05rem !important;
-    line-height: 1.75 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0.9rem !important;
-    color: #2c3e50 !important;
+  .bio-text {
+    flex: 1 1 auto !important;
 
-    [theme=dark] & {
-      color: #e2e8f0 !important;
+    p {
+      font-family: "Lora", Georgia, serif !important;
+      font-size: 1.05rem !important;
+      line-height: 1.75 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0.9rem !important;
+      color: #2c3e50 !important;
+
+      [theme=dark] & {
+        color: #e2e8f0 !important;
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
     }
-
-    &:last-child {
-      margin-bottom: 0 !important;
-    }
   }
 
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-.bio-avatar,
-img.bio-avatar {
-  float: right !important;
-  width: 195px !important;
-  height: 195px !important;
-  max-width: 195px !important;
-  min-width: 195px !important;
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
-  object-position: center 15% !important;
-  border-radius: 50% !important;
-  shape-outside: circle(50%) !important;
-  margin: 0.1rem 0 1rem 1.6rem !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1) !important;
-  display: block !important;
-  clear: none !important;
-  border: none !important;
-
-  [theme=dark] & {
-    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5) !important;
-  }
-
-  @media (max-width: 768px) {
+  .bio-avatar,
+  img.bio-avatar {
+    flex: 0 0 155px !important;
     width: 155px !important;
     height: 155px !important;
     max-width: 155px !important;
     min-width: 155px !important;
-    margin: 0.1rem 0 0.8rem 1.2rem !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center 15% !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1) !important;
+    display: block !important;
+    float: none !important;
+    margin: 0 !important;
+    border: none !important;
+
+    [theme=dark] & {
+      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5) !important;
+    }
   }
 
-  @media (max-width: 600px) {
-    width: 140px !important;
-    height: 140px !important;
-    max-width: 140px !important;
-    min-width: 140px !important;
-    margin: 0.1rem 0 0.65rem 1rem !important;
-  }
+  @media (max-width: 640px) {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
 
-  @media (max-width: 420px) {
-    width: 125px !important;
-    height: 125px !important;
-    max-width: 125px !important;
-    min-width: 125px !important;
-    margin: 0.05rem 0 0.5rem 0.8rem !important;
+    .bio-text {
+      text-align: left !important;
+    }
+
+    .bio-avatar,
+    img.bio-avatar {
+      flex: 0 0 135px !important;
+      width: 135px !important;
+      height: 135px !important;
+      max-width: 135px !important;
+      min-width: 135px !important;
+    }
   }
 }
 
