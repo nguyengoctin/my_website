@@ -13,7 +13,8 @@
 
 {{- $options = dict "noClasses" false "lineNos" false | merge $options -}}
 {{- $result := transform.Highlight $content $lang $options -}}
-<div class="code-block open{{ if $lineNos }} code-line-numbers{{ end }}{{ if $isProseLang }} is-wrap-block{{ end }}" style="counter-reset: code-block {{ sub $lineNoStart 1 }};">
+{{- $counterReset := sub $lineNoStart 1 -}}
+<div class="code-block open{{ if $lineNos }} code-line-numbers{{ end }}{{ if $isProseLang }} is-wrap-block{{ end }}" {{ printf `style="counter-reset: code-block %d;"` $counterReset | safeHTMLAttr }}>
     <div class="code-header language-{{ $lang }}">
         <span class="code-title"><i class="fas fa-terminal fa-fw" aria-hidden="true"></i><span class="code-lang-text">{{ $lang | default "code" | upper }}</span></span>
         {{ if $copy }}<span class="copy" title="{{ T "copyToClipboard" | default "Copy" }}" aria-label="Copy"><i class="far fa-copy" aria-hidden="true"></i></span>{{ end }}
