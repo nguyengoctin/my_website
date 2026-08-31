@@ -217,7 +217,13 @@ hr {
       }
     }
 
-    &.theme-switch:hover {
+    &.theme-switch:hover,
+    &.search,
+    &.search:hover,
+    .search-button,
+    .search-button:hover,
+    .search-toggle,
+    .search-toggle:hover {
       text-decoration: none !important;
     }
 

@@ -658,6 +658,18 @@ body.mobile-menu-open {
     overflow: hidden !important;
 }
 
+/* Disable dark blurry overlay (#mask) on desktop search to keep reading context clean */
+@media (min-width: 681px) {
+    #mask,
+    .blur #mask,
+    body.blur #mask {
+        display: none !important;
+        background: transparent !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
 /* ==========================================================================
    SEARCH DROPDOWN ALIGNMENT: 100% PRECISELY ALIGNED TO 850px COLUMN
    ========================================================================== */
