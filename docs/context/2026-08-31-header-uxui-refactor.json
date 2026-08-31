@@ -1,0 +1,15 @@
+{
+  "taskId": "2026-08-31-header-uxui-refactor",
+  "title": "Header UX/UI Refactor - Smart Sticky, Search Hotkey & Mobile Drawer Polish",
+  "scope": [
+    "hugo.toml",
+    "layouts/partials/header.html",
+    "assets/css/_custom.scss"
+  ],
+  "goals": [
+    "Enable Smart Sticky header mode (auto-hide on scroll down, auto-reveal on scroll up) for maximal reading focus.",
+    "Add keyboard shortcut (Cmd+K / Ctrl+K / slash) support with clean visual hint for search.",
+    "Improve Mobile Drawer UX with body scroll-lock and polished touch targets.",
+    "Refine navbar active indicator and micro-interactions."
+  ]
+}

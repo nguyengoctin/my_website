@@ -137,7 +137,7 @@ enableEmoji = true
 
   # Header config
   [params.header]
-    desktopMode = "fixed"
+    desktopMode = "auto"
     mobileMode = "auto"
     [params.header.title]
       logo = ""
