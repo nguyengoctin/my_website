@@ -1,7 +1,7 @@
 ---
 pinned: true
 title: "Các Chuẩn Mực Khi Viết Prompt: Từ Yêu Cầu Mơ Hồ Đến Một Bản Đặc Tả Rõ Ràng"
-date: 2026-08-31T13:30:00+07:00
+date: 2026-08-31T13:20:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"
 description: "Prompt tốt không cần trông phức tạp hay sưu tầm template bí thuật. Phân tích cách tiếp cận prompt như một bản đặc tả kỹ thuật với Goal, Context, Task, Constraints, Output và vòng lặp kiểm chứng kết quả."
