@@ -10,6 +10,14 @@
   margin-bottom: 2rem;
   box-shadow: none;
 
+  a {
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
   [theme=dark] & {
     box-shadow: none;
   }
@@ -73,7 +81,7 @@
   .timeline-org {
     display: block;
     width: 100%;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "Lora", Georgia, serif !important;
     font-size: 0.95rem;
     font-weight: 600;
     color: #111111;
@@ -119,6 +127,7 @@
       color: inherit !important;
       font-weight: 500 !important;
       text-decoration: none !important;
+      transition: color 0.15s ease !important;
 
       &:hover {
         color: #1337a6 !important;
@@ -133,7 +142,7 @@
   }
 
   .timeline-desc {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-family: "Lora", Georgia, serif !important;
     font-size: 0.95rem !important;
     line-height: 1.6 !important;
     color: #475569 !important;
@@ -219,6 +228,7 @@ body a.btn-action {
     font-size: 1rem !important;
     color: inherit !important;
     transition: color 0.2s ease !important;
+    text-decoration: none !important;
   }
 
   .chip-sub {
@@ -233,6 +243,8 @@ body a.btn-action {
     color: #1337a6 !important;
     box-shadow: none !important;
     transform: none !important;
+    text-decoration: underline dotted !important;
+    text-underline-offset: 4px;
 
     span {
       text-decoration: underline dotted !important;
@@ -256,6 +268,13 @@ body a.btn-action {
       background: transparent !important;
       border-color: transparent !important;
       box-shadow: none !important;
+      text-decoration: underline dotted !important;
+      text-underline-offset: 4px;
+
+      span {
+        text-decoration: underline dotted !important;
+        text-underline-offset: 4px;
+      }
     }
   }
 }
@@ -268,10 +287,12 @@ body a.btn-action {
 .tag-badge,
 .post-tags a,
 .post-footer .post-tags a,
+.post-footer-tags a,
 .summary .post-tags a,
 .tag-cloud-tags a,
 body a.tag-pill,
 body .post-tags a,
+body .post-footer-tags a,
 body .timeline-tag,
 body .tag-badge {
   display: inline-flex !important;
@@ -317,6 +338,8 @@ body .tag-badge {
     &:hover {
       background: transparent !important;
       color: #93c5fd !important;
+      text-decoration: underline dotted !important;
+      text-underline-offset: 4px;
     }
   }
 }
@@ -328,7 +351,7 @@ body .tag-badge {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.35rem !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-family: "Lora", Georgia, serif !important;
   font-size: 0.72rem !important;
   font-weight: 600 !important;
   padding: 0.15rem 0.6rem !important;
@@ -365,3 +388,172 @@ body .tag-badge {
     }
   }
 }
+
+// ==========================================================
+// 5. PINNED POST ICON (.pinned-post-icon)
+// ==========================================================
+.pinned-post-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #f43f5e !important;
+  font-size: 0.9em !important;
+  vertical-align: middle !important;
+  margin-left: 0.4rem !important;
+  filter: drop-shadow(0 1px 2px rgba(244, 63, 94, 0.25));
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  i {
+    transform: rotate(35deg);
+    color: inherit !important;
+  }
+
+  &:hover {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  [theme=dark] & {
+    color: #fb7185 !important;
+    filter: drop-shadow(0 1px 4px rgba(251, 113, 133, 0.35));
+  }
+}
+
+// ==========================================================
+// 6. SEMANTIC CONTENT & LEGEND ICONS
+// ==========================================================
+.content,
+.single .content,
+.post-content,
+.archive,
+article {
+  // Tiện ích khuyên dùng (Star / Recommended)
+  .ti-star,
+  .ti-star-filled,
+  .fa-star,
+  .fas.fa-star {
+    color: #f59e0b !important;
+    vertical-align: -0.06em;
+    filter: drop-shadow(0 1px 2px rgba(245, 158, 11, 0.2));
+
+    [theme=dark] & {
+      color: #fbbf24 !important;
+      filter: drop-shadow(0 1px 3px rgba(251, 191, 36, 0.3));
+    }
+  }
+
+  // Tiện ích trình duyệt (Browser Extensions)
+  .fa-puzzle-piece,
+  .fas.fa-puzzle-piece,
+  .ti-puzzle,
+  .ti-puzzle-filled {
+    color: #8b5cf6 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #a78bfa !important;
+    }
+  }
+
+  // Ứng dụng hoặc Dịch vụ Web (Web Apps & Services)
+  .ti-world,
+  .ti-world-www,
+  .fa-globe,
+  .fas.fa-globe {
+    color: #0284c7 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #38bdf8 !important;
+    }
+  }
+
+  // Xử lý Media / Ảnh / Video (Media Processing)
+  .ti-photo,
+  .ti-photo-filled,
+  .fa-image,
+  .fas.fa-image {
+    color: #10b981 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #34d399 !important;
+    }
+  }
+
+  // Tiện ích Lập trình (Programming / Code)
+  .ti-code,
+  .fa-code,
+  .fas.fa-code {
+    color: #6366f1 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #818cf8 !important;
+    }
+  }
+
+  // Trợ lý AI và Nghiên cứu (AI Assistants & Research)
+  .ti-robot,
+  .ti-robot-face,
+  .ti-sparkles,
+  .fa-robot,
+  .fas.fa-robot {
+    color: #d946ef !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #e879f9 !important;
+    }
+  }
+
+  // GitHub Repository
+  .fa-github,
+  .fab.fa-github,
+  .ti-brand-github,
+  .ti-brand-github-filled {
+    color: #475569 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #cbd5e1 !important;
+    }
+  }
+
+  // Sách hoặc Tài liệu (Books & Docs)
+  .fa-book,
+  .fas.fa-book,
+  .ti-book,
+  .ti-book-2 {
+    color: #d97706 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #fbbf24 !important;
+    }
+  }
+
+  // Video hoặc YouTube
+  .fa-youtube,
+  .fab.fa-youtube,
+  .ti-brand-youtube,
+  .ti-brand-youtube-filled {
+    color: #ef4444 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #f87171 !important;
+    }
+  }
+
+  // Khóa học (Courses / Education)
+  .fa-graduation-cap,
+  .fas.fa-graduation-cap,
+  .ti-school {
+    color: #0d9488 !important;
+    vertical-align: -0.06em;
+
+    [theme=dark] & {
+      color: #2dd4bf !important;
+    }
+  }
+}
+

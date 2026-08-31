@@ -11,12 +11,38 @@
     </ul>
     {{- end -}}
 
-    {{- /* Share & Back to Top */ -}}
+    {{- /* Share and Back to Top */ -}}
     <div class="post-footer-actions">
         <div class="post-footer-share">
             <span class="share-label">Share this post on:</span>
             <div class="share-icons">
-                {{- partial "plugin/share.html" . -}}
+                <a href="https://x.com/intent/post?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on X" aria-label="Share this post on X">
+                    <i class="ti ti-brand-x"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on Facebook" aria-label="Share this post on Facebook">
+                    <i class="ti ti-brand-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on LinkedIn" aria-label="Share this post on LinkedIn">
+                    <i class="ti ti-brand-linkedin"></i>
+                </a>
+                <a href="https://t.me/share/url?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on Telegram" aria-label="Share this post on Telegram">
+                    <i class="ti ti-brand-telegram"></i>
+                </a>
+                <a href="https://reddit.com/submit?url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on Reddit" aria-label="Share this post on Reddit">
+                    <i class="ti ti-brand-reddit"></i>
+                </a>
+                <a href="https://www.threads.net/intent/post?text={{ printf "%s %s" .Title .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on Threads" aria-label="Share this post on Threads">
+                    <i class="ti ti-brand-threads"></i>
+                </a>
+                <a href="https://bsky.app/intent/compose?text={{ printf "%s %s" .Title .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on BlueSky" aria-label="Share this post on BlueSky">
+                    <i class="ti ti-brand-bluesky"></i>
+                </a>
+                <a href="https://wa.me/?text={{ printf "%s %s" .Title .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post via WhatsApp" aria-label="Share this post via WhatsApp">
+                    <i class="ti ti-brand-whatsapp"></i>
+                </a>
+                <a href="https://news.ycombinator.com/submitlink?u={{ .Permalink | urlquery }}&t={{ .Title | urlquery }}" target="_blank" rel="noopener noreferrer" title="Share this post on Hacker News" aria-label="Share this post on Hacker News">
+                    <i class="ti ti-brand-ycombinator"></i>
+                </a>
             </div>
         </div>
 
@@ -131,19 +157,30 @@
 .post-footer-share .share-icons {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 0.75rem; /* Tăng khoảng cách vì icon to hơn */
+    gap: 0.85rem;
 }
 
 .post-footer-share .share-icons a {
-    font-size: 1.6rem !important;
+    font-size: 1.35rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     color: var(--clr-text-2, #64748b) !important;
-    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none !important;
+    border: none !important;
+    transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .post-footer-share .share-icons a:hover {
-    color: var(--clr-primary, #4d74eb) !important;
+    color: var(--clr-text, #0f172a) !important;
+    text-decoration: none !important;
     transform: translateY(-2px);
+}
+
+[theme=dark] .post-footer-share .share-icons a:hover {
+    color: #f8fafc !important;
 }
 
 .back-to-top-btn {

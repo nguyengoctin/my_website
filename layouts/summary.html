@@ -21,8 +21,8 @@
     <h1 class="single-title" itemprop="name headline">
         <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
         {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
-            <span class="pinned-post-icon" title="Bài viết được ghim" style="display: inline-flex; align-items: center; margin-left: 0.45rem; font-size: 0.85em; color: #ec4899; vertical-align: middle;">
-                <i class="ti ti-pin" style="transform: rotate(35deg);" aria-hidden="true"></i>
+            <span class="pinned-post-icon" title="Bài viết được ghim">
+                <i class="fas fa-thumbtack" aria-hidden="true"></i>
             </span>
         {{- end -}}
     </h1>

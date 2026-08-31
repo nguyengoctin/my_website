@@ -233,11 +233,11 @@
                             ${categoryText ? `<span class="result-cat-badge">${categoryText}</span>` : ''}
                         </div>
                         <div class="result-item-meta">
-                            ${item.date ? `<span class="result-date"><i class="far fa-calendar-alt"></i> ${item.date}</span>` : ''}
-                            ${item.tags.length > 0 ? `<span class="result-tags"><i class="fas fa-tags"></i> ${item.tags.slice(0, 3).join(', ')}</span>` : ''}
+                            ${item.date ? `<span class="result-date"><i class="ti ti-calendar"></i> ${item.date}</span>` : ''}
+                            ${item.tags.length > 0 ? `<span class="result-tags"><i class="ti ti-tags"></i> ${item.tags.slice(0, 3).join(', ')}</span>` : ''}
                         </div>
                     </div>
-                    <div class="result-item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    <div class="result-item-arrow"><i class="ti ti-chevron-right"></i></div>
                 </li>
             `;
         });
@@ -317,6 +317,14 @@
         searchModal.classList.add('active');
         searchModal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('search-modal-open');
+
+        // Tự động đóng mobile menu nếu đang mở
+        const menuMobile = document.getElementById('menu-mobile');
+        const menuToggleMobile = document.getElementById('menu-toggle-mobile');
+        if (menuMobile) menuMobile.classList.remove('active');
+        if (menuToggleMobile) menuToggleMobile.classList.remove('active');
+        document.body.classList.remove('mobile-menu-open');
+        document.body.classList.remove('blur');
 
         setTimeout(() => {
             if (searchInput) {

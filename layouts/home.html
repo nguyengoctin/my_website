@@ -37,9 +37,9 @@
                 {{- .Render "summary" -}}
             {{- end -}}
             
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="/posts/" class="view-all-posts-link" style="display: inline-flex; align-items: center; padding: 0.6rem 1.2rem; background: var(--clr-surface-2, #f1f5f9); color: var(--clr-text, #111); text-decoration: none; border-radius: 6px; font-weight: 500; font-size: 0.95rem; border: 1px solid var(--clr-border, #e2e8f0); transition: all 0.2s ease;">
-                    View all posts <span class="sys-icon" style="margin-left: 0.4rem;"><i class="ti ti-arrow-right"></i></span>
+            <div class="view-all-posts-wrap">
+                <a href="/posts/" class="view-all-posts-link">
+                    View all posts <span class="sys-icon"><i class="ti ti-arrow-right"></i></span>
                 </a>
             </div>
         {{- end -}}

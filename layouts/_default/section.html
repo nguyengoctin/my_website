@@ -31,15 +31,15 @@
             {{- end -}}
 
             {{- with $pinnedPages -}}
-                <h3 class="group-title" style="color: #ec4899; display: flex; align-items: center; gap: 0.4rem;">
-                    <i class="ti ti-pin" style="font-size: 0.85em; transform: rotate(35deg);" aria-hidden="true"></i> Ghim
+                <h3 class="group-title" style="display: flex; align-items: center; gap: 0.4rem;">
+                    <i class="fas fa-thumbtack" style="font-size: 0.85em; transform: rotate(35deg); color: #f43f5e;" aria-hidden="true"></i> Ghim
                 </h3>
                 {{- range . -}}
                     <article class="archive-item">
                         <a href="{{ .RelPermalink }}" class="archive-item-link">
                             {{- .Title | emojify -}}
-                            <span class="pinned-post-icon" title="Bài viết được ghim" style="margin-left: 0.35rem; font-size: 0.85em; color: #ec4899; display: inline-flex; align-items: center; vertical-align: middle;">
-                                <i class="ti ti-pin" style="transform: rotate(35deg); color: #ec4899;" aria-hidden="true"></i>
+                            <span class="pinned-post-icon" title="Bài viết được ghim">
+                                <i class="fas fa-thumbtack" aria-hidden="true"></i>
                             </span>
                         </a>
                         <span class="archive-item-date">

@@ -132,31 +132,33 @@ blockquote,
 // ==========================================================
 .single .content {
   font-family: "Lora", Georgia, serif !important;
-  font-size: 1.05rem !important;
-  line-height: 1.75 !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
+  word-spacing: 0.04em;
 
   p {
     margin-top: 0 !important;
-    margin-bottom: 1.05rem !important;
-    line-height: 1.75 !important;
+    margin-bottom: 1.25rem !important;
+    line-height: 1.85 !important;
+    word-spacing: 0.04em;
   }
 
   p + ul,
   p + ol {
-    margin-top: -0.45rem !important;
+    margin-top: -0.5rem !important;
   }
 
   ul, ol {
-    margin-top: 0.35rem !important;
-    margin-bottom: 1.05rem !important;
-    padding-left: 1.4rem !important;
+    margin-top: 0.4rem !important;
+    margin-bottom: 1.25rem !important;
+    padding-left: 1.5rem !important;
 
     li {
-      margin-bottom: 0.35rem !important;
-      line-height: 1.7 !important;
+      margin-bottom: 0.45rem !important;
+      line-height: 1.8 !important;
 
       p {
-        margin-bottom: 0.35rem !important;
+        margin-bottom: 0.45rem !important;
       }
 
       &:last-child {
@@ -173,24 +175,48 @@ blockquote,
 }
 
 // ==========================================================
-// 3. EDITORIAL BIO FLEX AVATAR
+// 3. EDITORIAL BIO FLOAT AVATAR (Giàn trải chữ xung quanh avatar)
 // ==========================================================
 .bio-container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 2rem !important;
-  margin-bottom: 1.5rem !important;
+  display: block !important;
+  margin-bottom: 1.6rem !important;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .bio-avatar,
+  img.bio-avatar {
+    float: right !important;
+    width: 175px !important;
+    height: 175px !important;
+    max-width: 175px !important;
+    min-width: 175px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center 15% !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    display: block !important;
+    margin: 0.15rem 0 1rem 1.75rem !important;
+    border: none !important;
+
+    [theme=dark] & {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important;
+    }
+  }
 
   .bio-text {
-    flex: 1 1 auto !important;
+    display: block !important;
 
     p {
       font-family: "Lora", Georgia, serif !important;
-      font-size: 1.05rem !important;
-      line-height: 1.75 !important;
+      font-size: 1.08rem !important;
+      line-height: 1.85 !important;
       margin-top: 0 !important;
-      margin-bottom: 0.9rem !important;
+      margin-bottom: 1.15rem !important;
       color: #2c3e50 !important;
 
       [theme=dark] & {
@@ -203,44 +229,39 @@ blockquote,
     }
   }
 
-  .bio-avatar,
-  img.bio-avatar {
-    flex: 0 0 155px !important;
-    width: 155px !important;
-    height: 155px !important;
-    max-width: 155px !important;
-    min-width: 155px !important;
-    aspect-ratio: 1 / 1 !important;
-    object-fit: cover !important;
-    object-position: center 15% !important;
-    border-radius: 50% !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1) !important;
-    display: block !important;
-    float: none !important;
-    margin: 0 !important;
-    border: none !important;
-
-    [theme=dark] & {
-      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5) !important;
-    }
-  }
-
   @media (max-width: 640px) {
-    flex-direction: column-reverse !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-
-    .bio-text {
-      text-align: left !important;
-    }
+    margin-bottom: 1.35rem !important;
 
     .bio-avatar,
     img.bio-avatar {
-      flex: 0 0 135px !important;
-      width: 135px !important;
-      height: 135px !important;
-      max-width: 135px !important;
-      min-width: 135px !important;
+      width: 125px !important;
+      height: 125px !important;
+      max-width: 125px !important;
+      min-width: 125px !important;
+      margin: 0.1rem 0 0.65rem 1.15rem !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .bio-text p {
+      font-size: 1.02rem !important;
+      line-height: 1.78 !important;
+      margin-bottom: 0.95rem !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .bio-avatar,
+    img.bio-avatar {
+      width: 110px !important;
+      height: 110px !important;
+      max-width: 110px !important;
+      min-width: 110px !important;
+      margin: 0.1rem 0 0.5rem 0.85rem !important;
+    }
+
+    .bio-text p {
+      font-size: 0.98rem !important;
+      line-height: 1.72 !important;
     }
   }
 }
@@ -248,9 +269,10 @@ blockquote,
 // ==========================================================
 // 4. UNIFIED INLINE LINK SYSTEM
 // ==========================================================
-a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
-.single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill) {
+a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a),
+.single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a) {
   color: #4d74eb !important;
+  text-decoration: none !important;
   transition: color 0.2s ease;
 
   [theme=dark] & {
@@ -259,10 +281,23 @@ a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-
 
   &:hover {
     color: #1337a6 !important;
-    text-decoration: underline !important;
+    text-decoration: underline dotted !important;
+    text-underline-offset: 4px;
 
     [theme=dark] & {
       color: #93c5fd !important;
     }
   }
 }
+
+// Ngăn icon bị gạch chân lệch so với text khi link chứa icon
+a i:not(.theme-icon-dark i):not(.theme-icon-light i),
+a .sys-icon:not(.theme-icon-dark):not(.theme-icon-light),
+a .details-icon,
+a [class^="ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i),
+a [class*=" ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i) {
+  display: inline-block;
+  text-decoration: none !important;
+  vertical-align: middle;
+}
+

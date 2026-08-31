@@ -21,25 +21,22 @@
     <h1 class="single-title" itemprop="name headline">
         <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
         {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
-            <span class="pinned-post-icon" title="Bài viết được ghim" style="display: inline-flex; align-items: center; margin-left: 0.45rem; font-size: 0.85em; color: #ec4899; vertical-align: middle;">
-                <i class="ti ti-pin" style="transform: rotate(35deg); color: #ec4899;" aria-hidden="true"></i>
+            <span class="pinned-post-icon" title="Bài viết được ghim">
+                <i class="fas fa-thumbtack" aria-hidden="true"></i>
             </span>
         {{- end -}}
     </h1>
 
     {{- /* Meta: Date • Reading Time */ -}}
-    <div class="post-meta" style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-        published on 
-        {{- with .Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format -}}
-            <span class="post-publish" style="color: #64748b;">
-                {{- printf `<time datetime="%v">%v</time>` . . | safeHTML -}}
-            </span>
+    <div class="post-meta">
+        <i class="ti ti-calendar" aria-hidden="true"></i>
+        {{- with .PublishDate.Format "02 Jan, 2006" -}}
+            <time datetime="{{ . }}">{{ . }}</time>
         {{- end -}}
-        &nbsp;·&nbsp;
+        <span>&bull;</span>
         <span class="post-reading-time">
             {{ .ReadingTime }} min read
         </span>
-
     </div>
 
     {{- /* Summary content */ -}}

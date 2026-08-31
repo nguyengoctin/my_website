@@ -225,8 +225,13 @@ enableEmoji = true
       enable = true
       X = true
       Facebook = true
+      Linkedin = true
       Telegram = true
-      Linkedin = false
+      Reddit = true
+      Threads = true
+      Bluesky = true
+      Whatsapp = true
+      HackerNews = true
 
 # Markup configuration in Hugo
 [markup]

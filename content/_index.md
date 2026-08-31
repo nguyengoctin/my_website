@@ -5,11 +5,11 @@ title: "Nguyen Ngoc Tin"
 ## ABOUT
 
 <div class="bio-container">
+  <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
     <p>I'm Nguyễn Ngọc Tín, a software builder and Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
     <p>I’m deeply curious about how software works under the hood — from database internals to API architecture. My focus centers on robust backend engineering, scalable architectures, and practical AI/LLM integration.</p>
   </div>
-  <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
 </div>
 
 **What I'm focused on:**
@@ -21,7 +21,7 @@ Currently building practical side-projects, deep-diving into backend performance
 
 When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
 
-<div class="about-contact-row" style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
+<div class="about-contact-row">
   <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="contact-chip" title="Download 1-Page PDF Resume">
     <i class="ti ti-file-type-pdf"></i> <span>Resume (PDF)</span>
   </a>
@@ -134,12 +134,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Online Ordering Platform (Zalo Mini App)</a>
       </h3>
       <div class="timeline-desc">
-        A full-stack food ordering platform tailored for the Zalo Mini App ecosystem.
-        <ul>
-          <li><strong>Problem:</strong> Seamless ordering and payment flow within Zalo webview constraints without relying on third-party payment gateways.</li>
-          <li><strong>Architecture:</strong> Django REST API with immutable order snapshotting and automated VietQR dynamic payment generation.</li>
-          <li><strong>Constraints:</strong> Real-time Haversine GPS delivery calculation and strict bundle size optimization for the Zalo container runtime.</li>
-        </ul>
+        A full-stack food ordering platform built for the Zalo Mini App ecosystem, featuring automated VietQR dynamic payment generation, real-time GPS distance calculation, and zero third-party gateway dependencies.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Zalo Mini App</span>
@@ -171,12 +166,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/lexi-ai-english-tutor/">Lexi – AI-Powered English Speaking Tutor</a>
       </h3>
       <div class="timeline-desc">
-        An interactive AI English speaking platform powered by an AWS serverless backend.
-        <ul>
-          <li><strong>Problem:</strong> Real-time voice conversation practice requiring low latency, natural contextual responses, and cost efficiency.</li>
-          <li><strong>Architecture:</strong> Event-driven architecture on AWS SAM, API Gateway, Lambda Python, Amazon Bedrock Claude, and DynamoDB Single-Table schema.</li>
-          <li><strong>Constraints:</strong> Mitigating serverless cold-start latency and handling bidirectional audio streaming synchronization.</li>
-        </ul>
+        An interactive, low-latency AI English speaking tutor powered by AWS Serverless and Amazon Bedrock Claude, supporting real-time voice streaming and cost-effective single-table persistence.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -208,12 +198,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/bilingual-movie-learning-platform/">Bilingual Movie-Based English Learning Platform</a>
       </h3>
       <div class="timeline-desc">
-        A full-stack language learning web platform that synchronizes bilingual subtitles with video dialogues.
-        <ul>
-          <li><strong>Problem:</strong> Fragmented language learning from movies lacking real-time grammar breakdown and contextual vocabulary lookup.</li>
-          <li><strong>Architecture:</strong> FastAPI backend synchronizing subtitle timestamp offsets and querying Google Gemini API for on-the-fly grammatical analysis.</li>
-          <li><strong>Constraints:</strong> Frame-accurate subtitle track synchronization across diverse video media containers.</li>
-        </ul>
+        A web platform that turns movies into interactive language lessons with frame-accurate bilingual subtitle synchronization and on-the-fly AI grammar analysis via Google Gemini API.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -245,12 +230,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <a href="/posts/personal-hugo-technical-blog/">Personal Technical Notes and Engineering Portfolio</a>
       </h3>
       <div class="timeline-desc">
-        A high-performance personal technical notes and engineering portfolio platform.
-        <ul>
-          <li><strong>Problem:</strong> Building a distraction-free, ultra-fast digital garden for deep technical notes without bulky CMS runtime overhead.</li>
-          <li><strong>Architecture:</strong> Hugo static site engine paired with a modular SCSS design system, client-side Lunr.js indexing, and automated GitHub Actions CI/CD.</li>
-          <li><strong>Constraints:</strong> Achieving perfect 100/100 Lighthouse performance metrics with zero heavy client framework dependencies.</li>
-        </ul>
+        An ultra-fast, minimalist digital garden and engineering portfolio engineered with Hugo and modular SCSS, delivering a perfect 100/100 Lighthouse score without client-side framework bloat.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Hugo</span>
