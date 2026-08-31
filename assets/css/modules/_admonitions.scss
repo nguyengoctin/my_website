@@ -2,9 +2,10 @@
 // Callouts & Admonitions — Modern Design System (Light & Dark)
 // ==========================================================
 body .page .single .content .admonition,
-.admonition {
+.admonition,
+.gfm-alert {
   border-radius: 8px !important;
-  border-left-width: 4px !important;
+  border-left-width: 3px !important;
   border-left-style: solid !important;
   margin: 1.5rem 0 !important;
   padding: 0 !important;
@@ -17,12 +18,13 @@ body .page .single .content .admonition,
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-weight: 600 !important;
     font-size: 0.95rem !important;
-    padding: 0.65rem 2.2rem 0.65rem 2.4rem !important;
+    padding: 0.65rem 1.15rem 0.65rem 2.4rem !important;
     margin: 0 !important;
     position: relative !important;
     display: block !important;
     line-height: 1.4 !important;
     border-bottom: 1px solid transparent !important;
+    cursor: default !important;
 
     i.icon {
       position: absolute !important;
@@ -36,19 +38,7 @@ body .page .single .content .admonition,
     }
 
     i.details-icon {
-      position: absolute !important;
-      right: 0.85rem !important;
-      top: 50% !important;
-      transform: translateY(-50%) !important;
-      font-size: 0.9rem !important;
-      transition: transform 0.2s ease !important;
-      display: inline-block !important;
-    }
-  }
-
-  &.open .admonition-title {
-    i.details-icon {
-      transform: translateY(-50%) rotate(90deg) !important;
+      display: none !important; // Hide collapsible arrow for clean, open-by-default UX
     }
   }
 
@@ -57,7 +47,8 @@ body .page .single .content .admonition,
     margin: 0 !important;
     font-family: "Lora", Georgia, serif !important;
     font-size: 1rem !important;
-    line-height: 1.7 !important;
+    line-height: 1.75 !important;
+    color: #334155 !important; // Slate-700 readable neutral text for light mode
 
     > *:first-child {
       margin-top: 0 !important;
@@ -65,97 +56,147 @@ body .page .single .content .admonition,
     > *:last-child {
       margin-bottom: 0 !important;
     }
+
+    p {
+      margin: 0.5rem 0 !important;
+      &:first-child { margin-top: 0 !important; }
+      &:last-child { margin-bottom: 0 !important; }
+    }
   }
 
   // --------------------------------------------------------
-  // 1. Light Mode Color Definitions
+  // 1. Light Mode Color Definitions (Tinted Header & Subtle Divider)
   // --------------------------------------------------------
   &.note {
-    background-color: #eff6ff !important;
-    border-left-color: #3b82f6 !important;
-    .admonition-title { background-color: #eff6ff !important; color: #1d4ed8 !important; i.icon { color: #3b82f6 !important; } }
-    .admonition-content { color: #1e3a8a !important; }
+    background-color: #f8faff !important;
+    border-left-color: #60a5fa !important; // Softened blue-400
+    .admonition-title {
+      background-color: #eff6ff !important;
+      color: #1d4ed8 !important;
+      border-bottom-color: rgba(59, 130, 246, 0.15) !important;
+      i.icon { color: #3b82f6 !important; }
+    }
   }
 
   &.tip {
-    background-color: #f0fdf4 !important;
-    border-left-color: #10b981 !important;
-    .admonition-title { background-color: #f0fdf4 !important; color: #047857 !important; i.icon { color: #10b981 !important; } }
-    .admonition-content { color: #064e3b !important; }
+    background-color: #f6fdf9 !important;
+    border-left-color: #34d399 !important; // Softened emerald-400
+    .admonition-title {
+      background-color: #ecfdf5 !important;
+      color: #047857 !important;
+      border-bottom-color: rgba(16, 185, 129, 0.15) !important;
+      i.icon { color: #10b981 !important; }
+    }
   }
 
   &.warning,
   &.attention,
   &.caution {
-    background-color: #fffbeb !important;
-    border-left-color: #f59e0b !important;
-    .admonition-title { background-color: #fffbeb !important; color: #b45309 !important; i.icon { color: #f59e0b !important; } }
-    .admonition-content { color: #78350f !important; }
+    background-color: #fffbeb !important; // Tailwind amber-50
+    border-left-color: #f59e0b !important; // Tailwind amber-500
+    .admonition-title {
+      background-color: #fef3c7 !important; // Tailwind amber-100
+      color: #92400e !important;            // Tailwind amber-800
+      border-bottom-color: rgba(245, 158, 11, 0.2) !important;
+      i.icon { color: #d97706 !important; }
+    }
   }
 
   &.danger,
   &.error {
-    background-color: #fef2f2 !important;
-    border-left-color: #ef4444 !important;
-    .admonition-title { background-color: #fef2f2 !important; color: #b91c1c !important; i.icon { color: #ef4444 !important; } }
-    .admonition-content { color: #7f1d1d !important; }
+    background-color: #fef8f8 !important;
+    border-left-color: #f87171 !important; // Softened red-400
+    .admonition-title {
+      background-color: #fee2e2 !important;
+      color: #b91c1c !important;
+      border-bottom-color: rgba(239, 68, 68, 0.15) !important;
+      i.icon { color: #ef4444 !important; }
+    }
   }
 
   &.info {
-    background-color: #ecfeff !important;
-    border-left-color: #06b6d4 !important;
-    .admonition-title { background-color: #ecfeff !important; color: #0e7490 !important; i.icon { color: #06b6d4 !important; } }
-    .admonition-content { color: #164e63 !important; }
+    background-color: #f5fdff !important;
+    border-left-color: #22d3ee !important; // Softened cyan-400
+    .admonition-title {
+      background-color: #cffafe !important;
+      color: #0e7490 !important;
+      border-bottom-color: rgba(6, 182, 212, 0.15) !important;
+      i.icon { color: #06b6d4 !important; }
+    }
   }
 
   &.success,
   &.done,
   &.check {
-    background-color: #f0fdf4 !important;
-    border-left-color: #22c55e !important;
-    .admonition-title { background-color: #f0fdf4 !important; color: #15803d !important; i.icon { color: #22c55e !important; } }
-    .admonition-content { color: #14532d !important; }
+    background-color: #f6fdf7 !important;
+    border-left-color: #4ade80 !important; // Softened green-400
+    .admonition-title {
+      background-color: #dcfce7 !important;
+      color: #15803d !important;
+      border-bottom-color: rgba(34, 197, 94, 0.15) !important;
+      i.icon { color: #22c55e !important; }
+    }
   }
 
   &.question,
   &.help,
   &.faq {
-    background-color: #f7fee7 !important;
-    border-left-color: #84cc16 !important;
-    .admonition-title { background-color: #f7fee7 !important; color: #4d7c0f !important; i.icon { color: #84cc16 !important; } }
-    .admonition-content { color: #365314 !important; }
+    background-color: #fafef5 !important;
+    border-left-color: #a3e635 !important; // Softened lime-400
+    .admonition-title {
+      background-color: #ecfccb !important;
+      color: #4d7c0f !important;
+      border-bottom-color: rgba(132, 204, 22, 0.15) !important;
+      i.icon { color: #84cc16 !important; }
+    }
   }
 
   &.failure,
   &.fail,
   &.missing {
-    background-color: #fff1f2 !important;
-    border-left-color: #f43f5e !important;
-    .admonition-title { background-color: #fff1f2 !important; color: #be123c !important; i.icon { color: #f43f5e !important; } }
-    .admonition-content { color: #881337 !important; }
+    background-color: #fff6f7 !important;
+    border-left-color: #fb7185 !important; // Softened rose-400
+    .admonition-title {
+      background-color: #ffe4e6 !important;
+      color: #be123c !important;
+      border-bottom-color: rgba(244, 63, 94, 0.15) !important;
+      i.icon { color: #f43f5e !important; }
+    }
   }
 
   &.bug {
-    background-color: #fdf2f8 !important;
-    border-left-color: #ec4899 !important;
-    .admonition-title { background-color: #fdf2f8 !important; color: #be185d !important; i.icon { color: #ec4899 !important; } }
-    .admonition-content { color: #831843 !important; }
+    background-color: #fdf6fa !important;
+    border-left-color: #f472b6 !important; // Softened pink-400
+    .admonition-title {
+      background-color: #fce7f3 !important;
+      color: #be185d !important;
+      border-bottom-color: rgba(236, 72, 153, 0.15) !important;
+      i.icon { color: #ec4899 !important; }
+    }
   }
 
   &.example {
-    background-color: #faf5ff !important;
-    border-left-color: #a855f7 !important;
-    .admonition-title { background-color: #faf5ff !important; color: #7e22ce !important; i.icon { color: #a855f7 !important; } }
-    .admonition-content { color: #581c87 !important; }
+    background-color: #fbf8ff !important;
+    border-left-color: #c084fc !important; // Softened purple-400
+    .admonition-title {
+      background-color: #f3e8ff !important;
+      color: #7e22ce !important;
+      border-bottom-color: rgba(168, 85, 247, 0.15) !important;
+      i.icon { color: #a855f7 !important; }
+    }
   }
 
   &.abstract,
   &.summary,
   &.tldr {
-    background-color: #f0f9ff !important;
-    border-left-color: #0ea5e9 !important;
-    .admonition-title { background-color: #f0f9ff !important; color: #0369a1 !important; i.icon { color: #0ea5e9 !important; } }
-    .admonition-content { color: #0c4a6e !important; }
+    background-color: #f7fbff !important;
+    border-left-color: #38bdf8 !important; // Softened sky-400
+    .admonition-title {
+      background-color: #e0f2fe !important;
+      color: #0369a1 !important;
+      border-bottom-color: rgba(14, 165, 233, 0.15) !important;
+      i.icon { color: #0ea5e9 !important; }
+    }
   }
 
   // --------------------------------------------------------
@@ -164,92 +205,140 @@ body .page .single .content .admonition,
   [theme=dark] & {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
 
+    .admonition-content {
+      color: #e2e8f0 !important; // Slate-200 high contrast for dark mode prose
+    }
+
     &.note {
-      background-color: rgba(59, 130, 246, 0.12) !important;
+      background-color: rgba(59, 130, 246, 0.06) !important;
       border-left-color: #60a5fa !important;
-      .admonition-title { background-color: rgba(59, 130, 246, 0.12) !important; color: #93c5fd !important; i.icon { color: #60a5fa !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(59, 130, 246, 0.15) !important;
+        color: #93c5fd !important;
+        border-bottom-color: rgba(59, 130, 246, 0.18) !important;
+        i.icon { color: #60a5fa !important; }
+      }
     }
 
     &.tip {
-      background-color: rgba(16, 185, 129, 0.12) !important;
+      background-color: rgba(16, 185, 129, 0.06) !important;
       border-left-color: #34d399 !important;
-      .admonition-title { background-color: rgba(16, 185, 129, 0.12) !important; color: #6ee7b7 !important; i.icon { color: #34d399 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(16, 185, 129, 0.15) !important;
+        color: #6ee7b7 !important;
+        border-bottom-color: rgba(16, 185, 129, 0.18) !important;
+        i.icon { color: #34d399 !important; }
+      }
     }
 
     &.warning,
     &.attention,
     &.caution {
-      background-color: rgba(245, 158, 11, 0.12) !important;
+      background-color: rgba(245, 158, 11, 0.06) !important;
       border-left-color: #fbbf24 !important;
-      .admonition-title { background-color: rgba(245, 158, 11, 0.12) !important; color: #fde68a !important; i.icon { color: #fbbf24 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(245, 158, 11, 0.16) !important;
+        color: #fde68a !important;
+        border-bottom-color: rgba(245, 158, 11, 0.2) !important;
+        i.icon { color: #fbbf24 !important; }
+      }
     }
 
     &.danger,
     &.error {
-      background-color: rgba(239, 68, 68, 0.14) !important; // Nền đỏ sẫm chuẩn dark mode
+      background-color: rgba(239, 68, 68, 0.07) !important;
       border-left-color: #f87171 !important;
-      .admonition-title { background-color: rgba(239, 68, 68, 0.14) !important; color: #fca5a5 !important; i.icon { color: #f87171 !important; } }
-      .admonition-content { color: #f1f5f9 !important; }
+      .admonition-title {
+        background-color: rgba(239, 68, 68, 0.18) !important;
+        color: #fca5a5 !important;
+        border-bottom-color: rgba(239, 68, 68, 0.2) !important;
+        i.icon { color: #f87171 !important; }
+      }
     }
 
     &.info {
-      background-color: rgba(6, 182, 212, 0.12) !important;
+      background-color: rgba(6, 182, 212, 0.06) !important;
       border-left-color: #22d3ee !important;
-      .admonition-title { background-color: rgba(6, 182, 212, 0.12) !important; color: #67e8f9 !important; i.icon { color: #22d3ee !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(6, 182, 212, 0.15) !important;
+        color: #67e8f9 !important;
+        border-bottom-color: rgba(6, 182, 212, 0.18) !important;
+        i.icon { color: #22d3ee !important; }
+      }
     }
 
     &.success,
     &.done,
     &.check {
-      background-color: rgba(34, 197, 94, 0.12) !important;
+      background-color: rgba(34, 197, 94, 0.06) !important;
       border-left-color: #4ade80 !important;
-      .admonition-title { background-color: rgba(34, 197, 94, 0.12) !important; color: #86efac !important; i.icon { color: #4ade80 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(34, 197, 94, 0.15) !important;
+        color: #86efac !important;
+        border-bottom-color: rgba(34, 197, 94, 0.18) !important;
+        i.icon { color: #4ade80 !important; }
+      }
     }
 
     &.question,
     &.help,
     &.faq {
-      background-color: rgba(132, 204, 22, 0.12) !important;
+      background-color: rgba(132, 204, 22, 0.06) !important;
       border-left-color: #a3e635 !important;
-      .admonition-title { background-color: rgba(132, 204, 22, 0.12) !important; color: #bef264 !important; i.icon { color: #a3e635 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(132, 204, 22, 0.15) !important;
+        color: #bef264 !important;
+        border-bottom-color: rgba(132, 204, 22, 0.18) !important;
+        i.icon { color: #a3e635 !important; }
+      }
     }
 
     &.failure,
     &.fail,
     &.missing {
-      background-color: rgba(244, 63, 94, 0.12) !important;
+      background-color: rgba(244, 63, 94, 0.06) !important;
       border-left-color: #fb7185 !important;
-      .admonition-title { background-color: rgba(244, 63, 94, 0.12) !important; color: #fda4af !important; i.icon { color: #fb7185 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(244, 63, 94, 0.16) !important;
+        color: #fda4af !important;
+        border-bottom-color: rgba(244, 63, 94, 0.18) !important;
+        i.icon { color: #fb7185 !important; }
+      }
     }
 
     &.bug {
-      background-color: rgba(236, 72, 153, 0.12) !important;
+      background-color: rgba(236, 72, 153, 0.06) !important;
       border-left-color: #f472b6 !important;
-      .admonition-title { background-color: rgba(236, 72, 153, 0.12) !important; color: #f9a8d4 !important; i.icon { color: #f472b6 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(236, 72, 153, 0.16) !important;
+        color: #f9a8d4 !important;
+        border-bottom-color: rgba(236, 72, 153, 0.18) !important;
+        i.icon { color: #f472b6 !important; }
+      }
     }
 
     &.example {
-      background-color: rgba(168, 85, 247, 0.12) !important;
+      background-color: rgba(168, 85, 247, 0.06) !important;
       border-left-color: #c084fc !important;
-      .admonition-title { background-color: rgba(168, 85, 247, 0.12) !important; color: #d8b4fe !important; i.icon { color: #c084fc !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(168, 85, 247, 0.16) !important;
+        color: #d8b4fe !important;
+        border-bottom-color: rgba(168, 85, 247, 0.18) !important;
+        i.icon { color: #c084fc !important; }
+      }
     }
 
     &.abstract,
     &.summary,
     &.tldr {
-      background-color: rgba(14, 165, 233, 0.12) !important;
+      background-color: rgba(14, 165, 233, 0.06) !important;
       border-left-color: #38bdf8 !important;
-      .admonition-title { background-color: rgba(14, 165, 233, 0.12) !important; color: #7dd3fc !important; i.icon { color: #38bdf8 !important; } }
-      .admonition-content { color: #e2e8f0 !important; }
+      .admonition-title {
+        background-color: rgba(14, 165, 233, 0.16) !important;
+        color: #7dd3fc !important;
+        border-bottom-color: rgba(14, 165, 233, 0.18) !important;
+        i.icon { color: #38bdf8 !important; }
+      }
     }
   }
 }

@@ -1,0 +1,340 @@
+// ==========================================================
+// CODEBLOCK & SYNTAX HIGHLIGHTING MODULE
+// Modern, clean, developer-friendly styling for code blocks
+// ==========================================================
+
+// Inline Code Styling (applies only to inline code, not inside <pre>)
+:not(pre) > code {
+  font-family: var(--code-font-family, #{$code-font-family});
+  font-size: 0.86em;
+  padding: 0.15em 0.45em;
+  margin: 0 0.2em;
+  border-radius: 5px;
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  word-break: break-word;
+  white-space: normal;
+  vertical-align: baseline;
+
+  [theme="dark"] & {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+// Code Block Wrapper
+.code-block {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f8fafc;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  [theme="dark"] & {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: #0f141c;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  &:hover {
+    border-color: rgba($brand-primary, 0.25);
+
+    [theme="dark"] & {
+      border-color: rgba($brand-primary-dark, 0.3);
+    }
+  }
+
+  // Header Bar
+  .code-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 34px;
+    padding: 0 0.75rem !important;
+    background: #f1f5f9;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    font-family: var(--code-font-family, #{$code-font-family});
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 0.04em;
+    user-select: none;
+    cursor: default;
+
+    [theme="dark"] & {
+      background: #171d26;
+      border-bottom-color: rgba(255, 255, 255, 0.06);
+      color: #94a3b8;
+    }
+
+    .code-title {
+      width: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: inline-flex !important;
+      align-items: center;
+      gap: 0.35rem;
+      pointer-events: none; // Prevent click from toggling
+
+      .arrow {
+        display: none !important;
+      }
+
+      &::after {
+        display: none !important;
+        content: "" !important;
+      }
+
+      .code-lang-text {
+        font-size: 0.74rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #64748b;
+        letter-spacing: 0.05em;
+
+        [theme="dark"] & {
+          color: #94a3b8;
+        }
+      }
+    }
+
+    .ellipses {
+      display: none !important;
+    }
+
+    .copy {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      min-height: 24px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 4px !important;
+      background: transparent !important;
+      border: 1px solid transparent !important;
+      color: #64748b !important;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+
+      [theme="dark"] & {
+        color: #94a3b8 !important;
+      }
+
+      &:hover {
+        color: $brand-primary !important;
+        background: rgba($brand-primary, 0.12) !important;
+        border-color: rgba($brand-primary, 0.25) !important;
+
+        [theme="dark"] & {
+          color: $brand-primary-dark !important;
+          background: rgba($brand-primary-dark, 0.18) !important;
+          border-color: rgba($brand-primary-dark, 0.35) !important;
+        }
+      }
+
+      i {
+        font-size: 0.8rem !important;
+        line-height: 1 !important;
+        transition: transform 0.15s ease;
+      }
+
+      &.copied {
+        color: #10b981 !important; // Emerald Green
+        background: rgba(16, 185, 129, 0.15) !important;
+        border-color: rgba(16, 185, 129, 0.35) !important;
+
+        [theme="dark"] & {
+          color: #34d399 !important;
+          background: rgba(52, 211, 153, 0.2) !important;
+          border-color: rgba(52, 211, 153, 0.4) !important;
+        }
+
+        i {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  &.open .code-header .copy {
+    display: inline-flex !important;
+  }
+
+  // Code Content Area
+  .highlight {
+    position: relative;
+    max-height: none !important; // Prevent accidental collapsing
+    overflow: visible;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    pre {
+      margin: 0;
+      padding: 0.9rem 1.1rem;
+      overflow-x: auto;
+      tab-size: 2;
+      background: transparent;
+      line-height: 1.6;
+
+      // Custom Scrollbar
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.3);
+        border-radius: 3px;
+
+        &:hover {
+          background: rgba(148, 163, 184, 0.5);
+        }
+      }
+
+      code {
+        display: block;
+        min-width: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: var(--code-font-family, #{$code-font-family}) !important;
+        font-size: 0.86rem;
+        line-height: 1.6;
+        color: inherit;
+        background: transparent;
+        border: none;
+        white-space: pre !important;
+        word-break: normal !important;
+        word-wrap: normal !important;
+        overflow-wrap: normal !important;
+
+        span.line {
+          display: block;
+          min-height: 1.6em;
+          white-space: pre !important;
+        }
+      }
+    }
+  }
+
+  // Line Numbers via CSS Counter
+  &.code-line-numbers {
+    span.line,
+    .highlight code span.line,
+    .highlight pre code span.line {
+      position: relative !important;
+      display: block !important;
+      padding-left: 3.2rem !important;
+      counter-increment: code-block !important;
+
+      &::before {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 2.2rem !important;
+        display: inline-block !important;
+        text-align: right !important;
+        content: counter(code-block) !important;
+        color: #94a3b8 !important;
+        opacity: 0.65 !important;
+        font-size: 0.82rem !important;
+        line-height: inherit !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        border-right: 1px solid rgba(148, 163, 184, 0.25) !important;
+        padding-right: 0.55rem !important;
+        box-sizing: border-box !important;
+        margin-right: 0 !important;
+        pointer-events: none;
+
+        [theme="dark"] & {
+          color: #64748b !important;
+          border-right-color: rgba(255, 255, 255, 0.12) !important;
+        }
+      }
+    }
+  }
+
+  // Table Line Numbers fallback (.lntable)
+  .highlight table.lntable {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    display: table;
+
+    tr {
+      background: transparent;
+      border: none;
+    }
+
+    td.lntd {
+      padding: 0;
+      border: none;
+      vertical-align: top;
+
+      &:first-child {
+        width: 1%;
+        white-space: nowrap;
+        user-select: none;
+        -webkit-user-select: none;
+        text-align: right;
+        color: #94a3b8;
+        opacity: 0.55;
+        border-right: 1px solid rgba(148, 163, 184, 0.25);
+        padding: 0.9rem 0.6rem 0.9rem 1.1rem;
+
+        [theme="dark"] & {
+          color: #64748b;
+          border-right-color: rgba(255, 255, 255, 0.1);
+        }
+
+        pre {
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+        }
+      }
+
+      &:last-child {
+        padding: 0.9rem 1.1rem 0.9rem 0.8rem;
+        width: 99%;
+
+        pre {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Prose / Prompt / Markdown blocks (Word-wrap without horizontal scroll)
+  &.is-wrap-block {
+    .highlight pre {
+      overflow-x: hidden !important;
+
+      code {
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+
+        span.line {
+          white-space: pre-wrap !important;
+          word-break: break-word !important;
+        }
+      }
+    }
+  }
+}

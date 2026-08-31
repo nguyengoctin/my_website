@@ -101,32 +101,41 @@ Khi giải thích một khái niệm:
 - **Khi bài có Mermaid:** Bắt buộc đọc và tuân thủ [docs/mermaid.md](file:///home/ngoctin/Projects/my_website/docs/mermaid.md) trước khi tạo hoặc chỉnh sửa biểu đồ.
 - Biểu đồ phải phản ánh đúng luồng nghiệp vụ thực tế; không bóp méo logic chỉ để layout đẹp.
 
-## Shortcodes
+## Markdown & Render Hooks (Chuẩn GFM Khuyên Dùng)
 
-Sử dụng đúng cú pháp shortcode của theme LoveIt:
+Website đã tích hợp toàn diện **Hugo Render Hooks**. Ưu tiên sử dụng 100% cú pháp Markdown chuẩn GFM thay vì shortcode:
 
-- **Callout:**
-  ```text
-  {{< admonition type="note|tip|warning|danger|info|success|question|failure|bug|example|abstract" title="Tiêu đề" >}}
-  Nội dung...
-  {{< /admonition >}}
+- **Callouts / Alerts (Chuẩn GFM Alert):**
+  ```markdown
+  > [!NOTE]
+  > Nội dung ghi chú...
+
+  > [!TIP] Mẹo Quan Trọng
+  > Nội dung mẹo kỹ thuật...
+
+  > [!WARNING] Cảnh Báo
+  > Nội dung cảnh báo...
+
+  > [!DANGER] Điểm Nguy Hiểm
+  > Nội dung nguy hiểm...
   ```
-- **Quote:**
-  ```text
-  {{< quote author="Tên Tác Giả" >}}
-  Nội dung trích dẫn...
-  {{< /quote >}}
+  *(Hỗ trợ các loại: `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`, `INFO`, `DANGER`, `SUCCESS`, `FAILURE`, `BUG`, `EXAMPLE`, `ABSTRACT`)*
+
+- **Trích dẫn (Quote):** Dùng blockquote chuẩn:
+  ```markdown
+  > Trích dẫn câu nói hoặc nội dung đáng chú ý ở đây.
   ```
-  *(Nếu không có `author`, chỉ hiển thị nội dung trích dẫn)*
-- **Link:**
-  ```text
-  {{< link href="https://..." content="Tên hiển thị" >}}
-  ```
-- **Image:**
-  ```text
-  {{< image src="/images/..." caption="Chú thích" alt="Alt text" >}}
-  ```
-- **Prompt Mẫu:** Dùng khối mã chuẩn ```` ```text ```` hoặc ```` ```markdown ```` kèm câu dẫn ngữ cảnh, không dùng shortcode riêng.
+
+- **Liên kết (Link):** Dùng cú pháp Markdown chuẩn `[Tên hiển thị](https://...)` (Render hook tự động thêm `target="_blank"` và `rel="noopener noreferrer"` cho liên kết ngoài).
+
+- **Hình ảnh (Image):** Dùng cú pháp Markdown chuẩn `![Alt text](/images/...)` hoặc `![Alt text](/images/... "Chú thích ảnh")` (Render hook tự động sinh semantic `<figure>`, `<figcaption>` và `loading="lazy"`).
+
+- **Shortcodes cũ (Chỉ dùng khi cần tương thích):**
+  - Callout cũ: `{{< admonition type="note" title="..." >}}`
+  - Quote cũ: `{{< quote author="..." >}}`
+  *(Các shortcode này vẫn hoạt động bình thường nhưng không khuyến khích tạo mới)*
+
+- **Prompt Mẫu:** Dùng khối mã chuẩn ```` ```text ```` hoặc ```` ```markdown ```` kèm câu dẫn ngữ cảnh.
 
 ## Frontmatter
 

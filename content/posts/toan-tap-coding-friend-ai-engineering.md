@@ -273,9 +273,9 @@ Hooks là các script chạy tự động trong vòng đời session — hầu h
 ```mermaid
 flowchart TD
     Cmd["Lệnh terminal<br/>cần phê duyệt"]
-    L1{"Lớp 1: Rules<br/>ALLOW hoặc DENY?"}
-    L2{"Lớp 2: Working-dir<br/>Thao tác trong dự án?"}
-    L3{"Lớp 3: LLM Classifier<br/>Claude Sonnet đánh giá"}
+    L1{"Lớp 1: Rules"}
+    L2{"Lớp 2: Working-dir"}
+    L3{"Lớp 3: LLM Classifier"}
     Allow["Tự động cho phép"]
     Deny["Từ chối ngay"]
     Ask["Hỏi người dùng"]

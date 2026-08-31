@@ -1,3 +1,14 @@
+/* ==========================================================================
+   THEME TRANSITIONS OPTIMIZATION (Zero-Jank Scoped Dark Mode Switch)
+   ========================================================================== */
+body.theme-transitioning,
+body.theme-transitioning *,
+body.theme-transitioning *::before,
+body.theme-transitioning *::after {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, fill 0.2s ease, stroke 0.2s ease !important;
+    transition-delay: 0s !important;
+}
+
 /* 1. Header Navigation Alignment - Khớp 100% thẳng hàng với cột nội dung (.page) trên cả Desktop & Mobile */
 #header-desktop .header-wrapper {
     max-width: 850px !important;
@@ -65,50 +76,6 @@
             margin: 1.25rem 0 !important;
         }
     }
-}
-
-
-
-/* 6. Tự động xuống dòng (Word Wrap) và tắt số dòng cho các thẻ codeblock dạng Markdown, Text, YAML */
-.highlight .language-text pre,
-.highlight .language-text code,
-.highlight .language-markdown pre,
-.highlight .language-markdown code,
-.highlight .language-md pre,
-.highlight .language-md code,
-.highlight .language-plaintext pre,
-.highlight .language-plaintext code,
-.highlight .language-yaml pre,
-.highlight .language-yaml code,
-.code-block pre.language-text,
-.code-block code.language-text,
-.code-block pre.language-markdown,
-.code-block code.language-markdown,
-.code-block pre.language-md,
-.code-block code.language-md {
-    white-space: pre-wrap !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-    overflow-x: auto !important;
-}
-
-.code-block .code-header.language-markdown ~ .highlight span.line::before,
-.code-block .code-header.language-md ~ .highlight span.line::before,
-.code-block .code-header.language-text ~ .highlight span.line::before,
-.code-block .code-header.language-plaintext ~ .highlight span.line::before,
-.code-block .code-header.language-txt ~ .highlight span.line::before,
-.code-block .code-header.language-raw ~ .highlight span.line::before,
-.code-block .code-header.language-prompt ~ .highlight span.line::before,
-.highlight .language-markdown span.line::before,
-.highlight .language-md span.line::before,
-.highlight .language-text span.line::before,
-.highlight .language-plaintext span.line::before,
-.highlight .language-txt span.line::before,
-.highlight .language-raw span.line::before,
-.highlight .language-prompt span.line::before {
-    display: none !important;
-    content: none !important;
-    margin-right: 0 !important;
 }
 
 /* 7. Modern & Professional Custom Footer Styling */
@@ -264,26 +231,26 @@
   }
 }
 
-// Inline Code Styling (Tone Rose / Pink Accent sang trọng, tương phản cao, dễ đọc)
+// Inline Code Styling (Editorial Neutral Slate Badge — Siêu êm mắt, giữ trọn mạch đọc văn xuôi)
 code:not(pre code) {
   display: inline !important;
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
   font-size: 0.85em !important;
   font-weight: 500 !important;
-  padding: 0.12em 0.4em !important;
-  margin: 0 0.15em !important;
+  padding: 0.15em 0.45em !important;
+  margin: 0 0.2em !important;
   border-radius: 5px !important;
-  background-color: #fdf2f8 !important; /* Soft rose tint (Tailwind rose-50) */
-  color: #be185d !important;            /* Deep readable rose/pink (Tailwind rose-700) */
-  border: 1px solid #fbcfe8 !important; /* Subtle rose-200 border */
+  background-color: #f1f5f9 !important; /* Slate-100 xám sáng sạch sẽ */
+  color: #0f172a !important;            /* Slate-900 đen than sắc nét, dễ đọc */
+  border: 1px solid #e2e8f0 !important; /* Slate-200 viền mờ tinh tế */
   vertical-align: 0.04em !important;
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
 
   [theme=dark] & {
-    background-color: rgba(244, 114, 182, 0.12) !important; /* Muted rose dark background */
-    color: #f472b6 !important;                               /* Bright legible pink accent (Tailwind pink-400) */
-    border-color: rgba(244, 114, 182, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Slate-800 translucent dark background */
+    color: #f1f5f9 !important;                               /* Slate-100 trắng sáng */
+    border-color: rgba(255, 255, 255, 0.12) !important;
   }
 }
 

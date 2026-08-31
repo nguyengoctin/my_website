@@ -1,26 +1,22 @@
 {{- $content := .Content -}}
 {{- $lang := .Lang -}}
 {{- $params := .Page.Scratch.Get "params" -}}
-{{- $maxShownLines := $params.code.maxShownLines | default 10 | int -}}
 {{- $copy := $params.code.copy | default true -}}
 {{- if and .Page $copy -}}
     {{- .Page.Scratch.SetInMap "this" "clipboard" true -}}
 {{- end -}}
-{{- $lines := split $content "\n" | len -}}
-{{- $isNoLineNoLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw") $lang -}}
-{{- $options := dict "lineNoStart" 1 "lineNos" (not $isNoLineNoLang) -}}
+{{- $options := dict "lineNoStart" 1 "lineNos" true -}}
 {{- $options = .Options | partial "function/dict.html" | merge $options -}}
 {{- $lineNoStart := $options.lineNoStart | int -}}
 {{- $lineNos := $options.lineNos | partial "function/bool.html" -}}
+{{- $isProseLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw" "output") $lang -}}
 
 {{- $options = dict "noClasses" false "lineNos" false | merge $options -}}
 {{- $result := transform.Highlight $content $lang $options -}}
-{{- $styleAttr := printf `style="counter-reset: code-block %d;"` (sub $lineNoStart 1) | safeHTMLAttr -}}
-<div class="code-block{{ if $lineNos }} code-line-numbers{{ end }}{{ if le $lines $maxShownLines }} open{{ end }}" {{ $styleAttr }}>
+<div class="code-block open{{ if $lineNos }} code-line-numbers{{ end }}{{ if $isProseLang }} is-wrap-block{{ end }}" style="counter-reset: code-block {{ sub $lineNoStart 1 }};">
     <div class="code-header language-{{ $lang }}">
-        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
-        {{ if $copy }}<span class="copy" title="{{ T "copyToClipboard" }}"><i class="far fa-copy" aria-hidden="true"></i></span>{{ end }}
+        <span class="code-title"><i class="fas fa-terminal fa-fw" aria-hidden="true"></i><span class="code-lang-text">{{ $lang | default "code" | upper }}</span></span>
+        {{ if $copy }}<span class="copy" title="{{ T "copyToClipboard" | default "Copy" }}" aria-label="Copy"><i class="far fa-copy" aria-hidden="true"></i></span>{{ end }}
     </div>
     {{- $result -}}
 </div>

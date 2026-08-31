@@ -83,5 +83,93 @@
 
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . -}}
+
+        {{- /* Codeblock Copy Clipboard Handler */ -}}
+        <script>
+          document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.code-block .copy');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var codeBlock = btn.closest('.code-block');
+            if (!codeBlock) return;
+
+            var codeText = '';
+            var codeEl = codeBlock.querySelector('.highlight pre code') || codeBlock.querySelector('code');
+            if (codeEl) {
+              var lines = codeEl.querySelectorAll('span.line');
+              if (lines && lines.length > 0) {
+                var textArr = [];
+                for (var i = 0; i < lines.length; i++) {
+                  textArr.push(lines[i].innerText.replace(/\r?\n$/, ''));
+                }
+                codeText = textArr.join('\n');
+              } else {
+                codeText = codeEl.innerText;
+              }
+            }
+
+            if (!codeText) return;
+
+            var copyIcon = btn.querySelector('i');
+            function showSuccess() {
+              btn.classList.add('copied');
+              if (copyIcon) {
+                copyIcon.className = 'fas fa-check fa-fw';
+              }
+              setTimeout(function() {
+                btn.classList.remove('copied');
+                if (copyIcon) {
+                  copyIcon.className = 'far fa-copy fa-fw';
+                }
+              }, 2000);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+              navigator.clipboard.writeText(codeText).then(showSuccess).catch(function() {
+                fallbackCopy(codeText, showSuccess);
+              });
+            } else {
+              fallbackCopy(codeText, showSuccess);
+            }
+
+            function fallbackCopy(text, cb) {
+              var textarea = document.createElement('textarea');
+              textarea.value = text;
+              textarea.style.position = 'fixed';
+              textarea.style.left = '-9999px';
+              textarea.style.top = '0';
+              document.body.appendChild(textarea);
+              textarea.focus();
+              textarea.select();
+              try {
+                document.execCommand('copy');
+                if (cb) cb();
+              } catch (err) {
+                console.error('Copy fallback failed', err);
+              }
+              document.body.removeChild(textarea);
+            }
+          });
+        </script>
+
+        {{- /* Zero-Jank Smooth Theme Transition Handler */ -}}
+        <script>
+          (function() {
+            var themeTransitionTimer = null;
+            document.addEventListener('click', function(e) {
+              var btn = e.target.closest('.theme-switch');
+              if (!btn) return;
+
+              document.body.classList.add('theme-transitioning');
+              if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
+              themeTransitionTimer = setTimeout(function() {
+                document.body.classList.remove('theme-transitioning');
+                themeTransitionTimer = null;
+              }, 250);
+            }, true);
+          })();
+        </script>
     </body>
 </html>

@@ -1,0 +1,50 @@
+{{- $text := .Text -}}
+{{- $rawText := .Text | safeHTML -}}
+{{- $isAlert := false -}}
+{{- $alertType := "" -}}
+{{- $alertTitle := "" -}}
+{{- $alertContent := "" -}}
+
+{{- /* Regex / Match prefix [!TYPE] hoặc [!TYPE] Title */ -}}
+{{- if (findRE `^<p>\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|INFO|DANGER|SUCCESS|FAILURE|BUG|EXAMPLE|ABSTRACT|TLDR|HINT|WARN|ATTENTION|ERROR|FAIL|CHECK|DONE|HELP|FAQ)\]` $rawText) -}}
+    {{- $isAlert = true -}}
+    {{- $firstLine := index (findRE `^<p>\[!([A-Za-z]+)\](?:\s+([^\n<]+))?(?:<br\s*/?>)?` $rawText) 0 -}}
+    {{- $typeMatches := findRE `^<p>\[!([A-Za-z]+)\]` $firstLine -}}
+    {{- if gt (len $typeMatches) 0 -}}
+        {{- $rawType := lower (replaceRE `^<p>\[!|\]` "" (index $typeMatches 0)) -}}
+        {{- $alertType = $rawType -}}
+        {{- /* Alias mapping */ -}}
+        {{- $aliases := dict "summary" "abstract" "tldr" "abstract" "hint" "tip" "important" "tip" "check" "success" "done" "success" "help" "question" "faq" "question" "warn" "warning" "attention" "warning" "caution" "warning" "fail" "failure" "missing" "failure" "error" "danger" -}}
+        {{- $alertType = index $aliases $alertType | default $alertType -}}
+        
+        {{- /* Custom Title nếu có sau [!TYPE] Custom Title */ -}}
+        {{- $titleMatches := findRE `^<p>\[![A-Za-z]+\]\s+([^\n<]+)` $firstLine -}}
+        {{- if gt (len $titleMatches) 0 -}}
+            {{- $alertTitle = replaceRE `^<p>\[![A-Za-z]+\]\s+` "" (index $titleMatches 0) -}}
+        {{- else -}}
+            {{- $alertTitle = T $alertType | default (title $alertType) -}}
+        {{- end -}}
+
+        {{- /* Bỏ dòng marker đầu tiên để lấy content thực sự */ -}}
+        {{- $cleaned := replaceRE `^<p>\[![A-Za-z]+\](?:\s+[^\n<]+)?(?:<br\s*/?>)?\n?` "<p>" $rawText 1 -}}
+        {{- /* Trường hợp sau khi bỏ marker thành <p></p> rỗng ở đầu */ -}}
+        {{- $cleaned = replaceRE `^<p>\s*</p>` "" $cleaned -}}
+        {{- $alertContent = $cleaned | safeHTML -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $isAlert -}}
+    {{- $iconMap := dict "note" "far fa-pen-to-square" "abstract" "far fa-rectangle-list" "info" "fas fa-info" "todo" "far fa-square-check" "tip" "far fa-lightbulb" "success" "far fa-circle-check" "question" "far fa-circle-question" "warning" "fas fa-exclamation" "failure" "far fa-circle-xmark" "danger" "fas fa-bolt" "bug" "fas fa-bug" "example" "fas fa-list-ol" -}}
+    <div class="admonition gfm-alert {{ $alertType }} open">
+        <div class="admonition-title">
+            <i class="icon {{ index $iconMap $alertType | default "far fa-pen-to-square" }}" aria-hidden="true"></i>{{ $alertTitle }}
+        </div>
+        <div class="admonition-content">
+            {{ $alertContent }}
+        </div>
+    </div>
+{{- else -}}
+    <blockquote>
+        {{ .Text | safeHTML }}
+    </blockquote>
+{{- end -}}

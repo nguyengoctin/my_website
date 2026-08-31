@@ -17,24 +17,24 @@
     securityLevel: 'loose',
     theme: 'base',
     themeVariables: {
-      primaryColor: '#f5f7ff',
-      primaryBorderColor: '#6366f1',
-      primaryTextColor: '#1e1b4b',
-      lineColor: '#6366f1',
-      edgeLabelBackground: '#ffffff',
+      primaryColor: '#f8fafc',         // Slate-50 nền node thanh nhã, tiệp với nền web
+      primaryBorderColor: '#94a3b8',   // Slate-400 viền node mỏng, tinh tế
+      primaryTextColor: '#0f172a',     // Slate-900 đen than sắc nét, dễ đọc
+      lineColor: '#64748b',            // Slate-500 mũi tên xám dẫn hướng êm mắt
+      edgeLabelBackground: 'transparent', // Trong suốt để loại bỏ dải xám SVG rect
       tertiaryColor: '#ffffff',
       fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      fontSize: '15.5px'
+      fontSize: '14px'
     },
     flowchart: {
-      useMaxWidth: false,
-      nodePadding: 20,
-      nodeSpacing: 50,
-      rankSpacing: 50,
+      useMaxWidth: true,
+      nodePadding: 12,
+      nodeSpacing: 36,
+      rankSpacing: 36,
       curve: 'basis',
-      htmlLabels: false,
+      htmlLabels: true,
       markdownAutoWrap: true,
-      wrappingWidth: 200
+      wrappingWidth: 180
     }
   };
 
@@ -42,11 +42,13 @@
     if (m._patched) return;
     m._patched = true;
 
-    // We no longer monkey-patch `m.run()` to avoid massive UI lag.
-    // Instead, CSS takes care of instant Dark Mode switching.
     var origInit = m.initialize.bind(m);
     m.initialize = function (cfg) {
-      return origInit(Object.assign({}, cfg, _baseConfig));
+      cfg = cfg || {};
+      var merged = Object.assign({}, cfg, _baseConfig);
+      merged.theme = 'base';
+      merged.themeVariables = Object.assign({}, cfg.themeVariables || {}, _baseConfig.themeVariables);
+      return origInit(merged);
     };
   }
 

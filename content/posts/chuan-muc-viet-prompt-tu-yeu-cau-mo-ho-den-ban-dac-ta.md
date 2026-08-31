@@ -56,7 +56,7 @@ GoalNode["Goal:<br/>Mô tả kết quả cần đạt"] --> ContextNode["Context
 ContextNode --> TaskNode["Task:<br/>Hành động cụ thể với dữ liệu"]
 TaskNode --> ConstraintNode["Constraints:<br/>Quy tắc cứng và giới hạn"]
 ConstraintNode --> OutputNode["Output:<br/>Cấu trúc giao diện kết quả"]
-OutputNode --> ResultNode["Kết quả rõ ràng và kiểm chứng được"]
+OutputNode --> ResultNode["Kết quả rõ ràng<br/>và kiểm chứng được"]
 ```
 
 Các survey về prompting cũng không chỉ ra một template duy nhất chiến thắng mọi tình huống. Báo cáo *The Prompt Report* tổng hợp 58 kỹ thuật prompting cho LLM, từ zero-shot, few-shot đến nhiều kỹ thuật reasoning và decomposition khác nhau. Điều đó phù hợp với một cách nhìn thực tế hơn: **prompting là một toolbox, không phải một công thức cố định**.
@@ -377,7 +377,7 @@ Prompt engineering vì vậy gần với một vòng lặp kỹ thuật:
 ```mermaid
 flowchart TD
 P1["Bước 1:<br/>Viết prompt theo bản đặc tả"] --> P2["Bước 2:<br/>Chạy thử và quan sát output"]
-P2 --> P3{"Kết quả có đạt<br/>tiêu chí?"}
+P2 --> P3{"Đạt tiêu chí?"}
 P3 -->|Chưa đạt| P4["Bước 3:<br/>Tìm failure và điểm sai"]
 P4 --> P5["Bước 4:<br/>Sửa instruction hoặc thêm example"]
 P5 --> P2

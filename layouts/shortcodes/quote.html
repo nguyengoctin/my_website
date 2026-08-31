@@ -2,7 +2,7 @@
 {{- $content := trim .Inner "\n\r " -}}
 <blockquote class="custom-quote">
     <div class="quote-content">
-        <span class="quote-mark quote-open">“</span><span class="quote-text">{{ $content | markdownify }}</span><span class="quote-mark quote-close">”</span>
+        <span class="quote-text">{{ $content | markdownify }}</span>
     </div>
     {{- if $author -}}
     <footer class="quote-footer">
