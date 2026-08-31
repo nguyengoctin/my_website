@@ -1,0 +1,229 @@
+{{- $params := .Scratch.Get "params" -}}
+
+<div class="post-footer-editorial">
+    {{- /* Tags section */ -}}
+    {{- with .Params.tags -}}
+    <ul class="post-footer-tags">
+        {{- range . -}}
+            {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+            <li><a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a></li>
+        {{- end -}}
+    </ul>
+    {{- end -}}
+
+    {{- /* Share & Back to Top */ -}}
+    <div class="post-footer-actions">
+        <div class="post-footer-share">
+            <span class="share-label">Share this post on:</span>
+            <div class="share-icons">
+                {{- partial "plugin/share.html" . -}}
+            </div>
+        </div>
+
+        <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <i class="ti ti-chevron-up"></i>
+            <span>Back to Top</span>
+        </button>
+    </div>
+
+    {{- /* Divider */ -}}
+    <hr class="post-footer-divider" />
+
+    {{- /* Post Navigation */ -}}
+    <div class="post-nav-editorial" data-pagefind-ignore>
+        {{- $prevPage := false -}}
+        {{- $nextPage := false -}}
+        {{- if or (.Params.prev) (.Params.next) -}}
+            {{- with .Params.prev -}}
+                {{- $prevPage = $.Site.GetPage . -}}
+            {{- end -}}
+            {{- with .Params.next -}}
+                {{- $nextPage = $.Site.GetPage . -}}
+            {{- end -}}
+        {{- else -}}
+            {{- $prevPage = .PrevInSection -}}
+            {{- $nextPage = .NextInSection -}}
+        {{- end -}}
+        
+        {{- with $prevPage -}}
+            <a href="{{ .RelPermalink }}" class="nav-prev" rel="prev" title="{{ .Title }}">
+                <i class="ti ti-chevron-left nav-icon"></i>
+                <div class="nav-content">
+                    <span class="nav-label">Previous Post</span>
+                    <div class="nav-title">{{ .Title | emojify }}</div>
+                </div>
+            </a>
+        {{- else -}}
+            <div></div>
+        {{- end -}}
+        
+        {{ with $nextPage }}
+            <a href="{{ .RelPermalink }}" class="nav-next" rel="next" title="{{ .Title }}">
+                <div class="nav-content text-right">
+                    <span class="nav-label">Next Post</span>
+                    <div class="nav-title">{{ .Title | emojify }}</div>
+                </div>
+                <i class="ti ti-chevron-right nav-icon"></i>
+            </a>
+        {{- end -}}
+    </div>
+</div>
+
+<style>
+/* Scoped styles for Editorial Post Footer matching steipete.me */
+.post-footer-editorial {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.post-footer-tags {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.post-footer-tags li {
+    display: inline-block;
+    margin: 0;
+}
+
+.post-footer-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .post-footer-actions {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+}
+
+.post-footer-share {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .post-footer-share {
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
+
+.post-footer-share .share-label {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    color: var(--clr-text-2, #475569);
+}
+
+.post-footer-share .share-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem; /* Tăng khoảng cách vì icon to hơn */
+}
+
+.post-footer-share .share-icons a {
+    font-size: 1.6rem !important;
+    color: var(--clr-text-2, #64748b) !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.post-footer-share .share-icons a:hover {
+    color: var(--clr-primary, #4d74eb) !important;
+    transform: translateY(-2px);
+}
+
+.back-to-top-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--clr-text-2, #475569);
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+    font-size: 0.95rem;
+    padding: 0.25rem 0;
+}
+
+.back-to-top-btn:hover {
+    opacity: 0.75;
+}
+
+.post-footer-divider {
+    border: 0;
+    border-top: 1px dashed var(--clr-border, #e2e8f0);
+    margin: 1.5rem 0;
+}
+
+.post-nav-editorial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .post-nav-editorial {
+        flex-direction: row;
+    }
+}
+
+.post-nav-editorial > a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.post-nav-editorial > a:hover {
+    opacity: 0.75;
+}
+
+.post-nav-editorial .nav-icon {
+    margin-top: 0.125rem;
+    color: var(--clr-text-2, #475569);
+}
+
+.post-nav-editorial .nav-next {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.post-nav-editorial .nav-content {
+    min-width: 0;
+}
+
+.post-nav-editorial .text-right {
+    text-align: right;
+}
+
+.post-nav-editorial .nav-label {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.875rem;
+    color: var(--clr-text-2, #475569);
+    margin-bottom: 0.1rem;
+}
+
+.post-nav-editorial .nav-title {
+    color: var(--clr-primary, #4d74eb);
+    font-weight: 500;
+}
+</style>

@@ -54,18 +54,64 @@ html {
 }
 
 body {
-  font-family: "Lora", Georgia, serif !important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   color: var(--clr-text, #111111) !important;
   background-color: var(--clr-bg, #fdfdfd) !important;
+}
+
+.search-placeholder-text {
+  color: var(--clr-text-3);
+}
+
+// Global Tabler Icons Sizing (matching sample site aesthetics)
+[class^="ti-"], [class*=" ti-"] {
+  font-family: 'tabler-icons' !important;
+  font-size: 1.35em !important; /* Tăng size icon gốc */
+  stroke-width: 2.2 !important; /* Dày hơn */
+  line-height: 1 !important;
+}
+
+// Chỉ underline cho chữ, không underline cho icon
+a i[class^="ti-"], a i[class*=" ti-"] {
+  display: inline-block !important;
+  text-decoration: none !important;
+  vertical-align: middle;
+}
+.ti, .sys-icon svg {
+  display: inline-block;
+}
+
+// System Icons (SVG)
+.sys-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 1.75;
+  display: inline-block;
+  vertical-align: middle;
+}
+.theme-switch .sys-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+html[theme=dark] .theme-icon-light {
+  display: none !important;
+}
+html[theme=dark] .theme-icon-dark {
+  display: inline-flex !important;
 }
 
 // ==========================================================
 // 2. HEADINGS & TYPOGRAPHY HIERARCHY
 // ==========================================================
+html[theme=light], h2, h3, h4, h5, h6,
+.single-title, .content, .summary, .timeline-title,
+.menu-item, .contact-chip, .btn-action, .timeline-tag, .tag-pill {
+  font-family: 'Lora', serif !important;
+}
+
 h1, h2, h3, h4, h5, h6,
 .single-title {
-  font-family: "Lora", Georgia, serif !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h1 {
@@ -129,7 +175,7 @@ hr {
 .home-quote-typeit,
 .home-subtitle {
   text-align: left !important;
-  font-family: "Lora", Georgia, serif !important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1.2rem !important;
   font-weight: 500 !important;
   font-style: italic !important;
@@ -155,12 +201,36 @@ hr {
 // ==========================================================
 // 3. DESKTOP NAVIGATION BAR & LOGO ("Nguyễn Ngọc Tín")
 // ==========================================================
+#header-desktop, #header-mobile {
+  background: #fdfdfd !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: none !important;
+
+  [theme=dark] & {
+    background: #18181b !important;
+  }
+}
+
 .header-wrapper {
-  font-family: "Lora", Georgia, serif !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+  border-bottom: 1px solid var(--clr-border) !important;
+  max-width: 850px !important; /* Khớp với chiều rộng nội dung 850px */
+  margin: 0 auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+
+  .menu {
+    flex: unset !important;
+    text-align: right !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
   
   .header-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 21px !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
@@ -215,29 +285,26 @@ hr {
       align-items: center !important;
       line-height: 1.1 !important;
       padding-bottom: 2px !important;
-      background-image: linear-gradient(90deg, #4d74eb 0%, #4d74eb 70%, #ec4899 70%, #ec4899 100%) !important;
-      background-size: 0% 1px !important;
-      background-repeat: no-repeat !important;
-      background-position: left 100% !important;
-      transition: background-size 0.2s ease !important;
 
       [theme=dark] & {
         color: #60a5fa !important;
       }
 
       &:hover {
-        text-decoration: none !important;
-        background-size: 100% 1px !important;
+        text-decoration: underline dotted !important;
+        text-underline-offset: 4px;
       }
     }
   }
 
   .menu .menu-item {
-    font-family: "Lora", Georgia, serif !important;
-    font-size: 15px !important;
-    font-weight: 400 !important;
-    margin: 0 0.6rem !important;
-    color: #111111 !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    padding: 0 0.6rem !important;
+    margin: 0 0.15rem !important;
+    color: #64748b !important;
+    background: transparent !important;
+    transition: all 0.2s ease !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     display: inline-flex !important;
@@ -246,16 +313,26 @@ hr {
     line-height: 1 !important;
 
     [theme=dark] & {
-      color: #e5e7eb !important;
+      color: #94a3b8 !important;
     }
 
     &:hover {
-      text-decoration: underline !important;
-      color: #111111 !important;
-      font-weight: 400 !important;
+      color: #0f172a !important;
+      text-decoration: underline dotted !important;
+      text-underline-offset: 4px;
 
       [theme=dark] & {
-        color: #ffffff !important;
+        color: #f8fafc !important;
+      }
+    }
+
+    &.active {
+      color: #0f172a !important;
+      font-weight: 600 !important;
+      border-bottom: none !important;
+
+      [theme=dark] & {
+        color: #f8fafc !important;
       }
     }
 
@@ -267,15 +344,6 @@ hr {
     .search-toggle,
     .search-toggle:hover {
       text-decoration: none !important;
-    }
-
-    &.active {
-      color: #111111 !important;
-      text-decoration: underline !important;
-
-      [theme=dark] & {
-        color: #ffffff !important;
-      }
     }
 
     &[href*="/cv/"] {
@@ -294,54 +362,32 @@ hr {
         }
       }
     }
+  }
 
-    &.delimiter {
-      display: none !important;
+  .menu-item.delimiter, .delimiter {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .theme-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem !important;
+
+    .sys-icon i,
+    .ti {
+      font-size: 1.45em !important; /* To hơn nút bình thường */
+      stroke-width: 1.5;
     }
 
-    // Standardized Action Icon Buttons (Search & Theme Switch)
-    &.search-toggle,
-    &.theme-switch {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 32px !important;
-      height: 32px !important;
-      padding: 0 !important;
-      margin: 0 0.25rem !important;
-      border-radius: 8px !important;
-      color: #64748b !important;
-      text-decoration: none !important;
-      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
-      font-size: 15px !important;
-      line-height: 1 !important;
-
-      i {
-        font-size: 15px !important;
-        line-height: 1 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-
-      [theme=dark] & {
-        color: #94a3b8 !important;
-      }
-
-      &:hover {
-        color: #0f172a !important;
-        background-color: #f1f5f9 !important;
-        text-decoration: none !important;
-
-        [theme=dark] & {
-          color: #f8fafc !important;
-          background-color: rgba(255, 255, 255, 0.08) !important;
-        }
-      }
-
-      &:active {
-        transform: scale(0.95) !important;
-      }
+    &:hover {
+      text-decoration: none !important; /* Không gạch chân nút theme */
+      transform: rotate(15deg);
     }
   }
 }
@@ -351,7 +397,7 @@ hr {
 // ==========================================================
 .toc-content, #toc-auto, #toc-static {
   a {
-    font-family: "Lora", Georgia, serif !important;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.8125rem !important;
     font-weight: 400 !important;
     color: #828282 !important;
@@ -398,22 +444,24 @@ hr {
 }
 
 .summary .single-title {
-  font-family: "Lora", Georgia, serif !important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1.25rem;
   font-weight: 500 !important;
 
   a {
-    color: #111111 !important;
+    color: #4d74eb !important;
     font-weight: 500 !important;
     text-decoration: none !important;
+    transition: text-decoration-color 0.2s ease;
 
     [theme=dark] & {
-      color: #f3f4f6 !important;
+      color: #60a5fa !important;
     }
 
     &:hover {
       color: #1337a6 !important;
-      text-decoration: underline !important;
+      text-decoration: underline dotted !important;
+      text-underline-offset: 4px;
 
       [theme=dark] & {
         color: #93c5fd !important;
@@ -439,6 +487,47 @@ hr {
   }
 }
 
+// Đồng nhất style link trong nội dung bài viết (Content links)
+.content a {
+  color: #4d74eb !important;
+  text-decoration: none !important;
+  transition: text-decoration-color 0.2s ease;
+
+  [theme=dark] & {
+    color: #60a5fa !important;
+  }
+
+  &:hover {
+    color: #1337a6 !important;
+    text-decoration: underline dotted !important;
+    text-underline-offset: 4px;
+
+    [theme=dark] & {
+      color: #93c5fd !important;
+    }
+  }
+}
+
+// Post Meta line styling matching steipete.me
+.summary .post-meta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.85rem !important;
+  color: #64748b !important;
+  margin-bottom: 0.8rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  [theme=dark] & {
+    color: #94a3b8 !important;
+  }
+
+  i.ti {
+    font-size: 1.1em;
+    transform: translateY(-1px);
+  }
+}
+
 // ==========================================================
 // 6. TIMELINE ARCHIVE ITEM LINKS (Chuẩn gạch chân khi hover)
 // ==========================================================
@@ -446,7 +535,6 @@ hr {
   margin-bottom: 0.35rem;
 
   .archive-item-link {
-    font-family: "Lora", Georgia, serif !important;
     color: #4d74eb !important;
     text-decoration: none !important;
     transition: color 0.15s ease;
@@ -457,7 +545,8 @@ hr {
 
     &:hover {
       color: #1337a6 !important;
-      text-decoration: underline !important;
+      text-decoration: underline dotted !important;
+      text-underline-offset: 4px;
 
       [theme=dark] & {
         color: #93c5fd !important;

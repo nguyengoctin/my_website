@@ -344,7 +344,7 @@
                 data-index="{{ $i }}">
                 <span class="listen-item-num">{{ printf "%02d" (add $i 1) }}</span>
                 <button class="listen-item-icon" aria-hidden="true" tabindex="-1">
-                    <i class="fas fa-play"></i>
+                    <i class="ti ti-player-play"></i>
                 </button>
                 <div class="listen-item-body">
                     <p class="listen-item-title">{{ $ep.title }}<span class="listen-resume-badge" data-resume-for="{{ $i }}">Tiếp tục</span></p>
@@ -355,7 +355,7 @@
                 {{- with $ep.url -}}
                     <a class="listen-item-dl" href="{{ . }}" download
                        aria-label="Tải xuống {{ $ep.title }}">
-                        <i class="fas fa-download" aria-hidden="true"></i>
+                        <i class="ti ti-download" aria-hidden="true"></i>
                     </a>
                 {{- end -}}
             </li>
@@ -381,7 +381,7 @@
 
         <div class="lp-controls">
             <button id="btn-play" class="lp-btn" aria-label="Phát hoặc tạm dừng" disabled>
-                <i class="fas fa-play" aria-hidden="true"></i>
+                <i class="ti ti-player-play" aria-hidden="true"></i>
             </button>
             <button id="btn-back" class="lp-btn lp-btn-skip" aria-label="Lùi lại 15 giây" disabled>
                 <i class="fas fa-rotate-left" aria-hidden="true"></i>15
@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateIcons() {
         var playing = !audio.paused && !audio.ended && currentIndex !== -1;
         btnPlay.querySelector("i").className =
-            playing ? "fas fa-pause" : "fas fa-play";
+            playing ? "ti ti-player-pause" : "ti ti-player-play";
         btnPlay.setAttribute(
             "aria-label",
             playing ? "Tạm dừng" : "Phát"
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var icon = item.querySelector(".listen-item-icon i");
             if (icon) {
                 icon.className =
-                    i === currentIndex && playing ? "fas fa-pause" : "fas fa-play";
+                    i === currentIndex && playing ? "ti ti-player-pause" : "ti ti-player-play";
             }
             item.classList.toggle("active", i === currentIndex);
         });

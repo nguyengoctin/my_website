@@ -1,0 +1,28 @@
+{
+  "task_id": "2026-08-31-editorial-uxui-polish",
+  "task_summary": "Polish UX and UI using transferable editorial patterns from steipete.me while keeping Hugo and the current brand.",
+  "confirmed_assumptions": [
+    "Keep Hugo, LoveIt, Lunr search, Lora reading typography, and the blue-pink brand palette.",
+    "Focus on icons, link states, clean post cards without tag clutter, and article heading hierarchy.",
+    "Do not reimplement the completed sticky header and command palette behavior.",
+    "Prefer reusable partials and scoped SCSS over additional inline styles or broad theme edits."
+  ],
+  "relevant_files": [
+    "content/_index.md",
+    "layouts/summary.html",
+    "layouts/_default/summary.html",
+    "layouts/partials/header.html",
+    "layouts/_default/single.html",
+    "assets/css/modules/_typography_and_nav.scss",
+    "assets/css/modules/_contact_and_archive.scss",
+    "assets/css/modules/_quotes_and_content.scss"
+  ],
+  "key_findings": [
+    "The site has over 400 content pages but only about 26 posts, so it is a knowledge hub plus portfolio rather than a pure blog.",
+    "Post summaries currently expose tags and mixed metadata, increasing scan cost.",
+    "Heading level two is globally uppercase with wide tracking, which makes long-form articles feel like documentation sections.",
+    "Interactive icons and links do not share a single semantic or visual contract.",
+    "The stylesheet has high specificity and duplication, so changes must stay scoped to touched components."
+  ],
+  "suggested_approach": "Implement a small editorial UX vertical slice: shared post-card partial without tags, consistent utility icon and link states, and article-scoped heading hierarchy. Verify all list contexts before replacing duplicated summary templates."
+}

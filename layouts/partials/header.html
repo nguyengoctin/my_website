@@ -42,11 +42,12 @@
 
                 {{- if .Site.Params.search.enable -}}
                     <a href="javascript:void(0);" class="menu-item search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)" aria-label="Tìm kiếm bài viết">
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span class="sys-icon"><i class="ti ti-search"></i></span>
                     </a>
                 {{- end -}}
                 <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
-                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                    <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
+                    <span class="sys-icon theme-icon-dark" style="display: none;"><i class="ti ti-moon"></i></span>
                 </a>
             </div>
         </div>
@@ -116,7 +117,7 @@
             {{- if .Site.Params.search.enable -}}
                 <div class="search-wrapper">
                     <div class="search-mobile-trigger" id="search-toggle-mobile" role="button" aria-label="Tìm kiếm">
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span class="sys-icon"><i class="ti ti-search"></i></span>
                         <span class="search-placeholder-text">{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}</span>
                         <span class="key-badge">⌘K</span>
                     </div>
@@ -135,7 +136,7 @@
                             {{- .Pre | safeHTML }}
                             <span class="menu-item-text">{{ .Name }}</span>
                         </span>
-                        <i class="fas fa-chevron-right menu-item-arrow" aria-hidden="true"></i>
+                        <span class="sys-icon menu-item-arrow"><i class="ti ti-chevron-right"></i></span>
                     </a>
                 {{- end -}}
             </div>
@@ -143,7 +144,8 @@
             <div class="mobile-bottom-row">
                 <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
                     <span class="theme-switch-label">
-                        <i class="fas fa-adjust" aria-hidden="true"></i>
+                        <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
+                        <span class="sys-icon theme-icon-dark" style="display: none;"><i class="ti ti-moon"></i></span>
                         <span>Theme Mode</span>
                     </span>
                 </a>

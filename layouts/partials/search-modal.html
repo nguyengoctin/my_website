@@ -5,7 +5,7 @@
         <!-- Search Header -->
         <div class="search-modal-header">
             <div class="search-input-wrapper">
-                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <i class="ti ti-search search-icon" aria-hidden="true"></i>
                 <input 
                     type="search" 
                     id="modal-search-input" 
@@ -17,10 +17,10 @@
                     aria-controls="search-results-list"
                 />
                 <span class="search-loading" id="search-loading" style="display: none;">
-                    <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                    <i class="ti ti-loader fa-spin" aria-hidden="true"></i>
                 </span>
                 <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Xóa nội dung" style="display: none;">
-                    <i class="fas fa-times" aria-hidden="true"></i>
+                    <i class="ti ti-x" aria-hidden="true"></i>
                 </button>
             </div>
             <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Đóng tìm kiếm">
@@ -38,13 +38,13 @@
                 
                 <!-- Initial State / Empty State -->
                 <div class="search-state search-initial" id="search-state-initial">
-                    <div class="state-icon"><i class="fas fa-terminal"></i></div>
+                    <div class="state-icon"><i class="ti ti-terminal"></i></div>
                     <div class="state-title">Tra cứu nhanh ghi chú và bài viết</div>
                     <div class="state-desc">Gõ từ khóa để tìm kiếm theo tiêu đề, tags hoặc nội dung chi tiết.</div>
                 </div>
 
                 <div class="search-state search-empty" id="search-state-empty" style="display: none;">
-                    <div class="state-icon"><i class="far fa-frown-open"></i></div>
+                    <div class="state-icon"><i class="ti ti-mood-sad"></i></div>
                     <div class="state-title">Không tìm thấy kết quả phù hợp</div>
                     <div class="state-desc">Thử tìm bằng từ khóa ngắn hơn hoặc không dấu.</div>
                 </div>
@@ -53,13 +53,13 @@
             <!-- Right Column: Rich Live Preview (Desktop only) -->
             <div class="search-preview-column" id="search-preview-column" role="region" aria-label="Xem trước bài viết">
                 <div class="preview-placeholder" id="preview-placeholder">
-                    <i class="far fa-file-alt"></i>
+                    <i class="ti ti-file-text"></i>
                     <span>Chọn một bài viết để xem trước nội dung tóm tắt</span>
                 </div>
                 <div class="preview-content" id="preview-content" style="display: none;">
                     <div class="preview-meta">
-                        <span class="preview-date" id="preview-date"><i class="far fa-calendar-alt"></i> <span></span></span>
-                        <span class="preview-category" id="preview-category"><i class="far fa-folder"></i> <span></span></span>
+                        <span class="preview-date" id="preview-date"><i class="ti ti-calendar"></i> <span></span></span>
+                        <span class="preview-category" id="preview-category"><i class="ti ti-folder"></i> <span></span></span>
                     </div>
                     <h3 class="preview-title" id="preview-title"></h3>
                     <div class="preview-tags" id="preview-tags"></div>

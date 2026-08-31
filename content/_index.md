@@ -23,22 +23,22 @@ When I’m not writing code, you’ll probably find me reading technical books, 
 
 <div class="about-contact-row" style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center;">
   <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="contact-chip" title="Download 1-Page PDF Resume">
-    <i class="fas fa-file-pdf"></i> Resume (PDF)
+    <i class="ti ti-file-type-pdf"></i> <span>Resume (PDF)</span>
   </a>
   <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com">
-    <i class="fas fa-envelope"></i> Email
+    <i class="ti ti-mail"></i> <span>Email</span>
   </a>
   <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile">
-    <i class="fab fa-github"></i> GitHub
+    <i class="ti ti-brand-github"></i> <span>GitHub</span>
   </a>
   <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile">
-    <i class="fab fa-linkedin"></i> LinkedIn
+    <i class="ti ti-brand-linkedin"></i> <span>LinkedIn</span>
   </a>
   <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener" class="contact-chip" title="Facebook">
-    <i class="fab fa-facebook"></i> Facebook
+    <i class="ti ti-brand-facebook"></i> <span>Facebook</span>
   </a>
   <a href="tel:0397662903" class="contact-chip" title="Phone or Zalo">
-    <i class="fas fa-comment-dots"></i> 0397662903 <span class="chip-sub">Zalo</span>
+    <i class="ti ti-phone"></i> <span>0397662903 <span class="chip-sub">Zalo</span></span>
   </a>
 </div>
 
@@ -152,7 +152,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="fas fa-file-alt"></i> Read Case Study</a>
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Read Case Study</span></a>
       </div>
     </div>
   </div>
@@ -188,8 +188,8 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
+        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
+        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
       </div>
     </div>
   </div>
@@ -225,8 +225,8 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Docker</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
+        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
+        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
       </div>
     </div>
   </div>
@@ -261,9 +261,9 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="fas fa-file-alt"></i> Read More</a>
-        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="fab fa-github"></i> Source Code</a>
-        <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="fas fa-external-link-alt"></i> Live Site</a>
+        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
+        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
+        <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-external-link"></i> <span>Live Site</span></a>
       </div>
     </div>
   </div>
