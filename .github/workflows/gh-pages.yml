@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Typst
-        uses: enter-at/setup-typst@v0.3
+        uses: typst-community/setup-typst@v0
         with:
           typst-version: "latest"
 
