@@ -29,9 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v0
-        with:
-          typst-version: "latest"
+        uses: typst-community/setup-typst@v5
 
       - name: Compile CV to PDF
         run: |
