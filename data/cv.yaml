@@ -26,11 +26,11 @@ skills:
   - category: "Programming Languages"
     items: "Python, TypeScript, JavaScript, Java (Core)"
   - category: "Backend and Web Frameworks"
-    items: "FastAPI, Next.js (App Router), React, RESTful APIs, WebSockets, TailwindCSS"
+    items: "Django REST Framework, FastAPI, Next.js (App Router), React, RESTful APIs, WebSockets, TailwindCSS"
   - category: "Cloud and AI Engineering"
-    items: "AWS (Lambda, SAM, Bedrock, DynamoDB, S3), LLM APIs (Gemini, Bedrock), Agentic Workflows, MCP"
+    items: "AWS (Lambda, SAM, Bedrock, DynamoDB, S3), LLM Integration (Gemini, Bedrock, Ollama), Agentic Workflows, MCP"
   - category: "Databases and Architecture"
-    items: "PostgreSQL, DynamoDB (Single-Table Design), SQLite, Clean Architecture, Event-Driven Architecture"
+    items: "PostgreSQL, Redis, DynamoDB (Single-Table Design), SQLite, Clean Architecture, Event-Driven Architecture"
   - category: "DevOps and Tools"
     items: "Docker, Git, GitHub Actions, Linux"
 
@@ -46,6 +46,17 @@ experience:
       - "Configured cloud monitoring and structured logging pipelines across serverless components, ensuring environment consistency and accelerating error diagnosis during testing."
 
 projects:
+  - name: "Bếp Dì 6 – Online Ordering Platform (Zalo Mini App)"
+    tech_stack: "Python, Django REST, React, Zalo Mini App, PostgreSQL, Redis"
+    github_url: "https://github.com/ngoctinn/bepdi6-zalo-miniapp"
+    case_study_url: "https://ngoctin.me/posts/bep-di-6-zalo-mini-app-ordering-platform/"
+    start_date: "Aug 2026"
+    end_date: "Present"
+    highlights:
+      - "Architected an end-to-end Food and Beverage online ordering system integrating a Zalo Mini App frontend (React 18, ZMP SDK) with a centralized Django REST API and PostgreSQL database."
+      - "Engineered immutable order snapshotting and UUIDv4 idempotency keys via transaction.atomic() and Redis, eliminating duplicate checkouts and securing financial data integrity."
+      - "Built a dynamic delivery fee engine using GPS Haversine distance calculations and integrated automated VietQR payment generation to streamline checkout flows."
+
   - name: "Lexi – AI-Powered English Speaking Tutor"
     tech_stack: "Next.js, TypeScript, Python, AWS"
     github_url: "https://github.com/ngoctinn/lexi-be"
@@ -56,7 +67,6 @@ projects:
       - "Architected a cloud-native serverless backend using AWS SAM, API Gateway, Lambda, Cognito, DynamoDB, and S3, enforcing Clean Architecture across Domain, Application, and Infrastructure layers."
       - "Engineered a real-time voice streaming pipeline via API Gateway WebSockets, orchestrating Amazon Transcribe, Bedrock, and Polly for low-latency conversational feedback."
       - "Designed a DynamoDB Single-Table schema with composite partition/sort keys and GSIs, supporting 6+ distinct access patterns for user sessions, flashcards, and dialogue history with single-digit millisecond latency."
-      - "Developed a full-stack Next.js (App Router) interface with Tailwind CSS, integrating secure JWT auth workflows and automating CI/CD deployments via AWS Amplify."
 
   - name: "Bilingual Movie-Based English Learning Platform"
     tech_stack: "Next.js, TypeScript, FastAPI, Python, SQLite"
