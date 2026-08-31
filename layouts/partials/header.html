@@ -41,18 +41,9 @@
                 {{- end -}}
 
                 {{- if .Site.Params.search.enable -}}
-                    <span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-desktop" autocomplete="off">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
-                        </span>
-                    </span>
+                    <a href="javascript:void(0);" class="menu-item search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)" aria-label="Tìm kiếm bài viết">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </a>
                 {{- end -}}
                 <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
                     <i class="fas fa-adjust" aria-hidden="true"></i>
@@ -63,58 +54,6 @@
     <script>
     (function() {
         document.addEventListener('DOMContentLoaded', function() {
-            var toggle = document.getElementById('search-toggle-desktop');
-            var input = document.getElementById('search-input-desktop');
-            var header = document.getElementById('header-desktop');
-
-            function openSearch() {
-                if (header) header.classList.add('open');
-                if (input) {
-                    input.focus();
-                    input.select();
-                }
-            }
-
-            function closeSearch() {
-                if (input && document.activeElement === input) {
-                    input.blur();
-                }
-                if (header) header.classList.remove('open');
-            }
-
-            if (toggle && input) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    openSearch();
-                });
-            }
-
-            document.addEventListener('keydown', function(e) {
-                var activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
-                var isEditable = document.activeElement && (document.activeElement.isContentEditable || activeTag === 'input' || activeTag === 'textarea' || activeTag === 'select');
-
-                if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-                    e.preventDefault();
-                    openSearch();
-                } else if (e.key === '/' && !isEditable) {
-                    e.preventDefault();
-                    openSearch();
-                } else if (e.key === 'Escape') {
-                    closeSearch();
-                }
-            });
-
-            // Click outside to collapse search
-            document.addEventListener('click', function(e) {
-                var searchDesktop = document.getElementById('search-desktop');
-                var searchDropdown = document.getElementById('search-dropdown-desktop');
-                if (header && header.classList.contains('open')) {
-                    if (searchDesktop && !searchDesktop.contains(e.target) && (!searchDropdown || !searchDropdown.contains(e.target))) {
-                        closeSearch();
-                    }
-                }
-            });
-
             var menuToggleMobile = document.getElementById('menu-toggle-mobile');
             var menuMobile = document.getElementById('menu-mobile');
             if (menuToggleMobile) {
@@ -176,21 +115,11 @@
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
                 <div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="{{ T `search` }}">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
-                        </span>
+                    <div class="search-mobile-trigger" id="search-toggle-mobile" role="button" aria-label="Tìm kiếm">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <span class="search-placeholder-text">{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}</span>
+                        <span class="key-badge">⌘K</span>
                     </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        {{ T `cancel` }}
-                    </a>
                 </div>
             {{- end -}}
 
@@ -224,10 +153,5 @@
 </header>
 
 {{- if .Site.Params.search.enable -}}
-    <div class="search-dropdown desktop">
-        <div id="search-dropdown-desktop"></div>
-    </div>
-    <div class="search-dropdown mobile">
-        <div id="search-dropdown-mobile"></div>
-    </div>
+    {{- partial "search-modal.html" . -}}
 {{- end -}}

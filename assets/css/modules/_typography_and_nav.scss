@@ -1,20 +1,62 @@
 // ==========================================================
-// 1. GLOBAL BODY & THEME VARIABLES
+// 1. DESIGN TOKEN SYSTEM — Single Source of Truth
 // ==========================================================
-body {
-  font-family: "Lora", Georgia, serif !important;
-  color: #111111 !important;
-  background-color: #fdfdfd !important;
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+// LIGHT MODE tokens
+:root,
+html[theme=light],
+body[theme=light] {
+  // --- Background tiers (elevation hierarchy) ---
+  --clr-bg:         #fdfdfd;  // T0: Page background
+  --clr-surface:    #ffffff;  // T1: Card, panel, modal surface
+  --clr-surface-2:  #f8fafc;  // T2: Input, code bg, table header, hover row
+  --clr-surface-3:  #f1f5f9;  // T3: Chip, badge, tag pill bg
+  --clr-surface-4:  #e2e8f0;  // T4: Divider, subtle border bg
 
-  &[theme=dark] {
-    color: #e6e8ec !important;
-    background-color: #1c1d22 !important;
-  }
+  // --- Border ---
+  --clr-border:     #e2e8f0;  // Default border
+  --clr-border-2:   #edf0f4;  // Lighter border (timeline rows)
+
+  // --- Text ---
+  --clr-text:       #111111;  // Primary text
+  --clr-text-2:     #475569;  // Secondary / muted text
+  --clr-text-3:     #94a3b8;  // Placeholder / disabled text
+
+  // --- Theme flag for JS ---
+  color-scheme: light;
 }
 
-*, *::before, *::after {
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+// DARK MODE tokens
+html[theme=dark],
+body[theme=dark] {
+  // --- Background tiers ---
+  --clr-bg:         #1c1d22;  // T0: Page background
+  --clr-surface:    #23252c;  // T1: Card, panel (+3% lighter)
+  --clr-surface-2:  #2b2e38;  // T2: Input, hover row (+6% lighter)
+  --clr-surface-3:  #33363f;  // T3: Chip, badge (+9% lighter)
+  --clr-surface-4:  #3a3d48;  // T4: Active/selected (+12%)
+
+  // --- Border ---
+  --clr-border:     rgba(255,255,255,0.10);
+  --clr-border-2:   rgba(255,255,255,0.06);
+
+  // --- Text ---
+  --clr-text:       #e6e8ec;  // Primary text
+  --clr-text-2:     #a1a9b8;  // Secondary / muted
+  --clr-text-3:     #636b7e;  // Placeholder / disabled
+
+  // --- Theme flag ---
+  color-scheme: dark;
+}
+
+// html & body base — use tokens
+html {
+  background-color: var(--clr-bg, #fdfdfd);
+}
+
+body {
+  font-family: "Lora", Georgia, serif !important;
+  color: var(--clr-text, #111111) !important;
+  background-color: var(--clr-bg, #fdfdfd) !important;
 }
 
 // ==========================================================
@@ -255,6 +297,51 @@ hr {
 
     &.delimiter {
       display: none !important;
+    }
+
+    // Standardized Action Icon Buttons (Search & Theme Switch)
+    &.search-toggle,
+    &.theme-switch {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 32px !important;
+      height: 32px !important;
+      padding: 0 !important;
+      margin: 0 0.25rem !important;
+      border-radius: 8px !important;
+      color: #64748b !important;
+      text-decoration: none !important;
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      font-size: 15px !important;
+      line-height: 1 !important;
+
+      i {
+        font-size: 15px !important;
+        line-height: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      [theme=dark] & {
+        color: #94a3b8 !important;
+      }
+
+      &:hover {
+        color: #0f172a !important;
+        background-color: #f1f5f9 !important;
+        text-decoration: none !important;
+
+        [theme=dark] & {
+          color: #f8fafc !important;
+          background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+      }
+
+      &:active {
+        transform: scale(0.95) !important;
+      }
     }
   }
 }

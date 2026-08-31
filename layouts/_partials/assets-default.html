@@ -231,6 +231,9 @@
 
 {{- /* Theme script */ -}}
 {{- dict "Source" "js/theme.js" "JSBuild" true "Minify" true "TargetPath" "js/theme.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+{{- if .Site.Params.search | and .Site.Params.search.enable -}}
+    {{- dict "Source" "js/search-modal.js" "JSBuild" true "Minify" true "TargetPath" "js/search-modal.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+{{- end -}}
 
 {{- with (.Scratch.Get "this").scriptArr -}}
     {{- delimit . "\n" | dict "Content" | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}

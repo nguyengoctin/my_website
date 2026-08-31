@@ -1,0 +1,89 @@
+{{- /* Command Palette Search Modal */ -}}
+<div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tìm kiếm bài viết">
+    <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+    <div class="search-modal-container">
+        <!-- Search Header -->
+        <div class="search-modal-header">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <input 
+                    type="search" 
+                    id="modal-search-input" 
+                    class="search-modal-input" 
+                    placeholder="Tìm kiếm bài viết, ghi chú, tag... (nhập tiếng Việt có hoặc không dấu)" 
+                    autocomplete="off" 
+                    spellcheck="false"
+                    aria-autocomplete="list"
+                    aria-controls="search-results-list"
+                />
+                <span class="search-loading" id="search-loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                </span>
+                <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Xóa nội dung" style="display: none;">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Đóng tìm kiếm">
+                <span class="key-badge">ESC</span>
+            </button>
+        </div>
+
+        <!-- Search Body: 2 Columns on Desktop -->
+        <div class="search-modal-body" id="search-modal-body">
+            <!-- Left Column: Results List -->
+            <div class="search-results-column" id="search-results-column" role="region" aria-label="Danh sách kết quả">
+                <ul class="search-results-list" id="search-results-list" role="listbox">
+                    <!-- Dynamic items rendered by JS -->
+                </ul>
+                
+                <!-- Initial State / Empty State -->
+                <div class="search-state search-initial" id="search-state-initial">
+                    <div class="state-icon"><i class="fas fa-terminal"></i></div>
+                    <div class="state-title">Tra cứu nhanh ghi chú và bài viết</div>
+                    <div class="state-desc">Gõ từ khóa để tìm kiếm theo tiêu đề, tags hoặc nội dung chi tiết.</div>
+                </div>
+
+                <div class="search-state search-empty" id="search-state-empty" style="display: none;">
+                    <div class="state-icon"><i class="far fa-frown-open"></i></div>
+                    <div class="state-title">Không tìm thấy kết quả phù hợp</div>
+                    <div class="state-desc">Thử tìm bằng từ khóa ngắn hơn hoặc không dấu.</div>
+                </div>
+            </div>
+
+            <!-- Right Column: Rich Live Preview (Desktop only) -->
+            <div class="search-preview-column" id="search-preview-column" role="region" aria-label="Xem trước bài viết">
+                <div class="preview-placeholder" id="preview-placeholder">
+                    <i class="far fa-file-alt"></i>
+                    <span>Chọn một bài viết để xem trước nội dung tóm tắt</span>
+                </div>
+                <div class="preview-content" id="preview-content" style="display: none;">
+                    <div class="preview-meta">
+                        <span class="preview-date" id="preview-date"><i class="far fa-calendar-alt"></i> <span></span></span>
+                        <span class="preview-category" id="preview-category"><i class="far fa-folder"></i> <span></span></span>
+                    </div>
+                    <h3 class="preview-title" id="preview-title"></h3>
+                    <div class="preview-tags" id="preview-tags"></div>
+                    <div class="preview-divider"></div>
+                    <div class="preview-snippet-title">Trích đoạn nội dung liên quan:</div>
+                    <div class="preview-snippet" id="preview-snippet"></div>
+                    <div class="preview-action">
+                        <a href="#" class="preview-open-link" id="preview-open-link">
+                            <span>Mở bài viết đầy đủ</span>
+                            <span class="key-badge">↵ Enter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Footer -->
+        <div class="search-modal-footer">
+            <div class="footer-shortcuts">
+                <span class="shortcut-item"><span class="key-badge">↑</span> <span class="key-badge">↓</span> Điều hướng</span>
+                <span class="shortcut-item"><span class="key-badge">↵</span> Mở bài</span>
+                <span class="shortcut-item"><span class="key-badge">ESC</span> Đóng</span>
+            </div>
+            <div class="footer-count" id="footer-results-count">0 kết quả</div>
+        </div>
+    </div>
+</div>

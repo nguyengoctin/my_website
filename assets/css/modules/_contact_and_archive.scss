@@ -157,15 +157,10 @@
       min-height: auto !important;
       margin-top: 0 !important;
       padding: 1.25rem 1.4rem !important;
-      border: 1px solid #e8e8e8 !important;
+      border: 1px solid var(--clr-border) !important;
       border-radius: 8px !important;
-      background-color: #ffffff !important;
+      background-color: var(--clr-surface) !important;
       box-sizing: border-box !important;
-
-      [theme=dark] & {
-        border-color: #27272a !important;
-        background-color: #18181b !important;
-      }
 
       .card-item-wrapper {
         width: 100% !important;
@@ -177,20 +172,12 @@
         font-weight: 400 !important;
         margin-top: 0 !important;
         margin-bottom: 0.8rem !important;
-        border-bottom: 1px solid #f0f0f0 !important;
+        border-bottom: 1px solid var(--clr-border-2) !important;
         padding-bottom: 0.5rem !important;
 
-        [theme=dark] & {
-          border-bottom-color: #27272a !important;
-        }
-
         a {
-          color: #111111 !important;
+          color: var(--clr-text) !important;
           text-decoration: none !important;
-
-          [theme=dark] & {
-            color: #f3f4f6 !important;
-          }
 
           &:hover {
             color: #1337a6 !important;
@@ -211,14 +198,12 @@
 // 3. MOBILE MENU & SEARCH
 // ==========================================================
 .menu#menu-mobile {
-  background-color: #ffffff !important;
-  border-bottom: 1px solid #e8e8e8 !important;
+  background-color: var(--clr-surface) !important;
+  border-bottom: 1px solid var(--clr-border) !important;
   padding: 0.75rem 1.25rem 1.25rem 1.25rem !important;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
 
   [theme=dark] & {
-    background-color: #1c1d22 !important;
-    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4) !important;
   }
 

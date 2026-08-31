@@ -11,21 +11,29 @@
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
-    </head>
-    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
-        {{- /* Check theme isDark before body rendering */ -}}
+
+        {{- /* Zero-Flash Theme Init: Run immediately in <head> before HTML/CSS rendering */ -}}
         {{- $theme := .Site.Params.defaulttheme -}}
         <script>
-          const query = window.matchMedia('(prefers-color-scheme: dark)');
-          function applyTheme() {
-            let theme = window.localStorage?.getItem('theme') || '{{ $theme }}';
-            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
-            document.body.setAttribute('theme', isDark? 'dark' : 'light');
-            document.body.setAttribute('cfg-theme', theme);
-          }
-
-          applyTheme();
-          query.addEventListener('change', applyTheme);
+          (function() {
+            var query = window.matchMedia('(prefers-color-scheme: dark)');
+            var theme = window.localStorage?.getItem('theme') || '{{ $theme }}';
+            var isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            var themeVal = isDark ? 'dark' : 'light';
+            document.documentElement.setAttribute('theme', themeVal);
+            document.documentElement.setAttribute('data-theme', themeVal);
+            document.documentElement.style.backgroundColor = isDark ? '#1c1d22' : '#fdfdfd';
+            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+          })();
+        </script>
+    </head>
+    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+        <script>
+          (function() {
+            var themeVal = document.documentElement.getAttribute('theme') || 'dark';
+            document.body.setAttribute('theme', themeVal);
+            document.body.setAttribute('cfg-theme', window.localStorage?.getItem('theme') || '{{ $theme }}');
+          })();
         </script>
 
         <div id="mask"></div>
@@ -154,21 +162,45 @@
           });
         </script>
 
-        {{- /* Zero-Jank Smooth Theme Transition Handler */ -}}
+        {{- /* Theme Sync Patch: keep html[theme] in sync with body[theme] for CSS tokens */ -}}
         <script>
           (function() {
-            var themeTransitionTimer = null;
-            document.addEventListener('click', function(e) {
-              var btn = e.target.closest('.theme-switch');
-              if (!btn) return;
+            // LoveIt's theme.js only updates body[theme], but our CSS tokens
+            // live on html[theme]. We observe body attribute changes and mirror them.
+            function syncHtmlTheme() {
+              var bodyTheme = document.body.getAttribute('theme');
+              if (bodyTheme) {
+                document.documentElement.setAttribute('theme', bodyTheme);
+                document.documentElement.setAttribute('data-theme', bodyTheme);
+                document.documentElement.style.backgroundColor = bodyTheme === 'dark' ? '#1c1d22' : '#fdfdfd';
+                document.documentElement.style.colorScheme = bodyTheme === 'dark' ? 'dark' : 'light';
+              }
+            }
 
-              document.body.classList.add('theme-transitioning');
-              if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
-              themeTransitionTimer = setTimeout(function() {
-                document.body.classList.remove('theme-transitioning');
-                themeTransitionTimer = null;
-              }, 250);
-            }, true);
+            var themeTransitionTimer = null;
+            var observer = new MutationObserver(function(mutations) {
+              mutations.forEach(function(m) {
+                if (m.attributeName === 'theme') {
+                  // Trigger smooth transition class
+                  document.body.classList.add('theme-transitioning');
+                  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
+                  themeTransitionTimer = setTimeout(function() {
+                    document.body.classList.remove('theme-transitioning');
+                    themeTransitionTimer = null;
+                  }, 250);
+
+                  syncHtmlTheme();
+                }
+              });
+            });
+
+            if (document.body) {
+              observer.observe(document.body, { attributes: true, attributeFilter: ['theme'] });
+            } else {
+              document.addEventListener('DOMContentLoaded', function() {
+                observer.observe(document.body, { attributes: true, attributeFilter: ['theme'] });
+              });
+            }
           })();
         </script>
     </body>

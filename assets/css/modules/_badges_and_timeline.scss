@@ -2,8 +2,8 @@
 // 1. HOME PAGE TIMELINE (Experiences, Education, Projects)
 // ==========================================================
 .timeline-box {
-  background: #ffffff;
-  border: 1px solid #e8e8e8;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   border-radius: 8px;
   overflow: hidden;
   margin-top: 1rem;
@@ -11,8 +11,6 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
 
   [theme=dark] & {
-    background: #18181b;
-    border-color: #27272a;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
   }
 }
@@ -20,7 +18,7 @@
 .timeline-row {
   display: flex;
   padding: 1.5rem 1.6rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--clr-border-2);
   gap: 1.75rem;
   align-items: flex-start;
   transition: background-color 0.15s ease;
@@ -30,15 +28,7 @@
   }
 
   &:hover {
-    background-color: #fafbfd;
-
-    [theme=dark] & {
-      background-color: #1f2026;
-    }
-  }
-
-  [theme=dark] & {
-    border-bottom-color: #27272a;
+    background-color: var(--clr-surface-2);
   }
 }
 

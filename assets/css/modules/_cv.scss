@@ -150,12 +150,12 @@
 
 /* 3. Main Resume Sheet */
 .cv-sheet {
-  background: #ffffff;
+  background: var(--clr-surface);
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--clr-border);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   padding: 3rem 2.5rem;
-  color: #111111;
+  color: var(--clr-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.45;
   box-sizing: border-box;
@@ -166,10 +166,7 @@
 }
 
 [theme=dark] .cv-sheet {
-  background: #18191e;
-  border-color: #272830;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #e4e4e7;
 }
 
 /* Header */
