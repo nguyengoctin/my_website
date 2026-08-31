@@ -1,399 +1,127 @@
-{{- define "title" }}My CV - {{ .Site.Title }}{{ end -}}
+{{- define "title" }}Curriculum Vitae - {{ .Site.Title }}{{ end -}}
 
 {{- define "content" -}}
-<!-- PDF.js TextLayer CSS for selectable & copyable text -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css">
-
-<style>
-/* Desktop: vertical center toàn trang CV */
-.wrapper {
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-main.main {
-    flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 2rem 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* Đảm bảo container luôn full width để .page tính % đúng */
-main.main > .container {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.page {
-    padding-bottom: 2rem !important;
-}
-
-/* Mobile: giữ padding-top của theme để header không che nội dung */
-@media (max-width: 680px) {
-    .page {
-        padding-bottom: 2.5rem !important;
-    }
-}
-
-/* Floating action buttons overlay trên PDF */
-.cv-fab {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    z-index: 20;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.cv-page-card:hover .cv-fab {
-    opacity: 1;
-}
-
-/* Touch device: nút luôn hiển thị vì không có hover */
-@media (hover: none) {
-    .cv-fab {
-        opacity: 1;
-    }
-}
-
-
-.cv-tool-btn {
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #334155;
-    width: 34px;
-    height: 34px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-decoration: none !important;
-    font-size: 0.85rem;
-    transition: all 0.2s ease;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-}
-
-[theme=dark] .cv-tool-btn {
-    background: rgba(36, 37, 43, 0.88);
-    border-color: rgba(255, 255, 255, 0.12);
-    color: #e2e8f0;
-}
-
-.cv-tool-btn:hover {
-    color: #4d74eb !important;
-    background: rgba(255, 255, 255, 0.98);
-    border-color: rgba(77, 116, 235, 0.3);
-    box-shadow: 0 4px 12px rgba(77, 116, 235, 0.2);
-}
-
-[theme=dark] .cv-tool-btn:hover {
-    color: #818cf8 !important;
-    background: rgba(36, 37, 43, 0.98);
-    border-color: rgba(129, 140, 248, 0.3);
-}
-
-/* Hover trên card để hiện FAB */
-.cv-page-card:hover .cv-fab {
-    opacity: 1;
-}
-
-/* CV page card */
-.cv-page-card {
-    position: relative;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-[theme=dark] .cv-page-card {
-    border-color: #27272a;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-}
-
-.cv-page-card + .cv-page-card {
-    margin-top: 1.5rem;
-}
-
-.cv-page-card canvas {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-    user-select: none;
-}
-
-/* Selectable & Copyable PDF Text Layer */
-.textLayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    opacity: 1.0;
-    line-height: 1.0;
-    transform-origin: 0 0;
-    z-index: 5;
-}
-
-.textLayer span, .textLayer br {
-    color: transparent;
-    position: absolute;
-    white-space: pre;
-    cursor: text;
-    transform-origin: 0% 0%;
-}
-
-.textLayer ::selection {
-    background: rgba(77, 116, 235, 0.35) !important;
-    color: transparent !important;
-}
-
-/* Clickable Links Overlay Layer */
-.cv-link-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.cv-link-overlay a {
-    position: absolute;
-    display: block;
-    pointer-events: auto;
-    border-radius: 3px;
-    background: transparent;
-    transition: background 0.2s ease, outline 0.2s ease;
-    cursor: pointer;
-}
-
-.cv-link-overlay a:hover {
-    background: rgba(77, 116, 235, 0.12);
-    outline: 1px solid rgba(77, 116, 235, 0.4);
-}
-
-/* Skeleton Loading Screen */
-.cv-loading {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 1.1rem;
-    padding: 2.5rem 2rem;
-    width: 100%;
-    aspect-ratio: 612 / 792;
-    min-height: 920px;
-    background: #ffffff;
-    border-radius: 4px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
-}
-
-[theme=dark] .cv-loading {
-    background: #18181b;
-    border-color: #27272a;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-}
-
-.cv-skeleton-line {
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.05) 63%);
-    background-size: 400% 100%;
-    animation: cvShimmer 1.4s ease infinite;
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-
-[theme=dark] .cv-skeleton-line {
-    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.10) 37%, rgba(255,255,255,0.04) 63%);
-    background-size: 400% 100%;
-}
-
-@keyframes cvShimmer {
-    0% { background-position: 100% 0; }
-    100% { background-position: -100% 0; }
-}
-</style>
-
-<div class="page">
-    <!-- Skeleton Loading Screen -->
-    <div id="cv-skeleton" class="cv-loading">
-        <!-- Header Section -->
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
-            <div class="cv-skeleton-line" style="width: 38%; height: 26px;"></div>
-            <div class="cv-skeleton-line" style="width: 65%; height: 14px;"></div>
-            <div class="cv-skeleton-line" style="width: 50%; height: 13px;"></div>
-        </div>
-        <div class="cv-skeleton-line" style="width: 100%; height: 2px; margin-bottom: 0.3rem;"></div>
-
-        <!-- Section 1: Summary -->
-        <div class="cv-skeleton-line" style="width: 25%; height: 18px;"></div>
-        <div class="cv-skeleton-line" style="width: 98%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 94%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 82%; height: 13px; margin-bottom: 0.4rem;"></div>
-
-        <!-- Section 2: Experiences -->
-        <div class="cv-skeleton-line" style="width: 30%; height: 18px;"></div>
-        <div class="cv-skeleton-line" style="width: 88%; height: 14px;"></div>
-        <div class="cv-skeleton-line" style="width: 96%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 92%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 85%; height: 13px; margin-bottom: 0.4rem;"></div>
-
-        <!-- Section 3: Projects -->
-        <div class="cv-skeleton-line" style="width: 28%; height: 18px;"></div>
-        <div class="cv-skeleton-line" style="width: 85%; height: 14px;"></div>
-        <div class="cv-skeleton-line" style="width: 95%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 90%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 78%; height: 13px; margin-bottom: 0.4rem;"></div>
-
-        <!-- Section 4: Education & Skills -->
-        <div class="cv-skeleton-line" style="width: 26%; height: 18px;"></div>
-        <div class="cv-skeleton-line" style="width: 90%; height: 13px;"></div>
-        <div class="cv-skeleton-line" style="width: 80%; height: 13px;"></div>
-
-        <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: auto; padding-top: 1rem; font-family: Lora, serif; font-size: 0.85rem; color: #828282;">
-            <i class="fas fa-circle-notch fa-spin"></i> Đang tải CV PDF...
-        </div>
+{{ $cv := hugo.Data.cv }}
+<div class="cv-page-wrapper">
+  <!-- Action Toolbar (Web only) -->
+  <div class="cv-toolbar">
+    <div class="cv-toolbar-info">
+      <span class="cv-badge">Engineering Resume</span>
+      <span class="cv-badge-sub">Single-Column ATS Standard</span>
     </div>
+    <div class="cv-toolbar-actions">
+      <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="btn-cv-action primary" title="Tải file PDF bản in chuẩn A4">
+        <i class="fas fa-file-pdf"></i> <span>Download PDF</span>
+      </a>
+      <button onclick="window.print()" class="btn-cv-action" title="In hoặc lưu file PDF trực tiếp">
+        <i class="fas fa-print"></i> <span>Print / Save PDF</span>
+      </button>
+    </div>
+  </div>
 
-    <!-- CV Canvas Container -->
-    <div id="cv-page-container" style="display: none; width: 100%;"></div>
+  <!-- Main Resume Sheet -->
+  <article class="cv-sheet">
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">{{ $cv.basics.name }}</h1>
+      <div class="cv-contacts">
+        {{ with $cv.basics.phone }}<span>{{ . }}</span>{{ end }}
+        {{ with $cv.basics.location }}<span class="sep">|</span><span>{{ . }}</span>{{ end }}
+        {{ with $cv.basics.email }}<span class="sep">|</span><a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        {{ with $cv.basics.github }}<span class="sep">|</span><a href="{{ . }}" target="_blank" rel="noopener noreferrer">github</a>{{ end }}
+        {{ with $cv.basics.linkedin }}<span class="sep">|</span><a href="{{ . }}" target="_blank" rel="noopener noreferrer">linkedin</a>{{ end }}
+        {{ with $cv.basics.website }}<span class="sep">|</span><a href="{{ . }}" target="_blank" rel="noopener noreferrer">ngoctin.me</a>{{ end }}
+      </div>
+    </header>
+
+    <!-- Education -->
+    {{ with $cv.education }}
+    <section class="cv-section">
+      <h2 class="cv-section-title">EDUCATION</h2>
+      {{ range . }}
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <strong class="cv-item-title">{{ .institution }}</strong>
+            <span class="cv-item-loc">| <em>{{ .location }}</em></span>
+          </div>
+          <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
+        </div>
+        <div class="cv-item-sub">
+          <span>{{ .degree }}</span>
+          {{ with .major }} — <span>Major: {{ . }}</span>{{ end }}
+        </div>
+        <div class="cv-item-meta">
+          {{ with .gpa }}<span>Cumulative GPA: {{ . }}</span>{{ end }}
+          {{ with .language_proficiency }} | <span>Language Proficiency: {{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    <!-- Skills -->
+    {{ with $cv.skills }}
+    <section class="cv-section">
+      <h2 class="cv-section-title">SKILLS</h2>
+      <ul class="cv-skills-list">
+        {{ range . }}
+        <li><strong>{{ .category }}:</strong> {{ .items }}</li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+    <!-- Experience -->
+    {{ with $cv.experience }}
+    <section class="cv-section">
+      <h2 class="cv-section-title">EXPERIENCE</h2>
+      {{ range . }}
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <strong class="cv-item-title">{{ .company }}</strong>
+            <span class="cv-item-role">| <em>{{ .position }}</em></span>
+            {{ with .location }}<span class="cv-item-loc">| <em>{{ . }}</em></span>{{ end }}
+          </div>
+          <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
+        </div>
+        <ul class="cv-item-bullets">
+          {{ range .highlights }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    <!-- Projects -->
+    {{ with $cv.projects }}
+    <section class="cv-section">
+      <h2 class="cv-section-title">PROJECTS</h2>
+      {{ range . }}
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <strong class="cv-item-title">{{ .name }}</strong>
+            {{ with .tech_stack }}<span class="cv-item-tech">| <em>{{ . }}</em></span>{{ end }}
+            <span class="cv-project-links">
+              {{ with .github_url }}| <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[Link GitHub]</a>{{ end }}
+              {{ with .demo_url }}| <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[Demo Video]</a>{{ end }}
+            </span>
+          </div>
+          <span class="cv-item-date"><em>{{ .start_date }} – {{ .end_date }}</em></span>
+        </div>
+        <ul class="cv-item-bullets">
+          {{ range .highlights }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+  </article>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-<script>
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-document.addEventListener('DOMContentLoaded', async function () {
-    const pdfUrl = '/cv/Nguyen_Ngoc_Tin-CV.pdf';
-    const container = document.getElementById('cv-page-container');
-    const skeleton = document.getElementById('cv-skeleton');
-
-    try {
-        const loadingTask = pdfjsLib.getDocument(pdfUrl);
-        const pdfDoc = await loadingTask.promise;
-        const numPages = pdfDoc.numPages;
-
-        const renderScale = Math.min((window.devicePixelRatio || 1.5) * 1.5, 2.5);
-
-        // Đọc width thực từ skeleton (visible, đúng width với .page)
-        const skeletonWidth = skeleton ? skeleton.getBoundingClientRect().width : 0;
-        const baseTargetWidth = skeletonWidth > 0 ? skeletonWidth : (container.offsetWidth || window.innerWidth);
-
-        for (let i = 1; i <= numPages; i++) {
-            const page = await pdfDoc.getPage(i);
-            const origViewport = page.getViewport({ scale: 1.0 });
-
-            const card = document.createElement('div');
-            card.className = 'cv-page-card';
-
-            // Floating action buttons — chỉ hiện trên trang đầu
-            if (i === 1) {
-                const fab = document.createElement('div');
-                fab.className = 'cv-fab';
-                fab.innerHTML = `
-                    <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download="Nguyen_Ngoc_Tin-CV.pdf" class="cv-tool-btn" title="Tải xuống PDF">
-                        <i class="fas fa-download"></i>
-                    </a>
-                    <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-tool-btn" title="Mở PDF trong tab mới">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>`;
-                card.appendChild(fab);
-            }
-
-            const canvas = document.createElement('canvas');
-            card.appendChild(canvas);
-
-            const textLayerDiv = document.createElement('div');
-            textLayerDiv.className = 'textLayer';
-            card.appendChild(textLayerDiv);
-
-            const linkOverlay = document.createElement('div');
-            linkOverlay.className = 'cv-link-overlay';
-            card.appendChild(linkOverlay);
-
-            container.appendChild(card);
-
-            const cssScale = baseTargetWidth / origViewport.width;
-            const renderViewport = page.getViewport({ scale: cssScale * renderScale });
-            const cssViewport = page.getViewport({ scale: cssScale });
-
-            canvas.width = renderViewport.width;
-            canvas.height = renderViewport.height;
-
-            const ctx = canvas.getContext('2d');
-            ctx.imageSmoothingEnabled = true;
-            ctx.imageSmoothingQuality = 'high';
-            await page.render({ canvasContext: ctx, viewport: renderViewport }).promise;
-
-            // Render TextLayer
-            try {
-                const textContent = await page.getTextContent();
-                pdfjsLib.renderTextLayer({
-                    textContentSource: textContent,
-                    container: textLayerDiv,
-                    viewport: cssViewport,
-                    textDivs: []
-                });
-            } catch (textErr) {
-                console.warn('TextLayer render error:', textErr);
-            }
-
-            // Clickable PDF Links
-            try {
-                const annotations = await page.getAnnotations();
-                annotations.forEach(annot => {
-                    if (annot.subtype === 'Link' && annot.url) {
-                        const rect = cssViewport.convertToViewportRectangle(annot.rect);
-                        const minX = Math.min(rect[0], rect[2]);
-                        const minY = Math.min(rect[1], rect[3]);
-                        const width = Math.abs(rect[2] - rect[0]);
-                        const height = Math.abs(rect[3] - rect[1]);
-
-                        const a = document.createElement('a');
-                        a.href = annot.url;
-                        a.target = '_blank';
-                        a.rel = 'noopener noreferrer';
-                        a.title = annot.url;
-                        a.style.left = (minX / baseTargetWidth * 100) + '%';
-                        a.style.top = (minY / (origViewport.height * cssScale) * 100) + '%';
-                        a.style.width = (width / baseTargetWidth * 100) + '%';
-                        a.style.height = (height / (origViewport.height * cssScale) * 100) + '%';
-                        linkOverlay.appendChild(a);
-                    }
-                });
-            } catch (annotErr) {
-                console.warn('Annotation extraction skipped:', annotErr);
-            }
-        }
-
-        if (skeleton) skeleton.style.display = 'none';
-        container.style.display = 'block';
-
-    } catch (err) {
-        console.error('Error rendering CV:', err);
-        if (skeleton) {
-            skeleton.innerHTML = '<span style="color: #ef4444; font-family: Lora, serif;">Không thể nạp bản xem trước CV. <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" download style="color: #111111; text-decoration: underline;">Bấm vào đây để tải trực tiếp file PDF</a></span>';
-        }
-    }
-});
-</script>
 {{- end -}}

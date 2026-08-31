@@ -1,0 +1,20 @@
+{
+  "task_id": "2026-08-31-resume-as-code-integration",
+  "topic": "Resume as Code Integration with Hugo and Typst",
+  "user_selection": "Phương án 2: Dual Pipeline (Hugo Native Semantic HTML/CSS + Print CSS + Typst CI/CD Automated PDF)",
+  "scope": [
+    "data/cv.yaml: Structured CV content as single source of truth",
+    "layouts/cv/single.html: Modern semantic HTML layout replacing legacy PDF.js canvas viewer",
+    "assets/css/modules/_cv.scss: Responsive styling + @media print A4 optimization",
+    "assets/css/_override.scss: Import _cv.scss module",
+    "cv/resume.typ: Typst source template for high-fidelity PDF generation",
+    "scripts/build-cv.sh: Local development helper script for Typst compilation",
+    ".github/workflows/gh-pages.yml: CI/CD step to compile Typst into static/cv/Nguyen_Ngoc_Tin-CV.pdf before Hugo build"
+  ],
+  "verification": [
+    "hugo --buildDrafts passes with 0 errors",
+    "Trang /cv/ render đầy đủ nội dung từ data/cv.yaml với layout responsive và dark mode",
+    "Chế độ Print (Ctrl+P / window.print) áp dụng chuẩn CSS @page A4 không bị lỗi ngắt trang",
+    "Typst compile script sinh ra file PDF chuẩn"
+  ]
+}

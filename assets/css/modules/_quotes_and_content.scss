@@ -255,8 +255,8 @@ img.bio-avatar {
 // ==========================================================
 // 4. UNIFIED INLINE LINK SYSTEM
 // ==========================================================
-a:not(.contact-chip):not(.btn-action):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
-.single .content a:not(.contact-chip):not(.btn-action):not(.tag-pill) {
+a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a),
+.single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill) {
   color: #4d74eb !important;
   transition: color 0.2s ease;
 

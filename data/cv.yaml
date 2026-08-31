@@ -1,0 +1,70 @@
+# ==============================================================================
+# Resume Data (Single Source of Truth)
+# Format: Structured YAML - Standard English Tech Resume
+# ==============================================================================
+
+basics:
+  name: "NGUYEN NGOC TIN"
+  label: "Software Engineer"
+  phone: "+84 397 662 903"
+  email: "ngoctin.work@gmail.com"
+  location: "Binh Tan, Ho Chi Minh City, Vietnam"
+  website: "https://ngoctin.me"
+  github: "https://github.com/ngoctinn"
+  linkedin: "https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/"
+
+education:
+  - institution: "Saigon University (SGU)"
+    location: "Ho Chi Minh City, Vietnam"
+    degree: "Engineer in Information Technology"
+    major: "Information Systems"
+    start_date: "Mar 2021"
+    end_date: "Jun 2026"
+    language_proficiency: "TOEIC 625 / 990 (Jun 2026)"
+
+skills:
+  - category: "Programming Languages"
+    items: "Python, TypeScript, JavaScript, Java (Core)"
+  - category: "Backend and Web Frameworks"
+    items: "FastAPI, Next.js (App Router), React, RESTful APIs, WebSockets, TailwindCSS"
+  - category: "Cloud and AI Engineering"
+    items: "AWS (Lambda, SAM, Bedrock, DynamoDB, S3), LLM APIs (Gemini, Bedrock), Agentic Workflows, MCP"
+  - category: "Databases and Architecture"
+    items: "PostgreSQL, DynamoDB (Single-Table Design), SQLite, Clean Architecture, Event-Driven Architecture"
+  - category: "DevOps and Tools"
+    items: "Docker, Git, GitHub Actions, Linux"
+
+experience:
+  - company: "FCAJ"
+    position: "Cloud Application Development Intern"
+    location: "Ho Chi Minh City, Vietnam"
+    start_date: "Mar 2026"
+    end_date: "May 2026"
+    highlights:
+      - "Architected and deployed an event-driven serverless backend prototype utilizing Python and AWS Lambda, decoupling core business logic and optimizing asynchronous event processing."
+      - "Constructed standardized AWS SAM templates and architectural documentation, establishing reproducible local emulation and streamlining deployment workflows for the engineering team."
+      - "Configured cloud monitoring and structured logging pipelines across serverless components, ensuring environment consistency and accelerating error diagnosis during testing."
+
+projects:
+  - name: "Lexi – AI-Powered English Speaking Tutor"
+    tech_stack: "Next.js, TypeScript, Python, AWS"
+    github_url: "https://github.com/ngoctinn/lexi-be"
+    demo_url: "https://youtu.be/qPlBFtEk3pM?si=alCi4TsdS3b6tnI2"
+    start_date: "Mar 2026"
+    end_date: "May 2026"
+    highlights:
+      - "Architected a cloud-native serverless backend using AWS SAM, API Gateway, Lambda, Cognito, DynamoDB, and S3, enforcing Clean Architecture across Domain, Application, and Infrastructure layers."
+      - "Engineered a real-time voice streaming pipeline via API Gateway WebSockets, orchestrating Amazon Transcribe, Bedrock, and Polly for low-latency conversational feedback."
+      - "Designed a DynamoDB Single-Table schema with composite partition/sort keys and GSIs, supporting 6+ distinct access patterns for user sessions, flashcards, and dialogue history with single-digit millisecond latency."
+      - "Developed a full-stack Next.js (App Router) interface with Tailwind CSS, integrating secure JWT auth workflows and automating CI/CD deployments via AWS Amplify."
+
+  - name: "Bilingual Movie-Based English Learning Platform"
+    tech_stack: "Next.js, TypeScript, FastAPI, Python, SQLite"
+    github_url: "https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu"
+    demo_url: "https://youtu.be/USj7dpTuOZI"
+    start_date: "Mar 2026"
+    end_date: "Present"
+    highlights:
+      - "Architected a full-stack language learning web application using Next.js App Router and FastAPI, delivering synchronized bilingual movie playback and contextual vocabulary acquisition."
+      - "Implemented subtitle parsing and binary-search timestamp alignment algorithms with SQLite indexing, enabling instantaneous contextual vocabulary lookups during video streaming."
+      - "Integrated Google Gemini API with structured prompt engineering to generate contextual grammar breakdowns, phonetic explanations, and collocations directly from movie dialogues."

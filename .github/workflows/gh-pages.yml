@@ -28,6 +28,16 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Setup Typst
+        uses: enter-at/setup-typst@v0.3
+        with:
+          typst-version: "latest"
+
+      - name: Compile CV to PDF
+        run: |
+          mkdir -p static/cv
+          typst compile cv/resume.typ static/cv/Nguyen_Ngoc_Tin-CV.pdf
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
