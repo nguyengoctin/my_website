@@ -1,0 +1,100 @@
+{{- $id := .Get "id" | default (.Get 0) -}}
+{{- $title := .Get "title" | default "YouTube Video" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $start := .Get "start" | default "" -}}
+{{- $speed := .Get "speed" | default "1.5" -}}
+
+{{- if $id -}}
+<div class="youtube-embed-wrapper{{ with $class }} {{ . }}{{ end }}" data-video-id="{{ $id }}" data-speed="{{ $speed }}"{{ with $start }} data-start="{{ . }}"{{ end }}>
+    <div class="youtube-lite-player" onclick="playYoutubeInstant(this)" role="button" tabindex="0" aria-label="Phát video {{ $title }} (tốc độ {{ $speed }}x)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playYoutubeInstant(this);}">
+        <picture>
+            <source srcset="https://i.ytimg.com/vi_webp/{{ $id }}/maxresdefault.webp" type="image/webp">
+            <img src="https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg" alt="{{ $title }}" loading="lazy" class="youtube-poster-img" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg';">
+        </picture>
+        <button class="youtube-play-btn" type="button" aria-hidden="true" tabindex="-1">
+            <svg viewBox="0 0 68 48" width="64" height="45" class="youtube-play-svg">
+                <path class="youtube-btn-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f43f5e"></path>
+                <path d="M 45,24 27,14 27,34" fill="#ffffff"></path>
+            </svg>
+        </button>
+        <div class="youtube-badge-speed">{{ $speed }}x Speed</div>
+    </div>
+</div>
+<script>
+if (!window.playYoutubeInstant) {
+    window._ytApiCallbacks = [];
+    window._ytApiLoading = false;
+
+    window.ensureYTAPILoaded = function(cb) {
+        if (window.YT && window.YT.Player) {
+            cb();
+            return;
+        }
+        window._ytApiCallbacks.push(cb);
+        if (!window._ytApiLoading) {
+            window._ytApiLoading = true;
+            var tag = document.createElement('script');
+            tag.id = 'yt-iframe-api';
+            tag.src = 'https://www.youtube.com/iframe_api';
+            var first = document.getElementsByTagName('script')[0];
+            first.parentNode.insertBefore(tag, first);
+
+            var prev = window.onYouTubeIframeAPIReady;
+            window.onYouTubeIframeAPIReady = function() {
+                if (typeof prev === 'function') prev();
+                while (window._ytApiCallbacks.length) {
+                    var fn = window._ytApiCallbacks.shift();
+                    try { fn(); } catch (e) { console.error(e); }
+                }
+            };
+        }
+    };
+
+    window.playYoutubeInstant = function(el) {
+        var wrapper = el.closest('.youtube-embed-wrapper');
+        if (!wrapper) return;
+        var id = wrapper.getAttribute('data-video-id');
+        var start = parseInt(wrapper.getAttribute('data-start'), 10) || 0;
+        var speed = parseFloat(wrapper.getAttribute('data-speed')) || 1.5;
+
+        var playerId = 'yt-player-' + Math.random().toString(36).substr(2, 9);
+        var playerDiv = document.createElement('div');
+        playerDiv.id = playerId;
+        playerDiv.className = 'youtube-iframe-active';
+
+        wrapper.innerHTML = '';
+        wrapper.appendChild(playerDiv);
+
+        window.ensureYTAPILoaded(function() {
+            var speedApplied = false;
+            new YT.Player(playerId, {
+                videoId: id,
+                playerVars: {
+                    autoplay: 1,
+                    playsinline: 1,
+                    rel: 0,
+                    modestbranding: 1,
+                    start: start
+                },
+                events: {
+                    onReady: function(event) {
+                        try {
+                            event.target.setPlaybackRate(speed);
+                            event.target.playVideo();
+                        } catch (err) {}
+                    },
+                    onStateChange: function(event) {
+                        if (!speedApplied && event.data === YT.PlayerState.PLAYING) {
+                            try {
+                                event.target.setPlaybackRate(speed);
+                                speedApplied = true;
+                            } catch (err) {}
+                        }
+                    }
+                }
+            });
+        });
+    };
+}
+</script>
+{{- end -}}
