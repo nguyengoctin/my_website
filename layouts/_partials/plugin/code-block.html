@@ -5,11 +5,11 @@
 {{- if and .Page $copy -}}
     {{- .Page.Scratch.SetInMap "this" "clipboard" true -}}
 {{- end -}}
-{{- $options := dict "lineNoStart" 1 "lineNos" true -}}
+{{- $isProseLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw" "output") $lang -}}
+{{- $options := dict "lineNoStart" 1 "lineNos" (not $isProseLang) -}}
 {{- $options = .Options | partial "function/dict.html" | merge $options -}}
 {{- $lineNoStart := $options.lineNoStart | int -}}
 {{- $lineNos := $options.lineNos | partial "function/bool.html" -}}
-{{- $isProseLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw" "output") $lang -}}
 
 {{- $options = dict "noClasses" false "lineNos" false | merge $options -}}
 {{- $result := transform.Highlight $content $lang $options -}}

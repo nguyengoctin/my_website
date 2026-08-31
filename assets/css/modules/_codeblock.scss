@@ -218,11 +218,19 @@
         word-break: normal !important;
         word-wrap: normal !important;
         overflow-wrap: normal !important;
+        line-break: normal !important;
+        -webkit-line-break: normal !important;
+        -ms-line-break: normal !important;
+        hyphens: none !important;
 
         span.line {
           display: block;
           min-height: 1.6em;
           white-space: pre !important;
+          line-break: normal !important;
+          -webkit-line-break: normal !important;
+          -ms-line-break: normal !important;
+          word-break: normal !important;
         }
       }
     }
@@ -230,6 +238,10 @@
 
   // Line Numbers via CSS Counter
   &.code-line-numbers {
+    span.line::before {
+      counter-increment: none !important; // Reset LoveIt theme's double increment
+    }
+
     span.line,
     .highlight code span.line,
     .highlight pre code span.line {
@@ -327,12 +339,24 @@
 
       code {
         white-space: pre-wrap !important;
-        word-break: break-word !important;
+        word-break: normal !important;
+        line-break: normal !important;
+        -webkit-line-break: normal !important;
+        -ms-line-break: normal !important;
         overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        hyphens: none !important;
 
-        span.line {
+        span.line,
+        span.cl {
           white-space: pre-wrap !important;
-          word-break: break-word !important;
+          word-break: normal !important;
+          line-break: normal !important;
+          -webkit-line-break: normal !important;
+          -ms-line-break: normal !important;
+          overflow-wrap: break-word !important;
+          word-wrap: break-word !important;
+          hyphens: none !important;
         }
       }
     }
