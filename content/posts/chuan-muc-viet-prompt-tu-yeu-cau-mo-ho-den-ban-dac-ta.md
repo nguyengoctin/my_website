@@ -171,11 +171,11 @@ Chúng ta cần phân tách rõ ràng giữa quy tắc kỹ thuật bắt buộc
 Ví dụ về cấu trúc phân định rõ ràng giữa quy tắc cứng và phong cách:
 
 ```markdown
-# Rules (Ràng buộc cứng)
+# Rules
 - Chỉ sử dụng dữ liệu từ bản ghi âm đính kèm làm nguồn trích dẫn duy nhất.
 - Không tự ý suy diễn hoặc khởi tạo các mốc thời gian không có trong nguồn.
 
-# Style (Định dạng mong muốn)
+# Style
 - Hành văn súc tích, trực diện.
 - Mỗi câu hỏi kiểm tra duy nhất một khái niệm kỹ thuật.
 ```
