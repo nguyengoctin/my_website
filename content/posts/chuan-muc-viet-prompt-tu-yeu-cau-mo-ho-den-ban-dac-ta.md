@@ -1,36 +1,34 @@
 ---
 pinned: true
-title: "Chuẩn Mực Viết Prompt: Từ Yêu Cầu Mơ Hồ Đến Bản Đặc Tả Kỹ Thuật"
+title: "Các Chuẩn Mực Khi Viết Prompt: Từ Yêu Cầu Mơ Hồ Đến Một Bản Đặc Tả Rõ Ràng"
 date: 2026-08-31T13:30:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"
-description: "Phân tích bản chất của Prompt Engineering dưới góc nhìn kỹ thuật phần mềm: biến prompt thành một bản đặc tả rõ ràng với Goal, Context, Task, Constraints, Output và vòng lặp phản hồi có thể kiểm thử."
-tags: ["AI", "Prompt Engineering", "LLM", "Best Practices", "Software Engineering", "Workflow"]
+description: "Prompt tốt không cần trông phức tạp hay sưu tầm template bí thuật. Phân tích cách tiếp cận prompt như một bản đặc tả kỹ thuật với Goal, Context, Task, Constraints, Output và vòng lặp kiểm chứng kết quả."
+tags: ["AI", "Prompt Engineering", "LLM", "Best Practices", "Workflow", "Software Engineering"]
 categories: ["Tech Blog"]
 ---
 
-{{< quote author="Kinh nghiệm thực chiến phát triển phần mềm với AI" >}}
-Một prompt tốt không cần trông phức tạp. Nó cần đủ rõ ràng để cả người viết lẫn mô hình ngôn ngữ lớn đều biết thế nào là một kết quả đúng.
+{{< quote >}}
+Một prompt tốt không cần trông phức tạp. Nó cần đủ rõ để cả người viết lẫn model biết thế nào là một kết quả đúng.
 {{< /quote >}}
 
-Chúng ta rất dễ biến kỹ thuật viết prompt thành việc sưu tầm các khuôn mẫu có sẵn. Chúng ta nhồi nhét vào prompt đủ mọi câu lệnh quen thuộc:
+Chúng ta rất dễ biến prompt engineering thành việc sưu tầm template:
 
 ```text
-Bạn là chuyên gia hàng đầu thế giới...
+Bạn là chuyên gia...
 Hãy suy nghĩ từng bước...
-Sử dụng thẻ XML để bọc dữ liệu...
-Tuyệt đối không được làm A, B, C...
+Sử dụng XML...
+Không được làm A, B, C...
 ```
 
-Prompt cứ dài dần sau mỗi lần thử sai, nhưng kết quả đầu ra lại không hề ổn định hơn. Vấn đề thực chất nằm ở một điểm cốt lõi: chúng ta chưa mô tả rõ ràng mình muốn mô hình thực hiện điều gì. 
-
-Bài viết này đi sâu vào cách tiếp cận prompt như một bản đặc tả kỹ thuật thu nhỏ, giúp chúng ta kiểm soát chất lượng đầu ra của các mô hình ngôn ngữ lớn một cách có hệ thống.
+Prompt cứ dài dần, nhưng kết quả chưa chắc ổn định hơn. Vấn đề thường nằm ở một chỗ đơn giản hơn: chúng ta chưa mô tả rõ mình muốn model làm gì.
 
 ---
 
-## 1. Bản chất: Prompt tốt giống một bản đặc tả kỹ thuật nhỏ
+## 1. Prompt tốt giống một bản đặc tả nhỏ
 
-Khi xây dựng phần mềm, một bản đặc tả yêu cầu không bắt đầu bằng lời khen ngợi lập trình viên, mà bắt đầu bằng mục tiêu và ràng buộc nghiệp vụ. Với prompt cho mô hình ngôn ngữ lớn, một cấu trúc thực dụng có thể bắt đầu từ năm thành phần cốt lõi:
+Một cấu trúc thực dụng có thể bắt đầu từ năm phần:
 
 ```text
 Goal
@@ -40,323 +38,381 @@ Constraints
 Output
 ```
 
-Đây không phải là một công thức cứng nhắc. Một câu hỏi tra cứu thông thường có thể chỉ cần một dòng chỉ dẫn ngắn gọn. Tuy nhiên, khi tác vụ bắt đầu phức tạp và đòi hỏi độ chính xác cao, năm câu hỏi sau sẽ giúp chúng ta phát hiện ngay những mảnh ghép còn thiếu:
+Đây không phải framework bắt buộc. Một câu hỏi đơn giản có thể chỉ cần một dòng.
 
-1. **Goal:** Chúng ta muốn đạt được kết quả gì cuối cùng?
-2. **Context:** Mô hình cần tiếp nhận những dữ liệu nền tảng nào?
-3. **Task:** Mô hình phải thực hiện hành động cụ thể gì trên dữ liệu đó?
-4. **Constraints:** Có những giới hạn kỹ thuật và quy chuẩn nào thực sự quan trọng?
-5. **Output:** Giao diện kết quả cuối cùng phải có cấu trúc như thế nào?
+Nhưng khi task bắt đầu phức tạp, năm câu hỏi này giúp chúng ta phát hiện phần còn thiếu:
 
-Sơ đồ luồng xử lý thông tin của một bản đặc tả prompt chuẩn:
+1. **Goal:** Chúng ta muốn đạt kết quả gì?
+2. **Context:** Model cần biết dữ liệu nào?
+3. **Task:** Model phải thực hiện việc gì với dữ liệu đó?
+4. **Constraints:** Có giới hạn nào thực sự quan trọng?
+5. **Output:** Kết quả cuối cùng phải trông như thế nào?
+
+Sơ đồ năm thành phần của một bản đặc tả prompt:
 
 ```mermaid
 flowchart TD
-GoalNode["Mục tiêu:<br/>Xác định kết quả cần đạt"] --> ContextNode["Ngữ cảnh:<br/>Cung cấp dữ liệu đầu vào sạch"]
-ContextNode --> TaskNode["Nhiệm vụ:<br/>Định nghĩa hành động cụ thể"]
-TaskNode --> ConstraintNode["Ràng buộc:<br/>Thiết lập giới hạn và quy tắc cứng"]
-ConstraintNode --> OutputNode["Đầu ra:<br/>Quy định cấu trúc giao diện kết quả"]
-OutputNode --> ResultNode["Kết quả chính xác và có thể kiểm chứng"]
+GoalNode["Goal:<br/>Mô tả kết quả cần đạt"] --> ContextNode["Context:<br/>Dữ liệu model cần biết"]
+ContextNode --> TaskNode["Task:<br/>Hành động cụ thể với dữ liệu"]
+TaskNode --> ConstraintNode["Constraints:<br/>Quy tắc cứng và giới hạn"]
+ConstraintNode --> OutputNode["Output:<br/>Cấu trúc giao diện kết quả"]
+OutputNode --> ResultNode["Kết quả rõ ràng và kiểm chứng được"]
 ```
 
-Nghiên cứu *The Prompt Report* đã tổng hợp 58 kỹ thuật tương tác với mô hình ngôn ngữ lớn, từ zero-shot, few-shot cho đến các phương pháp suy luận đa tầng. Điều này chứng minh rằng kỹ thuật viết prompt là một hộp công cụ linh hoạt, không phải một khuôn mẫu bất biến áp dụng cho mọi bài toán.
+Các survey về prompting cũng không chỉ ra một template duy nhất chiến thắng mọi tình huống. Báo cáo *The Prompt Report* tổng hợp 58 kỹ thuật prompting cho LLM, từ zero-shot, few-shot đến nhiều kỹ thuật reasoning và decomposition khác nhau. Điều đó phù hợp với một cách nhìn thực tế hơn: **prompting là một toolbox, không phải một công thức cố định**.
 
 ---
 
-## 2. Goal: Mô tả kết quả, không chỉ đặt tên chủ đề
+## 2. Goal phải mô tả kết quả, không chỉ đặt tên chủ đề
 
-Một câu lệnh ngắn gọn sau đây hoàn toàn không sai cú pháp:
+Prompt này không sai cú pháp:
 
 ```text
 Nghiên cứu Docker.
 ```
 
-Thế nhưng, câu lệnh này buộc mô hình phải tự phỏng đoán toàn bộ không gian bài toán:
+Nhưng model phải tự quyết định gần như mọi thứ:
+- Nghiên cứu phần nào;
+- Cho ai;
+- Sâu đến đâu;
+- Dùng Docker vào việc gì;
+- So sánh với cái gì.
 
-- Nghiên cứu mảng kiến thức nào?
-- Đối tượng thụ hưởng tài liệu là ai?
-- Độ sâu kỹ thuật đến mức nào?
-- Ứng dụng Docker vào tình huống thực tế nào?
-- So sánh công nghệ này với giải pháp nào khác?
-
-Chúng ta có thể thu hẹp bài toán bằng một mục tiêu rõ ràng:
+Chúng ta có thể thu hẹp bài toán:
 
 ```text
-So sánh Docker Compose và Kubernetes cho một ứng dụng cá nhân chạy trên một máy chủ ảo VPS.
+So sánh Docker Compose và Kubernetes cho một ứng dụng cá nhân chạy trên một VPS.
 
-Mục tiêu là xác định khi nào Kubernetes tạo thêm độ phức tạp quản trị mà không mang lại lợi ích thực tế cho dự án.
+Mục tiêu là xác định khi nào Kubernetes tạo thêm độ phức tạp mà không mang lại lợi ích thực tế.
 ```
 
-Câu lệnh thứ hai không sử dụng bất kỳ thuật ngữ thần bí nào. Nó thành công vì đã triệt tiêu hoàn toàn sự mơ hồ. Chỉ dẫn rõ ràng và cụ thể luôn quan trọng hơn việc cố gắng tìm kiếm cách diễn đạt hoa mỹ.
+Prompt thứ hai không dùng kỹ thuật đặc biệt nào. Nó đơn giản là giảm ambiguity.
+
+Đây cũng là một pattern xuất hiện lặp lại trong các hướng dẫn prompting và thảo luận cộng đồng: **instruction rõ và cụ thể thường quan trọng hơn việc tìm một cách diễn đạt thông minh**.
 
 ---
 
-## 3. Context: Quyết định phạm vi suy luận của mô hình
+## 3. Context quyết định model đang reasoning trên cái gì
 
-Dữ liệu ngữ cảnh quyết định trực tiếp chất lượng suy luận. Chúng ta cần phân định ranh giới giữa chỉ dẫn thực thi và dữ liệu nguồn:
+Context là nền tảng dữ liệu cho quá trình suy luận:
+- Nếu yêu cầu: `Review đoạn code này.` thì code chính là context.
+- Nếu yêu cầu: `Tạo câu hỏi Active Recall từ video này.` thì transcript và timestamp là context.
+- Nếu yêu cầu: `Viết lại đoạn này theo giọng của tôi.` thì draft gốc và writing samples mới là context quan trọng.
 
-- Khi chúng ta yêu cầu *Đánh giá đoạn mã nguồn này*, mã nguồn chính là ngữ cảnh.
-- Khi chúng ta yêu cầu *Tạo bộ câu hỏi truy hồi chủ động từ video*, bản ghi âm kèm mốc thời gian chính là ngữ cảnh.
-- Khi chúng ta yêu cầu *Viết lại đoạn văn theo văn phong cá nhân*, bản nháp ban đầu và các bài viết mẫu trước đây chính là ngữ cảnh.
+Chúng ta nên phân biệt rõ **instruction** với **data**.
 
-Ví dụ về việc phân định ranh giới rõ ràng bằng cấu trúc Markdown:
+Ví dụ phân tách rõ ràng giữa nhiệm vụ và dữ liệu nguồn:
 
 ```markdown
 # Task
-Tìm các giả định chưa được chứng minh bằng dữ liệu trong tài liệu ghi chú.
+Tìm các assumption chưa được chứng minh trong ghi chú.
 
 # Source
-[Nội dung tài liệu ghi chú cần phân tích]
+[Nội dung ghi chú]
 ```
 
-Cú pháp Markdown không làm mô hình thông minh hơn, nhưng nó giúp phân tách ranh giới dữ liệu một cách trực quan, tránh hiện tượng mô hình nhầm lẫn giữa chỉ dẫn điều khiển và dữ liệu cần xử lý.
+Markdown ở đây không khiến model thông minh hơn. Nó chỉ làm ranh giới giữa các phần dễ nhận biết hơn.
 
 {{< admonition type="warning" title="Hiện tượng Lost in the Middle" >}}
-Nghiên cứu *Lost in the Middle* chỉ ra rằng các mô hình ngôn ngữ lớn có xu hướng ghi nhớ và xử lý tốt nhất thông tin nằm ở phần đầu và phần cuối của ngữ cảnh. Thông tin nằm ở khoảng giữa rất dễ bị bỏ sót. Khả năng xử lý hàng trăm nghìn token không đồng nghĩa với việc chúng ta nên nhồi nhét mọi dữ liệu thô vào prompt. Ngữ cảnh tinh gọn và liên quan trực tiếp luôn vượt trội hơn ngữ cảnh dung lượng lớn nhưng loãng.
+Nghiên cứu *Lost in the Middle* cho thấy model có thể sử dụng thông tin ở đầu và cuối context tốt hơn thông tin nằm giữa một context dài. Vì vậy khả năng chứa hàng trăm nghìn token không đồng nghĩa với việc chúng ta nên đổ mọi thứ mình có vào prompt. **Context hữu ích quan trọng hơn context nhiều**.
 {{< /admonition >}}
 
 ---
 
-## 4. Task: Bắt đầu từ một động từ hành động cụ thể
+## 4. Task nên bắt đầu từ một hành động cụ thể
 
-Một yêu cầu mơ hồ như sau sẽ đẩy mô hình vào thế bị động:
+Một prompt như:
 
 ```text
 Giúp tôi với bài viết này.
 ```
 
-Câu lệnh trên không đưa ra bất kỳ định nghĩa nào về hành động mong muốn. Chúng ta cần bắt đầu bằng các động từ hành động chuẩn xác:
+không định nghĩa được model phải làm gì.
 
-Ví dụ về các động từ hành động cụ thể cho từng mục đích:
+Có rất nhiều hành động khác nhau có thể xảy ra:
 
 ```text
-Phân tích tính nhất quán trong các luận điểm của bài viết.
+Phân tích luận điểm của bài.
 ```
 
 ```text
-Tìm các luận cứ kỹ thuật còn thiếu bằng chứng hoặc trích dẫn nguồn.
+Tìm các claim thiếu bằng chứng.
 ```
 
 ```text
-Rút gọn độ dài bài viết xuống 50% nhưng giữ nguyên toàn bộ luận điểm cốt lõi.
+Rút gọn bài nhưng giữ nguyên luận điểm.
 ```
 
 ```text
-Xây dựng dàn ý chi tiết từ các đoạn ghi chú rời rạc này.
+Tạo outline từ các ghi chú này.
 ```
 
 ```text
-So sánh ba giải pháp kiến trúc và chỉ rõ sự đánh đổi về chi phí hạ tầng.
+So sánh ba giải pháp và chỉ ra trade-off.
 ```
 
-Động từ hành động càng cụ thể, không gian suy đoán tự do của mô hình càng thu hẹp, giúp kết quả đầu ra đi đúng trọng tâm.
+Động từ càng cụ thể, không gian model phải tự suy đoán càng nhỏ.
 
 ---
 
-## 5. Constraints: Phân biệt quy tắc cứng và sở thích định dạng
+## 5. Constraint không phải nơi chứa mọi sở thích
 
-Một lỗi phổ biến là biến phần ràng buộc thành một danh sách phủ định tràn lan:
+Một lỗi phổ biến là biến prompt thành hàng chục dòng phủ định:
 
 ```text
 Không làm A.
 Không làm B.
 Không làm C.
-Không dùng thuật ngữ X.
-Không dùng thư viện Y.
-Không được viết dài...
+Không dùng X.
+Không dùng Y.
+Không được...
 ```
 
-Chúng ta cần phân tách rõ ràng giữa quy tắc kỹ thuật bắt buộc và sở thích định dạng:
+Một số constraint là cần thiết. Ví dụ:
 
-Ví dụ về cấu trúc phân định rõ ràng giữa quy tắc cứng và phong cách:
+```text
+Chỉ sử dụng thông tin trong transcript.
+Không tự tạo timestamp.
+```
+
+Đây là hard constraint vì vi phạm chúng khiến kết quả sai. Nhưng những preference như:
+
+```text
+Ưu tiên câu ngắn.
+Tránh giải thích dài khi không cần.
+```
+
+không cùng mức độ quan trọng. Tách hai loại này giúp prompt dễ bảo trì hơn:
 
 ```markdown
 # Rules
-- Chỉ sử dụng dữ liệu từ bản ghi âm đính kèm làm nguồn trích dẫn duy nhất.
-- Không tự ý suy diễn hoặc khởi tạo các mốc thời gian không có trong nguồn.
+- Chỉ sử dụng transcript làm nguồn.
+- Không tự tạo timestamp.
 
 # Style
-- Hành văn súc tích, trực diện.
-- Mỗi câu hỏi kiểm tra duy nhất một khái niệm kỹ thuật.
+- Viết ngắn gọn.
+- Mỗi câu hỏi chỉ kiểm tra một ý.
 ```
 
-{{< admonition type="tip" title="Nguyên tắc mô tả hành vi đo lường được" >}}
-Thay vì đưa ra chỉ dẫn phủ định mơ hồ như *Không viết dài dòng*, chúng ta nên chuyển thành yêu cầu định lượng có thể kiểm tra: *Mỗi phần trình bày tối đa ba đoạn văn ngắn, mỗi đoạn không quá bốn câu*.
-{{< /admonition >}}
+Quan trọng hơn, nên mô tả hành vi mong muốn khi có thể. Thay vì `Không viết dài dòng`, có thể viết: `Mỗi phần tối đa ba đoạn ngắn`. Câu thứ hai có thể kiểm chứng được.
 
 ---
 
-## 6. Output: Giao diện dữ liệu có hợp đồng rõ ràng
+## 6. Output nên được xem như một interface
 
-Nếu chúng ta không định nghĩa cấu trúc kết quả đầu ra, mô hình sẽ tự chọn định dạng mặc định, thường là các đoạn văn dài khó tái sử dụng.
+Nếu chúng ta không nói kết quả phải trông như thế nào, model lại phải tự quyết định.
 
-Ví dụ yêu cầu so sánh chưa có định dạng:
+Ví dụ:
 
 ```text
-So sánh cơ sở dữ liệu PostgreSQL và MongoDB.
+So sánh PostgreSQL và MongoDB.
 ```
 
-Yêu cầu trên thường tạo ra một bài luận chung chung. Khi chúng ta cần thông tin phục vụ việc ra quyết định kỹ thuật, hãy thiết lập một hợp đồng đầu ra rõ ràng:
-
-Ví dụ về cấu trúc đầu ra có giao diện cụ thể:
+có thể tạo một bài essay dài. Nếu thứ chúng ta cần là thông tin phục vụ quyết định:
 
 ```markdown
 # Output
-Tạo bảng so sánh bao gồm bốn cột:
-- Tiêu chí đánh giá
-- PostgreSQL
-- MongoDB
-- Tình huống khác biệt này trở nên quan trọng
+Tạo bảng gồm:
+- Tiêu chí;
+- PostgreSQL;
+- MongoDB;
+- Khi nào khác biệt này quan trọng.
 
-Ngay sau bảng, liệt kê chính xác hai kịch bản kiến trúc nên chọn PostgreSQL và hai kịch bản nên chọn MongoDB kèm lý do kỹ thuật.
+Sau bảng, đưa ra hai tình huống nên chọn PostgreSQL và hai tình huống nên chọn MongoDB.
 ```
 
-Khi định dạng quá phức tạp để diễn đạt bằng lời, việc cung cấp một vài ví dụ mẫu Few-shot sẽ giúp mô hình nắm bắt quy luật nhanh chóng:
+Output lúc này có một contract rõ ràng.
 
-Ví dụ về việc cung cấp dữ liệu mẫu:
+Các hướng dẫn prompting cũng thường khuyến nghị mô tả trực tiếp format mong muốn. Khi format khó diễn đạt bằng instruction, đưa một example có thể giúp model học được pattern đầu ra ngay trong context.
+
+---
+
+## 7. Example hữu ích khi lời giải thích bắt đầu quá dài
+
+Giả sử chúng ta cần format:
+
+```text
+[00:12:31] Pointer là gì?
+```
+
+Thay vì mất một đoạn dài giải thích thứ tự của timestamp, dấu ngoặc và câu hỏi, đôi khi chỉ cần cho model thấy:
 
 ```markdown
 # Example
-1. `[00:12:31]` Khái niệm con trỏ bộ nhớ là gì?
-2. `[00:14:08]` Toán tử AND theo bit thực hiện tác vụ gì trong đoạn mã?
+1. `[00:12:31]` Pointer là gì?
+2. `[00:14:08]` Toán tử bitwise AND đang làm gì?
 ```
 
-Cung cấp mẫu đầu ra cụ thể giúp mô hình hiểu cấu trúc ngay lập tức mà không cần chúng ta phải viết thêm nhiều dòng giải thích quy tắc rườm rà.
+Few-shot prompting chính là cách cung cấp một hoặc nhiều cặp input và output mẫu để model suy ra pattern cần thực hiện. Tài liệu kỹ thuật về prompting thường khuyên bắt đầu bằng zero-shot, sau đó thêm example nếu instruction đơn thuần chưa tạo được kết quả ổn định.
+
+Điều đó cũng giúp prompt không trở thành một cuốn rulebook. Một example tốt đôi khi diễn đạt được thứ chúng ta muốn tốt hơn mười dòng mô tả.
 
 ---
 
-## 7. Đánh giá đúng vai trò của Role Prompting
+## 8. Role không thay thế requirement
 
-Nhiều người có thói quen mở đầu prompt bằng những câu như:
-
-```text
-Bạn là một chuyên gia kỹ thuật hàng đầu thế giới về tối ưu hóa cơ sở dữ liệu...
-```
-
-Việc gán vai trò không hoàn toàn vô ích. Nó giúp mô hình điều chỉnh trường từ vựng và lăng kính tiếp cận vấn đề:
+Prompt thường bắt đầu bằng:
 
 ```text
-Đánh giá bản thiết kế kiến trúc này dưới góc nhìn của một kỹ sư tối ưu hóa cơ sở dữ liệu quy mô lớn.
+Bạn là một chuyên gia hàng đầu thế giới về...
 ```
 
-Tuy nhiên, việc chỉ khai báo vai trò sẽ không trả lời được các câu hỏi then chốt: đánh giá thành phần nào, tiêu chí nào là tiên quyết, nguồn dữ liệu nào được phép dùng và cấu trúc đầu ra cần gì.
+Role không hoàn toàn vô dụng. Nó có thể hữu ích khi chúng ta muốn model nhìn vấn đề từ một góc cụ thể:
 
 ```text
-Role + Yêu cầu mơ hồ  ==>  Kết quả chung chung, không thể ứng dụng
-Goal + Context + Task rõ ràng  ==>  Kết quả chuẩn xác và có thể kiểm tra
+Review thiết kế này dưới góc nhìn của một database engineer.
 ```
+
+Nhưng role không trả lời được:
+- Review cái gì;
+- Tiêu chí nào quan trọng;
+- Source nào được phép sử dụng;
+- Output cần gì.
+
+Các báo cáo thực nghiệm từ cộng đồng cũng thường nhận thấy role prompting đứng riêng có tác động nhỏ khi nó không đi cùng goal, context và constraints cụ thể.
+
+Vì vậy:
+
+```text
+Role + yêu cầu mơ hồ
+```
+
+không tốt hơn:
+
+```text
+Goal + context + task rõ ràng
+```
+
+chỉ vì prompt thứ nhất nghe chuyên nghiệp hơn.
 
 ---
 
-## 8. Lựa chọn định dạng: Plain Text, Markdown, XML hay JSON?
+## 9. Markdown, XML hay JSON không phải cuộc thi
 
-Mỗi định dạng dữ liệu sinh ra để giải quyết một bài toán cấu trúc khác nhau:
+Chúng ta đôi khi tranh luận format nào là "chuẩn prompt". Thực tế chúng giải quyết những vấn đề khác nhau:
 
-- **Plain Text:** Đủ dùng cho các tác vụ đơn giản, ngắn gọn và một bước thực thi.
-- **Markdown:** Rất thuận tiện khi prompt có nhiều phân mục độc lập như Goal, Context, Task, Output vì dễ đọc và dễ chỉnh sửa thủ công.
-- **XML:** Đặc biệt hữu ích khi cần phân định ranh giới tuyệt đối giữa nhiều khối dữ liệu lớn, tránh xung đột giữa câu lệnh điều khiển và nội dung tài liệu.
-- **JSON:** Lựa chọn bắt buộc khi kết quả đầu ra cần được truyền trực tiếp vào các hàm xử lý mã nguồn hoặc API tự động.
+- **Plain text** đủ cho task ngắn:
+  ```text
+  Giải thích decorator trong Python cho người mới.
+  ```
+- **Markdown** thuận tiện khi prompt có một số section độc lập:
+  ```markdown
+  # Goal
+  ...
+  # Source
+  ...
+  # Rules
+  ...
+  # Output
+  ...
+  ```
+  Nó dễ đọc và dễ chỉnh bằng tay.
+- **XML** hữu ích hơn khi có nhiều loại dữ liệu cần ranh giới rất rõ:
+  ```xml
+  <transcript>
+  ...
+  </transcript>
 
-Ví dụ về việc sử dụng thẻ XML để đóng gói dữ liệu phức tạp:
+  <notes>
+  ...
+  </notes>
 
-```xml
-<context>
-  <system_log>
-    2026-08-31 10:00:00 ERROR Connection timeout on port 5432
-  </system_log>
-  <source_code>
-    db = connect_database(timeout=5)
-  </source_code>
-</context>
+  <previous_answer>
+  ...
+  </previous_answer>
+  ```
+- **JSON** đặc biệt phù hợp khi output được một chương trình khác xử lý qua schema.
 
-<task>
-Xác định nguyên nhân gây lỗi và đề xuất phương án xử lý cấu hình kết nối.
-</task>
-```
-
-Định dạng sinh ra để phục vụ cấu trúc thông tin. Cấu trúc không thể thay thế cho bản chất nội dung của yêu cầu.
-
----
-
-## 9. Tách chuỗi xử lý thay vì nhồi nhét vào Mega-Prompt
-
-Một quy trình kỹ thuật hoàn chỉnh thường bao gồm nhiều giai đoạn:
-
-```text
-Thu thập dữ liệu  -->  Lọc nguồn  -->  Phân tích  -->  Chọn giải pháp  -->  Viết mã  -->  Kiểm thử
-```
-
-Nếu nhồi nhét toàn bộ các bước trên vào một câu lệnh duy nhất, mô hình rất dễ bị quá tải sự chú ý và tạo ra kết quả hời hợt ở các bước sau. Giải pháp tối ưu là chia nhỏ thành một chuỗi các bước độc lập:
-
-1. **Bước 1:** `Thu thập dữ liệu --> Bản tóm tắt yêu cầu`
-2. **Bước 2:** `Bản tóm tắt yêu cầu --> Bản thiết kế kỹ thuật`
-3. **Bước 3:** `Bản thiết kế kỹ thuật --> Mã nguồn và kịch bản kiểm thử`
-
-Chúng ta chỉ nên gộp các bước vào cùng một prompt khi chúng thực sự chia sẻ cùng một ngữ cảnh làm việc tại thời điểm tức thì.
+Không có lý do phải dùng XML cho `<task>Tóm tắt bài này.</task>` nếu một câu plain text đã đủ rõ. **Format phục vụ cấu trúc. Format không thay thế nội dung của prompt.**
 
 ---
 
-## 10. Vòng lặp phản hồi: Prompt tốt phải có tiêu chí đánh giá thất bại
+## 10. Đừng biến mọi thứ thành một mega-prompt
 
-Một câu lệnh không có tiêu chí kiểm thử:
+Một task đôi khi thực sự gồm nhiều bài toán:
 
 ```text
-Viết cho tôi một bài phân tích thật hay và chuyên nghiệp về kiến trúc vi dịch vụ.
+Research  -->  Lọc nguồn  -->  Phân tích  -->  Chọn hướng  -->  Viết  -->  Review
 ```
 
-Chúng ta không có bất kỳ căn cứ khách quan nào để xác định kết quả sinh ra là đạt hay không đạt. Ngược lại, một câu lệnh có tiêu chí kiểm thử rõ ràng:
+Chúng ta có thể mô tả toàn bộ trong một prompt rất dài. Nhưng cũng có thể tách:
 
-```markdown
-# Acceptance Criteria
-Bài viết phải đáp ứng đầy đủ các tiêu chuẩn sau:
-- Giải thích rõ ràng bài toán thực tế mà kiến trúc vi dịch vụ giải quyết.
-- Trình bày cơ chế giao tiếp bất đồng bộ qua hàng đợi thông điệp.
-- Đưa ra một ví dụ cấu hình triển khai cụ thể.
-- Phân tích chi tiết sự đánh đổi về tính nhất quán dữ liệu.
-- Liệt kê hai trường hợp kiến trúc nguyên khối monolithic vượt trội hơn.
+1. `Research --> Content Brief`
+2. `Content Brief --> Draft`
+3. `Draft --> Technical Review`
+
+Một số người dùng LLM trong workflow thực tế báo cáo prompt chaining ổn định hơn các mega-prompt chứa rất nhiều trách nhiệm cùng lúc. Đây chưa phải bằng chứng rằng mọi task đều phải chia nhỏ, nhưng nó đưa ra một nguyên tắc hữu ích: **chỉ gộp những bước thật sự cần cùng context**.
+
+---
+
+## 11. Prompt tốt phải có cách biết nó thất bại
+
+Đây có lẽ là chuẩn mực hữu ích nhất.
+
+Prompt:
+
+```text
+Viết bài thật hay và chuyên nghiệp.
 ```
 
-Với bản đặc tả này, chúng ta có thể đối soát từng tiêu chí để khẳng định mô hình đã hoàn thành nhiệm vụ hay chưa.
+gần như không có test.
 
-Quy trình tối ưu hóa prompt là một vòng lặp kỹ thuật liên tục:
+Prompt:
+
+```text
+Bài phải giải thích được:
+- Vấn đề đang giải quyết;
+- Cơ chế hoạt động;
+- Một ví dụ;
+- Trade-off;
+- Trường hợp không nên sử dụng giải pháp.
+
+Không đưa claim kỹ thuật nếu không xác minh được nguồn.
+```
+
+đã có success criteria. Chúng ta có thể đọc output và xác định rule nào đạt, rule nào không.
+
+Prompt engineering vì vậy gần với một vòng lặp kỹ thuật:
 
 ```mermaid
 flowchart TD
-P1["Bước 1:<br/>Thiết kế prompt theo bản đặc tả"] --> P2["Bước 2:<br/>Thực thi và quan sát kết quả đầu ra"]
-P2 --> P3{"Đạt tiêu chuẩn<br/>nghiệp vụ?"}
-P3 -->|Chưa đạt| P4["Bước 3:<br/>Xác định nguyên nhân thất bại"]
-P4 --> P5["Bước 4:<br/>Tinh chỉnh chỉ dẫn và bổ sung ví dụ mẫu"]
+P1["Bước 1:<br/>Viết prompt theo bản đặc tả"] --> P2["Bước 2:<br/>Chạy thử và quan sát output"]
+P2 --> P3{"Kết quả có đạt<br/>tiêu chí?"}
+P3 -->|Chưa đạt| P4["Bước 3:<br/>Tìm failure và điểm sai"]
+P4 --> P5["Bước 4:<br/>Sửa instruction hoặc thêm example"]
 P5 --> P2
-P3 -->|Đạt chuẩn| P6["Hoàn thành và lưu trữ vào quy trình"]
+P3 -->|Đạt chuẩn| P6["Hoàn thành và đưa vào workflow"]
 ```
+
+thay vì: `Tìm template hoàn hảo --> Dùng cho mọi bài toán`.
 
 ---
 
-## 11. Cấu hình mẫu khởi đầu cho mọi tác vụ
+## 12. Một baseline đủ dùng
 
-Đối với phần lớn các tác vụ có độ phức tạp vừa và lớn, chúng ta có thể sử dụng bộ khung đặc tả chuẩn sau đây:
+Với phần lớn task có độ phức tạp vừa phải, chúng ta có thể bắt đầu từ:
 
 ```markdown
 # Goal
-Kết quả cuối cùng cần đạt được là gì.
+Kết quả cuối cùng cần đạt.
 
 # Context
-Dữ liệu và tài liệu nền tảng mô hình cần sử dụng để xử lý.
+Thông tin model cần để thực hiện task.
 
 # Task
-Các hành động cụ thể cần thực hiện trên dữ liệu ngữ cảnh.
+Những việc cần thực hiện.
 
 # Rules
-Các ràng buộc kỹ thuật bắt buộc và quy chuẩn an toàn.
+Các ràng buộc thực sự quan trọng.
 
 # Output
-Cấu trúc giao diện và định dạng chính xác của kết quả mong muốn.
+Hình dạng của kết quả mong muốn.
 ```
 
-Từ bộ khung nền tảng này:
-- Nếu mô hình hiểu sai cấu trúc: bổ sung một ví dụ mẫu đầu vào và đầu ra.
-- Nếu ngữ cảnh có nhiều khối dữ liệu lẫn lộn: sử dụng thẻ XML để phân định.
-- Nếu tác vụ có nhiều giai đoạn phức tạp: tách thành chuỗi các câu lệnh tuần tự.
-- Nếu kết quả cần chuyển cho hệ thống khác xử lý: yêu cầu trả về định dạng JSON schema chuẩn.
+Sau đó chỉ thêm thứ mới khi có lý do:
+- Model liên tục hiểu sai format thì thêm example.
+- Context có nhiều vùng dữ liệu khó phân biệt thì thêm delimiter hoặc XML.
+- Task gồm nhiều bước độc lập thì tách workflow.
+- Output được chương trình xử lý thì dùng schema.
 
-Một prompt xuất sắc không phải là một câu lệnh sử dụng nhiều mẹo vặt nhất, mà là một bản đặc tả chứa vừa đủ thông tin để giảm thiểu tối đa những suy đoán tự do không cần thiết của mô hình.
+Một prompt tốt không phải prompt sử dụng nhiều kỹ thuật nhất. Nó là prompt **chứa vừa đủ thông tin để giảm những quyết định mà model không nên tự đưa ra**, nhưng vẫn để model tự xử lý những phần mà chúng ta thực sự muốn nó suy luận.
