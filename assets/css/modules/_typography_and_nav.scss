@@ -3,37 +3,62 @@
 // ==========================================================
 :root {
   // --- Typography Tokens (Design Token System) ---
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Be Vietnam Pro", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-sans);
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  // --- Font Weights (Loaded directly via Google Fonts CSS2) ---
+  // --- Font Weights (4-tier system: 400 body / 500 meta / 600 strong, H3, H4 / 700 H1, H2) ---
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
 
-  // --- Font Sizes (Modular Scale) ---
-  --fs-xs: 0.75rem; // 12px
-  --fs-sm: 0.85rem; // 13.6px
-  --fs-base: 1.0625rem; // 17px (Kích thước vàng đọc văn xuôi)
-  --fs-md: 1.15rem; // 18.4px
-  --fs-lg: 1.25rem; // 20px
-  --fs-xl: 1.38rem; // 22px
-  --fs-2xl: 1.75rem; // 28px
+  // --- Font Sizes (Desktop baseline) ---
+  --fs-xs: 0.75rem;     // 12px
+  --fs-sm: 0.875rem;    // 14px
+  --fs-base: 1.125rem;  // 18px (Target body prose)
+  --fs-md: 1.15rem;     // 18.4px
+  --fs-lg: 1.25rem;     // 20px
+  --fs-xl: 1.5rem;      // 24px
+  --fs-2xl: 1.9375rem;  // 31px
+  --fs-3xl: 2.625rem;   // 42px
+
+  --fs-h1: 2.625rem;    // 42px (Target 40-48px)
+  --fs-h2: 1.9375rem;   // 31px (Target 29-32px)
+  --fs-h3: 1.5rem;      // 24px (Target 23-25px)
+  --fs-h4: 1.25rem;     // 20px (Target 19-20px)
 
   // --- Line Heights ---
-  --lh-tight: 1.25;
-  --lh-snug: 1.45;
+  --lh-tight: 1.18;
+  --lh-h1: 1.18;        // ~1.15
+  --lh-h2: 1.25;        // ~1.25
+  --lh-h3: 1.32;        // ~1.32
+  --lh-h4: 1.4;         // ~1.4
+  --lh-snug: 1.35;
   --lh-normal: 1.6;
-  --lh-relaxed: 1.8;
+  --lh-relaxed: 1.72;   // Prose line-height target ~1.72
+  --lh-prose: 1.72;
   --lh-loose: 1.85;
 
   // --- Spacing & Kerning Tokens ---
   --ls-normal: normal;
-  --ls-heading: 0.015em;
+  --ls-h1: -0.025em;    // Subdued negative tracking for display heading
+  --ls-h2: -0.018em;
+  --ls-h3: -0.01em;
+  --ls-h4: normal;
+  --ls-heading: -0.018em;
   --ls-caps: 0.04em;
-  --ws-normal: 0.1em; // Tăng nhẹ khoảng cách từ đồng bộ (editorial breathing room)
+  --ws-normal: normal;  // Normal word-spacing for natural Vietnamese text flow
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-base: 1.0625rem; // ~17px (Mobile body prose target)
+    --fs-h1: 2rem;        // 32px
+    --fs-h2: 1.5rem;      // 24px
+    --fs-h3: 1.25rem;     // 20px
+    --fs-h4: 1.125rem;    // 18px
+  }
 }
 
 // LIGHT MODE tokens
@@ -94,12 +119,13 @@ html {
 }
 
 body {
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   line-height: var(--lh-relaxed);
   letter-spacing: var(--ls-normal);
   word-spacing: var(--ws-normal);
+  text-align: left !important;
   color: var(--clr-text, #111111) !important;
   background-color: var(--clr-bg, #fdfdfd) !important;
   text-rendering: optimizeLegibility;
@@ -206,68 +232,138 @@ h6,
 .home-quote-typeit,
 .home-subtitle,
 .summary .single-title {
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   letter-spacing: var(--ls-normal);
   word-spacing: var(--ws-normal);
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 .single-title {
-  font-weight: var(--fw-semibold) !important;
-}
-
-h1 {
-  font-size: var(--fs-2xl) !important;
-  font-weight: var(--fw-medium) !important;
-  line-height: var(--lh-tight) !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-h1) !important;
+  font-weight: var(--fw-bold) !important;
+  line-height: var(--lh-h1) !important;
+  letter-spacing: var(--ls-h1) !important;
   color: var(--clr-text) !important;
   margin-top: 1.5rem !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.75rem !important;
+  max-width: 68ch;
+}
+
+.single-subtitle {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-lg) !important;
+  font-weight: var(--fw-medium) !important;
+  line-height: var(--lh-snug) !important;
+  color: var(--clr-text-2) !important;
+  margin: 0.5rem 0 1rem 0 !important;
+  max-width: 68ch;
+}
+
+.single .post-meta {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-sm) !important;
+  font-weight: var(--fw-medium) !important;
+  color: var(--clr-text-2) !important;
+  margin-bottom: 1.5rem !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 68ch;
+
+  strong {
+    font-weight: var(--fw-semibold) !important;
+    color: var(--clr-text) !important;
+  }
+
+  a,
+  .category-link {
+    color: var(--clr-text-2) !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--clr-text) !important;
+      text-decoration: underline dotted !important;
+    }
+  }
 }
 
 h2 {
-  font-size: var(--fs-xl) !important;
-  font-weight: var(--fw-semibold) !important;
-  line-height: var(--lh-snug) !important;
-  text-transform: uppercase !important;
-  letter-spacing: var(--ls-caps) !important;
-  margin-top: 1.75rem !important;
-  margin-bottom: 1rem !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-h2) !important;
+  font-weight: var(--fw-bold) !important;
+  line-height: var(--lh-h2) !important;
+  letter-spacing: var(--ls-h2) !important;
+  text-transform: none !important;
+  margin-top: 2.2em !important;
+  margin-bottom: 0.75em !important;
   color: var(--clr-text) !important;
+  max-width: 68ch;
+
+  &:first-child {
+    margin-top: 0.5em !important;
+  }
 }
 
 h3 {
-  font-size: var(--fs-md) !important;
-  font-weight: var(--fw-medium) !important;
-  line-height: var(--lh-snug) !important;
-  margin-top: 1.4rem !important;
-  margin-bottom: 0.75rem !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-h3) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-h3) !important;
+  letter-spacing: var(--ls-h3) !important;
+  margin-top: 1.8em !important;
+  margin-bottom: 0.6em !important;
   color: var(--clr-text) !important;
+  max-width: 68ch;
+
+  &:first-child {
+    margin-top: 0.5em !important;
+  }
 }
 
-h4,
+h4 {
+  font-family: var(--font-sans) !important;
+  font-size: var(--fs-h4) !important;
+  font-weight: var(--fw-semibold) !important;
+  line-height: var(--lh-h4) !important;
+  letter-spacing: var(--ls-h4) !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+  color: var(--clr-text) !important;
+  max-width: 68ch;
+
+  &:first-child {
+    margin-top: 0.5em !important;
+  }
+}
+
 h5,
 h6 {
-  font-weight: var(--fw-medium) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: var(--fw-semibold) !important;
   color: var(--clr-text) !important;
+  max-width: 68ch;
+}
+
+hr + h2,
+hr + h3,
+hr + h4 {
+  margin-top: 1.5em !important;
 }
 
 hr {
   border: none !important;
   border-top: 1px solid var(--clr-border) !important;
-  margin: 1.2rem 0 !important;
+  margin: 1.5rem 0 !important;
 }
 
 // Home quote TypeIt
 .home-quote-typeit,
 .home-subtitle {
   text-align: left !important;
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   font-size: var(--fs-lg) !important;
   font-weight: var(--fw-medium) !important;
   font-style: italic !important;
@@ -513,7 +609,7 @@ hr {
   }
 
   .toc-title {
-    font-family: var(--font-serif) !important;
+    font-family: var(--font-sans) !important;
     font-size: var(--fs-sm) !important;
     font-weight: var(--fw-bold) !important;
     letter-spacing: var(--ls-caps) !important;
@@ -545,7 +641,7 @@ hr {
           overflow: hidden !important;
           text-overflow: ellipsis !important;
           max-width: 100% !important;
-          font-family: var(--font-serif) !important;
+          font-family: var(--font-sans) !important;
           font-size: 0.8125rem !important;
           font-weight: var(--fw-regular) !important;
           color: var(--clr-text-2) !important;
@@ -588,7 +684,7 @@ hr {
 }
 
 .summary .single-title {
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   font-size: var(--fs-lg);
   font-weight: var(--fw-medium) !important;
   line-height: var(--lh-snug) !important;
@@ -699,7 +795,7 @@ hr {
   }
 
   .archive-item-date {
-    font-family: var(--font-serif) !important;
+    font-family: var(--font-sans) !important;
     color: var(--clr-text-2) !important;
     font-size: var(--fs-sm) !important;
   }
@@ -725,7 +821,7 @@ hr {
   font-weight: var(--fw-semibold) !important;
   font-size: 0.95rem !important;
   transition: color 0.15s ease !important;
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
 
   [theme=dark] & {
     color: #60a5fa !important;

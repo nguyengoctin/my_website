@@ -4,13 +4,14 @@
 blockquote,
 .custom-quote {
   position: relative !important;
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   color: var(--clr-text) !important;
   text-align: left !important;
   border: none !important;
   padding: 0.5rem 0 !important;
-  margin: 2rem 0 !important;
-  font-size: var(--fs-xl) !important;
+  margin: 1.8em 0 !important;
+  max-width: 68ch;
+  font-size: 1.18rem !important;
   font-weight: var(--fw-medium) !important;
   line-height: var(--lh-relaxed) !important;
   font-style: normal !important;
@@ -20,8 +21,8 @@ blockquote,
 
   .quote-content {
     margin: 0 !important;
-    font-family: var(--font-serif) !important;
-    font-size: var(--fs-xl) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 1.18rem !important;
     font-weight: var(--fw-medium) !important;
     line-height: var(--lh-relaxed) !important;
     color: var(--clr-text) !important;
@@ -109,15 +110,28 @@ blockquote,
 // 2. ARTICLE CONTENT TYPOGRAPHY & SPACING
 // ==========================================================
 .single .content {
-  font-family: var(--font-serif) !important;
+  font-family: var(--font-sans) !important;
   font-size: var(--fs-base) !important;
   line-height: var(--lh-relaxed) !important;
   letter-spacing: var(--ls-normal);
   word-spacing: var(--ws-normal);
+  text-align: left !important;
+
+  // Reading width for prose elements (leaves code blocks, tables, images, and embeds free to use the full container width)
+  > p,
+  > ul,
+  > ol,
+  > dl,
+  > blockquote,
+  > .custom-quote,
+  > hr {
+    max-width: 68ch;
+    margin-left: 0;
+  }
 
   p {
     margin-top: 0 !important;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 1.25em !important;
     line-height: var(--lh-relaxed) !important;
     letter-spacing: var(--ls-normal);
     word-spacing: var(--ws-normal);
@@ -125,26 +139,30 @@ blockquote,
 
   p + ul,
   p + ol {
-    margin-top: -0.5rem !important;
+    margin-top: -0.4em !important;
   }
 
   ul, ol {
-    margin-top: 0.4rem !important;
-    margin-bottom: 1.25rem !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 1.25em !important;
     padding-left: 1.5rem !important;
 
     li {
-      margin-bottom: 0.45rem !important;
+      margin-bottom: 0.4em !important;
       line-height: var(--lh-relaxed) !important;
 
       p {
-        margin-bottom: 0.45rem !important;
+        margin-bottom: 0.4em !important;
       }
 
       &:last-child {
         margin-bottom: 0 !important;
       }
     }
+  }
+
+  b, strong {
+    font-weight: var(--fw-semibold) !important;
   }
 
   &::after {
@@ -202,7 +220,7 @@ blockquote,
     display: block !important;
 
     p {
-      font-family: var(--font-serif) !important;
+      font-family: var(--font-sans) !important;
       font-size: var(--fs-base) !important;
       line-height: var(--lh-relaxed) !important;
       margin-top: 0 !important;

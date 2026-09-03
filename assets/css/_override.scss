@@ -1,7 +1,7 @@
-$font-serif: "Lora", Georgia, serif !default;
-$font-sans: "Lora", Georgia, serif !default;
-$global-font-family: "Lora", Georgia, serif !default;
-$header-title-font-family: "Lora", Georgia, serif !default;
+$font-sans: "Be Vietnam Pro", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-serif: $font-sans;
+$global-font-family: $font-sans;
+$header-title-font-family: $font-sans;
 $code-font-family: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 // ==========================================================
