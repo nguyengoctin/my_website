@@ -13,7 +13,7 @@ class Util {
     }
 
     static isTocStatic() {
-        return window.matchMedia('only screen and (max-width: 960px)').matches;
+        return window.matchMedia('only screen and (max-width: 1360px)').matches;
     }
 
     static animateCSS(element, animation, reserved, callback) {
@@ -73,14 +73,17 @@ class Theme {
     initMenuMobile() {
         const $menuToggleMobile = document.getElementById('menu-toggle-mobile');
         const $menuMobile = document.getElementById('menu-mobile');
+        if (!$menuToggleMobile || !$menuMobile) return;
         $menuToggleMobile.addEventListener('click', () => {
             document.body.classList.toggle('blur');
-            $menuToggleMobile.classList.toggle('active');
+            const isActive = $menuToggleMobile.classList.toggle('active');
             $menuMobile.classList.toggle('active');
+            $menuToggleMobile.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         }, false);
         this._menuMobileOnClickMask = this._menuMobileOnClickMask || (() => {
             $menuToggleMobile.classList.remove('active');
             $menuMobile.classList.remove('active');
+            $menuToggleMobile.setAttribute('aria-expanded', 'false');
         });
         this.clickMaskEventSet.add(this._menuMobileOnClickMask);
     }
@@ -513,8 +516,9 @@ class Theme {
             const $toc = document.getElementById('toc-auto');
             const $page = document.getElementsByClassName('page')[0];
             const rect = $page.getBoundingClientRect();
-            $toc.style.left = `${rect.left + rect.width + 20}px`;
-            $toc.style.maxWidth = `${$page.getBoundingClientRect().left - 20}px`;
+            $toc.style.left = `${rect.left + rect.width + 24}px`;
+            const availableSpace = window.innerWidth - (rect.left + rect.width + 48);
+            $toc.style.maxWidth = `${Math.min(Math.max(availableSpace, 0), 260)}px`;
             $toc.style.visibility = 'visible';
             const $tocLinkElements = $tocCore.querySelectorAll('a:first-child');
             const $tocLiElements = $tocCore.getElementsByTagName('li');

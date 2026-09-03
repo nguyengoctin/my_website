@@ -1,11 +1,21 @@
+{{- $image := .Page.Resources.GetMatch (printf "*%v*" .Destination) -}}
+{{- if not $image -}}
+    {{- $image = resources.Get .Destination -}}
+{{- end -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+{{- with $image -}}
+    {{- $width = .Width -}}
+    {{- $height = .Height -}}
+{{- end -}}
 {{- if .Title -}}
     <figure class="markdown-image-figure">
-        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" decoding="async" />
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" decoding="async"{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }} />
         <figcaption class="image-caption">{{ .Title }}</figcaption>
     </figure>
 {{- else -}}
     <figure class="markdown-image-figure">
-        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async" />
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async"{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }} />
         {{- if .Text -}}
             <figcaption class="image-caption">{{ .Text }}</figcaption>
         {{- end -}}

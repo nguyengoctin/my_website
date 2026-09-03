@@ -29,6 +29,7 @@
         </script>
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+        <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
         <script>
           (function() {
             var themeVal = document.documentElement.getAttribute('theme') || 'dark';
@@ -69,7 +70,7 @@
         {{- /* Body wrapper */ -}}
         <div class="wrapper">
             {{- partial "header.html" . -}}
-            <main class="main">
+            <main class="main" id="main-content">
                 <div class="container">
                     {{- block "content" . }}{{ end -}}
                 </div>

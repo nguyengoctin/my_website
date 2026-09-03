@@ -9,59 +9,140 @@ body.theme-transitioning *::after {
     transition-delay: 0s !important;
 }
 
-/* 1. Header Navigation Alignment - Khớp 100% thẳng hàng với cột nội dung (.page) trên cả Desktop & Mobile */
+/* ==========================================================================
+   LAYOUT TOKENS & SHELL ARCHITECTURE
+   ========================================================================== */
+:root {
+    --shell-width: 880px;
+    --wide-width: 880px;
+    --prose-width: 880px;
+    --gutter-desktop: 1.5rem;
+    --gutter-mobile: 1rem;
+    --gutter-small: 0.75rem;
+}
+
+/* Skip-to-content accessibility link */
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: 1rem;
+    z-index: 10000;
+    padding: 0.5rem 1rem;
+    background: var(--brand-primary, #4d74eb);
+    color: #ffffff !important;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: top 0.15s ease;
+
+    &:focus {
+        top: 1rem;
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+    }
+}
+
+/* Anchor navigation scroll offset under sticky header */
+html {
+    scroll-padding-top: calc(var(--header-height, 3.5rem) + 1.25rem);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    scroll-margin-top: calc(var(--header-height, 3.5rem) + 1.25rem);
+}
+
+/* Button resets and keyboard focus indicators */
+button.menu-item,
+button.menu-toggle {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--brand-primary, #4d74eb);
+    outline-offset: 2px;
+}
+
+/* 1. Header Navigation Alignment - Khớp với site shell (--shell-width: 880px) */
 #header-desktop .header-wrapper {
-    max-width: 850px !important;
+    max-width: var(--shell-width, 880px) !important;
     margin: 0 auto !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: var(--gutter-desktop, 1.5rem) !important;
+    padding-right: var(--gutter-desktop, 1.5rem) !important;
     box-sizing: border-box !important;
 
     @media (max-width: 768px) {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
+        padding-left: var(--gutter-mobile, 1rem) !important;
+        padding-right: var(--gutter-mobile, 1rem) !important;
+    }
+
+    @media (max-width: 360px) {
+        padding-left: var(--gutter-small, 0.75rem) !important;
+        padding-right: var(--gutter-small, 0.75rem) !important;
     }
 }
 
 #header-mobile {
     .header-container {
-        max-width: 850px !important;
+        max-width: var(--shell-width, 880px) !important;
         margin: 0 auto !important;
         padding: 0 !important;
         box-sizing: border-box !important;
     }
 
     .header-wrapper {
-        max-width: 850px !important;
+        max-width: var(--shell-width, 880px) !important;
         margin: 0 auto !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: var(--gutter-mobile, 1rem) !important;
+        padding-right: var(--gutter-mobile, 1rem) !important;
         box-sizing: border-box !important;
 
-        @media (max-width: 768px) {
-            padding-left: 12px !important;
-            padding-right: 12px !important;
+        @media (max-width: 360px) {
+            padding-left: var(--gutter-small, 0.75rem) !important;
+            padding-right: var(--gutter-small, 0.75rem) !important;
         }
     }
 }
 
-/* 2. Container chính cho tất cả các trang (.page) - Khớp 100% lề với Navbar */
+/* 2. Container chính cho các trang (.page) - Phân tách shell và prose width */
 .wrapper main .container {
     padding: 0 !important;
 }
 
 .page {
-    max-width: 850px !important;
     width: 100% !important;
+    max-width: var(--shell-width, 880px) !important;
     margin: 0 auto !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: var(--gutter-desktop, 1.5rem) !important;
+    padding-right: var(--gutter-desktop, 1.5rem) !important;
     box-sizing: border-box !important;
 
     @media (max-width: 768px) {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
+        padding-left: var(--gutter-mobile, 1rem) !important;
+        padding-right: var(--gutter-mobile, 1rem) !important;
     }
+
+    @media (max-width: 360px) {
+        padding-left: var(--gutter-small, 0.75rem) !important;
+        padding-right: var(--gutter-small, 0.75rem) !important;
+    }
+}
+
+// Thống nhất chuẩn độ rộng duy nhất từ Header -> Content -> Footer (880px)
+.page.single,
+.page.home,
+.page.archive,
+.page.categories {
+    max-width: var(--shell-width, 880px) !important;
 }
 
 @media (max-width: 768px) {
@@ -91,15 +172,23 @@ body.theme-transitioning *::after {
 }
 
 .custom-footer-wrapper {
-    max-width: 850px !important;
+    max-width: var(--shell-width, 880px) !important;
     margin: 0 auto !important;
-    padding: 0 15px !important;
+    padding: 0 var(--gutter-desktop, 1.5rem) !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 0.75rem !important;
     text-align: center !important;
+
+    @media (max-width: 768px) {
+        padding: 0 var(--gutter-mobile, 1rem) !important;
+    }
+
+    @media (max-width: 360px) {
+        padding: 0 var(--gutter-small, 0.75rem) !important;
+    }
 }
 
 .footer-social-links {
@@ -259,14 +348,25 @@ code:not(pre code) {
 // ==========================================================
 // Tables Enhancement (Rounded Clean Editorial Grid)
 // ==========================================================
+.table-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 1.5rem 0 !important;
+}
+
 .single .content table,
 .content table,
 table {
+  display: block !important;
   width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
   border-collapse: separate !important;
   border-spacing: 0 !important;
   border-radius: 8px !important;
-  overflow: hidden !important;
   border: 1px solid #e2e8f0 !important;
   margin: 1.5rem 0 !important;
 
@@ -544,12 +644,12 @@ body.mobile-menu-open {
 }
 
 /* ==========================================================================
-   SEARCH DROPDOWN ALIGNMENT: 100% PRECISELY ALIGNED TO 850px COLUMN
+   SEARCH DROPDOWN ALIGNMENT: ALIGNED TO SHELL BOUNDS
    ========================================================================== */
 .search-dropdown.desktop {
     position: fixed !important;
     top: var(--header-height, 3.5rem) !important;
-    right: calc((100vw - 850px) / 2 + 15px) !important;
+    right: calc((100vw - var(--shell-width, 880px)) / 2 + var(--gutter-desktop, 1.5rem)) !important;
     left: auto !important;
     transform: none !important;
     width: 30rem !important;
@@ -558,6 +658,10 @@ body.mobile-menu-open {
     z-index: 9999 !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+
+    @media (max-width: 928px) {
+        right: var(--gutter-desktop, 1.5rem) !important;
+    }
 
     @media (max-width: 880px) {
         right: 15px !important;
@@ -582,9 +686,9 @@ body.mobile-menu-open {
 }
 
 .search-dropdown.mobile {
-    max-width: 850px !important;
+    max-width: var(--shell-width, 880px) !important;
     margin: 0 auto !important;
-    padding: 0 12px !important;
+    padding: 0 var(--gutter-mobile, 1rem) !important;
     box-sizing: border-box !important;
 }
 /* Audio shortcode ({{< audio >}}) */

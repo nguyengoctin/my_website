@@ -109,6 +109,26 @@
     }
   }
 
+  .archive-description {
+    margin-top: -0.8rem !important;
+    margin-bottom: 1.5rem !important;
+    color: var(--clr-text-2, #64748b) !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .group-title-pinned {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+
+    i {
+      font-size: 0.85em !important;
+      transform: rotate(35deg) !important;
+      color: #f43f5e !important;
+    }
+  }
+
   .archive-item {
     display: flex !important;
     align-items: center !important;

@@ -5,9 +5,9 @@
 {{- define "content" -}}
     <div class="page archive">
         {{- /* Title */ -}}
-        <h2 class="single-title animate__animated animate__pulse animate__faster">
+        <h1 class="single-title animate__animated animate__pulse animate__faster">
             CATEGORIES
-        </h2>
+        </h1>
 
         {{- /* Categories Masonry Cards */ -}}
         <div class="categories-card">
@@ -40,7 +40,7 @@
             {{- end -}}
         </div>
 
-        <hr style="margin: 2.5rem 0 1.5rem 0; border: none; border-top: 1px solid #e8e8e8;">
+        <hr style="margin: 2.5rem 0 1.5rem 0; border: none; border-top: 1px solid var(--clr-border, #e2e8f0);">
 
         {{- /* Tags Section with Top Tags and Toggle */ -}}
         <h2 class="single-title animate__animated animate__pulse animate__faster">
@@ -50,7 +50,7 @@
         {{- $allTags := $.Site.Taxonomies.tags.ByCount -}}
         <div class="tag-cloud-tags" style="margin-top: 1rem;">
             {{- range first 12 $allTags -}}
-                <a href="{{ .Page.RelPermalink }}" style="display: inline-block; margin: 0.3rem 0.4rem; padding: 0.3rem 0.8rem; background: rgba(77,116,235,0.08); border-radius: 20px; font-size: 0.9rem; text-decoration: none; color: #4d74eb;">
+                <a href="{{ .Page.RelPermalink }}" style="display: inline-block; margin: 0.3rem 0.4rem; padding: 0.3rem 0.8rem; background: var(--clr-surface-3, #f1f5f9); border: 1px solid var(--clr-border, #e2e8f0); border-radius: 20px; font-size: 0.85rem; text-decoration: none; color: var(--clr-text, #1e293b);">
                     #{{ .Page.Title }} <sup style="opacity: 0.7;">{{ .Count }}</sup>
                 </a>
             {{- end -}}
@@ -60,7 +60,7 @@
             <div id="more-tags-container" style="display: none; margin-top: 0.5rem;">
                 <div class="tag-cloud-tags">
                     {{- range after 12 $allTags -}}
-                        <a href="{{ .Page.RelPermalink }}" style="display: inline-block; margin: 0.3rem 0.4rem; padding: 0.3rem 0.8rem; background: rgba(77,116,235,0.08); border-radius: 20px; font-size: 0.9rem; text-decoration: none; color: #4d74eb;">
+                        <a href="{{ .Page.RelPermalink }}" style="display: inline-block; margin: 0.3rem 0.4rem; padding: 0.3rem 0.8rem; background: var(--clr-surface-3, #f1f5f9); border: 1px solid var(--clr-border, #e2e8f0); border-radius: 20px; font-size: 0.85rem; text-decoration: none; color: var(--clr-text, #1e293b);">
                             #{{ .Page.Title }} <sup style="opacity: 0.7;">{{ .Count }}</sup>
                         </a>
                     {{- end -}}
@@ -68,7 +68,7 @@
             </div>
 
             <div style="margin-top: 1rem; text-align: left;">
-                <button id="toggle-more-tags-btn" onclick="const container = document.getElementById('more-tags-container'); if(container.style.display==='none'){container.style.display='block'; this.innerText='Thu gọn <<';}else{container.style.display='none'; this.innerText='Xem tất cả {{ len $allTags }} tags >>';}" style="background: none; border: none; color: #4d74eb; font-family: Lora, serif; font-size: 0.9rem; cursor: pointer; padding: 0;">
+                <button id="toggle-more-tags-btn" onclick="const container = document.getElementById('more-tags-container'); if(container.style.display==='none'){container.style.display='block'; this.innerText='Thu gọn <<';}else{container.style.display='none'; this.innerText='Xem tất cả {{ len $allTags }} tags >>';}" style="background: none; border: none; color: var(--brand-primary, #4d74eb); font-family: inherit; font-size: 0.9rem; cursor: pointer; padding: 0;">
                     Xem tất cả {{ len $allTags }} tags >>
                 </button>
             </div>

@@ -637,9 +637,10 @@ hr {
 
         a {
           display: block !important;
-          white-space: nowrap !important;
-          overflow: hidden !important;
-          text-overflow: ellipsis !important;
+          white-space: normal !important;
+          overflow-wrap: break-word !important;
+          word-break: normal !important;
+          line-height: 1.4 !important;
           max-width: 100% !important;
           font-family: var(--font-sans) !important;
           font-size: 0.8125rem !important;
@@ -664,6 +665,11 @@ hr {
               color: #60a5fa !important;
             }
           }
+        }
+
+        // Giới hạn TOC chỉ hiển thị H2 và H3, ẩn các cấp sâu hơn (H4, H5, H6)
+        ul ul ul {
+          display: none !important;
         }
       }
     }
@@ -846,5 +852,31 @@ hr {
     .sys-icon {
       transform: translateX(4px);
     }
+  }
+}
+
+// ==========================================================
+// 8. MARKDOWN IMAGE FIGURE & CAPTIONS
+// ==========================================================
+.markdown-image-figure {
+  margin: 1.75rem auto !important;
+  text-align: center !important;
+  max-width: 100% !important;
+
+  img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+  }
+
+  .image-caption {
+    margin-top: 0.55rem !important;
+    font-family: var(--font-sans) !important;
+    font-size: var(--fs-xs, 0.85rem) !important;
+    color: var(--clr-text-2, #64748b) !important;
+    font-style: italic !important;
+    text-align: center !important;
   }
 }

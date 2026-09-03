@@ -9,14 +9,14 @@
 
     <div class="page archive">
         {{- /* Title */ -}}
-        <h2 class="single-title animate__animated animate__pulse animate__faster">
+        <h1 class="single-title animate__animated animate__pulse animate__faster">
             {{- .Params.Title | default (T $taxonomies) | default $taxonomies | dict "Some" | T "allSome" -}}
-        </h2>
+        </h1>
 
         {{- /* Masonry Categories Page */ -}}
-        <div class="categories-card" style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 3rem; align-items: flex-start;">
+        <div class="categories-card" style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 2.5rem; align-items: flex-start;">
             {{- /* Column 1 (Left) */ -}}
-            <div class="masonry-col" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 24px;">
+            <div class="masonry-col" style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
                 {{- range $index, $element := $terms -}}
                     {{- if eq (mod $index 2) 0 -}}
                         {{- $term := .Term -}}
@@ -55,7 +55,7 @@
             </div>
 
             {{- /* Column 2 (Right) */ -}}
-            <div class="masonry-col" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 24px;">
+            <div class="masonry-col" style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
                 {{- range $index, $element := $terms -}}
                     {{- if eq (mod $index 2) 1 -}}
                         {{- $term := .Term -}}

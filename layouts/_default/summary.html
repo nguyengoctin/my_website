@@ -18,14 +18,14 @@
     {{- end -}}
 
     {{- /* Title */ -}}
-    <h1 class="single-title" itemprop="name headline">
+    <h2 class="single-title" itemprop="name headline">
         <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
         {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
             <span class="pinned-post-icon" title="Bài viết được ghim">
                 <i class="fas fa-thumbtack" aria-hidden="true"></i>
             </span>
         {{- end -}}
-    </h1>
+    </h2>
 
     {{- /* Meta: Date • Reading Time */ -}}
     <div class="post-meta">

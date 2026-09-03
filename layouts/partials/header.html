@@ -41,15 +41,15 @@
                 {{- end -}}
 
                 {{- if .Site.Params.search.enable -}}
-                    <a href="javascript:void(0);" class="menu-item search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)" aria-label="Tìm kiếm bài viết">
+                    <button type="button" class="menu-item search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)" aria-label="Tìm kiếm bài viết">
                         <span class="sys-icon"><i class="ti ti-search"></i></span>
-                    </a>
+                    </button>
                 {{- end -}}
-                <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
+                <button type="button" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
                     <span class="sys-icon theme-icon-auto"><i class="ti ti-circle-half-2"></i></span>
                     <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
                     <span class="sys-icon theme-icon-dark"><i class="ti ti-moon"></i></span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -62,6 +62,7 @@
                 menuToggleMobile.addEventListener('click', function() {
                     setTimeout(function() {
                         var isActive = menuToggleMobile.classList.contains('active') || (menuMobile && menuMobile.classList.contains('active'));
+                        menuToggleMobile.setAttribute('aria-expanded', isActive ? 'true' : 'false');
                         if (isActive) {
                             document.body.classList.add('mobile-menu-open');
                         } else {
@@ -74,6 +75,9 @@
                 menuMobile.addEventListener('click', function(e) {
                     if (e.target.closest('a')) {
                         document.body.classList.remove('mobile-menu-open');
+                        if (menuToggleMobile) {
+                            menuToggleMobile.setAttribute('aria-expanded', 'false');
+                        }
                     }
                 });
             }
@@ -110,9 +114,9 @@
                     {{- end -}}
                 </a>
             </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
+            <button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="menu-mobile">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
@@ -142,14 +146,14 @@
             </div>
 
             <div class="mobile-bottom-row">
-                <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
+                <button type="button" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
                     <span class="theme-switch-label">
                         <span class="sys-icon theme-icon-auto"><i class="ti ti-circle-half-2"></i></span>
                         <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
                         <span class="sys-icon theme-icon-dark"><i class="ti ti-moon"></i></span>
                         <span>Theme Mode</span>
                     </span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
