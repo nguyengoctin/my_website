@@ -7,5 +7,5 @@ tags: ["Python", "Programming", "Cheatsheet", "Backend"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cam-nang-python.pdf"
 pages_count: 15
-icon: "fab fa-python"
+icon: "ti ti-python"
 ---

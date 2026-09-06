@@ -7,5 +7,5 @@ tags: ["AI", "Deep Learning", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/ky-thuat-ai-hien-dai.pdf"
 pages_count: 10
-icon: "fas fa-microchip"
+icon: "ti ti-microchip"
 ---

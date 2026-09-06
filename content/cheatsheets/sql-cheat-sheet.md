@@ -7,5 +7,5 @@ tags: ["SQL", "Database", "Cheatsheet", "Query"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/sql-cheat-sheet.pdf"
 pages_count: 11
-icon: "fas fa-database"
+icon: "ti ti-database"
 ---

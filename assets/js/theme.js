@@ -398,7 +398,7 @@ class Theme {
                     empty: ({ query }) => `<div class="search-empty">${searchConfig.noResultsFound}: <span class="search-query">"${query}"</span></div>`,
                     footer: ({}) => {
                         const searchTypes = {
-                            algolia: { searchType: 'algolia', icon: '<i class="fab fa-algolia" aria-hidden="true"></i>', href: 'https://www.algolia.com/' },
+                            algolia: { searchType: 'algolia', icon: '<i class="ti ti-brand-algolia" aria-hidden="true"></i>', href: 'https://www.algolia.com/' },
                             lunr: { searchType: 'Lunr.js', icon: '', href: 'https://lunrjs.com/' },
                             fuse: { searchType: 'Fuse.js', icon: '', href: 'https://www.fusejs.io/' },
                             pagefind: { searchType: 'Pagefind', icon: '', href: 'https://pagefind.app/' },
@@ -437,9 +437,21 @@ class Theme {
     initDetails() {
         Util.forEach(document.getElementsByClassName('details'), $details => {
             const $summary = $details.getElementsByClassName('details-summary')[0];
-            $summary.addEventListener('click', () => {
-                $details.classList.toggle('open');
-            }, false);
+            if (!$summary) return;
+            if ($details.tagName === 'DETAILS') {
+                $details.addEventListener('toggle', () => {
+                    if ($details.open) {
+                        $details.classList.add('open');
+                    } else {
+                        $details.classList.remove('open');
+                    }
+                });
+                if ($details.open) $details.classList.add('open');
+            } else {
+                $summary.addEventListener('click', () => {
+                    $details.classList.toggle('open');
+                }, false);
+            }
         });
     }
 
@@ -500,7 +512,8 @@ class Theme {
     initToc() {
         const $tocCore = document.getElementById('TableOfContents');
         if ($tocCore === null) return;
-        if (document.getElementById('toc-static').getAttribute('data-kept') || Util.isTocStatic()) {
+        const $tocStatic = document.getElementById('toc-static');
+        if (($tocStatic && $tocStatic.getAttribute('data-kept')) || Util.isTocStatic()) {
             const $tocContentStatic = document.getElementById('toc-content-static');
             if ($tocCore.parentElement !== $tocContentStatic) {
                 $tocCore.parentElement.removeChild($tocCore);

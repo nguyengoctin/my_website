@@ -7,5 +7,5 @@ tags: ["OOP", "Programming", "Java", "Interview"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/khai-niem-oop.pdf"
 pages_count: 8
-icon: "fas fa-cubes"
+icon: "ti ti-cubes"
 ---

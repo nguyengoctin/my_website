@@ -7,5 +7,5 @@ tags: ["System Design", "Architecture", "Interview", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/50-cau-hoi-phong-van-system-design.pdf"
 pages_count: 5
-icon: "fas fa-sitemap"
+icon: "ti ti-sitemap"
 ---

@@ -7,5 +7,5 @@ tags: ["LLM", "Tokenization", "AI", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/tokenization-trong-llm.pdf"
 pages_count: 10
-icon: "fas fa-font"
+icon: "ti ti-font"
 ---

@@ -7,5 +7,5 @@ tags: ["Docker", "DevOps", "Container", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cheatsheet-docker.pdf"
 pages_count: 5
-icon: "fab fa-docker"
+icon: "ti ti-docker"
 ---

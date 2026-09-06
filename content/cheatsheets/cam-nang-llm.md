@@ -7,5 +7,5 @@ tags: ["LLM", "AI", "Machine Learning", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cam-nang-llm.pdf"
 pages_count: 10
-icon: "fas fa-brain"
+icon: "ti ti-brain"
 ---

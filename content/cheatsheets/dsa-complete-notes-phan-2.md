@@ -7,5 +7,5 @@ tags: ["DSA", "Algorithm", "Interview", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/dsa-complete-notes-phan-2.pdf"
 pages_count: 19
-icon: "fas fa-code"
+icon: "ti ti-code"
 ---

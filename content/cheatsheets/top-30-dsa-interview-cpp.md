@@ -7,5 +7,5 @@ tags: ["DSA", "C++", "Interview", "Algorithms", "Data Structures"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/top-30-dsa-interview-cpp.pdf"
 pages_count: 10
-icon: "fas fa-code"
+icon: "ti ti-code"
 ---

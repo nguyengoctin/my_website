@@ -9,9 +9,10 @@
     {{- else if eq $toc false -}}
         {{- $toc = dict "enable" false -}}
     {{- end -}}
+    {{- $hasTOC := and (ne $toc.enable false) (strings.Contains .TableOfContents "<li") -}}
 
     {{- /* Auto TOC */ -}}
-    {{- if ne $toc.enable false -}}
+    {{- if $hasTOC -}}
         <div class="toc" id="toc-auto">
             <h2 class="toc-title">{{ T "contents" }}</h2>
             <div class="toc-content{{ if eq $toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
@@ -20,7 +21,7 @@
 
     <article class="page single">
         {{- /* Title */ -}}
-        <h1 class="single-title animate__animated animate__flipInX">{{ .Title | emojify }}</h1>
+        <h1 class="single-title">{{ .Title | emojify }}</h1>
 
         {{- /* Subtitle */ -}}
         {{- with $params.subtitle -}}
@@ -56,16 +57,16 @@
         {{- end -}}
 
         {{- /* Static TOC */ -}}
-        {{- if ne $toc.enable false -}}
-            <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
-                <div class="details-summary toc-title">
+        {{- if $hasTOC -}}
+            <details class="details toc" id="toc-static" data-kept="{{ if $toc.keepStatic }}true{{ end }}"{{ if $toc.keepStatic }} open{{ end }}>
+                <summary class="details-summary toc-title">
                     <span>{{ T "contents" }}</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
+                    <span><i class="details-icon ti ti-chevron-right" aria-hidden="true"></i></span>
+                </summary>
                 <div class="details-content toc-content" id="toc-content-static">
                     {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
                 </div>
-            </div>
+            </details>
         {{- end -}}
 
         {{- /* Content */ -}}

@@ -7,5 +7,5 @@ tags: ["RAG", "LLM", "AI", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/rag.pdf"
 pages_count: 10
-icon: "fas fa-search"
+icon: "ti ti-search"
 ---

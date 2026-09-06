@@ -7,5 +7,5 @@ tags: ["Machine Learning", "AI", "Python", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cam-nang-machine-learning.pdf"
 pages_count: 12
-icon: "fas fa-brain"
+icon: "ti ti-brain"
 ---

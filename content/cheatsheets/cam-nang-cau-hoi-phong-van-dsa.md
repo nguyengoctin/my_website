@@ -7,5 +7,5 @@ tags: ["DSA", "Algorithms", "Interview", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cam-nang-cau-hoi-phong-van-dsa.pdf"
 pages_count: 13
-icon: "fas fa-code"
+icon: "ti ti-code"
 ---

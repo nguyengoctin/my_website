@@ -7,5 +7,5 @@ tags: ["Python", "Cheatsheet", "Data Science", "Scripting"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/python-cheat-sheet.pdf"
 pages_count: 14
-icon: "fab fa-python"
+icon: "ti ti-python"
 ---

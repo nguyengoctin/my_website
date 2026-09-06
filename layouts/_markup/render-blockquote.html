@@ -34,17 +34,19 @@
 {{- end -}}
 
 {{- if $isAlert -}}
-    {{- $iconMap := dict "note" "far fa-pen-to-square" "abstract" "far fa-rectangle-list" "info" "fas fa-info" "todo" "far fa-square-check" "tip" "far fa-lightbulb" "success" "far fa-circle-check" "question" "far fa-circle-question" "warning" "fas fa-exclamation" "failure" "far fa-circle-xmark" "danger" "fas fa-bolt" "bug" "fas fa-bug" "example" "fas fa-list-ol" -}}
+    {{- $iconMap := dict "note" "ti ti-pencil" "abstract" "ti ti-list-details" "info" "ti ti-info-circle" "todo" "ti ti-checkbox" "tip" "ti ti-bulb" "success" "ti ti-circle-check" "question" "ti ti-help" "warning" "ti ti-alert-triangle" "failure" "ti ti-circle-x" "danger" "ti ti-bolt" "bug" "ti ti-bug" "example" "ti ti-list-numbers" -}}
     <div class="admonition gfm-alert {{ $alertType }} open">
         <div class="admonition-title">
-            <i class="icon {{ index $iconMap $alertType | default "far fa-pen-to-square" }}" aria-hidden="true"></i>{{ $alertTitle }}
+            <i class="icon {{ index $iconMap $alertType | default "ti ti-pencil" }}" aria-hidden="true"></i>{{ $alertTitle }}
         </div>
         <div class="admonition-content">
             {{ $alertContent }}
         </div>
     </div>
 {{- else -}}
-    <blockquote>
-        {{ .Text | safeHTML }}
+    <blockquote class="custom-quote">
+        <div class="quote-content">
+            <span class="quote-open">“</span><span class="quote-text">{{ .Text | safeHTML }}</span><span class="quote-close">”</span>
+        </div>
     </blockquote>
 {{- end -}}

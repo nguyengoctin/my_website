@@ -7,5 +7,5 @@ tags: ["AI", "Agent", "Automation", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/ai-agent.pdf"
 pages_count: 10
-icon: "fas fa-robot"
+icon: "ti ti-robot"
 ---

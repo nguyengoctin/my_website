@@ -490,7 +490,7 @@ body:has(.cheatsheet-single) .container {
     <!-- Mobile Top Header Bar -->
     <header class="mobile-top-header" aria-label="Mobile Navigation">
         <a href="/cheatsheets/" class="side-tool-btn" title="Quay lại danh sách Cheatsheets">
-            <i class="fas fa-arrow-left"></i>
+            <i class="ti ti-arrow-left"></i>
         </a>
         <span id="dock-page-indicator-mobile">01 / --</span>
     </header>
@@ -502,7 +502,7 @@ body:has(.cheatsheet-single) .container {
             <!-- Top Dock Group: Back to Cheatsheets -->
             <div class="dock-section">
                 <a href="/cheatsheets/" class="side-tool-btn" title="Quay lại danh sách Cheatsheets" aria-label="Back to Cheatsheets">
-                    <i class="fas fa-arrow-left"></i>
+                    <i class="ti ti-arrow-left"></i>
                 </a>
             </div>
 
@@ -511,7 +511,7 @@ body:has(.cheatsheet-single) .container {
             <!-- Middle Dock Group: Page Navigation & Page Counter -->
             <div class="dock-section">
                 <button id="btn-prev" class="side-tool-btn" title="Trang trước (Phím ←)" aria-label="Previous Page">
-                    <i class="fas fa-chevron-up"></i>
+                    <i class="ti ti-chevron-up"></i>
                 </button>
 
                 <span id="dock-page-indicator">
@@ -519,7 +519,7 @@ body:has(.cheatsheet-single) .container {
                 </span>
 
                 <button id="btn-next" class="side-tool-btn" title="Trang sau (Phím →)" aria-label="Next Page">
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="ti ti-chevron-down"></i>
                 </button>
             </div>
 
@@ -528,7 +528,7 @@ body:has(.cheatsheet-single) .container {
             <!-- Bottom Dock Group: Utility Actions -->
             <div class="dock-section">
                 <button id="btn-zoom-page" class="side-tool-btn" title="Phóng to HD" aria-label="Smart Zoom Page">
-                    <i class="fas fa-expand-alt"></i>
+                    <i class="ti ti-maximize"></i>
                 </button>
                 <a href="{{ .Params.pdf_url }}" target="_blank" rel="noopener noreferrer" class="side-tool-btn" title="Mở file PDF gốc trong tab mới" aria-label="Open PDF in new tab">
                     <i class="ti ti-external-link"></i>
@@ -561,7 +561,7 @@ body:has(.cheatsheet-single) .container {
                     </div>
                 </div>
                 <div class="skeleton-text">
-                    <i class="fas fa-circle-notch fa-spin"></i> Đang tải tài liệu PDF...
+                    <i class="ti ti-loader fa-spin"></i> Đang tải tài liệu PDF...
                 </div>
             </div>
             
@@ -593,10 +593,10 @@ body:has(.cheatsheet-single) .container {
                 <button id="btn-zoom-prev-overlay" class="zoom-action-btn" title="Trang trước (←)"><i class="ti ti-chevron-left"></i></button>
                 <button id="btn-zoom-next-overlay" class="zoom-action-btn" title="Trang sau (→)"><i class="ti ti-chevron-right"></i></button>
                 <div style="width: 1px; height: 18px; background: rgba(255,255,255,0.2); margin: 0 0.2rem;"></div>
-                <button id="btn-zoom-out-overlay" class="zoom-action-btn" title="Thu nhỏ (-)"><i class="fas fa-minus"></i></button>
+                <button id="btn-zoom-out-overlay" class="zoom-action-btn" title="Thu nhỏ (-)"><i class="ti ti-minus"></i></button>
                 <span id="zoom-level-text">135%</span>
-                <button id="btn-zoom-in-overlay" class="zoom-action-btn" title="Phóng to (+)"><i class="fas fa-plus"></i></button>
-                <button id="btn-zoom-reset-overlay" class="zoom-action-btn" title="Về 100%"><i class="fas fa-sync-alt"></i></button>
+                <button id="btn-zoom-in-overlay" class="zoom-action-btn" title="Phóng to (+)"><i class="ti ti-plus"></i></button>
+                <button id="btn-zoom-reset-overlay" class="zoom-action-btn" title="Về 100%"><i class="ti ti-reload"></i></button>
                 <button id="btn-zoom-close-overlay" class="zoom-action-btn" title="Đóng (Esc)"><i class="ti ti-x"></i></button>
             </div>
         </header>
@@ -1123,7 +1123,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     } catch (err) {
         console.error("Flipbook render error:", err);
         if (skeleton) skeleton.style.display = 'none';
-        wrapper.innerHTML = `<p style="color: #e74c3c; font-size: 0.85rem; padding: 2rem;"><i class="fas fa-exclamation-triangle"></i> Không thể tải file PDF (${err.message})</p>`;
+        wrapper.innerHTML = `<p style="color: #e74c3c; font-size: 0.85rem; padding: 2rem;"><i class="ti ti-alert-triangle"></i> Không thể tải file PDF (${err.message})</p>`;
     }
 });
 </script>

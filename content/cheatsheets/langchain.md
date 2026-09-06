@@ -7,5 +7,5 @@ tags: ["LangChain", "LLM", "AI", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/langchain.pdf"
 pages_count: 10
-icon: "fas fa-link"
+icon: "ti ti-link"
 ---

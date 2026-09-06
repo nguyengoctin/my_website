@@ -7,5 +7,5 @@ tags: ["SQL", "Database", "Interview", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/30-cau-hoi-phong-van-sql.pdf"
 pages_count: 10
-icon: "fas fa-database"
+icon: "ti ti-database"
 ---

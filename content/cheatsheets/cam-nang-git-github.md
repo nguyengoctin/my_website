@@ -7,5 +7,5 @@ tags: ["Git", "GitHub", "Version Control", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/cam-nang-git-github.pdf"
 pages_count: 7
-icon: "fab fa-git-alt"
+icon: "ti ti-git-alt"
 ---

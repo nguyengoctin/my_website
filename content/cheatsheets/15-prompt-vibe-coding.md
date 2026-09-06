@@ -7,5 +7,5 @@ tags: ["AI", "Prompt Engineering", "Cheatsheet", "Coding"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/15-prompt-vibe-coding.pdf"
 pages_count: 16
-icon: "fas fa-terminal"
+icon: "ti ti-terminal"
 ---

@@ -7,5 +7,5 @@ tags: ["System Design", "Architecture", "Interview", "Cheatsheet"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/system-design.pdf"
 pages_count: 4
-icon: "fas fa-sitemap"
+icon: "ti ti-sitemap"
 ---

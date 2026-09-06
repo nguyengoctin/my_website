@@ -7,5 +7,5 @@ tags: ["Git", "DevOps", "Cheatsheet", "Version Control"]
 categories: ["Cheatsheets"]
 pdf_url: "/cheatsheets/git-cheat-sheet.pdf"
 pages_count: 2
-icon: "fab fa-git-alt"
+icon: "ti ti-git-alt"
 ---
