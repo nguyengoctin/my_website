@@ -7,28 +7,8 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
-    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư ngành Công nghệ Thông tin  tại Đại học Sài Gòn. Dạo này mình dành phần lớn thời gian xây dựng các sản phẩm phần mềm, thử nghiệm một vài thứ hay ho với AI và xem chúng có thể giải quyết được những bài toán nào trong thực tế.
-    Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm.</p>
-    <div class="about-contact-row">
-      <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-chip" title="Xem trước và Tải CV (PDF)" aria-label="Resume (PDF)">
-        <i class="ti ti-file-type-pdf"></i>
-      </a>
-      <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com" aria-label="Email">
-        <i class="ti ti-mail"></i>
-      </a>
-      <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile" aria-label="GitHub">
-        <i class="ti ti-brand-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile" aria-label="LinkedIn">
-        <i class="ti ti-brand-linkedin"></i>
-      </a>
-      <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener" class="contact-chip" title="Facebook" aria-label="Facebook">
-        <i class="ti ti-brand-facebook"></i>
-      </a>
-      <a href="tel:0397662903" class="contact-chip" title="0397662903 (Phone hoặc Zalo)" aria-label="Zalo / Phone">
-        <i class="ti ti-phone"></i>
-      </a>
-    </div>
+    <p>Xin chào mọi người, mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư ngành Công nghệ Thông tin tại Đại học Sài Gòn. Dạo gần đây mình dành phần lớn thời gian xây dựng các sản phẩm phần mềm, thử nghiệm một vài thứ hay ho với AI và xem chúng có thể giải quyết được những vấn đề nào trong thực tế.</p>
+    <p>Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm. Bạn có thể xem chi tiết hồ sơ kinh nghiệm trong <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">Facebook</a> hoặc gửi thư trực tiếp cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
   </div>
 </div>
 
