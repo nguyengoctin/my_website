@@ -13,9 +13,9 @@ body.theme-transitioning *::after {
    LAYOUT TOKENS & SHELL ARCHITECTURE
    ========================================================================== */
 :root {
-    --shell-width: 880px;
-    --wide-width: 880px;
-    --prose-width: 880px;
+    --shell-width: 750px;
+    --wide-width: 750px;
+    --prose-width: 750px;
     --gutter-desktop: 1.5rem;
     --gutter-mobile: 1rem;
     --gutter-small: 0.75rem;
@@ -72,9 +72,9 @@ button.menu-toggle {
     outline-offset: 2px;
 }
 
-/* 1. Header Navigation Alignment - Khớp với site shell (--shell-width: 880px) */
+/* 1. Header Navigation Alignment - Khớp với site shell (--shell-width: 750px) */
 #header-desktop .header-wrapper {
-    max-width: var(--shell-width, 880px) !important;
+    max-width: var(--shell-width, 750px) !important;
     margin: 0 auto !important;
     padding-left: var(--gutter-desktop, 1.5rem) !important;
     padding-right: var(--gutter-desktop, 1.5rem) !important;
@@ -93,14 +93,14 @@ button.menu-toggle {
 
 #header-mobile {
     .header-container {
-        max-width: var(--shell-width, 880px) !important;
+        max-width: var(--shell-width, 750px) !important;
         margin: 0 auto !important;
         padding: 0 !important;
         box-sizing: border-box !important;
     }
 
     .header-wrapper {
-        max-width: var(--shell-width, 880px) !important;
+        max-width: var(--shell-width, 750px) !important;
         margin: 0 auto !important;
         padding-left: var(--gutter-mobile, 1rem) !important;
         padding-right: var(--gutter-mobile, 1rem) !important;
@@ -120,7 +120,7 @@ button.menu-toggle {
 
 .page {
     width: 100% !important;
-    max-width: var(--shell-width, 880px) !important;
+    max-width: var(--shell-width, 750px) !important;
     margin: 0 auto !important;
     padding-left: var(--gutter-desktop, 1.5rem) !important;
     padding-right: var(--gutter-desktop, 1.5rem) !important;
@@ -137,12 +137,12 @@ button.menu-toggle {
     }
 }
 
-// Thống nhất chuẩn độ rộng duy nhất từ Header -> Content -> Footer (880px)
+// Thống nhất chuẩn độ rộng duy nhất từ Header -> Content -> Footer (750px)
 .page.single,
 .page.home,
 .page.archive,
 .page.categories {
-    max-width: var(--shell-width, 880px) !important;
+    max-width: var(--shell-width, 750px) !important;
 }
 
 @media (max-width: 768px) {
@@ -172,7 +172,7 @@ button.menu-toggle {
 }
 
 .custom-footer-wrapper {
-    max-width: var(--shell-width, 880px) !important;
+    max-width: var(--shell-width, 750px) !important;
     margin: 0 auto !important;
     padding: 0 var(--gutter-desktop, 1.5rem) !important;
     display: flex !important;
@@ -233,15 +233,19 @@ button.menu-toggle {
         color: inherit !important;
         text-decoration: none !important;
         font-weight: 600 !important;
+        transition: color 0.15s ease, text-decoration-color 0.15s ease !important;
 
         &:hover {
-            color: #4d74eb !important;
-            text-decoration: underline dotted !important;
+            color: var(--clr-link-hover) !important;
+            text-decoration: underline solid !important;
+            text-decoration-color: var(--clr-link-underline) !important;
             text-underline-offset: 3px;
         }
 
-        [theme=dark] &:hover {
-            color: #60a5fa !important;
+        &:focus-visible {
+            outline: 2px solid var(--clr-focus) !important;
+            outline-offset: 2px;
+            border-radius: 2px;
         }
     }
 
@@ -264,21 +268,21 @@ button.menu-toggle {
     }
 
     a {
-        color: #666666 !important;
+        color: inherit !important;
         text-decoration: none !important;
+        transition: color 0.15s ease, text-decoration-color 0.15s ease !important;
 
         &:hover {
-            color: #4d74eb !important;
-            text-decoration: underline dotted !important;
+            color: var(--clr-link-hover) !important;
+            text-decoration: underline solid !important;
+            text-decoration-color: var(--clr-link-underline) !important;
             text-underline-offset: 3px;
         }
 
-        [theme=dark] & {
-            color: #a0aec0 !important;
-
-            &:hover {
-                color: #60a5fa !important;
-            }
+        &:focus-visible {
+            outline: 2px solid var(--clr-focus) !important;
+            outline-offset: 2px;
+            border-radius: 2px;
         }
     }
 

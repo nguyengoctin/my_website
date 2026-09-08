@@ -127,25 +127,28 @@
       color: inherit !important;
       font-weight: 500 !important;
       text-decoration: none !important;
-      transition: color 0.15s ease !important;
+      transition: color 0.15s ease, text-decoration-color 0.15s ease !important;
 
       &:hover {
-        color: #1337a6 !important;
-        text-decoration: underline dotted !important;
-        text-underline-offset: 4px;
+        color: var(--clr-link-hover) !important;
+        text-decoration: underline solid !important;
+        text-decoration-color: var(--clr-link-underline) !important;
+        text-underline-offset: 3px;
+      }
 
-        [theme=dark] & {
-          color: #93c5fd !important;
-        }
+      &:focus-visible {
+        outline: 2px solid var(--clr-focus) !important;
+        outline-offset: 2px;
+        border-radius: 2px;
       }
     }
   }
 
   .timeline-desc {
     font-family: var(--font-serif) !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    color: #475569 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    color: var(--clr-text-2) !important;
     margin: 0 0 0.75rem 0 !important;
 
     [theme=dark] & {
@@ -239,21 +242,25 @@ body a.btn-action {
   }
 
   &:hover {
-    background: transparent !important;
-    color: #1337a6 !important;
+    background: var(--clr-surface-2) !important;
+    color: var(--clr-link-hover) !important;
     box-shadow: none !important;
     transform: none !important;
-    text-decoration: underline dotted !important;
-    text-underline-offset: 4px;
+    text-decoration: none !important;
 
     span {
-      text-decoration: underline dotted !important;
-      text-underline-offset: 4px;
+      text-decoration: none !important;
     }
 
     .chip-sub {
       color: inherit !important;
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-focus) !important;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   [theme=dark] & {
@@ -265,15 +272,13 @@ body a.btn-action {
 
     &:hover {
       color: #93c5fd !important;
-      background: transparent !important;
+      background: var(--clr-surface-2) !important;
       border-color: transparent !important;
       box-shadow: none !important;
-      text-decoration: underline dotted !important;
-      text-underline-offset: 4px;
+      text-decoration: none !important;
 
       span {
-        text-decoration: underline dotted !important;
-        text-underline-offset: 4px;
+        text-decoration: none !important;
       }
     }
   }
@@ -284,34 +289,21 @@ body a.btn-action {
 // ==========================================================
 .tag-pill,
 .timeline-tag,
-.tag-badge,
-.post-tags a,
-.post-footer .post-tags a,
-.post-footer-tags a,
-.summary .post-tags a,
-.tag-cloud-tags a,
-body a.tag-pill,
-body .post-tags a,
-body .post-footer-tags a,
-body .timeline-tag,
-body .tag-badge {
+.tag-badge {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.25rem !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.75rem !important;
-  color: #64748b !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  line-height: 1.4 !important;
+  font-size: 0.78rem !important;
+  padding: 0.2rem 0.6rem !important;
+  border-radius: 6px !important;
+  background-color: var(--clr-surface-3) !important;
+  color: var(--clr-text-2) !important;
+  border: 1px solid var(--clr-border) !important;
   text-decoration: none !important;
-  margin: 0.2rem 0.5rem 0.2rem 0 !important;
   transition: all 0.2s ease !important;
-  vertical-align: middle !important;
-  box-shadow: none !important;
-  
+  line-height: 1.2 !important;
+
   i {
     font-size: 0.75rem !important;
     color: inherit !important;
@@ -323,23 +315,26 @@ body .tag-badge {
   }
 
   &:hover {
-    background: transparent !important;
-    color: #1337a6 !important;
-    text-decoration: underline dotted !important;
-    text-underline-offset: 4px;
-    border: none !important;
+    background-color: var(--clr-surface-4) !important;
+    color: var(--clr-text) !important;
+    text-decoration: none !important;
+    border-color: var(--clr-border) !important;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-focus) !important;
+    outline-offset: 2px;
   }
 
   [theme=dark] & {
     color: #94a3b8 !important;
-    background: transparent !important;
-    border: none !important;
+    background-color: var(--clr-surface-3) !important;
+    border: 1px solid var(--clr-border) !important;
     
     &:hover {
-      background: transparent !important;
-      color: #93c5fd !important;
-      text-decoration: underline dotted !important;
-      text-underline-offset: 4px;
+      background-color: var(--clr-surface-4) !important;
+      color: #e6e8ec !important;
+      text-decoration: none !important;
     }
   }
 }

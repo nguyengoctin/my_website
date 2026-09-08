@@ -2,49 +2,51 @@
 title: "Nguyen Ngoc Tin"
 ---
 
-## ABOUT
+## About
 
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
-    <p>I'm Nguyễn Ngọc Tín, a software builder and Information Technology graduate from Saigon University, based in Ho Chi Minh City, Vietnam.</p>
-    <p>I’m deeply curious about how software works under the hood — from database internals to API architecture. My focus centers on robust backend engineering, scalable architectures, and practical AI/LLM integration.</p>
+    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư ngành Công nghệ Thông tin (chuyên ngành Hệ thống Thông tin) tại Đại học Sài Gòn. Dạo này mình dành phần lớn thời gian làm các sản phẩm phần mềm, thử nghiệm nhiều thứ với AI và xem chúng có thể giải quyết được những bài toán nào trong thực tế. Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm.</p>
+    <div class="about-contact-row">
+      <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-chip" title="Xem trước và Tải CV (PDF)" aria-label="Resume (PDF)">
+        <i class="ti ti-file-type-pdf"></i>
+      </a>
+      <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com" aria-label="Email">
+        <i class="ti ti-mail"></i>
+      </a>
+      <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile" aria-label="GitHub">
+        <i class="ti ti-brand-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile" aria-label="LinkedIn">
+        <i class="ti ti-brand-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener" class="contact-chip" title="Facebook" aria-label="Facebook">
+        <i class="ti ti-brand-facebook"></i>
+      </a>
+      <a href="tel:0397662903" class="contact-chip" title="0397662903 (Phone hoặc Zalo)" aria-label="Zalo / Phone">
+        <i class="ti ti-phone"></i>
+      </a>
+    </div>
   </div>
 </div>
 
-**What I'm focused on:**
-- **Backend and Systems:** Designing scalable APIs, optimizing databases, and exploring robust system architecture (Python, FastAPI, SQL/NoSQL).
-- **Applied AI:** Experimenting with LLM integration, agentic workflows, and data-driven systems.
-
-**What I’m doing right now:**
-Currently building practical side-projects, deep-diving into backend performance optimization, and documenting technical notes, experiments, and system design post-mortems.
-
-When I’m not writing code, you’ll probably find me reading technical books, exploring new tech stacks, or enjoying a good cup of coffee.
-
-<div class="about-contact-row">
-  <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-chip" title="Xem trước và Tải CV (PDF)">
-    <i class="ti ti-file-type-pdf"></i> <span>Resume (PDF)</span>
-  </a>
-  <a href="mailto:ngoctin.work@gmail.com" class="contact-chip" title="Email: ngoctin.work@gmail.com">
-    <i class="ti ti-mail"></i> <span>Email</span>
-  </a>
-  <a href="https://github.com/ngoctinn" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile">
-    <i class="ti ti-brand-github"></i> <span>GitHub</span>
-  </a>
-  <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile">
-    <i class="ti ti-brand-linkedin"></i> <span>LinkedIn</span>
-  </a>
-  <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener" class="contact-chip" title="Facebook">
-    <i class="ti ti-brand-facebook"></i> <span>Facebook</span>
-  </a>
-  <a href="tel:0397662903" class="contact-chip" title="Phone or Zalo">
-    <i class="ti ti-phone"></i> <span>0397662903 <span class="chip-sub">Zalo</span></span>
-  </a>
+<div class="github-activity-section">
+  <div class="github-activity-title">GitHub Activity</div>
+  <div class="github-chart-wrap">
+    <img src="https://ghchart.rshah.org/ngoctinn" alt="Biểu đồ hoạt động GitHub của ngoctinn" class="github-chart-img" loading="lazy">
+  </div>
+  <div class="github-activity-desc">
+    Mình xây dựng những thứ khiến bản thân hứng thú và chia sẻ tất cả dưới dạng mã nguồn mở.
+  </div>
+  <div class="github-activity-links">
+    <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">Theo dõi mình trên GitHub</a> để cùng trao đổi và xem các thử nghiệm mới nhất.
+  </div>
 </div>
 
 ---
 
-## EXPERIENCES
+## Kinh nghiệm
 
 <div class="timeline-box">
 
@@ -54,18 +56,13 @@ When I’m not writing code, you’ll probably find me reading technical books, 
       <img src="/images/aws-logo.webp" alt="First Cloud AI Journey AWS Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">First Cloud AI Journey</span>
-        <span class="timeline-time">Mar — May 2026</span>
+        <span class="timeline-time">Tháng 3 — Tháng 5, 2026</span>
       </div>
     </div>
     <div class="timeline-right">
-      <h3 class="timeline-title">Cloud Application Development Intern</h3>
+      <h3 class="timeline-title">Thực tập sinh Phát triển Ứng dụng Cloud</h3>
       <div class="timeline-desc">
-        First Cloud AI Journey (FCAJ) is an intensive Cloud and AI development program supported by Amazon Web Services (AWS) Vietnam.
-        <ul>
-          <li>Engineered and deployed an event-driven serverless prototype using Python and AWS Lambda to optimize backend transactions.</li>
-          <li>Authored architectural blueprints, API documentation, and setup guides for serverless services to standardize workflows.</li>
-          <li>Integrated core AWS services into automated CI/CD pipelines, managing environment consistency and version control with Git.</li>
-        </ul>
+        Chương trình đào tạo chuyên sâu về Cloud và AI do AWS Vietnam bảo trợ. Mình tham gia xây dựng nguyên mẫu hệ thống serverless hướng sự kiện bằng Python và AWS Lambda, viết tài liệu kiến trúc API chuẩn hóa và tích hợp hạ tầng AWS vào quy trình tự động hóa CI/CD.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Python</span>
@@ -82,7 +79,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
 
 ---
 
-## EDUCATION
+## Học vấn
 
 <div class="timeline-box">
 
@@ -91,18 +88,17 @@ When I’m not writing code, you’ll probably find me reading technical books, 
     <div class="timeline-left">
       <img src="/images/sgu-logo.webp" alt="Saigon University Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Saigon University</span>
-        <span class="timeline-time">2021 — Jun 2026</span>
+        <span class="timeline-org">Đại học Sài Gòn</span>
+        <span class="timeline-time">2021 — Tháng 6, 2026</span>
       </div>
     </div>
     <div class="timeline-right">
-      <h3 class="timeline-title">Bachelor of Information Technology</h3>
+      <h3 class="timeline-title">Kỹ sư Công nghệ Thông tin</h3>
       <div class="timeline-desc">
-        Major: Information Systems<br>
-        Studied core foundations in Software Engineering, Object-Oriented Programming, Database Management Systems, Computer Networks, and Operating Systems.
+        Chuyên ngành Hệ thống Thông tin. Đào tạo nền tảng chuyên sâu về kỹ thuật phần mềm, cơ sở dữ liệu, mạng máy tính, hệ điều hành và lập trình hướng đối tượng.
       </div>
       <div class="timeline-tags">
-        <span class="timeline-tag">Information Systems</span>
+        <span class="timeline-tag">Hệ thống Thông tin</span>
         <span class="timeline-tag">Python</span>
         <span class="timeline-tag">Java</span>
         <span class="timeline-tag">C++</span>
@@ -116,7 +112,7 @@ When I’m not writing code, you’ll probably find me reading technical books, 
 
 ---
 
-## PROJECTS
+## Dự án
 
 <div class="timeline-box">
 
@@ -126,15 +122,15 @@ When I’m not writing code, you’ll probably find me reading technical books, 
       <img src="/images/zalo-logo.svg" alt="Zalo Mini App Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Zalo Mini App</span>
-        <span class="timeline-time">Aug 2026 — Present</span>
+        <span class="timeline-time">Tháng 8, 2026 — Hiện tại</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Online Ordering Platform (Zalo Mini App)</a>
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Nền tảng Đặt món Trực tuyến (Zalo Mini App)</a>
       </h3>
       <div class="timeline-desc">
-        A full-stack food ordering platform built for the Zalo Mini App ecosystem, featuring automated VietQR dynamic payment generation, real-time GPS distance calculation, and zero third-party gateway dependencies.
+        Hệ thống đặt món toàn diện trên nền tảng Zalo Mini App, tự động tạo mã VietQR động theo đơn, tính toán khoảng cách GPS thời gian thực và vận hành độc lập không phụ thuộc cổng thanh toán trung gian.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Zalo Mini App</span>
@@ -147,26 +143,26 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Read Case Study</span></a>
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
       </div>
     </div>
   </div>
 
-  <!-- Project 1: Lexi -->
+  <!-- Project 2: Lexi -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/lexi-logo.webp" alt="Lexi Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Lexi</span>
-        <span class="timeline-time">Mar — May 2026</span>
+        <span class="timeline-time">Tháng 3 — Tháng 5, 2026</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/lexi-ai-english-tutor/">Lexi – AI-Powered English Speaking Tutor</a>
+        <a href="/posts/lexi-ai-english-tutor/">Lexi – Trợ lý Luyện nói Tiếng Anh với AI</a>
       </h3>
       <div class="timeline-desc">
-        An interactive, low-latency AI English speaking tutor powered by AWS Serverless and Amazon Bedrock Claude, supporting real-time voice streaming and cost-effective single-table persistence.
+        Ứng dụng luyện nói tiếng Anh phản hồi tức thì, vận hành trên hạ tầng AWS Serverless và mô hình Claude qua Amazon Bedrock, hỗ trợ truyền giọng nói thời gian thực và lưu trữ dữ liệu tối ưu chi phí trên DynamoDB.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -178,27 +174,27 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
-        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
+        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
   </div>
 
-  <!-- Project 2: Bilingual Movie Learning Platform -->
+  <!-- Project 3: Bilingual Movie Learning Platform -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/movie-logo.webp" alt="Movie Learn Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Movie Learn</span>
-        <span class="timeline-time">Mar 2026 — Present</span>
+        <span class="timeline-time">Tháng 3, 2026 — Hiện tại</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bilingual-movie-learning-platform/">Bilingual Movie-Based English Learning Platform</a>
+        <a href="/posts/bilingual-movie-learning-platform/">Nền tảng Học Tiếng Anh qua Phim Song ngữ</a>
       </h3>
       <div class="timeline-desc">
-        A web platform that turns movies into interactive language lessons with frame-accurate bilingual subtitle synchronization and on-the-fly AI grammar analysis via Google Gemini API.
+        Nền tảng web biến phim ảnh thành bài học tương tác với phụ đề song ngữ đồng bộ chính xác theo khung hình và giải thích ngữ pháp trực tiếp qua Google Gemini API.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -210,27 +206,27 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Docker</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
-        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
+        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
   </div>
 
-  <!-- Project 3: Ngọc Tín Site -->
+  <!-- Project 4: Ngọc Tín Site -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Ngọc Tín Site</span>
-        <span class="timeline-time">2026 — Present</span>
+        <span class="timeline-time">2026 — Hiện tại</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/personal-hugo-technical-blog/">Personal Technical Notes and Engineering Portfolio</a>
+        <a href="/posts/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
       </h3>
       <div class="timeline-desc">
-        An ultra-fast, minimalist digital garden and engineering portfolio engineered with Hugo and modular SCSS, delivering a perfect 100/100 Lighthouse score without client-side framework bloat.
+        Trang blog kỹ thuật và portfolio xây dựng bằng Hugo và SCSS dạng mô-đun, tập trung vào tốc độ tải trang, trải nghiệm đọc tối giản và đạt điểm tuyệt đối 100/100 Lighthouse.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Hugo</span>
@@ -241,9 +237,9 @@ When I’m not writing code, you’ll probably find me reading technical books, 
         <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Read More</span></a>
-        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Source Code</span></a>
-        <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-external-link"></i> <span>Live Site</span></a>
+        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
+        <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-external-link"></i> <span>Trang trực tuyến</span></a>
       </div>
     </div>
   </div>

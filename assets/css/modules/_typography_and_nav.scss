@@ -14,51 +14,58 @@
   --fw-semibold: 600;
   --fw-bold: 700;
 
-  // --- Font Sizes (Desktop baseline) ---
+  // --- Font Sizes (Desktop baseline - Minor/Major Third Scale từ Base 18px) ---
   --fs-xs: 0.75rem;     // 12px
-  --fs-sm: 0.875rem;    // 14px
-  --fs-base: 1.2rem;    // 19.2px (Target editorial body prose with Newsreader)
-  --fs-md: 1.22rem;     // 19.5px
-  --fs-lg: 1.3rem;      // 20.8px
-  --fs-xl: 1.55rem;     // 24.8px
-  --fs-2xl: 1.85rem;    // 29.6px
-  --fs-3xl: 2.35rem;    // 37.6px
+  --fs-sm: 0.875rem;    // 14px (Meta, tags, caption)
+  --fs-base: 1.125rem;  // 18px (Target editorial body prose with Newsreader - WCAG & Readability sweet spot)
+  --fs-md: 1.15rem;     // 18.4px
+  --fs-lg: 1.25rem;     // 20px
+  --fs-xl: 1.35rem;     // 21.6px
+  --fs-2xl: 1.5rem;     // 24px
+  --fs-3xl: 2.15rem;    // 34.4px
 
-  --fs-h1: 2.35rem;     // 37.6px (Refined editorial scale for Newsreader)
-  --fs-h2: 1.85rem;     // 29.6px (Balanced sub-heading)
-  --fs-h3: 1.4375rem;   // 23px
-  --fs-h4: 1.25rem;     // 20px
+  --fs-h1: 2.125rem;    // 34px (Refined editorial scale for Newsreader)
+  --fs-h2: 1.475rem;    // 23.6px (Balanced sub-heading, ratio ~1.31)
+  --fs-h3: 1.25rem;     // 20px (Ratio ~1.11)
+  --fs-h4: 1.125rem;    // 18px (Trọng lượng đậm phân cấp)
 
-  // --- Line Heights ---
+  // --- Line Heights (Độ giãn dòng thoáng, dễ thở, chuẩn Editorial) ---
   --lh-tight: 1.18;
-  --lh-h1: 1.22;        // ~1.22 for Newsreader editorial title
-  --lh-h2: 1.28;        // ~1.28 for Newsreader sub-heading
-  --lh-h3: 1.35;        // ~1.35
-  --lh-h4: 1.4;         // ~1.4
-  --lh-snug: 1.35;
+  --lh-h1: 1.25;        // ~1.25 cho Newsreader H1
+  --lh-h2: 1.32;        // ~1.32 cho Newsreader H2
+  --lh-h3: 1.4;         // ~1.4 cho Newsreader H3
+  --lh-h4: 1.45;
+  --lh-snug: 1.38;
   --lh-normal: 1.6;
-  --lh-relaxed: 1.76;   // Prose line-height target for Newsreader ~1.76
+  --lh-relaxed: 1.76;   // Tăng độ thưa thoáng cho bài viết (Option B: 1.76)
   --lh-prose: 1.76;
   --lh-loose: 1.88;
 
-  // --- Spacing & Kerning Tokens ---
-  --ls-normal: normal;
-  --ls-h1: -0.02em;     // Natural optical kerning for Newsreader heading
-  --ls-h2: -0.015em;
-  --ls-h3: -0.01em;
+  // --- Paragraph & Section Spacing Tokens ---
+  --space-p: 1.45rem;         // Khoảng cách đoạn văn thoáng đãng (1.45rem)
+  --space-h2-top: 2.5rem;     // Khoảng cách đỉnh H2
+  --space-h2-bottom: 0.85rem; // Khoảng cách đáy H2 (tỉ lệ 3:1 Gestalt Proximity)
+
+  // --- Spacing & Kerning Tokens (Độ thưa chữ nhẹ nhàng) ---
+  --ls-normal: 0.01em;  // Khoảng cách ký tự thoáng nhẹ cho mắt đọc thư giãn
+  --ls-h1: -0.015em;    // Natural optical kerning for Newsreader heading
+  --ls-h2: -0.008em;
+  --ls-h3: -0.004em;
   --ls-h4: normal;
-  --ls-heading: -0.015em;
-  --ls-caps: 0.04em;
-  --ws-normal: normal;  // Normal word-spacing for natural Vietnamese text flow
+  --ls-heading: -0.008em;
+  --ls-caps: 0.05em;
+  --ws-normal: 0.015em; // Word-spacing thoáng nhẹ cho văn bản tiếng Việt
 }
 
 @media (max-width: 768px) {
   :root {
-    --fs-base: 1.125rem; // 18px (Mobile body prose target for Newsreader)
-    --fs-h1: 1.85rem;    // ~29.6px
-    --fs-h2: 1.45rem;    // ~23.2px
-    --fs-h3: 1.25rem;    // 20px
-    --fs-h4: 1.125rem;   // 18px
+    --fs-base: 1.0625rem; // 17px (Mobile body prose target for Newsreader)
+    --fs-h1: 1.75rem;     // ~28px
+    --fs-h2: 1.35rem;     // ~21.6px
+    --fs-h3: 1.1875rem;   // 19px
+    --fs-h4: 1.0625rem;   // 17px
+    --space-h2-top: 1.85rem;
+    --space-h2-bottom: 0.65rem;
   }
 }
 
@@ -82,6 +89,13 @@ body[theme=light] {
   --clr-text-2: #475569; // Secondary / muted text
   --clr-text-3: #94a3b8; // Placeholder / disabled text
 
+  // --- Links & Interactive ---
+  --clr-link: #3b66de;
+  --clr-link-hover: #1d4ed8;
+  --clr-link-underline: rgba(59, 102, 222, 0.35);
+  --clr-link-underline-hover: #1d4ed8;
+  --clr-focus: #3b66de;
+
   // --- Theme flag for JS ---
   color-scheme: light;
 }
@@ -104,6 +118,13 @@ body[theme=dark] {
   --clr-text: #e6e8ec; // Primary text
   --clr-text-2: #a1a9b8; // Secondary / muted
   --clr-text-3: #636b7e; // Placeholder / disabled
+
+  // --- Links & Interactive ---
+  --clr-link: #60a5fa;
+  --clr-link-hover: #93c5fd;
+  --clr-link-underline: rgba(96, 165, 250, 0.4);
+  --clr-link-underline-hover: #93c5fd;
+  --clr-focus: #60a5fa;
 
   // --- Theme flag ---
   color-scheme: dark;
@@ -131,6 +152,14 @@ body {
   background-color: var(--clr-bg, #fdfdfd) !important;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
+}
+
+// Single Source of Truth cho đoạn văn (WCAG SC 1.4.8 & 1.4.12)
+p {
+  margin-top: 0 !important;
+  margin-bottom: var(--space-p) !important;
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
 }
 
 .search-placeholder-text {
@@ -243,7 +272,7 @@ h1,
   color: var(--clr-text) !important;
   margin-top: 1.5rem !important;
   margin-bottom: 0.75rem !important;
-  max-width: 68ch;
+  max-width: 100%;
 }
 
 .single-subtitle {
@@ -253,7 +282,7 @@ h1,
   line-height: var(--lh-snug) !important;
   color: var(--clr-text-2) !important;
   margin: 0.5rem 0 1rem 0 !important;
-  max-width: 68ch;
+  max-width: 100%;
 }
 
 .single .post-meta {
@@ -266,7 +295,7 @@ h1,
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
-  max-width: 68ch;
+  max-width: 100%;
 
   strong {
     font-weight: var(--fw-semibold) !important;
@@ -280,8 +309,16 @@ h1,
     transition: color 0.15s ease;
 
     &:hover {
-      color: var(--clr-text) !important;
-      text-decoration: underline dotted !important;
+      color: var(--clr-link) !important;
+      text-decoration: underline solid !important;
+      text-decoration-color: var(--clr-link-underline) !important;
+      text-underline-offset: 3px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--clr-focus) !important;
+      outline-offset: 2px;
+      border-radius: 2px;
     }
   }
 }
@@ -289,17 +326,17 @@ h1,
 h2 {
   font-family: var(--font-serif) !important;
   font-size: var(--fs-h2) !important;
-  font-weight: var(--fw-bold) !important;
+  font-weight: var(--fw-semibold) !important;
   line-height: var(--lh-h2) !important;
   letter-spacing: var(--ls-h2) !important;
   text-transform: none !important;
-  margin-top: 2.2em !important;
-  margin-bottom: 0.75em !important;
+  margin-top: var(--space-h2-top) !important;
+  margin-bottom: var(--space-h2-bottom) !important;
   color: var(--clr-text) !important;
-  max-width: 68ch;
+  max-width: 100%;
 
   &:first-child {
-    margin-top: 0.5em !important;
+    margin-top: 0.5rem !important;
   }
 }
 
@@ -309,13 +346,13 @@ h3 {
   font-weight: var(--fw-semibold) !important;
   line-height: var(--lh-h3) !important;
   letter-spacing: var(--ls-h3) !important;
-  margin-top: 1.8em !important;
-  margin-bottom: 0.6em !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.5rem !important;
   color: var(--clr-text) !important;
-  max-width: 68ch;
+  max-width: 100%;
 
   &:first-child {
-    margin-top: 0.5em !important;
+    margin-top: 0.5rem !important;
   }
 }
 
@@ -325,13 +362,13 @@ h4 {
   font-weight: var(--fw-semibold) !important;
   line-height: var(--lh-h4) !important;
   letter-spacing: var(--ls-h4) !important;
-  margin-top: 1.5em !important;
-  margin-bottom: 0.5em !important;
+  margin-top: 1.4rem !important;
+  margin-bottom: 0.45rem !important;
   color: var(--clr-text) !important;
-  max-width: 68ch;
+  max-width: 100%;
 
   &:first-child {
-    margin-top: 0.5em !important;
+    margin-top: 0.5rem !important;
   }
 }
 
@@ -340,19 +377,23 @@ h6 {
   font-family: var(--font-serif) !important;
   font-weight: var(--fw-semibold) !important;
   color: var(--clr-text) !important;
-  max-width: 68ch;
+  max-width: 100%;
 }
 
-hr + h2,
+// Xóa bỏ khoảng cách chết khi có đường kẻ ngang đứng trước Heading (Gestalt Law of Proximity)
+hr + h2 {
+  margin-top: 0.25rem !important;
+}
+
 hr + h3,
 hr + h4 {
-  margin-top: 1.5em !important;
+  margin-top: 0.25rem !important;
 }
 
 hr {
   border: none !important;
   border-top: 1px solid var(--clr-border) !important;
-  margin: 1.5rem 0 !important;
+  margin: 2.25rem 0 1.25rem 0 !important;
 }
 
 // Home quote TypeIt
@@ -393,7 +434,7 @@ hr {
   justify-content: space-between !important;
   gap: 1rem !important;
   border-bottom: 1px solid var(--clr-border) !important;
-  max-width: 850px !important;
+  max-width: var(--shell-width, 750px) !important;
   margin: 0 auto !important;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -464,14 +505,21 @@ hr {
       align-items: center !important;
       line-height: 1.1 !important;
       padding-bottom: 2px !important;
+      transition: opacity 0.2s ease !important;
 
       [theme=dark] & {
         color: #60a5fa !important;
       }
 
       &:hover {
-        text-decoration: underline dotted !important;
-        text-underline-offset: 4px;
+        opacity: 0.85;
+        text-decoration: none !important;
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--clr-focus) !important;
+        outline-offset: 3px;
+        border-radius: 4px;
       }
     }
   }
@@ -483,26 +531,31 @@ hr {
     margin: 0 0.15rem !important;
     color: var(--clr-text-2) !important;
     background: transparent !important;
-    transition: all 0.2s ease !important;
+    transition: color 0.15s ease, background-color 0.15s ease !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     display: inline-flex !important;
     align-items: center !important;
     vertical-align: middle !important;
     line-height: 1 !important;
+    border-radius: 6px;
 
     &:hover {
       color: var(--clr-text) !important;
-      text-decoration: underline dotted !important;
-      text-underline-offset: 4px;
+      background-color: var(--clr-surface-2) !important;
+      text-decoration: none !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--clr-focus) !important;
+      outline-offset: 2px;
     }
 
     &.active {
       color: var(--clr-text) !important;
       font-weight: var(--fw-bold) !important;
       border-bottom: none !important;
-      text-decoration: underline dotted !important;
-      text-underline-offset: 4px;
+      text-decoration: none !important;
     }
 
     &.theme-switch,
@@ -530,17 +583,17 @@ hr {
 
       &:hover {
         color: #db2777 !important;
-        text-decoration: underline dotted !important;
-        text-underline-offset: 4px;
+        background-color: rgba(236, 72, 153, 0.08) !important;
+        text-decoration: none !important;
 
         [theme=dark] & {
           color: #f687b3 !important;
+          background-color: rgba(244, 114, 182, 0.12) !important;
         }
       }
 
       &.active {
-        text-decoration: underline dotted !important;
-        text-underline-offset: 4px;
+        text-decoration: none !important;
       }
     }
   }
@@ -743,7 +796,8 @@ details#toc-static {
           &:hover {
             color: var(--clr-text) !important;
             font-weight: var(--fw-semibold) !important;
-            text-decoration: underline dotted !important;
+            text-decoration: underline solid !important;
+            text-decoration-color: var(--clr-link-underline) !important;
             text-underline-offset: 3px;
           }
 
@@ -787,23 +841,22 @@ details#toc-static {
   line-height: var(--lh-snug) !important;
 
   a {
-    color: #4d74eb !important;
+    color: var(--clr-link) !important;
     font-weight: var(--fw-semibold) !important;
     text-decoration: none !important;
-    transition: color 0.15s ease, text-decoration 0.15s ease;
-
-    [theme=dark] & {
-      color: #60a5fa !important;
-    }
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
 
     &:hover {
-      color: #1337a6 !important;
-      text-decoration: underline dotted !important;
+      color: var(--clr-link-hover) !important;
+      text-decoration: underline solid !important;
+      text-decoration-color: var(--clr-link-underline) !important;
       text-underline-offset: 4px;
+    }
 
-      [theme=dark] & {
-        color: #93c5fd !important;
-      }
+    &:focus-visible {
+      outline: 2px solid var(--clr-focus) !important;
+      outline-offset: 2px;
+      border-radius: 2px;
     }
   }
 }
@@ -828,22 +881,23 @@ details#toc-static {
 
 // Đồng nhất style link trong nội dung bài viết (Content links)
 .content a {
-  color: #4d74eb !important;
-  text-decoration: none !important;
-  transition: color 0.15s ease, text-decoration 0.15s ease;
-
-  [theme=dark] & {
-    color: #60a5fa !important;
-  }
+  color: var(--clr-link) !important;
+  text-decoration: underline solid !important;
+  text-decoration-color: var(--clr-link-underline) !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 
   &:hover {
-    color: #1337a6 !important;
-    text-decoration: underline dotted !important;
-    text-underline-offset: 4px;
+    color: var(--clr-link-hover) !important;
+    text-decoration-color: var(--clr-link-hover) !important;
+    text-decoration-thickness: 1.5px;
+  }
 
-    [theme=dark] & {
-      color: #93c5fd !important;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--clr-focus) !important;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
@@ -872,22 +926,21 @@ details#toc-static {
   margin-bottom: 0.35rem;
 
   .archive-item-link {
-    color: #4d74eb !important;
+    color: var(--clr-link) !important;
     text-decoration: none !important;
-    transition: color 0.15s ease;
-
-    [theme=dark] & {
-      color: #60a5fa !important;
-    }
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
 
     &:hover {
-      color: #1337a6 !important;
-      text-decoration: underline dotted !important;
+      color: var(--clr-link-hover) !important;
+      text-decoration: underline solid !important;
+      text-decoration-color: var(--clr-link-underline) !important;
       text-underline-offset: 4px;
+    }
 
-      [theme=dark] & {
-        color: #93c5fd !important;
-      }
+    &:focus-visible {
+      outline: 2px solid var(--clr-focus) !important;
+      outline-offset: 2px;
+      border-radius: 2px;
     }
   }
 
@@ -911,7 +964,7 @@ details#toc-static {
   align-items: center !important;
   padding: 0.4rem 0 !important;
   background: transparent !important;
-  color: #4d74eb !important;
+  color: var(--clr-link) !important;
   text-decoration: none !important;
   border: none !important;
   border-radius: 0 !important;
@@ -919,10 +972,6 @@ details#toc-static {
   font-size: 0.95rem !important;
   transition: color 0.15s ease !important;
   font-family: var(--font-sans) !important;
-
-  [theme=dark] & {
-    color: #60a5fa !important;
-  }
 
   .sys-icon {
     margin-left: 0.35rem;
@@ -932,17 +981,20 @@ details#toc-static {
 
   &:hover {
     background: transparent !important;
-    color: #1337a6 !important;
-    text-decoration: underline dotted !important;
+    color: var(--clr-link-hover) !important;
+    text-decoration: underline solid !important;
+    text-decoration-color: var(--clr-link-underline) !important;
     text-underline-offset: 4px;
-
-    [theme=dark] & {
-      color: #93c5fd !important;
-    }
 
     .sys-icon {
       transform: translateX(4px);
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-focus) !important;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 

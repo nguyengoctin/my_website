@@ -21,7 +21,7 @@
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
             <hr>
-            <h2>POSTS</h2>
+            <h2>Posts</h2>
             {{- $pages := where .Site.RegularPages "Type" "posts" -}}
             {{- if .Site.Params.page.hiddenFromHomePage -}}
                 {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}

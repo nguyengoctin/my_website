@@ -5,8 +5,8 @@ blockquote,
 .custom-quote {
   position: relative !important;
   display: block !important;
-  width: fit-content !important;
-  max-width: 68ch !important;
+  width: 100% !important;
+  max-width: 100% !important;
   font-family: var(--font-serif) !important;
   color: var(--clr-text) !important;
   text-align: left !important;
@@ -129,7 +129,7 @@ blockquote,
   word-spacing: var(--ws-normal);
   text-align: left !important;
 
-  // Reading width for prose elements (leaves code blocks, tables, images, and embeds free to use the full container width)
+  // Reading width for prose elements: full 100% container width (880px shell)
   > p,
   > ul,
   > ol,
@@ -137,7 +137,7 @@ blockquote,
   > blockquote,
   > .custom-quote,
   > hr {
-    max-width: 68ch;
+    max-width: 100%;
     margin-left: 0;
   }
 
@@ -189,7 +189,7 @@ blockquote,
 // ==========================================================
 .bio-container {
   display: block !important;
-  margin-bottom: 1.6rem !important;
+  margin-bottom: 0.75rem !important;
 
   &::after {
     content: "";
@@ -199,18 +199,18 @@ blockquote,
 
   .bio-avatar,
   img.bio-avatar {
-    float: right !important;
-    width: 195px !important;
-    height: 195px !important;
-    max-width: 195px !important;
-    min-width: 195px !important;
-    aspect-ratio: 1 / 1 !important;
+    float: left !important;
+    width: 210px !important;
+    height: 255px !important;
+    max-width: 210px !important;
+    min-width: 210px !important;
+    aspect-ratio: 4 / 5 !important;
     object-fit: cover !important;
-    object-position: center 15% !important;
-    border-radius: 36px !important;
+    object-position: center 20% !important;
+    border-radius: 28px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
     display: block !important;
-    margin: 0.15rem 0 1rem 1.75rem !important;
+    margin: 0.15rem 1.75rem 1rem 0 !important;
     border: none !important;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
 
@@ -236,12 +236,8 @@ blockquote,
       font-size: var(--fs-base) !important;
       line-height: var(--lh-relaxed) !important;
       margin-top: 0 !important;
-      margin-bottom: 1.15rem !important;
+      margin-bottom: 0.5rem !important;
       color: var(--clr-text) !important;
-
-      &:last-child {
-        margin-bottom: 0 !important;
-      }
     }
   }
 
@@ -250,12 +246,12 @@ blockquote,
 
     .bio-avatar,
     img.bio-avatar {
-      width: 140px !important;
-      height: 140px !important;
-      max-width: 140px !important;
-      min-width: 140px !important;
-      border-radius: 26px !important;
-      margin: 0.1rem 0 0.65rem 1.15rem !important;
+      width: 150px !important;
+      height: 185px !important;
+      max-width: 150px !important;
+      min-width: 150px !important;
+      border-radius: 22px !important;
+      margin: 0.1rem 1.15rem 0.65rem 0 !important;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
 
       [theme=dark] & {
@@ -264,26 +260,26 @@ blockquote,
     }
 
     .bio-text p {
-      font-size: 1.02rem !important;
-      line-height: 1.78 !important;
-      margin-bottom: 0.95rem !important;
+      font-size: var(--fs-base) !important;
+      line-height: var(--lh-relaxed) !important;
+      margin-bottom: var(--space-p) !important;
     }
   }
 
   @media (max-width: 420px) {
     .bio-avatar,
     img.bio-avatar {
-      width: 120px !important;
-      height: 120px !important;
-      max-width: 120px !important;
-      min-width: 120px !important;
-      border-radius: 22px !important;
-      margin: 0.1rem 0 0.5rem 0.85rem !important;
+      width: 130px !important;
+      height: 160px !important;
+      max-width: 130px !important;
+      min-width: 130px !important;
+      border-radius: 18px !important;
+      margin: 0.1rem 0.85rem 0.5rem 0 !important;
     }
 
     .bio-text p {
-      font-size: 0.98rem !important;
-      line-height: 1.72 !important;
+      font-size: var(--fs-base) !important;
+      line-height: var(--lh-relaxed) !important;
     }
   }
 }
@@ -293,22 +289,23 @@ blockquote,
 // ==========================================================
 a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a),
 .single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a) {
-  color: #4d74eb !important;
-  text-decoration: none !important;
-  transition: color 0.2s ease;
-
-  [theme=dark] & {
-    color: #60a5fa !important;
-  }
+  color: var(--clr-link) !important;
+  text-decoration: underline solid !important;
+  text-decoration-color: var(--clr-link-underline) !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease, text-decoration-thickness 0.15s ease;
 
   &:hover {
-    color: #1337a6 !important;
-    text-decoration: underline dotted !important;
-    text-underline-offset: 4px;
+    color: var(--clr-link-hover) !important;
+    text-decoration-color: var(--clr-link-hover) !important;
+    text-decoration-thickness: 1.5px;
+  }
 
-    [theme=dark] & {
-      color: #93c5fd !important;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--clr-focus) !important;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
