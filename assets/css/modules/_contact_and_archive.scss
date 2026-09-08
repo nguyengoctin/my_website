@@ -177,6 +177,20 @@
       }
     }
   }
+
+  @media (max-width: 680px) {
+    .github-chart-wrap {
+      padding: 0.5rem 0.25rem;
+      overflow-x: hidden;
+
+      img.github-chart-img {
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
 }
 
 // Color-Coded Distinct Icons
