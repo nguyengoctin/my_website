@@ -325,7 +325,7 @@ button.menu-toggle {
 // Inline Code Styling (Editorial Neutral Slate Badge — Siêu êm mắt, giữ trọn mạch đọc văn xuôi)
 code:not(pre code) {
   display: inline !important;
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: var(--font-mono) !important;
   font-size: 0.85em !important;
   font-weight: 500 !important;
   padding: 0.15em 0.45em !important;

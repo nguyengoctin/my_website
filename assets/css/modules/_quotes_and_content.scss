@@ -7,7 +7,7 @@ blockquote,
   display: block !important;
   width: fit-content !important;
   max-width: 68ch !important;
-  font-family: var(--font-sans) !important;
+  font-family: var(--font-serif) !important;
   color: var(--clr-text) !important;
   text-align: left !important;
   border: none !important;
@@ -23,7 +23,7 @@ blockquote,
 
   .quote-content {
     margin: 0 !important;
-    font-family: var(--font-sans) !important;
+    font-family: var(--font-serif) !important;
     font-size: 1.18rem !important;
     font-weight: var(--fw-medium) !important;
     line-height: var(--lh-relaxed) !important;
@@ -122,7 +122,7 @@ blockquote,
 // 2. ARTICLE CONTENT TYPOGRAPHY & SPACING
 // ==========================================================
 .single .content {
-  font-family: var(--font-sans) !important;
+  font-family: var(--font-serif) !important;
   font-size: var(--fs-base) !important;
   line-height: var(--lh-relaxed) !important;
   letter-spacing: var(--ls-normal);
@@ -232,7 +232,7 @@ blockquote,
     display: block !important;
 
     p {
-      font-family: var(--font-sans) !important;
+      font-family: var(--font-serif) !important;
       font-size: var(--fs-base) !important;
       line-height: var(--lh-relaxed) !important;
       margin-top: 0 !important;

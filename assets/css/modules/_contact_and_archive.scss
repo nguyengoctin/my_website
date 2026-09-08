@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 0.8125rem;
   color: #64748b;
 
@@ -276,7 +276,7 @@
       }
 
       input {
-        font-family: var(--font-serif) !important;
+        font-family: var(--font-sans) !important;
         font-size: 0.95rem !important;
         color: #111111 !important;
         background: transparent !important;
@@ -293,7 +293,7 @@
     }
 
     .search-cancel {
-      font-family: var(--font-serif) !important;
+      font-family: var(--font-sans) !important;
       color: #64748b !important;
       font-size: 0.9rem !important;
 
@@ -322,7 +322,7 @@
     }
 
     .menu-item {
-      font-family: var(--font-serif) !important;
+      font-family: var(--font-sans) !important;
       font-size: 1.08rem !important;
       font-weight: 400 !important;
       color: #1e293b !important;
@@ -447,7 +447,7 @@
       background: #f8fafc !important;
       border: 1px solid #e2e8f0 !important;
       color: #334155 !important;
-      font-family: var(--font-serif) !important;
+      font-family: var(--font-sans) !important;
       font-size: 0.9rem !important;
       font-weight: 500 !important;
       text-decoration: none !important;
@@ -562,7 +562,7 @@ img.lazyloaded {
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      font-family: var(--font-serif) !important;
+      font-family: var(--font-sans) !important;
       font-size: 0.9rem !important;
       font-weight: 400 !important;
       color: #828282 !important;
