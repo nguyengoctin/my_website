@@ -130,9 +130,13 @@
     gap: 0.4rem !important;
 
     i {
-      font-size: 0.85em !important;
-      transform: rotate(35deg) !important;
-      color: #f43f5e !important;
+      font-size: 0.9em !important;
+      transform: rotate(30deg) !important;
+      color: #d97706 !important;
+    }
+
+    [theme=dark] & i {
+      color: #fbbf24 !important;
     }
   }
 

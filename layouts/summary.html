@@ -21,9 +21,7 @@
     <h2 class="single-title" itemprop="name headline">
         <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
         {{- if or .Params.pinned (and .Params.weight (lt .Params.weight 100)) -}}
-            <span class="pinned-post-icon" title="Bài viết được ghim">
-                <i class="ti ti-pin" aria-hidden="true"></i>
-            </span>
+            <span class="pinned-post-icon" title="Bài viết được ghim" aria-label="Bài viết được ghim">📌</span>
         {{- end -}}
     </h2>
 

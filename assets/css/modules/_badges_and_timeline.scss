@@ -395,24 +395,15 @@ body .tag-badge {
 .pinned-post-icon {
   display: inline-flex !important;
   align-items: center !important;
-  color: #f43f5e !important;
-  font-size: 0.9em !important;
+  font-size: 0.8em !important;
+  line-height: 1 !important;
   vertical-align: middle !important;
-  margin-left: 0.4rem !important;
-  filter: drop-shadow(0 1px 2px rgba(244, 63, 94, 0.25));
-  transition: transform 0.2s ease, color 0.2s ease;
-
-  i {
-    color: inherit !important;
-  }
+  margin-left: 0.35rem !important;
+  transition: transform 0.2s ease;
+  user-select: none;
 
   &:hover {
-    transform: scale(1.1);
-  }
-
-  [theme=dark] & {
-    color: #fb7185 !important;
-    filter: drop-shadow(0 1px 4px rgba(251, 113, 133, 0.35));
+    transform: scale(1.15);
   }
 }
 

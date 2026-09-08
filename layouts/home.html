@@ -29,9 +29,12 @@
                 {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
             {{- end -}}
             
-            {{- /* Show only the first N posts defined in config */ -}}
+            {{- /* Show pinned posts first, followed by recent posts up to postCount */ -}}
             {{- $postCount := $posts.paginate | default 5 -}}
-            {{- $firstPosts := first $postCount $pages -}}
+            {{- $pinned := where $pages ".Params.pinned" true -}}
+            {{- $unpinned := $pages | complement $pinned -}}
+            {{- $sortedPages := union $pinned $unpinned -}}
+            {{- $firstPosts := first $postCount $sortedPages -}}
             
             {{- range $firstPosts -}}
                 {{- .Render "summary" -}}

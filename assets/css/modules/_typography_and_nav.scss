@@ -407,7 +407,8 @@ hr {
   }
 
   .header-title {
-    font-size: 22px !important;
+    font-family: var(--font-serif) !important;
+    font-size: 24px !important;
     font-weight: var(--fw-bold) !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;

@@ -120,7 +120,7 @@ enableEmoji = true
     [params.header.title]
       logo = ""
       pre = ""
-      name = 'Ngọc Tín <span class="nav-site-pink">Site</span>'
+      name = "Nguyễn Ngọc Tín"
       post = ""
       typeit = false
 
