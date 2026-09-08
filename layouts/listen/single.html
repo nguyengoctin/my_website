@@ -3,57 +3,194 @@
 {{- define "content" -}}
 <style>
 .listen-page {
-    max-width: 720px;
+    max-width: var(--prose-width, 720px);
     margin: 0 auto;
 }
 
-/* ---------- Player ---------- */
+.listen-header {
+    margin-bottom: 2rem;
+}
+
+.listen-header .single-title {
+    margin-bottom: 0.4rem;
+}
+
+.listen-header-desc {
+    color: var(--clr-text-2, #64748b);
+    font-size: var(--fs-base, 1.1rem);
+    line-height: var(--lh-normal, 1.6);
+    margin: 0;
+}
+
+/* ---------- Pure Minimal List (Giống phong cách Archive/Timeline) ---------- */
+.listen-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.listen-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--clr-border-2, rgba(0, 0, 0, 0.05));
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+[theme=dark] .listen-item {
+    border-bottom-color: var(--clr-border-2, rgba(255, 255, 255, 0.06));
+}
+
+.listen-item:hover .listen-item-title {
+    color: var(--clr-link, #3b66de);
+}
+
+.listen-item.active .listen-item-title {
+    color: var(--clr-link, #3b66de);
+    font-weight: var(--fw-semibold, 600);
+}
+
+.listen-item.active .listen-item-num {
+    color: var(--clr-link, #3b66de);
+    font-weight: var(--fw-semibold, 600);
+}
+
+.listen-item.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.listen-item-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    min-width: 0;
+    flex: 1;
+}
+
+.listen-item-num {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.85rem;
+    color: var(--clr-text-3, #94a3b8);
+    flex-shrink: 0;
+    min-width: 1.5rem;
+}
+
+.listen-item-title {
+    font-size: 1.05rem;
+    color: var(--clr-text, #111111);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+[theme=dark] .listen-item-title {
+    color: var(--clr-text, #e6e8ec);
+}
+
+.listen-resume-badge {
+    display: none;
+    font-size: 0.72rem;
+    color: var(--clr-link, #3b66de);
+    margin-left: 0.5rem;
+    font-family: var(--font-mono, monospace);
+}
+
+.listen-item.resume .listen-resume-badge {
+    display: inline;
+}
+
+.listen-item-meta {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.82rem;
+    color: var(--clr-text-3, #94a3b8);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+.listen-item-dl {
+    color: var(--clr-text-3, #94a3b8);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.15s ease;
+}
+
+.listen-item-dl:hover {
+    color: var(--clr-text, #111111);
+}
+
+[theme=dark] .listen-item-dl:hover {
+    color: var(--clr-text, #e6e8ec);
+}
+
+/* ---------- Pure Minimal Player (Ở trên đầu trang) ---------- */
 .listen-player-card {
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border-top: 1px solid var(--clr-border, #e2e8f0);
+    border-bottom: 1px solid var(--clr-border, #e2e8f0);
+    padding: 1.25rem 0;
+    margin: 1.5rem 0 2.5rem 0;
 }
 
 [theme=dark] .listen-player-card {
-    background: #24252b;
-    border-color: #333540;
+    border-top-color: var(--clr-border, rgba(255, 255, 255, 0.1));
+    border-bottom-color: var(--clr-border, rgba(255, 255, 255, 0.1));
+}
+
+.lp-status-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 #listen-now-title {
     font-size: 0.95rem;
-    font-weight: 600;
-    margin: 0 0 0.7rem;
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--clr-text, #111111);
+    font-weight: var(--fw-medium, 500);
 }
 
 [theme=dark] #listen-now-title {
-    color: #e2e8f0;
+    color: var(--clr-text, #e6e8ec);
 }
 
 #listen-now-title .listen-placeholder {
-    font-weight: 400;
-    opacity: 0.6;
+    color: var(--clr-text-3, #94a3b8);
+    font-weight: normal;
 }
 
-/* Progress bar */
+.lp-hint {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.72rem;
+    color: var(--clr-text-3, #94a3b8);
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Simple scrub line */
 .lp-progress-wrap {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.7rem;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
 }
 
 .lp-progress {
     position: relative;
     flex: 1;
-    height: 14px;
+    height: 16px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -65,40 +202,59 @@
 .lp-fill {
     position: absolute;
     left: 0;
-    height: 4px;
-    border-radius: 2px;
+    height: 2px;
 }
 
-.lp-track { width: 100%; background: #e2e8f0; }
-.lp-buffered { width: 0; background: rgba(77, 116, 235, 0.18); }
-.lp-fill { width: 0; background: #4d74eb; }
+.lp-track {
+    width: 100%;
+    background: var(--clr-border, #e2e8f0);
+}
 
-[theme=dark] .lp-track { background: #3d3f4a; }
-[theme=dark] .lp-buffered { background: rgba(129, 140, 248, 0.22); }
-[theme=dark] .lp-fill { background: #818cf8; }
+[theme=dark] .lp-track {
+    background: var(--clr-border, rgba(255, 255, 255, 0.15));
+}
+
+.lp-buffered {
+    width: 0;
+    background: var(--clr-border-2, #cbd5e1);
+}
+
+[theme=dark] .lp-buffered {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.lp-fill {
+    width: 0;
+    background: var(--clr-text, #111111);
+}
+
+[theme=dark] .lp-fill {
+    background: var(--clr-text, #e6e8ec);
+}
 
 .lp-thumb {
     position: absolute;
     left: 0;
-    width: 11px;
-    height: 11px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: #4d74eb;
+    background: var(--clr-text, #111111);
     transform: translateX(-50%);
 }
 
-[theme=dark] .lp-thumb { background: #818cf8; }
-
-.lp-time {
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: #94a3b8;
-    min-width: 4ch;
-    text-align: center;
-    font-variant-numeric: tabular-nums;
+[theme=dark] .lp-thumb {
+    background: var(--clr-text, #e6e8ec);
 }
 
-/* Transport controls */
+.lp-time {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    color: var(--clr-text-3, #94a3b8);
+    font-variant-numeric: tabular-nums;
+    min-width: 4ch;
+}
+
+/* Minimal Controls */
 .lp-controls {
     display: flex;
     align-items: center;
@@ -106,264 +262,79 @@
 }
 
 .lp-btn {
-    height: 34px;
-    min-width: 34px;
-    padding: 0 0.55rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border: none;
     background: transparent;
-    color: #334155;
-    font-size: 0.85rem;
+    color: var(--clr-text-2, #475569);
     cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.25rem;
+    border-radius: 4px;
+    transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.lp-btn:hover {
-    border-color: #4d74eb;
-    color: #4d74eb;
+[theme=dark] .lp-btn {
+    color: var(--clr-text-2, #a1a9b8);
 }
 
-.lp-btn:focus-visible {
-    outline: 2px solid #4d74eb;
-    outline-offset: 2px;
+.lp-btn:hover:not(:disabled) {
+    color: var(--clr-text, #111111);
+    background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.04));
 }
 
-[theme=dark] .lp-btn { border-color: #3d3f4a; color: #cbd5e1; }
-
-[theme=dark] .lp-btn:hover {
-    border-color: #818cf8;
-    color: #818cf8;
+[theme=dark] .lp-btn:hover:not(:disabled) {
+    color: var(--clr-text, #e6e8ec);
+    background-color: var(--clr-surface-2, rgba(255, 255, 255, 0.06));
 }
 
-.lp-btn-skip {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-#btn-play {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: none;
-    background: #4d74eb;
-    color: #ffffff;
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-
-[theme=dark] #btn-play { background: #6478f0; }
-
-#btn-speed {
-    font-weight: 700;
-    min-width: 52px;
-}
-
-.lp-spacer { flex: 1; }
-
-.lp-hint {
-    font-size: 0.72rem;
-    color: #94a3b8;
-    margin: 0.6rem 0 0;
-    text-align: center;
-}
-
-@media (hover: none) {
-    .lp-hint { display: none; }
-}
-
-/* ---------- Playlist ---------- */
-.listen-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.listen-item {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    padding: 0.85rem 1.1rem;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-[theme=dark] .listen-item {
-    background: #24252b;
-    border-color: #333540;
-}
-
-.listen-item:hover {
-    border-color: #4d74eb;
-}
-
-[theme=dark] .listen-item:hover {
-    border-color: #818cf8;
-}
-
-.listen-item.active {
-    border-color: #4d74eb;
-    background: rgba(77, 116, 235, 0.06);
-}
-
-[theme=dark] .listen-item.active {
-    border-color: #818cf8;
-    background: rgba(129, 140, 248, 0.08);
-}
-
-.listen-item.disabled {
-    opacity: 0.55;
+.lp-btn:disabled {
+    opacity: 0.3;
     cursor: not-allowed;
 }
 
-.listen-item.disabled:hover {
-    border-color: #e2e8f0;
+#btn-play {
+    font-size: 1.25rem;
+    padding: 0.4rem 0.75rem;
+    color: var(--clr-text, #111111);
 }
 
-[theme=dark] .listen-item.disabled:hover {
-    border-color: #333540;
+[theme=dark] #btn-play {
+    color: var(--clr-text, #e6e8ec);
 }
 
-.listen-item-num {
-    font-family: monospace;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #94a3b8;
-    min-width: 2ch;
+#btn-speed {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
-.listen-item-icon {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    border: 1px solid #e2e8f0;
-    background: transparent;
-    color: #334155;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-}
-
-[theme=dark] .listen-item-icon {
-    border-color: #3d3f4a;
-    color: #cbd5e1;
-}
-
-.listen-item.active .listen-item-icon {
-    border-color: #4d74eb;
-    color: #4d74eb;
-}
-
-[theme=dark] .listen-item.active .listen-item-icon {
-    border-color: #818cf8;
-    color: #818cf8;
-}
-
-.listen-item-body {
+.lp-spacer {
     flex: 1;
-    min-width: 0;
 }
 
-.listen-item-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-[theme=dark] .listen-item-title {
-    color: #e2e8f0;
-}
-
-.listen-item-meta {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    margin: 0.15rem 0 0;
-}
-
-.listen-resume-badge {
-    display: none;
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: #4d74eb;
-    background: rgba(77, 116, 235, 0.12);
-    border-radius: 6px;
-    padding: 0.1rem 0.45rem;
-    margin-left: 0.4rem;
-    vertical-align: middle;
-}
-
-[theme=dark] .listen-resume-badge {
-    color: #818cf8;
-    background: rgba(129, 140, 248, 0.16);
-}
-
-.listen-item.resume .listen-resume-badge { display: inline-block; }
-
-.listen-item-dl {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    padding: 0.4rem;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.listen-item-dl:hover {
-    color: #4d74eb;
-}
-
-[theme=dark] .listen-item-dl:hover {
-    color: #818cf8;
+@media (max-width: 640px) {
+    .lp-hint {
+        display: none;
+    }
 }
 </style>
 
 <div class="page single listen-page">
-    <h1 class="single-title">{{ .Title | emojify }}</h1>
-
-    {{- with .Params.description -}}
-        <p style="opacity: 0.75;">{{ . }}</p>
-    {{- end -}}
-
-    <ul class="listen-list" id="listen-list">
-        {{- range $i, $ep := site.Data.notebooklm -}}
-            <li class="listen-item{{ if not $ep.url }} disabled{{ end }}"
-                data-src="{{ $ep.url }}"
-                data-title="{{ $ep.title }}"
-                data-index="{{ $i }}">
-                <span class="listen-item-num">{{ printf "%02d" (add $i 1) }}</span>
-                <button class="listen-item-icon" aria-hidden="true" tabindex="-1">
-                    <i class="ti ti-player-play"></i>
-                </button>
-                <div class="listen-item-body">
-                    <p class="listen-item-title">{{ $ep.title }}<span class="listen-resume-badge" data-resume-for="{{ $i }}">Tiếp tục</span></p>
-                    <p class="listen-item-meta">
-                        {{ $ep.date }} · {{ $ep.size }}{{ if not $ep.url }} · chưa có link{{ end }}
-                    </p>
-                </div>
-                {{- with $ep.url -}}
-                    <a class="listen-item-dl" href="{{ . }}" download
-                       aria-label="Tải xuống {{ $ep.title }}">
-                        <i class="ti ti-download" aria-hidden="true"></i>
-                    </a>
-                {{- end -}}
-            </li>
+    <div class="listen-header">
+        <h1 class="single-title">{{ .Title | emojify }}</h1>
+        {{- with .Params.description -}}
+            <p class="listen-header-desc">{{ . }}</p>
         {{- end -}}
-    </ul>
+    </div>
 
+    <!-- Player nằm ở trên đầu -->
     <div class="listen-player-card">
-        <p id="listen-now-title"><span class="listen-placeholder">Chọn một tập để bắt đầu nghe...</span></p>
+        <div class="lp-status-line">
+            <p id="listen-now-title"><span class="listen-placeholder">Chọn một tập để nghe...</span></p>
+            <p class="lp-hint">Space: phát/dừng · ← →: tua · ↑ ↓: đổi bài</p>
+        </div>
 
         <div class="lp-progress-wrap">
             <span class="lp-time" id="lp-cur">0:00</span>
@@ -383,29 +354,54 @@
             <button id="btn-play" class="lp-btn" aria-label="Phát hoặc tạm dừng" disabled>
                 <i class="ti ti-player-play" aria-hidden="true"></i>
             </button>
-            <button id="btn-back" class="lp-btn lp-btn-skip" aria-label="Lùi lại 15 giây" disabled>
-                <i class="ti ti-rotate-2" aria-hidden="true"></i>15
-            </button>
-            <button id="btn-fwd" class="lp-btn lp-btn-skip" aria-label="Tiến 15 giây" disabled>
-                15<i class="ti ti-rotate-clockwise" aria-hidden="true"></i>
-            </button>
-            <div class="lp-spacer"></div>
             <button id="btn-prev" class="lp-btn" aria-label="Tập trước đó">
                 <i class="ti ti-player-skip-back" aria-hidden="true"></i>
             </button>
             <button id="btn-next" class="lp-btn" aria-label="Tập kế tiếp">
                 <i class="ti ti-player-skip-forward" aria-hidden="true"></i>
             </button>
+            <button id="btn-back" class="lp-btn" aria-label="Lùi lại 15 giây" disabled>
+                <i class="ti ti-rotate-2" aria-hidden="true"></i>
+            </button>
+            <button id="btn-fwd" class="lp-btn" aria-label="Tiến 15 giây" disabled>
+                <i class="ti ti-rotate-clockwise" aria-hidden="true"></i>
+            </button>
+            <div class="lp-spacer"></div>
             <button id="btn-speed" class="lp-btn" aria-label="Thay đổi tốc độ phát">1×</button>
         </div>
 
         <audio id="listen-audio" preload="none">Trình duyệt của bạn không hỗ trợ phát audio.</audio>
-
-        <p class="lp-hint">Space: phát/dừng · ← →: lùi/tiến 15s · ↑ ↓: đổi tập · L: đổi tốc độ</p>
     </div>
 
+    <!-- Danh sách tập ở bên dưới -->
+    <ul class="listen-list" id="listen-list">
+        {{- range $i, $ep := site.Data.notebooklm -}}
+            <li class="listen-item{{ if not $ep.url }} disabled{{ end }}"
+                data-src="{{ $ep.url }}"
+                data-title="{{ $ep.title }}"
+                data-index="{{ $i }}">
+                <div class="listen-item-left">
+                    <span class="listen-item-num">{{ printf "%02d" (add $i 1) }}</span>
+                    <span class="listen-item-title">{{ $ep.title }}</span>
+                    <span class="listen-resume-badge" data-resume-for="{{ $i }}">Tiếp tục</span>
+                </div>
+                <div class="listen-item-meta">
+                    <span>{{ $ep.date }}</span>
+                    <span>·</span>
+                    <span>{{ $ep.size }}</span>
+                    {{- with $ep.url -}}
+                        <a class="listen-item-dl" href="{{ . }}" download
+                           aria-label="Tải xuống {{ $ep.title }}">
+                            <i class="ti ti-download" aria-hidden="true"></i>
+                        </a>
+                    {{- end -}}
+                </div>
+            </li>
+        {{- end -}}
+    </ul>
+
     {{- if .Content -}}
-        <div class="content" id="content" style="margin-top: 2rem;">
+        <div class="content" id="content" style="margin-top: 2.5rem;">
             {{- dict "Content" .Content "Ruby" .Params.ruby "Fraction" .Params.fraction "Fontawesome" .Params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
     {{- end -}}
@@ -508,11 +504,6 @@ document.addEventListener("DOMContentLoaded", function () {
             playing ? "Tạm dừng" : "Phát"
         );
         items.forEach(function (item, i) {
-            var icon = item.querySelector(".listen-item-icon i");
-            if (icon) {
-                icon.className =
-                    i === currentIndex && playing ? "ti ti-player-pause" : "ti ti-player-play";
-            }
             item.classList.toggle("active", i === currentIndex);
         });
     }

@@ -7,7 +7,7 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
-    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư ngành Công nghệ Thông tin (chuyên ngành Hệ thống Thông tin) tại Đại học Sài Gòn. Dạo này mình dành phần lớn thời gian làm các sản phẩm phần mềm, thử nghiệm nhiều thứ với AI và xem chúng có thể giải quyết được những bài toán nào trong thực tế. Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm.</p>
+    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư ngành Công nghệ Thông tin  tại Đại học Sài Gòn. Dạo này mình dành phần lớn thời gian làm các sản phẩm phần mềm, thử nghiệm nhiều thứ với AI và xem chúng có thể giải quyết được những bài toán nào trong thực tế. Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm.</p>
     <div class="about-contact-row">
       <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-chip" title="Xem trước và Tải CV (PDF)" aria-label="Resume (PDF)">
         <i class="ti ti-file-type-pdf"></i>
@@ -46,7 +46,7 @@ title: "Nguyen Ngoc Tin"
 
 ---
 
-## Kinh nghiệm
+## Experience
 
 <div class="timeline-box">
 
@@ -79,7 +79,7 @@ title: "Nguyen Ngoc Tin"
 
 ---
 
-## Học vấn
+## Education
 
 <div class="timeline-box">
 
@@ -112,7 +112,7 @@ title: "Nguyen Ngoc Tin"
 
 ---
 
-## Dự án
+## Projects
 
 <div class="timeline-box">
 

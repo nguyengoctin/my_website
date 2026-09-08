@@ -185,7 +185,7 @@ blockquote,
 }
 
 // ==========================================================
-// 3. EDITORIAL BIO FLOAT AVATAR (Rounded Square Modern Style)
+// 3. EDITORIAL BIO FLOAT AVATAR (Circle Avatar on Right)
 // ==========================================================
 .bio-container {
   display: block !important;
@@ -199,18 +199,18 @@ blockquote,
 
   .bio-avatar,
   img.bio-avatar {
-    float: left !important;
-    width: 210px !important;
-    height: 255px !important;
-    max-width: 210px !important;
-    min-width: 210px !important;
-    aspect-ratio: 4 / 5 !important;
+    float: right !important;
+    width: 175px !important;
+    height: 175px !important;
+    max-width: 175px !important;
+    min-width: 175px !important;
+    aspect-ratio: 1 / 1 !important;
     object-fit: cover !important;
     object-position: center 20% !important;
-    border-radius: 28px !important;
+    border-radius: 50% !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
     display: block !important;
-    margin: 0.15rem 1.75rem 1rem 0 !important;
+    margin: 0.15rem 0 1rem 1.75rem !important;
     border: none !important;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
 
@@ -246,12 +246,11 @@ blockquote,
 
     .bio-avatar,
     img.bio-avatar {
-      width: 150px !important;
-      height: 185px !important;
-      max-width: 150px !important;
-      min-width: 150px !important;
-      border-radius: 22px !important;
-      margin: 0.1rem 1.15rem 0.65rem 0 !important;
+      width: 135px !important;
+      height: 135px !important;
+      max-width: 135px !important;
+      min-width: 135px !important;
+      margin: 0.1rem 0 0.65rem 1.15rem !important;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
 
       [theme=dark] & {
@@ -266,15 +265,14 @@ blockquote,
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 440px) {
     .bio-avatar,
     img.bio-avatar {
-      width: 130px !important;
-      height: 160px !important;
-      max-width: 130px !important;
-      min-width: 130px !important;
-      border-radius: 18px !important;
-      margin: 0.1rem 0.85rem 0.5rem 0 !important;
+      width: 110px !important;
+      height: 110px !important;
+      max-width: 110px !important;
+      min-width: 110px !important;
+      margin: 0.1rem 0 0.5rem 0.85rem !important;
     }
 
     .bio-text p {
