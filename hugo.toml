@@ -57,28 +57,6 @@ enableEmoji = true
 
 # Menu config
 [menu]
-  [[menu.main]]
-    weight = 1
-    identifier = "roadmaps"
-    name = "Roadmaps"
-    title = "Learning Roadmaps"
-    url = "/roadmaps/"
-
-  [[menu.main]]
-    weight = 1
-    identifier = "roadmap-backend"
-    parent = "roadmaps"
-    name = "Backend"
-    url = "/backend/"
-    title = "Backend Developer Roadmap"
-
-  [[menu.main]]
-    weight = 2
-    identifier = "roadmap-ai"
-    parent = "roadmaps"
-    name = "AI Engineer"
-    url = "/ai-engineer/"
-    title = "AI Engineer Roadmap"
 
   [[menu.main]]
     weight = 2
