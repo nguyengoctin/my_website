@@ -1,9 +1,9 @@
 ---
-title: "Chuẩn hóa Mac mini 2014 thành home server Ubuntu với Docker, Tailscale và UFW"
+title: Chuẩn hóa Mac mini 2014 thành home server Ubuntu với Docker, Tailscale và UFW phần 1
 date: 2026-09-09T22:44:00+07:00
 aliases:
-  - "Mac mini 2014 home server"
-  - "Ubuntu home server baseline"
+  - Mac mini 2014 home server
+  - Ubuntu home server baseline
 tags:
   - home-server
   - ubuntu

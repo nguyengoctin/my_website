@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mac-mini-2014-ubuntu-home-server-baseline.md",
+                "file": "mac-mini-home-server-baseline-2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mac-mini-2014-ubuntu-home-server-baseline"
+              "title": "mac-mini-home-server-baseline-2"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 396.27265548706055
   },
   "right": {
     "id": "006929ca8b81987e",
@@ -190,6 +190,8 @@
   },
   "active": "88c47e3c0b5941fd",
   "lastOpenFiles": [
+    "mac-mini-2014-ubuntu-home-server-baseline.md",
+    "mac-mini-home-server-baseline-2.md",
     "ubuntu-terminal-bash-minimal-setup.md",
     "bcm4360-wifi-ubuntu.md",
     "headless-home-server-ssh-tailscale.md"
