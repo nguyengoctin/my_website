@@ -8,7 +8,6 @@ tags: ["Product Design", "System Architecture", "Mobile App", "PRD", "Job Hunt O
 categories: ["Projects", "Product Design"]
 ---
 
-{{< image src="/images/job-hunt-os-logo.webp" caption="Ý tưởng thiết kế nhận diện tối giản của Job Hunt OS" alt="Job Hunt OS Cover" >}}
 
 > **One-liner:** Job Hunt OS là ứng dụng di động ghi nhớ và quản lý tiến trình tìm việc cá nhân, giúp người ứng tuyển lưu giữ nhanh tin tuyển dụng, phiên bản CV đã nộp và khôi phục bối cảnh tức thì khi nhà tuyển dụng liên hệ.
 

@@ -108,7 +108,7 @@ title: "Nguyen Ngoc Tin"
   <!-- Project 1: Job Hunt OS -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/job-hunt-os-logo.webp" alt="Job Hunt OS Logo" class="timeline-logo">
+      <img src="/images/job-hunt-os-cover.webp" alt="Job Hunt OS Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Job Hunt OS</span>
         <span class="timeline-time">Sep 2026 — Planning</span>
@@ -116,7 +116,7 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS – Quản trị Bối cảnh Tuyển dụng Cá nhân</a>
+        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS – Quản trị Bối cảnh Tuyển dụng Cá nhân</a> <span class="status-badge status-warning">Đang phát triển</span>
       </h3>
       <div class="timeline-desc">
         Ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
