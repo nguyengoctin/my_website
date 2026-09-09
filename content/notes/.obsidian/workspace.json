@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "headless-home-server-ssh-tailscale.md",
+                "file": "mac-mini-2014-ubuntu-home-server-baseline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "headless-home-server-ssh-tailscale"
+              "title": "mac-mini-2014-ubuntu-home-server-baseline"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTimeReverse",
                 "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,5 +189,9 @@
     }
   },
   "active": "88c47e3c0b5941fd",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "ubuntu-terminal-bash-minimal-setup.md",
+    "bcm4360-wifi-ubuntu.md",
+    "headless-home-server-ssh-tailscale.md"
+  ]
 }
