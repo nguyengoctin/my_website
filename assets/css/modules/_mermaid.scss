@@ -1,6 +1,12 @@
 // ==========================================================
 // Mermaid Diagram — Container & Responsive Natural Sizing
 // ==========================================================
+.mermaid,
+.mermaid * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
 .mermaid {
   display: flex !important;
   justify-content: center !important;
@@ -15,9 +21,14 @@
   border: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
+  font-family: var(--font-serif) !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
 
   svg {
     display: block !important;
+    width: auto !important;             // Hiển thị kích thước tự nhiên 1:1, không bị kéo dãn bự chà bá
+    max-width: 100% !important;         // Tự động co lại mượt mà khi xem trên mobile
     height: auto !important;
     margin: 0 auto !important;
     background: transparent !important;
@@ -36,12 +47,19 @@
       stroke-width: 1.25px !important;
     }
 
-    // Node Text Styling (Đen than Slate-900 sắc nét)
+    // Node Text Styling (Đen than Slate-900 sắc nét, đồng bộ font Newsreader serif)
     .node .label,
     .node text,
     .nodeLabel {
       color: #0f172a !important;
       fill: #0f172a !important;
+      font-family: var(--font-serif) !important;
+      font-size: 15px !important;
+      line-height: 1.4 !important;
+      letter-spacing: normal !important;
+      word-spacing: normal !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
 
     // Arrow Lines & Markers (Xám Slate-500 dẫn hướng thanh lịch)
@@ -70,8 +88,11 @@
 
     .edgeLabel {
       color: #475569 !important;
-      font-size: 12px !important;
+      font-size: 13px !important;
       font-weight: 500 !important;
+      font-family: var(--font-serif) !important;
+      letter-spacing: normal !important;
+      word-spacing: normal !important;
 
       p, span, .nodeLabel {
         background-color: #f8fafc !important;
@@ -80,6 +101,8 @@
         border-radius: 4px !important;
         border: 1px solid #e2e8f0 !important;
         display: inline-block !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
       }
     }
 
@@ -88,6 +111,21 @@
 
       div {
         overflow: visible !important;
+        font-family: var(--font-serif) !important;
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+
+        span, p {
+          letter-spacing: normal !important;
+          word-spacing: normal !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
       }
     }
   }

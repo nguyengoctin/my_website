@@ -1,0 +1,21 @@
+{
+  "task_id": "2026-09-09-homepage-skills-marquee",
+  "topic": "Dual-Row Tech Stack Marquee with Icons for Homepage",
+  "user_selection": "Vị trí: Giữa About và Experience | Nguồn dữ liệu: data/tech_stack.yaml | Kiểu dáng: Dải đôi (2 hàng ngược chiều) kèm icon công nghệ (Tabler Icons)",
+  "scope": [
+    "data/tech_stack.yaml: Structured tech stack data categorized into 2 rows with icons",
+    "assets/css/modules/_marquee.scss: Pure CSS dual-track marquee with GPU acceleration, fade masks, pause controls, and a11y reduced-motion fallback",
+    "assets/css/_custom.scss: Import modules/marquee",
+    "layouts/partials/home/tech-marquee.html: Hugo partial rendering semantic marquee markup with aria-hidden clone tracks",
+    "layouts/shortcodes/tech-marquee.html: Hugo shortcode wrapper for tech-marquee partial",
+    "content/_index.md: Insert tech-marquee shortcode between About and Experience"
+  ],
+  "verification": [
+    "hugo --buildDrafts passes with 0 errors",
+    "Homepage displays two smooth counter-scrolling rows with icons",
+    "Hover or keyboard focus pauses the animation (WCAG 2.2.2 compliance)",
+    "prefers-reduced-motion switches to clean static wrapped tags",
+    "No horizontal scroll overflow on mobile viewports",
+    "Zero DOM duplicate reading on screen readers via aria-hidden tracks"
+  ]
+}

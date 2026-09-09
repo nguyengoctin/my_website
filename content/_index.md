@@ -7,7 +7,7 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
-    <p>Xin chào mọi người, mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư ngành Công nghệ Thông tin tại Đại học Sài Gòn. Dạo gần đây mình dành phần lớn thời gian xây dựng các sản phẩm phần mềm, thử nghiệm một vài thứ hay ho với AI và xem chúng có thể giải quyết được những vấn đề nào trong thực tế.</p>
+    <p>Xin chào mọi người, mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư ngành Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Dạo gần đây mình dành phần lớn thời gian xây dựng các sản phẩm phần mềm, thử nghiệm một vài thứ hay ho với AI và xem chúng có thể giải quyết được những vấn đề nào trong thực tế.</p>
     <p>Trang web này là nơi mình ghi lại các dự án, những thứ đang tìm hiểu và những điều mình chỉ thực sự hiểu sau khi bắt tay vào làm. Bạn có thể xem chi tiết hồ sơ kinh nghiệm trong <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">Facebook</a> hoặc gửi thư trực tiếp cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
   </div>
 </div>
@@ -27,6 +27,12 @@ title: "Nguyen Ngoc Tin"
 
 ---
 
+## Tech Stack
+
+{{< tech-marquee >}}
+
+---
+
 ## Experience
 
 <div class="timeline-box">
@@ -37,13 +43,13 @@ title: "Nguyen Ngoc Tin"
       <img src="/images/aws-logo.webp" alt="First Cloud AI Journey AWS Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">First Cloud AI Journey</span>
-        <span class="timeline-time">Tháng 3 — Tháng 5, 2026</span>
+        <span class="timeline-time">Mar — May 2026</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">Thực tập sinh Phát triển Ứng dụng Cloud</h3>
       <div class="timeline-desc">
-        Chương trình đào tạo chuyên sâu về Cloud và AI do AWS Vietnam bảo trợ. Mình tham gia xây dựng nguyên mẫu hệ thống serverless hướng sự kiện bằng Python và AWS Lambda, viết tài liệu kiến trúc API chuẩn hóa và tích hợp hạ tầng AWS vào quy trình tự động hóa CI/CD.
+        Phát triển ứng dụng serverless hướng sự kiện trên nền tảng AWS, thiết kế kiến trúc backend Lambda với Python và tích hợp mô hình AI qua Amazon Bedrock.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Python</span>
@@ -69,14 +75,16 @@ title: "Nguyen Ngoc Tin"
     <div class="timeline-left">
       <img src="/images/sgu-logo.webp" alt="Saigon University Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Đại học Sài Gòn</span>
-        <span class="timeline-time">2021 — Tháng 6, 2026</span>
+        <span class="timeline-org"><a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a></span>
+        <span class="timeline-time">2021 — Jun 2026</span>
       </div>
     </div>
     <div class="timeline-right">
-      <h3 class="timeline-title">Kỹ sư Công nghệ Thông tin</h3>
+      <h3 class="timeline-title">
+        <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Kỹ sư Công nghệ Thông tin – Chuyên ngành Hệ thống Thông tin</a>
+      </h3>
       <div class="timeline-desc">
-        Chuyên ngành Hệ thống Thông tin. Đào tạo nền tảng chuyên sâu về kỹ thuật phần mềm, cơ sở dữ liệu, mạng máy tính, hệ điều hành và lập trình hướng đối tượng.
+        Tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Khoa Công nghệ Thông tin</a>. Nền tảng chuyên sâu về kỹ thuật phần mềm, cấu trúc dữ liệu, thiết kế cơ sở dữ liệu quan hệ và phân tích nghiệp vụ hệ thống.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Hệ thống Thông tin</span>
@@ -97,13 +105,41 @@ title: "Nguyen Ngoc Tin"
 
 <div class="timeline-box">
 
-  <!-- Project 1: Zalo Mini App Online Ordering-->
+  <!-- Project 1: Job Hunt OS -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/zalo-logo.svg" alt="Zalo Mini App Logo" class="timeline-logo">
+      <img src="/images/job-hunt-os-logo.webp" alt="Job Hunt OS Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Zalo Mini App</span>
-        <span class="timeline-time">Tháng 8, 2026 — Hiện tại</span>
+        <span class="timeline-org">Job Hunt OS</span>
+        <span class="timeline-time">Sep 2026 — Planning</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS – Quản trị Bối cảnh Tuyển dụng Cá nhân</a>
+      </h3>
+      <div class="timeline-desc">
+        Ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Product Design</span>
+        <span class="timeline-tag">Mobile App</span>
+        <span class="timeline-tag">System Architecture</span>
+        <span class="timeline-tag">PRD</span>
+      </div>
+      <div class="timeline-links">
+        <a href="/posts/job-hunt-os-product-requirement-document/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Bếp Dì 6 (Zalo Mini App) -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <img src="/images/bep-di-6-cover.webp" alt="Bếp Dì 6 Cover" class="timeline-logo">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Bếp Dì 6</span>
+        <span class="timeline-time">Aug 2026 — Present</span>
       </div>
     </div>
     <div class="timeline-right">
@@ -111,7 +147,7 @@ title: "Nguyen Ngoc Tin"
         <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Nền tảng Đặt món Trực tuyến (Zalo Mini App)</a>
       </h3>
       <div class="timeline-desc">
-        Hệ thống đặt món toàn diện trên nền tảng Zalo Mini App, tự động tạo mã VietQR động theo đơn, tính toán khoảng cách GPS thời gian thực và vận hành độc lập không phụ thuộc cổng thanh toán trung gian.
+        Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Zalo Mini App</span>
@@ -129,13 +165,13 @@ title: "Nguyen Ngoc Tin"
     </div>
   </div>
 
-  <!-- Project 2: Lexi -->
+  <!-- Project 3: Lexi -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/lexi-logo.webp" alt="Lexi Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Lexi</span>
-        <span class="timeline-time">Tháng 3 — Tháng 5, 2026</span>
+        <span class="timeline-time">Mar — May 2026</span>
       </div>
     </div>
     <div class="timeline-right">
@@ -143,7 +179,7 @@ title: "Nguyen Ngoc Tin"
         <a href="/posts/lexi-ai-english-tutor/">Lexi – Trợ lý Luyện nói Tiếng Anh với AI</a>
       </h3>
       <div class="timeline-desc">
-        Ứng dụng luyện nói tiếng Anh phản hồi tức thì, vận hành trên hạ tầng AWS Serverless và mô hình Claude qua Amazon Bedrock, hỗ trợ truyền giọng nói thời gian thực và lưu trữ dữ liệu tối ưu chi phí trên DynamoDB.
+        Gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -161,13 +197,13 @@ title: "Nguyen Ngoc Tin"
     </div>
   </div>
 
-  <!-- Project 3: Bilingual Movie Learning Platform -->
+  <!-- Project 4: Bilingual Movie Learning Platform -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/movie-logo.webp" alt="Movie Learn Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Movie Learn</span>
-        <span class="timeline-time">Tháng 3, 2026 — Hiện tại</span>
+        <span class="timeline-time">Mar 2026 — Present</span>
       </div>
     </div>
     <div class="timeline-right">
@@ -175,7 +211,7 @@ title: "Nguyen Ngoc Tin"
         <a href="/posts/bilingual-movie-learning-platform/">Nền tảng Học Tiếng Anh qua Phim Song ngữ</a>
       </h3>
       <div class="timeline-desc">
-        Nền tảng web biến phim ảnh thành bài học tương tác với phụ đề song ngữ đồng bộ chính xác theo khung hình và giải thích ngữ pháp trực tiếp qua Google Gemini API.
+        Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -193,13 +229,13 @@ title: "Nguyen Ngoc Tin"
     </div>
   </div>
 
-  <!-- Project 4: Ngọc Tín Site -->
+  <!-- Project 5: Ngọc Tín Site -->
   <div class="timeline-row">
     <div class="timeline-left">
       <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">Ngọc Tín Site</span>
-        <span class="timeline-time">2026 — Hiện tại</span>
+        <span class="timeline-time">2026 — Present</span>
       </div>
     </div>
     <div class="timeline-right">
@@ -207,7 +243,7 @@ title: "Nguyen Ngoc Tin"
         <a href="/posts/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
       </h3>
       <div class="timeline-desc">
-        Trang blog kỹ thuật và portfolio xây dựng bằng Hugo và SCSS dạng mô-đun, tập trung vào tốc độ tải trang, trải nghiệm đọc tối giản và đạt điểm tuyệt đối 100/100 Lighthouse.
+        Không gian ghi chép kỹ thuật và lưu trữ các dự án cá nhân, ưu tiên trải nghiệm đọc tập trung, tối ưu hiệu năng tải trang tĩnh và khả năng tìm kiếm nội dung nhanh chóng.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Hugo</span>

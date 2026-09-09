@@ -12,6 +12,12 @@
  */
 (function () {
   var _mermaid;
+  function getProjectSerifFont() {
+    var style = window.getComputedStyle ? window.getComputedStyle(document.documentElement) : null;
+    var tokenFont = (style && style.getPropertyValue('--font-serif') || '').trim();
+    return tokenFont || '"Newsreader", Georgia, "Times New Roman", serif';
+  }
+
   var _baseConfig = {
     startOnLoad: false,
     securityLevel: 'loose',
@@ -23,17 +29,19 @@
       lineColor: '#64748b',            // Slate-500 mũi tên xám dẫn hướng êm mắt
       edgeLabelBackground: 'transparent', // Trong suốt để loại bỏ dải xám SVG rect
       tertiaryColor: '#ffffff',
-      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      fontSize: '14px'
+      fontFamily: getProjectSerifFont(),
+      fontSize: '15px'
     },
     flowchart: {
-      useMaxWidth: true,
-      nodePadding: 14,
-      nodeSpacing: 40,
-      rankSpacing: 40,
+      useMaxWidth: false,              // Tắt phóng đại ép 100% gây chữ bự chà bá
+      padding: 32,
+      nodePadding: 32,
+      nodeSpacing: 45,
+      rankSpacing: 45,
       curve: 'basis',
       htmlLabels: true,
-      markdownAutoWrap: false
+      markdownAutoWrap: false,
+      wrappingWidth: 320
     }
   };
 
@@ -44,11 +52,36 @@
     var origInit = m.initialize.bind(m);
     m.initialize = function (cfg) {
       cfg = cfg || {};
+      _baseConfig.themeVariables.fontFamily = getProjectSerifFont();
       var merged = Object.assign({}, cfg, _baseConfig);
       merged.theme = 'base';
       merged.themeVariables = Object.assign({}, cfg.themeVariables || {}, _baseConfig.themeVariables);
       return origInit(merged);
     };
+
+    var origRun = m.run ? m.run.bind(m) : null;
+    if (origRun) {
+      m.run = function (options) {
+        if (document.fonts && document.fonts.ready) {
+          return document.fonts.ready.then(function () {
+            return origRun(options);
+          });
+        }
+        return origRun(options);
+      };
+    }
+
+    var origRender = m.render ? m.render.bind(m) : null;
+    if (origRender) {
+      m.render = function (id, text, svgContainingElement) {
+        if (document.fonts && document.fonts.ready) {
+          return document.fonts.ready.then(function () {
+            return origRender(id, text, svgContainingElement);
+          });
+        }
+        return origRender(id, text, svgContainingElement);
+      };
+    }
   }
 
   if (window.mermaid && typeof window.mermaid.initialize === 'function') {

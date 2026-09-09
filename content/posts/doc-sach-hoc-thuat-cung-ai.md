@@ -40,12 +40,12 @@ Bên cạnh cấu trúc câu lệnh, việc kiểm soát tham số đóng vai tr
 
 ```mermaid
 flowchart TD
-    S1["(1) Bước 1: Survey<br/>Nạp mục lục vào AI"]
-    S2["(2) Bước 2: Question<br/>5 câu hỏi định hướng"]
-    S3["(3) Bước 3: Read<br/>Bóc tách văn bản"]
-    F1["(4) Bước 4: Recite<br/>Giải thích cho AI"]
-    F2["(5) Bước 5: Phản biện<br/>AI mổ xẻ lỗ hổng"]
-    R1["(6) Bước 6: Review<br/>Ma trận tri thức"]
+    S1["Bước 1:<br/>Survey<br/>Nạp mục lục vào AI"]
+    S2["Bước 2:<br/>Question<br/>5 câu hỏi định hướng"]
+    S3["Bước 3:<br/>Read<br/>Bóc tách văn bản"]
+    F1["Bước 4:<br/>Recite<br/>Giải thích cho AI"]
+    F2["Bước 5:<br/>Phản biện<br/>AI mổ xẻ lỗ hổng"]
+    R1["Bước 6:<br/>Review<br/>Ma trận tri thức"]
     S1 --> S2
     S2 --> S3
     S3 --> F1

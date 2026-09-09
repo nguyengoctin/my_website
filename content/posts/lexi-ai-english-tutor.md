@@ -10,11 +10,50 @@ categories: ["Projects", "System Architecture"]
 
 {{< youtube qPlBFtEk3pM >}}
 
-Bài toán thực tế trong việc học giao tiếp tiếng Anh là người học thường thiếu môi trường phản xạ tự nhiên và e ngại khi trò chuyện trực tiếp với người bản xứ. Các giải pháp gia sư truyền thống chi phí cao và khó linh hoạt theo thời gian cá nhân. Dự án Lexi được thiết kế để giải quyết triệt để vấn đề này bằng cách xây dựng một gia sư AI giao tiếp qua luồng âm thanh thời gian thực, có khả năng nhận diện giọng nói, phân tích lỗi sai ngữ pháp và phản hồi ngữ cảnh với độ trễ phản xạ thấp.
+> **One-liner:** Lexi là trợ lý AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua giọng nói thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và cải thiện phản xạ đàm thoại theo kịch bản thực tế.
 
-## Kiến trúc phân tầng Clean Architecture trên Serverless
+## 1. Tổng quan dự án
 
-Để tránh tình trạng mã nguồn Lambda bị rối rắm và khó kiểm thử, chúng ta áp dụng mô hình Clean Architecture phân tách rõ ràng trách nhiệm từng tầng vào hệ thống serverless:
+### Bài toán thực tế
+Rào cản lớn nhất của người học giao tiếp tiếng Anh là thiếu môi trường tương tác phản xạ tự nhiên và tâm lý e ngại khi trò chuyện trực tiếp với người bản xứ. Các giải pháp gia sư truyền thống thường có chi phí đắt đỏ và khó sắp xếp thời gian linh hoạt theo lịch cá nhân.
+
+### Đối tượng sử dụng
+Học viên tiếng Anh trình độ từ cơ bản đến trung cấp (A2 đến B2) cần một môi trường an toàn, kiên nhẫn để luyện phản xạ nói hàng ngày mà không sợ bị phán xét.
+
+### Giải pháp cốt lõi
+Xây dựng một gia sư AI đàm thoại qua luồng âm thanh thời gian thực. Hệ thống tiếp nhận giọng nói, chuyển đổi thành văn bản, phân tích ngữ cảnh để đối đáp tự nhiên, đồng thời cung cấp phản hồi tức thì về lỗi phát âm và cấu trúc ngữ pháp với độ trễ phản xạ dưới 1.2 giây.
+
+---
+
+## 2. Luồng hoạt động cốt lõi
+
+Toàn bộ quy trình luyện tập diễn ra theo luồng khép kín giữa học viên và các dịch vụ đám mây:
+
+```mermaid
+flowchart TD
+    AudioIn["Bước 1:<br/>Giọng nói học viên<br/>Next.js Web Audio Stream"]
+    WSS["Bước 2:<br/>Kênh truyền hai chiều<br/>WebSocket API Gateway"]
+    STT["Bước 3:<br/>Chuyển đổi giọng nói<br/>Amazon Transcribe Streaming"]
+    LLM["Bước 4:<br/>Não bộ đàm thoại<br/>Amazon Bedrock Claude"]
+    TTS["Bước 5:<br/>Tổng hợp phản hồi<br/>Amazon Polly Neural TTS"]
+    AudioOut["Bước 6:<br/>Phát âm thanh<br/>Tai nghe học viên"]
+    AudioIn --> WSS
+    WSS --> STT
+    STT --> LLM
+    LLM --> TTS
+    TTS --> AudioOut
+```
+
+1. **Thu âm và truyền phát:** Trình duyệt thu âm giọng nói từ microphone học viên và truyền stream nhị phân liên tục qua kết nối WebSocket bảo mật.
+2. **Nhận diện giọng nói:** Amazon Transcribe chuyển đổi âm thanh trực tiếp thành văn bản theo thời gian thực.
+3. **Phân tích và đối đáp:** Amazon Bedrock với mô hình Claude nhận văn bản, duy trì ngữ cảnh hội thoại, sinh câu trả lời tiếp nối kèm theo đánh giá lỗi ngữ pháp hoặc từ vựng.
+4. **Tổng hợp giọng đọc:** Câu phản hồi được Amazon Polly chuyển thành giọng nói tự nhiên và phát trực tiếp về tai nghe của học viên.
+
+---
+
+## 3. Kiến trúc hệ thống và Thiết kế dữ liệu
+
+Hệ thống vận hành hoàn toàn trên hạ tầng Serverless của AWS, áp dụng Clean Architecture để cô lập mã nguồn Lambda khỏi các phụ thuộc bên ngoài:
 
 ```mermaid
 flowchart TD
@@ -56,9 +95,9 @@ class MyHandler(BaseHandler[MyController]):
         return self.presenter.present_error(400, result.error)
 ```
 
-## Thiết kế Cơ sở Dữ liệu DynamoDB Single Table
+### Thiết kế Cơ sở Dữ liệu DynamoDB Single Table
 
-Để đạt độ trễ truy xuất dữ liệu dưới 10ms và tối ưu chi phí vận hành ở mức thấp nhất, toàn bộ dữ liệu người dùng, thẻ từ vựng flashcard, phiên luyện nói và kịch bản giao tiếp được gom chung vào một bảng `LexiAppTable` duy nhất:
+Để đạt độ trễ truy xuất dữ liệu dưới 10ms và tối ưu chi phí vận hành, toàn bộ dữ liệu người dùng, thẻ từ vựng flashcard, phiên luyện nói và kịch bản giao tiếp được gom chung vào một bảng `LexiAppTable` duy nhất:
 
 | Khóa phân vùng (PK) | Khóa sắp xếp (SK) | Loại thực thể | Dữ liệu chính |
 | :--- | :--- | :--- | :--- |
@@ -67,60 +106,42 @@ class MyHandler(BaseHandler[MyController]):
 | `USER#{user_id}` | `SESSION#{session_id}` | Speaking Session | Bản ghi âm, văn bản phiên âm, điểm phát âm |
 | `SCENARIO#{scenario_id}` | `METADATA` | Scenario | Tiêu đề chủ đề, độ khó, prompt dẫn dắt |
 
-### Tối ưu truy vấn với Global Secondary Index (GSI1)
+#### Tối ưu truy vấn với Global Secondary Index
 
-Một lỗi phổ biến khi thiết kế DynamoDB là tạo quá nhiều bảng riêng lẻ rồi phải dùng hàm Scan toàn bộ bảng. Bằng việc thiết kế khóa phân vùng đảo ngược `GSI1_PK = TYPE#FLASHCARD` và `GSI1_SK = USER#{user_id}#DUE#{due_date}`, chúng ta có thể:
-
-- **Ứng dụng:** Hệ thống có thể quét toàn bộ các từ vựng cần ôn trong ngày của một học viên cụ thể với một câu lệnh Query duy nhất, loại bỏ hoàn toàn thao tác Scan tốn kém tài nguyên.
-
-## Quy trình Xử lý Luồng Thoại Thời gian thực
-
-Hệ thống kết hợp WebSocket API Gateway cùng bộ dịch vụ AI của AWS để tạo nên trải nghiệm hội thoại hai chiều liên tục:
-
-```mermaid
-flowchart TD
-    UserVoice["(1) Microphone<br/>Next.js Web Audio"]
-    WSSGateway["(2) Truyền tải<br/>WebSocket API Gateway"]
-    Transcribe["(3) Chuyển văn bản<br/>Amazon Transcribe"]
-    BedrockLLM["(4) Não bộ AI<br/>Amazon Bedrock Claude"]
-    PollyTTS["(5) Tổng hợp giọng<br/>Amazon Polly TTS"]
-    AudioReturn["(6) Tai nghe<br/>Học viên phản xạ"]
-    UserVoice --> WSSGateway
-    WSSGateway --> Transcribe
-    Transcribe --> BedrockLLM
-    BedrockLLM --> PollyTTS
-    PollyTTS --> AudioReturn
-```
-
-1. **Thu âm và Truyền phát:** Ứng dụng Next.js thu âm giọng nói từ microphone người dùng và truyền stream dữ liệu qua kết nối WebSocket bảo mật.
-2. **Chuyển văn bản và Phân tích:** Amazon Transcribe chuyển đổi giọng nói thành văn bản. Amazon Bedrock với mô hình Claude đóng vai trò não bộ, vừa tiếp tục hội thoại theo kịch bản vừa phân tích chi tiết các lỗi phát âm, từ vựng và ngữ pháp.
-3. **Phản hồi tức thì:** Lời thoại của gia sư AI được tổng hợp thành giọng đọc tự nhiên thông qua Amazon Polly và stream ngược lại tai nghe của người học với độ trễ phản xạ trung bình dưới 1.2 giây.
-
-## Hạ tầng Triển khai và Quản lý Đa Stack
-
-Toàn bộ tài nguyên đám mây được quản lý theo mô hình Infrastructure as Code bằng AWS SAM, chia tách thành 3 stack độc lập nhằm giảm thiểu rủi ro khi cập nhật hệ thống:
-
-```mermaid
-flowchart TD
-    AuthStack["Auth Stack<br/>Cognito User Pool"]
-    DBStack["Database Stack<br/>DynamoDB Table và GSI"]
-    AppStack["Main App Stack<br/>API Gateway và Lambda Functions"]
-    StorageStack["Asset Storage<br/>S3 Audio Bucket"]
-    AuthStack --> AppStack
-    DBStack --> AppStack
-    StorageStack --> AppStack
-```
-
-- **Auth Stack (`auth-base.yaml`):** Quản lý Cognito User Pool, hỗ trợ đăng nhập email và xác thực Google OAuth.
-- **Database Stack (`database.yaml`):** Quản lý bảng DynamoDB `LexiAppTable` với mã hóa dữ liệu tại chỗ Encryption at Rest.
-- **Main Application Stack (`template.yaml`):** Khởi tạo API Gateway, tập hợp các Lambda Handlers và S3 Bucket lưu trữ file âm thanh luyện nói.
-
-## Kết quả Đạt được
-
-1. **Hiệu năng và Độ trễ:** Thời gian phản hồi ấm của Lambda chỉ từ 50ms đến 100ms; truy vấn dữ liệu DynamoDB duy trì ở mức mili-giây.
-2. **Tối ưu chi phí:** Kiến trúc Serverless hoàn toàn giúp chi phí duy trì chỉ khoảng $12/tháng cho quy mô 10.000 người dùng hoạt động với 100.000 lượt tương tác.
-3. **Mã nguồn sạch và Dễ kiểm thử:** Áp dụng Clean Architecture giúp việc viết Unit Test cho tầng Use Case đạt độ bao phủ kiểm thử cao mà không cần phụ thuộc vào môi trường AWS thực tế.
+Bằng việc thiết kế khóa phân vùng đảo ngược `GSI1_PK = TYPE#FLASHCARD` và `GSI1_SK = USER#{user_id}#DUE#{due_date}`, hệ thống có thể quét toàn bộ các từ vựng cần ôn trong ngày của một học viên cụ thể với một câu lệnh Query duy nhất, loại bỏ hoàn toàn thao tác Scan tốn kém tài nguyên.
 
 ---
+
+## 4. Các quyết định kỹ thuật then chốt
+
+### 1. Serverless và WebSocket API Gateway thay vì máy chủ truyền thống
+- **Bối cảnh:** Ứng dụng âm thanh thời gian thực thường yêu cầu duy trì kết nối socket liên tục.
+- **Quyết định:** Sử dụng AWS API Gateway WebSocket kết hợp AWS Lambda thay vì tự host cụm Socket.io server trên EC2 hoặc ECS.
+- **Đánh đổi:** 
+  - *Ưu điểm:* Không mất chi phí nhàn rỗi, hệ thống tự động scale từ 0 lên hàng ngàn kết nối đồng thời mà không cần cấu hình cluster.
+  - *Nhược điểm:* Phải quản lý connection ID phân tán trong DynamoDB và bị giới hạn thời gian chạy tối đa của Lambda cho mỗi event.
+
+### 2. DynamoDB Single Table thay vì cơ sở dữ liệu quan hệ
+- **Bối cảnh:** Dữ liệu học tập có cấu trúc phân tầng giữa người dùng, phiên luyện nói và các lượt đối đáp âm thanh.
+- **Quyết định:** Sử dụng Single Table Design trên DynamoDB.
+- **Đánh đổi:**
+  - *Ưu điểm:* Tốc độ truy xuất nhất quán ở mức một chữ số mili-giây bất kể kích thước dữ liệu tăng lên; chi phí duy trì gần như bằng 0 trong bậc miễn phí.
+  - *Nhược điểm:* Cần thiết kế sẵn toàn bộ access patterns từ đầu; các câu truy vấn thống kê phân tích phức tạp trong tương lai sẽ khó thực hiện trực tiếp.
+
+---
+
+## 5. Kết quả đạt được và Giới hạn hiện tại
+
+### Kết quả đạt được
+1. **Độ trễ phản xạ:** Phản hồi ấm của Lambda đạt từ 50ms đến 100ms; tổng thời gian từ khi người học dứt lời đến khi nghe câu trả lời trung bình khoảng 1.2 giây.
+2. **Tối ưu chi phí:** Hạ tầng Serverless hoàn toàn giúp chi phí duy trì chỉ khoảng $12/tháng cho quy mô thử nghiệm 10.000 người dùng với 100.000 lượt tương tác.
+3. **Chất lượng mã nguồn:** Áp dụng Clean Architecture cho phép kiểm thử độc lập tầng Use Case với độ bao phủ kiểm thử cao mà không cần giả lập môi trường AWS thực tế.
+
+### Giới hạn đã biết
+- **Chất lượng đường truyền di động:** Khi mạng yếu hoặc chập chờn, luồng audio streaming qua WebSocket có thể bị đứt đoạn gói tin.
+- **Giọng địa phương và tạp âm:** Mặc dù Amazon Transcribe nhận diện tốt giọng chuẩn, nhưng với những trường hợp môi trường xung quanh có nhiều tiếng ồn hoặc phát âm nuốt âm quá nhiều, độ chính xác nhận diện câu văn có thể bị ảnh hưởng.
+
+---
+
 - {{< link href="https://github.com/ngoctinn/lexi-be" content="Mã nguồn GitHub Repository: Lexi Backend (AWS SAM và Clean Architecture)" >}}
 - {{< link href="https://github.com/ngoctinn/lexi-fe" content="Mã nguồn GitHub Repository: Lexi Frontend (Next.js và TypeScript)" >}}

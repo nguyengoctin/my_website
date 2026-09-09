@@ -45,8 +45,8 @@
 }
 
 .timeline-left {
-  width: 200px;
-  min-width: 200px;
+  width: 160px;
+  min-width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +74,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
     margin-top: 0.1rem;
   }
@@ -87,6 +88,7 @@
     color: #111111;
     line-height: 1.3;
     margin-bottom: 0.25rem;
+    text-align: center;
 
     [theme=dark] & {
       color: #f3f4f6;
@@ -100,6 +102,7 @@
     font-size: 0.78rem;
     color: #828282;
     line-height: 1.25;
+    text-align: center;
 
     [theme=dark] & {
       color: #9ca3af;
