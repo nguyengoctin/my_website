@@ -1,6 +1,9 @@
 ---
-title: "Mac mini 2014 Home Server: Setup Reference"
+title: "Mac mini 2014 Home Server: Tham chiếu Setup"
 date: 2026-09-09T17:00:00+07:00
+aliases:
+  - Mac mini home server setup
+  - macmini server reference
 tags:
   - home-server
   - mac-mini
@@ -10,737 +13,316 @@ tags:
   - storage
 ---
 
-## Trạng thái hiện tại
+> Mac mini Late 2014 đã được chuyển thành home server chạy Xubuntu. Trạng thái hiện tại: boot từ SSD Kingmax 120 GB qua USB, HDD Apple 1 TB bên trong đã format ext4 và mount tại `/data`, SSH và Tailscale hoạt động ổn định sau reboot headless. Docker chưa cài.
 
-Mac mini Late 2014 đã được chuyển sang mô hình home server chạy Xubuntu:
+## 1. Bản chất
 
--   **Mac mini Late 2014**, RAM 8 GB.
--   **Kingmax SSD 120 GB qua USB**: chứa Xubuntu và EFI.
--   **Apple HDD 1 TB SATA bên trong**: đã xóa macOS/APFS, format ext4 và
-    mount tại `/data`.
--   Có thể quản trị **headless** từ laptop qua SSH.
--   **Tailscale** đã hoạt động, có thể SSH bằng hostname `macmini`.
--   SSH và Tailscale vẫn hoạt động sau reboot.
--   `/data` tự mount thành công sau reboot.
--   Docker **chưa cài**.
+Đây là note tham chiếu trạng thái thực tế của hệ thống — không phải tutorial từ đầu. Mục đích là ghi lại những gì đã làm, lý do quyết định từng bước, và trạng thái hiện tại để tiếp tục setup.
 
 Kiến trúc hiện tại:
 
-``` text
-Mac mini Late 2014
+```text
+Mac mini Late 2014 — RAM 8 GB
 │
 ├── Kingmax SSD 120 GB — USB
-│   ├── Xubuntu /
-│   └── /boot/efi
+│   ├── ext4  /          (Xubuntu + system)
+│   └── vfat  /boot/efi  (UEFI boot entry)
 │
-└── Apple HDD 1 TB — SATA
-    └── ext4
-        └── /data
+└── Apple HDD 1 TB — SATA nội bộ
+    └── ext4  /data       (dữ liệu, Docker volumes)
 ```
 
-Mục tiêu tiếp theo:
+Mục tiêu storage tiếp theo:
 
-``` text
-SSD 120 GB
-├── Xubuntu
-├── Docker Engine
-└── system/application binaries
-
-HDD 1 TB — /data
-├── docker/
-├── media/
-├── downloads/
-└── backups/
+```text
+SSD 120 GB → Xubuntu, Docker Engine, application binaries
+HDD 1 TB   → /data (media, downloads, backups, Docker persistent data)
 ```
 
-------------------------------------------------------------------------
+## 2. Vì sao lựa chọn
 
-## 1. Xubuntu chạy trên SSD ngoài
+**Tại sao boot từ SSD ngoài (USB) thay vì dùng HDD nội bộ?**
 
-Hệ điều hành đã được cài lên Kingmax SSD 120 GB kết nối USB.
+Mac mini 2014 dùng HDD SATA 1 TB — I/O chậm cho system workload. SSD dù qua USB vẫn cải thiện hiệu năng desktop đáng kể và cho phép dùng toàn bộ HDD 1 TB làm storage dữ liệu mà không phải partition HDD theo kiểu phức tạp.
 
-Layout được xác nhận:
+**Tại sao giữ ext4 cho HDD thay vì ZFS hay btrfs?**
 
-``` text
-Kingmax SSD 120 GB
-├── ext4  /
-└── vfat  /boot/efi
+Mục tiêu đơn giản: một partition ext4 duy nhất chiếm toàn bộ 1 TB, mount tại `/data`. ext4 ổn định, được Ubuntu hỗ trợ tốt, không cần RAID hay snapshot ở giai đoạn này. ZFS hoặc btrfs sẽ có giá trị hơn khi có nhiều disk và cần RAID/snapshot.
+
+**Tại sao dùng UUID trong `/etc/fstab` thay vì `/dev/sda1`?**
+
+Thứ tự nhận disk có thể thay đổi giữa các lần boot — đặc biệt khi có cả USB và SATA. Trong setup này, HDD từng xuất hiện là `/dev/sda1` sau đó chuyển thành `/dev/sdb1` sau reboot. UUID thuộc filesystem, không thay đổi dù device name đổi. `fstab` với UUID đảm bảo `/data` luôn mount đúng HDD bất kể thứ tự boot.
+
+**Đánh đổi:**
+
+- SSD qua USB có overhead hơn SSD nội bộ, nhưng với workload server thông thường (SSH, Docker, file serving) không đáng kể.
+- Chỉ một disk lưu dữ liệu — không có redundancy. Nếu HDD hỏng, mất dữ liệu. Backup strategy là phần cần làm tiếp theo.
+
+## 3. Cơ chế hoạt động
+
+```text
+Boot flow Mac mini:
+
+Power on
+    │ Giữ Option/Alt
+    ▼
+Apple Startup Manager
+    │ Scan USB và SATA cho EFI boot entries
+    ▼
+Chọn "EFI Boot" (từ Kingmax SSD)
+    │
+    ▼
+GRUB load từ /boot/efi trên SSD
+    │
+    ▼
+Xubuntu boot từ ext4 / trên SSD
+    │
+    ├── tailscaled.service start
+    ├── ssh.service start
+    └── /data auto-mount từ fstab (UUID → HDD 1 TB)
 ```
 
-Điều này cho phép HDD SATA bên trong được dùng hoàn toàn cho dữ liệu.
+```text
+fstab UUID mount mechanism:
 
-Sau khi chuyển từ HDD sang SSD, hiệu năng desktop thực tế cải thiện rất
-rõ dù SSD kết nối qua USB.
-
-### Boot
-
-Mac mini có thể boot Linux từ SSD ngoài thông qua Startup Manager:
-
--   bật máy;
--   giữ `Option` trên bàn phím Apple, hoặc `Alt` trên bàn phím PC;
--   chọn `EFI Boot`.
-
-Sau khi setup server, cần ưu tiên kiểm chứng bằng reboot thực tế thay vì
-giả định firmware sẽ boot đúng disk.
-
-------------------------------------------------------------------------
-
-## 2. SSH headless
-
-OpenSSH Server đã được cài và có thể SSH từ laptop.
-
-Cách kết nối ưu tiên:
-
-``` bash
-ssh <user>@macmini
+Kernel boot
+    │ đọc /etc/fstab
+    │ thấy entry: UUID=<xyz> /data ext4 defaults,nofail 0 2
+    ▼
+Kernel gọi udev để tìm device có filesystem UUID=<xyz>
+    │ scan tất cả block devices
+    ▼
+Tìm thấy UUID trên /dev/sdb1 (hoặc /dev/sda1 tuỳ thứ tự boot)
+    │
+    ▼
+Mount /dev/sdb1 tại /data
 ```
 
-Không cần màn hình và bàn phím gắn trực tiếp vào Mac mini cho công việc
-quản trị thông thường.
+`nofail` trong fstab options đảm bảo boot không bị block nếu HDD không được nhận — server vẫn lên và SSH được, chỉ là `/data` không có.
 
-Có thể kiểm tra SSH service:
+## 4. Hướng dẫn từng bước
 
-``` bash
-systemctl is-enabled ssh
-systemctl is-active ssh
-```
+### Thiết lập đã hoàn thành — SSH và Tailscale
 
-Trạng thái mong muốn:
+Chi tiết trong note [`headless-home-server-ssh-tailscale`](/notes/headless-home-server-ssh-tailscale/). Trạng thái hiện tại: SSH và Tailscale đã hoạt động sau reboot.
 
-``` text
-enabled
-active
-```
+### Thiết lập đã hoàn thành — Format và mount HDD
 
-### SSH key
+**Xác định disk trước mọi thao tác destructive:**
 
-Laptop đã tạo Ed25519 key:
-
-``` bash
-ssh-keygen -t ed25519
-```
-
-Public key được copy sang server:
-
-``` bash
-ssh-copy-id <user>@macmini
-```
-
-Sau đó:
-
-``` bash
-ssh <user>@macmini
-```
-
-### Quy tắc bảo mật
-
-File:
-
-``` text
-~/.ssh/id_ed25519
-```
-
-là **private key** --- không upload, gửi cho người khác hoặc commit vào
-Git.
-
-File:
-
-``` text
-~/.ssh/id_ed25519.pub
-```
-
-là public key và có thể copy sang server.
-
-Chỉ nên tắt password authentication sau khi đã kiểm chứng một phiên SSH
-mới bằng key hoạt động ổn định.
-
-------------------------------------------------------------------------
-
-## 3. Tailscale
-
-Tailscale được cài trên:
-
--   Mac mini;
--   laptop quản trị.
-
-Cả hai đăng nhập cùng tailnet.
-
-SSH qua MagicDNS đã được kiểm chứng:
-
-``` bash
-ssh <user>@macmini
-```
-
-Điều này có nghĩa không cần nhớ IP LAN hoặc Tailscale IP trong sử dụng
-hằng ngày.
-
-### Ý nghĩa
-
-Không cần mở TCP port 22 trên router ra Internet chỉ để SSH vào home
-server.
-
-Có thể quản trị Mac mini qua mạng Tailscale thay vì public SSH.
-
-Các thông tin cần bảo vệ vẫn gồm:
-
--   SSH private key;
--   password;
--   Tailscale auth/API token.
-
-Một địa chỉ private/Tailscale IP tự nó không thay thế credential.
-
-------------------------------------------------------------------------
-
-## 4. Kiểm chứng headless sau reboot
-
-Một home server không nên chỉ được kiểm tra trong phiên hiện tại.
-
-Quy trình:
-
-``` bash
-sudo reboot
-```
-
-Đợi máy khởi động lại, sau đó từ laptop:
-
-``` bash
-ssh <user>@macmini
-```
-
-Mac mini đã vượt qua kiểm tra này: sau reboot vẫn có thể SSH vào server.
-
-Điều này xác nhận boot + networking + SSH/Tailscale đủ ổn để tiếp tục
-setup server headless.
-
-------------------------------------------------------------------------
-
-## 5. Nhận diện chính xác hai disk
-
-Trước khi xóa HDD, disk được kiểm tra bằng:
-
-``` bash
+```bash
 lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,LABEL,MOUNTPOINTS
+# Phân biệt rõ SSD Kingmax (USB, 120 GB) và HDD Apple (SATA, ~1 TB)
+# Không dựa chỉ vào tên /dev/sda hay /dev/sdb
 ```
 
-Kết quả ban đầu cho thấy:
+**Xóa partition table cũ của HDD (macOS APFS layout):**
 
-``` text
-APPLE HDD HTS541010A9E662
-~1 TB
-SATA
-├── EFI 200 MB
-└── APFS ~931 GB
-
-Kingmax SSD 120GB
-USB
-├── ext4 /
-└── vfat /boot/efi
-```
-
-Điều quan trọng nhất trước thao tác destructive là nhận diện disk bằng:
-
--   model;
--   dung lượng;
--   transport;
--   filesystem;
--   mount point.
-
-**Không nên chỉ dựa vào tên `/dev/sda` hay `/dev/sdb`.**
-
-------------------------------------------------------------------------
-
-## 6. HDD Apple 1 TB trước khi xóa
-
-Partition table được kiểm tra bằng:
-
-``` bash
-sudo fdisk -l /dev/sda
-```
-
-và:
-
-``` bash
-sudo blkid /dev/sda1 /dev/sda2
-```
-
-Disk sử dụng GPT và còn layout macOS:
-
-``` text
-EFI System Partition
-Apple APFS
-```
-
-Sau khi xác nhận không cần macOS hoặc dữ liệu cũ nữa, toàn bộ HDD được
-dành cho Linux.
-
-> Các lệnh trong phần tiếp theo phá hủy dữ liệu. Không copy nguyên lệnh
-> sang máy khác mà chưa xác định lại disk.
-
-------------------------------------------------------------------------
-
-## 7. Xóa partition table cũ
-
-Sau khi xác nhận đúng HDD, signature GPT/PMBR cũ được xóa:
-
-``` bash
+```bash
 sudo wipefs -a /dev/sda
+# Thay /dev/sda bằng device name thực tế của HDD Apple
+# ⚠️ DESTRUCTIVE — chỉ chạy khi chắc chắn đúng device
 ```
 
-Sau đó kiểm tra lại:
+**Tạo GPT và partition mới:**
 
-``` bash
-lsblk -o NAME,SIZE,MODEL,FSTYPE,MOUNTPOINTS
-```
-
-HDD trở thành disk trống, trong khi SSD chứa `/` vẫn nguyên vẹn.
-
-------------------------------------------------------------------------
-
-## 8. Tạo GPT và partition dữ liệu mới
-
-Tạo GPT:
-
-``` bash
+```bash
 sudo parted /dev/sda --script mklabel gpt
-```
+# mklabel gpt → tạo GPT partition table
+# --script    → non-interactive, không hỏi confirm
 
-Tạo một partition chiếm toàn bộ disk:
-
-``` bash
 sudo parted /dev/sda --script mkpart primary ext4 0% 100%
+# mkpart primary → tạo primary partition
+# 0% 100%        → chiếm toàn bộ dung lượng disk
 ```
 
-Kiểm tra:
+**Format ext4:**
 
-``` bash
-lsblk -o NAME,SIZE,MODEL,FSTYPE,MOUNTPOINTS
-```
-
-Kết quả:
-
-``` text
-HDD ~1 TB
-└── partition ~931.5 GiB
-```
-
-------------------------------------------------------------------------
-
-## 9. Format HDD thành ext4
-
-Partition được format ext4 và đặt label `data`:
-
-``` bash
+```bash
 sudo mkfs.ext4 -L data /dev/sda1
+# -L data → đặt label "data" cho filesystem
+# Label giúp nhận diện thêm ngoài UUID
 ```
 
-Kiểm tra:
+**Tạo mount point và mount thử:**
 
-``` bash
-lsblk -f /dev/sda
-```
-
-Filesystem sau khi tạo:
-
-``` text
-FSTYPE: ext4
-LABEL:  data
-```
-
-ext4 phù hợp với trường hợp HDD được dùng chủ yếu bởi Linux/home server.
-
-------------------------------------------------------------------------
-
-## 10. Mount tại `/data`
-
-Tạo mount point:
-
-``` bash
+```bash
 sudo mkdir -p /data
-```
-
-Mount thử:
-
-``` bash
 sudo mount /dev/sda1 /data
-```
+# Kiểm tra trước khi cấu hình fstab
 
-Kiểm tra:
-
-``` bash
 findmnt /data
 df -h /data
+# Kỳ vọng: ~870 GB available (1 TB - filesystem overhead)
 ```
 
-Sau setup, HDD có khoảng:
+**Cấu hình auto-mount trong fstab:**
 
-``` text
-Size: ~916G
-Available: ~870G
-Filesystem: ext4
-Mount: /data
+```bash
+# Lấy UUID của partition data
+sudo blkid /dev/sda1
+# hoặc:
+lsblk -f | grep sda1
 ```
 
-Chênh lệch giữa dung lượng quảng cáo 1 TB và dung lượng hiển thị trong
-Linux là bình thường, ngoài ra ext4 cũng dành một phần không gian cho
-filesystem/reserved blocks.
-
-------------------------------------------------------------------------
-
-## 11. Auto-mount bằng `/etc/fstab`
-
-Đây là một trong những phần quan trọng nhất của setup.
-
-Mở:
-
-``` bash
+```bash
 sudo nano /etc/fstab
 ```
 
-Thêm entry dạng:
+Thêm dòng (dùng UUID thực tế):
 
-``` fstab
+```text
 UUID=<UUID-cua-partition-data> /data ext4 defaults,nofail 0 2
 ```
 
-UUID lấy bằng:
+Giải thích các field:
 
-``` bash
-lsblk -f
+```text
+UUID=...    → identifier của filesystem
+/data       → mount point
+ext4        → filesystem type
+defaults    → standard mount options (rw, relatime, errors=remount-ro...)
+nofail      → boot không fail nếu device không tìm thấy
+0           → dump (0 = không backup bằng dump)
+2           → fsck order (2 = check sau root filesystem)
 ```
 
-hoặc:
-
-``` bash
-sudo blkid
-```
-
-Sau khi sửa `fstab`:
-
-``` bash
-sudo mkdir -p /data
+```bash
 sudo systemctl daemon-reload
+# Reload systemd để nhận fstab changes
+
 sudo mount -a
-```
+# -a → mount tất cả entry trong fstab chưa được mount
+# Nếu có lỗi, sửa trước khi reboot
 
-Kiểm tra:
-
-``` bash
 findmnt /data
+# Phải thấy /data đang mount
 ```
 
-`mount -a` nên chạy không lỗi trước khi reboot.
+**Cấp quyền write cho user:**
 
-### Vì sao dùng UUID?
-
-Tên `/dev/sdX` **không ổn định**.
-
-Trong quá trình setup, HDD từng xuất hiện dưới tên:
-
-``` text
-/dev/sda1
-```
-
-nhưng sau reboot nó xuất hiện thành:
-
-``` text
-/dev/sdb1
-```
-
-Dù vậy:
-
-``` bash
-findmnt /data
-```
-
-vẫn cho thấy `/data` mount đúng HDD.
-
-Đây chính là lợi ích của:
-
-``` fstab
-UUID=... /data ...
-```
-
-thay vì:
-
-``` fstab
-/dev/sda1 /data ...
-```
-
-Linux có thể thay đổi thứ tự nhận diện USB/SATA disk giữa các lần boot.
-UUID thuộc filesystem nên ổn định hơn tên device node.
-
-**Kết luận:** dùng UUID trong `fstab`, không hardcode `/dev/sda1`.
-
-------------------------------------------------------------------------
-
-## 12. Lỗi đã gặp khi cấu hình `/data`
-
-Lần đầu chạy:
-
-``` bash
-sudo mount -a
-```
-
-gặp:
-
-``` text
-mount: /data: mount point does not exist
-```
-
-Nguyên nhân: thư mục `/data` chưa tồn tại.
-
-Fix:
-
-``` bash
-sudo mkdir -p /data
-sudo systemctl daemon-reload
-sudo mount -a
-```
-
-Sau đó:
-
-``` bash
-findmnt /data
-```
-
-mount thành công.
-
-Bài học: entry trong `fstab` không tự tạo mount-point directory.
-
-------------------------------------------------------------------------
-
-## 13. Quyền truy cập `/data`
-
-Để user quản trị có thể ghi dữ liệu mà không phải dùng `sudo` cho mọi
-thao tác:
-
-``` bash
+```bash
 sudo chown <user>:<user> /data
+# Cho phép user thông thường write vào /data mà không cần sudo
 ```
 
 Test:
 
-``` bash
-touch /data/test.txt
-ls -l /data/test.txt
-rm /data/test.txt
+```bash
+touch /data/test.txt && rm /data/test.txt
+# Không có lỗi = quyền cơ bản OK
 ```
 
-Nếu không báo lỗi, quyền cơ bản hoạt động.
+### Xác minh auto-mount sau reboot
 
-Về sau nếu nhiều service/container cần quyền khác nhau thì nên quản lý
-UID/GID và permissions theo từng service thay vì mở quyền quá rộng như
-`chmod 777`.
-
-------------------------------------------------------------------------
-
-## 14. Kiểm chứng auto-mount sau reboot
-
-Sau khi hoàn tất `fstab`:
-
-``` bash
+```bash
 sudo reboot
 ```
 
 SSH lại:
 
-``` bash
+```bash
 ssh <user>@macmini
 ```
 
-Kiểm tra:
-
-``` bash
+```bash
 findmnt /data
 df -h /data
+# Phải thấy /data mount với HDD Apple
+# Device name có thể đổi (sda1 → sdb1) nhưng mount vẫn đúng nhờ UUID
 ```
 
-Kết quả thực tế sau reboot:
+### Bước tiếp theo — Cài Docker Engine
 
-``` text
-/data  → ext4
-rw,relatime
+```bash
+# Cài Docker theo script chính thức (chỉ sau khi storage đã xác minh)
+curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker <user>
+# usermod -aG → thêm user vào group docker
+# Cần logout và login lại để group change có hiệu lực
 ```
 
-và HDD vẫn được mount đúng dù device node đã đổi.
+Test Docker:
 
-Đây là kiểm chứng quan trọng cho thấy cấu hình `fstab` hoạt động thực sự
-chứ không chỉ mount được trong phiên hiện tại.
-
-------------------------------------------------------------------------
-
-## 15. Layout storage nên dùng tiếp
-
-Một layout đơn giản cho home server:
-
-``` text
-/data/
-├── docker/
-│   ├── compose/
-│   └── appdata/
-├── media/
-├── downloads/
-└── backups/
+```bash
+docker run --rm hello-world
+# --rm → xoá container sau khi chạy xong
 ```
 
-Không nhất thiết phải tạo toàn bộ ngay lập tức. Chỉ tạo directory khi
-service thực sự cần.
+Xác minh Docker sau reboot:
 
-### Vai trò của SSD và HDD
-
-### SSD 120 GB
-
-Nên chứa:
-
--   Xubuntu;
--   package hệ thống;
--   Docker Engine;
--   executable/application layer;
--   dữ liệu cần I/O nhanh và nhỏ nếu cần.
-
-### HDD 1 TB
-
-Nên chứa:
-
--   media;
--   downloads;
--   backups;
--   Docker persistent data phù hợp;
--   file lớn;
--   dữ liệu không yêu cầu random I/O cao.
-
-Cần cân nhắc từng database trước khi đặt database workload nặng lên HDD
-cơ học.
-
-------------------------------------------------------------------------
-
-## 16. Wi-Fi Broadcom BCM4360
-
-Mac mini sử dụng:
-
-``` text
-Broadcom BCM4360
-PCI ID: 14e4:43a0
-```
-
-Xubuntu ban đầu không tạo WLAN interface.
-
-Hướng xử lý đã xác định là proprietary Broadcom STA driver. Với
-Ubuntu/Xubuntu 26.04, package đáng thử khi cần:
-
-``` bash
-sudo apt update
-sudo apt install broadcom-sta-dkms
+```bash
 sudo reboot
+# SSH lại và kiểm tra:
+systemctl is-active docker
+docker ps
 ```
 
-Tuy nhiên phần Wi-Fi **chưa được xác nhận hoàn tất** trong setup này.
+## 5. Bẫy lỗi và Những lần thử thất bại
 
-Vì server hiện đã có networking đủ dùng cho SSH/Tailscale, Wi-Fi không
-phải blocker cho phần storage/Docker.
+**Bẫy 1 — mount -a báo "mount point does not exist"**
 
-------------------------------------------------------------------------
+Lần đầu thêm `/data` vào fstab và chạy `mount -a`, gặp lỗi `mount: /data: mount point does not exist`. Nguyên nhân: chưa tạo thư mục `/data`. fstab không tự tạo mount point directory — phải `mkdir -p /data` trước.
 
-## 17. Những thứ đã verified
+**Bẫy 2 — Device name thay đổi sau reboot**
 
--   Xubuntu boot từ SSD ngoài.
--   Root filesystem nằm trên SSD 120 GB.
--   SSH vào Mac mini hoạt động.
--   Tailscale hoạt động giữa laptop và Mac mini.
--   Có thể SSH bằng hostname `macmini`.
--   Mac mini reboot và quay lại online ở chế độ headless.
--   HDD Apple 1 TB cũ đã được xóa sau khi xác nhận không cần dữ liệu.
--   HDD đã chuyển từ APFS sang ext4.
--   HDD mount tại `/data`.
--   `fstab` bằng UUID hoạt động.
--   `/data` vẫn tự mount sau reboot.
--   Device name có thể đổi qua reboot nhưng UUID mount vẫn hoạt động.
+HDD Apple xuất hiện là `/dev/sda1` khi setup, sau reboot chuyển thành `/dev/sdb1` (vì Kingmax SSD USB được nhận trước). Nếu fstab dùng `/dev/sda1`, `/data` sẽ mount vào Kingmax SSD thay vì HDD — hoặc fail hoàn toàn. UUID giải quyết vấn đề này.
 
-------------------------------------------------------------------------
+**Bẫy 3 — Kết luận hardware hỏng khi `wipefs` thành công nhưng `lsblk` vẫn thấy partition**
 
-## 18. Những thứ chưa làm / chưa verified
+Sau `wipefs -a`, chạy `lsblk` ngay lập tức đôi khi vẫn thấy partition cũ vì kernel cache chưa refresh. Chạy `sudo partprobe /dev/sda` hoặc reboot để kernel re-read partition table.
 
--   Docker Engine chưa cài.
--   Docker Compose chưa cấu hình.
--   Chưa triển khai service self-host đầu tiên.
--   Chưa xây backup strategy hoàn chỉnh.
--   Wi-Fi BCM4360 chưa xác nhận hoạt động.
--   Chưa thực hiện security hardening sâu hơn cho SSH.
--   Chưa thiết kế quyền UID/GID cho Docker volumes.
+**Bẫy 4 — `chmod 777 /data` vì "tiện"**
 
-------------------------------------------------------------------------
+Mở quyền 777 cho `/data` nghĩa là mọi process, mọi user trên máy đều có thể đọc/ghi/xoá. Khi Docker container chạy dưới UID khác, có thể overwrite data không có ý định. Nên dùng `chown` với user cụ thể và quản lý permission theo service.
 
-## 19. Nguyên tắc cần nhớ cho các bước sau
+**Bẫy 5 — Cài nhiều service Docker cùng lúc trước khi verify từng bước**
 
-### Không tin `/dev/sda` là một disk cố định
+Cài Portainer, Jellyfin, qBittorrent, Nextcloud cùng lúc mà không verify từng service sau reboot — khi có sự cố không biết service nào gây ra. Thứ tự đúng: cài Docker → test container → verify sau reboot → cài service đầu tiên → verify → tiếp tục.
 
-Luôn kiểm tra:
+## 6. Kiểm tra và Xác minh
 
-``` bash
-lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,MOUNTPOINTS
+Checklist trạng thái hiện tại:
+
+```bash
+# Boot và SSH
+systemctl is-enabled ssh tailscaled
+systemctl is-active ssh tailscaled
+# Kỳ vọng: enabled/enabled, active/active
+
+# Storage
+findmnt /data
+df -h /data
+# Kỳ vọng: /data mount, ~870 GB available
+
+# Headless verification
+sudo reboot
+# SSH lại và chạy lại các lệnh trên
 ```
 
-trước thao tác destructive.
+Checklist những gì chưa làm:
 
-### Mount persistent bằng UUID
-
-Ưu tiên:
-
-``` fstab
-UUID=... /data ext4 ...
+```text
+[ ] Docker Engine
+[ ] Docker Compose
+[ ] Service self-host đầu tiên
+[ ] Backup strategy cho /data
+[ ] Wi-Fi BCM4360 (xem note bcm4360-wifi-ubuntu)
+[ ] SSH hardening (PasswordAuthentication no)
+[ ] UID/GID management cho Docker volumes
 ```
 
-không dùng:
+## 7. Nguồn tham khảo
 
-``` fstab
-/dev/sda1 /data ext4 ...
-```
-
-### Test trước khi reboot
-
-Sau khi sửa `fstab`:
-
-``` bash
-sudo mount -a
-```
-
-Nếu có lỗi, sửa trước khi reboot.
-
-### Test sau reboot
-
-Một cấu hình server chưa thực sự hoàn tất cho tới khi reboot và kiểm tra
-lại service/storage.
-
-### Không mở SSH port ra Internet nếu không cần
-
-Với mô hình hiện tại, Tailscale đã cung cấp đường quản trị từ xa phù hợp
-mà không cần expose TCP/22 trực tiếp trên router.
-
-### Backup vẫn cần thiết
-
-RAID, filesystem hay việc có HDD riêng không tự động trở thành backup.
-
-Nếu `/data` chứa dữ liệu quan trọng, cần có ít nhất một bản sao độc lập
-ở nơi khác.
-
-------------------------------------------------------------------------
-
-## Bước tiếp theo
-
-Sau trạng thái hiện tại, thứ tự hợp lý là:
-
-``` text
-1. Storage                  ✅
-2. Headless SSH/Tailscale   ✅
-3. Reboot verification      ✅
-4. Docker Engine            ← tiếp theo
-5. Docker Compose
-6. Test container
-7. Reboot + verify Docker
-8. Deploy service đầu tiên
-9. Backup + monitoring
-```
-
-Không cần cài Portainer hay nhiều service cùng lúc. Nên cài Docker
-Engine đúng cách trước, chạy một container test, kiểm chứng sau reboot
-rồi mới bắt đầu self-host các ứng dụng thật.
+- fstab man page: `man fstab`  
+  *(giải thích đầy đủ các field và mount options)*
+- systemd fstab integration: https://www.freedesktop.org/software/systemd/man/systemd.mount.html  
+  *(giải thích `nofail`, `x-systemd.automount` và các option nâng cao)*
+- Docker Engine installation — Linux: https://docs.docker.com/engine/install/ubuntu/  
+  *(script chính thức, tránh dùng `docker.io` từ APT vì thường là version cũ)*
+- parted documentation: https://www.gnu.org/software/parted/manual/  
+  *(reference cho GPT partitioning và mkpart syntax)*
+- Các note liên quan trong cùng project:
+  - [`headless-home-server-ssh-tailscale`](/notes/headless-home-server-ssh-tailscale/) — SSH và Tailscale setup chi tiết
+  - [`bcm4360-wifi-ubuntu`](/notes/bcm4360-wifi-ubuntu/) — Wi-Fi driver cho Mac mini
+  - [`xubuntu-external-ssd-mac-mini`](/notes/xubuntu-external-ssd-mac-mini/) — Cài Xubuntu lên SSD ngoài

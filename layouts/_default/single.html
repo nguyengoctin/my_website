@@ -1,40 +1,42 @@
 {{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
 {{- define "content" -}}
-    {{- $params := .Scratch.Get "params" -}}
-    <article class="page single">
-        {{- /* Title */ -}}
-        <h1 class="single-title">
-            {{- .Title | emojify -}}
-        </h1>
+{{- $params := .Scratch.Get "params" -}}
+<article class="page single">
+    {{- /* Title */ -}}
+    <h1 class="single-title">
+        {{- .Title | emojify -}}
+    </h1>
 
-        {{- /* Subtitle */ -}}
-        {{- with $params.subtitle -}}
-            <h2 class="single-subtitle">{{ . }}</h2>
+    {{- /* Subtitle */ -}}
+    {{- with $params.subtitle -}}
+    <h2 class="single-subtitle">{{ . }}</h2>
+    {{- end -}}
+
+    {{- /* Meta: Clean Editorial Byline with Copy Markdown */ -}}
+    <div class="post-meta">
+        {{- if not .Date.IsZero -}}
+        <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+        &nbsp;·&nbsp;
+        <span>{{ .ReadingTime }} min read</span>
         {{- end -}}
+        {{- with .RawContent -}}
+        {{- if not $.Date.IsZero }}&nbsp;·&nbsp;{{ end -}}
+        <button type="button" class="btn-copy-markdown" data-markdown="{{ . | base64Encode }}"
+            title="Sao chép toàn bộ nội dung Markdown" aria-label="Sao chép Markdown">
+            <i class="ti ti-markdown"></i>
+            <span>Markdown</span>
+        </button>
+        {{- end -}}
+    </div>
 
-        {{- /* Meta: Clean Editorial Byline with Copy Markdown */ -}}
-        <div class="post-meta">
-            {{- if not .Date.IsZero -}}
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-            &nbsp;·&nbsp;
-            <span>{{ .ReadingTime }} min read</span>
-            {{- end -}}
-            {{- with .RawContent -}}
-                {{- if not $.Date.IsZero }}&nbsp;·&nbsp;{{ end -}}
-                <button type="button" class="btn-copy-markdown" data-markdown="{{ . | base64Encode }}" title="Sao chép toàn bộ nội dung Markdown" aria-label="Sao chép Markdown">
-                    <i class="ti ti-markdown"></i>
-                    <span>Copy Markdown</span>
-                </button>
-            {{- end -}}
-        </div>
+    {{- /* Content */ -}}
+    <div class="content" id="content">
+        {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome |
+        partial "function/content.html" | safeHTML -}}
+    </div>
 
-        {{- /* Content */ -}}
-        <div class="content" id="content">
-            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-        </div>
-
-        {{- /* Comment */ -}}
-        {{- partial "comment.html" . -}}
-    </article>
+    {{- /* Comment */ -}}
+    {{- partial "comment.html" . -}}
+</article>
 {{- end -}}

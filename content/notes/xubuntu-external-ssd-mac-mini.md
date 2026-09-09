@@ -13,723 +13,335 @@ tags:
   - uefi
 ---
 
-> Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB trên một máy Ubuntu khác, giữ nguyên ổ hệ điều hành hiện tại, rồi tháo SSD và cắm sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất là mọi partition cần cho Xubuntu — đặc biệt EFI và `/` — phải nằm trên chính SSD ngoài.
+> Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
 
-## Kết luận cần nhớ
+## 1. Bản chất
 
-Trong môi trường đã kiểm tra:
+**UEFI và EFI System Partition (ESP)** là cơ chế boot trên phần cứng hiện đại (kể cả Mac từ 2006 trở đi). Thay vì đọc MBR ở sector đầu ổ đĩa, firmware UEFI tìm EFI System Partition (FAT32, type `EF00`) và load file `.efi` trong đó để khởi động bootloader (GRUB trong trường hợp này).
+
+Để SSD ngoài **self-contained** — có thể cắm vào bất kỳ máy UEFI nào và boot được — EFI phải nằm trên chính SSD đó, không phải trên ổ nội bộ.
+
+**GRUB loopback boot** là cách boot trực tiếp từ ISO file thông qua GRUB, không cần ghi ISO ra USB. GRUB mount ISO như một filesystem ảo và kernel của ISO được load từ đó.
+
+Môi trường đã xác minh:
 
 ```text
-/dev/nvme0n1 = ổ Ubuntu hiện tại của laptop
-/dev/sda     = Kingmax SSD 120 GB qua USB
+Laptop hiện tại:  /dev/nvme0n1 → Ubuntu (ổ nội bộ, KHÔNG được đụng vào)
+SSD mục tiêu:     /dev/sda     → Kingmax 120 GB qua USB
+Mac mini:         Late 2014, hỗ trợ boot từ USB qua Startup Manager
 ```
 
-Quy tắc an toàn:
+## 2. Vì sao lựa chọn
+
+**Tại sao không ghi ISO ra USB thông thường (dd/Balena Etcher)?**
+
+Trong setup này, SSD Kingmax là ổ đích cài Xubuntu — không phải USB installer tạm. Nếu ghi ISO ra SSD thì SSD trở thành live installer, không phải hệ điều hành cài xong. Cần cách boot ISO để chạy installer, chỉ định SSD làm target cài đặt.
+
+**Tại sao GRUB loopback boot thay vì dùng USB khác?**
+
+Máy Ubuntu hiện tại đã có GRUB. Thêm entry vào `40_custom` và boot ISO trực tiếp từ `/boot/iso/` không cần USB thứ hai. Tiết kiệm thiết bị và kiểm soát tốt hơn quá trình boot.
+
+**Tại sao layout đơn giản (EFI + root, không có swap partition)?**
+
+Với SSD 120 GB và mục tiêu home server đơn giản, layout tối giản giảm số bước cài đặt và giảm risk làm nhầm partition. Swapfile có thể cấu hình sau trên root filesystem khi cần — không cần partition riêng.
+
+**Đánh đổi:**
+
+- GRUB loopback boot từ ISO **chưa được xác minh hoạt động** trong context này — đây là procedure dự kiến, cần test thực tế.
+- SSD qua USB có thể chậm hơn SSD SATA nội bộ, nhưng trong thực tế thấy hiệu năng cải thiện đáng kể so với HDD SATA cũ của Mac mini.
+
+## 3. Cơ chế hoạt động
 
 ```text
-/dev/sda     = ổ mục tiêu, được phép partition/format
-/dev/nvme0n1 = ổ hệ điều hành hiện tại, tuyệt đối không format
+GRUB loopback boot flow:
+
+Firmware UEFI
+      │ load GRUB từ /boot/efi trên nvme0n1
+      ▼
+GRUB menu
+      │ chọn "Install Xubuntu from ISO"
+      ▼
+GRUB loopback
+      │ mount /boot/iso/xubuntu-26.04.1-desktop-amd64.iso
+      │ như filesystem ảo (loop)
+      ▼
+Load kernel:  (loop)/casper/vmlinuz
+Load initrd:  (loop)/casper/initrd
+      │
+      ▼
+Xubuntu Live environment khởi động
+      │ (ISO mount tạm trong RAM)
+      ▼
+Installer Xubuntu chạy
+      │ partition và format /dev/sda
+      │ cài bootloader/EFI vào /dev/sda
+      ▼
+Xubuntu cài xong trên /dev/sda (SSD Kingmax)
 ```
 
-Không nên dựa duy nhất vào tên `/dev/sda`, vì tên block device có thể thay đổi sau reboot hoặc khi sang máy khác. Trước thao tác destructive luôn kiểm tra thêm `SIZE`, `MODEL`, `TRAN`:
+Mac mini Startup Manager flow:
+
+```text
+Bật Mac mini + giữ Option/Alt
+      │
+      ▼
+Startup Manager (Apple firmware)
+      │ scan các disk có EFI boot entry
+      │ tìm thấy "EFI Boot" trên SSD Kingmax
+      ▼
+Load GRUB từ SSD Kingmax EFI partition
+      │
+      ▼
+GRUB boot Xubuntu trên /dev/sda
+```
+
+## 4. Hướng dẫn từng bước
+
+### Bước 1 — Xác minh và wipe SSD
+
+Luôn xác định ổ bằng nhiều thuộc tính, không chỉ tên:
 
 ```bash
 lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,MOUNTPOINTS
+# NAME        → tên device
+# SIZE        → dung lượng
+# MODEL       → model name của ổ
+# TRAN        → transport (usb, sata, nvme)
+# FSTYPE      → filesystem type hiện tại
+# MOUNTPOINTS → đang mount ở đâu (nếu có)
 ```
 
-Flow tổng thể:
-
-```text
-Laptop Ubuntu hiện tại
-        ↓
-Chuẩn bị SSD ngoài
-        ↓
-Boot Xubuntu installer
-        ↓
-Cài Xubuntu vào SSD ngoài
-        ↓
-Shutdown laptop
-        ↓
-Rút SSD
-        ↓
-Cắm SSD + bàn phím USB vào Mac mini 2014
-        ↓
-Giữ Option/Alt khi bật Mac
-        ↓
-Chọn EFI Boot
-        ↓
-Xubuntu chạy trên Mac mini
-```
-
----
-
-## 1. Sự cố NTFS ban đầu và cách xác định nguyên nhân
-
-SSD Kingmax ban đầu có nhiều partition:
-
-```text
-sda
-├─sda1  vfat
-├─sda2
-├─sda3  ntfs
-└─sda4  ntfs
-```
-
-Ubuntu nhìn thấy `/dev/sda3` nhưng không mount được và hiện lỗi dạng:
-
-```text
-wrong fs type, bad option, bad superblock ...
-```
-
-### Xác định filesystem
+Xác nhận đúng SSD Kingmax (USB, 120 GB). Sau đó unmount nếu có:
 
 ```bash
-lsblk -f
+sudo umount /dev/sda1 /dev/sda3 /dev/sda4 2>/dev/null
+# 2>/dev/null → suppress lỗi nếu partition không tồn tại hoặc chưa mount
 ```
 
-và:
-
-```bash
-sudo blkid /dev/sda3
-```
-
-Kết quả đã xác minh:
-
-```text
-TYPE="ntfs"
-PARTLABEL="Basic data partition"
-```
-
-### Kiểm tra NTFS không sửa dữ liệu
-
-```bash
-sudo ntfsfix -n /dev/sda3
-```
-
-Kết quả thực tế:
-
-```text
-Mounting volume... OK
-Processing of $MFT and $MFTMirr completed successfully.
-Checking the alternate boot sector... OK
-NTFS volume version is 3.1.
-NTFS partition /dev/sda3 was processed successfully.
-```
-
-Điều này cho thấy cấu trúc NTFS cơ bản không có lỗi rõ ràng.
-
-### Xem nguyên nhân mount fail từ kernel
-
-Ngay sau khi mount thất bại:
-
-```bash
-sudo dmesg | tail -n 50
-```
-
-Kernel đã báo:
-
-```text
-ntfs3(sda3): volume is dirty and "force" flag is not set!
-ntfs3(sda3): It is recommended to use chkdsk.
-```
-
-Kết luận: lỗi mount lúc đó là **NTFS dirty flag**, không có bằng chứng cho thấy SSD vật lý hỏng.
-
-Nếu cần giữ dữ liệu, hướng phù hợp là dùng Windows `chkdsk` hoặc cân nhắc `ntfsfix`. Nhưng trong trường hợp SSD sẽ được xóa để cài Linux, sửa filesystem NTFS cũ không còn cần thiết.
-
----
-
-## 2. Xóa sạch SSD cũ
-
-Chỉ làm khi chắc chắn không cần dữ liệu trên SSD.
-
-Unmount các partition nếu đang mount:
-
-```bash
-sudo umount /dev/sda1 2>/dev/null
-sudo umount /dev/sda3 2>/dev/null
-sudo umount /dev/sda4 2>/dev/null
-```
-
-Xóa filesystem signatures và partition table:
+Wipe partition table cũ:
 
 ```bash
 sudo wipefs -a /dev/sda
+# -a → xoá tất cả filesystem signature và partition table
+# ⚠️ DESTRUCTIVE — chỉ chạy khi chắc chắn đúng device
 ```
 
-Output thực tế xác nhận GPT và protective MBR đã bị xóa:
-
-```text
-/dev/sda: 8 bytes were erased ... (gpt)
-/dev/sda: 8 bytes were erased ... (gpt)
-/dev/sda: 2 bytes were erased ... (PMBR)
-/dev/sda: calling ioctl to re-read partition table: Success
-```
-
-Kiểm tra:
+Kiểm tra sau wipe:
 
 ```bash
 lsblk -f
+# SSD phải trống, không còn partition
 ```
 
-Sau khi wipe thành công, kết quả đã thấy:
-
-```text
-sda
-
-nvme0n1
-├─nvme0n1p1 vfat  /boot/efi
-└─nvme0n1p2 ext4  /
-```
-
-Tức SSD ngoài đã sạch, không còn partition cũ.
-
-### Caveat
-
-`wipefs -a /dev/sda` là thao tác destructive. Nếu chọn nhầm `/dev/nvme0n1`, có thể làm mất khả năng boot hoặc dữ liệu của hệ điều hành hiện tại.
-
-Trước mỗi thao tác dạng này nên chạy:
-
-```bash
-lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,MOUNTPOINTS
-```
-
-và xác nhận SSD bằng model/size, không chỉ bằng tên device.
-
----
-
-## 3. Layout nên dùng cho SSD Xubuntu
-
-Với SSD khoảng 120 GB và mục tiêu vừa desktop vừa home server, layout đơn giản là hợp lý:
-
-```text
-SSD ngoài
-├─ EFI System Partition   ~1 GiB   FAT32
-└─ root                   còn lại  ext4
-```
-
-Trong installer có thể thành:
-
-```text
-/dev/sda1   FAT32   /boot/efi
-/dev/sda2   ext4    /
-```
-
-Không cần tạo ngay:
-
-- swap partition riêng;
-- `/home` riêng;
-- LVM;
-- full-disk encryption.
-
-Lý do: ưu tiên boot đơn giản, portable, dễ cứu và dễ debug. Swapfile có thể cấu hình sau nếu cần.
-
----
-
-## 4. Chuẩn bị ISO Xubuntu trên máy Ubuntu hiện tại
-
-Mục tiêu là cài lên SSD ngoài mà không cần USB installer.
-
-ISO dự kiến sử dụng trong context này:
-
-```text
-xubuntu-26.04.1-desktop-amd64.iso
-```
-
-Kiểm tra file đã tải:
-
-```bash
-ls -lh ~/Downloads/xubuntu*.iso
-```
-
-Nếu tải bằng terminal:
+### Bước 2 — Tải và verify ISO
 
 ```bash
 cd ~/Downloads
 wget https://cdimage.ubuntu.com/xubuntu/releases/26.04/release/xubuntu-26.04.1-desktop-amd64.iso
-```
+# wget → download với progress bar
 
-### Verify checksum
-
-Nên tải `SHA256SUMS` từ cùng thư mục release:
-
-```bash
-cd ~/Downloads
 wget https://cdimage.ubuntu.com/xubuntu/releases/26.04/release/SHA256SUMS
+# Tải file checksum từ cùng thư mục release
 ```
 
-Tính checksum:
+Verify:
 
 ```bash
 sha256sum xubuntu-26.04.1-desktop-amd64.iso
-```
+# So sánh output với nội dung SHA256SUMS
 
-So với:
-
-```bash
 grep xubuntu-26.04.1-desktop-amd64.iso SHA256SUMS
+# Hai hash phải trùng nhau
 ```
 
-Hai SHA256 phải trùng nhau trước khi dùng ISO.
+### Bước 3 — Chuẩn bị GRUB loopback boot
 
-> Trong context hiện tại chưa có kết quả checksum thực tế, nên bước verify này vẫn cần thực hiện.
-
----
-
-## 5. Boot ISO trực tiếp từ GRUB, không cần USB
-
-Đây là kế hoạch được chọn vì máy hiện tại đã chạy Ubuntu và SSD ngoài cần được dùng làm target cài đặt.
-
-### Copy ISO vào `/boot/iso`
+Copy ISO vào `/boot/iso`:
 
 ```bash
 sudo mkdir -p /boot/iso
 sudo cp ~/Downloads/xubuntu-26.04.1-desktop-amd64.iso /boot/iso/
+# -p → tạo parent directory nếu chưa có
 ```
 
-Kiểm tra:
-
-```bash
-ls -lh /boot/iso/
-```
-
-### Kiểm tra kernel/initrd trong ISO
-
-Không nên đoán path nếu release thay đổi. Có thể mount ISO để kiểm tra:
+Kiểm tra path kernel/initrd trong ISO:
 
 ```bash
 sudo mkdir -p /mnt/xubuntu-iso
+sudo mount -o loop ~/Downloads/xubuntu-26.04.1-desktop-amd64.iso /mnt/xubuntu-iso
+# -o loop → mount file như block device
 
-sudo mount -o loop   ~/Downloads/xubuntu-26.04.1-desktop-amd64.iso   /mnt/xubuntu-iso
-```
-
-Kiểm tra:
-
-```bash
 ls -lh /mnt/xubuntu-iso/casper/
-```
+# Cần thấy: vmlinuz và initrd
 
-Cần thấy các file tương ứng:
-
-```text
-vmlinuz
-initrd
-```
-
-Unmount:
-
-```bash
 sudo umount /mnt/xubuntu-iso
 ```
 
-### Lấy UUID của root filesystem hiện tại
+Lấy UUID của root filesystem đang chạy:
 
 ```bash
 findmnt -no UUID /
+# -n → no header
+# -o UUID → chỉ in UUID column
 ```
 
-Trong lần kiểm tra trước, UUID root là:
+Ghi lại UUID này — sẽ dùng trong GRUB entry.
 
-```text
-98932dcd-2480-4f44-a832-f3c0d39e4635
-```
-
-Không nên hardcode từ note nếu môi trường đã thay đổi; chạy lại lệnh trước khi cấu hình GRUB.
-
-### Backup GRUB custom entry
+Backup và thêm GRUB entry:
 
 ```bash
 sudo cp /etc/grub.d/40_custom /etc/grub.d/40_custom.bak
-```
 
-Mở:
-
-```bash
 sudo nano /etc/grub.d/40_custom
 ```
 
-Entry đã được đề xuất:
+Thêm entry (thay UUID bằng giá trị thực tế):
 
 ```text
 menuentry "Install Xubuntu from ISO" {
     set isofile="/boot/iso/xubuntu-26.04.1-desktop-amd64.iso"
-    search --no-floppy --fs-uuid --set=root 98932dcd-2480-4f44-a832-f3c0d39e4635
+    search --no-floppy --fs-uuid --set=root <UUID-cua-root-filesystem>
     loopback loop ($root)$isofile
     linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=$isofile quiet splash ---
     initrd (loop)/casper/initrd
 }
 ```
 
-Thay UUID bằng giá trị thực tế nếu khác.
-
-Kiểm tra syntax:
+Kiểm tra syntax và update GRUB:
 
 ```bash
 sudo grub-script-check /etc/grub.d/40_custom
-```
+# Không có output = không có lỗi syntax
 
-Nếu không có lỗi:
-
-```bash
 sudo update-grub
+# Tạo lại /boot/grub/grub.cfg từ các file trong /etc/grub.d/
 ```
 
-### Trạng thái xác minh
+### Bước 4 — Boot vào Xubuntu Live
 
-Phần boot ISO qua GRUB **chưa được thực thi thành công trong context hiện tại**. Đây là procedure dự kiến, cần kiểm chứng khi làm thực tế.
-
----
-
-## 6. Boot vào Xubuntu Live
-
-Giữ SSD Kingmax cắm vào laptop rồi:
+Giữ SSD cắm vào laptop:
 
 ```bash
 sudo reboot
 ```
 
-Trong GRUB chọn:
-
-```text
-Install Xubuntu from ISO
-```
-
-Nếu menu GRUB bị ẩn, thử `Esc` trong lúc khởi động.
-
-Khi Xubuntu Live lên, ưu tiên vào live environment trước thay vì cài ngay.
-
-Kiểm tra lại ổ:
+Trong GRUB chọn "Install Xubuntu from ISO". Khi Xubuntu Live lên, xác minh lại ổ trước khi cài:
 
 ```bash
 lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,MOUNTPOINTS
 ```
 
-Phải xác định rõ đâu là:
+Xác định rõ Kingmax SSD (USB, 120 GB) và ổ NVMe laptop. Không dựa hoàn toàn vào tên `/dev/sda` vì có thể thay đổi.
+
+### Bước 5 — Partition và cài Xubuntu
+
+Chọn **manual/custom partitioning** trong installer. Trên SSD Kingmax tạo:
 
 ```text
-ổ hệ điều hành laptop
-Kingmax SSD 120 GB qua USB
+EFI System Partition:
+  Size:       1024 MB
+  Filesystem: FAT32
+  Role:       EFI System Partition
+  Mount:      /boot/efi
+
+Root:
+  Size:       phần còn lại (~111 GB)
+  Filesystem: ext4
+  Mount:      /
+  Format:     Yes
 ```
 
-Không dựa hoàn toàn vào việc Kingmax chắc chắn vẫn là `/dev/sda`.
+Nếu installer hỏi nơi cài bootloader, target phải là SSD Kingmax, không phải ổ NVMe.
 
----
+Trước khi bấm Install, đọc kỹ summary. Chỉ các partition thuộc Kingmax SSD được phép tạo/format.
 
-## 7. Partition SSD trong installer
+### Bước 6 — Boot trên Mac mini
 
-Chọn manual partitioning / custom partitioning nếu installer cung cấp.
-
-Trên **SSD Kingmax**, tạo:
-
-### EFI System Partition
-
-Khoảng:
-
-```text
-1024 MB
-```
-
-Thiết lập:
-
-```text
-Filesystem: FAT32
-Role/type:  EFI System Partition
-Mount:      /boot/efi
-```
-
-### Root
-
-Dùng phần dung lượng còn lại:
-
-```text
-Filesystem: ext4
-Mount:      /
-Format:     Yes
-```
-
-Kết quả mong muốn:
-
-```text
-Kingmax SSD
-├─ FAT32 EFI ~1 GiB → /boot/efi
-└─ ext4 còn lại     → /
-```
-
-### Bootloader
-
-Nếu installer hỏi nơi cài bootloader, target phải là **SSD Kingmax**, không phải ổ NVMe của laptop.
-
-Mục tiêu là SSD phải self-contained: EFI và root đều nằm trên SSD đó.
-
----
-
-## 8. Checkpoint quan trọng trước khi bấm Install
-
-Trước xác nhận ghi partition, đọc kỹ summary.
-
-Chỉ các partition thuộc Kingmax SSD mới được:
-
-- tạo;
-- xóa;
-- format;
-- dùng làm EFI/root.
-
-Không được thấy ổ hệ thống hiện tại như:
-
-```text
-/dev/nvme0n1p1
-/dev/nvme0n1p2
-```
-
-bị format.
-
-Nếu summary không đủ rõ để chắc chắn, dừng lại và kiểm tra bằng `lsblk` hoặc chụp màn hình trước khi tiếp tục.
-
-### Rủi ro thực tế
-
-Việc cài Xubuntu lên SSD ngoài **không tự làm hỏng ổ hiện tại**. Rủi ro xuất hiện khi:
-
-- chọn nhầm disk để erase/format;
-- dùng nhầm EFI partition trên ổ hiện tại;
-- installer ghi bootloader/EFI vào ổ nội bộ thay vì SSD ngoài.
-
----
-
-## 9. Cài xong: khi nào tháo SSD
-
-Đây là bước dễ quên nhưng quan trọng.
-
-Sau khi installer hoàn tất:
-
-1. Không rút SSD khi máy còn chạy.
-2. Shutdown laptop hoàn toàn:
+Sau khi cài xong, shutdown laptop và rút SSD:
 
 ```bash
 sudo poweroff
 ```
 
-3. Đợi máy tắt hẳn.
-4. Rút box SSD Kingmax khỏi laptop.
-5. Mang SSD sang Mac mini 2014.
+Cắm SSD + bàn phím USB vào Mac mini. Bật Mac mini và giữ ngay:
+- Bàn phím Apple: `Option ⌥`
+- Bàn phím PC: `Alt`
 
-Flow:
+Startup Manager xuất hiện, chọn **EFI Boot** (là EFI trên SSD Kingmax).
 
-```text
-Installer hoàn tất
-      ↓
-Power off laptop
-      ↓
-Rút Kingmax SSD
-      ↓
-Cắm vào Mac mini
-```
+## 5. Bẫy lỗi và Những lần thử thất bại
 
----
+**Bẫy 1 — Chọn nhầm disk khi partition**
 
-## 10. Boot SSD trên Mac mini 2014
+Nếu chọn nhầm `/dev/nvme0n1` để format, mất khả năng boot laptop. Không thể undo. Luôn xác nhận đúng device bằng SIZE + MODEL + TRAN trước thao tác destructive.
 
-Chuẩn bị:
+**Bẫy 2 — NTFS dirty flag gây mount fail**
 
-- Kingmax SSD + box USB;
-- màn hình;
-- bàn phím USB cho lần boot đầu tiên.
-
-Bàn phím Apple:
+SSD Kingmax ban đầu có partition NTFS bị dirty flag sau khi eject không đúng cách trên Windows. Lỗi khi mount:
 
 ```text
-Option ⌥
+ntfs3(sda3): volume is dirty and "force" flag is not set!
 ```
 
-Bàn phím Windows/PC:
+Vì SSD sẽ được wipe để cài Linux, không cần sửa NTFS — wipefs và cài lại là đủ. Nếu cần giữ dữ liệu, phải dùng Windows `chkdsk` hoặc `ntfsfix` (không phải `ntfsfix -n`).
 
-```text
-Alt ≈ Option
-```
+**Bẫy 3 — Dùng Bluetooth keyboard cho Startup Manager**
 
-### Procedure
+Firmware Mac mini 2014 kết nối Bluetooth chậm — Startup Manager có thể xuất hiện và biến mất trước khi keyboard được nhận. Phải dùng bàn phím USB cho lần boot đầu.
 
-1. Cắm SSD vào Mac mini.
-2. Cắm bàn phím USB.
-3. Giữ `Option` hoặc `Alt`.
-4. Bật Mac mini.
-5. Tiếp tục giữ phím cho đến khi Startup Manager xuất hiện.
-6. Chọn:
+**Bẫy 4 — GRUB loopback boot thất bại do path kernel/initrd sai**
 
-```text
-EFI Boot
-```
+Path `/casper/vmlinuz` và `/casper/initrd` phải được verify bằng cách mount ISO thực tế — không hardcode từ hướng dẫn cũ vì có thể thay đổi giữa các release.
 
-Nếu EFI trên SSD được tạo đúng, Mac mini có thể boot GRUB/Xubuntu từ đó.
+**Bẫy 5 — EFI partition nằm trên ổ nội bộ thay vì SSD**
 
-### Không có bàn phím thì sao?
+Installer đôi khi tự động chọn EFI partition đang có sẵn (trên NVMe) thay vì tạo mới trên SSD target. Kết quả: Xubuntu boot được khi cắm cả laptop lẫn Mac mini, nhưng không boot được khi chỉ có SSD Kingmax — vì EFI nằm trên NVMe.
 
-Lần boot đầu không nên phụ thuộc vào Bluetooth keyboard vì firmware có thể chưa kết nối Bluetooth đủ sớm.
+## 6. Kiểm tra và Xác minh
 
-Giải pháp đơn giản và đáng tin cậy nhất là mượn một bàn phím USB trong vài phút.
-
-Sau khi Xubuntu đã boot ổn và máy được cấu hình làm server/headless, bàn phím không còn cần thường xuyên.
-
-> Việc Mac mini cụ thể nhận `EFI Boot` và boot thành công từ SSD vẫn cần kiểm chứng trên phần cứng thật.
-
----
-
-## 11. Xác nhận Xubuntu thật sự chạy độc lập từ SSD
-
-Sau khi boot trên Mac mini:
+Sau khi Xubuntu boot trên Mac mini:
 
 ```bash
 lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,MOUNTPOINTS
-```
+# Xác minh SSD Kingmax là disk đang chứa / và /boot/efi
 
-Kiểm tra root:
-
-```bash
 findmnt /
-```
+# SOURCE phải là partition trên Kingmax SSD
 
-Kiểm tra EFI:
-
-```bash
 findmnt /boot/efi
+# SOURCE phải là partition FAT32 trên Kingmax SSD
 ```
 
-Mục tiêu:
+Kỳ vọng:
 
 ```text
-/          → partition ext4 trên Kingmax SSD
-/boot/efi  → partition FAT32 EFI trên Kingmax SSD
+/          → /dev/sda2 (hoặc tên khác, nhưng thuộc Kingmax)
+/boot/efi  → /dev/sda1 (FAT32, thuộc Kingmax)
 ```
 
-Ví dụ:
-
-```text
-/dev/sda2  /
-/dev/sda1  /boot/efi
-```
-
-Nhưng tên device có thể đổi thành `/dev/sdb` hoặc tên khác. Điều quan trọng là cả hai partition thuộc đúng SSD Kingmax.
-
-Nếu `/boot/efi` trỏ sang ổ khác, installation chưa hoàn toàn self-contained.
-
----
-
-## 12. Kiểm tra hardware trên Mac mini trước khi biến thành server
-
-Sau khi boot được, kiểm tra trước:
+Kiểm tra network:
 
 ```bash
 nmcli device
-```
-
-```bash
 ip link
+lspci -nn | grep -i network
+# Xác minh card network nào được nhận, có cần driver bổ sung không
 ```
 
-```bash
-uname -a
-```
-
-Có thể xem PCI hardware:
+Update hệ thống (nếu có Internet qua Ethernet):
 
 ```bash
-lspci -nn
-```
-
-Sau đó update:
-
-```bash
-sudo apt update
-sudo apt full-upgrade
-```
-
-Reboot:
-
-```bash
+sudo apt update && sudo apt full-upgrade
 sudo reboot
 ```
 
-Với Mac mini 2014, Wi‑Fi có thể cần xử lý riêng tùy chipset/driver thực tế. Không nên giả định trước khi xem hardware thật.
+## 7. Nguồn tham khảo
 
----
-
-## 13. Chỉ sau khi OS ổn mới dựng home server
-
-Thứ tự nên dùng:
-
-```text
-Xubuntu boot ổn trên Mac mini
-        ↓
-Ethernet/Wi-Fi hoạt động
-        ↓
-Update hệ thống
-        ↓
-SSH
-        ↓
-Docker
-        ↓
-VPN/Tailscale hoặc Cloudflare Tunnel
-        ↓
-Các service self-hosted
-```
-
-Không cần cài Docker hay toàn bộ server stack trên laptop trước khi xác nhận hệ điều hành chạy ổn trên Mac mini.
-
----
-
-## 14. Những điều đã xác minh và chưa xác minh
-
-### Đã xác minh trên máy hiện tại
-
-- Kingmax SSD được nhận qua USB.
-- SSD có dung lượng danh nghĩa 120 GB.
-- Kernel nhận bridge USB Realtek RTL9201.
-- NTFS `/dev/sda3` từng bị dirty flag.
-- `ntfsfix -n` cho thấy MFT/MFTMirr và alternate boot sector OK.
-- `wipefs -a /dev/sda` đã xóa GPT/PMBR thành công.
-- `lsblk -f` sau đó cho thấy SSD không còn partition.
-- Ubuntu hiện tại vẫn chạy trên `nvme0n1`.
-
-### Chưa được kiểm chứng thực tế trong context này
-
-- SHA256 của ISO Xubuntu.
-- GRUB entry boot ISO có boot thành công hay không.
-- Installer có tạo EFI hoàn toàn trên SSD ngoài hay không.
-- SSD có xuất hiện dưới `EFI Boot` trên Mac mini 2014 hay không.
-- Wi‑Fi/Ethernet và các driver cụ thể trên Mac mini.
-- Xubuntu boot ổn định lâu dài từ box USB hiện tại.
-
-Những mục này nên được kiểm tra tuần tự thay vì coi là đã hoàn thành.
-
----
-
-## 15. Checklist ngắn khi làm lại
-
-```text
-[ ] Xác định SSD bằng NAME + SIZE + MODEL + TRAN
-[ ] Xác nhận không cần dữ liệu cũ
-[ ] SSD đã wipe sạch
-[ ] Tải đúng Xubuntu ISO
-[ ] Verify SHA256
-[ ] Boot ISO
-[ ] Trong Live: xác định lại Kingmax SSD
-[ ] Tạo EFI FAT32 ~1 GiB trên SSD
-[ ] Tạo ext4 / trên phần còn lại
-[ ] Không format ổ hệ điều hành hiện tại
-[ ] Bootloader/EFI thuộc SSD ngoài
-[ ] Cài hoàn tất
-[ ] Power off laptop
-[ ] Rút SSD
-[ ] Cắm SSD + bàn phím USB vào Mac mini
-[ ] Giữ Option/Alt khi bật máy
-[ ] Chọn EFI Boot
-[ ] Kiểm tra findmnt / và /boot/efi
-[ ] Kiểm tra network/hardware
-[ ] Update hệ thống
-[ ] Sau đó mới cấu hình home server
-```
-
-## Nguồn/đầu mối đã dùng trong quá trình xử lý
-
-- Xubuntu official release directory: `cdimage.ubuntu.com/xubuntu/releases/26.04/release/`
-- Ubuntu Community Help Wiki về boot ISO bằng GRUB 2 (`Grub2/ISOBoot`).
-- Output thực tế của `lsblk`, `blkid`, `ntfsfix`, `dmesg` và `wipefs` trên máy hiện tại.
+- Xubuntu release directory: https://cdimage.ubuntu.com/xubuntu/releases/26.04/release/  
+  *(tải ISO và SHA256SUMS từ đây)*
+- Ubuntu Community Help Wiki — GRUB2 ISO Boot: https://help.ubuntu.com/community/Grub2/ISOBoot  
+  *(giải thích cơ chế loopback và cú pháp GRUB entry)*
+- Output thực tế của `lsblk`, `blkid`, `ntfsfix -n`, `dmesg`, `wipefs` trên máy hiện tại  
+  *(evidence trực tiếp, không phải chỉ documentation)*
+- Ubuntu Community Help Wiki — UEFI boot: https://help.ubuntu.com/community/UEFI  
+  *(background về EFI System Partition và UEFI boot process)*
