@@ -46,10 +46,18 @@
             </div>
         </div>
 
-        <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-            <i class="ti ti-chevron-up"></i>
-            <span>Back to Top</span>
-        </button>
+        <div class="post-footer-right-actions">
+            {{- with .RawContent -}}
+            <button type="button" class="btn-copy-markdown btn-copy-markdown-footer" data-markdown="{{ . | base64Encode }}" title="Sao chép toàn bộ nội dung Markdown" aria-label="Sao chép Markdown">
+                <i class="ti ti-markdown"></i>
+                <span>Copy Markdown</span>
+            </button>
+            {{- end -}}
+            <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                <i class="ti ti-chevron-up"></i>
+                <span>Back to Top</span>
+            </button>
+        </div>
     </div>
 
     {{- /* Divider */ -}}
@@ -181,6 +189,58 @@
 
 [theme=dark] .post-footer-share .share-icons a:hover {
     color: #f8fafc !important;
+}
+
+.post-footer-right-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-copy-markdown-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--clr-text-2, #475569);
+    background-color: transparent;
+    border: 1px solid var(--clr-border, #e2e8f0);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+}
+
+[theme=dark] .btn-copy-markdown-footer {
+    color: var(--clr-text-2, #94a3b8);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.btn-copy-markdown-footer:hover {
+    color: var(--brand-primary, #4d74eb);
+    border-color: var(--brand-primary, #4d74eb);
+    background-color: rgba(77, 116, 235, 0.08);
+}
+
+[theme=dark] .btn-copy-markdown-footer:hover {
+    color: var(--brand-primary-dark, #60a5fa);
+    border-color: var(--brand-primary-dark, #60a5fa);
+    background-color: rgba(96, 165, 250, 0.12);
+}
+
+.btn-copy-markdown-footer.copied {
+    color: #16a34a !important;
+    border-color: #16a34a !important;
+    background-color: rgba(22, 163, 74, 0.1) !important;
+}
+
+[theme=dark] .btn-copy-markdown-footer.copied {
+    color: #4ade80 !important;
+    border-color: #4ade80 !important;
+    background-color: rgba(74, 222, 128, 0.12) !important;
 }
 
 .back-to-top-btn {

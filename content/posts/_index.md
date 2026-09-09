@@ -1,4 +1,4 @@
 ---
-title: "Notes"
-description: "Các bài viết chia sẻ kiến thức, ghi chú kỹ thuật, góc nhìn và kinh nghiệm thực chiến."
+title: "Posts"
+description: "Các bài viết chuyên sâu, nghiên cứu kỹ thuật và góc nhìn công nghệ."
 ---

@@ -30,8 +30,6 @@
 
         {{- /* Meta: Clean Editorial Byline */ -}}
         <div class="post-meta">
-            <span class="post-author">By <strong>{{ $params.author | default .Site.Params.Author.name }}</strong></span>
-            &nbsp;·&nbsp;
             <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "Jan 02, 2006" }}</time>
             &nbsp;·&nbsp;
             <span>{{ .ReadingTime }} min read</span>
@@ -42,6 +40,13 @@
             {{- end -}}
             {{- with delimit $categories " " -}}
                 &nbsp;·&nbsp;{{ . | safeHTML }}
+            {{- end -}}
+            {{- with .RawContent -}}
+                &nbsp;·&nbsp;
+                <button type="button" class="btn-copy-markdown" data-markdown="{{ . | base64Encode }}" title="Sao chép toàn bộ nội dung Markdown" aria-label="Sao chép Markdown">
+                    <i class="ti ti-markdown"></i>
+                    <span>Copy Markdown</span>
+                </button>
             {{- end -}}
         </div>
 

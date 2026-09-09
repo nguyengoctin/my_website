@@ -160,6 +160,71 @@
               document.body.removeChild(textarea);
             }
           });
+
+          {{- /* Full Article Copy Markdown Handler */ -}}
+          document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.btn-copy-markdown');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var rawBase64 = btn.getAttribute('data-markdown');
+            if (!rawBase64) return;
+
+            var markdownText = '';
+            try {
+              var binaryString = atob(rawBase64);
+              var bytes = new Uint8Array(binaryString.length);
+              for (var i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+              }
+              markdownText = new TextDecoder('utf-8').decode(bytes);
+            } catch (err) {
+              console.error('Base64 decode failed', err);
+              return;
+            }
+
+            var icon = btn.querySelector('i');
+            var textSpan = btn.querySelector('span');
+            var originalText = textSpan ? textSpan.textContent : '';
+
+            function showSuccess() {
+              btn.classList.add('copied');
+              if (icon) icon.className = 'ti ti-check';
+              if (textSpan) textSpan.textContent = 'Copied!';
+              setTimeout(function() {
+                btn.classList.remove('copied');
+                if (icon) icon.className = 'ti ti-markdown';
+                if (textSpan) textSpan.textContent = originalText;
+              }, 2000);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+              navigator.clipboard.writeText(markdownText).then(showSuccess).catch(function() {
+                fallbackCopyText(markdownText, showSuccess);
+              });
+            } else {
+              fallbackCopyText(markdownText, showSuccess);
+            }
+
+            function fallbackCopyText(text, cb) {
+              var textarea = document.createElement('textarea');
+              textarea.value = text;
+              textarea.style.position = 'fixed';
+              textarea.style.left = '-9999px';
+              textarea.style.top = '0';
+              document.body.appendChild(textarea);
+              textarea.focus();
+              textarea.select();
+              try {
+                document.execCommand('copy');
+                if (cb) cb();
+              } catch (err) {
+                console.error('Copy fallback failed', err);
+              }
+              document.body.removeChild(textarea);
+            }
+          });
         </script>
 
         {{- /* Theme Sync Patch: keep html[theme] in sync with body[theme] for CSS tokens */ -}}

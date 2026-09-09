@@ -321,6 +321,69 @@ h1,
       border-radius: 2px;
     }
   }
+
+  .btn-copy-markdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.55rem;
+    font-family: var(--font-mono) !important;
+    font-size: 0.78rem !important;
+    font-weight: var(--fw-medium) !important;
+    color: var(--clr-text-2) !important;
+    background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.03)) !important;
+    border: 1px solid var(--clr-border, #e2e8f0) !important;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.4;
+    transition: all 0.15s ease-in-out;
+    vertical-align: middle;
+
+    [theme=dark] & {
+      background-color: rgba(255, 255, 255, 0.04) !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    i {
+      font-size: 1.05em;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--brand-primary, #4d74eb) !important;
+      border-color: var(--brand-primary, #4d74eb) !important;
+      background-color: rgba(77, 116, 235, 0.08) !important;
+      transform: translateY(-1px);
+
+      [theme=dark] & {
+        color: var(--brand-primary-dark, #60a5fa) !important;
+        border-color: var(--brand-primary-dark, #60a5fa) !important;
+        background-color: rgba(96, 165, 250, 0.12) !important;
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--clr-focus) !important;
+      outline-offset: 2px;
+    }
+
+    &.copied {
+      color: #16a34a !important;
+      border-color: #16a34a !important;
+      background-color: rgba(22, 163, 74, 0.1) !important;
+
+      [theme=dark] & {
+        color: #4ade80 !important;
+        border-color: #4ade80 !important;
+        background-color: rgba(74, 222, 128, 0.12) !important;
+      }
+    }
+  }
 }
 
 h2 {
@@ -432,7 +495,7 @@ hr {
 
 .header-wrapper {
   justify-content: space-between !important;
-  gap: 1rem !important;
+  gap: 1.25rem !important;
   border-bottom: 1px solid var(--clr-border) !important;
   max-width: var(--shell-width, 750px) !important;
   margin: 0 auto !important;
@@ -440,7 +503,8 @@ hr {
   padding-right: 1rem !important;
 
   .menu {
-    flex: unset !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
     text-align: right !important;
     display: flex !important;
     align-items: center !important;
@@ -453,6 +517,7 @@ hr {
     font-weight: var(--fw-bold) !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
+    margin-right: 1rem !important;
     overflow: visible !important;
 
     .header-title-pre,
@@ -525,10 +590,10 @@ hr {
   }
 
   .menu .menu-item {
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     font-weight: var(--fw-medium) !important;
-    padding: 0 0.6rem !important;
-    margin: 0 0.15rem !important;
+    padding: 0 0.45rem !important;
+    margin: 0 0.1rem !important;
     color: var(--clr-text-2) !important;
     background: transparent !important;
     transition: color 0.15s ease, background-color 0.15s ease !important;
