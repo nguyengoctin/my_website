@@ -12,6 +12,7 @@ tags:
   - mac-mini
 ---
 
+> [!TLDR]
 > Trên Mac mini 2014, Xubuntu nhận Broadcom BCM4360 `14e4:43a0` qua PCI nhưng không tạo WLAN interface. Nguyên nhân là kernel không load đúng driver — không phải hardware lỗi. Giải pháp là cài `broadcom-sta-dkms` (module `wl`) đúng PCI ID, đảm bảo DKMS biên dịch module khớp kernel đang chạy.
 
 ## 1. Bản chất

@@ -12,6 +12,7 @@ tags:
   - workspace
 ---
 
+> [!TLDR]
 > Ubuntu/GNOME được cấu hình theo workflow 4 fixed workspaces: `Super+1..4` để chuyển workspace, `Super+Shift+1..4` để đưa cửa sổ sang workspace tương ứng. Với 2 màn hình xếp dọc, workspace chỉ đổi trên primary display — màn hình phụ giữ nguyên cửa sổ tham chiếu khi đổi workspace.
 
 ## 1. Bản chất

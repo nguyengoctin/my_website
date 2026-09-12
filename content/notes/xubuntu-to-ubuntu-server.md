@@ -11,6 +11,7 @@ tags:
   - linux
 ---
 
+> [!TLDR]
 > Xubuntu và Ubuntu Server cùng nền Ubuntu — không bắt buộc phải cài lại để có một máy headless. Cách an toàn là cài bộ package `ubuntu-server`, đổi systemd default target sang `multi-user.target`, kiểm tra mọi dịch vụ chạy ổn sau reboot, rồi mới cân nhắc gỡ XFCE. Thứ tự này cho phép rollback nhanh nếu có vấn đề.
 
 ## 1. Bản chất

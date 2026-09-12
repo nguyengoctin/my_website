@@ -12,6 +12,7 @@ tags:
   - ufw
 ---
 
+> [!TLDR]
 > Home server này được chuẩn hóa theo hướng đơn giản và dễ vận hành: Ubuntu làm host, Tailscale làm đường quản trị private, UFW chặn incoming mặc định, Docker chạy application layer, còn dữ liệu bền vững được tách sang `/data`. Trước khi thêm nhiều service, cần ưu tiên boot persistence, disk health, SSH, firewall, logging và backup.
 
 ## Trạng thái đã xác minh

@@ -1,5 +1,5 @@
 // ==========================================================
-// 1. QUOTE & BLOCKQUOTE STYLING (No-Card Modern Minimalist)
+// 1. QUOTE & BLOCKQUOTE STYLING (Editorial Bordered Minimalist)
 // ==========================================================
 blockquote,
 .custom-quote {
@@ -11,9 +11,10 @@ blockquote,
   color: var(--clr-text) !important;
   text-align: left !important;
   border: none !important;
-  padding: 0.5rem 0 !important;
-  margin: 1.8em 0 !important;
-  font-size: 1.18rem !important;
+  border-left: 3px solid #cbd5e1 !important;
+  padding: 0.35rem 0 0.35rem 1.25rem !important;
+  margin: 1.6em 0 !important;
+  font-size: 1.15rem !important;
   font-weight: var(--fw-medium) !important;
   line-height: var(--lh-relaxed) !important;
   font-style: normal !important;
@@ -21,10 +22,14 @@ blockquote,
   border-radius: 0 !important;
   box-shadow: none !important;
 
+  [theme=dark] & {
+    border-left-color: #475569 !important;
+  }
+
   .quote-content {
     margin: 0 !important;
     font-family: var(--font-serif) !important;
-    font-size: 1.18rem !important;
+    font-size: 1.15rem !important;
     font-weight: var(--fw-medium) !important;
     line-height: var(--lh-relaxed) !important;
     color: var(--clr-text) !important;
@@ -36,28 +41,28 @@ blockquote,
       font-family: Georgia, "Times New Roman", "Playfair Display", serif !important;
       font-style: normal !important;
       font-weight: 700 !important;
-      font-size: 2.8rem !important;
+      font-size: 2.2rem !important;
       line-height: 0 !important;
       color: var(--brand-primary, #4d74eb) !important;
-      opacity: 0.28 !important;
+      opacity: 0.35 !important;
       display: inline-block !important;
       user-select: none !important;
       transition: opacity 0.2s ease, color 0.2s ease !important;
 
       [theme=dark] & {
         color: var(--brand-primary-dark, #60a5fa) !important;
-        opacity: 0.35 !important;
+        opacity: 0.4 !important;
       }
     }
 
     .quote-open {
-      margin-right: 0.35rem !important;
-      vertical-align: -0.22em !important;
+      margin-right: 0.3rem !important;
+      vertical-align: -0.2em !important;
     }
 
     .quote-close {
-      margin-left: 0.35rem !important;
-      vertical-align: -0.35em !important;
+      margin-left: 0.3rem !important;
+      vertical-align: -0.32em !important;
     }
 
     .quote-text {

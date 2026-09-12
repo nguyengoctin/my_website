@@ -13,6 +13,7 @@ tags:
   - storage
 ---
 
+> [!TLDR]
 > Mac mini Late 2014 đã được chuyển thành home server chạy Xubuntu. Trạng thái hiện tại: boot từ SSD Kingmax 120 GB qua USB, HDD Apple 1 TB bên trong đã format ext4 và mount tại `/data`, SSH và Tailscale hoạt động ổn định sau reboot headless. Docker chưa cài.
 
 ## 1. Bản chất

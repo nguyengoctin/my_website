@@ -11,6 +11,7 @@ tags:
   - ptyxis
 ---
 
+> [!TLDR]
 > Trên Ubuntu 26.04, stack terminal tối giản là Ptyxis làm terminal mặc định, Bash làm shell, fzf/zoxide/ripgrep/bat làm bộ CLI nhỏ, và Starship làm prompt. Kitty đã được gỡ, GNOME Terminal giữ lại làm fallback. `.bashrc` chỉ chứa initialization guard — không alias đè command Unix chuẩn.
 
 ## 1. Bản chất

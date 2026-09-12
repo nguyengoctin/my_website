@@ -11,6 +11,7 @@ tags:
   - cli
 ---
 
+> [!TLDR]
 > Trên Ubuntu 26.04, stack terminal tối giản cho dev là **Ptyxis + Bash + fzf + zoxide + ripgrep + bat**. Starship và eza chỉ thêm khi có pain point cụ thể. tmux chủ yếu đáng dùng cho SSH và session server dài hạn. Không cần Zsh hay shell framework nếu chưa có nhu cầu rõ ràng.
 
 ## 1. Bản chất

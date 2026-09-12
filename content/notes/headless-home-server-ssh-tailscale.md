@@ -12,6 +12,7 @@ tags:
   - headless
 ---
 
+> [!TLDR]
 > Mô hình home server cá nhân đơn giản nhất là SSH để quản trị, Tailscale để kết nối từ Internet mà không public port 22, và SSH key để xác thực. Server chỉ thực sự "headless-ready" khi sau reboot — không cắm màn hình, không cắm bàn phím — vẫn SSH vào được từ xa.
 
 ## 1. Bản chất

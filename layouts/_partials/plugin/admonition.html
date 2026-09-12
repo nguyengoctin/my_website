@@ -1,4 +1,5 @@
-{{- $type := .Type | default "note" -}}
+{{- $rawType := lower (.Type | default "note") -}}
+{{- $type := $rawType -}}
 {{- $inner := .Inner -}}
 
 {{- $aliases := dict "summary" "abstract" -}}
@@ -17,7 +18,13 @@
 {{- $aliases  = dict "error" "danger" | merge $aliases -}}
 {{- $aliases  = dict "cite" "quote" | merge $aliases -}}
 {{- $type = index $aliases $type | default $type -}}
-{{- $title := .Title | default (T $type | default (title $type)) -}}
+{{- $defaultTitle := title $type -}}
+{{- if eq $rawType "tldr" -}}
+    {{- $defaultTitle = "TL;DR" -}}
+{{- else if eq $type "abstract" -}}
+    {{- $defaultTitle = "Tóm tắt" -}}
+{{- end -}}
+{{- $title := .Title | default (T $type | default $defaultTitle) -}}
 
 {{- $iconMap := dict "note" "ti ti-pencil" -}}
 {{- $iconMap  = dict "abstract" "ti ti-list-details" | merge $iconMap -}}

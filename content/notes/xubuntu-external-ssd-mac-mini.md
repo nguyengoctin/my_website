@@ -13,6 +13,7 @@ tags:
   - uefi
 ---
 
+> [!TLDR]
 > Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
 
 ## 1. Bản chất

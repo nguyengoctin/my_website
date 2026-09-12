@@ -11,6 +11,7 @@ tags:
   - smartmontools
 ---
 
+> [!TLDR]
 > Baseline quan trọng nhất: giữ service private qua Tailscale, để Docker chỉ khởi động sau khi Tailscale thật sự online, giới hạn log để tránh đầy SSD, dùng `smartd` để theo dõi disk và gửi cảnh báo ra Telegram. Những phần chưa cần thiết như backup automation hay auto-update container nên để sau khi có dữ liệu và workload thực sự đáng bảo vệ.
 
 ## Trạng thái hệ thống đã xác minh

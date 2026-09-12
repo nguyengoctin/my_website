@@ -13,6 +13,7 @@ tags:
   - security
 ---
 
+> [!TLDR]
 > Với Django production, ưu tiên correctness và failure mode thật: database integrity → transaction → authorization → security → query behavior → migration → background jobs → observability. Những quy tắc như “phải có `services.py`”, “fat model/thin view” hay “luôn dùng ViewSet” chỉ nên xem là convention hoặc lựa chọn kiến trúc theo context.
 
 ## Context áp dụng

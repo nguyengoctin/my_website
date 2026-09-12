@@ -81,7 +81,7 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Kỹ sư Công nghệ Thông tin – Chuyên ngành Hệ thống Thông tin</a>
+        <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Kỹ sư Công nghệ Thông tin – Hệ thống Thông tin</a>
       </h3>
       <div class="timeline-desc">
         Tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Khoa Công nghệ Thông tin</a>. Nền tảng chuyên sâu về kỹ thuật phần mềm, cấu trúc dữ liệu, thiết kế cơ sở dữ liệu quan hệ và phân tích nghiệp vụ hệ thống.
@@ -116,10 +116,10 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS – Quản trị Bối cảnh Tuyển dụng Cá nhân</a> <span class="status-badge status-warning">Đang phát triển</span>
+        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS</a> <span class="status-badge status-warning">Đang phát triển</span>
       </h3>
       <div class="timeline-desc">
-        Ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
+        Quản trị bối cảnh tuyển dụng cá nhân – ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Product Design</span>
@@ -144,7 +144,7 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6 – Nền tảng Đặt món Trực tuyến (Zalo Mini App)</a>
+        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6</a>
       </h3>
       <div class="timeline-desc">
         Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
@@ -176,10 +176,10 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/lexi-ai-english-tutor/">Lexi – Trợ lý Luyện nói Tiếng Anh với AI</a>
+        <a href="/posts/lexi-ai-english-tutor/">Lexi</a>
       </h3>
       <div class="timeline-desc">
-        Gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
+        Trợ lý gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
       </div>
       <div class="timeline-tags">
         <span class="timeline-tag">Next.js</span>
@@ -208,7 +208,7 @@ title: "Nguyen Ngoc Tin"
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bilingual-movie-learning-platform/">Nền tảng Học Tiếng Anh qua Phim Song ngữ</a>
+        <a href="/posts/bilingual-movie-learning-platform/">Học Tiếng Anh qua Phim Song ngữ</a>
       </h3>
       <div class="timeline-desc">
         Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
