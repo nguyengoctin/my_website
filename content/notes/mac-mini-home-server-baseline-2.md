@@ -11,8 +11,8 @@ tags:
   - smartmontools
 ---
 
-> [!TLDR]
-> Baseline quan trọng nhất: giữ service private qua Tailscale, để Docker chỉ khởi động sau khi Tailscale thật sự online, giới hạn log để tránh đầy SSD, dùng `smartd` để theo dõi disk và gửi cảnh báo ra Telegram. Những phần chưa cần thiết như backup automation hay auto-update container nên để sau khi có dữ liệu và workload thực sự đáng bảo vệ.
+> [!NOTE]
+> **Tóm tắt:** Baseline quan trọng nhất: giữ service private qua Tailscale, để Docker chỉ khởi động sau khi Tailscale thật sự online, giới hạn log để tránh đầy SSD, dùng `smartd` để theo dõi disk và gửi cảnh báo ra Telegram. Những phần chưa cần thiết như backup automation hay auto-update container nên để sau khi có dữ liệu và workload thực sự đáng bảo vệ.
 
 ## Trạng thái hệ thống đã xác minh
 
@@ -26,8 +26,8 @@ RAM: 7.6 GiB
 Swap: 4 GiB
 Timezone: Asia/Ho_Chi_Minh
 Network chính: Wi-Fi
-User: ngoctin
-Tailscale IP: 100.124.234.108
+User: <server-user>
+Tailscale IP: <tailscale-server-ip>
 ```
 
 Storage hiện tại:
@@ -42,7 +42,7 @@ Lưu ý: tên `/dev/sda` và `/dev/sdb` đã đổi sau reboot so với một s�
 Mount persistent của `/data` trong `/etc/fstab`:
 
 ```fstab
-UUID=45f76020-9e21-4e50-a9c4-24af82c1c8bd /data ext4 defaults,nofail 0 2
+UUID=<data-filesystem-uuid> /data ext4 defaults,nofail 0 2
 ```
 
 Cấu trúc dữ liệu:
@@ -61,7 +61,7 @@ Cấu trúc dữ liệu:
 └── sync
 ```
 
-Các thư mục trên thuộc `ngoctin:ngoctin`.
+Các thư mục trên thuộc `<server-user>:<server-user>`.
 
 ## Convention triển khai Docker
 
@@ -75,7 +75,7 @@ Cgroup: systemd, v2
 Logging driver: json-file
 ```
 
-`ngoctin` đã thuộc group `docker`, nên:
+`<server-user>` đã thuộc group `docker`, nên:
 
 ```bash
 docker ps
@@ -101,13 +101,13 @@ services:
     container_name: hello-web
     restart: unless-stopped
     ports:
-      - "100.124.234.108:8080:80"
+      - "<tailscale-server-ip>:8080:80"
 ```
 
 Đã xác minh từ một máy khác trong Tailnet rằng:
 
 ```text
-http://100.124.234.108:8080
+http://<tailscale-server-ip>:8080
 ```
 
 trả HTTP 200.
@@ -126,7 +126,7 @@ Persistent data:
   /data/docker/appdata/uptime-kuma
 
 Port:
-  100.124.234.108:3001
+  <tailscale-server-ip>:3001
 ```
 
 n8n:
@@ -139,7 +139,7 @@ Persistent data:
   /data/docker/appdata/n8n
 
 Port:
-  100.124.234.108:5678
+  <tailscale-server-ip>:5678
 ```
 
 n8n hiện dùng HTTP bên trong Tailnet nên cấu hình:
@@ -152,7 +152,7 @@ Cấu hình này chỉ phù hợp với trạng thái hiện tại. Nếu n8n ch
 
 ## Docker log rotation
 
-Docker dùng `json-file`, nhưng đã có rotation ở daemon level:
+Docker daemon đã được cấu hình `json-file` với rotation mặc định:
 
 ```json
 {
@@ -170,13 +170,17 @@ File:
 /etc/docker/daemon.json
 ```
 
-Ý nghĩa vận hành:
+Ý nghĩa của daemon default này:
 
-- mỗi log file tối đa khoảng 10 MB;
-- giữ tối đa 3 file cho mỗi container;
-- tránh trường hợp container ghi log nhiều làm đầy SSD hệ điều hành.
+- container được tạo với config này có `max-size=10m`;
+- giữ tối đa `3` log file theo `max-file`;
+- giới hạn mức tăng của `json-file` log so với để mặc định không rotation.
 
-Không cần thay đổi thêm khi chưa có bằng chứng cấu hình hiện tại gây vấn đề.
+Docker chỉ áp dụng daemon logging option mới cho **container được tạo sau khi config thay đổi**. Material hiện có chưa chứng minh Uptime Kuma và n8n đã được recreate sau thời điểm cấu hình, nên cần inspect từng container trước khi coi rotation đã có hiệu lực trên chúng:
+
+```bash
+docker inspect --format '{{.Name}} {{json .HostConfig.LogConfig}}' uptime-kuma n8n
+```
 
 ## Race condition khi reboot: Docker lên trước Tailscale
 
@@ -193,7 +197,7 @@ Containers: không chạy
 Docker log có lỗi:
 
 ```text
-failed to bind host port 100.124.234.108:3001/tcp:
+failed to bind host port <tailscale-server-ip>:3001/tcp:
 cannot assign requested address
 ```
 
@@ -202,7 +206,7 @@ cannot assign requested address
 Service được bind trực tiếp vào:
 
 ```text
-100.124.234.108
+<tailscale-server-ip>
 ```
 
 nhưng Docker khởi động trước khi Tailscale hoàn tất việc đưa IP này lên interface `tailscale0`.
@@ -303,7 +307,7 @@ tailscale-online.target
   ↓
 docker.service
   ↓
-containers bind vào 100.124.234.108
+containers bind vào <tailscale-server-ip>
 ```
 
 Không dùng `sleep 10` hoặc delay cứng vì dependency systemd đã giải quyết đúng bản chất race condition.
@@ -313,7 +317,7 @@ Không dùng `sleep 10` hoặc delay cứng vì dependency systemd đã giải q
 Sau reboot lần hai:
 
 - `/data` mount thành công;
-- `tailscale0` có `100.124.234.108`;
+- `tailscale0` có `<tailscale-server-ip>`;
 - SSH qua Tailscale hoạt động;
 - Docker active;
 - Uptime Kuma và n8n tự chạy lại;
@@ -707,7 +711,7 @@ backup
 sync
 ```
 
-thì Ethernet đáng cân nhắc vì ổn định hơn cho server 24/7.
+thì Ethernet đáng cân nhắc để tránh phụ thuộc vào chất lượng sóng và nhiễu của Wi-Fi.
 
 ## Những việc chưa hoàn tất
 
@@ -794,4 +798,5 @@ tailscale-online.target
 
 Nguồn chính thức đã được dùng trong quá trình xác minh behavior của Tailscale/systemd:
 
-- Tailscale CLI reference, phần liên quan `tailscale wait` và cơ chế chờ Tailscale online: https://tailscale.com/docs/reference/tailscale-cli
+- [Tailscale CLI reference, phần liên quan `tailscale wait` và cơ chế chờ Tailscale online](https://tailscale.com/docs/reference/tailscale-cli)
+- [Docker `json-file` logging driver](https://docs.docker.com/engine/logging/drivers/json-file/)

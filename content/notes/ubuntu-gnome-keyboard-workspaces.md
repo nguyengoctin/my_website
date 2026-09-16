@@ -12,10 +12,10 @@ tags:
   - workspace
 ---
 
-> [!TLDR]
-> Ubuntu/GNOME được cấu hình theo workflow 4 fixed workspaces: `Super+1..4` để chuyển workspace, `Super+Shift+1..4` để đưa cửa sổ sang workspace tương ứng. Với 2 màn hình xếp dọc, workspace chỉ đổi trên primary display — màn hình phụ giữ nguyên cửa sổ tham chiếu khi đổi workspace.
+> [!NOTE]
+> **Tóm tắt:** Ubuntu/GNOME được cấu hình theo workflow 4 fixed workspaces: `Super+1..4` để chuyển workspace, `Super+Shift+1..4` để đưa cửa sổ sang workspace tương ứng. Với 2 màn hình xếp dọc, workspace chỉ đổi trên primary display — màn hình phụ giữ nguyên cửa sổ tham chiếu khi đổi workspace.
 
-## 1. Bản chất
+## Bản chất
 
 GNOME mặc định dùng **dynamic workspaces** — workspace tự tạo khi có cửa sổ mới và tự xoá khi trống. Với keyboard-first workflow nhiều màn hình, điều này bất tiện vì vị trí workspace liên tục thay đổi.
 
@@ -32,7 +32,7 @@ Secondary: DP-2  — 1920x1080@60 — scale 1.0   — vị trí (0, 864)
 Terminal mặc định: x-terminal-emulator → kitty (sau đó chuyển sang Ptyxis)
 ```
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao fixed workspaces thay vì dynamic?**
 
@@ -49,7 +49,7 @@ Không bật option này, cả hai màn hình đổi workspace cùng lúc — m�
 - Không thể chuyển workspace độc lập trên từng màn hình — nếu cần multi-context trên cả hai màn hình, workflow này không phù hợp.
 - GNOME Shell và Ubuntu Dock đều có binding riêng cho `Super+1..4` — phải bỏ cả hai trước khi gán workspace shortcut.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 Phím Super+1 được nhấn
@@ -71,15 +71,13 @@ GNOME Shell nhận keybinding
 
 Ba lớp binding có thể xung đột với cùng một phím:
 
-| Lớp | gsettings schema | Binding mặc định |
-|---|---|---|
-| GNOME Shell | `org.gnome.shell.keybindings` | `switch-to-application-1..4` = Super+1..4 |
-| Ubuntu Dock | `org.gnome.shell.extensions.dash-to-dock` | `app-hotkey-1..4` = Super+1..4 |
-| Window Manager | `org.gnome.desktop.wm.keybindings` | `switch-to-workspace-*` = chưa có |
+- **Lớp:** GNOME Shell — **gsettings schema:** `org.gnome.shell.keybindings` — **Binding mặc định:** `switch-to-application-1..4` = Super+1..4
+- **Lớp:** Ubuntu Dock — **gsettings schema:** `org.gnome.shell.extensions.dash-to-dock` — **Binding mặc định:** `app-hotkey-1..4` = Super+1..4
+- **Lớp:** Window Manager — **gsettings schema:** `org.gnome.desktop.wm.keybindings` — **Binding mặc định:** `switch-to-workspace-*` = chưa có
 
 Phải dọn cả hai lớp trên trước khi lớp WM có thể nhận Super+1..4.
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Chuyển sang fixed workspaces
 
@@ -173,7 +171,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Super
 # screensaver → lock screen, giữ cả Super+L (chuẩn) lẫn Super+Escape (binding cũ)
 ```
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Chỉ bỏ GNOME Shell binding mà quên Ubuntu Dock**
 
@@ -195,7 +193,7 @@ Không cần. Chỉ cần bỏ `app-hotkey-1..4` và `app-shift-hotkey-1..4` tro
 
 Fcitx5/Lotus dùng `Ctrl+Space`, `Super+Space`, `Shift+Super+Space`, `Shift_L` — không xung đột với workflow trên. Không cần đụng vào.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 Xác minh bằng `gsettings` sau khi cấu hình:
 
@@ -238,13 +236,13 @@ Wayland không cho mô phỏng keyboard tự động — cần test thủ công:
 sh ~/gnome-keybindings-rollback-20260903.sh
 # Script rollback toàn bộ keybinding đã thay đổi
 
-sh /home/ngoctin/.config/gnome-keyboard-monitor-backup-20260903/rollback-monitor-keybindings.sh
+sh <home>/.config/gnome-keyboard-monitor-backup-20260903/rollback-monitor-keybindings.sh
 # Rollback riêng phần move-to-monitor
 ```
 
 Sau rollback nên đăng xuất và đăng nhập lại nếu GNOME Shell chưa nhận đủ thay đổi.
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
 - GNOME Shell keybindings — gsettings schema: `org.gnome.shell.keybindings`  
   *(dùng `gsettings list-keys org.gnome.shell.keybindings` để xem toàn bộ)*

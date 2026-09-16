@@ -11,10 +11,10 @@ tags:
   - ptyxis
 ---
 
-> [!TLDR]
-> Trên Ubuntu 26.04, stack terminal tối giản là Ptyxis làm terminal mặc định, Bash làm shell, fzf/zoxide/ripgrep/bat làm bộ CLI nhỏ, và Starship làm prompt. Kitty đã được gỡ, GNOME Terminal giữ lại làm fallback. `.bashrc` chỉ chứa initialization guard — không alias đè command Unix chuẩn.
+> [!NOTE]
+> **Tóm tắt:** Trên Ubuntu 26.04, stack terminal tối giản là Ptyxis làm terminal mặc định, Bash làm shell, fzf/zoxide/ripgrep/bat làm bộ CLI nhỏ, và Starship làm prompt. Kitty đã được gỡ, GNOME Terminal giữ lại làm fallback. `.bashrc` chỉ chứa initialization guard — không alias đè command Unix chuẩn.
 
-## 1. Bản chất
+## Bản chất
 
 Stack này giải quyết hai vấn đề:
 
@@ -35,7 +35,7 @@ kitty: đã gỡ
 starship: 1.25.1 tại /usr/local/bin/starship
 ```
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao Ptyxis thay vì Kitty?**
 
@@ -54,7 +54,7 @@ Bash là shell mặc định của Ubuntu và phần lớn server/container. Scr
 - Giữ GNOME Terminal làm fallback tốn thêm ~20MB — chấp nhận được vì đây là recovery option.
 - Starship thêm một bước khởi tạo vào mỗi shell session — nếu không cần Git context trong prompt, native Bash PS1 đơn giản hơn.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 Super+Enter được nhấn
@@ -90,7 +90,7 @@ fi
 # Nếu không có starship, block này bị bỏ qua hoàn toàn
 ```
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Cài Ptyxis và bộ CLI
 
@@ -99,7 +99,7 @@ sudo apt update
 sudo apt install ptyxis fzf zoxide ripgrep bat
 # fzf → fuzzy finder, Ctrl+R history search
 # zoxide → smart directory jumping với lệnh z
-# ripgrep (rg) → recursive text/code search nhanh
+# ripgrep (rg) → recursive text/code search
 # bat → cat với syntax highlighting và line numbers
 ```
 
@@ -183,7 +183,7 @@ bash -n ~/.profile
 # Không có output = không có lỗi syntax
 ```
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Gỡ Kitty mà quên cập nhật terminal list**
 
@@ -201,7 +201,7 @@ Trong sandbox, `bash -lc` báo lỗi `Operation not permitted`. Trace cho thấy
 
 `fzf --bash` là cách mới hơn (fzf >= 0.48). Trên Ubuntu 26.04 với `fzf` từ APT, nên dùng cách source file `completion.bash` và `key-bindings.bash` vì đây là cách được package maintainer hỗ trợ.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 Kiểm tra fzf và zoxide trong Bash interactive:
 
@@ -258,11 +258,11 @@ cat ~/.config/ubuntu-xdg-terminals.list
 # Kỳ vọng: Ptyxis ở dòng đầu
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
-- Ubuntu 26.04 LTS release notes — terminal changes: https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/
-- Ubuntu Desktop — Change the default terminal: https://documentation.ubuntu.com/desktop/en/latest/how-to/change-the-default-terminal/  
+- [Ubuntu 26.04 LTS release notes — terminal changes](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/)
+- [Ubuntu Desktop — Change the default terminal](https://documentation.ubuntu.com/desktop/en/latest/how-to/change-the-default-terminal/)  
   *(mô tả cơ chế `ubuntu-xdg-terminals.list` chính thức)*
-- Starship documentation — Bash integration: https://starship.rs/guide/#step-2-set-up-your-shell-to-use-starship
-- fzf — Bash completion/key bindings: https://github.com/junegunn/fzf#setting-up-shell-integration
-- zoxide — Bash initialization: https://github.com/ajeetdsouza/zoxide#installation
+- [Starship documentation — Bash integration](https://starship.rs/guide/#step-2-set-up-your-shell-to-use-starship)
+- [fzf — Bash completion/key bindings](https://github.com/junegunn/fzf#setting-up-shell-integration)
+- [zoxide — Bash initialization](https://github.com/ajeetdsouza/zoxide#installation)

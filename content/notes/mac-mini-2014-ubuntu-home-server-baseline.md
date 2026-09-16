@@ -12,8 +12,11 @@ tags:
   - ufw
 ---
 
-> [!TLDR]
-> Home server này được chuẩn hóa theo hướng đơn giản và dễ vận hành: Ubuntu làm host, Tailscale làm đường quản trị private, UFW chặn incoming mặc định, Docker chạy application layer, còn dữ liệu bền vững được tách sang `/data`. Trước khi thêm nhiều service, cần ưu tiên boot persistence, disk health, SSH, firewall, logging và backup.
+> [!NOTE]
+> **Tóm tắt:** Home server này được chuẩn hóa theo hướng đơn giản và dễ vận hành: Ubuntu làm host, Tailscale làm đường quản trị private, UFW chặn incoming mặc định, Docker chạy application layer, còn dữ liệu bền vững được tách sang `/data`. Trước khi thêm nhiều service, cần ưu tiên boot persistence, disk health, SSH, firewall, logging và backup.
+
+> [!NOTE]
+> Đây là snapshot của baseline phần 1. Một số mục ở cuối file ghi trạng thái “chưa xác minh” đã được xử lý ở `mac-mini-home-server-baseline-2.md`; không nên đọc các checklist cũ như trạng thái hiện tại của server.
 
 ## Trạng thái đã xác minh
 
@@ -67,7 +70,7 @@ Tại thời điểm kiểm tra, RAM idle chỉ dùng khoảng `628 MiB`, còn k
 `/data` được mount bằng UUID trong `/etc/fstab`:
 
 ```fstab
-UUID=45f76020-9e21-4e50-a9c4-24af82c1c8bd /data ext4 defaults,nofail 0 2
+UUID=<data-filesystem-uuid> /data ext4 defaults,nofail 0 2
 ```
 
 Ý nghĩa thực tế của decision này:
@@ -79,8 +82,8 @@ UUID=45f76020-9e21-4e50-a9c4-24af82c1c8bd /data ext4 defaults,nofail 0 2
 Root filesystem và EFI trong `fstab`:
 
 ```fstab
-/dev/disk/by-uuid/a5dd75c0-e19d-4973-a2d9-76135202f03f / ext4 defaults 0 1
-/dev/disk/by-uuid/1F6C-FC99 /boot/efi vfat defaults 0 1
+/dev/disk/by-uuid/<root-filesystem-uuid> / ext4 defaults 0 1
+/dev/disk/by-uuid/<efi-filesystem-uuid> /boot/efi vfat defaults 0 1
 /swap.img none swap sw 0 0
 ```
 
@@ -106,12 +109,12 @@ Root filesystem và EFI trong `fstab`:
 Ownership:
 
 ```text
-/data                ngoctin:ngoctin
-/data/backups        ngoctin:ngoctin
-/data/docker         ngoctin:ngoctin
-/data/media          ngoctin:ngoctin
-/data/projects       ngoctin:ngoctin
-/data/sync           ngoctin:ngoctin
+/data                <server-user>:<server-user>
+/data/backups        <server-user>:<server-user>
+/data/docker         <server-user>:<server-user>
+/data/media          <server-user>:<server-user>
+/data/projects       <server-user>:<server-user>
+/data/sync           <server-user>:<server-user>
 /data/lost+found     root:root
 ```
 
@@ -338,13 +341,13 @@ tailscaled.service active (running)
 Tailscale IP của Mac mini tại thời điểm setup:
 
 ```text
-100.124.234.108
+<tailscale-server-ip>
 ```
 
 SSH client đã kết nối từ Tailnet IP:
 
 ```text
-100.113.175.1
+<tailscale-client-ip>
 ```
 
 Mental model được chọn:
@@ -450,7 +453,7 @@ wlp2s0   UP
 enp3s0f0 DOWN
 ```
 
-Ethernet vẫn là lựa chọn tốt hơn về độ ổn định và throughput nếu sau này chạy workload như Jellyfin, file sync hoặc backup lớn, nhưng Wi‑Fi hiện tại vẫn đủ để tiếp tục setup.
+Ethernet loại bỏ các biến số của Wi-Fi như chất lượng sóng và nhiễu, nên đáng cân nhắc nếu sau này chạy Jellyfin, file sync hoặc backup lớn. Wi-Fi hiện tại chưa có symptom buộc phải đổi.
 
 ## Docker Engine và Compose
 
@@ -513,10 +516,10 @@ Hello from Docker!
 
 ### Docker permissions
 
-User `ngoctin` đã được thêm vào group `docker`:
+User `<server-user>` đã được thêm vào group `docker`:
 
 ```bash
-sudo usermod -aG docker ngoctin
+sudo usermod -aG docker <server-user>
 newgrp docker
 ```
 
@@ -582,7 +585,7 @@ Ví dụ:
 
 ```yaml
 ports:
-  - "100.124.234.108:8080:80"
+  - "<tailscale-server-ip>:8080:80"
 ```
 
 thay vì:
@@ -595,7 +598,7 @@ ports:
 Mental model:
 
 ```text
-100.124.234.108:8080
+<tailscale-server-ip>:8080
         │
         ▼
 container:80
@@ -641,7 +644,7 @@ docker info | grep 'Logging Driver'
 systemctl is-active docker
 ```
 
-Trong context hiện tại chưa có output xác minh rằng config log rotation này đã được áp dụng, nên cần kiểm tra lại trước khi coi là hoàn tất.
+Tại thời điểm của phần 1, config này mới là đề xuất và chưa có output xác minh. Phần 2 ghi nhận daemon default đã được cấu hình. Tuy nhiên Docker chỉ áp dụng logging option mới cho container được tạo sau thay đổi; container cũ cần được inspect hoặc recreate trước khi kết luận từng container đang dùng rotation này.
 
 ## Compose test với Nginx
 
@@ -660,7 +663,7 @@ services:
     container_name: hello-web
     restart: unless-stopped
     ports:
-      - "100.124.234.108:8080:80"
+      - "<tailscale-server-ip>:8080:80"
 ```
 
 Validation:
@@ -684,13 +687,13 @@ docker compose down
 Browser từ client Tailscale đã truy cập thành công:
 
 ```text
-http://100.124.234.108:8080
+http://<tailscale-server-ip>:8080
 ```
 
 Nginx log xác nhận:
 
 ```text
-100.113.175.1 ... "GET / HTTP/1.1" 200
+<tailscale-client-ip> ... "GET / HTTP/1.1" 200
 ```
 
 `favicon.ico` trả `404` chỉ vì default nginx page không có favicon, không phải lỗi service.
@@ -736,7 +739,7 @@ services:
     container_name: uptime-kuma
     restart: unless-stopped
     ports:
-      - "100.124.234.108:3001:3001"
+      - "<tailscale-server-ip>:3001:3001"
     volumes:
       - /data/docker/appdata/uptime-kuma:/app/data
 ```
@@ -758,13 +761,13 @@ Lý do: một instance home server nhỏ chưa cần thêm PostgreSQL/MariaDB ch
 Truy cập private:
 
 ```text
-http://100.124.234.108:3001
+http://<tailscale-server-ip>:3001
 ```
 
 Một monitor HTTP có thể dùng để tự kiểm tra Uptime Kuma:
 
 ```text
-URL: http://100.124.234.108:3001
+URL: http://<tailscale-server-ip>:3001
 Heartbeat Interval: 60s
 ```
 
@@ -790,7 +793,7 @@ services:
     container_name: n8n
     restart: unless-stopped
     ports:
-      - "100.124.234.108:5678:5678"
+      - "<tailscale-server-ip>:5678:5678"
     environment:
       - TZ=Asia/Ho_Chi_Minh
       - GENERIC_TIMEZONE=Asia/Ho_Chi_Minh
@@ -802,10 +805,12 @@ services:
 Truy cập private:
 
 ```text
-http://100.124.234.108:5678
+http://<tailscale-server-ip>:5678
 ```
 
 `N8N_SECURE_COOKIE=false` chỉ được dùng vì n8n hiện đang truy cập qua HTTP trên Tailnet.
+
+Image dùng tag `latest`. Tag này không tự update container đang chạy, nhưng một lần pull/recreate sau này có thể resolve sang image khác. Material hiện có không lưu digest hoặc version cụ thể đã chạy tại thời điểm setup, nên note chưa đủ để tái tạo byte-for-byte deployment đó.
 
 Decision này phải được xem lại nếu n8n chuyển sang HTTPS, reverse proxy hoặc Cloudflare Tunnel. Khi có HTTPS, không nên tiếp tục giữ secure cookie bị tắt chỉ vì config cũ.
 
@@ -896,7 +901,7 @@ restart: unless-stopped
 
 chúng phải tự trở lại sau khi Docker daemon khởi động, trừ khi trước đó container đã bị stop chủ động.
 
-## Những việc chưa nên coi là hoàn tất
+## Những việc chưa hoàn tất ở cuối phần 1
 
 ### Backup
 
@@ -933,7 +938,7 @@ trên HDD `/dev/sda`.
 
 ### Wi-Fi
 
-Server hiện vẫn phụ thuộc Broadcom `wl` proprietary driver. Không cần thay đổi nếu ổn định, nhưng Ethernet nên được cân nhắc khi server bắt đầu làm file server, streaming hoặc backup thường xuyên.
+Server hiện vẫn phụ thuộc Broadcom `wl` proprietary driver. Không cần thay đổi khi chưa có symptom liên quan, nhưng Ethernet nên được cân nhắc khi server bắt đầu làm file server, streaming hoặc backup thường xuyên.
 
 ## Tooling hữu ích
 
@@ -972,14 +977,15 @@ Starship và zoxide là tiện ích UX, không phải server baseline. Cài khi 
 
 ## References
 
-- Docker Engine on Ubuntu: https://docs.docker.com/engine/install/ubuntu/
-- Docker Linux post-installation steps: https://docs.docker.com/engine/install/linux-postinstall/
-- Docker Compose on Linux: https://docs.docker.com/compose/install/linux/
-- Tailscale Linux install: https://tailscale.com/docs/install/linux
-- Tailscale Ubuntu/UFW guidance: https://tailscale.com/docs/how-to/secure-ubuntu-server-with-ufw
-- Tailscale firewall integration: https://tailscale.com/docs/integrations/firewalls
-- Ubuntu `sshd_config` manual: https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html
-- Ubuntu `systemd.mount` manual: https://manpages.ubuntu.com/manpages/resolute/man5/systemd.mount.5.html
-- Ubuntu `smartctl` manual: https://manpages.ubuntu.com/manpages/resolute/man8/smartctl.8.html
-- Uptime Kuma repository: https://github.com/louislam/uptime-kuma
-- n8n Docker installation: https://docs.n8n.io/hosting/installation/docker/
+- [Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Docker `json-file` logging driver](https://docs.docker.com/engine/logging/drivers/json-file/)
+- [Docker Linux post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/)
+- [Docker Compose on Linux](https://docs.docker.com/compose/install/linux/)
+- [Tailscale Linux install](https://tailscale.com/docs/install/linux)
+- [Tailscale Ubuntu/UFW guidance](https://tailscale.com/docs/how-to/secure-ubuntu-server-with-ufw)
+- [Tailscale firewall integration](https://tailscale.com/docs/integrations/firewalls)
+- [Ubuntu `sshd_config` manual](https://manpages.ubuntu.com/manpages/noble/man5/sshd_config.5.html)
+- [Ubuntu `systemd.mount` manual](https://manpages.ubuntu.com/manpages/resolute/man5/systemd.mount.5.html)
+- [Ubuntu `smartctl` manual](https://manpages.ubuntu.com/manpages/resolute/man8/smartctl.8.html)
+- [Uptime Kuma repository](https://github.com/louislam/uptime-kuma)
+- [n8n Docker installation](https://docs.n8n.io/hosting/installation/docker/)

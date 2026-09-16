@@ -13,10 +13,13 @@ tags:
   - uefi
 ---
 
-> [!TLDR]
-> Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
+> [!NOTE]
+> **Tóm tắt:** Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
 
-## 1. Bản chất
+> [!WARNING]
+> GRUB loopback boot từ ISO trong note này là procedure dự kiến và **chưa được xác minh hoạt động** trong material gốc. Các lệnh `wipefs` có thể xóa metadata của nhầm disk nếu device name khác environment đã ghi. Giữ note này như reference cho investigation, không coi toàn bộ flow là tutorial đã verify.
+
+## Bản chất
 
 **UEFI và EFI System Partition (ESP)** là cơ chế boot trên phần cứng hiện đại (kể cả Mac từ 2006 trở đi). Thay vì đọc MBR ở sector đầu ổ đĩa, firmware UEFI tìm EFI System Partition (FAT32, type `EF00`) và load file `.efi` trong đó để khởi động bootloader (GRUB trong trường hợp này).
 
@@ -32,7 +35,7 @@ SSD mục tiêu:     /dev/sda     → Kingmax 120 GB qua USB
 Mac mini:         Late 2014, hỗ trợ boot từ USB qua Startup Manager
 ```
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao không ghi ISO ra USB thông thường (dd/Balena Etcher)?**
 
@@ -51,7 +54,7 @@ Với SSD 120 GB và mục tiêu home server đơn giản, layout tối giản g
 - GRUB loopback boot từ ISO **chưa được xác minh hoạt động** trong context này — đây là procedure dự kiến, cần test thực tế.
 - SSD qua USB có thể chậm hơn SSD SATA nội bộ, nhưng trong thực tế thấy hiệu năng cải thiện đáng kể so với HDD SATA cũ của Mac mini.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 GRUB loopback boot flow:
@@ -96,9 +99,12 @@ Load GRUB từ SSD Kingmax EFI partition
 GRUB boot Xubuntu trên /dev/sda
 ```
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Xác minh và wipe SSD
+
+> [!WARNING]
+> `wipefs -a` phá hủy filesystem/partition signatures. Xác minh model, size và transport trước khi chạy; `/dev/sda` chỉ đúng với environment đã ghi trong note này.
 
 Luôn xác định ổ bằng nhiều thuộc tính, không chỉ tên:
 
@@ -270,7 +276,7 @@ Cắm SSD + bàn phím USB vào Mac mini. Bật Mac mini và giữ ngay:
 
 Startup Manager xuất hiện, chọn **EFI Boot** (là EFI trên SSD Kingmax).
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Chọn nhầm disk khi partition**
 
@@ -298,7 +304,7 @@ Path `/casper/vmlinuz` và `/casper/initrd` phải được verify bằng cách 
 
 Installer đôi khi tự động chọn EFI partition đang có sẵn (trên NVMe) thay vì tạo mới trên SSD target. Kết quả: Xubuntu boot được khi cắm cả laptop lẫn Mac mini, nhưng không boot được khi chỉ có SSD Kingmax — vì EFI nằm trên NVMe.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 Sau khi Xubuntu boot trên Mac mini:
 
@@ -336,13 +342,13 @@ sudo apt update && sudo apt full-upgrade
 sudo reboot
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
-- Xubuntu release directory: https://cdimage.ubuntu.com/xubuntu/releases/26.04/release/  
+- [Xubuntu release directory](https://cdimage.ubuntu.com/xubuntu/releases/26.04/release/)  
   *(tải ISO và SHA256SUMS từ đây)*
-- Ubuntu Community Help Wiki — GRUB2 ISO Boot: https://help.ubuntu.com/community/Grub2/ISOBoot  
+- [Ubuntu Community Help Wiki — GRUB2 ISO Boot](https://help.ubuntu.com/community/Grub2/ISOBoot)  
   *(giải thích cơ chế loopback và cú pháp GRUB entry)*
 - Output thực tế của `lsblk`, `blkid`, `ntfsfix -n`, `dmesg`, `wipefs` trên máy hiện tại  
   *(evidence trực tiếp, không phải chỉ documentation)*
-- Ubuntu Community Help Wiki — UEFI boot: https://help.ubuntu.com/community/UEFI  
+- [Ubuntu Community Help Wiki — UEFI boot](https://help.ubuntu.com/community/UEFI)  
   *(background về EFI System Partition và UEFI boot process)*

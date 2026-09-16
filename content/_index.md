@@ -47,7 +47,7 @@ title: "Nguyen Ngoc Tin"
       </div>
     </div>
     <div class="timeline-right">
-      <h3 class="timeline-title">Thực tập sinh Phát triển Ứng dụng Cloud</h3>
+      <h3 class="timeline-title">Generative AI Developer Intern</h3>
       <div class="timeline-desc">
         Phát triển ứng dụng serverless hướng sự kiện trên nền tảng AWS, thiết kế kiến trúc backend Lambda với Python và tích hợp mô hình AI qua Amazon Bedrock.
       </div>
@@ -76,23 +76,16 @@ title: "Nguyen Ngoc Tin"
       <img src="/images/sgu-logo.webp" alt="Saigon University Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org"><a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a></span>
-        <span class="timeline-time">2021 — Jun 2026</span>
+        <span class="timeline-time">2021 — Aug 2026</span>
       </div>
     </div>
     <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Kỹ sư Công nghệ Thông tin – Hệ thống Thông tin</a>
-      </h3>
+    <h3 class="timeline-title"> <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener"> Kỹ sư Công nghệ Thông tin </a> </h3>
       <div class="timeline-desc">
-        Tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener">Khoa Công nghệ Thông tin</a>. Nền tảng chuyên sâu về kỹ thuật phần mềm, cấu trúc dữ liệu, thiết kế cơ sở dữ liệu quan hệ và phân tích nghiệp vụ hệ thống.
+        Chuyên ngành Hệ thống Thông tin, tập trung vào cơ sở dữ liệu, phân tích dữ liệu và hệ hỗ trợ quyết định.
+Tốt nghiệp tháng 8 năm 2026.
       </div>
       <div class="timeline-tags">
-        <span class="timeline-tag">Hệ thống Thông tin</span>
-        <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">Java</span>
-        <span class="timeline-tag">C++</span>
-        <span class="timeline-tag">PostgreSQL</span>
-        <span class="timeline-tag">Linux</span>
       </div>
     </div>
   </div>

@@ -13,10 +13,13 @@ tags:
   - storage
 ---
 
-> [!TLDR]
-> Mac mini Late 2014 đã được chuyển thành home server chạy Xubuntu. Trạng thái hiện tại: boot từ SSD Kingmax 120 GB qua USB, HDD Apple 1 TB bên trong đã format ext4 và mount tại `/data`, SSH và Tailscale hoạt động ổn định sau reboot headless. Docker chưa cài.
+> [!NOTE]
+> **Tóm tắt:** Mac mini Late 2014 đã được chuyển thành home server chạy Xubuntu. Trạng thái hiện tại: boot từ SSD Kingmax 120 GB qua USB, HDD Apple 1 TB bên trong đã format ext4 và mount tại `/data`, SSH và Tailscale hoạt động ổn định sau reboot headless. Docker chưa cài.
 
-## 1. Bản chất
+> [!NOTE]
+> Đây là snapshot lịch sử tại `2026-09-09T17:00:00+07:00`. Các cụm “hiện tại” và checklist “chưa làm” bên dưới chỉ mô tả state ở thời điểm đó; những baseline sau đã chuyển host sang Ubuntu, cài Docker và bổ sung hardening/monitoring.
+
+## Bản chất
 
 Đây là note tham chiếu trạng thái thực tế của hệ thống — không phải tutorial từ đầu. Mục đích là ghi lại những gì đã làm, lý do quyết định từng bước, và trạng thái hiện tại để tiếp tục setup.
 
@@ -40,7 +43,7 @@ SSD 120 GB → Xubuntu, Docker Engine, application binaries
 HDD 1 TB   → /data (media, downloads, backups, Docker persistent data)
 ```
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao boot từ SSD ngoài (USB) thay vì dùng HDD nội bộ?**
 
@@ -48,7 +51,7 @@ Mac mini 2014 dùng HDD SATA 1 TB — I/O chậm cho system workload. SSD dù qu
 
 **Tại sao giữ ext4 cho HDD thay vì ZFS hay btrfs?**
 
-Mục tiêu đơn giản: một partition ext4 duy nhất chiếm toàn bộ 1 TB, mount tại `/data`. ext4 ổn định, được Ubuntu hỗ trợ tốt, không cần RAID hay snapshot ở giai đoạn này. ZFS hoặc btrfs sẽ có giá trị hơn khi có nhiều disk và cần RAID/snapshot.
+Mục tiêu đơn giản: một partition ext4 duy nhất chiếm toàn bộ 1 TB, mount tại `/data`. ext4 được Ubuntu hỗ trợ trực tiếp và đủ cho setup một data disk không cần RAID hay snapshot ở giai đoạn này. ZFS hoặc btrfs sẽ có giá trị hơn khi có nhiều disk và cần RAID/snapshot.
 
 **Tại sao dùng UUID trong `/etc/fstab` thay vì `/dev/sda1`?**
 
@@ -59,7 +62,7 @@ Thứ tự nhận disk có thể thay đổi giữa các lần boot — đặc b
 - SSD qua USB có overhead hơn SSD nội bộ, nhưng với workload server thông thường (SSH, Docker, file serving) không đáng kể.
 - Chỉ một disk lưu dữ liệu — không có redundancy. Nếu HDD hỏng, mất dữ liệu. Backup strategy là phần cần làm tiếp theo.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 Boot flow Mac mini:
@@ -101,7 +104,7 @@ Mount /dev/sdb1 tại /data
 
 `nofail` trong fstab options đảm bảo boot không bị block nếu HDD không được nhận — server vẫn lên và SSH được, chỉ là `/data` không có.
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Thiết lập đã hoàn thành — SSH và Tailscale
 
@@ -116,6 +119,9 @@ lsblk -o NAME,SIZE,MODEL,TRAN,FSTYPE,LABEL,MOUNTPOINTS
 # Phân biệt rõ SSD Kingmax (USB, 120 GB) và HDD Apple (SATA, ~1 TB)
 # Không dựa chỉ vào tên /dev/sda hay /dev/sdb
 ```
+
+> [!WARNING]
+> Các lệnh `wipefs`, `parted` và `mkfs.ext4` bên dưới phá hủy partition/filesystem trên disk đích. Phải xác minh disk bằng model, size và transport; không copy nguyên `/dev/sda` sang máy khác.
 
 **Xóa partition table cũ của HDD (macOS APFS layout):**
 
@@ -223,7 +229,7 @@ sudo reboot
 SSH lại:
 
 ```bash
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 ```
 
 ```bash
@@ -233,33 +239,10 @@ df -h /data
 # Device name có thể đổi (sda1 → sdb1) nhưng mount vẫn đúng nhờ UUID
 ```
 
-### Bước tiếp theo — Cài Docker Engine
+### Bước tiếp theo ở thời điểm snapshot — Docker Engine
 
-```bash
-# Cài Docker theo script chính thức (chỉ sau khi storage đã xác minh)
-curl -fsSL https://get.docker.com | sh
-sudo usermod -aG docker <user>
-# usermod -aG → thêm user vào group docker
-# Cần logout và login lại để group change có hiệu lực
-```
-
-Test Docker:
-
-```bash
-docker run --rm hello-world
-# --rm → xoá container sau khi chạy xong
-```
-
-Xác minh Docker sau reboot:
-
-```bash
-sudo reboot
-# SSH lại và kiểm tra:
-systemctl is-active docker
-docker ps
-```
-
-## 5. Bẫy lỗi và Những lần thử thất bại
+Docker chưa được cài khi note này được ghi. Setup thực tế ở baseline sau dùng repository chính thức của Docker cho Ubuntu và đã verify `docker.service`, Compose và `hello-world`. Vì vậy không giữ planned `curl | sh` trong snapshot này như procedure hiện hành; khi cần cài lại, dùng installation guide chính thức và note baseline mới hơn.
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — mount -a báo "mount point does not exist"**
 
@@ -281,7 +264,7 @@ Mở quyền 777 cho `/data` nghĩa là mọi process, mọi user trên máy đ�
 
 Cài Portainer, Jellyfin, qBittorrent, Nextcloud cùng lúc mà không verify từng service sau reboot — khi có sự cố không biết service nào gây ra. Thứ tự đúng: cài Docker → test container → verify sau reboot → cài service đầu tiên → verify → tiếp tục.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 Checklist trạng thái hiện tại:
 
@@ -313,15 +296,15 @@ Checklist những gì chưa làm:
 [ ] UID/GID management cho Docker volumes
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
 - fstab man page: `man fstab`  
   *(giải thích đầy đủ các field và mount options)*
-- systemd fstab integration: https://www.freedesktop.org/software/systemd/man/systemd.mount.html  
+- [systemd fstab integration](https://www.freedesktop.org/software/systemd/man/systemd.mount.html)  
   *(giải thích `nofail`, `x-systemd.automount` và các option nâng cao)*
-- Docker Engine installation — Linux: https://docs.docker.com/engine/install/ubuntu/  
+- [Docker Engine installation — Linux](https://docs.docker.com/engine/install/ubuntu/)  
   *(script chính thức, tránh dùng `docker.io` từ APT vì thường là version cũ)*
-- parted documentation: https://www.gnu.org/software/parted/manual/  
+- [parted documentation](https://www.gnu.org/software/parted/manual/)  
   *(reference cho GPT partitioning và mkpart syntax)*
 - Các note liên quan trong cùng project:
   - [`headless-home-server-ssh-tailscale`](/notes/headless-home-server-ssh-tailscale/) — SSH và Tailscale setup chi tiết

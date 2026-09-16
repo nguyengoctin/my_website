@@ -12,8 +12,8 @@ tags:
   - rsync
 ---
 
-> [!TLDR]
-> Với một home server đơn giản chỉ có một HDD dữ liệu, cách triển khai hiệu quả là giữ media thành thư viện chuẩn trên `/data/media/tv`, mount read-only vào Jellyfin container, dùng `Shows` làm loại library cho TV series, và truy cập từ xa qua Tailscale thay vì public port trực tiếp.
+> [!NOTE]
+> **Tóm tắt:** Với một home server đơn giản chỉ có một HDD dữ liệu, cách triển khai hiệu quả là giữ media thành thư viện chuẩn trên `/data/media/tv`, mount read-only vào Jellyfin container, dùng `Shows` làm loại library cho TV series, và truy cập từ xa qua Tailscale thay vì public port trực tiếp.
 
 ## Trạng thái cuối cùng
 
@@ -70,7 +70,7 @@ Server:
 Hardware: Apple Mac mini Late 2014 (Macmini7,1)
 OS: Ubuntu 26.04.1 LTS
 Kernel: Linux 7.0.0-31-generic
-User: ngoctin
+User: <server-user>
 UID: 1000
 GID: 1000
 ```
@@ -91,10 +91,10 @@ Media cuối cùng:
 Quyền thư mục đã xác minh:
 
 ```text
-drwxr-xr-x ngoctin ngoctin /data/media/tv
+drwxr-xr-x <server-user> <server-user> /data/media/tv
 ```
 
-User `ngoctin` thuộc group `docker`, nên có thể chạy Docker CLI không cần `sudo`.
+User `<server-user>` thuộc group `docker`, nên có thể chạy Docker CLI không cần `sudo`.
 
 Tailscale đã được cài và server có thể được truy cập qua tailnet. SSH đã được cấu hình key-only từ trước.
 
@@ -142,7 +142,7 @@ Mac mini
 
 Port `8096` là cổng HTTP mặc định mà Jellyfin lắng nghe trong setup này.
 
-Với người khác, nên share riêng node `macmini` bằng Tailscale Machine Sharing thay vì cho họ tham gia toàn bộ tailnet. Người xem vẫn nên có một Jellyfin user riêng.
+Với người khác, nên share riêng node `<server-hostname>` bằng Tailscale Machine Sharing thay vì cho họ tham gia toàn bộ tailnet. Người xem vẫn nên có một Jellyfin user riêng.
 
 ---
 
@@ -195,7 +195,7 @@ du -sh videos/*
 Trên server:
 
 ```bash
-ssh macmini
+ssh <server-hostname>
 df -h /data
 ```
 
@@ -214,11 +214,11 @@ Chạy từ laptop tại thư mục chứa `videos/` và `subtitles/`:
 ```bash
 rsync -avh --info=progress2 --partial \
   videos/ \
-  macmini:/data/media/tv-import/videos/
+  <server-hostname>:/data/media/tv-import/videos/
 
 rsync -avh --info=progress2 --partial \
   subtitles/bilingual/VTT/ \
-  macmini:/data/media/tv-import/subtitles/
+  <server-hostname>:/data/media/tv-import/subtitles/
 ```
 
 Các option đáng nhớ:
@@ -260,8 +260,8 @@ find /data/media/tv-import/subtitles -type f | wc -l
 Có thể chạy dry-run checksum comparison từ laptop:
 
 ```bash
-rsync -avhnc videos/ macmini:/data/media/tv-import/videos/
-rsync -avhnc subtitles/bilingual/VTT/ macmini:/data/media/tv-import/subtitles/
+rsync -avhnc videos/ <server-hostname>:/data/media/tv-import/videos/
+rsync -avhnc subtitles/bilingual/VTT/ <server-hostname>:/data/media/tv-import/subtitles/
 ```
 
 Trong đó:
@@ -327,6 +327,9 @@ Destination:
 ```
 
 Script sửa sau lỗi `seq -w`:
+
+> [!WARNING]
+> Các block bên dưới dùng `mv` để di chuyển file ngay trong filesystem. Trước khi chạy lại trên library khác, liệt kê source/destination và thử với một season nhỏ; không giả định layout mới giống hệt staging đã ghi trong note này.
 
 ```bash
 for i in $(seq 1 5); do
@@ -476,14 +479,14 @@ Ba mismatch trên không ngăn Jellyfin scan và phát phần còn lại của l
 User chạy container là:
 
 ```text
-uid=1000(ngoctin)
-gid=1000(ngoctin)
+uid=1000(<server-user>)
+gid=1000(<server-user>)
 ```
 
 Permission được chuẩn hóa bằng:
 
 ```bash
-sudo chown -R ngoctin:ngoctin /data/media/tv
+sudo chown -R <server-user>:<server-user> /data/media/tv
 find /data/media/tv -type d -exec chmod 755 {} \;
 find /data/media/tv -type f -exec chmod 644 {} \;
 ```
@@ -514,7 +517,7 @@ mkdir -p /data/docker/appdata/jellyfin/config
 mkdir -p /data/docker/appdata/jellyfin/cache
 ```
 
-Lưu ý: `/data` nằm trên HDD trong server hiện tại, nên config/cache của Jellyfin cũng đang ở HDD. Trước đó có cân nhắc đặt config/cache trên SSD để workload small-file nhanh hơn, nhưng chưa thực hiện migration đó. Không nên mô tả setup hiện tại như thể appdata đã nằm trên SSD.
+Lưu ý: `/data` nằm trên HDD trong server hiện tại, nên config/cache của Jellyfin cũng đang ở HDD. Trước đó có cân nhắc đặt config/cache trên SSD để tách small-file workload khỏi HDD media, nhưng chưa thực hiện migration đó. Không nên mô tả setup hiện tại như thể appdata đã nằm trên SSD.
 
 `compose.yaml`:
 
@@ -536,6 +539,9 @@ services:
 
     restart: unless-stopped
 ```
+
+Image dùng tag `latest`. Điều này không tự update container đang chạy, nhưng future pull/recreate có thể lấy image khác. Note không ghi digest/version resolved tại thời điểm triển khai, nên cần pin tag/digest nếu muốn deployment reproducible.
+
 
 Ý nghĩa quan trọng:
 
@@ -652,7 +658,7 @@ http://<SERVER-IP>:8096
 Nếu MagicDNS hoạt động, có thể thử:
 
 ```text
-http://macmini:8096
+http://<server-hostname>:8096
 ```
 
 Không cần port-forward router để sử dụng qua Tailscale.
@@ -664,11 +670,11 @@ Không cần port-forward router để sử dụng qua Tailscale.
 ```text
 Tailscale Admin Console
 → Machines
-→ macmini
+→ <server-hostname>
 → Share
 ```
 
-Share riêng node `macmini` thay vì cấp quyền vào toàn bộ tailnet.
+Share riêng node `<server-hostname>` thay vì cấp quyền vào toàn bộ tailnet.
 
 Người nhận:
 1. cài Tailscale trên điện thoại/laptop;
@@ -772,18 +778,18 @@ Sau cùng:
 
 Nguồn chính thức đã được dùng trong quá trình quyết định và kiểm chứng:
 
-- Jellyfin — Container installation: https://jellyfin.org/docs/general/installation/container/
-- Jellyfin — TV Shows: https://jellyfin.org/docs/general/server/media/shows/
-- Jellyfin — Movies: https://jellyfin.org/docs/general/server/media/movies/
-- Jellyfin — Networking: https://jellyfin.org/docs/general/post-install/networking/
-- Jellyfin — Tailscale: https://jellyfin.org/docs/general/post-install/networking/tailscale/
-- Jellyfin — Hardware acceleration: https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/
-- Jellyfin — Intel hardware acceleration: https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/intel/
-- Jellyfin — Backup and Restore: https://jellyfin.org/docs/general/administration/backup-and-restore/
-- Jellyfin — Configuration: https://jellyfin.org/docs/general/administration/configuration/
+- [Jellyfin — Container installation](https://jellyfin.org/docs/general/installation/container/)
+- [Jellyfin — TV Shows](https://jellyfin.org/docs/general/server/media/shows/)
+- [Jellyfin — Movies](https://jellyfin.org/docs/general/server/media/movies/)
+- [Jellyfin — Networking](https://jellyfin.org/docs/general/post-install/networking/)
+- [Jellyfin — Tailscale](https://jellyfin.org/docs/general/post-install/networking/tailscale/)
+- [Jellyfin — Hardware acceleration](https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/)
+- [Jellyfin — Intel hardware acceleration](https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/intel/)
+- [Jellyfin — Backup and Restore](https://jellyfin.org/docs/general/administration/backup-and-restore/)
+- [Jellyfin — Configuration](https://jellyfin.org/docs/general/administration/configuration/)
 
 Community discussions đã được dùng để đối chiếu practice thực tế:
 
-- r/jellyfin — Docker access to external HDD: https://www.reddit.com/r/jellyfin/comments/1souohd/how_to_give_jellyfin_in_docker_access_to_my/
-- r/selfhosted — SSD/HDD setup for media server: https://www.reddit.com/r/selfhosted/comments/1v82xq0/best_ssd_hdd_setup_for_media_server/
-- r/selfhosted — SSD cache and HDD spindown discussion: https://www.reddit.com/r/selfhosted/comments/1uxh1tf/ssd_cache_to_keep_hdd_powered_down/
+- [r/jellyfin — Docker access to external HDD](https://www.reddit.com/r/jellyfin/comments/1souohd/how_to_give_jellyfin_in_docker_access_to_my/)
+- [r/selfhosted — SSD/HDD setup for media server](https://www.reddit.com/r/selfhosted/comments/1v82xq0/best_ssd_hdd_setup_for_media_server/)
+- [r/selfhosted — SSD cache and HDD spindown discussion](https://www.reddit.com/r/selfhosted/comments/1uxh1tf/ssd_cache_to_keep_hdd_powered_down/)

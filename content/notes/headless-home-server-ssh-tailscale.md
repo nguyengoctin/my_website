@@ -12,10 +12,10 @@ tags:
   - headless
 ---
 
-> [!TLDR]
-> Mô hình home server cá nhân đơn giản nhất là SSH để quản trị, Tailscale để kết nối từ Internet mà không public port 22, và SSH key để xác thực. Server chỉ thực sự "headless-ready" khi sau reboot — không cắm màn hình, không cắm bàn phím — vẫn SSH vào được từ xa.
+> [!NOTE]
+> **Tóm tắt:** Mô hình home server cá nhân đơn giản nhất là SSH để quản trị, Tailscale để kết nối từ Internet mà không public port 22, và SSH key để xác thực. Server chỉ thực sự "headless-ready" khi sau reboot — không cắm màn hình, không cắm bàn phím — vẫn SSH vào được từ xa.
 
-## 1. Bản chất
+## Bản chất
 
 **SSH (Secure Shell)** là giao thức cho phép điều khiển từ xa một máy Linux qua terminal có mã hoá. Với home server, SSH là giao diện quản trị chính — không cần màn hình hay bàn phím cắm trực tiếp.
 
@@ -36,24 +36,24 @@ Mac mini / Linux home server
 Tailscale relay / DERP (nếu cần)
 ```
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao Tailscale thay vì port-forward TCP/22 trên router?**
 
 Public SSH trên port 22 nghĩa là toàn bộ Internet có thể thử kết nối — bot scan liên tục, brute-force password, khai thác zero-day SSH. Dù có SSH key và disabled password auth, attack surface vẫn rộng hơn cần thiết. Tailscale thu nhỏ attack surface xuống chỉ còn thiết bị trong tailnet.
 
-Port-forward cũng đòi hỏi biết public IP nhà (thay đổi nếu ISP dùng dynamic IP) và không hoạt động khi laptop đang cùng mạng LAN với server (NAT loopback không phải router nào cũng hỗ trợ).
+Port-forward còn phụ thuộc vào khả năng nhận kết nối từ Internet của đường truyền. Dynamic public IP, CGNAT và hairpin NAT của router có thể làm cách truy cập này phức tạp hơn; riêng việc dùng public address từ cùng LAN còn phụ thuộc router có hỗ trợ hairpin NAT hay không.
 
 **Tại sao SSH key thay vì password?**
 
-Password có thể bị brute-force. SSH key với Ed25519 về lý thuyết không thể brute-force trong thời gian thực tế. Với passphrase trên private key, kể cả ai đó có file key cũng không dùng được nếu không biết passphrase.
+Password authentication có thể bị online guessing nếu dịch vụ bị expose. Ed25519 key authentication không phụ thuộc vào một password được gửi để server kiểm tra theo cách đó; private key vẫn phải được bảo vệ, và passphrase giúp giảm rủi ro nếu file key bị lấy cắp.
 
 **Đánh đổi:**
 
-- Tailscale free tier giới hạn số device và tính năng (ACL phức tạp, subnet router...). Với home server cá nhân thông thường, free tier đủ dùng.
-- Tailscale là centralized control plane — nếu Tailscale service có sự cố, không thể kết nối thiết bị dù đã trong cùng LAN. Giải pháp: giữ LAN SSH làm fallback.
+- Giới hạn plan và feature của Tailscale có thể thay đổi theo thời gian. Setup này chỉ phụ thuộc vào peer connectivity, MagicDNS và network policy cơ bản; cần kiểm tra documentation hiện hành nếu dựa vào một giới hạn cụ thể.
+- Tailscale có control plane tập trung, nhưng traffic giữa các peer nằm ở data plane. Nếu coordination service tạm unavailable, kết nối đã thiết lập có thể tiếp tục với policy cache; việc tạo kết nối mới hoặc nhận policy update có thể bị ảnh hưởng. LAN SSH vẫn hữu ích như một fallback độc lập.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 Kết nối SSH qua Tailscale:
@@ -63,10 +63,10 @@ Laptop                          Mac mini
   │── tailscaled ──────── tailscaled
   │   (trong tailnet)     (trong tailnet)
   │                               │
-  │ ssh user@macmini              │
+  │ ssh user@<server-hostname>              │
   │ ─────────────────────────────►│
   │ (Tailscale MagicDNS           │
-  │  resolve "macmini"            │
+  │  resolve "<server-hostname>"            │
   │  thành Tailscale IP)          │
   │                               │
   │◄─────────────────────────────►│
@@ -100,7 +100,7 @@ SSH user key:  server dùng để xác minh danh tính người dùng
 
 Hai fingerprint này độc lập nhau và không cần trùng nhau.
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Cài và bật OpenSSH Server trên server (Mac mini)
 
@@ -166,21 +166,21 @@ tailscale ip -4
 
 ### Bước 3 — Cài Tailscale trên laptop (client)
 
-Tải và cài theo OS tại https://tailscale.com/download, đăng nhập cùng tài khoản tailnet với server.
+Tải và cài theo OS từ [Tailscale download](https://tailscale.com/download), rồi đăng nhập cùng tailnet với server.
 
 Test SSH qua Tailscale:
 
 ```bash
 ssh <user>@<tailscale-ip>
 # hoặc với MagicDNS (nếu bật):
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 ```
 
 ### Bước 4 — Tạo SSH key trên laptop
 
 ```bash
 ssh-keygen -t ed25519 -C "<tên-máy-client>"
-# -t ed25519  → thuật toán Ed25519 (elliptic curve, key nhỏ hơn và nhanh hơn RSA-4096)
+# -t ed25519  → tạo key Ed25519
 # -C          → comment gắn vào public key, giúp identify nguồn gốc key
 ```
 
@@ -196,7 +196,7 @@ Mặc định tạo:
 ### Bước 5 — Copy public key sang server
 
 ```bash
-ssh-copy-id <user>@macmini
+ssh-copy-id <user>@<server-hostname>
 # Tự động append public key vào ~/.ssh/authorized_keys trên server
 ```
 
@@ -209,7 +209,7 @@ ssh-copy-id <user>@<tailscale-ip>
 Test key authentication trong session mới (không đóng session cũ):
 
 ```bash
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 ```
 
 Chỉ sau khi key login thực sự hoạt động mới cân nhắc tắt password authentication.
@@ -232,7 +232,7 @@ sudo reboot
 Đợi máy boot xong, SSH lại:
 
 ```bash
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 ```
 
 Nếu vào được, chuỗi headless đã hoạt động:
@@ -241,7 +241,7 @@ Nếu vào được, chuỗi headless đã hoạt động:
 Power on → Linux boot → Network → tailscaled → sshd → Remote SSH
 ```
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Hardening SSH trước khi có recovery path**
 
@@ -267,7 +267,7 @@ Lần đầu kết nối SSH, terminal hỏi xác nhận host fingerprint — đ
 
 SSH qua LAN hoạt động không đảm bảo SSH qua Tailscale từ mạng ngoài cũng hoạt động. Phải test đúng scenario: laptop chuyển sang hotspot điện thoại, SSH vào server.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 ```bash
 # Trên server — kiểm tra service status
@@ -280,11 +280,11 @@ tailscale status
 # Server và client phải thấy nhau trong danh sách
 
 # Sau reboot — từ laptop
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 # Kỳ vọng: vào được không cần màn hình gắn vào server
 
 # Test ngoài LAN (laptop dùng hotspot điện thoại)
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 # Kỳ vọng: vào được qua Tailscale
 ```
 
@@ -302,12 +302,13 @@ Checklist headless verification:
 [ ] Test từ mạng ngoài LAN
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
-- Tailscale Linux installation: https://tailscale.com/download/linux  
+- [Tailscale Linux installation](https://tailscale.com/download/linux)  
   *(script cài chính thức, luôn dùng từ đây thay vì copy script cũ từ blog)*
-- OpenSSH project: https://www.openssh.com/  
+- [OpenSSH project](https://www.openssh.com/)  
   *(tài liệu chính thức về ssh, ssh-keygen, sshd_config)*
-- Tailscale MagicDNS documentation: https://tailscale.com/kb/1081/magicdns  
+- [Tailscale MagicDNS documentation](https://tailscale.com/kb/1081/magicdns)  
   *(giải thích cơ chế resolve hostname trong tailnet)*
 - OpenSSH man pages: `man ssh`, `man ssh-keygen`, `man sshd_config`
+- [Tailscale control and data planes](https://tailscale.com/docs/concepts/control-data-planes)

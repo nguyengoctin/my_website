@@ -13,8 +13,8 @@ tags:
   - security
 ---
 
-> [!TLDR]
-> Với Django production, ưu tiên correctness và failure mode thật: database integrity → transaction → authorization → security → query behavior → migration → background jobs → observability. Những quy tắc như “phải có `services.py`”, “fat model/thin view” hay “luôn dùng ViewSet” chỉ nên xem là convention hoặc lựa chọn kiến trúc theo context.
+> [!NOTE]
+> **Tóm tắt:** Với Django production, ưu tiên correctness và failure mode thật: database integrity → transaction → authorization → security → query behavior → migration → background jobs → observability. Những quy tắc như “phải có `services.py`”, “fat model/thin view” hay “luôn dùng ViewSet” chỉ nên xem là convention hoặc lựa chọn kiến trúc theo context.
 
 ## Context áp dụng
 
@@ -43,12 +43,10 @@ Mức rủi ro cần quan tâm không chỉ là code style mà còn gồm:
 
 ## Cách phân loại practice
 
-| Mức | Ý nghĩa |
-|---|---|
-| **Requirement / baseline** | Không làm có failure mode rõ về security, correctness hoặc support. |
-| **Established good practice** | Có maintainer guidance và rationale kỹ thuật mạnh; nên là mặc định. |
-| **Context-dependent** | Tốt với workload/architecture phù hợp; áp dụng máy móc có thể làm hệ thống tệ hơn. |
-| **Preference / convention** | Chủ yếu phục vụ consistency/readability; không đủ cơ sở để gọi là universal best practice. |
+- **Mức:** **Requirement / baseline** — **Ý nghĩa:** Không làm có failure mode rõ về security, correctness hoặc support.
+- **Mức:** **Established good practice** — **Ý nghĩa:** Có maintainer guidance và rationale kỹ thuật mạnh; nên là mặc định.
+- **Mức:** **Context-dependent** — **Ý nghĩa:** Tốt với workload/architecture phù hợp; áp dụng máy móc có thể làm hệ thống tệ hơn.
+- **Mức:** **Preference / convention** — **Ý nghĩa:** Chủ yếu phục vụ consistency/readability; không đủ cơ sở để gọi là universal best practice.
 
 Mental model quan trọng:
 
@@ -62,13 +60,13 @@ Mental model quan trọng:
 
 ## Decision về phiên bản Django
 
-Research tại thời điểm 2026-09-09 cho thấy:
+Research gốc được thực hiện ngày 2026-09-09. Audit lại ngày 2026-09-16 cho thấy:
 
 - Django 5.1 đã hết support từ 2025-12-03.
-- Django 5.2 là nhánh LTS, research trước đó ghi nhận 5.2.17 và thời hạn support đến tháng 4/2028.
-- Django 6.1.1 là release mới hơn tại thời điểm research.
-- DRF 3.18 hỗ trợ Django 5.2, 6.0 và 6.1.
-- Metadata SimpleJWT tại thời điểm research ghi support đến Django 6.0; việc chưa ghi 6.1 không tự động chứng minh rằng nó không chạy trên 6.1.
+- Django 5.2 LTS hiện ở 5.2.17 và nhận extended support đến tháng 4/2028.
+- Django 6.1.1 vẫn là latest official release tại thời điểm audit.
+- DRF 3.18.1 là patch release hiện tại của series 3.18; project công bố support Django 5.2, 6.0 và 6.1.
+- SimpleJWT 5.5.1 là release hiện tại. Metadata của release trên PyPI chỉ classifier đến Django 5.2, trong khi `setup.py` trên branch `master` đã có classifier Django 6.0 nhưng chưa có 6.1. Sự thiếu classifier 6.1 không tự động chứng minh package không chạy trên 6.1, nhưng cũng không phải bằng chứng compatibility đã được release chính thức xác nhận.
 
 ### Recommendation cho project hiện tại
 
@@ -863,12 +861,10 @@ Rule nên giữ:
 
 Không có winner universal.
 
-| Tool | Phù hợp |
-|---|---|
-| `ModelViewSet` | CRUD resource khá chuẩn |
-| Generic views | CRUD nhưng muốn explicit hơn |
-| `APIView` | Workflow/custom endpoint |
-| Function-based view | Endpoint nhỏ và đơn giản |
+- **Tool:** `ModelViewSet` — **Phù hợp:** CRUD resource khá chuẩn
+- **Tool:** Generic views — **Phù hợp:** CRUD nhưng muốn explicit hơn
+- **Tool:** `APIView` — **Phù hợp:** Workflow/custom endpoint
+- **Tool:** Function-based view — **Phù hợp:** Endpoint nhỏ và đơn giản
 
 Đây là architecture/convention choice. Đừng refactor chỉ để thống nhất theo một trường phái nếu current behavior rõ và maintainable.
 
@@ -1014,58 +1010,54 @@ Structured logging là preference/implementation detail; khả năng debug produ
 
 ## Anti-pattern và advice lỗi thời cần tránh
 
-| Advice | Đánh giá |
-|---|---|
-| Mỗi model phải có service | Cargo cult |
-| Mọi business logic phải ở model | Heuristic bị áp dụng quá mức |
-| Mọi business logic phải ra service | Heuristic bị áp dụng quá mức |
-| Luôn dùng ViewSet | Convention |
-| Luôn dùng APIView | Convention |
-| Phải có `selectors.py` | Convention |
-| Luôn có repository layer trên Django ORM | Context-dependent |
-| Settings bắt buộc phải tách `base/dev/prod.py` | Convention |
-| `.env` tự nó là secret-management best practice | Sai abstraction |
-| UUID luôn tốt hơn integer PK | Context-dependent |
-| Soft delete luôn tốt hơn hard delete | Domain-dependent |
-| Có Redis thì nên cache mọi thứ | Cargo cult |
-| Async luôn nhanh hơn sync | Sai |
-| Field nào filter cũng cần index | Cargo cult |
-| `.exists()` luôn nhanh hơn | Context-dependent |
-| Signals luôn giúp decouple | Thường làm flow khó trace |
-| `ATOMIC_REQUESTS=True` luôn tốt | Context-dependent |
-| JWT luôn tốt hơn session | Architecture-dependent |
-| DRF throttle chống DDoS | Sai |
-| Serializer validation đủ bảo vệ invariant | Sai dưới concurrency |
-| Latest Django luôn là production choice tốt nhất | Sai |
+- **Advice:** Mỗi model phải có service — **Đánh giá:** Cargo cult
+- **Advice:** Mọi business logic phải ở model — **Đánh giá:** Heuristic bị áp dụng quá mức
+- **Advice:** Mọi business logic phải ra service — **Đánh giá:** Heuristic bị áp dụng quá mức
+- **Advice:** Luôn dùng ViewSet — **Đánh giá:** Convention
+- **Advice:** Luôn dùng APIView — **Đánh giá:** Convention
+- **Advice:** Phải có `selectors.py` — **Đánh giá:** Convention
+- **Advice:** Luôn có repository layer trên Django ORM — **Đánh giá:** Context-dependent
+- **Advice:** Settings bắt buộc phải tách `base/dev/prod.py` — **Đánh giá:** Convention
+- **Advice:** `.env` tự nó là secret-management best practice — **Đánh giá:** Sai abstraction
+- **Advice:** UUID luôn tốt hơn integer PK — **Đánh giá:** Context-dependent
+- **Advice:** Soft delete luôn tốt hơn hard delete — **Đánh giá:** Domain-dependent
+- **Advice:** Có Redis thì nên cache mọi thứ — **Đánh giá:** Cargo cult
+- **Advice:** Async luôn nhanh hơn sync — **Đánh giá:** Sai
+- **Advice:** Field nào filter cũng cần index — **Đánh giá:** Cargo cult
+- **Advice:** `.exists()` luôn nhanh hơn — **Đánh giá:** Context-dependent
+- **Advice:** Signals luôn giúp decouple — **Đánh giá:** Thường làm flow khó trace
+- **Advice:** `ATOMIC_REQUESTS=True` luôn tốt — **Đánh giá:** Context-dependent
+- **Advice:** JWT luôn tốt hơn session — **Đánh giá:** Architecture-dependent
+- **Advice:** DRF throttle chống DDoS — **Đánh giá:** Sai
+- **Advice:** Serializer validation đủ bảo vệ invariant — **Đánh giá:** Sai dưới concurrency
+- **Advice:** Latest Django luôn là production choice tốt nhất — **Đánh giá:** Sai
 
 ## Khi nào recommendation cần đổi
 
-| Context | Điều cần xem lại |
-|---|---|
-| Internal CRUD tool ít user | Có thể đơn giản hóa migration, cache, observability |
-| Table lớn / traffic cao | Online migration, index strategy, pooling trở nên quan trọng |
-| First-party browser app | Session auth có thể tốt hơn JWT |
-| Mobile/Mini App/API ecosystem | Bearer/JWT hợp lý hơn |
-| Không có concurrent writes | Locking có thể không cần |
-| Heavy external I/O | Async/ASGI đáng cân nhắc hơn |
-| Project mới | Custom User từ đầu đáng làm |
-| Project production lâu năm | Không đổi user architecture chỉ vì convention |
-| Không có background job | Celery có thể là complexity không cần thiết |
-| Upload file lớn | Direct-to-object-storage càng đáng cân nhắc |
-| Cần feature Django 6.x | Upgrade sau dependency/test validation |
-| Ưu tiên stability | Django 5.2 LTS là target hợp lý hơn cho project 5.1 hiện tại |
+- **Context:** Internal CRUD tool ít user — **Điều cần xem lại:** Có thể đơn giản hóa migration, cache, observability
+- **Context:** Table lớn / traffic cao — **Điều cần xem lại:** Online migration, index strategy, pooling trở nên quan trọng
+- **Context:** First-party browser app — **Điều cần xem lại:** Session auth có thể tốt hơn JWT
+- **Context:** Mobile/Mini App/API ecosystem — **Điều cần xem lại:** Bearer/JWT hợp lý hơn
+- **Context:** Không có concurrent writes — **Điều cần xem lại:** Locking có thể không cần
+- **Context:** Heavy external I/O — **Điều cần xem lại:** Async/ASGI đáng cân nhắc hơn
+- **Context:** Project mới — **Điều cần xem lại:** Custom User từ đầu đáng làm
+- **Context:** Project production lâu năm — **Điều cần xem lại:** Không đổi user architecture chỉ vì convention
+- **Context:** Không có background job — **Điều cần xem lại:** Celery có thể là complexity không cần thiết
+- **Context:** Upload file lớn — **Điều cần xem lại:** Direct-to-object-storage càng đáng cân nhắc
+- **Context:** Cần feature Django 6.x — **Điều cần xem lại:** Upgrade sau dependency/test validation
+- **Context:** Ưu tiên stability — **Điều cần xem lại:** Django 5.2 LTS là target hợp lý hơn cho project 5.1 hiện tại
 
 ## Checklist audit thực tế cho backend hiện tại
 
 Thứ tự này ưu tiên failure mode nghiêm trọng trước code cleanliness.
 
-### 1. Version
+### Version
 
 - Nâng Django 5.1 → 5.2 LTS.
 - Kiểm tra compatibility của DRF, SimpleJWT và package liên quan.
 - Chạy full test và migration verification.
 
-### 2. Production security
+### Production security
 
 Kiểm tra:
 
@@ -1088,7 +1080,7 @@ Sau đó:
 python manage.py check --deploy
 ```
 
-### 3. Authorization
+### Authorization
 
 Audit mọi endpoint dữ liệu user-owned:
 
@@ -1103,7 +1095,7 @@ payment-related object
 
 Xác minh queryset scope và object authorization, không chỉ nhìn `IsAuthenticated`.
 
-### 4. Data integrity và concurrency
+### Data integrity và concurrency
 
 Tìm invariant hiện chỉ được giữ bằng Python.
 
@@ -1119,7 +1111,7 @@ select_for_update()
 
 chỉ ở nơi failure mode thật sự tồn tại.
 
-### 5. Celery boundary
+### Celery boundary
 
 Xác minh:
 
@@ -1129,7 +1121,7 @@ task quan trọng idempotent
 core workflow không bị giấu trong signal chain
 ```
 
-### 6. Query behavior
+### Query behavior
 
 Đo:
 
@@ -1149,7 +1141,7 @@ index
 cache
 ```
 
-### 7. Migration và upload
+### Migration và upload
 
 Kiểm tra:
 
@@ -1158,7 +1150,7 @@ Kiểm tra:
 - request/upload size được giới hạn ở proxy lẫn app;
 - media phù hợp được đưa ra object storage như R2.
 
-### 8. Architecture refactor
+### Architecture refactor
 
 Chỉ sau correctness/security/performance audit mới quyết định có cần:
 
@@ -1198,31 +1190,36 @@ Có thể dùng thứ tự sau khi review một Django backend:
 
 ## References
 
-Các nguồn dưới đây đã được dùng trong research trước đó và đáng giữ để kiểm chứng lại theo version.
+Các nguồn dưới đây đã được dùng trong research trước đó và đáng giữ để kiểm chứng lại theo version. Audit ngày 2026-09-16 cũng kiểm tra lại version/compatibility bằng các nguồn hiện hành sau:
 
-- Django downloads / supported versions: https://www.djangoproject.com/download/
-- Django deployment checklist: https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
-- Django security: https://docs.djangoproject.com/en/6.0/topics/security/
-- Django CSRF: https://docs.djangoproject.com/en/6.0/ref/csrf/
-- Django settings: https://docs.djangoproject.com/en/6.0/ref/settings/
-- Django database optimization: https://docs.djangoproject.com/en/6.0/topics/db/optimization/
-- Django transactions: https://docs.djangoproject.com/en/6.0/topics/db/transactions/
-- Django constraints: https://docs.djangoproject.com/en/6.0/ref/models/constraints/
-- Django expressions / `F()`: https://docs.djangoproject.com/en/6.0/ref/models/expressions/
-- Django QuerySet API / `select_for_update()`: https://docs.djangoproject.com/en/6.0/ref/models/querysets/
-- Django migrations: https://docs.djangoproject.com/en/6.0/topics/migrations/
-- Writing Django migrations: https://docs.djangoproject.com/en/6.0/howto/writing-migrations/
-- PostgreSQL-specific migration operations: https://docs.djangoproject.com/en/6.0/ref/contrib/postgres/operations/
-- Django signals: https://docs.djangoproject.com/en/6.0/topics/signals/
-- Django async support: https://docs.djangoproject.com/en/6.0/topics/async/
-- Django testing overview: https://docs.djangoproject.com/en/6.0/topics/testing/overview/
-- Django custom user model: https://docs.djangoproject.com/en/6.0/topics/auth/customizing/
-- Django model fields: https://docs.djangoproject.com/en/5.2/ref/models/fields/
-- Django Tasks framework: https://docs.djangoproject.com/en/6.0/ref/tasks/
-- DRF authentication: https://www.django-rest-framework.org/api-guide/authentication/
-- DRF permissions: https://www.django-rest-framework.org/api-guide/permissions/
-- DRF generic views and N+1 guidance: https://www.django-rest-framework.org/api-guide/generic-views/
-- DRF pagination: https://www.django-rest-framework.org/api-guide/pagination/
-- DRF throttling: https://www.django-rest-framework.org/api-guide/throttling/
-- DRF project / compatibility: https://www.django-rest-framework.org/
-- Celery task guidance: https://docs.celeryq.dev/en/stable/userguide/tasks.html
+- [Django downloads và supported versions](https://www.djangoproject.com/download/)
+- [DRF release notes](https://www.django-rest-framework.org/community/release-notes/)
+- [SimpleJWT 5.5.1 trên PyPI](https://pypi.org/project/djangorestframework-simplejwt/5.5.1/)
+- [SimpleJWT `setup.py` trên GitHub](https://github.com/jazzband/djangorestframework-simplejwt/blob/master/setup.py)
+
+- [Django downloads / supported versions](https://www.djangoproject.com/download/)
+- [Django deployment checklist](https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/)
+- [Django security](https://docs.djangoproject.com/en/6.0/topics/security/)
+- [Django CSRF](https://docs.djangoproject.com/en/6.0/ref/csrf/)
+- [Django settings](https://docs.djangoproject.com/en/6.0/ref/settings/)
+- [Django database optimization](https://docs.djangoproject.com/en/6.0/topics/db/optimization/)
+- [Django transactions](https://docs.djangoproject.com/en/6.0/topics/db/transactions/)
+- [Django constraints](https://docs.djangoproject.com/en/6.0/ref/models/constraints/)
+- [Django expressions / `F()`](https://docs.djangoproject.com/en/6.0/ref/models/expressions/)
+- [Django QuerySet API / `select_for_update()`](https://docs.djangoproject.com/en/6.0/ref/models/querysets/)
+- [Django migrations](https://docs.djangoproject.com/en/6.0/topics/migrations/)
+- [Writing Django migrations](https://docs.djangoproject.com/en/6.0/howto/writing-migrations/)
+- [PostgreSQL-specific migration operations](https://docs.djangoproject.com/en/6.0/ref/contrib/postgres/operations/)
+- [Django signals](https://docs.djangoproject.com/en/6.0/topics/signals/)
+- [Django async support](https://docs.djangoproject.com/en/6.0/topics/async/)
+- [Django testing overview](https://docs.djangoproject.com/en/6.0/topics/testing/overview/)
+- [Django custom user model](https://docs.djangoproject.com/en/6.0/topics/auth/customizing/)
+- [Django model fields](https://docs.djangoproject.com/en/5.2/ref/models/fields/)
+- [Django Tasks framework](https://docs.djangoproject.com/en/6.0/ref/tasks/)
+- [DRF authentication](https://www.django-rest-framework.org/api-guide/authentication/)
+- [DRF permissions](https://www.django-rest-framework.org/api-guide/permissions/)
+- [DRF generic views and N+1 guidance](https://www.django-rest-framework.org/api-guide/generic-views/)
+- [DRF pagination](https://www.django-rest-framework.org/api-guide/pagination/)
+- [DRF throttling](https://www.django-rest-framework.org/api-guide/throttling/)
+- [DRF project / compatibility](https://www.django-rest-framework.org/)
+- [Celery task guidance](https://docs.celeryq.dev/en/stable/userguide/tasks.html)

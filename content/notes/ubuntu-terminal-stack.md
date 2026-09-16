@@ -11,29 +11,27 @@ tags:
   - cli
 ---
 
-> [!TLDR]
-> Trên Ubuntu 26.04, stack terminal tối giản cho dev là **Ptyxis + Bash + fzf + zoxide + ripgrep + bat**. Starship và eza chỉ thêm khi có pain point cụ thể. tmux chủ yếu đáng dùng cho SSH và session server dài hạn. Không cần Zsh hay shell framework nếu chưa có nhu cầu rõ ràng.
+> [!NOTE]
+> **Tóm tắt:** Trên Ubuntu 26.04, stack terminal tối giản cho dev là **Ptyxis + Bash + fzf + zoxide + ripgrep + bat**. Starship và eza chỉ thêm khi có pain point cụ thể. tmux chủ yếu đáng dùng cho SSH và session server dài hạn. Không cần Zsh hay shell framework nếu chưa có nhu cầu rõ ràng.
 
-## 1. Bản chất
+## Bản chất
 
 Stack này xây trên nguyên tắc **tối giản có chủ đích** — chỉ cài tool khi có pain point thực tế, không cài vì "người ta hay dùng". Mỗi tool trong stack giải quyết một vấn đề cụ thể:
 
-| Tool | Pain point giải quyết |
-|---|---|
-| Ptyxis | Terminal mặc định Ubuntu 26.04, tích hợp GNOME, ít config |
-| Bash | Shell portable, mặc định trên server/container |
-| fzf | Tìm command history nhanh hơn `Ctrl+R` native |
-| zoxide | Nhảy đến directory thường dùng không cần gõ full path |
-| ripgrep | Tìm text/code trong project nhanh hơn `grep -r` |
-| bat | Đọc file có syntax highlight và line number |
+- **Tool:** Ptyxis — **Pain point giải quyết:** Terminal mặc định Ubuntu 26.04, tích hợp GNOME, ít config
+- **Tool:** Bash — **Pain point giải quyết:** Shell portable, mặc định trên server/container
+- **Tool:** fzf — **Pain point giải quyết:** Fuzzy search command history thay cho reverse search mặc định
+- **Tool:** zoxide — **Pain point giải quyết:** Nhảy đến directory thường dùng không cần gõ full path
+- **Tool:** ripgrep — **Pain point giải quyết:** Recursive text/code search với syntax và ignore behavior phù hợp source tree
+- **Tool:** bat — **Pain point giải quyết:** Đọc file có syntax highlight và line number
 
 Tất cả đều có sẵn qua `apt` — không cần cài từ nguồn hay shell plugin manager.
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao không dùng Zsh + Oh My Zsh?**
 
-Zsh có tính năng tốt hơn Bash (globbing, completion, history sharing). Nhưng Oh My Zsh và plugin ecosystem thêm complexity đáng kể: chậm startup, plugin update phải quản lý thêm, behavior khác nhau giữa Bash và Zsh có thể break script. Bash với fzf/zoxide giải quyết 90% pain point mà không cần đổi shell.
+Zsh có tính năng tốt hơn Bash (globbing, completion, history sharing). Nhưng Oh My Zsh và plugin ecosystem thêm complexity đáng kể: chậm startup, plugin update phải quản lý thêm, behavior khác nhau giữa Bash và Zsh có thể break script. Trong workflow hiện tại, Bash kết hợp fzf và zoxide đã giải quyết các pain point chính mà không cần đổi shell.
 
 **Tại sao không dùng Kitty thay vì Ptyxis?**
 
@@ -47,9 +45,9 @@ Các tool mới không phải replacement hoàn toàn cho command chuẩn. `bat`
 
 - Không có tab completion tự động cho git subcommand hay custom script — phải viết completion thủ công khi cần.
 - Không có plugin ecosystem — mỗi tool phải cài và configure riêng.
-- Startup time của Bash thuần thường nhanh hơn Zsh + Oh My Zsh (100–300ms so với 500ms+).
+- Shell framework và plugin có thể thêm startup work; nếu startup time là pain point, đo trực tiếp trên máy thay vì dùng một con số chung.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 Mở terminal (Ptyxis)
@@ -73,7 +71,7 @@ Khi gõ z lexi:
 
 Frequeny (tần suất) và recency (gần đây) kết hợp thành "frecency" — zoxide ưu tiên directory vừa dùng nhiều vừa dùng gần đây hơn directory chỉ dùng nhiều hoặc chỉ dùng gần đây.
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Cài bộ CLI tối thiểu
 
@@ -190,7 +188,7 @@ tmux attach -t main
 # -t → target session name
 ```
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Dùng `eval "$(fzf --bash)"` trên fzf từ APT**
 
@@ -208,7 +206,7 @@ Oh My Zsh đổi default shell sang Zsh và thêm nhiều config vào `~/.zshrc`
 
 Thêm `tmux` hoặc `tmux attach` vào `.bashrc` khiến mọi shell session đều cố attach vào tmux — kể cả shell do script chạy, SSH non-interactive, hay subshell. Gây ra behavior bất ngờ và khó debug. Chỉ dùng tmux thủ công khi cần.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 ```bash
 # Kiểm tra fzf history search
@@ -241,14 +239,14 @@ Thao tác thực tế cần test bằng tay:
 [ ] ll (nếu cài eza) → listing với git status
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
-- Ubuntu 26.04 LTS release notes: https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/
-- Kitty documentation (để so sánh): https://sw.kovidgoyal.net/kitty/
-- Starship documentation: https://starship.rs/
-- fzf repository: https://github.com/junegunn/fzf  
+- [Ubuntu 26.04 LTS release notes](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/)
+- [Kitty documentation (để so sánh)](https://sw.kovidgoyal.net/kitty/)
+- [Starship documentation](https://starship.rs/)
+- [fzf repository](https://github.com/junegunn/fzf)  
   *(xem README về Bash shell integration và phiên bản hỗ trợ `--bash` flag)*
-- zoxide repository: https://github.com/ajeetdsouza/zoxide
-- bat repository: https://github.com/sharkdp/bat
-- eza repository: https://github.com/eza-community/eza
-- tmux wiki: https://github.com/tmux/tmux/wiki
+- [zoxide repository](https://github.com/ajeetdsouza/zoxide)
+- [bat repository](https://github.com/sharkdp/bat)
+- [eza repository](https://github.com/eza-community/eza)
+- [tmux wiki](https://github.com/tmux/tmux/wiki)

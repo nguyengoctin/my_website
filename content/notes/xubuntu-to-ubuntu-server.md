@@ -1,5 +1,5 @@
 ---
-title: "Chuyển Xubuntu sang Ubuntu Server mà không cài lại"
+title: "Chuyển Xubuntu sang chế độ headless và bổ sung bộ package Ubuntu Server"
 date: 2026-09-09T16:15:00+07:00
 aliases:
   - xubuntu to ubuntu server
@@ -11,23 +11,23 @@ tags:
   - linux
 ---
 
-> [!TLDR]
-> Xubuntu và Ubuntu Server cùng nền Ubuntu — không bắt buộc phải cài lại để có một máy headless. Cách an toàn là cài bộ package `ubuntu-server`, đổi systemd default target sang `multi-user.target`, kiểm tra mọi dịch vụ chạy ổn sau reboot, rồi mới cân nhắc gỡ XFCE. Thứ tự này cho phép rollback nhanh nếu có vấn đề.
+> [!NOTE]
+> **Tóm tắt:** Không cần cài lại chỉ để biến một Xubuntu đang hoạt động thành máy headless. `multi-user.target` có thể bỏ display manager khỏi boot mặc định, còn `ubuntu-server` bổ sung bộ package server. Cách này không biến installation thành một bản Ubuntu Server cài mới theo nghĩa package set và installer history; nó chỉ tạo behavior vận hành phù hợp với server trên installation hiện có.
 
-## 1. Bản chất
+## Bản chất
 
-Trên Linux, "server mode" và "desktop mode" không phải hai hệ điều hành khác nhau — chúng chỉ khác nhau ở **systemd default target**:
+Trong installation hiện có, việc có khởi động desktop session hay không được systemd điều khiển bằng default target. Điều này không có nghĩa Xubuntu và Ubuntu Server chỉ khác nhau ở target; hai flavor còn khác package set và default configuration. Với mục tiêu headless, target mới là phần cần thay đổi trực tiếp:
 
 ```text
 graphical.target   → khởi động display manager, load GNOME/XFCE...
 multi-user.target  → khởi động network, SSH, system services — không load GUI
 ```
 
-Ubuntu Server và Xubuntu đều dùng systemd. Chuyển default target là cách chuyển đổi giữa hai chế độ mà không cần reinstall, không mất dữ liệu người dùng, không xoá config đã có.
+Ubuntu Server và Xubuntu đều dùng systemd. Đổi default target thay đổi boot behavior của installation hiện tại mà không reinstall hay xóa dữ liệu người dùng.
 
-Gói `ubuntu-server` là một metapackage kéo theo các công cụ và service phổ biến cho server (như `landscape-common`, `open-vm-tools`, `unattended-upgrades`...) — nó không thay thế kernel hay filesystem.
+`ubuntu-server` là một metapackage của Ubuntu để kéo theo bộ package server. Dependency và recommendation cụ thể phụ thuộc release và APT policy; có thể kiểm tra bằng `apt show ubuntu-server` trước khi cài. Metapackage này không thay filesystem hiện có và cũng không tự gỡ desktop stack.
 
-## 2. Vì sao lựa chọn
+## Vì sao lựa chọn
 
 **Tại sao không cài Ubuntu Server từ đầu?**
 
@@ -35,17 +35,17 @@ Trong trường hợp này Xubuntu đã được cài trên SSD với SSH, Tails
 
 **Tại sao không chỉ tắt GUI trong settings mà phải đổi systemd target?**
 
-Tắt GUI trong Xubuntu settings chỉ ảnh hưởng đến session hiện tại. Muốn máy không load GNOME/XFCE sau mỗi lần reboot, phải đổi default target ở tầng systemd.
+Đặt `multi-user.target` làm default là cách explicit để boot vào multi-user system mà không kéo `graphical.target` làm target mặc định. Đây là thay đổi ở boot policy, không phụ thuộc vào một desktop-session preference.
 
 **Tại sao không gỡ XFCE ngay?**
 
-XFCE là recovery path. Nếu SSH, Wi-Fi, hay một service nào đó có vấn đề sau khi chuyển sang headless, vẫn có thể cắm màn hình và dùng GUI để debug. Gỡ XFCE trước khi chắc chắn mọi thứ chạy ổn là đánh đổi recovery ability lấy vài trăm MB disk — không đáng.
+XFCE là recovery path. Nếu SSH, Wi-Fi, hay một service nào đó có vấn đề sau khi chuyển sang headless, vẫn có thể cắm màn hình và dùng GUI để debug. Gỡ XFCE trước khi chắc chắn remote access và network đã ổn sẽ làm mất một recovery path thuận tiện. Nếu dung lượng chưa phải vấn đề, giữ desktop package trong giai đoạn chuyển đổi giúp rollback dễ hơn.
 
 **Đánh đổi:**
 
-- Giữ XFCE tốn thêm ~300–500 MB disk nhưng hầu như không tốn RAM/CPU khi ở `multi-user.target` vì display manager không khởi động.
+- Giữ XFCE chiếm thêm disk và package maintenance. Khi `multi-user.target` là default và display manager không được khởi động, desktop session không chạy như ở `graphical.target`.
 
-## 3. Cơ chế hoạt động
+## Cơ chế hoạt động
 
 ```text
 systemd boot sequence với graphical.target:
@@ -77,11 +77,11 @@ ls -l /etc/systemd/system/default.target
 # multi-user.target → /lib/systemd/system/multi-user.target
 ```
 
-## 4. Hướng dẫn từng bước
+## Hướng dẫn từng bước
 
 ### Bước 1 — Đảm bảo SSH hoạt động trước
 
-Đây là điều kiện tiên quyết. Sau khi chuyển sang headless, nếu SSH không lên thì không còn cách truy cập máy từ xa.
+Đây là điều kiện tiên quyết cho remote administration. Sau khi chuyển sang headless, nếu SSH hoặc network không lên thì remote access sẽ mất và cần local console hoặc một recovery path khác.
 
 ```bash
 systemctl is-enabled ssh
@@ -129,7 +129,7 @@ sudo reboot
 Sau khi máy lên, từ laptop SSH vào:
 
 ```bash
-ssh <user>@macmini
+ssh <user>@<server-hostname>
 ```
 
 Nếu vào được, headless thành công. Kiểm tra các service cần thiết:
@@ -178,7 +178,7 @@ sudo apt autoremove --purge
 # --purge → xoá cả config file của package, không chỉ binary
 ```
 
-## 5. Bẫy lỗi và Những lần thử thất bại
+## Bẫy lỗi và Những lần thử thất bại
 
 **Bẫy 1 — Gỡ XFCE trước khi xác minh headless ổn định**
 
@@ -192,7 +192,7 @@ Sau khi gỡ XFCE, nếu SSH có vấn đề (VD: Tailscale chưa lên kịp sau
 
 `multi-user.target` chỉ không load display manager. Nếu có service nào đó manually enable mà depends vào X11 hoặc DBUS session, nó vẫn có thể được kéo vào. Cần kiểm tra `systemctl list-units --state=failed` sau reboot.
 
-## 6. Kiểm tra và Xác minh
+## Kiểm tra và Xác minh
 
 Sau khi reboot sang `multi-user.target`:
 
@@ -207,7 +207,7 @@ systemctl list-units --state=failed
 # Kiểm tra có service nào fail không — đặc biệt quan trọng sau lần đổi target đầu tiên
 
 free -h
-# So sánh RAM usage trước/sau — headless thường tiết kiệm 200-400MB
+# So sánh RAM usage trước/sau trên chính máy này nếu cần measurement
 ```
 
 Xác minh các service cốt lõi vẫn chạy:
@@ -220,11 +220,11 @@ findmnt /data
 # Kỳ vọng: /data mount đúng HDD
 ```
 
-## 7. Nguồn tham khảo
+## Nguồn tham khảo
 
-- systemd documentation — systemctl set-default: https://www.freedesktop.org/software/systemd/man/systemctl.html  
+- [systemd documentation — systemctl set-default](https://www.freedesktop.org/software/systemd/man/systemctl.html)  
   *(giải thích đầy đủ về targets và symlink default.target)*
-- Ubuntu manpage — `ubuntu-server` package: `apt show ubuntu-server`  
-  *(xem dependencies thực tế của metapackage)*
-- Debian/Ubuntu wiki về `multi-user.target` vs `graphical.target`: https://wiki.debian.org/systemd  
+- [`ubuntu-server` package trên Ubuntu 26.04](https://packages.ubuntu.com/resolute/ubuntu-server)  
+  *(xem dependency và recommendation của metapackage theo release)*
+- [Debian/Ubuntu wiki về `multi-user.target` vs `graphical.target`](https://wiki.debian.org/systemd)  
   *(background về systemd targets trên Debian-based distro)*
