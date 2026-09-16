@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mac-mini-home-server-baseline-2.md",
+                "file": "macmini-home-server-setup-reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mac-mini-home-server-baseline-2"
+              "title": "macmini-home-server-setup-reference"
             }
           }
         ]
@@ -190,10 +190,14 @@
   },
   "active": "88c47e3c0b5941fd",
   "lastOpenFiles": [
-    "mac-mini-2014-ubuntu-home-server-baseline.md",
-    "mac-mini-home-server-baseline-2.md",
+    "xubuntu-external-ssd-mac-mini.md",
+    "macmini-home-server-setup-reference.md",
     "ubuntu-terminal-bash-minimal-setup.md",
+    "headless-home-server-ssh-tailscale.md",
+    "ubuntu-terminal-stack.md",
     "bcm4360-wifi-ubuntu.md",
-    "headless-home-server-ssh-tailscale.md"
+    "migrate-media-va-trien-khai-jellyfin-home-server.md",
+    "mac-mini-home-server-baseline-2.md",
+    "mac-mini-2014-ubuntu-home-server-baseline.md"
   ]
 }
