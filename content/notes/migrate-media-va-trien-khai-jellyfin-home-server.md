@@ -12,8 +12,8 @@ tags:
   - rsync
 ---
 
-> [!NOTE]
-> **Tóm tắt:** Với một home server đơn giản chỉ có một HDD dữ liệu, cách triển khai hiệu quả là giữ media thành thư viện chuẩn trên `/data/media/tv`, mount read-only vào Jellyfin container, dùng `Shows` làm loại library cho TV series, và truy cập từ xa qua Tailscale thay vì public port trực tiếp.
+> [!TLDR]
+> Với một home server đơn giản chỉ có một HDD dữ liệu, cách triển khai hiệu quả là giữ media thành thư viện chuẩn trên `/data/media/tv`, mount read-only vào Jellyfin container, dùng `Shows` làm loại library cho TV series, và truy cập từ xa qua Tailscale thay vì public port trực tiếp.
 
 ## Trạng thái cuối cùng
 

@@ -7,7 +7,7 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
   <div class="bio-text">
-    <p>Xin chào mọi người, mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư ngành Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình thích xây dựng phần mềm, tìm hiểu cách các hệ thống hoạt động và thử nghiệm những ứng dụng thực tế của AI. Phần lớn những gì mình học được đến từ việc tự xây dựng dự án, gặp vấn đề và tìm cách giải quyết chúng..</p>
+    <p>Mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình thích xây dựng phần mềm, tìm hiểu cách các hệ thống hoạt động và thử nghiệm những ứng dụng thực tế của AI. Phần lớn những gì mình học được đến từ việc tự xây dựng dự án, gặp vấn đề và tìm cách giải quyết chúng.</p>
     <p>Trang web này là nơi mình ghi lại các dự án đang làm, những công nghệ đang tìm hiểu và những điều mình học được trong quá trình đó. Bạn có thể xem thêm về kinh nghiệm của mình trong <a href="/cv/Nguyen_Ngoc_Tin-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">Facebook</a> hoặc gửi thư trực tiếp cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
   </div>
 </div>
@@ -254,4 +254,36 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
   </div>
 
+  <!-- Project 6: Mac mini Home Server -->
+  <div class="timeline-row">
+    <div class="timeline-left">
+      <div class="timeline-org-wrap">
+        <span class="timeline-org">Mac mini Server</span>
+        <span class="timeline-time">Sep 2026 — Present</span>
+      </div>
+    </div>
+    <div class="timeline-right">
+      <h3 class="timeline-title">
+        <a href="/notes/macmini-home-server-setup-reference/">Mac mini Home Server</a>
+      </h3>
+      <div class="timeline-desc">
+        Biến Mac mini 2014 thành home server Ubuntu chạy các dịch vụ self-hosted qua Docker Compose, truy cập private qua Tailscale, mount ổ đĩa persistent bằng UUID và giám sát phần cứng với smartd.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Linux</span>
+        <span class="timeline-tag">Ubuntu</span>
+        <span class="timeline-tag">Docker Compose</span>
+        <span class="timeline-tag">Tailscale</span>
+        <span class="timeline-tag">systemd</span>
+        <span class="timeline-tag">SSH</span>
+        <span class="timeline-tag">Self-Hosted</span>
+        <span class="timeline-tag">smartmontools</span>
+      </div>
+      <div class="timeline-links">
+        <a href="/notes/macmini-home-server-setup-reference/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+      </div>
+    </div>
+  </div>
+
 </div>
+

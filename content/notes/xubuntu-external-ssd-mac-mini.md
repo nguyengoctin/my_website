@@ -13,8 +13,8 @@ tags:
   - uefi
 ---
 
-> [!NOTE]
-> **Tóm tắt:** Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
+> [!TLDR]
+> Mục tiêu là cài Xubuntu lên SSD Kingmax 120 GB qua USB — trên một máy Ubuntu đang chạy — giữ nguyên ổ hệ điều hành hiện tại, rồi mang SSD sang Mac mini 2014 để boot độc lập. Điểm quan trọng nhất: mọi partition cần cho Xubuntu — đặc biệt EFI System Partition và root — phải nằm trên chính SSD ngoài, không phải ổ NVMe của máy cài.
 
 > [!WARNING]
 > GRUB loopback boot từ ISO trong note này là procedure dự kiến và **chưa được xác minh hoạt động** trong material gốc. Các lệnh `wipefs` có thể xóa metadata của nhầm disk nếu device name khác environment đã ghi. Giữ note này như reference cho investigation, không coi toàn bộ flow là tutorial đã verify.

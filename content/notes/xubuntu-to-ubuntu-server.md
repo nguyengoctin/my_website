@@ -11,8 +11,8 @@ tags:
   - linux
 ---
 
-> [!NOTE]
-> **Tóm tắt:** Không cần cài lại chỉ để biến một Xubuntu đang hoạt động thành máy headless. `multi-user.target` có thể bỏ display manager khỏi boot mặc định, còn `ubuntu-server` bổ sung bộ package server. Cách này không biến installation thành một bản Ubuntu Server cài mới theo nghĩa package set và installer history; nó chỉ tạo behavior vận hành phù hợp với server trên installation hiện có.
+> [!TLDR]
+> Không cần cài lại chỉ để biến một Xubuntu đang hoạt động thành máy headless. `multi-user.target` có thể bỏ display manager khỏi boot mặc định, còn `ubuntu-server` bổ sung bộ package server. Cách này không biến installation thành một bản Ubuntu Server cài mới theo nghĩa package set và installer history; nó chỉ tạo behavior vận hành phù hợp với server trên installation hiện có.
 
 ## Bản chất
 
