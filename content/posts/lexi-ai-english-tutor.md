@@ -10,22 +10,24 @@ categories: ["Projects", "System Architecture"]
 
 {{< youtube qPlBFtEk3pM >}}
 
-> **One-liner:** Lexi là trợ lý AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua giọng nói thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và cải thiện phản xạ đàm thoại theo kịch bản thực tế.
+> [!TLDR]
+> Lexi là trợ lý AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua giọng nói thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và cải thiện phản xạ đàm thoại theo kịch bản thực tế.
+>
+> **Vai trò:** Thiết kế kiến trúc backend serverless trên AWS, triển khai Clean Architecture với Python, thiết kế DynamoDB Single Table và tích hợp streaming audio qua Amazon Transcribe, Bedrock và Polly.
 
-## 1. Tổng quan dự án
+## Bối cảnh và bài toán thực tế
 
-### Bài toán thực tế
-Rào cản lớn nhất của người học giao tiếp tiếng Anh là thiếu môi trường tương tác phản xạ tự nhiên và tâm lý e ngại khi trò chuyện trực tiếp với người bản xứ. Các giải pháp gia sư truyền thống thường có chi phí đắt đỏ và khó sắp xếp thời gian linh hoạt theo lịch cá nhân.
+Rào cản lớn nhất của người học giao tiếp tiếng Anh là thiếu môi trường tương tác phản xạ tự nhiên và tâm lý e ngại khi trò chuyện trực tiếp với người bản xứ. Các giải pháp gia sư truyền thống thường có chi phí cao và khó sắp xếp thời gian linh hoạt theo lịch cá nhân.
 
 ### Đối tượng sử dụng
 Học viên tiếng Anh trình độ từ cơ bản đến trung cấp (A2 đến B2) cần một môi trường an toàn, kiên nhẫn để luyện phản xạ nói hàng ngày mà không sợ bị phán xét.
 
 ### Giải pháp cốt lõi
-Xây dựng một gia sư AI đàm thoại qua luồng âm thanh thời gian thực. Hệ thống tiếp nhận giọng nói, chuyển đổi thành văn bản, phân tích ngữ cảnh để đối đáp tự nhiên, đồng thời cung cấp phản hồi tức thì về lỗi phát âm và cấu trúc ngữ pháp với độ trễ phản xạ dưới 1.2 giây.
+Xây dựng gia sư AI đàm thoại qua luồng âm thanh thời gian thực. Hệ thống tiếp nhận giọng nói, chuyển đổi thành văn bản, phân tích ngữ cảnh để đối đáp tự nhiên, đồng thời cung cấp phản hồi tức thì về lỗi phát âm và cấu trúc ngữ pháp với độ trễ phản xạ dưới 1.2 giây.
 
 ---
 
-## 2. Luồng hoạt động cốt lõi
+## Luồng hoạt động cốt lõi
 
 Toàn bộ quy trình luyện tập diễn ra theo luồng khép kín giữa học viên và các dịch vụ đám mây:
 
@@ -51,7 +53,7 @@ flowchart TD
 
 ---
 
-## 3. Kiến trúc hệ thống và Thiết kế dữ liệu
+## Kiến trúc hệ thống và thiết kế dữ liệu
 
 Hệ thống vận hành hoàn toàn trên hạ tầng Serverless của AWS, áp dụng Clean Architecture để cô lập mã nguồn Lambda khỏi các phụ thuộc bên ngoài:
 
@@ -95,16 +97,26 @@ class MyHandler(BaseHandler[MyController]):
         return self.presenter.present_error(400, result.error)
 ```
 
-### Thiết kế Cơ sở Dữ liệu DynamoDB Single Table
+### Thiết kế cơ sở dữ liệu DynamoDB Single Table
 
 Để đạt độ trễ truy xuất dữ liệu dưới 10ms và tối ưu chi phí vận hành, toàn bộ dữ liệu người dùng, thẻ từ vựng flashcard, phiên luyện nói và kịch bản giao tiếp được gom chung vào một bảng `LexiAppTable` duy nhất:
 
-| Khóa phân vùng (PK) | Khóa sắp xếp (SK) | Loại thực thể | Dữ liệu chính |
-| :--- | :--- | :--- | :--- |
-| `USER#{user_id}` | `PROFILE` | User Profile | Email, họ tên, cấp độ CEFR hiện tại |
-| `USER#{user_id}` | `FLASHCARD#{flashcard_id}` | Flashcard | Từ vựng, phiên âm, ví dụ, lịch ôn tập SRS |
-| `USER#{user_id}` | `SESSION#{session_id}` | Speaking Session | Bản ghi âm, văn bản phiên âm, điểm phát âm |
-| `SCENARIO#{scenario_id}` | `METADATA` | Scenario | Tiêu đề chủ đề, độ khó, prompt dẫn dắt |
+- **Hồ sơ người dùng (User Profile):**
+  - Partition Key (PK): `USER#{user_id}`
+  - Sort Key (SK): `PROFILE`
+  - Dữ liệu: Email, họ tên, cấp độ CEFR hiện tại.
+- **Thẻ từ vựng (Flashcard):**
+  - Partition Key (PK): `USER#{user_id}`
+  - Sort Key (SK): `FLASHCARD#{flashcard_id}`
+  - Dữ liệu: Từ vựng, phiên âm, ví dụ ngữ cảnh, lịch ôn tập SRS.
+- **Phiên luyện nói (Speaking Session):**
+  - Partition Key (PK): `USER#{user_id}`
+  - Sort Key (SK): `SESSION#{session_id}`
+  - Dữ liệu: Bản ghi âm, văn bản phiên âm, điểm số phát âm.
+- **Kịch bản hội thoại (Scenario):**
+  - Partition Key (PK): `SCENARIO#{scenario_id}`
+  - Sort Key (SK): `METADATA`
+  - Dữ liệu: Tiêu đề chủ đề, độ khó, prompt dẫn dắt.
 
 #### Tối ưu truy vấn với Global Secondary Index
 
@@ -112,16 +124,16 @@ Bằng việc thiết kế khóa phân vùng đảo ngược `GSI1_PK = TYPE#FLA
 
 ---
 
-## 4. Các quyết định kỹ thuật then chốt
+## Các quyết định kỹ thuật then chốt
 
-### 1. Serverless và WebSocket API Gateway thay vì máy chủ truyền thống
+### Serverless và WebSocket API Gateway thay vì máy chủ truyền thống
 - **Bối cảnh:** Ứng dụng âm thanh thời gian thực thường yêu cầu duy trì kết nối socket liên tục.
 - **Quyết định:** Sử dụng AWS API Gateway WebSocket kết hợp AWS Lambda thay vì tự host cụm Socket.io server trên EC2 hoặc ECS.
 - **Đánh đổi:** 
   - *Ưu điểm:* Không mất chi phí nhàn rỗi, hệ thống tự động scale từ 0 lên hàng ngàn kết nối đồng thời mà không cần cấu hình cluster.
   - *Nhược điểm:* Phải quản lý connection ID phân tán trong DynamoDB và bị giới hạn thời gian chạy tối đa của Lambda cho mỗi event.
 
-### 2. DynamoDB Single Table thay vì cơ sở dữ liệu quan hệ
+### DynamoDB Single Table thay vì cơ sở dữ liệu quan hệ
 - **Bối cảnh:** Dữ liệu học tập có cấu trúc phân tầng giữa người dùng, phiên luyện nói và các lượt đối đáp âm thanh.
 - **Quyết định:** Sử dụng Single Table Design trên DynamoDB.
 - **Đánh đổi:**
@@ -130,18 +142,19 @@ Bằng việc thiết kế khóa phân vùng đảo ngược `GSI1_PK = TYPE#FLA
 
 ---
 
-## 5. Kết quả đạt được và Giới hạn hiện tại
+## Kết quả đạt được và giới hạn hiện tại
 
 ### Kết quả đạt được
 1. **Độ trễ phản xạ:** Phản hồi ấm của Lambda đạt từ 50ms đến 100ms; tổng thời gian từ khi người học dứt lời đến khi nghe câu trả lời trung bình khoảng 1.2 giây.
-2. **Tối ưu chi phí:** Hạ tầng Serverless hoàn toàn giúp chi phí duy trì chỉ khoảng $12/tháng cho quy mô thử nghiệm 10.000 người dùng với 100.000 lượt tương tác.
+2. **Tối ưu chi phí:** Hạ tầng Serverless hoàn toàn giúp chi phí duy trì khoảng $12/tháng cho quy mô thử nghiệm 10.000 người dùng với 100.000 lượt tương tác.
 3. **Chất lượng mã nguồn:** Áp dụng Clean Architecture cho phép kiểm thử độc lập tầng Use Case với độ bao phủ kiểm thử cao mà không cần giả lập môi trường AWS thực tế.
 
 ### Giới hạn đã biết
 - **Chất lượng đường truyền di động:** Khi mạng yếu hoặc chập chờn, luồng audio streaming qua WebSocket có thể bị đứt đoạn gói tin.
-- **Giọng địa phương và tạp âm:** Mặc dù Amazon Transcribe nhận diện tốt giọng chuẩn, nhưng với những trường hợp môi trường xung quanh có nhiều tiếng ồn hoặc phát âm nuốt âm quá nhiều, độ chính xác nhận diện câu văn có thể bị ảnh hưởng.
+- **Giọng địa phương và tạp âm:** Mặc dù Amazon Transcribe nhận diện tốt giọng chuẩn, nhưng với môi trường xung quanh nhiều tiếng ồn hoặc phát âm nuốt âm nhiều, độ chính xác nhận diện câu văn có thể bị ảnh hưởng.
 
 ---
 
 - {{< link href="https://github.com/ngoctinn/lexi-be" content="Mã nguồn GitHub Repository: Lexi Backend (AWS SAM và Clean Architecture)" >}}
 - {{< link href="https://github.com/ngoctinn/lexi-fe" content="Mã nguồn GitHub Repository: Lexi Frontend (Next.js và TypeScript)" >}}
+

@@ -9,11 +9,14 @@ categories: ["Projects", "Product Design"]
 ---
 
 
-> **One-liner:** Job Hunt OS là ứng dụng di động ghi nhớ và quản lý tiến trình tìm việc cá nhân, giúp người ứng tuyển lưu giữ nhanh tin tuyển dụng, phiên bản CV đã nộp và khôi phục bối cảnh tức thì khi nhà tuyển dụng liên hệ.
+> [!TLDR]
+> Job Hunt OS là ứng dụng di động ghi nhớ và quản lý tiến trình tìm việc cá nhân, giúp người ứng tuyển lưu giữ nhanh tin tuyển dụng, phiên bản CV đã nộp và khôi phục bối cảnh tức thì khi nhà tuyển dụng liên hệ.
+>
+> **Vai trò:** Thiết kế sản phẩm (Product Design), đặc tả yêu cầu kỹ thuật (PRD) và xây dựng kiến trúc dữ liệu cho nguyên mẫu ứng dụng di động.
 
-## 1. Tổng quan dự án
+## Ý tưởng cốt lõi và đối tượng mục tiêu
 
-### Ý tưởng cốt lõi
+### Bối cảnh thực tế
 Trong quá trình tìm kiếm việc làm, đặc biệt là giai đoạn chuyển tiếp từ sinh viên năm cuối lên fresher hoặc junior, ứng viên thường rải hồ sơ đồng thời vào 20 đến 50 vị trí khác nhau qua LinkedIn, TopCV, ITviec, email và referral. Khi số lượng cơ hội tăng lên, thông tin bắt đầu phân mảnh nghiêm trọng: ứng viên không nhớ đã gửi phiên bản CV nào, bài đăng tuyển dụng gốc đã bị gỡ hay nhà tuyển dụng đang gọi điện phỏng vấn cho vị trí cụ thể nào.
 
 Job Hunt OS được định nghĩa với nguyên lý sản phẩm nhất quán:
@@ -25,7 +28,7 @@ Job Hunt OS được định nghĩa với nguyên lý sản phẩm nhất quán:
 
 ---
 
-## 2. Vấn đề giải quyết và Khác biệt cạnh tranh
+## Vấn đề giải quyết và khác biệt cạnh tranh
 
 Các công cụ phổ biến hiện nay như Google Sheets, Notion hoặc các nền tảng quốc tế như Huntr, Teal thường rơi vào hai thái cực: hoặc đòi hỏi ứng viên tự xây dựng cơ sở dữ liệu thủ công tốn nhiều công sức, hoặc quá nặng nề về tính năng CRM doanh nghiệp với hàng chục trạng thái không cần thiết.
 
@@ -51,7 +54,7 @@ flowchart TD
 
 ---
 
-## 3. Kiến trúc mô hình dữ liệu cốt lõi
+## Kiến trúc mô hình dữ liệu cốt lõi
 
 Thay vì coi toàn bộ quá trình là một hàng ngang cứng nhắc trong bảng tính, Job Hunt OS phân tách các thực thể nghiệp vụ rõ ràng:
 
@@ -77,19 +80,19 @@ flowchart TD
 
 ---
 
-## 4. Các quyết định thiết kế then chốt
+## Các quyết định thiết kế then chốt
 
-### 1. Theo dõi lũy tiến — Progressive Tracking
+### Theo dõi lũy tiến — Progressive Tracking
 - **Bối cảnh:** Bắt người dùng điền 15 trường thông tin khi vừa thấy một tin tuyển dụng sẽ dẫn đến bỏ cuộc vì tracking fatigue.
 - **Quyết định:** Giai đoạn chưa có phản hồi chỉ cần ghi lại tên công ty, vị trí, nguồn và phiên bản CV. Khi nhà tuyển dụng bắt đầu phản hồi, ứng dụng mới mở rộng các trường ghi chép về vòng phỏng vấn và người liên hệ.
 
-### 2. Ưu tiên truy xuất bối cảnh tức thì — Instant Context Recall
+### Ưu tiên truy xuất bối cảnh tức thì — Instant Context Recall
 - **Kịch bản thực tế:** Nhà tuyển dụng gọi điện bất ngờ hỏi về vị trí ứng tuyển từ 2 tuần trước.
 - **Quyết định:** Tính năng tìm kiếm trên ứng dụng di động được tối ưu để trong vòng dưới 3 giây, ứng viên xem được ngay mô tả công việc tóm tắt, phiên bản CV đã dùng và ghi chú gần nhất ngay khi đang cầm điện thoại.
 
 ---
 
-## 5. Kế hoạch phát triển MVP và Đo lường
+## Kế hoạch phát triển MVP và đo lường
 
 ### Phạm vi phiên bản đầu tiên MVP
 - Lưu nhanh cơ hội từ clipboard hoặc chia sẻ link.
@@ -100,3 +103,4 @@ flowchart TD
 
 ### Trạng thái dự án
 Dự án hiện đang ở giai đoạn hoàn thiện tài liệu PRD và bắt đầu tiến hành xây dựng nguyên mẫu ứng dụng di động.
+

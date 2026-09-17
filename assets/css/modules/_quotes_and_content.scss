@@ -433,4 +433,62 @@ a [class*=" ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i):not(.theme-ic
   }
 }
 
+// ==========================================================
+// 9. SHOWCASE GALLERY GRID (No-Table Visual Layout)
+// ==========================================================
+.showcase-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-surface-2, #f8fafc);
+    border: 1px solid var(--clr-border, #e2e8f0);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0.5rem;
+
+    [theme=dark] & {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      line-height: 1.35;
+      color: var(--clr-text-2, #64748b);
+      text-align: center;
+
+      strong {
+        display: block;
+        color: var(--clr-text, #111111);
+        margin-bottom: 0.2rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
 
