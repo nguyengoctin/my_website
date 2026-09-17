@@ -39,18 +39,12 @@ Bên cạnh cấu trúc câu lệnh, việc kiểm soát tham số đóng vai tr
 Để quy trình đọc hiểu không bị đứt gãy, chúng ta kết hợp hai phương pháp giáo dục học kinh điển vào một luồng dữ liệu khép kín: SQ3R xử lý định hướng vĩ mô và bóc tách tài liệu, trong khi Vòng lặp Feynman tương tác đóng vai trò máy vạch lá tìm sâu các lỗ hổng tri thức.
 
 ```mermaid
-flowchart TD
-    S1["Bước 1:<br/>Survey<br/>Nạp mục lục vào AI"]
-    S2["Bước 2:<br/>Question<br/>5 câu hỏi định hướng"]
-    S3["Bước 3:<br/>Read<br/>Bóc tách văn bản"]
-    F1["Bước 4:<br/>Recite<br/>Giải thích cho AI"]
-    F2["Bước 5:<br/>Phản biện<br/>AI mổ xẻ lỗ hổng"]
-    R1["Bước 6:<br/>Review<br/>Ma trận tri thức"]
-    S1 --> S2
-    S2 --> S3
-    S3 --> F1
-    F1 --> F2
-    F2 --> R1
+flowchart LR
+    S1["Bước 1:<br/>Khảo sát mục lục"] --> S2["Bước 2:<br/>Câu hỏi định hướng"]
+    S2 --> S3["Bước 3:<br/>Đọc bóc tách"]
+    S3 --> F1["Bước 4:<br/>Feynman giải thích"]
+    F1 --> F2["Bước 5:<br/>AI phản biện"]
+    F2 --> R1["Bước 6:<br/>Tổng hợp tri thức"]
 ```
 
 ## Quy Trình 5 Bước Sử Dụng Bộ Prompt Thực Chiến

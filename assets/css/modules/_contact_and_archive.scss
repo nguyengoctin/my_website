@@ -546,7 +546,7 @@
         }
       }
 
-      &[href*="/cv/"] {
+      &[href*="docs.google.com"][href*="/preview"] {
         font-weight: 700 !important;
         color: #ec4899 !important;
 
@@ -618,10 +618,6 @@
 // ==========================================================
 // 4. SHIMMER & PAGINATION
 // ==========================================================
-body:has(.cv-container-aligned) .footer {
-  margin-top: 1rem !important;
-}
-
 .featured-image-preview {
   position: relative;
   background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.10) 37%, rgba(0,0,0,0.04) 63%);

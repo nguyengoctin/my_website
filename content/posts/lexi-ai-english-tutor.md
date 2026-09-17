@@ -32,18 +32,12 @@ Xây dựng gia sư AI đàm thoại qua luồng âm thanh thời gian thực. H
 Toàn bộ quy trình luyện tập diễn ra theo luồng khép kín giữa học viên và các dịch vụ đám mây:
 
 ```mermaid
-flowchart TD
-    AudioIn["Bước 1:<br/>Giọng nói học viên<br/>Next.js Web Audio Stream"]
-    WSS["Bước 2:<br/>Kênh truyền hai chiều<br/>WebSocket API Gateway"]
-    STT["Bước 3:<br/>Chuyển đổi giọng nói<br/>Amazon Transcribe Streaming"]
-    LLM["Bước 4:<br/>Não bộ đàm thoại<br/>Amazon Bedrock Claude"]
-    TTS["Bước 5:<br/>Tổng hợp phản hồi<br/>Amazon Polly Neural TTS"]
-    AudioOut["Bước 6:<br/>Phát âm thanh<br/>Tai nghe học viên"]
-    AudioIn --> WSS
-    WSS --> STT
-    STT --> LLM
-    LLM --> TTS
-    TTS --> AudioOut
+flowchart LR
+    AudioIn["Bước 1:<br/>Giọng nói"] --> WSS["Bước 2:<br/>WebSocket"]
+    WSS --> STT["Bước 3:<br/>Transcribe"]
+    STT --> LLM["Bước 4:<br/>Bedrock Claude"]
+    LLM --> TTS["Bước 5:<br/>Polly TTS"]
+    TTS --> AudioOut["Bước 6:<br/>Tai nghe"]
 ```
 
 1. **Thu âm và truyền phát:** Trình duyệt thu âm giọng nói từ microphone học viên và truyền stream nhị phân liên tục qua kết nối WebSocket bảo mật.

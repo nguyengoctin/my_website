@@ -38,18 +38,12 @@ Job Hunt OS giải quyết bài toán qua 3 câu hỏi thực chiến hàng ngà
 3. **Khi nhà tuyển dụng gọi, tôi có nhớ đúng bối cảnh không?** — Năng lực truy xuất bối cảnh tức thì Instant Context Recall.
 
 ```mermaid
-flowchart TD
-    FindJob["Bước 1:<br/>Bắt gặp tin tuyển dụng<br/>Chia sẻ hoặc dán link"]
-    QuickCap["Bước 2:<br/>Thu nạp nhanh<br/>Tên công ty và vị trí"]
-    AppliedEvt["Bước 3:<br/>Đánh dấu đã nộp<br/>Lưu mốc ngày và bản CV"]
-    IdleState["Bước 4:<br/>Trạng thái chờ<br/>Theo dõi nhẹ nhàng"]
-    RecruiterCall["Bước 5:<br/>Nhà tuyển dụng liên hệ<br/>Tra cứu tức thì dưới 3 giây"]
-    NextAct["Bước 6:<br/>Tạo hành động tiếp theo<br/>Lịch phỏng vấn và bài test"]
-    FindJob --> QuickCap
-    QuickCap --> AppliedEvt
-    AppliedEvt --> IdleState
-    IdleState --> RecruiterCall
-    RecruiterCall --> NextAct
+flowchart LR
+    FindJob["Bước 1:<br/>Bắt gặp tin"] --> QuickCap["Bước 2:<br/>Thu nạp nhanh"]
+    QuickCap --> AppliedEvt["Bước 3:<br/>Đánh dấu nộp"]
+    AppliedEvt --> IdleState["Bước 4:<br/>Trạng thái chờ"]
+    IdleState --> RecruiterCall["Bước 5:<br/>Tra cứu bối cảnh"]
+    RecruiterCall --> NextAct["Bước 6:<br/>Lịch phỏng vấn"]
 ```
 
 ---

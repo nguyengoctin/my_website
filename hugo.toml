@@ -90,7 +90,7 @@ enableEmoji = true
     weight = 6
     identifier = "cv"
     name = "My CV"
-    url = "/cv/"
+    url = "https://docs.google.com/document/d/1-K2y1sASCNhwXWVCrZb5tdeO7IzB4uZUN9Om09yadU8/preview"
     title = "Curriculum Vitae"
 
 # Parameters config for LoveIt theme

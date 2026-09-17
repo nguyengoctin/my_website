@@ -28,14 +28,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Setup Typst
-        uses: typst-community/setup-typst@v5
-
-      - name: Compile CV to PDF
-        run: |
-          mkdir -p static/cv
-          typst compile cv/resume.typ static/cv/Nguyen_Ngoc_Tin-CV.pdf
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:

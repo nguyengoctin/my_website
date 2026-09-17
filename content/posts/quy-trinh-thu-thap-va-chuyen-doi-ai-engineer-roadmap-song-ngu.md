@@ -18,7 +18,6 @@ tags:
 
 toc: true
 math: false
-mermaid: true
 ---
 
 Khi đối mặt với một lộ trình học tập đồ sộ gồm 174 bài học kỹ thuật như AI Engineer Roadmap trên roadmap.sh, thách thức lớn nhất của chúng ta là làm sao chuyển đổi toàn bộ tài liệu này thành các tệp Markdown song ngữ chất lượng cao mà không làm mất đi bất kỳ đoạn kiến thức nào. Việc đọc tài liệu kỹ thuật tiếng Anh thuần túy thường tạo ra rào cản nhận thức đối với người mới, trong khi các bản dịch tự động thông thường lại dễ gây mất ngữ cảnh hoặc dịch sai thuật ngữ chuyên ngành.

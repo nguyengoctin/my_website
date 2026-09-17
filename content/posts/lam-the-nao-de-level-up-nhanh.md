@@ -130,10 +130,9 @@ Một belief hữu ích cần đáp ứng đồng thời hai tiêu chí:
 1. **Giúp tạo ra hành vi tốt hơn.**
 2. **Vẫn cho phép thực tế chứng minh mình sai.**
 
-| Niềm tin đóng (Giới hạn) | Niềm tin mở (Thực nghiệm) |
-| :--- | :--- |
-| *"Mình không thể học cái này."* | *"Mình chưa tìm được cách học cái này hiệu quả."* |
-| *"Mình không có kỷ luật."* | *"Mình chưa biết giới hạn kỷ luật của mình ở đâu."* |
+So sánh hai cách tiếp cận niềm tin:
+- **Niềm tin đóng (Giới hạn):** *"Mình không thể học cái này"* hoặc *"Mình không có kỷ luật"*.
+- **Niềm tin mở (Thực nghiệm):** *"Mình chưa tìm được cách học cái này hiệu quả"* hoặc *"Mình chưa biết giới hạn kỷ luật của mình ở đâu"*.
 
 Sự khác biệt nghe có vẻ nhỏ, nhưng belief thứ hai mở ra một hành động tiếp theo, trong khi belief thứ nhất lập tức đóng cuộc chơi lại.
 

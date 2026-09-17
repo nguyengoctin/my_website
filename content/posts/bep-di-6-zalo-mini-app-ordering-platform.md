@@ -33,16 +33,11 @@ Các hàng quán F&B quy mô vừa và nhỏ thường chịu mức chiết kh�
 Quy trình từ lúc khách hàng duyệt món đến khi đơn hàng được nhà bếp tiếp nhận và đối soát thanh toán:
 
 ```mermaid
-flowchart TD
-    Step1["Bước 1:<br/>Chọn món và Topping<br/>Zalo Mini App Client"]
-    Step2["Bước 2:<br/>Lấy GPS và Tính cước<br/>Zalo Geolocation SDK"]
-    Step3["Bước 3:<br/>Xác thực đơn hàng<br/>Django Atomic Transaction"]
-    Step4["Bước 4:<br/>Sinh mã thanh toán<br/>VietQR NAPAS động"]
-    Step5["Bước 5:<br/>Chuyển khoản và Xác nhận<br/>Admin Dashboard tiếp nhận"]
-    Step1 --> Step2
-    Step2 --> Step3
-    Step3 --> Step4
-    Step4 --> Step5
+flowchart LR
+    Step1["Bước 1:<br/>Chọn món"] --> Step2["Bước 2:<br/>Lấy GPS"]
+    Step2 --> Step3["Bước 3:<br/>Tạo đơn hàng"]
+    Step3 --> Step4["Bước 4:<br/>Sinh mã VietQR"]
+    Step4 --> Step5["Bước 5:<br/>Tiếp nhận đơn"]
 ```
 
 1. **Khám phá và tùy biến:** Khách hàng mở Mini App trong Zalo, duyệt thực đơn phân tầng, tùy chọn kích cỡ, mức đường hoặc đá và topping đi kèm.

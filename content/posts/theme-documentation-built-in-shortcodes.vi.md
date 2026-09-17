@@ -84,14 +84,14 @@ flowchart LR
 
 ### Cú pháp Shortcode:
 ```markdown
-{{< mermaid >}}
+{{</* mermaid */>}}
 flowchart LR
     Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
     Process --> Condition{"Kiểm tra"}
     Condition -->|"Hợp lệ"| Finish["Hoàn thành"]
     Condition -->|"Lỗi"| Retry["Thử lại"]
     Retry -.-> Process
-{{< /mermaid >}}
+{{</* /mermaid */>}}
 ```
 
 ---
@@ -202,26 +202,24 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 
 ---
 
-## 12. BẢNG TỔNG HỢP DANH SÁCH 17 SHORTCODES
+## 12. Danh sách tổng hợp 17 Shortcodes
 
-| Tên Shortcode | Chức năng chính | Ví dụ sử dụng tiêu biểu |
-| :--- | :--- | :--- |
-| **admonition** | Tạo khung thông báo phân loại | `{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}` |
-| **quote** | Khung trích dẫn sang trọng kèm tác giả | `{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}` |
-| **mermaid** | Vẽ sơ đồ quy trình và trình tự | ` {{< mermaid >}} flowchart LR ... {{< /mermaid >}} ` |
-| **style** | Định dạng CSS trực tiếp cho văn bản | `{{</* style "color: red;" p */>}}...{{</* /style */>}}` |
-| **typeit** | Hiệu ứng gõ chữ hoạt hình | `{{</* typeit */>}}Hello World{{</* /typeit */>}}` |
-| **version** | Huy hiệu đánh dấu phiên bản | `{{</* version 0.3.0 new */>}}` |
-| **person** | Thẻ giới thiệu tác giả | `{{</* person name="Ngọc Tín" picture="/images/avatar.webp" */>}}` |
-| **link** | Liên kết tùy chỉnh | `{{</* link href="..." content="..." */>}}` |
-| **image** | Hiển thị ảnh kèm chú thích và lightbox | `{{</* image src="..." caption="..." */>}}` |
-| **echarts** | Vẽ biểu đồ thống kê dạng JSON | `{{</* echarts */>}} { ... } {{</* /echarts */>}}` |
-| **music** | Nhúng trình phát nhạc APlayer | `{{</* music url="..." name="..." */>}}` |
-| **gist** | Nhúng GitHub Gist snippet | `{{</* gist username gist_id */>}}` |
-| **bilibili** | Nhúng video từ Bilibili | `{{</* bilibili bvid */>}}` |
-| **mapbox** | Nhúng bản đồ tương tác Mapbox | `{{</* mapbox lng lat zoom */>}}` |
-| **highlight** | Tô màu cú pháp mã nguồn | `{{</* highlight python */>}}...{{</* /highlight */>}}` |
-| **raw** | Chèn trực tiếp mã HTML thô | `{{</* raw */>}}<div>HTML</div>{{</* /raw */>}}` |
+- **admonition:** Tạo khung thông báo phân loại (`{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}`).
+- **quote:** Khung trích dẫn sang trọng kèm tác giả (`{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}`).
+- **mermaid:** Vẽ sơ đồ quy trình và trình tự (`{{</* mermaid */>}} flowchart LR ... {{</* /mermaid */>}}`).
+- **style:** Định dạng CSS trực tiếp cho văn bản (`{{</* style "color: red;" p */>}}...{{</* /style */>}}`).
+- **typeit:** Hiệu ứng gõ chữ hoạt hình (`{{</* typeit */>}}Hello World{{</* /typeit */>}}`).
+- **version:** Huy hiệu đánh dấu phiên bản (`{{</* version 0.3.0 new */>}}`).
+- **person:** Thẻ giới thiệu tác giả (`{{</* person name="Ngọc Tín" picture="/images/avatar.webp" */>}}`).
+- **link:** Liên kết tùy chỉnh (`{{</* link href="..." content="..." */>}}`).
+- **image:** Hiển thị ảnh kèm chú thích và lightbox (`{{</* image src="..." caption="..." */>}}`).
+- **echarts:** Vẽ biểu đồ thống kê dạng JSON (`{{</* echarts */>}} { ... } {{</* /echarts */>}}`).
+- **music:** Nhúng trình phát nhạc APlayer (`{{</* music url="..." name="..." */>}}`).
+- **gist:** Nhúng GitHub Gist snippet (`{{</* gist username gist_id */>}}`).
+- **bilibili:** Nhúng video từ Bilibili (`{{</* bilibili bvid */>}}`).
+- **mapbox:** Nhúng bản đồ tương tác Mapbox (`{{</* mapbox lng lat zoom */>}}`).
+- **highlight:** Tô màu cú pháp mã nguồn (`{{</* highlight python */>}}...{{</* /highlight */>}}`).
+- **raw:** Chèn trực tiếp mã HTML thô (`{{</* raw */>}}<div>HTML</div>{{</* /raw */>}}`).
 
 ---
 

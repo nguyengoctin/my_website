@@ -34,16 +34,11 @@ Sử dụng bộ tạo trang tĩnh Hugo kết hợp hệ thống SCSS mô-đun h
 Quy trình xử lý nội dung từ lúc viết bài đến khi bài viết hiển thị trên môi trường trực tuyến:
 
 ```mermaid
-flowchart TD
-    MDWrite["Bước 1:<br/>Viết bài Markdown<br/>Nội dung và Frontmatter"]
-    HugoBuild["Bước 2:<br/>Biên dịch tĩnh<br/>Hugo Core Engine siêu tốc"]
-    AssetProc["Bước 3:<br/>Đóng gói tài nguyên<br/>Nén ảnh WebP và build SCSS"]
-    IndexGen["Bước 4:<br/>Sinh chỉ mục tìm kiếm<br/>Tạo file index JSON cho Lunr"]
-    CDNDeploy["Bước 5:<br/>Phát hành toàn cầu<br/>GitHub Pages và Cloudflare CDN"]
-    MDWrite --> HugoBuild
-    HugoBuild --> AssetProc
-    AssetProc --> IndexGen
-    IndexGen --> CDNDeploy
+flowchart LR
+    MDWrite["Bước 1:<br/>Viết Markdown"] --> HugoBuild["Bước 2:<br/>Biên dịch tĩnh"]
+    HugoBuild --> AssetProc["Bước 3:<br/>Đóng gói tài nguyên"]
+    AssetProc --> IndexGen["Bước 4:<br/>Sinh chỉ mục"]
+    IndexGen --> CDNDeploy["Bước 5:<br/>Phát hành CDN"]
 ```
 
 1. **Soạn thảo và quản trị:** Tác giả viết bài dưới dạng Markdown, quản lý hình ảnh và cấu trúc thư mục rõ ràng.

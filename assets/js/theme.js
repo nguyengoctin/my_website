@@ -613,11 +613,43 @@ class Theme {
     }
 
     initMermaid() {
-        this._mermaidOnSwitchTheme = this._mermaidOnSwitchTheme || (() => {
-            const $mermaidElements = document.getElementsByClassName('mermaid');
-            if (!$mermaidElements.length) return;
+        const $mermaidElements = document.getElementsByClassName('mermaid');
+        if (!$mermaidElements.length || typeof mermaid === 'undefined') return;
 
-            mermaid.initialize({startOnLoad: false, theme: this.isDark ? 'dark' : 'neutral', securityLevel: 'loose'});
+        const getProjectSerifFont = () => {
+            const style = window.getComputedStyle ? window.getComputedStyle(document.documentElement) : null;
+            const tokenFont = (style && style.getPropertyValue('--font-serif') || '').trim();
+            return tokenFont || '"Newsreader", Georgia, "Times New Roman", serif';
+        };
+
+        mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#f8fafc',
+                primaryBorderColor: '#94a3b8',
+                primaryTextColor: '#0f172a',
+                lineColor: '#64748b',
+                edgeLabelBackground: 'transparent',
+                tertiaryColor: '#ffffff',
+                fontFamily: getProjectSerifFont(),
+                fontSize: '15px'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                padding: 20,
+                nodePadding: 20,
+                nodeSpacing: 35,
+                rankSpacing: 35,
+                curve: 'basis',
+                htmlLabels: true,
+                markdownAutoWrap: false,
+                wrappingWidth: 240
+            }
+        });
+
+        const runMermaid = () => {
             if (typeof mermaid.run === 'function') {
                 mermaid.run({ nodes: $mermaidElements });
             } else {
@@ -631,9 +663,13 @@ class Theme {
                     }).catch(err => console.error(err));
                 });
             }
-        });
-        this.switchThemeEventSet.add(this._mermaidOnSwitchTheme);
-        this._mermaidOnSwitchTheme();
+        };
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(runMermaid);
+        } else {
+            runMermaid();
+        }
     }
 
     initEcharts() {
@@ -869,7 +905,6 @@ class Theme {
                     this._resizeTimeout = null;
                     for (let event of this.resizeEventSet) event();
                     this.initToc();
-                    this.initMermaid();
                     this.initSearch();
                 }, 100);
             }

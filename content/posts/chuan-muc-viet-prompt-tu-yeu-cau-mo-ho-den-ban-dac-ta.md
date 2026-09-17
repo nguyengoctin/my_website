@@ -33,12 +33,12 @@ Thay vì đầu tư vào danh xưng, hãy tập trung vào kết quả đầu ra
 ### 5 thành phần của một bản đặc tả hoàn chỉnh
 
 ```mermaid
-flowchart TD
-GoalNode["Goal:<br/>Mục tiêu cốt lõi"] --> ContextNode["Context:<br/>Dữ liệu đầu vào cần thiết"]
-ContextNode --> TaskNode["Task:<br/>Hành động với động từ cụ thể"]
-TaskNode --> RuleNode["Rules:<br/>Ranh giới phòng thủ và Positive Steering"]
-RuleNode --> OutputNode["Output:<br/>Giao diện kết quả mong đợi"]
-OutputNode --> ResultNode["Kết quả tất định,<br/>chuẩn xác và đo lường được"]
+flowchart LR
+    GoalNode["Goal:<br/>Mục tiêu cốt lõi"] --> ContextNode["Context:<br/>Dữ liệu đầu vào"]
+    ContextNode --> TaskNode["Task:<br/>Hành động cụ thể"]
+    TaskNode --> RuleNode["Rules:<br/>Ranh giới phòng thủ"]
+    RuleNode --> OutputNode["Output:<br/>Cấu trúc kết quả"]
+    OutputNode --> ResultNode["Kết quả chuẩn xác"]
 ```
 
 1. **Goal:** Xác định mục tiêu thực chất. Thay vì `Nghiên cứu Docker`, hãy viết: `So sánh Docker Compose và Kubernetes cho ứng dụng chạy trên một VPS để xác định ngưỡng phức tạp không cần thiết`.
