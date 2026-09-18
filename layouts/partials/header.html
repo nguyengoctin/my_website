@@ -36,9 +36,6 @@
                         {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                     </a>
                 {{- end -}}
-                {{- if .Site.Menus.main -}}
-                    <span class="menu-item delimiter"></span>
-                {{- end -}}
 
                 {{- if .Site.Params.search.enable -}}
                     <button type="button" class="menu-item search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }} (⌘K / /)" aria-label="Tìm kiếm bài viết">

@@ -92,6 +92,17 @@ button.menu-toggle {
 }
 
 #header-mobile {
+    background-color: rgba(253, 253, 253, 0.85) !important;
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    border-bottom: 1px solid var(--clr-border, rgba(0, 0, 0, 0.06)) !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+
+    [theme=dark] & {
+        background-color: rgba(28, 29, 34, 0.85) !important;
+        border-bottom-color: var(--clr-border, rgba(255, 255, 255, 0.08)) !important;
+    }
+
     .header-container {
         max-width: var(--shell-width, 750px) !important;
         margin: 0 auto !important;
@@ -105,6 +116,25 @@ button.menu-toggle {
         padding-left: var(--gutter-mobile, 1rem) !important;
         padding-right: var(--gutter-mobile, 1rem) !important;
         box-sizing: border-box !important;
+
+        .header-title a {
+            font-family: var(--font-serif, "Newsreader", serif) !important;
+            font-weight: 600 !important;
+            font-size: 1.15rem !important;
+            letter-spacing: -0.01em !important;
+            color: var(--clr-text, #111111) !important;
+            text-decoration: none !important;
+        }
+
+        .menu-toggle {
+            span {
+                background: var(--clr-text, #111111) !important;
+            }
+
+            [theme=dark] & span {
+                background: var(--clr-text, #f1f5f9) !important;
+            }
+        }
 
         @media (max-width: 360px) {
             padding-left: var(--gutter-small, 0.75rem) !important;
@@ -441,60 +471,142 @@ table {
    DESKTOP HEADER & SEARCH: BALANCED SPACING & VERTICAL DIVIDER
    ========================================================================== */
 #header-desktop {
-    .menu .menu-inner {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-end !important;
+    background-color: rgba(253, 253, 253, 0.85) !important;
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    border-bottom: 1px solid var(--clr-border, rgba(0, 0, 0, 0.06)) !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
 
-        .menu-item {
-            margin: 0 0.15rem !important;
-            display: inline-flex !important;
-            align-items: center !important;
-        }
+    [theme=dark] & {
+        background-color: rgba(28, 29, 34, 0.85) !important;
+        border-bottom-color: var(--clr-border, rgba(255, 255, 255, 0.08)) !important;
+    }
 
-        .menu-item.delimiter {
-            display: none !important;
-            width: 0 !important;
-            height: 0 !important;
-            margin: 0 !important;
-            opacity: 0 !important;
-        }
-
-
-        .menu-item.theme-switch {
-            margin: 0 0 0 0.15rem !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 2rem !important;
-            height: 2rem !important;
-            border-radius: 0 !important;
-            color: #64748b !important;
-            background: transparent !important;
-            background-color: transparent !important;
-            box-shadow: none !important;
-            transition: color 0.15s ease, transform 0.2s ease !important;
-
-            [theme=dark] & {
-                color: #94a3b8 !important;
-                background: transparent !important;
-                background-color: transparent !important;
-            }
+    .header-wrapper {
+        .header-title a {
+            font-family: var(--font-serif, "Newsreader", serif) !important;
+            font-weight: 600 !important;
+            font-size: 1.15rem !important;
+            letter-spacing: -0.01em !important;
+            color: var(--clr-text, #111111) !important;
+            text-decoration: none !important;
+            transition: opacity 0.15s ease !important;
 
             &:hover {
-                color: #1e293b !important;
-                background: transparent !important;
-                background-color: transparent !important;
-
-                [theme=dark] & {
-                    color: #f1f5f9 !important;
-                    background: transparent !important;
-                    background-color: transparent !important;
-                }
+                opacity: 0.75 !important;
+                color: var(--clr-text, #111111) !important;
+                text-decoration: none !important;
             }
         }
     }
 
+    .menu .menu-inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 0.15rem !important;
+
+        .menu-item {
+            font-family: var(--font-sans, "Newsreader", serif) !important;
+            font-size: 0.95rem !important;
+            font-weight: 400 !important;
+            color: var(--clr-text-2, #475569) !important;
+            padding: 0.35rem 0.65rem !important;
+            margin: 0 !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            transition: color 0.15s ease, background-color 0.15s ease !important;
+
+            &:hover {
+                color: var(--clr-text, #111111) !important;
+                background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.03)) !important;
+                text-decoration: none !important;
+
+                [theme=dark] & {
+                    background-color: var(--clr-surface-2, rgba(255, 255, 255, 0.05)) !important;
+                }
+            }
+
+            &.active {
+                color: var(--clr-text, #111111) !important;
+                font-weight: 600 !important;
+                background-color: transparent !important;
+                position: relative !important;
+
+                &::after {
+                    content: "" !important;
+                    position: absolute !important;
+                    bottom: 0.15rem !important;
+                    left: 0.65rem !important;
+                    right: 0.65rem !important;
+                    height: 1.5px !important;
+                    background-color: var(--clr-text, #111111) !important;
+                    border-radius: 1px !important;
+                }
+            }
+        }
+
+        .menu-item.search-button,
+        .menu-item.theme-switch {
+            width: 2.15rem !important;
+            height: 2.15rem !important;
+            padding: 0 !important;
+            margin: 0 0.15rem !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 6px !important;
+            color: var(--clr-text-2, #64748b) !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: color 0.15s ease, background-color 0.15s ease !important;
+
+            &:hover {
+                color: var(--clr-text, #111111) !important;
+                background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.04)) !important;
+
+                [theme=dark] & {
+                    color: var(--clr-text, #f1f5f9) !important;
+                    background-color: var(--clr-surface-2, rgba(255, 255, 255, 0.06)) !important;
+                }
+            }
+        }
+
+        .menu-item.search-button {
+            margin-left: 0.4rem !important;
+
+            .sys-icon {
+                font-size: 1.05rem !important;
+                line-height: 1 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+
+                i {
+                    font-size: 1.05rem !important;
+                    line-height: 1 !important;
+                }
+            }
+        }
+
+        .menu-item.theme-switch {
+            .sys-icon {
+                font-size: 1.25rem !important;
+                line-height: 1 !important;
+                align-items: center !important;
+                justify-content: center !important;
+
+                i {
+                    font-size: 1.25rem !important;
+                    line-height: 1 !important;
+                }
+            }
+        }
+    }
 }
 
 body.mobile-menu-open {
