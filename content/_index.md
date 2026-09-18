@@ -103,7 +103,6 @@ Tốt nghiệp tháng 8 năm 2026.
     <div class="timeline-left">
       <img src="/images/job-hunt-os-cover.webp" alt="Job Hunt OS Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Job Hunt OS</span>
         <span class="timeline-time">Sep 2026 — Planning</span>
       </div>
     </div>
@@ -131,7 +130,6 @@ Tốt nghiệp tháng 8 năm 2026.
     <div class="timeline-left">
       <img src="/images/bep-di-6-cover.webp" alt="Bếp Dì 6 Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Bếp Dì 6</span>
         <span class="timeline-time">Aug 2026 — Present</span>
       </div>
     </div>
@@ -163,7 +161,6 @@ Tốt nghiệp tháng 8 năm 2026.
     <div class="timeline-left">
       <img src="/images/lexi-logo.webp" alt="Lexi Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Lexi</span>
         <span class="timeline-time">Mar — May 2026</span>
       </div>
     </div>
@@ -195,7 +192,6 @@ Tốt nghiệp tháng 8 năm 2026.
     <div class="timeline-left">
       <img src="/images/movie-logo.webp" alt="Movie Learn Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Movie Learn</span>
         <span class="timeline-time">Mar 2026 — Present</span>
       </div>
     </div>
@@ -227,7 +223,6 @@ Tốt nghiệp tháng 8 năm 2026.
     <div class="timeline-left">
       <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Ngọc Tín Site</span>
         <span class="timeline-time">2026 — Present</span>
       </div>
     </div>
@@ -258,7 +253,6 @@ Tốt nghiệp tháng 8 năm 2026.
   <div class="timeline-row">
     <div class="timeline-left">
       <div class="timeline-org-wrap">
-        <span class="timeline-org">Mac mini Server</span>
         <span class="timeline-time">Sep 2026 — Present</span>
       </div>
     </div>
