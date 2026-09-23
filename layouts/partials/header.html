@@ -32,7 +32,7 @@
                     {{- with .Page -}}
                         {{- $url = .RelPermalink -}}
                     {{- end -}}
-                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreferrer" target="_blank"{{ end }}>
                         {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                     </a>
                 {{- end -}}
@@ -55,6 +55,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             var menuToggleMobile = document.getElementById('menu-toggle-mobile');
             var menuMobile = document.getElementById('menu-mobile');
+            function closeMobileMenu() {
+                document.body.classList.remove('mobile-menu-open');
+                if (menuToggleMobile) {
+                    menuToggleMobile.setAttribute('aria-expanded', 'false');
+                    menuToggleMobile.classList.remove('active');
+                }
+                if (menuMobile) {
+                    menuMobile.classList.remove('active');
+                }
+            }
             if (menuToggleMobile) {
                 menuToggleMobile.addEventListener('click', function() {
                     setTimeout(function() {
@@ -71,13 +81,16 @@
             if (menuMobile) {
                 menuMobile.addEventListener('click', function(e) {
                     if (e.target.closest('a')) {
-                        document.body.classList.remove('mobile-menu-open');
-                        if (menuToggleMobile) {
-                            menuToggleMobile.setAttribute('aria-expanded', 'false');
-                        }
+                        closeMobileMenu();
                     }
                 });
             }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+                    closeMobileMenu();
+                    if (menuToggleMobile) menuToggleMobile.focus();
+                }
+            });
         });
     })();
     </script>
@@ -118,10 +131,10 @@
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
                 <div class="search-wrapper">
-                    <div class="search-mobile-trigger" id="search-toggle-mobile" role="button" aria-label="Tìm kiếm">
+                    <button type="button" class="search-mobile-trigger" id="search-toggle-mobile" aria-label="Tìm kiếm bài viết">
                         <span class="sys-icon"><i class="ti ti-search"></i></span>
                         <span class="search-placeholder-text">{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}</span>
-                    </div>
+                    </button>
                 </div>
             {{- end -}}
 
@@ -132,7 +145,7 @@
                     {{- with .Page -}}
                         {{- $url = .RelPermalink -}}
                     {{- end -}}
-                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreferrer" target="_blank"{{ end }}>
                         <span class="menu-item-inner">
                             {{- .Pre | safeHTML }}
                             <span class="menu-item-text">{{ .Name }}</span>

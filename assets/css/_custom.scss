@@ -45,6 +45,19 @@ body.theme-transitioning *::after {
     }
 }
 
+/* Screen reader only utility (WCAG SC 1.3.1 accessibility) */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
 /* Anchor navigation scroll offset under sticky header */
 html {
     scroll-padding-top: calc(var(--header-height, 3.5rem) + 1.25rem);
@@ -353,29 +366,6 @@ button.menu-toggle {
   .highlight {
     border-bottom-left-radius: 7px !important;
     border-bottom-right-radius: 7px !important;
-  }
-}
-
-// Inline Code Styling (Editorial Neutral Slate Badge — Siêu êm mắt, giữ trọn mạch đọc văn xuôi)
-code:not(pre code) {
-  display: inline !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.85em !important;
-  font-weight: 500 !important;
-  padding: 0.15em 0.45em !important;
-  margin: 0 0.2em !important;
-  border-radius: 5px !important;
-  background-color: #f1f5f9 !important; /* Slate-100 xám sáng sạch sẽ */
-  color: #0f172a !important;            /* Slate-900 đen than sắc nét, dễ đọc */
-  border: 1px solid #e2e8f0 !important; /* Slate-200 viền mờ tinh tế */
-  vertical-align: 0.04em !important;
-  box-decoration-break: clone !important;
-  -webkit-box-decoration-break: clone !important;
-
-  [theme=dark] & {
-    background-color: rgba(255, 255, 255, 0.08) !important; /* Slate-800 translucent dark background */
-    color: #f1f5f9 !important;                               /* Slate-100 trắng sáng */
-    border-color: rgba(255, 255, 255, 0.12) !important;
   }
 }
 

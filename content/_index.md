@@ -5,7 +5,7 @@ title: "Nguyen Ngoc Tin"
 ## About
 
 <div class="bio-container">
-  <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar">
+  <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar" width="175" height="175">
   <div class="bio-text">
     <p>Mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình thích xây dựng phần mềm, tìm hiểu cách các hệ thống hoạt động và thử nghiệm những ứng dụng thực tế của AI. Phần lớn những gì mình học được đến từ việc tự xây dựng dự án, gặp vấn đề và tìm cách giải quyết chúng.</p>
     <p>Trang web này là nơi mình ghi lại các dự án đang làm, những công nghệ đang tìm hiểu và những điều mình học được trong quá trình đó. Bạn có thể xem thêm về kinh nghiệm của mình trong <a href="https://docs.google.com/document/d/1-K2y1sASCNhwXWVCrZb5tdeO7IzB4uZUN9Om09yadU8/preview" target="_blank" rel="noopener noreferrer">CV</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">Facebook</a> hoặc gửi thư trực tiếp cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
@@ -15,7 +15,7 @@ title: "Nguyen Ngoc Tin"
 <div class="github-activity-section">
   <div class="github-activity-title">GitHub Activity</div>
   <div class="github-chart-wrap">
-    <img src="https://ghchart.rshah.org/ngoctinn" alt="Biểu đồ hoạt động GitHub của ngoctinn" class="github-chart-img" loading="lazy">
+    <img src="https://ghchart.rshah.org/ngoctinn" alt="Biểu đồ hoạt động GitHub của ngoctinn" class="github-chart-img" width="650" height="107" loading="lazy">
   </div>
   <div class="github-activity-desc">
     Mình xây dựng những thứ khiến bản thân hứng thú và chia sẻ tất cả dưới dạng mã nguồn mở.

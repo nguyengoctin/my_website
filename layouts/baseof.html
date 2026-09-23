@@ -226,47 +226,5 @@
             }
           });
         </script>
-
-        {{- /* Theme Sync Patch: keep html[theme] in sync with body[theme] for CSS tokens */ -}}
-        <script>
-          (function() {
-            // LoveIt's theme.js only updates body[theme], but our CSS tokens
-            // live on html[theme]. We observe body attribute changes and mirror them.
-            function syncHtmlTheme() {
-              var bodyTheme = document.body.getAttribute('theme');
-              if (bodyTheme) {
-                document.documentElement.setAttribute('theme', bodyTheme);
-                document.documentElement.setAttribute('data-theme', bodyTheme);
-                document.documentElement.style.backgroundColor = bodyTheme === 'dark' ? '#1c1d22' : '#fdfdfd';
-                document.documentElement.style.colorScheme = bodyTheme === 'dark' ? 'dark' : 'light';
-              }
-            }
-
-            var themeTransitionTimer = null;
-            var observer = new MutationObserver(function(mutations) {
-              mutations.forEach(function(m) {
-                if (m.attributeName === 'theme') {
-                  // Trigger smooth transition class
-                  document.body.classList.add('theme-transitioning');
-                  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
-                  themeTransitionTimer = setTimeout(function() {
-                    document.body.classList.remove('theme-transitioning');
-                    themeTransitionTimer = null;
-                  }, 250);
-
-                  syncHtmlTheme();
-                }
-              });
-            });
-
-            if (document.body) {
-              observer.observe(document.body, { attributes: true, attributeFilter: ['theme'] });
-            } else {
-              document.addEventListener('DOMContentLoaded', function() {
-                observer.observe(document.body, { attributes: true, attributeFilter: ['theme'] });
-              });
-            }
-          })();
-        </script>
     </body>
 </html>

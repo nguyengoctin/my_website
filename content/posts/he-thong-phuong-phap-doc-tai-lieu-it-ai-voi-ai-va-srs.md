@@ -1,6 +1,8 @@
 ---
 title: "Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS"
 date: 2026-08-01T10:10:00+07:00
+author: "Nguyen Ngoc Tin"
+description: "Phương pháp đọc tài liệu kỹ thuật tiếng Anh liền mạch kết hợp AI song ngữ và hệ thống lặp lại ngắt quãng FSRS, giải quyết triệt để tình trạng đứt đoạn tư duy."
 categories: ["Tech Blog"]
 tags: ["AI", "Self-learning", "Obsidian", "Prompt Engineering", "Anki"]
 draft: false
@@ -8,11 +10,11 @@ draft: false
 
 Đang phân tích dở một kiến trúc hệ thống phân tán hay thuật toán học máy phức tạp bằng tiếng Anh, chúng ta lại phải khựng lại 15 giây để tra một thuật ngữ lạ hoặc dịch một cấu trúc câu lắt léo. Sự gián đoạn liên tục này khiến luồng suy luận logic bị băm nhỏ, đọc xong một chương sách mà bộ não hoàn toàn cạn kiệt năng lượng mà vẫn không đọng lại được mô hình tư duy nào.
 
-Đây chính là hiện tượng Cognitive Disruption — đứt đoạn tư duy khi tiếp thu kiến thức kỹ thuật bằng ngoại ngữ. Để làm chủ nguồn tài liệu chuyên ngành chuẩn mực mà không rơi vào bẫy "Vibe reading" (chỉ đọc tóm tắt AI một cách thụ động), chúng ta cần xây dựng một hệ sinh thái kết hợp giữa đọc song ngữ, kỹ nghệ câu lệnh AI và hệ thống lặp lại ngắt quãng FSRS.
+Đây chính là hiện tượng Cognitive Disruption — đứt đoạn tư duy khi tiếp thu kiến thức kỹ thuật bằng ngoại ngữ. Để làm chủ nguồn tài liệu chuyên ngành chuẩn mực mà không rơi vào bẫy Vibe reading chỉ đọc tóm tắt AI một cách thụ động, chúng ta cần xây dựng một hệ sinh thái kết hợp giữa đọc song ngữ, kỹ nghệ câu lệnh AI và hệ thống lặp lại ngắt quãng FSRS.
 
 ## Tại Sao Đọc Tài Liệu Tiếng Anh Lại Gây Kiệt Sức Nhận Thức?
 
-Theo Thuyết Tải lượng Nhận thức (Cognitive Load Theory), bộ nhớ làm việc của con người có dung lượng hữu hạn và phải gánh ba loại tải lượng cùng lúc:
+Theo Thuyết Tải lượng Nhận thức Cognitive Load Theory, bộ nhớ làm việc của con người có dung lượng hữu hạn và phải gánh ba loại tải lượng cùng lúc:
 
 - **Tải lượng nội tại:** Độ khó bản thể của kiến thức kỹ thuật (như thuật toán lan truyền ngược hay cơ chế đồng thuận Raft).
 - **Tải lượng ngoại lai:** Cản trở phát sinh từ cách trình bày hoặc rào cản ngôn ngữ thứ hai.

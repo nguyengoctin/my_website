@@ -375,7 +375,7 @@
 
     <!-- Danh sách tập ở bên dưới -->
     <ul class="listen-list" id="listen-list">
-        {{- range $i, $ep := site.Data.notebooklm -}}
+        {{- range $i, $ep := hugo.Data.notebooklm -}}
             <li class="listen-item{{ if not $ep.url }} disabled{{ end }}"
                 data-src="{{ $ep.url }}"
                 data-title="{{ $ep.title }}"

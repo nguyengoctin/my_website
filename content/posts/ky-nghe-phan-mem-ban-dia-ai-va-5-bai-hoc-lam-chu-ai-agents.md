@@ -23,15 +23,15 @@ Nhiều kỹ sư phần mềm đang trải qua một cú sốc thực tế: sau 
 
 Kỷ nguyên của "Vibe Coding" – lập trình dựa trên cảm tính và các câu lệnh mơ hồ – bộc lộ rõ giới hạn khi quy mô dự án tăng lên. Ngành kỹ nghệ phần mềm dịch chuyển mang tính kỷ luật: từ việc "hy vọng AI hiểu ý" sang **Kỹ nghệ Bản địa AI** (AI-Native Engineering). 
 
-Minh chứng rõ nét đến từ Anthropic: khoảng 90% mã nguồn của công cụ Claude Code được viết bởi chính nó. Tuy nhiên, sự thành bại của một tác nhân (agent) không nằm ở khả năng "tự chủ ảo tưởng" mà nằm ở hạ tầng ngữ cảnh và cấu trúc kỷ luật do con người thiết lập.
+Minh chứng rõ nét đến từ Anthropic: khoảng 90% mã nguồn của công cụ Claude Code được viết bởi chính nó. Tuy nhiên, sự thành bại của một agent không nằm ở khả năng "tự chủ ảo tưởng" mà nằm ở hạ tầng ngữ cảnh và cấu trúc kỷ luật do con người thiết lập.
 
 ---
 
-## Bản chất vùng suy thoái chú ý (Dumb Zone)
+## Bản chất vùng suy thoái chú ý Dumb Zone
 
-Dù các mô hình hiện nay quảng cáo cửa sổ ngữ cảnh (Context Window) lên đến hàng triệu token, thực tế kỹ thuật lại khác biệt. Hiện tượng "vùng ngớ ngẩn" xuất hiện khi lượng token tích lũy trong phiên làm việc vượt ngưỡng kiểm soát.
+Dù các mô hình hiện nay quảng cáo Context Window lên đến hàng triệu token, thực tế kỹ thuật lại khác biệt. Hiện tượng "vùng ngớ ngẩn" xuất hiện khi lượng token tích lũy trong phiên làm việc vượt ngưỡng kiểm soát.
 
-Về mặt toán học, các mối quan hệ chú ý (attention relationships) trong kiến trúc Transformer tăng theo hàm bình phương $O(n^2)$ mỗi khi nạp thêm token vào ngữ cảnh:
+Về mặt toán học, các attention relationships trong kiến trúc Transformer tăng theo hàm bình phương $O(n^2)$ mỗi khi nạp thêm token vào ngữ cảnh:
 
 ```mermaid
 flowchart TD
@@ -115,7 +115,7 @@ flowchart TD
 
 ---
 
-## Phát triển dựa trên đặc tả (Spec-Driven Development)
+## Phát triển dựa trên đặc tả Spec-Driven Development
 
 Lập trình kiểu "Prompt-first" thường thất bại vì thiếu một Nguồn chân lý duy nhất. Phương pháp Spec-Driven Development (SDD) thiết lập hệ thống phòng thủ đa tầng:
 

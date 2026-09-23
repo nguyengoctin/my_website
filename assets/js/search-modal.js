@@ -21,6 +21,19 @@
     let activeIndex = -1;
     let debounceTimer = null;
     let isComposing = false; // Xử lý bộ gõ Telex / VNI
+    let lastFocusedElement = null; // WCAG: Lưu phần tử kích hoạt để hoàn trả focus
+
+    // Hàm mã hóa thực thể HTML để triệt tiêu nguy cơ DOM XSS
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str
+            .toString()
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
 
     // Hàm chuẩn hóa tiếng Việt: bỏ dấu, lowercase để tìm kiếm mờ mượt mà
     function normalizeVietnamese(str) {
@@ -180,13 +193,15 @@
         return snippet;
     }
 
-    // Highlight từ khóa
+    // Highlight từ khóa an toàn (đã escape HTML entities)
     function highlightKeywords(text, queryTokens) {
-        if (!text || !queryTokens || queryTokens.length === 0) return text;
+        if (!text) return '';
+        const safeText = escapeHtml(text);
+        if (!queryTokens || queryTokens.length === 0) return safeText;
         let escapedTokens = queryTokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
-        if (!escapedTokens) return text;
+        if (!escapedTokens) return safeText;
         const regex = new RegExp(`(${escapedTokens})`, 'gi');
-        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+        return safeText.replace(regex, '<mark class="search-highlight">$1</mark>');
     }
 
     // Render danh sách kết quả và update preview
@@ -313,6 +328,7 @@
     // Mở Modal
     function openModal() {
         if (!searchModal) return;
+        lastFocusedElement = document.activeElement;
         loadIndexData();
         searchModal.classList.add('active');
         searchModal.setAttribute('aria-hidden', 'false');
@@ -343,6 +359,12 @@
         document.body.classList.remove('blur');
         const headerDesktop = document.getElementById('header-desktop');
         if (headerDesktop) headerDesktop.classList.remove('open');
+
+        // WCAG Focus Restoration
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
     }
 
     // Chọn bài viết đang active
@@ -397,6 +419,23 @@
         // Đóng khi click backdrop hoặc nút ESC
         if (backdrop) backdrop.addEventListener('click', closeModal);
         if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+        // WCAG Focus Trap: Giữ phím Tab trong modal khi đang mở
+        searchModal.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab' && searchModal.classList.contains('active')) {
+                const focusable = searchModal.querySelectorAll('input:not([disabled]), button:not([disabled]):not([style*="display: none"]), [href], [tabindex="0"]');
+                if (focusable.length === 0) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
 
         // Nút xóa input
         if (searchClearBtn && searchInput) {

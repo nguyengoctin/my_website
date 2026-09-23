@@ -99,13 +99,18 @@ class Theme {
 
                 this.isDark = newTheme === 'dark' || (newTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
                 const themeVal = this.isDark ? 'dark' : 'light';
+                document.body.classList.add('theme-transitioning');
                 document.documentElement.setAttribute('theme', themeVal);
                 document.documentElement.setAttribute('data-theme', themeVal);
                 document.documentElement.setAttribute('data-cfg-theme', newTheme);
+                document.documentElement.style.backgroundColor = this.isDark ? '#1c1d22' : '#fdfdfd';
                 document.documentElement.style.colorScheme = themeVal;
                 document.body.setAttribute('theme', themeVal);
                 document.body.setAttribute('cfg-theme', newTheme);
                 window.localStorage?.setItem('theme', newTheme);
+                setTimeout(() => {
+                    document.body.classList.remove('theme-transitioning');
+                }, 250);
                 for (let event of this.switchThemeEventSet) event();
             }, false);
         });
@@ -485,18 +490,7 @@ class Theme {
                     $codeBlock.classList.toggle('open');
                 }, false);
             }
-            const $copy = $codeBlock.querySelector('.code-header .copy');
-            if ($copy) {
-                const $code = $codeBlock.querySelector('code');
-                $copy.setAttribute('data-clipboard-text', $code.innerText);
-                const clipboard = new ClipboardJS($copy);
-                const $codeLines = $code.querySelectorAll('span.cl');
-                clipboard.on('success', _e => {
-                    if ($codeLines) {
-                        Util.forEach($codeLines, $codeLine => Util.animateCSS($codeLine, 'animate__flash'))
-                    }
-                });
-            }
+            // Codeblock copy is handled natively by baseof.html via navigator.clipboard
         });
     }
 

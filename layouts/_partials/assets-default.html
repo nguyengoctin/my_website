@@ -4,28 +4,13 @@
 {{- $config := (.Scratch.Get "this").config -}}
 {{- $this := .Scratch.Get "this" | default dict -}}
 
-{{- /* Search */ -}}
+{{- /* Search: Command Palette search-modal.js uses /index.json directly */ -}}
 {{- if .Site.Params.search | and .Site.Params.search.enable -}}
     {{- $search := .Site.Params.search -}}
-    {{- $source := $cdn.autocompleteJS | default "lib/autocomplete/autocomplete.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- $config = dict "maxResultLength" $search.maxResultLength "snippetLength" $search.snippetLength "highlightTag" $search.highlightTag "noResultsFound" (T "noResultsFound") | dict "search" | merge $config -}}
     {{- if eq $search.type "lunr" -}}
         {{- with .Site.Home.OutputFormats.Get "json" -}}
             {{- $config = dict "type" "lunr" "lunrIndexURL" .RelPermalink | dict "search" | merge $config -}}
-        {{- end -}}
-        {{- $source := $cdn.lunrJS | default "lib/lunr/lunr.min.js" -}}
-        {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-        {{- if T "lunrLanguageLib" -}}
-            {{- $config = T "lunrLanguageCode" | dict "lunrLanguageCode" | dict "search" | merge $config -}}
-            {{- with T "lunrSegmentitLib" -}}
-                {{- $config = dict "lunrSegmentitURL" (resources.Get .).RelPermalink | dict "search" | merge $config -}}
-            {{- end -}}
-            {{- dict "Source" "lib/lunr/lunr.stemmer.support.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-            {{- if eq (T "lunrLanguageCode") "ja" -}}
-                {{- dict "Source" "lib/lunr/lunr.TinySegmenter.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-            {{- end -}}
-            {{- dict "Source" (T "lunrLanguageLib") "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
         {{- end -}}
     {{- else if eq $search.type "algolia" -}}
         {{- $source := $cdn.algoliasearchJS | default "lib/algoliasearch/lite/browser.umd.js" -}}
@@ -77,12 +62,6 @@
     {{- $source := $cdn.lightgalleryZoomJS | default "lib/lightgallery/plugins/zoom/lg-zoom.min.js" -}}
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
     {{- $config = dict "lightgallery" true | merge $config -}}
-{{- end -}}
-
-{{- /* clipboard.js */ -}}
-{{- if $this.clipboard -}}
-    {{- $source := $cdn.clipboardJS | default "lib/clipboard/clipboard.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
 
 {{- /* Sharer.js */ -}}

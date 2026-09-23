@@ -197,7 +197,7 @@ Chỉnh sửa tương tác qua `cf config` hoặc sửa thẳng file JSON.
 - `review.withCodex` (mặc định: `false`): Gọi thêm Codex review song song cùng Claude.
 
 
-### 2.2 Hệ thống bộ nhớ 3 tầng (Memory System)
+### 2.2 Hệ thống bộ nhớ 3 tầng Memory System
 
 Đây là cơ chế lưu và tìm kiếm tri thức dự án giữa các session. Chúng ta không cần giải thích lại kiến trúc mỗi lần — AI tự đọc từ bộ nhớ.
 

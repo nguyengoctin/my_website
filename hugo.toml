@@ -63,14 +63,14 @@ enableEmoji = true
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    title = "Articles & Essays"
+    title = "Articles and Essays"
 
   [[menu.main]]
     weight = 3
     identifier = "notes"
     name = "Notes"
     url = "/notes/"
-    title = "Quick Notes & Setup References"
+    title = "Quick Notes and Setup References"
 
   [[menu.main]]
     weight = 4
@@ -138,7 +138,7 @@ enableEmoji = true
     copyright = true
     author = true
     since = 2026
-    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
   # Search config (using Lunr.js)
   [params.search]
