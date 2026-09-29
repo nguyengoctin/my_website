@@ -85,13 +85,7 @@ cf update --agent agy   # Chỉ cập nhật Google Antigravity
 
 Coding Friend áp dụng quy trình 5 bước có kỷ luật:
 
-```mermaid
-flowchart LR
-    Step0["/cf-scan<br/>Quét tri thức"] --> Step1["/cf-plan<br/>Lập kế hoạch"]
-    Step1 --> Step2["cf-tdd<br/>Viết kiểm thử"]
-    Step2 --> Step3["/cf-review<br/>Đánh giá mã"]
-    Step3 --> Step4["/cf-ship<br/>Phát hành"]
-```
+{{< diagram src="/diagrams/toan-tap-coding-friend-ai-engineering-1.svg" dark="/diagrams/toan-tap-coding-friend-ai-engineering-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình toan-tap-coding-friend-ai-engineering (1)" >}}
 
 
 ### 1.3 Lần đầu chạy dự án
@@ -201,16 +195,7 @@ Chỉnh sửa tương tác qua `cf config` hoặc sửa thẳng file JSON.
 
 Đây là cơ chế lưu và tìm kiếm tri thức dự án giữa các session. Chúng ta không cần giải thích lại kiến trúc mỗi lần — AI tự đọc từ bộ nhớ.
 
-```mermaid
-flowchart LR
-    Query["Yêu cầu tìm kiếm"] --> Auto{"Tầng khả dụng?"}
-    Auto -->|Tier 1| T1["SQLite và Vector Search"]
-    Auto -->|Tier 2| T2["MiniSearch Daemon"]
-    Auto -->|Tier 3| T3["Grep Markdown"]
-    T1 --> Result["Kết quả tri thức"]
-    T2 --> Result
-    T3 --> Result
-```
+{{< diagram src="/diagrams/toan-tap-coding-friend-ai-engineering-2.svg" dark="/diagrams/toan-tap-coding-friend-ai-engineering-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình toan-tap-coding-friend-ai-engineering (2)" >}}
 
 
 **Đặc tính từng tầng bộ nhớ:**
@@ -256,17 +241,7 @@ cf mcp
 
 **Auto-Approve Pipeline hoạt động như sau:**
 
-```mermaid
-flowchart LR
-    Cmd["Lệnh terminal"] --> L1{"Lớp 1: Rules"}
-    L1 -->|Cho phép| Allow["Chấp thuận"]
-    L1 -->|Nguy hiểm| Deny["Từ chối"]
-    L1 -->|Chưa rõ| L2{"Lớp 2: Thư mục"}
-    L2 -->|An toàn| Allow
-    L2 -->|Chưa rõ| L3{"Lớp 3: LLM"}
-    L3 -->|An toàn| Allow
-    L3 -->|Rủi ro| Ask["Hỏi người dùng"]
-```
+{{< diagram src="/diagrams/toan-tap-coding-friend-ai-engineering-3.svg" dark="/diagrams/toan-tap-coding-friend-ai-engineering-3-dark.svg" alt="Sơ đồ kiến trúc và quy trình toan-tap-coding-friend-ai-engineering (3)" >}}
 
 
 {{< admonition type="warning" title="Auto-Approve trên Google Antigravity" >}}

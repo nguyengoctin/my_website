@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="960" height="180">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="180" fill="#18181b"/>
+  <path d="M 220 90 H 270" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 450 90 H 500" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 680 90 H 730" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 820 120 V 150 H 130 V 120" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-acc-dark)"/>
+  <text x="475" y="142" text-anchor="middle" class="al">củng cố niềm tin</text>
+  <rect x="40" y="60" width="180" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="54" y="86" class="nm">1. Niềm tin</text>
+  <text x="54" y="104" class="dt">Belief cốt lõi</text>
+  <rect x="270" y="60" width="180" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="284" y="86" class="nm">2. Kỳ vọng</text>
+  <text x="284" y="104" class="dt">Expectation</text>
+  <rect x="500" y="60" width="180" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="514" y="86" class="nm">3. Hành vi</text>
+  <text x="514" y="104" class="dt">Behavior</text>
+  <rect x="730" y="60" width="180" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="744" y="86" class="nm">4. Kết quả</text>
+  <text x="744" y="104" class="dt">Outcome</text>
+</svg>

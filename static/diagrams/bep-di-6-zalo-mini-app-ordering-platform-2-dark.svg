@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#18181b"/>
+  <path d="M 250 82 H 380" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="315" y="74" text-anchor="middle" class="al">request</text>
+  <path d="M 710 82 H 580" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <text x="645" y="74" text-anchor="middle" class="al">manage</text>
+  <path d="M 480 114 V 180" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 410 244 V 275 H 145 V 310" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 450 244 V 275 H 370 V 310" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 510 244 V 275 H 595 V 310" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 550 244 V 275 H 820 V 310" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <rect x="50" y="50" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="76" class="nm">Zalo Mini App</text>
+  <text x="64" y="94" class="dt">React 18 + ZMP SDK</text>
+  <rect x="380" y="50" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="394" y="76" class="nm">API Gateway</text>
+  <text x="394" y="94" class="dt">Nginx HTTPS Reverse Proxy</text>
+  <rect x="710" y="50" width="200" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="724" y="76" class="nm">Django Admin</text>
+  <text x="724" y="94" class="dt">Quản trị thực đơn và Đơn</text>
+  <rect x="380" y="180" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="394" y="206" class="nm">Django REST Core</text>
+  <text x="394" y="224" class="dt">Menu, Order, Shipping, Voucher</text>
+  <rect x="50" y="310" width="190" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="64" y="336" class="nm">PostgreSQL 16</text>
+  <text x="64" y="354" class="dt">Single Source of Truth</text>
+  <rect x="280" y="310" width="180" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="294" y="336" class="nm">Redis 7 và Celery</text>
+  <text x="294" y="354" class="dt">Cache và Async Queue</text>
+  <rect x="500" y="310" width="190" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="514" y="336" class="nm">Zalo OpenAPI / ZNS</text>
+  <text x="514" y="354" class="dt">OAuth và Thông báo OA</text>
+  <rect x="730" y="310" width="180" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="744" y="336" class="nm">VietQR Service</text>
+  <text x="744" y="354" class="dt">Sinh mã NAPAS</text>
+</svg>

@@ -50,7 +50,7 @@
 {{- else -}}
     <blockquote class="custom-quote">
         <div class="quote-content">
-            <span class="quote-open">“</span><span class="quote-text">{{ .Text | safeHTML }}</span><span class="quote-close">”</span>
+            <div class="quote-text">{{ .Text | safeHTML }}</div>
         </div>
     </blockquote>
 {{- end -}}

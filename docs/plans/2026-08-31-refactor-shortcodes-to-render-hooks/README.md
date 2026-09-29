@@ -35,7 +35,6 @@ Dựa trên kết quả nghiên cứu (/cf-research) từ cộng đồng kỹ th
    - Chỉnh sửa `docs/blog-writing.md` hướng dẫn viết chuẩn Markdown GFM.
 
 ## Not Building
-- Không can thiệp vào các shortcode nhúng đồ thị động chuyên biệt (Mermaid).
 - Không tự động sửa hàng loạt toàn bộ file markdown cũ trong `content/posts/` nếu không cần thiết (để bảo toàn lịch sử git, vì render hooks và shortcode cũ sẽ cùng chạy mượt mà).
 
 ## Progress

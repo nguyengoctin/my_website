@@ -1,5 +1,0 @@
-{{- $content := .Content | htmlUnescape -}}
-{{- $id := dict "Scratch" .Page.Scratch | partial "function/id.html" -}}
-<div class="mermaid" id="{{ $id }}">{{ $content }}</div>
-{{- .Page.Scratch.SetInMap "this" "mermaid" true -}}
-{{- .Page.Store.Set "mermaid" true -}}

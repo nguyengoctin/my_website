@@ -6,18 +6,9 @@
     {{- .Page.Scratch.SetInMap "this" "clipboard" true -}}
 {{- end -}}
 {{- $isProseLang := in (slice "markdown" "md" "text" "plaintext" "txt" "prompt" "raw" "output") $lang -}}
-{{- $options := dict "lineNoStart" 1 "lineNos" (not $isProseLang) -}}
-{{- $options = .Options | partial "function/dict.html" | merge $options -}}
-{{- $lineNoStart := $options.lineNoStart | int -}}
-{{- $lineNos := $options.lineNos | partial "function/bool.html" -}}
-
-{{- $options = dict "noClasses" false "lineNos" false | merge $options -}}
+{{- $options := dict "noClasses" false "lineNos" false -}}
 {{- $result := transform.Highlight $content $lang $options -}}
-{{- $counterReset := sub $lineNoStart 1 -}}
-<div class="code-block open{{ if $lineNos }} code-line-numbers{{ end }}{{ if $isProseLang }} is-wrap-block{{ end }}" {{ printf `style="counter-reset: code-block %d;"` $counterReset | safeHTMLAttr }}>
-    <div class="code-header language-{{ $lang }}">
-        <span class="code-title"><i class="ti ti-terminal fa-fw" aria-hidden="true"></i><span class="code-lang-text">{{ $lang | default "code" | upper }}</span></span>
-        {{ if $copy }}<span class="copy" title="{{ T "copyToClipboard" | default "Copy" }}" aria-label="Copy"><i class="ti ti-copy" aria-hidden="true"></i></span>{{ end }}
-    </div>
+<div class="code-block open{{ if $isProseLang }} is-wrap-block{{ end }}">
+    {{ if $copy }}<button type="button" class="copy" title="{{ T "copyToClipboard" | default "Copy" }}" aria-label="Copy"><i class="ti ti-copy" aria-hidden="true"></i></button>{{ end }}
     {{- $result -}}
 </div>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="960" height="180">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="180" fill="#18181b"/>
+  <path d="M 150 90 H 180" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 310 90 H 340" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 470 90 H 500" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 630 90 H 660" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 790 90 H 820" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <rect x="20" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="34" y="86" class="nm">Goal</text>
+  <text x="34" y="104" class="dt">Mục tiêu cốt lõi</text>
+  <rect x="180" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="194" y="86" class="nm">Context</text>
+  <text x="194" y="104" class="dt">Dữ liệu đầu vào</text>
+  <rect x="340" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="354" y="86" class="nm">Task</text>
+  <text x="354" y="104" class="dt">Hành động cụ thể</text>
+  <rect x="500" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="514" y="86" class="nm">Rules</text>
+  <text x="514" y="104" class="dt">Ranh giới bảo vệ</text>
+  <rect x="660" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="674" y="86" class="nm">Output</text>
+  <text x="674" y="104" class="dt">Cấu trúc kết quả</text>
+  <rect x="820" y="60" width="120" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="834" y="86" class="nm">Kết quả</text>
+  <text x="834" y="104" class="dt">Chuẩn xác 100%</text>
+</svg>

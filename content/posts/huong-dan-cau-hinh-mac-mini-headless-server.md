@@ -19,21 +19,7 @@ Dưới đây là giải pháp kỹ thuật giải quyết hiện tượng ngh�
 
 ## Hiện tượng nghẽn hiệu năng trên macOS headless
 
-```mermaid
-flowchart TD
-    ClientLinux["Linux Client<br/>Điều khiển từ xa"]
-    SSH["Giao thức SSH<br/>Port 22 Terminal"]
-    RustDesk["RustDesk Direct IP<br/>Truyền màn hình 60 FPS"]
-    MacMini["Mac Mini Server<br/>macOS Headless Core"]
-    DummyPlug["HDMI Dummy Plug<br/>Khóa GPU không ngủ"]
-    LAN["Mạng LAN Gigabit<br/>Độ trễ dưới 1ms"]
-    ClientLinux --> SSH
-    ClientLinux --> RustDesk
-    SSH --> MacMini
-    RustDesk --> MacMini
-    MacMini --> DummyPlug
-    MacMini --> LAN
-```
+{{< diagram src="/diagrams/huong-dan-cau-hinh-mac-mini-headless-server-1.svg" dark="/diagrams/huong-dan-cau-hinh-mac-mini-headless-server-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình huong-dan-cau-hinh-mac-mini-headless-server (1)" >}}
 
 Khi không nhận diện được màn hình vật lý cắm trực tiếp, macOS tự động tắt hoặc hạ xung nhịp GPU để tiết kiệm năng lượng. Hệ quả là giao diện truyền về qua các công cụ remote desktop bị giật lag nghiêm trọng. Đồng thời, việc cài đặt RustDesk dạng System Service ngầm trên macOS thường bị cơ chế bảo mật phần cứng bóp hiệu năng render xuống 2–5 FPS.
 

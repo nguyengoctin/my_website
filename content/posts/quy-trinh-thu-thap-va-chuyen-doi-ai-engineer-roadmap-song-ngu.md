@@ -51,16 +51,7 @@ Trang web roadmap.sh được xây dựng dưới dạng ứng dụng single-pag
 - **Endpoint 2 (Lấy nội dung chi tiết bài học):** `https://roadmap.sh/ai-engineer/{nodeId}.json`  
   Endpoint này trả về dữ liệu JSON chứa toàn bộ nội dung bài học dưới dạng Markdown gốc (trong trường `description`), danh sách tài liệu đọc thêm (trong trường `resources`) và thông tin cập nhật.
 
-```mermaid
-flowchart TD
-    RoadmapAPI["Roadmap Master API<br/>Cấu trúc 174 bài học"]
-    NodeAPI["Node Content API<br/>Nội dung chi tiết từng bài"]
-    PythonEngine["Python Fetch Engine<br/>Thu thập và Xử lý"]
-    RawData[("Local Storage<br/>JSON thô 174 bài")]
-    RoadmapAPI --> PythonEngine
-    NodeAPI --> PythonEngine
-    PythonEngine --> RawData
-```
+{{< diagram src="/diagrams/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu-1.svg" dark="/diagrams/quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình quy-trinh-thu-thap-va-chuyen-doi-ai-engineer-roadmap-song-ngu (1)" >}}
 
 Dưới đây là đoạn mã Python rút gọn được chúng ta sử dụng để tải toàn bộ dữ liệu thô về máy:
 

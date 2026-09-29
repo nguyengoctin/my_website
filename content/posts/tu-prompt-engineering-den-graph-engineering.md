@@ -40,20 +40,7 @@ Nhận Mục Tiêu → Suy Luận → Gọi Công Cụ → Đánh Giá Kết Qu�
 
 Context Window hoạt động tương đương với bộ nhớ ngẫu nhiên RAM, chứ không phải ổ cứng lưu trữ cố định.
 
-```mermaid
-flowchart TD
-    Prompt["System Prompt<br/>Chỉ dẫn và Quy tắc"]
-    Tools["MCP Tools<br/>50-60 công cụ"]
-    History["Conversation History<br/>Lịch sử hội thoại dài"]
-    Bloat["Context Bloat<br/>55.000 tokens khởi đầu"]
-    Rot["Attention Dilution<br/>Suy thoái chú ý 33%"]
-    Waste["Token Waste<br/>Lãng phí chi phí"]
-    Prompt --> Bloat
-    Tools --> Bloat
-    History --> Bloat
-    Bloat --> Rot
-    Rot --> Waste
-```
+{{< diagram src="/diagrams/tu-prompt-engineering-den-graph-engineering-1.svg" dark="/diagrams/tu-prompt-engineering-den-graph-engineering-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình tu-prompt-engineering-den-graph-engineering (1)" >}}
 
 - **Tool Definition Bloat:** Nạp 50-60 công cụ qua chuẩn MCP tiêu tốn tới **55.000 token** ngay từ lượt tương tác đầu tiên — chiếm 25% cửa sổ 200K token trước khi người dùng gõ từ nào.
 - **Attention Dilution - Suy thoái chú ý:** Do độ phức tạp tính toán $O(n^2)$, hiện tượng *Lost in the Middle* làm suy giảm khả năng tuân thủ quy tắc từ **73% ở lượt 5 xuống chỉ còn 33% ở lượt 16**.
@@ -62,22 +49,7 @@ flowchart TD
 
 ## 3. Graph Engineering: Xây dựng tổ chức AI phân tán
 
-```mermaid
-flowchart TD
-    Supervisor["Supervisor Agent<br/>Phân tích và Điều phối"]
-    NodeA["Research Agent<br/>Quét dữ liệu"]
-    NodeB["Coder Agent<br/>Viết mã nguồn"]
-    NodeC["Reviewer Agent<br/>Thẩm định chất lượng"]
-    SharedState["Shared State Storage<br/>Bộ nhớ trạng thái chung"]
-    Checkpoint["Durable Checkpoint<br/>Điểm khôi phục phiên"]
-    Supervisor --> NodeA
-    Supervisor --> NodeB
-    Supervisor --> NodeC
-    NodeA --> SharedState
-    NodeB --> SharedState
-    NodeC --> SharedState
-    SharedState --> Checkpoint
-```
+{{< diagram src="/diagrams/tu-prompt-engineering-den-graph-engineering-2.svg" dark="/diagrams/tu-prompt-engineering-den-graph-engineering-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình tu-prompt-engineering-den-graph-engineering (2)" >}}
 
 - **Nút Nodes:** Đơn vị thực thi chuyên biệt như Code Python, API Call, hoặc Sub-agent.
 - **Cạnh Edges:** Định tuyến dữ liệu tất định `A → B` hoặc có điều kiện như Test lỗi → quay lại Coder.

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="960" height="340">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="340" fill="#18181b"/>
+  <path d="M 270 160 H 320 V 82 H 370" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="320" y="68" text-anchor="middle" class="al">sinh tử</text>
+  <path d="M 270 180 H 320 V 252 H 370" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <text x="320" y="270" text-anchor="middle" class="al">thao tác</text>
+  <path d="M 590 82 H 690" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 590 252 H 690" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 800 114 V 220" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <rect x="50" y="140" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="166" class="nm">Yêu Cầu Quản Lý AI</text>
+  <text x="64" y="184" class="dt">An toàn và Hiệu quả</text>
+  <rect x="370" y="50" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="384" y="76" class="nm">Cưỡng Chế Cứng (Enforce)</text>
+  <text x="384" y="94" class="dt">An toàn sinh tử bắt buộc</text>
+  <rect x="370" y="220" width="220" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="384" y="246" class="nm">Hướng Dẫn Mềm (Guidance)</text>
+  <text x="384" y="264" class="dt">Định hướng thao tác</text>
+  <rect x="690" y="50" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="704" y="76" class="nm">Công Cụ Tất Định</text>
+  <text x="704" y="94" class="dt">Git Hooks, CI/CD, Sandbox</text>
+  <rect x="690" y="220" width="220" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="704" y="246" class="nm">File Ngữ Cảnh</text>
+  <text x="704" y="264" class="dt">CLAUDE.md và AGENTS.md</text>
+</svg>

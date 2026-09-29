@@ -37,14 +37,7 @@ Job Hunt OS giải quyết bài toán qua 3 câu hỏi thực chiến hàng ngà
 2. **Tôi cần làm gì tiếp theo?** — Hành động cần làm hôm nay như chuẩn bị phỏng vấn, nộp bài kiểm tra kỹ thuật hoặc gửi thư hỏi thăm.
 3. **Khi nhà tuyển dụng gọi, tôi có nhớ đúng bối cảnh không?** — Năng lực truy xuất bối cảnh tức thì Instant Context Recall.
 
-```mermaid
-flowchart LR
-    FindJob["Bước 1:<br/>Bắt gặp tin"] --> QuickCap["Bước 2:<br/>Thu nạp nhanh"]
-    QuickCap --> AppliedEvt["Bước 3:<br/>Đánh dấu nộp"]
-    AppliedEvt --> IdleState["Bước 4:<br/>Trạng thái chờ"]
-    IdleState --> RecruiterCall["Bước 5:<br/>Tra cứu bối cảnh"]
-    RecruiterCall --> NextAct["Bước 6:<br/>Lịch phỏng vấn"]
-```
+{{< diagram src="/diagrams/job-hunt-os-product-requirement-document-1.svg" dark="/diagrams/job-hunt-os-product-requirement-document-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình job-hunt-os-product-requirement-document (1)" >}}
 
 ---
 
@@ -52,18 +45,7 @@ flowchart LR
 
 Thay vì coi toàn bộ quá trình là một hàng ngang cứng nhắc trong bảng tính, Job Hunt OS phân tách các thực thể nghiệp vụ rõ ràng:
 
-```mermaid
-flowchart TD
-    Opp["Opportunity<br/>Cơ hội việc làm quan tâm"]
-    App["Application<br/>Lần ứng tuyển thực tế"]
-    Evt["Events<br/>Những việc đã xảy ra"]
-    Act["Next Actions<br/>Những việc cần làm tới"]
-    Snap["JD Snapshot<br/>Nội dung tin tuyển dụng gốc"]
-    Opp --> App
-    App --> Evt
-    App --> Act
-    App --> Snap
-```
+{{< diagram src="/diagrams/job-hunt-os-product-requirement-document-2.svg" dark="/diagrams/job-hunt-os-product-requirement-document-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình job-hunt-os-product-requirement-document (2)" >}}
 
 ### Các thực thể then chốt
 - **Opportunity:** Một cơ hội việc làm người dùng quan tâm, có thể lưu lại đọc sau mà chưa cần nộp đơn ngay.

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="960" height="180">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .dt { font-size: 11px; fill: #64748b; }
+    .al { font-size: 11px; fill: #64748b; }
+  </style>
+  <defs>
+    <marker id="arr-main-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#18181b"/>
+    </marker>
+    <marker id="arr-sec-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arr-acc-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="960" height="180" fill="#ffffff"/>
+  <path d="M 190 90 H 220" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 380 90 H 410" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 570 90 H 600" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 760 90 H 790" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <rect x="30" y="60" width="160" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="44" y="86" class="nm">1. JD và Profile</text>
+  <text x="44" y="104" class="dt">Input văn bản</text>
+  <rect x="220" y="60" width="160" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="234" y="86" class="nm">2. Trích xuất Entity</text>
+  <text x="234" y="104" class="dt">Kỹ năng và Kinh nghiệm</text>
+  <rect x="410" y="60" width="160" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="424" y="86" class="nm">3. Chấm điểm Khớp</text>
+  <text x="424" y="104" class="dt">Cosine / LLM Eval</text>
+  <rect x="600" y="60" width="160" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="614" y="86" class="nm">4. Tailor Resume</text>
+  <text x="614" y="104" class="dt">Sinh CV cá nhân hóa</text>
+  <rect x="790" y="60" width="140" height="60" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="804" y="86" class="nm">5. Kanban</text>
+  <text x="804" y="104" class="dt">Quản lý ứng tuyển</text>
+</svg>

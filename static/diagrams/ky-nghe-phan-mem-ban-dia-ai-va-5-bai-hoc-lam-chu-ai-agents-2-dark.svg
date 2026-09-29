@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="960" height="340">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="340" fill="#18181b"/>
+  <path d="M 230 92 H 280" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 480 92 H 530" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 710 92 H 760" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 380 124 V 210" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 480 240 H 530" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 620 210 V 124" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <rect x="50" y="60" width="180" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="86" class="nm">Kỹ sư điều phối</text>
+  <text x="64" y="104" class="dt">Thiết lập kiến trúc</text>
+  <rect x="280" y="60" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="294" y="86" class="nm">AGENTS.md chuẩn</text>
+  <text x="294" y="104" class="dt">Build, Test và Rules</text>
+  <rect x="530" y="60" width="180" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="544" y="86" class="nm">Công cụ ACI</text>
+  <text x="544" y="104" class="dt">Claude Code, Cursor</text>
+  <rect x="760" y="60" width="150" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="774" y="86" class="nm">Pull Request</text>
+  <text x="774" y="104" class="dt">Nghiệm thu tất định</text>
+  <rect x="280" y="210" width="200" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="294" y="236" class="nm">Monorepo Workspaces</text>
+  <text x="294" y="254" class="dt">AGENTS.md lồng nhau</text>
+  <rect x="530" y="210" width="180" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="544" y="236" class="nm">Docker Sandbox</text>
+  <text x="544" y="254" class="dt">Thực thi an toàn cô lập</text>
+</svg>

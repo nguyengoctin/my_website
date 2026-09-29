@@ -36,20 +36,7 @@ Xây dựng trình phát video chuyên dụng kết hợp phụ đề song ngữ
 
 Quy trình tương tác và xử lý ngữ cảnh diễn ra tức thì khi người học bấm vào phụ đề:
 
-```mermaid
-flowchart TD
-    VideoEvent["Bước 1:<br/>Người học click câu thoại<br/>Next.js Video Player"]
-    Parser["Bước 2:<br/>Trích xuất mốc thời gian<br/>Khớp SRT Timestamp"]
-    ContextPack["Bước 3:<br/>Đóng gói ngữ cảnh<br/>3 câu thoại trước và sau"]
-    FastAPISvc["Bước 4:<br/>Điều phối xử lý<br/>FastAPI Backend Service"]
-    GeminiLLM["Bước 5:<br/>Phân tích ngữ cảnh<br/>Google Gemini API"]
-    UIExplain["Bước 6:<br/>Hiển thị giải thích<br/>Sidebar tương tác"]
-    VideoEvent --> Parser
-    Parser --> ContextPack
-    ContextPack --> FastAPISvc
-    FastAPISvc --> GeminiLLM
-    GeminiLLM --> UIExplain
-```
+{{< diagram src="/diagrams/bilingual-movie-learning-platform-1.svg" dark="/diagrams/bilingual-movie-learning-platform-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình bilingual-movie-learning-platform (1)" >}}
 
 1. **Khớp phụ đề theo mili-giây:** Video Player lắng nghe sự kiện phát của thẻ HTML5 video, đối chiếu mốc thời gian của file phụ đề SRT song ngữ để hiển thị câu thoại đồng bộ.
 2. **Kích hoạt tra cứu:** Khi tạm dừng hoặc nhấp vào một câu thoại khó, giao diện tự động bắt lấy nội dung câu hiện tại kèm 2 câu thoại liền kề trước đó.
@@ -62,21 +49,7 @@ flowchart TD
 
 Hệ thống được thiết kế theo hướng module hóa, tách biệt giữa trình phát frontend và dịch vụ AI backend:
 
-```mermaid
-flowchart TD
-    SubFile["Phụ đề SRT song ngữ<br/>Thời gian và Nội dung"]
-    SyncEngine["Engine đồng bộ video<br/>Khớp phụ đề mili-giây"]
-    UIPlayer["Next.js Video Player<br/>Giao diện tương tác"]
-    APIServer["FastAPI Backend<br/>Tra cứu và xử lý prompt"]
-    GeminiAPI["Google Gemini API<br/>Phân tích văn cảnh"]
-    LocalDB[("SQLite Database<br/>Lưu từ vựng cá nhân")]
-    SubFile --> SyncEngine
-    SyncEngine --> UIPlayer
-    UIPlayer --> APIServer
-    APIServer --> GeminiAPI
-    APIServer --> LocalDB
-    GeminiAPI --> UIPlayer
-```
+{{< diagram src="/diagrams/bilingual-movie-learning-platform-2.svg" dark="/diagrams/bilingual-movie-learning-platform-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình bilingual-movie-learning-platform (2)" >}}
 
 ### Trách nhiệm các thành phần
 - **Frontend:** Xây dựng với Next.js và TypeScript. Đảm nhận nhiệm vụ hiển thị trình phát video tùy biến, dựng phụ đề song ngữ dạng layer trong suốt đè lên video, xử lý sự kiện hover và click trên từng từ vựng.

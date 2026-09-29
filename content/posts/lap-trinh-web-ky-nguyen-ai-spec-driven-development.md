@@ -62,19 +62,7 @@ Spec-Driven Development là phương pháp lấy tài liệu đặc tả làm **
 
 ### Quy trình 6 bước phối hợp với AI Sidekick
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Dev as Developer
-    participant AI as AI Sidekick
-    participant Code as Codebase
-    Dev->>Dev: 1. Viết tài liệu project-brief và design
-    Dev->>AI: 2. Phỏng vấn rà soát lỗ hổng đặc tả
-    Dev->>AI: 3. Lập kế hoạch triển khai plan.md
-    Dev->>AI: 4. Chia nhỏ danh sách task độc lập
-    Dev->>AI: 5. Thực thi mã nguồn theo từng task
-    Dev->>Code: 6. Chạy unit test và nghiệm thu
-```
+{{< diagram src="/diagrams/lap-trinh-web-ky-nguyen-ai-spec-driven-development-1.svg" dark="/diagrams/lap-trinh-web-ky-nguyen-ai-spec-driven-development-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình lap-trinh-web-ky-nguyen-ai-spec-driven-development (1)" >}}
 
 #### Bước 1: Khởi tạo tài liệu đặc tả (Project Brief và Specs)
 Soạn thảo mục tiêu tính năng, danh sách yêu cầu và quan trọng nhất là **Non-goals** để tránh hiện tượng AI tự ý mở rộng tính năng vô bờ bến:

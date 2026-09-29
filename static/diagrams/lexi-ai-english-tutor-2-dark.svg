@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="380" fill="#18181b"/>
+  <path d="M 270 82 H 370" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 590 82 H 690" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 800 114 V 180" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 690 212 H 590" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 480 244 V 290" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 800 244 V 290" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <rect x="50" y="50" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="76" class="nm">Next.js Client</text>
+  <text x="64" y="94" class="dt">Vercel Frontend</text>
+  <rect x="370" y="50" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="384" y="76" class="nm">AWS API Gateway</text>
+  <text x="384" y="94" class="dt">Cognito JWT Authorizer</text>
+  <rect x="690" y="50" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="704" y="76" class="nm">Lambda Handlers</text>
+  <text x="704" y="94" class="dt">BaseHandler Generic</text>
+  <rect x="690" y="180" width="220" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="704" y="206" class="nm">Use Cases Core</text>
+  <text x="704" y="224" class="dt">Business Logic</text>
+  <rect x="370" y="180" width="220" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="384" y="206" class="nm">Controllers</text>
+  <text x="384" y="224" class="dt">Request Validation</text>
+  <rect x="370" y="290" width="220" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="384" y="316" class="nm">Domain Entities</text>
+  <text x="384" y="334" class="dt">Pure Python Objects</text>
+  <rect x="690" y="290" width="220" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="704" y="316" class="nm">DynamoDB và Bedrock</text>
+  <text x="704" y="334" class="dt">Storage và AI Services</text>
+</svg>

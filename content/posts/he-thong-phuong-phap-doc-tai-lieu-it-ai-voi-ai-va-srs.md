@@ -162,14 +162,7 @@ Thay vì tạo thẻ thủ công, chúng ta dùng Obsidian làm nơi quản lý 
 
 Để hợp nhất công cụ và phương pháp luận vào thực tế, chúng ta tuân thủ quy trình 3 bước chuẩn hóa dưới đây mỗi khi bắt đầu một chương sách mới.
 
-```mermaid
-flowchart TD
-    A1["Bước 1.1:<br/>NotebookLM"] --> A2["Bước 1.2:<br/>5 khái niệm"] --> A3["Bước 1.3:<br/>Đọc lướt"]
-    A3 --> B1["Bước 2.1:<br/>Ghi chú"]
-    B1 --> B2["Bước 2.2:<br/>Mổ xẻ AI"] --> B3["Bước 2.3:<br/>Thẩm thấu"]
-    B3 --> C1["Bước 3.1:<br/>Khai thác"]
-    C1 --> C2["Bước 3.2:<br/>Đẩy Anki"] --> C3["Bước 3.3:<br/>Ôn tập FSRS"]
-```
+{{< diagram src="/diagrams/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs-1.svg" dark="/diagrams/he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình he-thong-phuong-phap-doc-tai-lieu-it-ai-voi-ai-va-srs (1)" >}}
 
 ### Bước 1: Quét Bối Cảnh Để Định Hình Khung Tư Duy
 

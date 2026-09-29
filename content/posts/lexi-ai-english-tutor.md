@@ -31,14 +31,7 @@ Xây dựng gia sư AI đàm thoại qua luồng âm thanh thời gian thực. H
 
 Toàn bộ quy trình luyện tập diễn ra theo luồng khép kín giữa học viên và các dịch vụ đám mây:
 
-```mermaid
-flowchart LR
-    AudioIn["Bước 1:<br/>Giọng nói"] --> WSS["Bước 2:<br/>WebSocket"]
-    WSS --> STT["Bước 3:<br/>Transcribe"]
-    STT --> LLM["Bước 4:<br/>Bedrock Claude"]
-    LLM --> TTS["Bước 5:<br/>Polly TTS"]
-    TTS --> AudioOut["Bước 6:<br/>Tai nghe"]
-```
+{{< diagram src="/diagrams/lexi-ai-english-tutor-1.svg" dark="/diagrams/lexi-ai-english-tutor-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình lexi-ai-english-tutor (1)" >}}
 
 1. **Thu âm và truyền phát:** Trình duyệt thu âm giọng nói từ microphone học viên và truyền stream nhị phân liên tục qua kết nối WebSocket bảo mật.
 2. **Nhận diện giọng nói:** Amazon Transcribe chuyển đổi âm thanh trực tiếp thành văn bản theo thời gian thực.
@@ -51,24 +44,7 @@ flowchart LR
 
 Hệ thống vận hành hoàn toàn trên hạ tầng Serverless của AWS, áp dụng Clean Architecture để cô lập mã nguồn Lambda khỏi các phụ thuộc bên ngoài:
 
-```mermaid
-flowchart TD
-    ClientApp["Next.js Client<br/>Vercel Hosting"]
-    APIGateway["AWS API Gateway<br/>Cognito JWT Authorizer"]
-    HandlerLayer["Lambda Handlers Layer<br/>BaseHandler Generic"]
-    ControllerLayer["Controllers và Presenters<br/>Request Validation"]
-    UseCaseLayer["Application Use Cases<br/>Business Logic Core"]
-    DomainLayer["Domain Entities<br/>Pure Python Objects"]
-    DynamoRepo["DynamoDB Repositories<br/>Single Table Persistence"]
-    AIServices["AWS AI Services<br/>Bedrock, Transcribe, Polly"]
-    ClientApp --> APIGateway
-    APIGateway --> HandlerLayer
-    HandlerLayer --> ControllerLayer
-    ControllerLayer --> UseCaseLayer
-    UseCaseLayer --> DomainLayer
-    UseCaseLayer --> DynamoRepo
-    UseCaseLayer --> AIServices
-```
+{{< diagram src="/diagrams/lexi-ai-english-tutor-2.svg" dark="/diagrams/lexi-ai-english-tutor-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình lexi-ai-english-tutor (2)" >}}
 
 ### Triển khai BaseHandler Generic Pattern
 

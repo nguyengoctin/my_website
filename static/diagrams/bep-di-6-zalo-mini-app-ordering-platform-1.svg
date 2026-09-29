@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="960" height="180">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .dt { font-size: 11px; fill: #64748b; }
+    .al { font-size: 11px; fill: #64748b; }
+  </style>
+  <defs>
+    <marker id="arr-main-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#18181b"/>
+    </marker>
+    <marker id="arr-sec-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arr-acc-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="960" height="180" fill="#ffffff"/>
+  <path d="M 180 90 H 220" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 370 90 H 410" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 560 90 H 600" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 750 90 H 790" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <rect x="30" y="60" width="150" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="44" y="86" class="nm">Chọn món</text>
+  <text x="44" y="104" class="dt">Mini App UI</text>
+  <rect x="220" y="60" width="150" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="234" y="86" class="nm">Lấy GPS</text>
+  <text x="234" y="104" class="dt">Khoảng cách ship</text>
+  <rect x="410" y="60" width="150" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="424" y="86" class="nm">Tạo đơn</text>
+  <text x="424" y="104" class="dt">Tính thành tiền</text>
+  <rect x="600" y="60" width="150" height="60" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="614" y="86" class="nm">Sinh VietQR</text>
+  <text x="614" y="104" class="dt">Cổng NAPAS</text>
+  <rect x="790" y="60" width="140" height="60" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="804" y="86" class="nm">Nhận đơn</text>
+  <text x="804" y="104" class="dt">Bếp và Shipper</text>
+</svg>

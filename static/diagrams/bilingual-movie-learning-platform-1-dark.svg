@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="960" height="260">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="260" fill="#18181b"/>
+  <path d="M 290 82 H 360" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 600 82 H 670" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 790 114 V 155" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 670 187 H 600" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 360 187 H 290" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <rect x="50" y="50" width="240" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="76" class="nm">1. Nhấp câu thoại</text>
+  <text x="64" y="94" class="dt">Next.js Video Player</text>
+  <rect x="360" y="50" width="240" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="374" y="76" class="nm">2. Khớp Timestamp</text>
+  <text x="374" y="94" class="dt">File SRT song ngữ</text>
+  <rect x="670" y="50" width="240" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="684" y="76" class="nm">3. Đóng gói ngữ cảnh</text>
+  <text x="684" y="94" class="dt">3 câu trước và sau</text>
+  <rect x="50" y="155" width="240" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="64" y="181" class="nm">6. Hiển thị giải thích</text>
+  <text x="64" y="199" class="dt">Sidebar tương tác</text>
+  <rect x="360" y="155" width="240" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="374" y="181" class="nm">5. Phân tích AI</text>
+  <text x="374" y="199" class="dt">Google Gemini API</text>
+  <rect x="670" y="155" width="240" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="684" y="181" class="nm">4. Điều phối xử lý</text>
+  <text x="684" y="199" class="dt">FastAPI Backend Service</text>
+</svg>

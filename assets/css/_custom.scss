@@ -380,9 +380,9 @@ button.menu-toggle {
   margin: 1.5rem 0 !important;
 }
 
-.single .content table,
-.content table,
-table {
+.single .content table:not(.lntable),
+.content table:not(.lntable),
+table:not(.lntable):not(.highlight table) {
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
@@ -393,9 +393,29 @@ table {
   border-radius: 8px !important;
   border: 1px solid #e2e8f0 !important;
   margin: 1.5rem 0 !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent !important;
+
+  &::-webkit-scrollbar {
+    height: 5px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.35) !important;
+    border-radius: 999px !important;
+  }
 
   [theme=dark] & {
     border-color: rgba(255, 255, 255, 0.1) !important;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent !important;
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2) !important;
+    }
   }
 
   thead {

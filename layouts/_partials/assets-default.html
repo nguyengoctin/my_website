@@ -134,11 +134,7 @@
     {{- $config = dict "strict" false "delimiters" $delimiters | dict "math" | merge $config -}}
 {{- end -}}
 
-{{- /* mermaid */ -}}
-{{- if or (.Scratch.Get "this").mermaid (.Page.Store.Get "mermaid") -}}
-    {{- $source := $cdn.mermaidJS | default "lib/mermaid/mermaid.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-{{- end -}}
+
 
 {{- /* ECharts */ -}}
 {{- if (.Scratch.Get "this").echarts -}}

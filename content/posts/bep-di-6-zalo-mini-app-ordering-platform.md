@@ -32,13 +32,7 @@ Các hàng quán F&B quy mô vừa và nhỏ thường chịu mức chiết kh�
 
 Quy trình từ lúc khách hàng duyệt món đến khi đơn hàng được nhà bếp tiếp nhận và đối soát thanh toán:
 
-```mermaid
-flowchart LR
-    Step1["Bước 1:<br/>Chọn món"] --> Step2["Bước 2:<br/>Lấy GPS"]
-    Step2 --> Step3["Bước 3:<br/>Tạo đơn hàng"]
-    Step3 --> Step4["Bước 4:<br/>Sinh mã VietQR"]
-    Step4 --> Step5["Bước 5:<br/>Tiếp nhận đơn"]
-```
+{{< diagram src="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-1.svg" dark="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình bep-di-6-zalo-mini-app-ordering-platform (1)" >}}
 
 1. **Khám phá và tùy biến:** Khách hàng mở Mini App trong Zalo, duyệt thực đơn phân tầng, tùy chọn kích cỡ, mức đường hoặc đá và topping đi kèm.
 2. **Định vị và tính phí:** Mini App lấy tọa độ GPS của khách qua ZMP SDK, gửi về backend tính toán khoảng cách đường thực tế và áp mức cước tương ứng.
@@ -52,28 +46,7 @@ flowchart LR
 
 Hệ thống được thiết kế theo mô hình phân tầng rõ ràng, tách biệt giữa trải nghiệm giao diện người dùng trên Mini App và lõi xử lý nghiệp vụ tại Backend:
 
-```mermaid
-flowchart TD
-    Client["Zalo Mini App Client<br/>React 18 và ZMP SDK"]
-    AdminPanel["Django Admin Portal<br/>Quản trị đơn và thực đơn"]
-    Gateway["API Gateway Proxy<br/>Nginx HTTPS"]
-    DjangoAPI["Django REST Core<br/>Menu, Order, Shipping, Voucher"]
-    PostgresDB[("PostgreSQL 16 DB<br/>Single Source of Truth")]
-    RedisCache[("Redis 7 và Celery<br/>Cache và Async Queue")]
-    ZaloOpenAPI["Zalo OpenAPI và ZNS<br/>OAuth và Thông báo OA"]
-    VietQRService["VietQR Engine<br/>Sinh mã thanh toán NAPAS"]
-    Client --> Gateway
-    AdminPanel --> Gateway
-    Gateway --> DjangoAPI
-    Client --> DjangoAPI
-    AdminPanel --> DjangoAPI
-    DjangoAPI --> PostgresDB
-    DjangoAPI --> RedisCache
-    DjangoAPI --> ZaloOpenAPI
-    DjangoAPI --> VietQRService
-    PostgresDB --> ZaloOpenAPI
-    RedisCache --> VietQRService
-```
+{{< diagram src="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-2.svg" dark="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình bep-di-6-zalo-mini-app-ordering-platform (2)" >}}
 
 ### Trách nhiệm các thành phần
 - **Frontend Client:** Xây dựng trên React 18, Vite và ZMP SDK. Đảm nhận nhiệm vụ hiển thị thực đơn phân tầng, quản lý giỏ hàng cục bộ, lấy tọa độ vị trí GPS và render mã VietQR động.
@@ -89,23 +62,7 @@ flowchart TD
 - **Bối cảnh:** Trong ngành F&B, giá bán sản phẩm, danh mục topping hoặc địa chỉ cửa hàng biến động liên tục. Nếu chỉ lưu khóa ngoại `product_id` đơn thuần, báo cáo tài chính hoặc lịch sử đơn hàng cũ sẽ bị sai lệch khi giá thay đổi.
 - **Quyết định:** Sử dụng cơ chế Snapshot dữ liệu ngay trong `transaction.atomic()`.
 
-```mermaid
-flowchart TD
-    CartInput["Giỏ hàng Mini App<br/>Product ID và Topping ID"]
-    AddrInput["Địa chỉ GPS<br/>Tọa độ và Số điện thoại"]
-    VoucherInput["Mã Voucher<br/>Chiết khấu giảm giá"]
-    AtomicTx{"transaction.atomic()"}
-    SnapPrice["Snapshot Đơn giá<br/>Tên món, Giá gốc, Topping"]
-    SnapAddr["Snapshot Địa chỉ<br/>Tên nhận hàng và GPS"]
-    OrderRecord[("Đơn hàng Bất biến<br/>Status PENDING")]
-    CartInput --> AtomicTx
-    AddrInput --> AtomicTx
-    VoucherInput --> AtomicTx
-    AtomicTx --> SnapPrice
-    AtomicTx --> SnapAddr
-    SnapPrice --> OrderRecord
-    SnapAddr --> OrderRecord
-```
+{{< diagram src="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-3.svg" dark="/diagrams/bep-di-6-zalo-mini-app-ordering-platform-3-dark.svg" alt="Sơ đồ kiến trúc và quy trình bep-di-6-zalo-mini-app-ordering-platform (3)" >}}
 
 Mỗi dòng chi tiết đơn hàng `OrderItem` lưu trữ bản sao cố định của tên món, đơn giá tại thời điểm mua, danh sách topping đã chọn và địa chỉ nhận hàng vào database, bảo đảm tính toàn vẹn dữ liệu kế toán.
 

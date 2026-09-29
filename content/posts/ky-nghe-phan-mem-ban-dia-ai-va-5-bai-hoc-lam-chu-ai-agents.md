@@ -33,20 +33,7 @@ Dù các mô hình hiện nay quảng cáo Context Window lên đến hàng tri�
 
 Về mặt toán học, các attention relationships trong kiến trúc Transformer tăng theo hàm bình phương $O(n^2)$ mỗi khi nạp thêm token vào ngữ cảnh:
 
-```mermaid
-flowchart TD
-    Prompt["(1) System Prompt<br/>Chỉ dẫn và Ràng buộc"]
-    Tools["(2) Công cụ MCP<br/>Khai báo Tool schema"]
-    History["(3) Lịch sử hội thoại<br/>Đoạn chat và kết quả"]
-    Bloat["(4) Context Bloat<br/>Tích lũy token O(n²)"]
-    Rot["(5) Attention Dilution<br/>Suy thoái chú ý và Quên"]
-    Waste["(6) Tech Slop và Lãng phí<br/>Lỗi hồi quy nghiêm trọng"]
-    Prompt --> Bloat
-    Tools --> Bloat
-    History --> Bloat
-    Bloat --> Rot
-    Rot --> Waste
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-1.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (1)" >}}
 
 Mô hình LLM có xu hướng liên tục mất phương hướng khi bối cảnh quá dài. Để giữ AI luôn ở trong **Vùng hiệu quả** (dưới 100k tokens), có 3 nguyên tắc thực tế:
 
@@ -60,21 +47,7 @@ Mô hình LLM có xu hướng liên tục mất phương hướng khi bối cả
 
 Nếu `README.md` là tài liệu dành cho con người, thì dự án hiện đại cần thêm `AGENTS.md` – bản đặc tả giao diện Agent-Computer Interface (ACI).
 
-```mermaid
-flowchart TD
-    User["(1) Kỹ sư điều phối<br/>Thiết lập kiến trúc"]
-    ACI["(2) AGENTS.md chuẩn<br/>Build, Test và Conventions"]
-    Tools["(3) Công cụ ACI<br/>Cursor, Claude Code, Roo"]
-    Workspace["(4) Monorepo Sub-apps<br/>AGENTS.md lồng nhau"]
-    Sandbox["(5) Môi trường Docker<br/>Thực thi an toàn cô lập"]
-    PR["(6) Pull Request<br/>Nghiệm thu tất định"]
-    User --> ACI
-    ACI --> Tools
-    ACI --> Workspace
-    Tools --> Sandbox
-    Workspace --> Sandbox
-    Sandbox --> PR
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-2.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (2)" >}}
 
 ### Chiến lược AGENTS.md lồng nhau trong Monorepo
 Trong các dự án lớn, tệp `AGENTS.md` nên được đặt tại từng thư mục con. Tác nhân sẽ ưu tiên đọc tệp tin nằm gần nhất với mã nguồn đang xử lý, giúp cô lập ngữ cảnh và tránh làm quá tải bối cảnh toàn cục.
@@ -89,23 +62,7 @@ Các nhóm công cụ tiêu biểu hỗ trợ chuẩn ACI:
 
 Thay vì để AI tự động mò mẫm trong một "vòng lặp đen" (Black-box loop), 5 mẫu kiến trúc điều phối tất định sau giúp kiểm soát luồng xử lý:
 
-```mermaid
-flowchart TD
-    Task["Yêu cầu bài toán<br/>Từ Product và Kỹ sư"]
-    Route{"Bộ định tuyến<br/>Phân loại độ khó"}
-    Simple["Mô hình nhẹ (Haiku, Flash)<br/>Prompt Chaining tuần tự"]
-    Complex["Mô hình mạnh (Sonnet, GPT-4o)<br/>Orchestrator điều phối"]
-    Workers["Worker Agents song song<br/>Xử lý từng module độc lập"]
-    Eval["Evaluator độc lập<br/>Phản biện và kiểm thử"]
-    Output["Mã nguồn hoàn chỉnh<br/>Sẵn sàng tích hợp"]
-    Task --> Route
-    Route -->|Tác vụ đơn giản| Simple
-    Route -->|Kiến trúc phức tạp| Complex
-    Complex --> Workers
-    Workers --> Eval
-    Simple --> Eval
-    Eval --> Output
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-3.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-3-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (3)" >}}
 
 1. **Prompt Chaining:** Chia nhỏ tác vụ phức tạp thành chuỗi các bước đơn giản để tối đa hóa độ chính xác.
 2. **Routing:** Điều hướng câu hỏi đơn giản tới model nhẹ (Haiku, Flash-Lite) và chuyển bài toán kiến trúc cho model mạnh (Sonnet, GPT-4o).
@@ -119,20 +76,7 @@ flowchart TD
 
 Lập trình kiểu "Prompt-first" thường thất bại vì thiếu một Nguồn chân lý duy nhất. Phương pháp Spec-Driven Development (SDD) thiết lập hệ thống phòng thủ đa tầng:
 
-```mermaid
-flowchart TD
-    Const["(1) Constitution<br/>Ranh giới tiêu chuẩn"]
-    Spec["(2) Specify và Clarify<br/>Kịch bản và Grill Me"]
-    Plan["(3) Plan và Tasks<br/>Kiến trúc và chia nhỏ"]
-    Impl["(4) Implementation<br/>Tracer Bullets lát cắt dọc"]
-    Validate["(5) Validation<br/>Đối chiếu đặc tả gốc"]
-    Merge["(6) Ship to Main<br/>Hoàn tất tính năng"]
-    Const --> Spec
-    Spec --> Plan
-    Plan --> Impl
-    Impl --> Validate
-    Validate --> Merge
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-4.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-4-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (4)" >}}
 
 ### Kỹ thuật "Grill Me" (Phỏng vấn ngược)
 Thay vì bắt AI lập kế hoạch ngay, yêu cầu AI phỏng vấn ngược lại kỹ sư:
@@ -156,18 +100,7 @@ Nghiên cứu về TDAD (Test-Driven Agentic Development) của Pepe Alonso ch�
 
 Nguyên nhân là do AI có xu hướng "gian lận" để vượt qua bài test nếu không hiểu bức tranh tổng thể. Khi cung cấp **Bản đồ tác động AST (Abstract Syntax Tree)** chỉ rõ mối quan hệ phụ thuộc giữa các module, tỷ lệ lỗi hồi quy giảm ngay lập tức **70%**.
 
-```mermaid
-flowchart TD
-    ASTMap["(1) Bản đồ AST<br/>Phân tích cây phụ thuộc"]
-    DeepMod["(2) Thiết kế Module sâu<br/>Giao diện đơn giản"]
-    ImpactTest["(3) Khoanh vùng Test<br/>Chạy test trúng đích"]
-    Refactor["(4) AI thực thi an toàn<br/>Không làm đứt gãy phụ thuộc"]
-    StableProd["(5) Production ổn định<br/>Triệt tiêu lỗi hồi quy"]
-    ASTMap --> DeepMod
-    DeepMod --> ImpactTest
-    ImpactTest --> Refactor
-    Refactor --> StableProd
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-5.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-5-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (5)" >}}
 
 ### Triết lý Deep Modules của John Ousterhout
 - **Interface-first:** Con người giữ vai trò thiết kế giao diện module đơn giản, rõ ràng.
@@ -179,20 +112,7 @@ flowchart TD
 
 Để vận hành an toàn và mở rộng năng suất, quy trình làm việc có thể phân tách thành 2 ca:
 
-```mermaid
-flowchart TD
-    DayShift["(1) Day Shift (Người)<br/>Phỏng vấn và lập RFCs"]
-    SpecBacklog["(2) Backlog Đặc tả<br/>Đóng gói task chuẩn ACI"]
-    NightShift["(3) Night Shift (AI)<br/>Chạy ngầm đa tác nhân"]
-    SandCastle["(4) Git Worktrees<br/>Sandbox Docker cô lập"]
-    MergeAgent["(5) Merger Agent<br/>Giải quyết xung đột và Test"]
-    MorningReview["(6) Nghiệm thu sáng<br/>Review PR sẵn sàng"]
-    DayShift --> SpecBacklog
-    SpecBacklog --> NightShift
-    NightShift --> SandCastle
-    SandCastle --> MergeAgent
-    MergeAgent --> MorningReview
-```
+{{< diagram src="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-6.svg" dark="/diagrams/ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents-6-dark.svg" alt="Sơ đồ kiến trúc và quy trình ky-nghe-phan-mem-ban-dia-ai-va-5-bai-hoc-lam-chu-ai-agents (6)" >}}
 
 - **Môi trường Sandbox cô lập:** Mọi Agent chạy trong Docker container thông qua Git Worktrees, bảo đảm không can thiệp vào mã nguồn chính khi chưa được kiểm chứng.
 - **Mô hình Day Shift và Night Shift:**

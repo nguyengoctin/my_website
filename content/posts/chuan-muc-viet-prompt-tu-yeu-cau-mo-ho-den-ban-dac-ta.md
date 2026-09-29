@@ -32,14 +32,7 @@ Thay vì đầu tư vào danh xưng, hãy tập trung vào kết quả đầu ra
 
 ### 5 thành phần của một bản đặc tả hoàn chỉnh
 
-```mermaid
-flowchart LR
-    GoalNode["Goal:<br/>Mục tiêu cốt lõi"] --> ContextNode["Context:<br/>Dữ liệu đầu vào"]
-    ContextNode --> TaskNode["Task:<br/>Hành động cụ thể"]
-    TaskNode --> RuleNode["Rules:<br/>Ranh giới phòng thủ"]
-    RuleNode --> OutputNode["Output:<br/>Cấu trúc kết quả"]
-    OutputNode --> ResultNode["Kết quả chuẩn xác"]
-```
+{{< diagram src="/diagrams/chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta-1.svg" dark="/diagrams/chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta (1)" >}}
 
 1. **Goal:** Xác định mục tiêu thực chất. Thay vì `Nghiên cứu Docker`, hãy viết: `So sánh Docker Compose và Kubernetes cho ứng dụng chạy trên một VPS để xác định ngưỡng phức tạp không cần thiết`.
 2. **Context:** Cung cấp dữ liệu nền tảng như code, log lỗi, tài liệu để mô hình không phải tự phỏng đoán.
@@ -143,17 +136,7 @@ Một thư viện prompt không phải tài sản bất biến. Khi các mô hì
 - **Cắt tỉa định kỳ:** Loại bỏ các emoji, chú thích từ vựng rườm rà để tối đa hóa tỷ lệ tín hiệu trên token Signal-to-Noise Ratio.
 - **Giảm ma sát nhập liệu Template Fatigue:** Tích hợp prompt vào các công cụ gõ tắt như Raycast, TextExpander, Obsidian Templater hoặc nạp làm System Prompt cho AI Agent thay vì copy-paste thủ công mỗi ngày.
 
-```mermaid
-flowchart TD
-P1["Viết prompt theo<br/>đặc tả XML phẳng"] --> P2["Kiểm thử với<br/>dữ liệu thực tế"]
-P2 --> P3{"Đạt tiêu chuẩn?"}
-P3 -->|Chưa đạt| P4["Bổ sung Positive Steering<br/>và mở không gian suy luận"]
-P4 --> P5["Tinh chỉnh<br/>ranh giới dữ liệu"]
-P5 --> P2
-P3 -->|Đạt chuẩn| P6["Đóng gói thành Snippet<br/>hoặc Agent Skill"]
-P6 --> P7["Định kỳ rà soát và cắt tỉa<br/>rule thừa khi model nâng cấp"]
-P7 --> P6
-```
+{{< diagram src="/diagrams/chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta-2.svg" dark="/diagrams/chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình chuan-muc-viet-prompt-tu-yeu-cau-mo-ho-den-ban-dac-ta (2)" >}}
 
 ### Khung mẫu Baseline XML tinh gọn
 

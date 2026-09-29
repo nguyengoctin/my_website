@@ -27,7 +27,7 @@ Không biến blog thành nội dung SEO hoặc bài viết mang giọng AI đ�
 - Không clickbait và không dùng từ thổi phồng như "toàn tập", "ultimate", "game changer", "cách mạng", "bí kíp" nếu evidence không thực sự biện minh.
 - Không lặp lại cùng một kết luận bằng nhiều cách diễn đạt khác nhau.
 - Không dùng ngoặc đơn chỉ để dịch thuật ngữ tiếng Anh inline. Giữ thuật ngữ tiếng Anh khi đó là cách tự nhiên và chính xác hơn.
-- Không dùng ký tự `&` làm conjunction trong prose, heading, frontmatter hoặc nhãn Mermaid. Dùng "và" hoặc "and". Không sửa `&` khi nó là syntax cần thiết trong code block, command, URL hoặc dữ liệu nguyên bản.
+- Không dùng ký tự `&` làm conjunction trong prose, heading hoặc frontmatter. Dùng "và" hoặc "and". Không sửa `&` khi nó là syntax cần thiết trong code block, command, URL hoặc dữ liệu nguyên bản.
 
 ## Source Integrity
 
@@ -125,10 +125,10 @@ Không giải thích lại mọi prerequisite nếu độc giả mục tiêu đ�
 
 - Callout là ngoại lệ, không phải decoration. Chỉ dùng cho warning, caveat, constraint hoặc insight cần được tách khỏi flow chính.
 - Không dùng nhiều callout liên tiếp.
-- Mermaid, screenshot và hình ảnh phải làm rõ state, flow, architecture, comparison hoặc evidence cụ thể.
+- Sơ đồ SVG, screenshot và hình ảnh phải làm rõ state, flow, architecture, comparison hoặc evidence cụ thể.
 - Không thêm visual chỉ để bài bớt nhiều chữ.
 - Mọi hình ảnh cần alt text mô tả nội dung có ý nghĩa với bài.
-- Khi bài có Mermaid, bắt buộc đọc và tuân thủ `docs/mermaid.md` trước khi tạo hoặc chỉnh sửa biểu đồ.
+- Khi bài viết có sơ đồ, bắt buộc đọc và tuân thủ `docs/diagrams.md` trước khi tạo hoặc chỉnh sửa biểu đồ.
 - Biểu đồ phải phản ánh đúng luồng nghiệp vụ; không bóp méo logic chỉ để layout đẹp.
 
 ## Markdown and Render Hooks

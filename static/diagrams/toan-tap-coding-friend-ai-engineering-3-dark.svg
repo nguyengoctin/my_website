@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="960" height="340">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="340" fill="#18181b"/>
+  <path d="M 200 90 H 250" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 430 90 H 480" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="455" y="80" text-anchor="middle" class="al">chưa rõ</text>
+  <path d="M 670 90 H 720" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="695" y="80" text-anchor="middle" class="al">chưa rõ</text>
+  <path d="M 340 120 V 220" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="375" y="170" text-anchor="middle" class="al">an toàn</text>
+  <path d="M 575 120 V 220" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="610" y="170" text-anchor="middle" class="al">an toàn</text>
+  <path d="M 820 120 V 220" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-acc-dark)"/>
+  <text x="855" y="170" text-anchor="middle" class="al">rủi ro cao</text>
+  <rect x="40" y="60" width="160" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="54" y="86" class="nm">Lệnh Terminal</text>
+  <text x="54" y="104" class="dt">Bash, Read, Write</text>
+  <rect x="250" y="60" width="180" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="264" y="86" class="nm">Lớp 1: Rules</text>
+  <text x="264" y="104" class="dt">Allow / Deny list</text>
+  <rect x="480" y="60" width="190" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="494" y="86" class="nm">Lớp 2: Thư mục</text>
+  <text x="494" y="104" class="dt">Working Dir check</text>
+  <rect x="720" y="60" width="200" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="734" y="86" class="nm">Lớp 3: LLM Classifier</text>
+  <text x="734" y="104" class="dt">Phân loại rủi ro</text>
+  <rect x="360" y="220" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="374" y="246" class="nm">Tự Động Chấp Thuận</text>
+  <text x="374" y="264" class="dt">Thực thi tức thì 0ms</text>
+  <rect x="720" y="220" width="200" height="64" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="734" y="246" class="nm">Hỏi Người Dùng</text>
+  <text x="734" y="264" class="dt">Dừng lại xin phép</text>
+</svg>

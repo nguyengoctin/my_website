@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 180" width="960" height="180">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="180" fill="#18181b"/>
+  <path d="M 190 90 H 220" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 380 90 H 410" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 570 90 H 600" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 760 90 H 790" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <rect x="30" y="60" width="160" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="44" y="86" class="nm">/cf-scan</text>
+  <text x="44" y="104" class="dt">Quét tri thức</text>
+  <rect x="220" y="60" width="160" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="234" y="86" class="nm">/cf-plan</text>
+  <text x="234" y="104" class="dt">Lập kế hoạch</text>
+  <rect x="410" y="60" width="160" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="424" y="86" class="nm">cf-tdd</text>
+  <text x="424" y="104" class="dt">Viết kiểm thử</text>
+  <rect x="600" y="60" width="160" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="614" y="86" class="nm">/cf-review</text>
+  <text x="614" y="104" class="dt">Đánh giá mã</text>
+  <rect x="790" y="60" width="140" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="804" y="86" class="nm">/cf-ship</text>
+  <text x="804" y="104" class="dt">Phát hành PR</text>
+</svg>

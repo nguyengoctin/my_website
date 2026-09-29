@@ -708,7 +708,9 @@ hr {
   overflow-y: auto !important;
   overflow-x: hidden !important;
   scrollbar-width: thin;
-  padding: 0 0.5rem !important;
+  padding: 0 0.25rem !important;
+  left: auto !important;
+  right: 0.75rem;
 
   &::-webkit-scrollbar {
     width: 3px;
@@ -725,16 +727,20 @@ hr {
 
   .toc-title {
     font-family: var(--font-sans) !important;
-    font-size: var(--fs-sm) !important;
-    font-weight: var(--fw-bold) !important;
-    letter-spacing: var(--ls-caps) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    color: var(--clr-text) !important;
-    margin: 0.5rem 0 0.75rem 0 !important;
+    color: var(--clr-text-2, #64748b) !important;
+    margin: 0.5rem 0 0.85rem 0 !important;
+
+    [theme=dark] & {
+      color: var(--clr-text-2, #94a3b8) !important;
+    }
   }
 }
 
-// Responsive TOC synchronization (sync with JS Util.isTocStatic: max-width 1360px)
+// Responsive TOC synchronization (sync with JS Util.isTocStatic: max-width 1200px)
 #toc-auto {
   display: block;
 }
@@ -747,7 +753,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1200px) {
   #toc-auto {
     display: none !important;
   }
@@ -768,7 +774,7 @@ details#toc-static {
 
   [theme=dark] & {
     border-color: var(--clr-border, rgba(255, 255, 255, 0.1)) !important;
-    background-color: var(--clr-surface, #23252c) !important;
+    background-color: var(--clr-surface, #1e2028) !important;
   }
 
   > summary.details-summary {
@@ -779,8 +785,8 @@ details#toc-static {
     padding: 0.65rem 1rem !important;
     background-color: var(--clr-surface-2, #f8fafc) !important;
     cursor: pointer !important;
-    font-size: var(--fs-sm, 0.875rem) !important;
-    font-weight: var(--fw-semibold, 600) !important;
+    font-size: var(--fs-sm, 0.85rem) !important;
+    font-weight: 600 !important;
     color: var(--clr-text, #111111) !important;
     user-select: none !important;
     outline: none;
@@ -800,11 +806,11 @@ details#toc-static {
     }
 
     [theme=dark] & {
-      background-color: var(--clr-surface-2, #2b2e38) !important;
+      background-color: var(--clr-surface-2, #242732) !important;
       color: var(--clr-text, #e6e8ec) !important;
 
       &:hover {
-        background-color: var(--clr-surface-3, #33363f) !important;
+        background-color: var(--clr-surface-3, #2d313f) !important;
       }
     }
 
@@ -835,13 +841,31 @@ details#toc-static {
     overflow-wrap: normal !important;
     word-break: normal !important;
 
+    // Mở bung toàn bộ tất cả các cấp (H2, H3, H4, H5, H6) không ẩn bất kỳ cấp nào
+    ul,
+    ul ul,
+    ul ul ul,
+    ul ul ul ul {
+      display: block !important;
+    }
+
     ul {
       list-style: none !important;
-      padding-left: 0.85rem !important;
+      padding: 0 !important;
       margin: 0 !important;
+      border-left: 1px solid var(--clr-border, #e2e8f0) !important;
+
+      [theme=dark] & {
+        border-left-color: var(--clr-border, rgba(255, 255, 255, 0.12)) !important;
+      }
+
+      ul {
+        border-left: none !important;
+        padding: 0 !important;
+      }
 
       li {
-        margin: 0.35rem 0 !important;
+        margin: 0 !important;
         max-width: 100% !important;
 
         a {
@@ -849,37 +873,84 @@ details#toc-static {
           white-space: normal !important;
           overflow-wrap: break-word !important;
           word-break: normal !important;
-          line-height: 1.4 !important;
+          line-height: 1.45 !important;
           max-width: 100% !important;
           font-family: var(--font-sans) !important;
-          font-size: 0.8125rem !important;
-          font-weight: var(--fw-regular) !important;
-          color: var(--clr-text-2) !important;
+          font-size: 0.825rem !important;
+          font-weight: 400 !important;
+          color: var(--clr-text-2, #64748b) !important;
           text-decoration: none !important;
-          transition: color 0.15s ease, font-weight 0.1s ease;
+          margin-left: -1px !important;
+          padding: 0.22rem 0.5rem !important;
+          border-left: 1px solid transparent !important;
+          transition: color 0.15s ease, border-color 0.15s ease;
 
-          &:hover {
-            color: var(--clr-text) !important;
-            font-weight: var(--fw-semibold) !important;
-            text-decoration: underline solid !important;
-            text-decoration-color: var(--clr-link-underline) !important;
-            text-underline-offset: 3px;
+          [theme=dark] & {
+            color: var(--clr-text-2, #94a3b8) !important;
           }
 
-          &.active {
-            color: #4d74eb !important;
-            font-weight: var(--fw-bold) !important;
+          &:hover {
+            color: var(--clr-text, #0f172a) !important;
             text-decoration: none !important;
 
             [theme=dark] & {
-              color: #60a5fa !important;
+              color: var(--clr-text, #f1f5f9) !important;
+            }
+          }
+
+          &.active {
+            color: var(--clr-text, #0f172a) !important;
+            border-left-color: var(--clr-text, #0f172a) !important;
+            font-weight: 500 !important;
+            text-decoration: none !important;
+
+            [theme=dark] & {
+              color: var(--clr-text, #f1f5f9) !important;
+              border-left-color: var(--clr-text, #f1f5f9) !important;
             }
           }
         }
 
-        // Giới hạn TOC chỉ hiển thị H2 và H3, ẩn các cấp sâu hơn (H4, H5, H6)
-        ul ul ul {
-          display: none !important;
+        // Phân cấp trực quan có gạch nối hoặc chấm (Tiered with markers)
+        // Cấp 2 (H3): có gạch nối "–" để dễ phân biệt
+        ul a {
+          padding-left: 1.15rem !important;
+          font-size: 0.8rem !important;
+          color: var(--clr-text-2, #64748b) !important;
+
+          &::before {
+            content: "– ";
+            color: var(--clr-text-3, #94a3b8);
+            margin-right: 0.25rem;
+            font-weight: 400;
+          }
+        }
+
+        // Cấp 3 (H4): có chấm "·"
+        ul ul a {
+          padding-left: 1.65rem !important;
+          font-size: 0.765rem !important;
+          color: var(--clr-text-3, #718096) !important;
+
+          &::before {
+            content: "· ";
+            color: var(--clr-text-3, #94a3b8);
+            margin-right: 0.25rem;
+            font-weight: bold;
+          }
+        }
+
+        // Cấp 4 (H5/H6)
+        ul ul ul a {
+          padding-left: 2.15rem !important;
+          font-size: 0.735rem !important;
+          color: var(--clr-text-3, #8a99ad) !important;
+
+          &::before {
+            content: "· ";
+            color: var(--clr-text-3, #94a3b8);
+            margin-right: 0.25rem;
+          }
         }
       }
     }

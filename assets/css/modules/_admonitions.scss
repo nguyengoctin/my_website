@@ -15,10 +15,10 @@ body .page .single .content .admonition,
   transition: background-color 0.2s ease, border-color 0.2s ease !important;
 
   .admonition-title {
-    font-family: var(--font-serif) !important;
+    font-family: var(--font-sans) !important;
     font-weight: 600 !important;
-    font-size: 0.95rem !important;
-    padding: 0.65rem 1.15rem 0.65rem 2.4rem !important;
+    font-size: 0.875rem !important;
+    padding: 0.6rem 1.15rem 0.6rem 2.3rem !important;
     margin: 0 !important;
     position: relative !important;
     display: block !important;

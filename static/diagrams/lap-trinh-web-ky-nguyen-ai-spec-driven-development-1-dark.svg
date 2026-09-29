@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#18181b"/>
+  <path d="M 180 84 V 380" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 480 84 V 380" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 780 84 V 380" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <path d="M 180 120 H 220 V 145 H 180" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="230" y="138" text-anchor="start" class="al">1. Viết project-brief và design</text>
+  <path d="M 180 180 H 480" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="330" y="172" text-anchor="middle" class="al">2. Phỏng vấn rà soát lỗ hổng spec</text>
+  <path d="M 180 230 H 480" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="330" y="222" text-anchor="middle" class="al">3. Lập kế hoạch plan.md</text>
+  <path d="M 480 280 H 780" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="630" y="272" text-anchor="middle" class="al">4. Thực thi từng task độc lập</text>
+  <path d="M 180 340 H 780" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-acc-dark)"/>
+  <text x="480" y="332" text-anchor="middle" class="al">5. Chạy unit test và nghiệm thu</text>
+  <rect x="100" y="40" width="160" height="44" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="114" y="75" class="nm">Developer</text>
+  <rect x="400" y="40" width="160" height="44" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="414" y="75" class="nm">AI Sidekick</text>
+  <rect x="700" y="40" width="160" height="44" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="714" y="75" class="nm">Codebase và Tests</text>
+</svg>

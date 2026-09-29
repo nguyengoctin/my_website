@@ -1,0 +1,16 @@
+{{- $src := .Get "src" -}}
+{{- $dark := .Get "dark" | default $src -}}
+{{- $alt := .Get "alt" | default "Diagram" -}}
+{{- $caption := .Get "caption" -}}
+<figure class="diagram-figure">
+  <div class="diagram-wrapper" role="button" tabindex="0" title="Phóng to sơ đồ" aria-label="Phóng to sơ đồ">
+    <button type="button" class="diagram-zoom-btn" title="Phóng to sơ đồ" aria-label="Phóng to sơ đồ">
+      <i class="ti ti-zoom-in" aria-hidden="true"></i>
+    </button>
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" class="diagram-img themed-light" loading="lazy" />
+    <img src="{{ $dark | relURL }}" alt="{{ $alt }}" class="diagram-img themed-dark" loading="lazy" />
+  </div>
+  {{- if $caption -}}
+    <figcaption class="diagram-caption">{{ $caption }}</figcaption>
+  {{- end -}}
+</figure>

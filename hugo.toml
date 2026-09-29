@@ -203,7 +203,6 @@ enableEmoji = true
       maxShownLines = 50
     [params.page.code.render]
       goat = true
-      mermaid = true
 
     # Social share
     [params.page.share]

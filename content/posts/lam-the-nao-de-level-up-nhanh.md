@@ -82,13 +82,7 @@ Một tháng sau, khi vẫn loay hoay với những bài toán khó, mình nhìn
 
 Vòng lặp khép lại:
 
-```mermaid
-flowchart LR
-A["(1) Niềm tin<br/>Belief"] --> B["(2) Kỳ vọng<br/>Expectation"]
-B --> C["(3) Hành vi<br/>Behavior"]
-C --> D["(4) Kết quả<br/>Outcome"]
-D -->|Củng cố| A
-```
+{{< diagram src="/diagrams/lam-the-nao-de-level-up-nhanh-1.svg" dark="/diagrams/lam-the-nao-de-level-up-nhanh-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình lam-the-nao-de-level-up-nhanh (1)" >}}
 
 Đây mới là phần quan trọng nhất.
 

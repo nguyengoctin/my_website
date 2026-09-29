@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="960" height="340">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .dt { font-size: 11px; fill: #64748b; }
+    .al { font-size: 11px; fill: #64748b; }
+  </style>
+  <defs>
+    <marker id="arr-main-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#18181b"/>
+    </marker>
+    <marker id="arr-sec-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arr-acc-light" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="960" height="340" fill="#ffffff"/>
+  <path d="M 270 80 H 320 V 160 H 370" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 270 170 H 370" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 270 260 H 320 V 180 H 370" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 590 160 H 640 V 112 H 690" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <path d="M 800 144 V 200" fill="none" stroke="#18181b" stroke-width="1.5"  marker-end="url(#arr-main-light)"/>
+  <rect x="50" y="50" width="220" height="60" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="64" y="76" class="nm">Markdown Content</text>
+  <text x="64" y="94" class="dt">Bài viết và Frontmatter</text>
+  <rect x="50" y="140" width="220" height="60" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="64" y="166" class="nm">Hệ thống SCSS</text>
+  <text x="64" y="184" class="dt">Mô-đun Tokens và Font</text>
+  <rect x="50" y="230" width="220" height="60" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="64" y="256" class="nm">Tài nguyên JS</text>
+  <text x="64" y="274" class="dt">Theme scripts và Icons</text>
+  <rect x="370" y="140" width="220" height="64" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="384" y="166" class="nm">Hugo Extended</text>
+  <text x="384" y="184" class="dt">Biên dịch tĩnh dưới 1s</text>
+  <rect x="690" y="80" width="220" height="64" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="704" y="106" class="nm">Public Directory</text>
+  <text x="704" y="124" class="dt">HTML, WebP và Assets</text>
+  <rect x="690" y="200" width="220" height="64" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
+  <text x="704" y="226" class="nm">Global Edge CDN</text>
+  <text x="704" y="244" class="dt">Cloudflare Pages Delivery</text>
+</svg>

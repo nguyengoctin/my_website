@@ -33,7 +33,7 @@ Qua audit từ nghiên cứu cộng đồng và phân tích source code thực t
 
 ## Not Building
 - Không cài thêm Client-side highlighting nặng (Prism.js / Highlight.js).
-- Không can thiệp vào các shortcode đặc thù khác (Mermaid, Admonitions).
+- Không can thiệp vào các shortcode đặc thù khác (Admonitions, Quotes).
 
 ## Progress
 

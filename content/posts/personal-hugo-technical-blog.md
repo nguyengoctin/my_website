@@ -33,13 +33,7 @@ Sử dụng bộ tạo trang tĩnh Hugo kết hợp hệ thống SCSS mô-đun h
 
 Quy trình xử lý nội dung từ lúc viết bài đến khi bài viết hiển thị trên môi trường trực tuyến:
 
-```mermaid
-flowchart LR
-    MDWrite["Bước 1:<br/>Viết Markdown"] --> HugoBuild["Bước 2:<br/>Biên dịch tĩnh"]
-    HugoBuild --> AssetProc["Bước 3:<br/>Đóng gói tài nguyên"]
-    AssetProc --> IndexGen["Bước 4:<br/>Sinh chỉ mục"]
-    IndexGen --> CDNDeploy["Bước 5:<br/>Phát hành CDN"]
-```
+{{< diagram src="/diagrams/personal-hugo-technical-blog-1.svg" dark="/diagrams/personal-hugo-technical-blog-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình personal-hugo-technical-blog (1)" >}}
 
 1. **Soạn thảo và quản trị:** Tác giả viết bài dưới dạng Markdown, quản lý hình ảnh và cấu trúc thư mục rõ ràng.
 2. **Biên dịch mã nguồn tĩnh:** Hugo đọc các file Markdown, kết hợp với các partial template và render toàn bộ website ra thư mục public chỉ trong chưa đầy 1 giây.
@@ -52,20 +46,7 @@ flowchart LR
 
 Trang web hoạt động theo mô hình Jamstack thuần túy, không duy trì máy chủ ứng dụng:
 
-```mermaid
-flowchart TD
-    MDSource["Kho bài viết Markdown<br/>Content và Metadata"]
-    SCSSSystem["Hệ thống SCSS mô-đun<br/>Tokens và Typography"]
-    ClientAssets["Tài nguyên tĩnh<br/>JavaScript Lunr và WebP"]
-    HugoEngine["Hugo Engine<br/>Biên dịch tĩnh"]
-    PublicDist["Thư mục Public<br/>HTML và CSS nén"]
-    EdgeCDN["Mạng phân phối CDN<br/>Phát hành toàn cầu"]
-    MDSource --> HugoEngine
-    SCSSSystem --> HugoEngine
-    ClientAssets --> HugoEngine
-    HugoEngine --> PublicDist
-    PublicDist --> EdgeCDN
-```
+{{< diagram src="/diagrams/personal-hugo-technical-blog-2.svg" dark="/diagrams/personal-hugo-technical-blog-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình personal-hugo-technical-blog (2)" >}}
 
 ### Điểm nhấn thiết kế và kiến trúc
 - **Zero Runtime Framework:** Không dùng React, Vue hay các UI runtime nặng nề cho các trang nội dung tĩnh, giúp DOM nhẹ và trình duyệt xử lý tức thì.

@@ -69,29 +69,15 @@ Nội dung câu trích dẫn...
 ---
 
 
-## 4. SƠ ĐỒ ĐỘNG MERMAID
+## 4. SƠ ĐỒ TĨNH VECTOR (DIAGRAM)
 
-Sử dụng khối mã ```` ```mermaid ```` cho phép tạo sơ đồ quy trình, luồng dữ liệu hoặc biểu đồ trình tự trực quan.
+Sử dụng shortcode `diagram` cho phép chèn sơ đồ kỹ thuật vector SVG sắc nét, tương thích hoàn hảo chế độ Sáng / Tối.
 
-{{< mermaid >}}
-flowchart LR
-    Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
-    Process --> Condition{"Kiểm tra"}
-    Condition -->|"Hợp lệ"| Finish["Hoàn thành"]
-    Condition -->|"Lỗi"| Retry["Thử lại"]
-    Retry -.-> Process
-{{< /mermaid >}}
+{{< diagram src="/diagrams/toan-tap-coding-friend-ai-engineering-1.svg" dark="/diagrams/toan-tap-coding-friend-ai-engineering-1-dark.svg" alt="Quy trình phát triển" >}}
 
 ### Cú pháp Shortcode:
 ```markdown
-{{</* mermaid */>}}
-flowchart LR
-    Start["Khởi tạo"] --> Process["Xử lý dữ liệu"]
-    Process --> Condition{"Kiểm tra"}
-    Condition -->|"Hợp lệ"| Finish["Hoàn thành"]
-    Condition -->|"Lỗi"| Retry["Thử lại"]
-    Retry -.-> Process
-{{</* /mermaid */>}}
+{{</* diagram src="/diagrams/ten-so-do.svg" dark="/diagrams/ten-so-do-dark.svg" alt="Mô tả sơ đồ" */>}}
 ```
 
 ---
@@ -206,7 +192,7 @@ Shortcode `echarts` render các biểu đồ thống kê trực quan dạng Bar,
 
 - **admonition:** Tạo khung thông báo phân loại (`{{</* admonition tip "Mẹo" */>}}...{{</* /admonition */>}}`).
 - **quote:** Khung trích dẫn sang trọng kèm tác giả (`{{</* quote author="Tên Tác Giả" */>}}...{{</* /quote */>}}`).
-- **mermaid:** Vẽ sơ đồ quy trình và trình tự (`{{</* mermaid */>}} flowchart LR ... {{</* /mermaid */>}}`).
+- **diagram:** Nhúng sơ đồ kỹ thuật SVG vector Light / Dark (`{{</* diagram src="..." dark="..." */>}}`).
 - **style:** Định dạng CSS trực tiếp cho văn bản (`{{</* style "color: red;" p */>}}...{{</* /style */>}}`).
 - **typeit:** Hiệu ứng gõ chữ hoạt hình (`{{</* typeit */>}}Hello World{{</* /typeit */>}}`).
 - **version:** Huy hiệu đánh dấu phiên bản (`{{</* version 0.3.0 new */>}}`).

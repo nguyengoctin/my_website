@@ -13,7 +13,7 @@ class Util {
     }
 
     static isTocStatic() {
-        return window.matchMedia('only screen and (max-width: 1360px)').matches;
+        return window.matchMedia('only screen and (max-width: 1200px)').matches;
     }
 
     static animateCSS(element, animation, reserved, callback) {
@@ -523,10 +523,16 @@ class Theme {
             const $toc = document.getElementById('toc-auto');
             const $page = document.getElementsByClassName('page')[0];
             const rect = $page.getBoundingClientRect();
-            $toc.style.left = `${rect.left + rect.width + 24}px`;
-            const availableSpace = window.innerWidth - (rect.left + rect.width + 48);
-            $toc.style.maxWidth = `${Math.min(Math.max(availableSpace, 0), 260)}px`;
-            $toc.style.visibility = 'visible';
+            const spaceToRight = window.innerWidth - (rect.left + rect.width);
+            const rightMargin = 12; // Sát lề phải màn hình (12px)
+            const maxAllowedWidth = Math.max(0, spaceToRight - rightMargin - 12); // Sát lề trái cạnh bài viết (12px)
+            const targetWidth = Math.min(340, maxAllowedWidth); // Mở rộng diện tích lên đến 340px
+
+            $toc.style.left = 'auto';
+            $toc.style.right = `${rightMargin}px`;
+            $toc.style.width = `${targetWidth}px`;
+            $toc.style.maxWidth = `${targetWidth}px`;
+            $toc.style.visibility = targetWidth >= 160 ? 'visible' : 'hidden';
             const $tocLinkElements = $tocCore.querySelectorAll('a:first-child');
             const $tocLiElements = $tocCore.getElementsByTagName('li');
             const $headerLinkElements = document.getElementsByClassName('headerLink');
@@ -536,7 +542,8 @@ class Theme {
             const minTocTop = $toc.offsetTop;
             const minScrollTop = minTocTop - TOP_SPACING + (headerIsFixed ? 0 : headerHeight);
             this._tocOnScroll = this._tocOnScroll || (() => {
-                const footerTop = document.getElementById('post-footer').offsetTop;
+                const $postFooter = document.getElementById('post-footer') || document.querySelector('.post-footer-editorial') || document.querySelector('.post-footer');
+                const footerTop = $postFooter ? $postFooter.offsetTop : (document.documentElement.scrollHeight - 300);
                 const maxTocTop = footerTop - $toc.getBoundingClientRect().height;
                 const maxScrollTop = maxTocTop - TOP_SPACING + (headerIsFixed ? 0 : headerHeight);
                 if (this.newScrollTop < minScrollTop) {
@@ -584,87 +591,7 @@ class Theme {
         if (this.config.math) renderMathInElement(document.body, this.config.math);
     }
 
-    getMermaidDefinition(element) {
-        if (!element) return null;
 
-        const dataContent = element.getAttribute('data-content');
-        if (dataContent && dataContent.trim().length > 0) {
-            return dataContent.trim();
-        }
-
-        const id = element.id;
-        if (id && this.data && typeof this.data[id] === 'string') {
-            const fromConfig = this.data[id].trim();
-            if (fromConfig.length > 0) return fromConfig;
-        }
-
-        const fromText = element.textContent;
-        if (fromText && fromText.trim().length > 0) {
-            return fromText.trim();
-        }
-
-        return null;
-    }
-
-    initMermaid() {
-        const $mermaidElements = document.getElementsByClassName('mermaid');
-        if (!$mermaidElements.length || typeof mermaid === 'undefined') return;
-
-        const getProjectSerifFont = () => {
-            const style = window.getComputedStyle ? window.getComputedStyle(document.documentElement) : null;
-            const tokenFont = (style && style.getPropertyValue('--font-serif') || '').trim();
-            return tokenFont || '"Newsreader", Georgia, "Times New Roman", serif';
-        };
-
-        mermaid.initialize({
-            startOnLoad: false,
-            securityLevel: 'loose',
-            theme: 'base',
-            themeVariables: {
-                primaryColor: '#f8fafc',
-                primaryBorderColor: '#94a3b8',
-                primaryTextColor: '#0f172a',
-                lineColor: '#64748b',
-                edgeLabelBackground: 'transparent',
-                tertiaryColor: '#ffffff',
-                fontFamily: getProjectSerifFont(),
-                fontSize: '15px'
-            },
-            flowchart: {
-                useMaxWidth: false,
-                padding: 20,
-                nodePadding: 20,
-                nodeSpacing: 35,
-                rankSpacing: 35,
-                curve: 'basis',
-                htmlLabels: true,
-                markdownAutoWrap: false,
-                wrappingWidth: 240
-            }
-        });
-
-        const runMermaid = () => {
-            if (typeof mermaid.run === 'function') {
-                mermaid.run({ nodes: $mermaidElements });
-            } else {
-                Util.forEach($mermaidElements, $mermaid => {
-                    const definition = this.getMermaidDefinition($mermaid);
-                    if (!definition) return;
-
-                    const renderId = 'mermaid-svg-' + ($mermaid.id || Math.random().toString(36).substring(2, 9));
-                    mermaid.render(renderId, definition).then(({ svg }) => {
-                        $mermaid.innerHTML = svg;
-                    }).catch(err => console.error(err));
-                });
-            }
-        };
-
-        if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(runMermaid);
-        } else {
-            runMermaid();
-        }
-    }
 
     initEcharts() {
         if (this.config.echarts) {
@@ -925,7 +852,6 @@ class Theme {
             this.initHighlight();
             this.initHeaderLink();
             this.initMath();
-            this.initMermaid();
             this.initEcharts();
             this.initTypeit();
             this.initMapbox();

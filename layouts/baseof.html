@@ -226,5 +226,55 @@
             }
           });
         </script>
+
+        {{- /* Diagram Zoom Dialog Modal (Lightbox kính lúp) */ -}}
+        <dialog id="diagram-zoom-dialog" class="diagram-zoom-dialog" aria-label="Phóng to sơ đồ">
+            <button type="button" class="diagram-dialog-close" aria-label="Đóng" title="Đóng (ESC)">
+                <i class="ti ti-x" aria-hidden="true"></i>
+            </button>
+            <div class="diagram-dialog-body">
+                <img id="diagram-zoom-img" src="" alt="" />
+            </div>
+        </dialog>
+
+        <script>
+          (function() {
+            var dialog = document.getElementById('diagram-zoom-dialog');
+            var dialogImg = document.getElementById('diagram-zoom-img');
+            if (!dialog || !dialogImg) return;
+
+            document.addEventListener('click', function(e) {
+              var wrapper = e.target.closest('.diagram-wrapper');
+              if (!wrapper) return;
+              e.preventDefault();
+              e.stopPropagation();
+
+              var isDark = document.body.getAttribute('theme') === 'dark' || document.documentElement.getAttribute('data-theme') === 'dark';
+              var lightImg = wrapper.querySelector('.themed-light');
+              var darkImg = wrapper.querySelector('.themed-dark');
+              var activeImg = isDark ? (darkImg || lightImg) : (lightImg || darkImg);
+
+              if (activeImg) {
+                dialogImg.src = activeImg.src;
+                dialogImg.alt = activeImg.alt || 'Sơ đồ';
+                if (typeof dialog.showModal === 'function') {
+                  dialog.showModal();
+                } else {
+                  dialog.setAttribute('open', '');
+                }
+              }
+            });
+
+            dialog.addEventListener('click', function(e) {
+              if (e.target === dialog || e.target.closest('.diagram-dialog-close')) {
+                if (typeof dialog.close === 'function') {
+                  dialog.close();
+                } else {
+                  dialog.removeAttribute('open');
+                }
+              }
+            });
+          })();
+        </script>
     </body>
 </html>

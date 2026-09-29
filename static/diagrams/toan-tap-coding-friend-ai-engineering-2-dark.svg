@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" width="960" height="340">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 11px; fill: #a1a1aa; }
+    .al { font-size: 11px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-main-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-sec-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a1a1aa"/>
+    </marker>
+    <marker id="arr-acc-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="960" height="340" fill="#18181b"/>
+  <path d="M 250 160 H 305 V 80 H 360" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <text x="310" y="68" text-anchor="middle" class="al">tier 1</text>
+  <path d="M 250 172 H 360" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <text x="305" y="160" text-anchor="middle" class="al">tier 2</text>
+  <path d="M 250 184 H 305 V 260 H 360" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-sec-dark)"/>
+  <text x="310" y="275" text-anchor="middle" class="al">tier 3</text>
+  <path d="M 600 80 H 655 V 160 H 710" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 600 170 H 710" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <path d="M 600 260 H 655 V 184 H 710" fill="none" stroke="#fafafa" stroke-width="1.5"  marker-end="url(#arr-main-dark)"/>
+  <rect x="50" y="140" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="64" y="166" class="nm">Query Search</text>
+  <text x="64" y="184" class="dt">memory_search MCP</text>
+  <rect x="360" y="50" width="240" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="374" y="76" class="nm">Tier 1: SQLite + Vector</text>
+  <text x="374" y="94" class="dt">FTS5 và Semantic Search</text>
+  <rect x="360" y="140" width="240" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="374" y="166" class="nm">Tier 2: MiniSearch</text>
+  <text x="374" y="184" class="dt">BM25 và Fuzzy Search</text>
+  <rect x="360" y="230" width="240" height="60" rx="6" fill="#1f1f23" stroke="#3f3f46" stroke-width="1.0"/>
+  <text x="374" y="256" class="nm">Tier 3: Grep Markdown</text>
+  <text x="374" y="274" class="dt">Docs fallback nhanh</text>
+  <rect x="710" y="140" width="200" height="64" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="724" y="166" class="nm">Context Tri Thức</text>
+  <text x="724" y="184" class="dt">Phản hồi chuẩn cho LLM</text>
+</svg>

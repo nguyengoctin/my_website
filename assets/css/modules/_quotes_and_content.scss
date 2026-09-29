@@ -7,82 +7,58 @@ blockquote,
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
-  font-family: var(--font-serif) !important;
-  color: var(--clr-text) !important;
+  font-family: var(--font-sans) !important;
+  color: var(--clr-text, #1e2024) !important;
   text-align: left !important;
   border: none !important;
-  border-left: 3px solid #cbd5e1 !important;
-  padding: 0.35rem 0 0.35rem 1.25rem !important;
-  margin: 1.6em 0 !important;
-  font-size: 1.15rem !important;
-  font-weight: var(--fw-medium) !important;
-  line-height: var(--lh-relaxed) !important;
+  border-left: 2px solid var(--clr-border-strong, #cfcfd6) !important;
+  padding: 0.75rem 1rem !important;
+  margin: 1.4em 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: var(--fw-regular, 400) !important;
+  line-height: 1.65 !important;
   font-style: normal !important;
-  background-color: transparent !important;
-  border-radius: 0 !important;
+  background-color: var(--clr-surface-3, #f4f4f6) !important;
+  border-radius: 0 6px 6px 0 !important;
   box-shadow: none !important;
 
   [theme=dark] & {
-    border-left-color: #475569 !important;
+    border-left-color: var(--clr-border-strong, #3b4252) !important;
+    background-color: var(--clr-surface-3, #1e2028) !important;
+    color: var(--clr-text, #e2e8f0) !important;
   }
 
   .quote-content {
     margin: 0 !important;
-    font-family: var(--font-serif) !important;
-    font-size: 1.15rem !important;
-    font-weight: var(--fw-medium) !important;
-    line-height: var(--lh-relaxed) !important;
-    color: var(--clr-text) !important;
-    font-style: italic !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    font-style: normal !important;
 
-    // Dấu nháy to to mờ mờ trong mẫu (Opening and Closing Quote Marks in Template)
     .quote-open,
     .quote-close {
-      font-family: Georgia, "Times New Roman", "Playfair Display", serif !important;
-      font-style: normal !important;
-      font-weight: 700 !important;
-      font-size: 2.2rem !important;
-      line-height: 0 !important;
-      color: var(--brand-primary, #4d74eb) !important;
-      opacity: 0.35 !important;
-      display: inline-block !important;
-      user-select: none !important;
-      transition: opacity 0.2s ease, color 0.2s ease !important;
-
-      [theme=dark] & {
-        color: var(--brand-primary-dark, #60a5fa) !important;
-        opacity: 0.4 !important;
-      }
-    }
-
-    .quote-open {
-      margin-right: 0.3rem !important;
-      vertical-align: -0.2em !important;
-    }
-
-    .quote-close {
-      margin-left: 0.3rem !important;
-      vertical-align: -0.32em !important;
+      display: none !important;
     }
 
     .quote-text {
-      font-style: italic !important;
-      font-weight: var(--fw-medium) !important;
+      font-style: normal !important;
+      font-weight: inherit !important;
 
       p {
-        display: inline !important;
+        display: block !important;
         margin: 0 !important;
         padding: 0 !important;
-        font-style: italic !important;
-        font-weight: var(--fw-medium) !important;
+        font-style: normal !important;
+        font-weight: inherit !important;
         font-size: inherit !important;
         line-height: inherit !important;
         color: inherit !important;
       }
 
       p + p {
-        display: block !important;
-        margin-top: 0.85rem !important;
+        margin-top: 0.65rem !important;
       }
     }
   }
@@ -90,9 +66,9 @@ blockquote,
   p {
     margin-top: 0 !important;
     margin-bottom: 0.5rem !important;
-    line-height: var(--lh-relaxed) !important;
+    line-height: inherit !important;
     color: inherit !important;
-    font-style: italic !important;
+    font-style: normal !important;
 
     &:last-child {
       margin-bottom: 0 !important;
@@ -108,9 +84,9 @@ blockquote,
     font-style: normal !important;
     text-align: left !important;
     font-weight: var(--fw-regular) !important;
-    color: var(--clr-text-2) !important;
-    font-size: var(--fs-md) !important;
-    margin-top: 0.95rem !important;
+    color: var(--clr-text-2, #64748b) !important;
+    font-size: 0.825rem !important;
+    margin-top: 0.65rem !important;
     padding: 0 !important;
     border: none !important;
     background: transparent !important;

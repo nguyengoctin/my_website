@@ -6,216 +6,193 @@
 // Inline Code Styling (applies only to inline code, not inside <pre>)
 code:not(pre code) {
   display: inline !important;
-  font-family: var(--font-mono, #{$code-font-family}) !important;
-  font-size: 0.85em !important;
+  font-family: var(--code-font-family, var(--font-mono, #{$code-font-family})) !important;
+  font-size: 0.84em !important;
   font-weight: 500 !important;
-  padding: 0.15em 0.45em !important;
-  margin: 0 0.2em !important;
-  border-radius: 5px !important;
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-  border: 1px solid #e2e8f0 !important;
-  vertical-align: 0.04em !important;
+  padding: 0.12em 0.38em !important;
+  margin: 0 !important;
+  border-radius: 4px !important;
+  background-color: var(--clr-surface-3, #f1f5f9) !important;
+  color: var(--clr-text, #0f172a) !important;
+  border: 1px solid var(--clr-border, #e2e8f0) !important;
+  vertical-align: baseline !important;
+  overflow-wrap: anywhere !important;
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
 
   [theme=dark] & {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    color: #f1f5f9 !important;
-    border-color: rgba(255, 255, 255, 0.12) !important;
+    background-color: var(--clr-surface-3, rgba(255, 255, 255, 0.08)) !important;
+    color: var(--clr-text, #f1f5f9) !important;
+    border-color: var(--clr-border, rgba(255, 255, 255, 0.12)) !important;
   }
 }
 
-// Code Block Wrapper
+// Inherit color when code is inside an anchor link
+a > code {
+  color: inherit !important;
+}
+
+// Code Block Wrapper (Option A - Hairline Minimalist with Floating Copy Button)
 .code-block {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #f8fafc;
+  border: 1px solid var(--clr-border, rgba(0, 0, 0, 0.08));
+  background: var(--clr-surface-3, #f8fafc);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: none;
+  transition: border-color 0.15s ease;
 
   [theme="dark"] & {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: #0f141c;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    border-color: var(--clr-border, rgba(255, 255, 255, 0.08));
+    background: var(--clr-surface-3, #15181f);
+    box-shadow: none;
   }
 
   &:hover {
-    border-color: rgba($brand-primary, 0.25);
+    border-color: var(--clr-border-strong, rgba(0, 0, 0, 0.18));
 
     [theme="dark"] & {
-      border-color: rgba($brand-primary-dark, 0.3);
+      border-color: var(--clr-border-strong, rgba(255, 255, 255, 0.18));
     }
   }
 
-  // Header Bar
-  .code-header {
+  // Floating Copy Button (minimalist, borderless, appears on hover or focus)
+  .copy {
+    position: absolute !important;
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    z-index: 10 !important;
     display: flex !important;
-    justify-content: space-between !important;
     align-items: center !important;
-    height: 34px;
-    padding: 0 0.75rem !important;
-    background: #f1f5f9;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    font-family: var(--code-font-family, #{$code-font-family});
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #64748b;
-    letter-spacing: 0.04em;
-    user-select: none;
-    cursor: default;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--clr-text-2, #64748b) !important;
+    cursor: pointer !important;
+    opacity: 0;
+    transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease !important;
 
     [theme="dark"] & {
-      background: #171d26;
-      border-bottom-color: rgba(255, 255, 255, 0.06);
-      color: #94a3b8;
+      color: var(--clr-text-2, #94a3b8) !important;
     }
 
-    .code-title {
-      width: auto !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      display: inline-flex !important;
-      align-items: center;
-      gap: 0.35rem;
-      pointer-events: none; // Prevent click from toggling
-
-      .arrow {
-        display: none !important;
-      }
-
-      &::after {
-        display: none !important;
-        content: "" !important;
-      }
-
-      .code-lang-text {
-        font-size: 0.74rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #64748b;
-        letter-spacing: 0.05em;
-
-        [theme="dark"] & {
-          color: #94a3b8;
-        }
-      }
-    }
-
-    .ellipses {
-      display: none !important;
-    }
-
-    .copy {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 24px !important;
-      height: 24px !important;
-      min-width: 24px !important;
-      min-height: 24px !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      border-radius: 4px !important;
-      background: transparent !important;
-      border: 1px solid transparent !important;
-      color: #64748b !important;
-      cursor: pointer;
-      transition: all 0.15s ease-in-out;
+    &:hover,
+    &:focus-visible {
+      background: rgba(0, 0, 0, 0.06) !important;
+      color: var(--clr-text, #0f172a) !important;
 
       [theme="dark"] & {
-        color: #94a3b8 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: var(--clr-text, #f1f5f9) !important;
+      }
+    }
+
+    i, i.ti {
+      font-size: 0.95rem !important;
+      line-height: 1 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 16px !important;
+      height: 16px !important;
+    }
+
+    &.copied {
+      opacity: 1 !important;
+      color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.12) !important;
+
+      [theme="dark"] & {
+        color: #34d399 !important;
+        background: rgba(52, 211, 153, 0.16) !important;
       }
 
-      &:hover {
-        color: $brand-primary !important;
-        background: rgba($brand-primary, 0.12) !important;
-        border-color: rgba($brand-primary, 0.25) !important;
-
-        [theme="dark"] & {
-          color: $brand-primary-dark !important;
-          background: rgba($brand-primary-dark, 0.18) !important;
-          border-color: rgba($brand-primary-dark, 0.35) !important;
-        }
-      }
-
-      i {
-        font-size: 0.8rem !important;
-        line-height: 1 !important;
-        transition: transform 0.15s ease;
-      }
-
-      &.copied {
-        color: #10b981 !important; // Emerald Green
-        background: rgba(16, 185, 129, 0.15) !important;
-        border-color: rgba(16, 185, 129, 0.35) !important;
-
-        [theme="dark"] & {
-          color: #34d399 !important;
-          background: rgba(52, 211, 153, 0.2) !important;
-          border-color: rgba(52, 211, 153, 0.4) !important;
-        }
-
-        i {
-          transform: scale(1.15);
-        }
+      i, i.ti {
+        transform: scale(1.1);
       }
     }
   }
 
-  &.open .code-header .copy {
-    display: inline-flex !important;
+  &:hover .copy,
+  .copy:focus-visible {
+    opacity: 1 !important;
+  }
+
+  @media (hover: none) {
+    .copy {
+      opacity: 0.75 !important;
+    }
   }
 
   // Code Content Area
   .highlight {
     position: relative;
-    max-height: none !important; // Prevent accidental collapsing
+    max-height: none !important;
     overflow: visible;
     background: transparent;
     padding: 0;
     margin: 0;
 
     pre {
-      margin: 0;
-      padding: 0.9rem 1.1rem;
-      overflow-x: auto;
+      margin: 0 !important;
+      padding: 0.85rem 1.1rem !important;
+      overflow-x: auto !important;
       tab-size: 2;
-      background: transparent;
-      line-height: 1.6;
+      background: transparent !important;
+      line-height: 1.55 !important;
 
-      // Custom Scrollbar
+      // Ultra-thin Neutral Scrollbar (Eliminates OS fat orange scrollbar)
+      scrollbar-width: thin !important;
+      scrollbar-color: rgba(148, 163, 184, 0.35) transparent !important;
+
+      [theme="dark"] & {
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent !important;
+      }
+
       &::-webkit-scrollbar {
-        height: 6px;
+        height: 4px !important;
+        width: 4px !important;
       }
 
       &::-webkit-scrollbar-track {
-        background: transparent;
+        background: transparent !important;
       }
 
       &::-webkit-scrollbar-thumb {
-        background: rgba(148, 163, 184, 0.3);
-        border-radius: 3px;
+        background: rgba(148, 163, 184, 0.35) !important;
+        border-radius: 999px !important;
 
         &:hover {
-          background: rgba(148, 163, 184, 0.5);
+          background: rgba(148, 163, 184, 0.6) !important;
+        }
+      }
+
+      [theme="dark"] &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2) !important;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.35) !important;
         }
       }
 
       code {
-        display: block;
-        min-width: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: var(--code-font-family, #{$code-font-family}) !important;
-        font-size: 0.86rem;
-        line-height: 1.6;
-        color: inherit;
-        background: transparent;
-        border: none;
+        display: block !important;
+        width: max-content !important;
+        min-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: var(--code-font-family, var(--font-mono, #{$code-font-family})) !important;
+        font-size: 0.86rem !important;
+        line-height: 1.55 !important;
+        color: inherit !important;
+        background: transparent !important;
+        border: none !important;
         white-space: pre !important;
         word-break: normal !important;
         word-wrap: normal !important;
@@ -225,110 +202,12 @@ code:not(pre code) {
         -ms-line-break: normal !important;
         hyphens: none !important;
 
-        span.line {
-          display: block;
-          min-height: 1.6em;
+        span.line,
+        span.cl {
+          display: block !important;
+          min-height: 1.55em;
           white-space: pre !important;
-          line-break: normal !important;
-          -webkit-line-break: normal !important;
-          -ms-line-break: normal !important;
-          word-break: normal !important;
-        }
-      }
-    }
-  }
-
-  // Line Numbers via CSS Counter
-  &.code-line-numbers {
-    span.line::before {
-      counter-increment: none !important; // Reset LoveIt theme's double increment
-    }
-
-    span.line,
-    .highlight code span.line,
-    .highlight pre code span.line {
-      position: relative !important;
-      display: block !important;
-      padding-left: 3.2rem !important;
-      counter-increment: code-block !important;
-
-      &::before {
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        width: 2.2rem !important;
-        display: inline-block !important;
-        text-align: right !important;
-        content: counter(code-block) !important;
-        color: #94a3b8 !important;
-        opacity: 0.65 !important;
-        font-size: 0.82rem !important;
-        line-height: inherit !important;
-        user-select: none !important;
-        -webkit-user-select: none !important;
-        border-right: 1px solid rgba(148, 163, 184, 0.25) !important;
-        padding-right: 0.55rem !important;
-        box-sizing: border-box !important;
-        margin-right: 0 !important;
-        pointer-events: none;
-
-        [theme="dark"] & {
-          color: #64748b !important;
-          border-right-color: rgba(255, 255, 255, 0.12) !important;
-        }
-      }
-    }
-  }
-
-  // Table Line Numbers fallback (.lntable)
-  .highlight table.lntable {
-    width: 100%;
-    margin: 0;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
-    display: table;
-
-    tr {
-      background: transparent;
-      border: none;
-    }
-
-    td.lntd {
-      padding: 0;
-      border: none;
-      vertical-align: top;
-
-      &:first-child {
-        width: 1%;
-        white-space: nowrap;
-        user-select: none;
-        -webkit-user-select: none;
-        text-align: right;
-        color: #94a3b8;
-        opacity: 0.55;
-        border-right: 1px solid rgba(148, 163, 184, 0.25);
-        padding: 0.9rem 0.6rem 0.9rem 1.1rem;
-
-        [theme="dark"] & {
-          color: #64748b;
-          border-right-color: rgba(255, 255, 255, 0.1);
-        }
-
-        pre {
-          padding: 0;
-          margin: 0;
-          overflow: hidden;
-        }
-      }
-
-      &:last-child {
-        padding: 0.9rem 1.1rem 0.9rem 0.8rem;
-        width: 99%;
-
-        pre {
-          padding: 0;
-          margin: 0;
+          padding-left: 0 !important;
         }
       }
     }

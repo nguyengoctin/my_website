@@ -68,21 +68,7 @@ Các con số trên cho chúng ta một bài học rõ ràng: **File quy tắc k
 
 AI bản chất đã sở hữu khối lượng kiến thức rất lớn từ quá trình huấn luyện. Điểm nghẽn hiện tại của các Coding Agent nằm ở **kỹ năng tư duy logic và độ chính xác khi ra quyết định**, chứ không phải do thiếu thông tin định nghĩa.
 
-```mermaid
-flowchart TD
-    Prob["Bài toán lập trình phức tạp<br/>Traceback và bug logic"]
-    Check{"Điểm nghẽn ở đâu?"}
-    Cap["Nghẽn ở năng lực mô hình<br/>Thiếu logic và reasoning"]
-    Proc["Nghẽn ở quy trình thực thi<br/>Sai lệnh build và format"]
-    SolCap["Giải pháp năng lực<br/>Chia nhỏ task hoặc đổi model"]
-    SolProc["Giải pháp quy trình<br/>CLAUDE.md tinh gọn tất định"]
-    Prob --> Check
-    Check -->|Thiếu logic| Cap
-    Check -->|Sai lệnh build| Proc
-    Cap --> SolCap
-    Proc --> SolProc
-    SolCap --> SolProc
-```
+{{< diagram src="/diagrams/tu-duy-viet-claudemd-thuc-chien-1.svg" dark="/diagrams/tu-duy-viet-claudemd-thuc-chien-1-dark.svg" alt="Sơ đồ kiến trúc và quy trình tu-duy-viet-claudemd-thuc-chien (1)" >}}
 
 Khi Agent viết sai kiến trúc hoặc tạo ra lỗi logic, việc bổ sung 300 dòng markdown mô tả kiến trúc không thể cứu vãn tình hình. Động thái đúng đắn là chia nhỏ bài toán thành các phần độc lập, định nghĩa đặc tả rõ ràng hơn, tái cấu trúc codebase cho thân thiện với Agent, hoặc chuyển sang mô hình có năng lực lý luận cao hơn.
 
@@ -133,21 +119,7 @@ Mỗi dòng quy tắc đưa vào phải trả lời được câu hỏi: Dòng n
 
 Sự nhầm lẫn nguy hiểm nhất khi thiết lập quy tắc cho AI Agent là nhầm lẫn giữa định hướng hành vi và kiểm soát cưỡng chế.
 
-```mermaid
-flowchart TD
-    Req["Yêu cầu quản lý AI Agent<br/>An toàn và Hiệu quả"]
-    CheckRule{"Tính chất quy tắc?"}
-    Enforce["Cưỡng chế cứng (Enforcement)<br/>An toàn sinh tử bắt buộc"]
-    Guide["Hướng dẫn mềm (Guidance)<br/>Định hướng thao tác"]
-    Tools["Công cụ tất định<br/>Git Hooks, CI/CD, Permissions"]
-    Files["File ngữ cảnh<br/>CLAUDE.md và AGENTS.md"]
-    Req --> CheckRule
-    CheckRule -->|Sinh tử| Enforce
-    CheckRule -->|Thao tác| Guide
-    Enforce --> Tools
-    Guide --> Files
-    Tools --> Files
-```
+{{< diagram src="/diagrams/tu-duy-viet-claudemd-thuc-chien-2.svg" dark="/diagrams/tu-duy-viet-claudemd-thuc-chien-2-dark.svg" alt="Sơ đồ kiến trúc và quy trình tu-duy-viet-claudemd-thuc-chien (2)" >}}
 
 - **Hướng dẫn mềm Guidance:** File `CLAUDE.md` hoặc `AGENTS.md` chỉ đóng vai trò định hướng cách gọi lệnh, định dạng kiểm thử và chỉ định các thư mục cấm can thiệp.
 - **Cưỡng chế cứng Enforcement:** Những yêu cầu mang tính an toàn sinh tử như *"Cấm push trực tiếp lên main"*, *"Cấm xóa bảng cơ sở dữ liệu"*, hoặc *"Bắt buộc vượt qua linter trước khi bàn giao"* tuyệt đối không thể dựa vào file markdown. AI là mô hình xác suất, nó hoàn toàn có thể bỏ qua câu chữ khi ngữ cảnh quá tải.
