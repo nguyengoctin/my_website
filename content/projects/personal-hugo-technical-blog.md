@@ -6,6 +6,7 @@ author: "Nguyen Ngoc Tin"
 description: "Thiết kế và tối ưu hóa blog cá nhân chuẩn editorial magazine bằng Hugo static site generator, SCSS tùy biến và Lunr.js search."
 tags: ["Hugo", "SCSS", "Static Site Generator", "Lunr.js", "GitHub Pages"]
 categories: ["Projects", "Web Development"]
+aliases: ["/posts/personal-hugo-technical-blog/"]
 ---
 
 > [!TLDR]

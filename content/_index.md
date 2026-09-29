@@ -108,7 +108,7 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/job-hunt-os-product-requirement-document/">Job Hunt OS</a> <span class="status-badge status-warning">Đang phát triển</span>
+        <a href="/projects/job-hunt-os-product-requirement-document/">Job Hunt OS</a> <span class="status-badge status-warning">Đang phát triển</span>
       </h3>
       <div class="timeline-desc">
         Quản trị bối cảnh tuyển dụng cá nhân – ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
@@ -120,7 +120,7 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">PRD</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/job-hunt-os-product-requirement-document/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/job-hunt-os-product-requirement-document/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6</a>
+        <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6</a>
       </h3>
       <div class="timeline-desc">
         Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
@@ -151,7 +151,7 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
       </div>
     </div>
   </div>
@@ -166,7 +166,7 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/lexi-ai-english-tutor/">Lexi</a>
+        <a href="/projects/lexi-ai-english-tutor/">Lexi</a>
       </h3>
       <div class="timeline-desc">
         Trợ lý gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
@@ -181,7 +181,7 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
@@ -197,7 +197,7 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/bilingual-movie-learning-platform/">Học Tiếng Anh qua Phim Song ngữ</a>
+        <a href="/projects/bilingual-movie-learning-platform/">Học Tiếng Anh qua Phim Song ngữ</a>
       </h3>
       <div class="timeline-desc">
         Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
@@ -212,7 +212,7 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">Docker</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
@@ -228,7 +228,7 @@ Tốt nghiệp tháng 8 năm 2026.
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/posts/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
+        <a href="/projects/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
       </h3>
       <div class="timeline-desc">
         Không gian ghi chép kỹ thuật và lưu trữ các dự án cá nhân, ưu tiên trải nghiệm đọc tập trung, tối ưu hiệu năng tải trang tĩnh và khả năng tìm kiếm nội dung nhanh chóng.
@@ -242,7 +242,7 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
-        <a href="/posts/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
         <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-external-link"></i> <span>Trang trực tuyến</span></a>
       </div>
@@ -252,13 +252,14 @@ Tốt nghiệp tháng 8 năm 2026.
   <!-- Project 6: Mac mini Home Server -->
   <div class="timeline-row">
     <div class="timeline-left">
+      <img src="/images/macmini-home-server-cover.webp" alt="Mac mini Home Server Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-time">Sep 2026 — Present</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/notes/macmini-home-server-setup-reference/">Mac mini Home Server</a>
+        <a href="/projects/macmini-home-server/">Mac mini Home Server</a>
       </h3>
       <div class="timeline-desc">
         Biến Mac mini 2014 thành home server Ubuntu chạy các dịch vụ self-hosted qua Docker Compose, truy cập private qua Tailscale, mount ổ đĩa persistent bằng UUID và giám sát phần cứng với smartd.
@@ -274,7 +275,9 @@ Tốt nghiệp tháng 8 năm 2026.
         <span class="timeline-tag">smartmontools</span>
       </div>
       <div class="timeline-links">
-        <a href="/notes/macmini-home-server-setup-reference/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/macmini-home-server/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://youtu.be/fOFksF21Eyo" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-youtube"></i> <span>Video Showcase</span></a>
+        <a href="/notes/macmini-home-server-setup-reference/" class="btn-action"><i class="ti ti-file-text"></i> <span>Note kỹ thuật</span></a>
       </div>
     </div>
   </div>

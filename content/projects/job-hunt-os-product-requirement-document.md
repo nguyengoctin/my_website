@@ -6,6 +6,7 @@ author: "Nguyen Ngoc Tin"
 description: "Bản đặc tả sản phẩm PRD cho Job Hunt OS — ứng dụng di động tập trung vào khả năng Instant Context Recall và quản trị hành động tiếp theo cho quá trình tìm việc."
 tags: ["Product Design", "System Architecture", "Mobile App", "PRD", "Job Hunt OS"]
 categories: ["Projects", "Product Design"]
+aliases: ["/posts/job-hunt-os-product-requirement-document/"]
 ---
 
 

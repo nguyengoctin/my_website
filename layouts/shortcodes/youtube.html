@@ -1,27 +1,121 @@
 {{- $id := .Get "id" | default (.Get 0) -}}
 {{- $title := .Get "title" | default "YouTube Video" -}}
+{{- $caption := .Get "caption" | default "" -}}
 {{- $class := .Get "class" | default "" -}}
 {{- $start := .Get "start" | default "" -}}
-{{- $speed := .Get "speed" | default "1.5" -}}
+{{- $speed := .Get "speed" | default "1" -}}
 
 {{- if $id -}}
-<div class="youtube-embed-wrapper{{ with $class }} {{ . }}{{ end }}" data-video-id="{{ $id }}" data-speed="{{ $speed }}"{{ with $start }} data-start="{{ . }}"{{ end }}>
-    <div class="youtube-lite-player" onclick="playYoutubeInstant(this)" role="button" tabindex="0" aria-label="Phát video {{ $title }} (tốc độ {{ $speed }}x)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playYoutubeInstant(this);}">
-        <picture>
+<figure class="youtube-figure{{ with $class }} {{ . }}{{ end }}">
+    <div class="youtube-player" 
+         data-video-id="{{ $id }}" 
+         data-speed="{{ $speed }}"
+         {{ with $start }}data-start="{{ . }}"{{ end }}
+         onclick="initYoutubePlayer(this)"
+         role="button" 
+         tabindex="0" 
+         aria-label="Phát video: {{ $title }}" 
+         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();initYoutubePlayer(this);}">
+        
+        <picture class="youtube-poster">
             <source srcset="https://i.ytimg.com/vi_webp/{{ $id }}/maxresdefault.webp" type="image/webp">
-            <img src="https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg" alt="{{ $title }}" loading="lazy" class="youtube-poster-img" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg';">
+            <img src="https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg" 
+                 alt="{{ $title }}" 
+                 loading="lazy" 
+                 class="youtube-poster-img" 
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg';">
         </picture>
+        <div class="youtube-overlay"></div>
+
+        {{- with $title -}}
+        <div class="youtube-header-title">
+            <span>{{ . }}</span>
+        </div>
+        {{- end -}}
+
         <button class="youtube-play-btn" type="button" aria-hidden="true" tabindex="-1">
-            <svg viewBox="0 0 68 48" width="64" height="45" class="youtube-play-svg">
-                <path class="youtube-btn-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f43f5e"></path>
+            <svg viewBox="0 0 68 48" width="68" height="48" class="youtube-play-svg">
+                <path class="youtube-btn-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
                 <path d="M 45,24 27,14 27,34" fill="#ffffff"></path>
             </svg>
         </button>
+
+        {{- if and (ne $speed "1") (ne $speed "1.0") -}}
         <div class="youtube-badge-speed">{{ $speed }}x Speed</div>
+        {{- end -}}
     </div>
-</div>
+    {{- with $caption -}}
+    <figcaption class="youtube-caption">{{ . }}</figcaption>
+    {{- end -}}
+</figure>
+
 <script>
-if (!window.playYoutubeInstant) {
+if (!window.initYoutubePlayer) {
+    window.initYoutubePlayer = function(container) {
+        if (!container || container.classList.contains('is-playing')) return;
+        container.classList.add('is-playing');
+
+        var id = container.getAttribute('data-video-id');
+        var start = container.getAttribute('data-start');
+        var speed = parseFloat(container.getAttribute('data-speed')) || 1;
+
+        var startParam = start ? '&start=' + parseInt(start, 10) : '';
+
+        // Nếu tốc độ mặc định 1x, dùng native iframe youtube-nocookie trực tiếp
+        if (speed === 1) {
+            var iframe = document.createElement('iframe');
+            iframe.className = 'youtube-iframe';
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&playsinline=1&rel=0' + startParam;
+            iframe.title = container.getAttribute('aria-label') || 'YouTube Video';
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+            
+            container.innerHTML = '';
+            container.appendChild(iframe);
+            return;
+        }
+
+        // Nếu có tùy biến tốc độ playback rate khác 1x, sử dụng YouTube Iframe API
+        var playerId = 'yt-player-' + Math.random().toString(36).substr(2, 9);
+        var playerDiv = document.createElement('div');
+        playerDiv.id = playerId;
+        playerDiv.className = 'youtube-iframe';
+
+        container.innerHTML = '';
+        container.appendChild(playerDiv);
+
+        window.ensureYTAPILoaded(function() {
+            var speedApplied = false;
+            new YT.Player(playerId, {
+                videoId: id,
+                host: 'https://www.youtube-nocookie.com',
+                playerVars: {
+                    autoplay: 1,
+                    playsinline: 1,
+                    rel: 0,
+                    start: start ? parseInt(start, 10) : 0
+                },
+                events: {
+                    onReady: function(event) {
+                        try {
+                            event.target.setPlaybackRate(speed);
+                            event.target.playVideo();
+                        } catch (err) {}
+                    },
+                    onStateChange: function(event) {
+                        if (!speedApplied && event.data === YT.PlayerState.PLAYING) {
+                            try {
+                                event.target.setPlaybackRate(speed);
+                                speedApplied = true;
+                            } catch (err) {}
+                        }
+                    }
+                }
+            });
+        });
+    };
+
     window._ytApiCallbacks = [];
     window._ytApiLoading = false;
 
@@ -48,52 +142,6 @@ if (!window.playYoutubeInstant) {
                 }
             };
         }
-    };
-
-    window.playYoutubeInstant = function(el) {
-        var wrapper = el.closest('.youtube-embed-wrapper');
-        if (!wrapper) return;
-        var id = wrapper.getAttribute('data-video-id');
-        var start = parseInt(wrapper.getAttribute('data-start'), 10) || 0;
-        var speed = parseFloat(wrapper.getAttribute('data-speed')) || 1.5;
-
-        var playerId = 'yt-player-' + Math.random().toString(36).substr(2, 9);
-        var playerDiv = document.createElement('div');
-        playerDiv.id = playerId;
-        playerDiv.className = 'youtube-iframe-active';
-
-        wrapper.innerHTML = '';
-        wrapper.appendChild(playerDiv);
-
-        window.ensureYTAPILoaded(function() {
-            var speedApplied = false;
-            new YT.Player(playerId, {
-                videoId: id,
-                playerVars: {
-                    autoplay: 1,
-                    playsinline: 1,
-                    rel: 0,
-                    modestbranding: 1,
-                    start: start
-                },
-                events: {
-                    onReady: function(event) {
-                        try {
-                            event.target.setPlaybackRate(speed);
-                            event.target.playVideo();
-                        } catch (err) {}
-                    },
-                    onStateChange: function(event) {
-                        if (!speedApplied && event.data === YT.PlayerState.PLAYING) {
-                            try {
-                                event.target.setPlaybackRate(speed);
-                                speedApplied = true;
-                            } catch (err) {}
-                        }
-                    }
-                }
-            });
-        });
     };
 }
 </script>

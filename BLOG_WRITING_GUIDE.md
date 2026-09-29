@@ -84,13 +84,17 @@ Giữ tối đa nội dung, cảm xúc và giọng văn của tác giả. Không
 - Không tạo section chỉ để hoàn thành một template.
 - Ưu tiên prose tự nhiên. Không biến mọi nội dung thành list, callout, card hoặc visual.
 
-## No Tables
+## Tables
 
-- Không dùng Markdown table trong bài viết.
-- Với comparison hoặc structured information, ưu tiên prose ngắn, bullet list hoặc subsection riêng cho từng lựa chọn.
-- Nếu dữ liệu bản chất là một ma trận lớn và chuyển thành prose sẽ làm mất thông tin đáng kể, dùng visual phù hợp hoặc dẫn tới data hoặc reference riêng thay vì ép vào table.
+Không lạm dụng Markdown table, nhưng dùng đúng chỗ khi dữ liệu yêu cầu tính trực quan đối chiếu:
 
-Đây là house style của NgocTin Note, không phải quy tắc kỹ thuật phổ quát cho mọi tài liệu.
+- **Khi nên dùng Table:**
+  - Dữ liệu đối chiếu benchmark nhiều chỉ số (Latency, RPS, Memory, CPU).
+  - Bảng tra cứu tham số, flags lệnh, phím tắt hoặc ma trận tương thích (matrix) phiên bản.
+  - Giữ bảng gọn (ưu tiên 3–4 cột), nội dung từng ô ngắn gọn và súc tích để đảm bảo hiển thị tốt trên màn hình nhỏ.
+- **Khi không nên dùng Table:**
+  - Không dùng table để tóm tắt lý thuyết, tóm tắt bài viết hoặc liệt kê "Ưu điểm / Nhược điểm" theo lối mòn AI. Với nội dung phân tích so sánh trừu tượng, ưu tiên prose ngắn, bullet list hoặc subsection riêng cho từng giải pháp.
+  - Không ép dữ liệu văn xuôi dài dòng vào ô bảng khiến vỡ layout trên mobile.
 
 ## Technical Explanation
 

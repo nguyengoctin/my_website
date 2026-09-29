@@ -6,9 +6,9 @@ author: "Nguyen Ngoc Tin"
 description: "Phân tích kiến trúc F&B Online Ordering trên Zalo Mini App kết hợp Django REST Framework, bảo toàn dữ liệu bằng snapshot và tích hợp VietQR tự động."
 tags: ["Zalo Mini App", "Django", "Python", "React", "PostgreSQL", "System Architecture", "VietQR"]
 categories: ["Projects", "System Architecture"]
+aliases: ["/posts/bep-di-6-zalo-mini-app-ordering-platform/"]
 ---
 
-{{< image src="/images/bep-di-6-cover.webp" caption="Giao diện nền tảng đặt món trực tuyến Bếp Dì 6 trên Zalo Mini App" alt="Bếp Dì 6 Cover" >}}
 
 > [!TLDR]
 > Bếp Dì 6 là nền tảng đặt món trực tiếp trên Zalo Mini App dành cho quán ăn địa phương, giúp khách hàng đặt hàng không cần cài ứng dụng mới và chủ quán đối soát dòng tiền tự động qua VietQR động và định vị GPS.
