@@ -1142,6 +1142,16 @@ details#toc-static {
   text-align: center !important;
   max-width: 100% !important;
 
+  // Breakout width utility: bung rộng cân đối lên tới 920px trên màn hình >= 1100px
+  &.breakout {
+    @media (min-width: 1100px) {
+      width: calc(100% + 170px) !important;
+      max-width: 920px !important;
+      margin-left: -85px !important;
+      margin-right: -85px !important;
+    }
+  }
+
   img {
     display: block !important;
     max-width: 100% !important;
