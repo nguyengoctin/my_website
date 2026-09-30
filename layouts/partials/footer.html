@@ -3,10 +3,11 @@
     <div class="footer-container custom-footer-wrapper">
         <div class="footer-left">
             <span class="copyright-info">&copy; {{ with .Site.Params.footer.since }}{{ if lt . now.Year }}{{ . }} - {{ end }}{{ end }}{{ now.Year }} <a href="{{ $.Site.Params.Author.link | default .Site.Home.RelPermalink }}">{{ .Site.Params.Author.name }}</a></span>
-            <span class="splitter">&middot;</span>
-            <span class="tech-stack">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
-            <span class="splitter">&middot;</span>
-            <span class="license"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+            <span class="footer-meta">
+                <span class="tech-stack">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
+                <span class="splitter">&middot;</span>
+                <span class="license"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span>
+            </span>
         </div>
 
         <div class="footer-right">

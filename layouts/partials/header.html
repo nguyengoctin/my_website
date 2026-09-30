@@ -55,8 +55,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             var menuToggleMobile = document.getElementById('menu-toggle-mobile');
             var menuMobile = document.getElementById('menu-mobile');
+            var mask = document.getElementById('mask');
             function closeMobileMenu() {
                 document.body.classList.remove('mobile-menu-open');
+                document.body.classList.remove('blur');
                 if (menuToggleMobile) {
                     menuToggleMobile.setAttribute('aria-expanded', 'false');
                     menuToggleMobile.classList.remove('active');
@@ -74,9 +76,13 @@
                             document.body.classList.add('mobile-menu-open');
                         } else {
                             document.body.classList.remove('mobile-menu-open');
+                            document.body.classList.remove('blur');
                         }
                     }, 50);
                 });
+            }
+            if (mask) {
+                mask.addEventListener('click', closeMobileMenu);
             }
             if (menuMobile) {
                 menuMobile.addEventListener('click', function(e) {
@@ -124,9 +130,16 @@
                     {{- end -}}
                 </a>
             </div>
-            <button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="menu-mobile">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="menu-toggle-wrapper">
+                <button type="button" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
+                    <span class="sys-icon theme-icon-auto"><i class="ti ti-circle-half-2"></i></span>
+                    <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
+                    <span class="sys-icon theme-icon-dark"><i class="ti ti-moon"></i></span>
+                </button>
+                <button type="button" class="menu-toggle" id="menu-toggle-mobile" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="menu-mobile">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
@@ -153,17 +166,6 @@
                         <span class="sys-icon menu-item-arrow"><i class="ti ti-chevron-right"></i></span>
                     </a>
                 {{- end -}}
-            </div>
-
-            <div class="mobile-bottom-row">
-                <button type="button" class="menu-item theme-switch" title="{{ T "switchTheme" }} (System / Light / Dark)" aria-label="Đổi giao diện">
-                    <span class="theme-switch-label">
-                        <span class="sys-icon theme-icon-auto"><i class="ti ti-circle-half-2"></i></span>
-                        <span class="sys-icon theme-icon-light"><i class="ti ti-sun"></i></span>
-                        <span class="sys-icon theme-icon-dark"><i class="ti ti-moon"></i></span>
-                        <span>Theme Mode</span>
-                    </span>
-                </button>
             </div>
         </div>
     </div>

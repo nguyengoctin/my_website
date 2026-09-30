@@ -268,8 +268,8 @@ blockquote,
 // ==========================================================
 // 4. UNIFIED INLINE LINK SYSTEM
 // ==========================================================
-a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a),
-.single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a) {
+a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.menu-item):not(.header-title a):not(.archive-item-link):not(.summary .single-title a):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a):not(.nav-card):not(.share-icon-btn):not(.custom-footer-wrapper a):not(.footer a),
+.single .content a:not(.contact-chip):not(.btn-action):not(.btn-cv-action):not(.cv-btn):not(.tag-pill):not(.timeline-tag):not(.tag-badge):not(.timeline-title a):not(.timeline-links a):not(.timeline-box a):not(.nav-card):not(.share-icon-btn):not(.custom-footer-wrapper a):not(.footer a) {
   color: var(--clr-link) !important;
   text-decoration: underline solid !important;
   text-decoration-color: var(--clr-link-underline) !important;
