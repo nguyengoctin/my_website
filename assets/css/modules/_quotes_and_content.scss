@@ -503,13 +503,27 @@ a [class*=" ti-"]:not(.theme-icon-dark i):not(.theme-icon-light i):not(.theme-ic
   gap: 1rem;
   margin: 1.5rem 0;
 
+  &.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
+
+    &.cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
   }
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+
+    &.cols-2 {
+      grid-template-columns: 1fr;
+    }
   }
 
   .gallery-card {

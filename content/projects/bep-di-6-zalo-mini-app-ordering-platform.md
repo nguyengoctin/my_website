@@ -97,69 +97,75 @@ Khoảng cách tính toán sau đó được nhân với hệ số bù trừ cun
 
 ### Trải nghiệm khách hàng trên Zalo Mini App
 
-<div class="showcase-gallery-grid">
+Khách hàng truy cập trực tiếp qua Zalo, duyệt thực đơn phân tầng và tùy biến món ăn trực quan:
+
+<div class="showcase-gallery-grid cols-2">
   <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/01_home.webp" alt="Trang chủ Bếp Dì 6" loading="lazy">
+    <img src="/images/posts/bep-di-6/01_thuc_don.webp" alt="Thực đơn Bếp Dì 6" loading="lazy">
     <div class="gallery-caption">
-      <strong>1. Trang chủ và Thực đơn</strong>
-      Thực đơn phân tầng theo danh mục món
+      <strong>1. Thực đơn và Tìm kiếm</strong>
+      Duyệt món theo phân loại và tìm kiếm tức thì
     </div>
   </div>
   <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/02_product_detail.webp" alt="Tùy chọn món ăn" loading="lazy">
+    <img src="/images/posts/bep-di-6/02_chi_tiet_mon.webp" alt="Chi tiết món ăn và tùy chọn topping" loading="lazy">
     <div class="gallery-caption">
       <strong>2. Tùy chọn món ăn</strong>
-      Tùy chọn topping, kích cỡ và ghi chú
+      Tùy chọn topping, khẩu phần và ghi chú món
     </div>
   </div>
   <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/03_cart.webp" alt="Giỏ hàng" loading="lazy">
+    <img src="/images/posts/bep-di-6/03_chon_dia_chi.webp" alt="Chọn địa chỉ nhận hàng" loading="lazy">
     <div class="gallery-caption">
-      <strong>3. Giỏ hàng và Tóm tắt</strong>
-      Kiểm tra số lượng và tổng tiền
-    </div>
-  </div>
-  <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/04_checkout.webp" alt="Thanh toán đơn hàng" loading="lazy">
-    <div class="gallery-caption">
-      <strong>4. Thanh toán và VietQR</strong>
-      Tự sinh mã VietQR chuẩn số tiền
-    </div>
-  </div>
-  <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/05_select_location.webp" alt="Địa chỉ nhận hàng" loading="lazy">
-    <div class="gallery-caption">
-      <strong>5. Danh sách Địa chỉ</strong>
-      Lưu trữ nhiều địa chỉ giao hàng
-    </div>
-  </div>
-  <div class="gallery-card">
-    <img src="/images/posts/bep-di-6/mobile/06_add_address_modal.webp" alt="Thêm địa chỉ mới" loading="lazy">
-    <div class="gallery-caption">
-      <strong>6. Modal thêm địa chỉ GPS</strong>
-      Định vị GPS Zalo tự động điền địa chỉ
+      <strong>3. Định vị GPS và Địa chỉ</strong>
+      Định vị GPS Zalo tính khoảng cách và phí ship
     </div>
   </div>
 </div>
 
 ---
 
-### Cổng quản trị vận hành cho chủ quán
+### Cổng quản trị vận hành cho quán (Admin Web App)
 
-#### Đăng nhập quản trị bảo mật
-{{< image src="/images/posts/bep-di-6/admin/login.webp" caption="Xác thực an toàn và phân quyền nhân viên theo vai trò" alt="Admin Login Bếp Dì 6" >}}
+Hệ thống quản trị thời gian thực được thiết kế tối ưu hóa trên màn hình di động cho chủ quán và đội ngũ bếp:
 
-#### Dashboard tổng quan doanh thu
-{{< image src="/images/posts/bep-di-6/admin/01_admin_dashboard.webp" caption="Theo dõi tổng quan đơn hàng, doanh số và trạng thái xử lý" alt="Admin Dashboard Bếp Dì 6" >}}
-
-#### Danh sách đơn hàng thời gian thực
-{{< image src="/images/posts/bep-di-6/admin/02_admin_orders.webp" caption="Bộ lọc trạng thái đơn, tìm kiếm mã đơn và xác nhận thanh toán" alt="Admin Orders Bếp Dì 6" >}}
-
-#### Chi tiết snapshot đơn hàng
-{{< image src="/images/posts/bep-di-6/admin/03_admin_order_detail.webp" caption="Dữ liệu snapshot giá bán bất biến, chi tiết topping và tọa độ giao hàng" alt="Admin Order Detail Bếp Dì 6" >}}
-
-#### Quản lý thực đơn và nhóm tùy chọn món
-{{< image src="/images/posts/bep-di-6/admin/04_admin_products.webp" caption="Quản lý danh mục món ăn, định giá bán và thiết lập nhóm topping linh hoạt" alt="Admin Products Bếp Dì 6" >}}
+<div class="showcase-gallery-grid cols-2">
+  <div class="gallery-card">
+    <img src="/images/posts/bep-di-6/04_admin_tong_quan.webp" alt="Admin tổng quan vận hành" loading="lazy">
+    <div class="gallery-caption">
+      <strong>1. Tổng quan vận hành</strong>
+      Theo dõi đơn chờ, doanh thu ngày và trạng thái quán
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="/images/posts/bep-di-6/05_admin_bep.webp" alt="Màn hình điều phối nhà bếp KDS" loading="lazy">
+    <div class="gallery-caption">
+      <strong>2. Màn hình bếp KDS</strong>
+      Tiếp nhận đơn, cập nhật tiến độ nấu và giao
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="/images/posts/bep-di-6/06_admin_trung_tam_quan_ly.webp" alt="Trung tâm quản lý nghiệp vụ" loading="lazy">
+    <div class="gallery-caption">
+      <strong>3. Trung tâm quản lý</strong>
+      Cổng quản lý danh mục, món ăn, mã voucher
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="/images/posts/bep-di-6/07_admin_quan_ly_mon_an.webp" alt="Quản lý danh sách món ăn" loading="lazy">
+    <div class="gallery-caption">
+      <strong>4. Quản lý món ăn</strong>
+      Công tắc bật tắt còn/hết món và chỉnh sửa giá
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="/images/posts/bep-di-6/08_admin_cai_dat_quan.webp" alt="Cài đặt vận hành cửa hàng" loading="lazy">
+    <div class="gallery-caption">
+      <strong>5. Cài đặt quán</strong>
+      Đóng mở quán, bán kính giao hàng và cấu hình VietQR
+    </div>
+  </div>
+</div>
 
 ---
 

@@ -225,6 +225,66 @@
               document.body.removeChild(textarea);
             }
           });
+
+          {{- /* Post Copy Link Handler */ -}}
+          document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.btn-copy-link');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var url = btn.getAttribute('data-url') || window.location.href;
+            var icon = btn.querySelector('i');
+            var textSpan = btn.querySelector('.copy-text') || btn.querySelector('span');
+            var originalText = textSpan ? textSpan.textContent : '';
+
+            function showCopied() {
+              btn.classList.add('copied');
+              if (icon) icon.className = 'ti ti-check';
+              if (textSpan) textSpan.textContent = 'Copied!';
+              setTimeout(function() {
+                btn.classList.remove('copied');
+                if (icon) icon.className = 'ti ti-link';
+                if (textSpan) textSpan.textContent = originalText;
+              }, 2000);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+              navigator.clipboard.writeText(url).then(showCopied).catch(function() {
+                var textarea = document.createElement('textarea');
+                textarea.value = url;
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                textarea.style.top = '0';
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                try {
+                  document.execCommand('copy');
+                  showCopied();
+                } catch (err) {
+                  console.error('Copy link fallback failed', err);
+                }
+                document.body.removeChild(textarea);
+              });
+            } else {
+              var textarea = document.createElement('textarea');
+              textarea.value = url;
+              textarea.style.position = 'fixed';
+              textarea.style.left = '-9999px';
+              textarea.style.top = '0';
+              document.body.appendChild(textarea);
+              textarea.focus();
+              textarea.select();
+              try {
+                document.execCommand('copy');
+                showCopied();
+              } catch (err) {
+                console.error('Copy link fallback failed', err);
+              }
+              document.body.removeChild(textarea);
+            }
+          });
         </script>
 
         {{- /* Diagram Zoom Dialog Modal (Lightbox kính lúp) */ -}}

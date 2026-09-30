@@ -6,60 +6,34 @@
     <ul class="post-footer-tags">
         {{- range . -}}
         {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
-        <li><a href="{{ $tag.RelPermalink }}" class="tag-pill">{{ $tag.Title }}</a></li>
+        <li><a href="{{ $tag.RelPermalink }}" class="tag-pill">#{{ $tag.Title }}</a></li>
         {{- end -}}
     </ul>
     {{- end -}}
 
-    {{- /* Share and Back to Top */ -}}
+    {{- /* Share and Actions Bar */ -}}
     <div class="post-footer-actions">
         <div class="post-footer-share">
-            <span class="share-label">Share this post on:</span>
+            <span class="share-label">Share:</span>
+            <button type="button" class="btn-copy-link" data-url="{{ .Permalink }}" title="Copy link to clipboard" aria-label="Copy post link">
+                <i class="ti ti-link"></i>
+                <span class="copy-text">Copy link</span>
+            </button>
             <div class="share-icons">
                 <a href="https://x.com/intent/post?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on X"
-                    aria-label="Share this post on X">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank"
-                    rel="noopener noreferrer" title="Share this post on Facebook"
-                    aria-label="Share this post on Facebook">
-                    <i class="fa-brands fa-facebook"></i>
+                    target="_blank" rel="noopener noreferrer" title="Share on X"
+                    aria-label="Share on X" class="share-icon-btn">
+                    <i class="ti ti-brand-x"></i>
                 </a>
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on LinkedIn"
-                    aria-label="Share this post on LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
+                    target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"
+                    aria-label="Share on LinkedIn" class="share-icon-btn">
+                    <i class="ti ti-brand-linkedin"></i>
                 </a>
-                <a href="https://t.me/share/url?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on Telegram"
-                    aria-label="Share this post on Telegram">
-                    <i class="fa-brands fa-telegram"></i>
-                </a>
-                <a href="https://reddit.com/submit?url={{ .Permalink | urlquery }}&title={{ .Title | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on Reddit"
-                    aria-label="Share this post on Reddit">
-                    <i class="fa-brands fa-reddit"></i>
-                </a>
-                <a href="https://www.threads.net/intent/post?text={{ printf " %s %s" .Title .Permalink | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on Threads"
-                    aria-label="Share this post on Threads">
-                    <i class="fa-brands fa-threads"></i>
-                </a>
-                <a href="https://bsky.app/intent/compose?text={{ printf " %s %s" .Title .Permalink | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on BlueSky"
-                    aria-label="Share this post on BlueSky">
-                    <i class="fa-brands fa-bluesky"></i>
-                </a>
-                <a href="https://wa.me/?text={{ printf " %s %s" .Title .Permalink | urlquery }}" target="_blank"
-                    rel="noopener noreferrer" title="Share this post via WhatsApp"
-                    aria-label="Share this post via WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://news.ycombinator.com/submitlink?u={{ .Permalink | urlquery }}&t={{ .Title | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share this post on Hacker News"
-                    aria-label="Share this post on Hacker News">
-                    <i class="fa-brands fa-y-combinator"></i>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}"
+                    target="_blank" rel="noopener noreferrer" title="Share on Facebook"
+                    aria-label="Share on Facebook" class="share-icon-btn">
+                    <i class="ti ti-brand-facebook"></i>
                 </a>
             </div>
         </div>
@@ -67,14 +41,14 @@
         <div class="post-footer-right-actions">
             {{- with .RawContent -}}
             <button type="button" class="btn-copy-markdown btn-copy-markdown-footer"
-                data-markdown="{{ . | base64Encode }}" title="Sao chép toàn bộ nội dung Markdown"
-                aria-label="Sao chép Markdown">
+                data-markdown="{{ . | base64Encode }}" title="Copy raw Markdown"
+                aria-label="Copy Markdown">
                 <i class="ti ti-markdown"></i>
                 <span>Markdown</span>
             </button>
             {{- end -}}
-            <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-                <i class="ti ti-chevron-up"></i>
+            <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                <i class="ti ti-arrow-up"></i>
                 <span>Back to Top</span>
             </button>
         </div>
@@ -83,8 +57,8 @@
     {{- /* Divider */ -}}
     <hr class="post-footer-divider" />
 
-    {{- /* Post Navigation */ -}}
-    <div class="post-nav-editorial" data-pagefind-ignore>
+    {{- /* Post Navigation Cards */ -}}
+    <nav class="post-nav-editorial" aria-label="Post navigation" data-pagefind-ignore>
         {{- $prevPage := false -}}
         {{- $nextPage := false -}}
         {{- if or (.Params.prev) (.Params.next) -}}
@@ -100,25 +74,27 @@
         {{- end -}}
 
         {{- with $prevPage -}}
-        <a href="{{ .RelPermalink }}" class="nav-prev" rel="prev" title="{{ .Title }}">
-            <i class="ti ti-chevron-left nav-icon"></i>
+        <a href="{{ .RelPermalink }}" class="nav-card nav-prev" rel="prev" title="{{ .Title }}">
+            <i class="ti ti-chevron-left nav-arrow"></i>
             <div class="nav-content">
                 <span class="nav-label">Previous Post</span>
-                <div class="nav-title">{{ .Title | emojify }}</div>
+                <span class="nav-title">{{ .Title | emojify }}</span>
             </div>
         </a>
         {{- else -}}
-        <div></div>
+        <div class="nav-empty"></div>
         {{- end -}}
 
-        {{ with $nextPage }}
-        <a href="{{ .RelPermalink }}" class="nav-next" rel="next" title="{{ .Title }}">
+        {{- with $nextPage -}}
+        <a href="{{ .RelPermalink }}" class="nav-card nav-next" rel="next" title="{{ .Title }}">
             <div class="nav-content text-right">
                 <span class="nav-label">Next Post</span>
-                <div class="nav-title">{{ .Title | emojify }}</div>
+                <span class="nav-title">{{ .Title | emojify }}</span>
             </div>
-            <i class="ti ti-chevron-right nav-icon"></i>
+            <i class="ti ti-chevron-right nav-arrow"></i>
         </a>
+        {{- else -}}
+        <div class="nav-empty"></div>
         {{- end -}}
-    </div>
+    </nav>
 </div>

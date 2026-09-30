@@ -43,10 +43,10 @@ title: "Nguyen Ngoc Tin"
       <img src="/images/aws-logo.webp" alt="First Cloud AI Journey AWS Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org">First Cloud AI Journey</span>
-        <span class="timeline-time">Mar — May 2026</span>
       </div>
     </div>
     <div class="timeline-right">
+      <span class="timeline-time">Mar — May 2026</span>
       <h3 class="timeline-title">Generative AI Developer Intern</h3>
       <div class="timeline-desc">
         Phát triển ứng dụng serverless hướng sự kiện trên nền tảng AWS, thiết kế kiến trúc backend Lambda với Python và tích hợp mô hình AI qua Amazon Bedrock.
@@ -68,10 +68,10 @@ title: "Nguyen Ngoc Tin"
       <img src="/images/sgu-logo.webp" alt="Saigon University Logo" class="timeline-logo">
       <div class="timeline-org-wrap">
         <span class="timeline-org"><a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a></span>
-        <span class="timeline-time">2021 — Aug 2026</span>
       </div>
     </div>
     <div class="timeline-right">
+      <span class="timeline-time">2021 — Aug 2026</span>
     <h3 class="timeline-title"> <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener"> Kỹ sư Công nghệ Thông tin </a> </h3>
       <div class="timeline-desc">
         Chuyên ngành Hệ thống Thông tin. Nền tảng đào tạo chuyên sâu về mô hình hóa cơ sở dữ liệu, phân tích dữ liệu và thiết kế kiến trúc cho các hệ thống hỗ trợ ra quyết định. Mình tận dụng nền tảng này để xây dựng các giải pháp phần mềm có khả năng xử lý dữ liệu tin cậy và ứng dụng AI vào thực tế.
@@ -85,140 +85,167 @@ title: "Nguyen Ngoc Tin"
 
 ## Projects
 
-<div class="timeline-box">
+<div class="project-showcase">
 
   <!-- Project 1: Nối Nốt -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/noinot-cover.webp" alt="Nối Nốt Cover" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">Sep 2026 — Present</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/noi-not-shared-context-platform/" tabindex="-1" aria-hidden="true">
+        <img src="/images/noinot-cover.webp" alt="Nối Nốt Cover" class="project-cover" width="2400" height="1260" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/noi-not-shared-context-platform/">Nối Nốt</a> <span class="status-badge status-warning">Đang phát triển</span>
-      </h3>
-      <div class="timeline-desc">
-        Nền tảng kết nối ngữ cảnh chung cho hệ sinh thái ứng dụng đa miền – giúp các ứng dụng khác nhau trong đời sống cùng hoạt động trên một context xuyên suốt thay vì phân mảnh dữ liệu.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/noi-not-shared-context-platform/">Nối Nốt</a>
+          </h3>
+          <span class="status-badge status-warning">Đang phát triển</span>
+        </div>
+        <time class="project-date">Sep 2026 — Present</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Nền tảng kết nối ngữ cảnh chung cho hệ sinh thái ứng dụng đa miền – giúp các ứng dụng khác nhau trong đời sống cùng hoạt động trên một context xuyên suốt thay vì phân mảnh dữ liệu.
+      </p>
+      <div class="project-actions">
         <a href="/projects/noi-not-shared-context-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/ngoctinn/noinot" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- Project 2: Bếp Dì 6 (Zalo Mini App) -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/bep-di-6-cover.webp" alt="Bếp Dì 6 Cover" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">Aug 2026 — Present</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/" tabindex="-1" aria-hidden="true">
+        <img src="/images/bep-di-6-cover.webp?v=2" alt="Bếp Dì 6 Cover" class="project-cover" width="1200" height="675" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6</a>
-      </h3>
-      <div class="timeline-desc">
-        Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/">Bếp Dì 6</a>
+          </h3>
+        </div>
+        <time class="project-date">Aug 2026 — Present</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
+      </p>
+      <div class="project-actions">
         <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- Project 3: Lexi -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/lexi-logo.webp" alt="Lexi Logo" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">Mar — May 2026</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/lexi-ai-english-tutor/" tabindex="-1" aria-hidden="true">
+        <img src="/images/lexi-cover.webp" alt="Lexi AI Tutor Cover" class="project-cover" width="1200" height="675" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/lexi-ai-english-tutor/">Lexi</a>
-      </h3>
-      <div class="timeline-desc">
-        Trợ lý gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/lexi-ai-english-tutor/">Lexi</a>
+          </h3>
+        </div>
+        <time class="project-date">Mar — May 2026</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Trợ lý gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
+      </p>
+      <div class="project-actions">
         <a href="/projects/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://youtu.be/qPlBFtEk3pM" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-youtube"></i> <span>Video Demo</span></a>
         <a href="https://github.com/ngoctinn/lexi-be" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- Project 4: Bilingual Movie Learning Platform -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/movie-logo.webp" alt="Movie Learn Logo" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">Mar 2026 — Present</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/bilingual-movie-learning-platform/" tabindex="-1" aria-hidden="true">
+        <img src="/images/movie-logo.webp" alt="Movie Learn Cover" class="project-cover" width="600" height="338" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/bilingual-movie-learning-platform/">Học Tiếng Anh qua Phim Song ngữ</a>
-      </h3>
-      <div class="timeline-desc">
-        Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/bilingual-movie-learning-platform/">Học Tiếng Anh qua Phim Song ngữ</a>
+          </h3>
+        </div>
+        <time class="project-date">Mar 2026 — Present</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
+      </p>
+      <div class="project-actions">
         <a href="/projects/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://youtu.be/USj7dpTuOZI" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-youtube"></i> <span>Video Demo</span></a>
         <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- Project 5: Ngọc Tín Site -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">2026 — Present</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/personal-hugo-technical-blog/" tabindex="-1" aria-hidden="true">
+        <img src="/images/og-cover.webp" alt="Ngọc Tín Site Cover" class="project-cover" width="1200" height="630" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
-      </h3>
-      <div class="timeline-desc">
-        Không gian ghi chép kỹ thuật và lưu trữ các dự án cá nhân, ưu tiên trải nghiệm đọc tập trung, tối ưu hiệu năng tải trang tĩnh và khả năng tìm kiếm nội dung nhanh chóng.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/personal-hugo-technical-blog/">Ghi chép Kỹ thuật và Portfolio Cá nhân</a>
+          </h3>
+        </div>
+        <time class="project-date">2026 — Present</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Không gian ghi chép kỹ thuật và lưu trữ các dự án cá nhân, ưu tiên trải nghiệm đọc tập trung, tối ưu hiệu năng tải trang tĩnh và khả năng tìm kiếm nội dung nhanh chóng.
+      </p>
+      <div class="project-actions">
         <a href="/projects/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/nguyengoctin/my_website" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
         <a href="https://ngoctin.me" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-external-link"></i> <span>Trang trực tuyến</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- Project 6: Mac mini Home Server -->
-  <div class="timeline-row">
-    <div class="timeline-left">
-      <img src="/images/macmini-home-server-cover.webp" alt="Mac mini Home Server Cover" class="timeline-logo">
-      <div class="timeline-org-wrap">
-        <span class="timeline-time">Sep 2026 — Present</span>
-      </div>
+  <article class="project-card">
+    <div class="project-media">
+      <a href="/projects/macmini-home-server/" tabindex="-1" aria-hidden="true">
+        <img src="/images/macmini-home-server-cover.webp" alt="Mac mini Home Server Cover" class="project-cover" width="480" height="270" loading="lazy">
+      </a>
     </div>
-    <div class="timeline-right">
-      <h3 class="timeline-title">
-        <a href="/projects/macmini-home-server/">Mac mini Home Server</a>
-      </h3>
-      <div class="timeline-desc">
-        Biến Mac mini 2014 thành home server Ubuntu chạy các dịch vụ self-hosted qua Docker Compose, truy cập private qua Tailscale, mount ổ đĩa persistent bằng UUID và giám sát phần cứng với smartd.
+    <div class="project-content">
+      <div class="project-meta-top">
+        <div class="project-title-group">
+          <h3 class="project-title">
+            <a href="/projects/macmini-home-server/">Mac mini Home Server</a>
+          </h3>
+        </div>
+        <time class="project-date">Sep 2026 — Present</time>
       </div>
-      <div class="timeline-links">
+      <p class="project-desc">
+        Biến Mac mini 2014 thành home server Ubuntu chạy các dịch vụ self-hosted qua Docker Compose, truy cập private qua Tailscale, mount ổ đĩa persistent bằng UUID và giám sát phần cứng với smartd.
+      </p>
+      <div class="project-actions">
         <a href="/projects/macmini-home-server/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://youtu.be/fOFksF21Eyo" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-youtube"></i> <span>Video Showcase</span></a>
         <a href="/notes/macmini-home-server-setup-reference/" class="btn-action"><i class="ti ti-file-text"></i> <span>Note kỹ thuật</span></a>
       </div>
     </div>
-  </div>
+  </article>
 
 </div>
 

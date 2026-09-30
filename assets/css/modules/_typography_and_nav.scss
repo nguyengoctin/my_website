@@ -592,7 +592,7 @@ hr {
   .menu .menu-item {
     font-size: 0.95rem !important;
     font-weight: var(--fw-medium) !important;
-    padding: 0 0.45rem !important;
+    padding: 0.3rem 0.55rem !important;
     margin: 0 0.1rem !important;
     color: var(--clr-text-2) !important;
     background: transparent !important;
@@ -618,7 +618,8 @@ hr {
 
     &.active {
       color: var(--clr-text) !important;
-      font-weight: var(--fw-bold) !important;
+      font-weight: var(--fw-medium) !important;
+      background-color: var(--clr-surface-2) !important;
       border-bottom: none !important;
       text-decoration: none !important;
     }
@@ -1092,7 +1093,8 @@ details#toc-static {
 // ==========================================================
 .view-all-posts-wrap {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .view-all-posts-link {
