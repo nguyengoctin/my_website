@@ -13,12 +13,19 @@ body.theme-transitioning *::after {
    LAYOUT TOKENS & SHELL ARCHITECTURE
    ========================================================================== */
 :root {
+    --header-height: 3.5rem;
+    --header-bg-glass: rgba(253, 253, 253, 0.85);
     --shell-width: 750px;
     --wide-width: 750px;
     --prose-width: 750px;
     --gutter-desktop: 1.5rem;
     --gutter-mobile: 1rem;
     --gutter-small: 0.75rem;
+}
+
+html[theme=dark],
+body[theme=dark] {
+    --header-bg-glass: rgba(28, 29, 34, 0.85);
 }
 
 /* Skip-to-content accessibility link */
@@ -68,7 +75,7 @@ html {
     }
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+:is(h1, h2, h3, h4, h5, h6, [id], :target) {
     scroll-margin-top: calc(var(--header-height, 3.5rem) + 1.25rem);
 }
 
@@ -111,14 +118,13 @@ button.menu-toggle {
 
 #header-mobile {
     z-index: 150 !important;
-    background-color: rgba(253, 253, 253, 0.85) !important;
+    background-color: var(--header-bg-glass, rgba(253, 253, 253, 0.85)) !important;
     backdrop-filter: blur(12px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
     border-bottom: 1px solid var(--clr-border, rgba(0, 0, 0, 0.06)) !important;
-    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+    transition: background-color var(--duration-normal, 180ms) var(--ease-standard), border-color var(--duration-normal, 180ms) var(--ease-standard) !important;
 
     [theme=dark] & {
-        background-color: rgba(28, 29, 34, 0.85) !important;
         border-bottom-color: var(--clr-border, rgba(255, 255, 255, 0.08)) !important;
     }
 
@@ -665,14 +671,13 @@ table:not(.lntable):not(.highlight table) {
    DESKTOP HEADER & SEARCH: BALANCED SPACING & VERTICAL DIVIDER
    ========================================================================== */
 #header-desktop {
-    background-color: rgba(253, 253, 253, 0.85) !important;
+    background-color: var(--header-bg-glass, rgba(253, 253, 253, 0.85)) !important;
     backdrop-filter: blur(12px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
     border-bottom: 1px solid var(--clr-border, rgba(0, 0, 0, 0.06)) !important;
-    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+    transition: background-color var(--duration-normal, 180ms) var(--ease-standard), border-color var(--duration-normal, 180ms) var(--ease-standard), box-shadow var(--duration-normal, 180ms) var(--ease-standard) !important;
 
     [theme=dark] & {
-        background-color: rgba(28, 29, 34, 0.85) !important;
         border-bottom-color: var(--clr-border, rgba(255, 255, 255, 0.08)) !important;
     }
 

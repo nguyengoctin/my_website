@@ -55,6 +55,14 @@
   --ls-heading: -0.008em;
   --ls-caps: 0.05em;
   --ws-normal: 0.015em; // Word-spacing thoáng nhẹ cho văn bản tiếng Việt
+
+  // --- Motion Tokens (Editorial Micro-Interactions System) ---
+  --duration-fast: 120ms;
+  --duration-normal: 180ms;
+  --duration-slow: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
 }
 
 @media (max-width: 768px) {
@@ -95,6 +103,7 @@ body[theme=light] {
   --clr-link-underline: rgba(59, 102, 222, 0.35);
   --clr-link-underline-hover: #1d4ed8;
   --clr-focus: #3b66de;
+  --clr-selection: rgba(77, 116, 235, 0.2);
 
   // --- Theme flag for JS ---
   color-scheme: light;
@@ -125,9 +134,33 @@ body[theme=dark] {
   --clr-link-underline: rgba(96, 165, 250, 0.4);
   --clr-link-underline-hover: #93c5fd;
   --clr-focus: #60a5fa;
+  --clr-selection: rgba(96, 165, 250, 0.28);
 
   // --- Theme flag ---
   color-scheme: dark;
+}
+
+// Global ::selection styling (Brand Accent, preserve code syntax colors)
+::selection {
+  background-color: var(--clr-selection, rgba(77, 116, 235, 0.2)) !important;
+  color: inherit !important;
+}
+
+::-moz-selection {
+  background-color: var(--clr-selection, rgba(77, 116, 235, 0.2)) !important;
+  color: inherit !important;
+}
+
+// WCAG 2.1/2.2 Criterion 2.3.3 (Animation from Interactions - Level AAA)
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 // html & body base — use tokens
@@ -487,10 +520,8 @@ hr {
 // ==========================================================
 #header-desktop,
 #header-mobile {
-  background: var(--clr-bg) !important;
+  background-color: var(--header-bg-glass, var(--clr-bg)) !important;
   box-shadow: none !important;
-  border: none !important;
-  border-bottom: none !important;
 }
 
 .header-wrapper {
@@ -570,7 +601,7 @@ hr {
       align-items: center !important;
       line-height: 1.1 !important;
       padding-bottom: 2px !important;
-      transition: opacity 0.2s ease !important;
+      transition: opacity var(--duration-fast, 120ms) var(--ease-standard), transform var(--duration-fast, 120ms) var(--ease-standard) !important;
 
       [theme=dark] & {
         color: #60a5fa !important;
@@ -579,6 +610,10 @@ hr {
       &:hover {
         opacity: 0.85;
         text-decoration: none !important;
+      }
+
+      &:active {
+        transform: scale(0.97);
       }
 
       &:focus-visible {
@@ -596,7 +631,7 @@ hr {
     margin: 0 0.1rem !important;
     color: var(--clr-text-2) !important;
     background: transparent !important;
-    transition: color 0.15s ease, background-color 0.15s ease !important;
+    transition: color var(--duration-fast, 120ms) var(--ease-standard), background-color var(--duration-fast, 120ms) var(--ease-standard), transform var(--duration-fast, 120ms) var(--ease-standard) !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     display: inline-flex !important;
@@ -609,6 +644,10 @@ hr {
       color: var(--clr-text) !important;
       background-color: var(--clr-surface-2) !important;
       text-decoration: none !important;
+    }
+
+    &:active {
+      transform: scale(0.96) !important;
     }
 
     &:focus-visible {
@@ -683,6 +722,7 @@ hr {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    transition: transform var(--duration-fast, 120ms) var(--ease-standard) !important;
 
     .sys-icon i,
     .ti {
@@ -694,6 +734,10 @@ hr {
       text-decoration: none !important;
       background: transparent !important;
       background-color: transparent !important;
+    }
+
+    &:active {
+      transform: scale(0.92) !important;
     }
   }
 }

@@ -12,18 +12,20 @@ body.search-modal-open {
     right: 0;
     bottom: 0;
     z-index: 99999;
-    display: none;
+    display: flex;
+    visibility: hidden;
     align-items: flex-start;
     justify-content: center;
     padding-top: 8vh;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: visibility 0s linear 0.18s, opacity var(--duration-normal, 180ms) var(--ease-standard, cubic-bezier(0.16, 1, 0.3, 1));
 
     &.active {
-        display: flex;
+        visibility: visible;
         opacity: 1;
         pointer-events: auto;
+        transition-delay: 0s;
 
         .search-modal-container {
             transform: scale(1) translateY(0);
@@ -40,6 +42,7 @@ body.search-modal-open {
     background: rgba(15, 23, 42, 0.45);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    transition: opacity var(--duration-normal, 180ms) var(--ease-standard, cubic-bezier(0.16, 1, 0.3, 1));
 
     [theme='dark'] &,
     [data-theme='dark'] & {
@@ -61,8 +64,8 @@ body.search-modal-open {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transform: scale(0.97) translateY(-10px);
-    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.97) translateY(-8px);
+    transition: transform var(--duration-normal, 180ms) var(--ease-standard, cubic-bezier(0.16, 1, 0.3, 1));
     color: var(--clr-text);
     font-family: inherit;
 
@@ -152,7 +155,7 @@ body.search-modal-open {
     justify-content: center;
     border-radius: 50%;
     font-size: 0.75rem;
-    transition: all 0.15s ease;
+    transition: background 0.15s ease, color 0.15s ease, transform var(--duration-fast, 120ms) var(--ease-standard);
 
     [theme='dark'] &,
     [data-theme='dark'] & {
@@ -170,6 +173,10 @@ body.search-modal-open {
             background: rgba(255, 255, 255, 0.2);
         }
     }
+
+    &:active {
+        transform: scale(0.88);
+    }
 }
 
 .search-close-btn {
@@ -180,6 +187,11 @@ body.search-modal-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: transform var(--duration-fast, 120ms) var(--ease-standard);
+
+    &:active {
+        transform: scale(0.92);
+    }
 
     .mobile-close-icon {
         display: none;
@@ -258,7 +270,7 @@ body.search-modal-open {
     padding: 10px 12px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.12s ease, transform 0.12s ease;
+    transition: background 0.12s ease, transform var(--duration-fast, 120ms) var(--ease-standard);
     border: 1px solid transparent;
 
     &:hover {
@@ -275,6 +287,10 @@ body.search-modal-open {
             opacity: 1;
             transform: translateX(0);
         }
+    }
+
+    &:active {
+        transform: scale(0.985);
     }
 
     &.selected {
@@ -547,6 +563,11 @@ body.search-modal-open {
         }
     }
 
+    &:active {
+        transform: translateY(0) scale(0.98) !important;
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2) !important;
+    }
+
     [theme='dark'] &,
     [data-theme='dark'] & {
         background-color: #3b82f6 !important;
@@ -556,6 +577,10 @@ body.search-modal-open {
         &:hover {
             background-color: #2563eb !important;
             box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4) !important;
+        }
+
+        &:active {
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2) !important;
         }
     }
 
