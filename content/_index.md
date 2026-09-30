@@ -18,11 +18,11 @@ title: "Nguyen Ngoc Tin"
     <img src="https://ghchart.rshah.org/ngoctinn" alt="Biểu đồ hoạt động GitHub của ngoctinn" class="github-chart-img" width="650" height="107" loading="lazy">
   </div>
   <div class="github-activity-desc">
-    Mình xây dựng những thứ khiến bản thân hứng thú và chia sẻ tất cả dưới dạng mã nguồn mở.
-  </div>
-  <div class="github-activity-links">
-    <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">Theo dõi mình trên GitHub</a> để cùng trao đổi và xem các thử nghiệm mới nhất.
-  </div>
+  Mọi dự án ở đây đều bắt đầu từ sự tò mò: <em>"nếu làm thử thì sao?"</em>. Mình code để tự tìm câu trả lời và open-source toàn bộ quá trình đó. Cứ tự nhiên dạo quanh mấy repo nhé!
+</div>
+<div class="github-activity-links">
+  👉 Ghé <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">GitHub của mình</a>
+</div>
 </div>
 
 ---
