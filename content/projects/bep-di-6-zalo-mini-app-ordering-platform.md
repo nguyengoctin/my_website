@@ -6,7 +6,6 @@ author: "Nguyen Ngoc Tin"
 description: "Phân tích kiến trúc F&B Online Ordering trên Zalo Mini App kết hợp Django REST Framework, bảo toàn dữ liệu bằng snapshot và tích hợp VietQR tự động."
 tags: ["Zalo Mini App", "Django", "Python", "React", "PostgreSQL", "System Architecture", "VietQR"]
 categories: ["Projects", "System Architecture"]
-aliases: ["/posts/bep-di-6-zalo-mini-app-ordering-platform/"]
 ---
 
 

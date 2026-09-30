@@ -6,7 +6,6 @@ author: "Nguyen Ngoc Tin"
 description: "Xây dựng hệ thống đồng bộ phụ đề song ngữ và tự động giải thích ngữ cảnh ngữ pháp từ kịch bản phim bằng Google Gemini API và FastAPI."
 tags: ["FastAPI", "Next.js", "Python", "Gemini API", "TypeScript", "Docker"]
 categories: ["Projects", "AI Engineering"]
-aliases: ["/posts/bilingual-movie-learning-platform/"]
 ---
 
 {{< youtube USj7dpTuOZI >}}

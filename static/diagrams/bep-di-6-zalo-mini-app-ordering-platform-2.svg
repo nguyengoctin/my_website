@@ -37,7 +37,7 @@
   <text x="724" y="94" class="dt">Quản trị thực đơn và Đơn</text>
   <rect x="380" y="180" width="200" height="64" rx="6" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
   <text x="394" y="206" class="nm">Django REST Core</text>
-  <text x="394" y="224" class="dt">Menu, Order, Shipping, Voucher</text>
+  <text x="394" y="224" class="dt">Menu, Order, Ship, Voucher</text>
   <rect x="50" y="310" width="190" height="64" rx="6" fill="#f4f6f8" stroke="#e2e8f0" stroke-width="1.0"/>
   <text x="64" y="336" class="nm">PostgreSQL 16</text>
   <text x="64" y="354" class="dt">Single Source of Truth</text>

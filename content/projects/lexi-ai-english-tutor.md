@@ -6,7 +6,6 @@ author: "Nguyen Ngoc Tin"
 description: "Phân tích kiến trúc Serverless Event-Driven kết hợp Clean Architecture, DynamoDB Single Table Design và Amazon Bedrock để xử lý luồng luyện nói tiếng Anh thời gian thực."
 tags: ["AWS", "Serverless", "Amazon Bedrock", "Clean Architecture", "Python", "DynamoDB", "Next.js"]
 categories: ["Projects", "System Architecture"]
-aliases: ["/posts/lexi-ai-english-tutor/"]
 ---
 
 {{< youtube qPlBFtEk3pM >}}

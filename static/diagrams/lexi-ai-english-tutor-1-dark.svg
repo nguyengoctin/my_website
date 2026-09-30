@@ -33,7 +33,7 @@
   <text x="354" y="104" class="dt">Speech-to-Text</text>
   <rect x="500" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
   <text x="514" y="86" class="nm">Bedrock</text>
-  <text x="514" y="104" class="dt">Claude 3.5 Sonnet</text>
+  <text x="514" y="104" class="dt">Claude 3.5 LLM</text>
   <rect x="660" y="60" width="130" height="60" rx="6" fill="#27272a" stroke="#fafafa" stroke-width="1.5"/>
   <text x="674" y="86" class="nm">Polly TTS</text>
   <text x="674" y="104" class="dt">Text-to-Speech</text>

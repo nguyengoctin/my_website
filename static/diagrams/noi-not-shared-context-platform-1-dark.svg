@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480"
+  data-generator="fireworks-tech-graph" data-schema-version="1" data-style-id="8"
+  data-visual-theme="Coral zinc dark" data-diagram-type="architecture">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .nm { font-size: 13px; font-weight: 600; fill: #fafafa; }
+    .dt { font-size: 10.5px; fill: #a1a1aa; }
+    .al { font-size: 10.5px; fill: #a1a1aa; }
+  </style>
+  <defs>
+    <marker id="arr-brass-dark" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#fafafa"/>
+    </marker>
+    <marker id="arr-coral-dark" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto-start-reverse">
+      <polygon points="0 0,10 3.5,0 7" fill="#60a5fa"/>
+    </marker>
+    <marker id="arr-muted-dark" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#a1a1aa"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="480" fill="#18181b" data-graph-role="background"/>
+
+  <!-- Arrows -->
+  <path id="flow-user" d="M 178 92 H 248" fill="none" stroke="#fafafa" stroke-width="2" marker-end="url(#arr-brass-dark)"/>
+  <path id="flow-core" d="M 438 92 H 508" fill="none" stroke="#fafafa" stroke-width="2" marker-end="url(#arr-brass-dark)"/>
+  <path id="flow-tools" d="M 708 92 H 778" fill="none" stroke="#fafafa" stroke-width="2" marker-end="url(#arr-brass-dark)"/>
+  <path id="flow-schema" d="M 343 124 V 230" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arr-muted-dark)"/>
+  <path id="flow-context" d="M 608 124 V 230" fill="none" stroke="#a1a1aa" stroke-width="1.5" marker-end="url(#arr-muted-dark)"/>
+  <path id="flow-storage" d="M 608 375 V 302" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 3" marker-start="url(#arr-coral-dark)" marker-end="url(#arr-coral-dark)"/>
+
+  <!-- Top Row Nodes -->
+  <rect id="user" x="48" y="60" width="130" height="64" rx="6" fill="#22242a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="62" y="88" class="nm">User</text>
+  <text x="62" y="106" class="dt">đời sống thực tế</text>
+
+  <rect id="core" x="248" y="60" width="190" height="64" rx="6" fill="#22242a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="262" y="88" class="nm">Core Apps</text>
+  <text x="262" y="106" class="dt">inbox · today · tasks</text>
+
+  <rect id="domain" x="508" y="60" width="200" height="64" rx="6" fill="#22242a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="522" y="88" class="nm">Domain Apps</text>
+  <text x="522" y="106" class="dt">contacts · finance · health</text>
+
+  <rect id="tools" x="778" y="60" width="134" height="64" rx="6" fill="#22242a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="792" y="88" class="nm">Tools và AI</text>
+  <text x="792" y="106" class="dt">docs · media · AI</text>
+
+  <!-- Bottom Row Nodes -->
+  <rect id="schema" x="248" y="230" width="190" height="72" rx="6" fill="#22242a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="262" y="256" class="nm">Decentralized Model</text>
+  <text x="262" y="274" class="dt">không ép schema chung</text>
+  <text x="262" y="290" class="dt">ứng dụng tự chủ dữ liệu</text>
+
+  <rect id="context" x="508" y="230" width="200" height="72" rx="6" fill="#22242a" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="522" y="256" class="nm">Shared Context Layer</text>
+  <text x="522" y="274" class="dt">entities · events · actions</text>
+  <text x="522" y="290" class="dt">relationships graph</text>
+
+  <rect id="storage" x="508" y="375" width="200" height="56" rx="6" fill="#22242a" stroke="#3f3f46" stroke-width="1"/>
+  <text x="522" y="399" class="nm">Local-first Storage</text>
+  <text x="522" y="417" class="dt">bảo toàn ngữ cảnh riêng tư</text>
+
+  <!-- Arrow Labels -->
+  <text x="213" y="84" text-anchor="middle" class="al">tương tác</text>
+  <text x="473" y="84" text-anchor="middle" class="al">điều phối</text>
+  <text x="743" y="84" text-anchor="middle" class="al">kết nối</text>
+  <text x="351" y="182" class="al">tự do</text>
+  <text x="616" y="182" class="al">nối ngữ cảnh</text>
+  <text x="616" y="345" class="al">lưu và đọc</text>
+</svg>

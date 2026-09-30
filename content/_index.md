@@ -7,8 +7,8 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar" width="175" height="175">
   <div class="bio-text">
-    <p>Mình là Nguyễn Ngọc Tín. Mình tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình thích xây dựng phần mềm, tìm hiểu cách các hệ thống hoạt động và thử nghiệm những ứng dụng thực tế của AI. Phần lớn những gì mình học được đến từ việc tự xây dựng dự án, gặp vấn đề và tìm cách giải quyết chúng.</p>
-    <p>Trang web này là nơi mình ghi lại các dự án đang làm, những công nghệ đang tìm hiểu và những điều mình học được trong quá trình đó. Bạn có thể xem thêm về kinh nghiệm của mình trong <a href="https://docs.google.com/document/d/1-K2y1sASCNhwXWVCrZb5tdeO7IzB4uZUN9Om09yadU8/preview" target="_blank" rel="noopener noreferrer">CV</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.facebook.com/tin.nguyenngoc.56808/" target="_blank" rel="noopener">Facebook</a> hoặc gửi thư trực tiếp cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
+    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình thích lập trình phần mềm, đào sâu cách các hệ thống vận hành và thử nghiệm những ứng dụng thực tế của AI. Hầu hết những gì mình tích lũy được đều đến từ quá trình tự bắt tay vào làm dự án, đối mặt với lỗi và tìm cách giải quyết.</p>
+    <p>Trang web này là không gian để mình ghi lại hành trình đó: những dự án đang phát triển, công nghệ mới tìm hiểu và các bài học thực tế rút ra. Bạn có thể xem thêm kinh nghiệm của mình qua <a href="https://docs.google.com/document/d/1-K2y1sASCNhwXWVCrZb5tdeO7IzB4uZUN9Om09yadU8/preview" target="_blank" rel="noopener noreferrer">CV</a>, theo dõi mã nguồn trên <a href="https://github.com/ngoctinn" target="_blank" rel="noopener">GitHub</a>, kết nối qua <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a> hoặc gửi email cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
   </div>
 </div>
 
@@ -27,7 +27,7 @@ title: "Nguyen Ngoc Tin"
 
 ---
 
-## Tech Stack
+## Technologies I've Worked With
 
 {{< tech-marquee >}}
 
@@ -50,14 +50,6 @@ title: "Nguyen Ngoc Tin"
       <h3 class="timeline-title">Generative AI Developer Intern</h3>
       <div class="timeline-desc">
         Phát triển ứng dụng serverless hướng sự kiện trên nền tảng AWS, thiết kế kiến trúc backend Lambda với Python và tích hợp mô hình AI qua Amazon Bedrock.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">AWS Lambda</span>
-        <span class="timeline-tag">AWS SAM</span>
-        <span class="timeline-tag">API Gateway</span>
-        <span class="timeline-tag">DynamoDB</span>
-        <span class="timeline-tag">Amazon Bedrock</span>
       </div>
     </div>
   </div>
@@ -82,10 +74,7 @@ title: "Nguyen Ngoc Tin"
     <div class="timeline-right">
     <h3 class="timeline-title"> <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener"> Kỹ sư Công nghệ Thông tin </a> </h3>
       <div class="timeline-desc">
-        Chuyên ngành Hệ thống Thông tin, tập trung vào cơ sở dữ liệu, phân tích dữ liệu và hệ hỗ trợ quyết định.
-Tốt nghiệp tháng 8 năm 2026.
-      </div>
-      <div class="timeline-tags">
+        Chuyên ngành Hệ thống Thông tin. Nền tảng đào tạo chuyên sâu về mô hình hóa cơ sở dữ liệu, phân tích dữ liệu và thiết kế kiến trúc cho các hệ thống hỗ trợ ra quyết định. Mình tận dụng nền tảng này để xây dựng các giải pháp phần mềm có khả năng xử lý dữ liệu tin cậy và ứng dụng AI vào thực tế.
       </div>
     </div>
   </div>
@@ -98,29 +87,24 @@ Tốt nghiệp tháng 8 năm 2026.
 
 <div class="timeline-box">
 
-  <!-- Project 1: Job Hunt OS -->
+  <!-- Project 1: Nối Nốt -->
   <div class="timeline-row">
     <div class="timeline-left">
-      <img src="/images/job-hunt-os-cover.webp" alt="Job Hunt OS Cover" class="timeline-logo">
+      <img src="/images/noinot-cover.webp" alt="Nối Nốt Cover" class="timeline-logo">
       <div class="timeline-org-wrap">
-        <span class="timeline-time">Sep 2026 — Planning</span>
+        <span class="timeline-time">Sep 2026 — Present</span>
       </div>
     </div>
     <div class="timeline-right">
       <h3 class="timeline-title">
-        <a href="/projects/job-hunt-os-product-requirement-document/">Job Hunt OS</a> <span class="status-badge status-warning">Đang phát triển</span>
+        <a href="/projects/noi-not-shared-context-platform/">Nối Nốt</a> <span class="status-badge status-warning">Đang phát triển</span>
       </h3>
       <div class="timeline-desc">
-        Quản trị bối cảnh tuyển dụng cá nhân – ứng dụng di động ghi nhớ và khôi phục bối cảnh ứng tuyển tức thì, lưu trữ nhanh tin tuyển dụng, phiên bản CV và theo dõi các bước hành động tiếp theo trong quá trình tìm việc.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Product Design</span>
-        <span class="timeline-tag">Mobile App</span>
-        <span class="timeline-tag">System Architecture</span>
-        <span class="timeline-tag">PRD</span>
+        Nền tảng kết nối ngữ cảnh chung cho hệ sinh thái ứng dụng đa miền – giúp các ứng dụng khác nhau trong đời sống cùng hoạt động trên một context xuyên suốt thay vì phân mảnh dữ liệu.
       </div>
       <div class="timeline-links">
-        <a href="/projects/job-hunt-os-product-requirement-document/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="/projects/noi-not-shared-context-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
+        <a href="https://github.com/ngoctinn/noinot" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
       </div>
     </div>
   </div>
@@ -139,16 +123,6 @@ Tốt nghiệp tháng 8 năm 2026.
       </h3>
       <div class="timeline-desc">
         Nền tảng đặt món trực tiếp cho quán ăn trên Zalo Mini App, giúp khách hàng gọi món không cần cài ứng dụng mới và hỗ trợ quán đối soát tự động qua VietQR động và định vị GPS.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Zalo Mini App</span>
-        <span class="timeline-tag">Django</span>
-        <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">React</span>
-        <span class="timeline-tag">TypeScript</span>
-        <span class="timeline-tag">PostgreSQL</span>
-        <span class="timeline-tag">Redis</span>
-        <span class="timeline-tag">TailwindCSS</span>
       </div>
       <div class="timeline-links">
         <a href="/projects/bep-di-6-zalo-mini-app-ordering-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
@@ -170,15 +144,6 @@ Tốt nghiệp tháng 8 năm 2026.
       </h3>
       <div class="timeline-desc">
         Trợ lý gia sư AI luyện giao tiếp phản xạ tiếng Anh hai chiều qua luồng âm thanh thời gian thực, giúp người học phát hiện lỗi phát âm, sửa ngữ pháp và luyện tập theo kịch bản tương tác.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Next.js</span>
-        <span class="timeline-tag">TypeScript</span>
-        <span class="timeline-tag">TailwindCSS</span>
-        <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">AWS SAM</span>
-        <span class="timeline-tag">Amazon Bedrock</span>
-        <span class="timeline-tag">DynamoDB</span>
       </div>
       <div class="timeline-links">
         <a href="/projects/lexi-ai-english-tutor/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
@@ -202,15 +167,6 @@ Tốt nghiệp tháng 8 năm 2026.
       <div class="timeline-desc">
         Nền tảng học tiếng Anh qua phim ảnh, giúp người học tra cứu từ vựng theo ngữ cảnh và giải thích ngữ pháp tức thì theo từng câu thoại video với phụ đề song ngữ tương tác.
       </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Next.js</span>
-        <span class="timeline-tag">TypeScript</span>
-        <span class="timeline-tag">FastAPI</span>
-        <span class="timeline-tag">Python</span>
-        <span class="timeline-tag">SQLite</span>
-        <span class="timeline-tag">Google Gemini API</span>
-        <span class="timeline-tag">Docker</span>
-      </div>
       <div class="timeline-links">
         <a href="/projects/bilingual-movie-learning-platform/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
         <a href="https://github.com/nguyengoctin/hoc_tieng_anh_qua_phim_song_ngu" target="_blank" rel="noopener" class="btn-action"><i class="ti ti-brand-github"></i> <span>Mã nguồn</span></a>
@@ -232,14 +188,6 @@ Tốt nghiệp tháng 8 năm 2026.
       </h3>
       <div class="timeline-desc">
         Không gian ghi chép kỹ thuật và lưu trữ các dự án cá nhân, ưu tiên trải nghiệm đọc tập trung, tối ưu hiệu năng tải trang tĩnh và khả năng tìm kiếm nội dung nhanh chóng.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Hugo</span>
-        <span class="timeline-tag">SCSS</span>
-        <span class="timeline-tag">JavaScript</span>
-        <span class="timeline-tag">HTML5</span>
-        <span class="timeline-tag">GitHub Pages</span>
-        <span class="timeline-tag">Lunr.js</span>
       </div>
       <div class="timeline-links">
         <a href="/projects/personal-hugo-technical-blog/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
@@ -263,16 +211,6 @@ Tốt nghiệp tháng 8 năm 2026.
       </h3>
       <div class="timeline-desc">
         Biến Mac mini 2014 thành home server Ubuntu chạy các dịch vụ self-hosted qua Docker Compose, truy cập private qua Tailscale, mount ổ đĩa persistent bằng UUID và giám sát phần cứng với smartd.
-      </div>
-      <div class="timeline-tags">
-        <span class="timeline-tag">Linux</span>
-        <span class="timeline-tag">Ubuntu</span>
-        <span class="timeline-tag">Docker Compose</span>
-        <span class="timeline-tag">Tailscale</span>
-        <span class="timeline-tag">systemd</span>
-        <span class="timeline-tag">SSH</span>
-        <span class="timeline-tag">Self-Hosted</span>
-        <span class="timeline-tag">smartmontools</span>
       </div>
       <div class="timeline-links">
         <a href="/projects/macmini-home-server/" class="btn-action"><i class="ti ti-book"></i> <span>Xem bài viết</span></a>
