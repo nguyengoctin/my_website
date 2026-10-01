@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" data-generator="fireworks-tech-graph" data-schema-version="1" data-text-metrics="heuristic-v1" data-style-id="4" data-visual-theme="Notion Clean" data-diagram-type="architecture" data-motion-scene="" data-semantic-profile="generic" data-semantic-valid="true" data-quality-profile="standard" data-max-bends-per-edge="12" data-max-total-bends="100" data-max-route-stretch="5.0" data-max-bridged-crossings="8" data-min-node-gap="0.0" data-min-container-gutter="0.0" data-min-label-clearance="2.0" data-min-segment-length="0.0">
+  <defs>
+    <marker id="arrowA" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowC" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowE" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowF" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9ca3af"/>
+    </marker>
+    <marker id="arrowH" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+    <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', 'Microsoft JhengHei', 'SimHei', sans-serif; }
+    .title { font-size: 18px; font-weight: 700; fill: #fafafa; }
+    .subtitle { font-size: 13px; font-weight: 500; fill: #a1a1aa; }
+    .section { font-size: 13px; font-weight: 700; fill: #9ca3af; letter-spacing: 1.4px; }
+    .section-sub { font-size: 12px; font-weight: 500; fill: #9ca3af; }
+    .node-title { font-weight: 700; fill: #fafafa; }
+    .node-sub { font-weight: 500; fill: #d1d5db; }
+    .node-type { font-size: 11px; font-weight: 700; fill: #9ca3af; letter-spacing: 0.08em; }
+    .arrow-label { font-size: 12px; font-weight: 600; fill: #9ca3af; }
+    .legend { font-size: 12px; font-weight: 500; fill: #9ca3af; }
+    .footnote { font-size: 12px; font-weight: 500; fill: #71717a; }
+    .metric-label { font-size: 8.5px; font-weight: 700; fill: #a1a1aa; text-transform: uppercase; }
+    .metric-value { font-size: 9.5px; font-weight: 700; fill: #fafafa; }
+</style>
+  </defs>
+  <rect data-graph-role="background" width="960.0" height="620.0" fill="#18181b"/>
+  <text x="48.0" y="48" text-anchor="start" class="title">Kiến Trúc Orca: Agent Development Environment (ADE)</text>
+  <text x="48.0" y="72" text-anchor="start" class="subtitle">Mô hình vận hành song song đa Agent trên từng Git Worktree độc lập</text>
+  <line x1="48" y1="100" x2="912.0" y2="100" stroke="#27272a" stroke-width="1"/>
+  <g id="orchestration_layer" data-graph-role="container" data-container-id="orchestration_layer" data-semantic-role="boundary" data-graph-bounds="40,100,920,230">
+  <rect data-graph-role="container" x="40.0" y="100.0" width="880.0" height="130.0" rx="4.0" fill="none" stroke="#27272a" stroke-width="1.4"/>
+  <text x="58.0" y="124.0" class="section">ORCHESTRATION &amp; ENVIRONMENT (ORCA DESKTOP CORE)</text>
+    <rect id="orchestration_layer-header" data-graph-role="reserved" data-reserved-kind="container-header" x="48" y="106" width="369.56" height="30" fill="none" stroke="none"/>
+  </g>
+  <g id="worktree_layer" data-graph-role="container" data-container-id="worktree_layer" data-semantic-role="boundary" data-graph-bounds="40,270,920,410">
+  <rect data-graph-role="container" x="40.0" y="270.0" width="880.0" height="140.0" rx="4.0" fill="none" stroke="#27272a" stroke-width="1.4"/>
+  <text x="58.0" y="294.0" class="section">PARALLEL WORKTREES &amp; CLI AGENTS (CÔ LẬP KHÔNG GIAN LÀM VIỆC)</text>
+    <rect id="worktree_layer-header" data-graph-role="reserved" data-reserved-kind="container-header" x="48" y="276" width="453.02" height="30" fill="none" stroke="none"/>
+  </g>
+  <g id="feedback_layer" data-graph-role="container" data-container-id="feedback_layer" data-semantic-role="boundary" data-graph-bounds="40,450,920,580">
+  <rect data-graph-role="container" x="40.0" y="450.0" width="880.0" height="130.0" rx="4.0" fill="none" stroke="#27272a" stroke-width="1.4"/>
+  <text x="58.0" y="474.0" class="section">FEEDBACK &amp; SHIP (ĐÁNH GIÁ, THỰC THI VÀ HOÀN TẤT)</text>
+    <rect id="feedback_layer-header" data-graph-role="reserved" data-reserved-kind="container-header" x="48" y="456" width="355.78" height="30" fill="none" stroke="none"/>
+  </g>
+  <path id="edge-000" data-graph-role="edge" data-edge-id="edge-000" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-001" data-graph-role="edge" data-edge-id="edge-001" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-002" data-graph-role="edge" data-edge-id="edge-002" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-003" data-graph-role="edge" data-edge-id="edge-003" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-004" data-graph-role="edge" data-edge-id="edge-004" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-005" data-graph-role="edge" data-edge-id="edge-005" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-006" data-graph-role="edge" data-edge-id="edge-006" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <path id="edge-007" data-graph-role="edge" data-edge-id="edge-007" data-source="" data-target="" data-edge-kind="flow" data-topic-id="" data-flow="" data-motion-role="" data-motion-stage="" data-motion-order="" data-protocol="" data-via="" data-critical-path-id="" data-critical-hop="" data-critical-hops="" data-critical="false" data-bends="0" data-route-stretch="1.0" data-bridges="" d="M 0,0" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowA)"/>
+  <g id="node-orca_core" data-graph-role="node" data-node-id="orca_core" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="60,140,240,206">
+  <rect x="60.0" y="140.0" width="180.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="150.0" y="158.0" text-anchor="middle" class="node-type">CORE</text>
+  <text data-text-role="title" data-full-text="Orca ADE App" data-text-max-width="156.0" x="150.0" y="179.0" text-anchor="middle" class="node-title" font-size="18">Orca ADE App</text>
+  <text data-text-role="subtitle" data-full-text="Desktop / Remote SSH" data-text-max-width="156.0" x="150.0" y="201.0" text-anchor="middle" class="node-sub" font-size="12">Desktop / Remote SSH</text>
+  </g>
+  <g id="node-worktree_mgr" data-graph-role="node" data-node-id="worktree_mgr" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="280,140,460,206">
+  <rect x="280.0" y="140.0" width="180.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="370.0" y="158.0" text-anchor="middle" class="node-type">STORAGE</text>
+  <text data-text-role="title" data-full-text="Worktree Manager" data-text-max-width="156.0" x="370.0" y="179.0" text-anchor="middle" class="node-title" font-size="15.14">Worktree Manager</text>
+  <text data-text-role="subtitle" data-full-text="Tự động phân nhánh Git" data-text-max-width="156.0" x="370.0" y="201.0" text-anchor="middle" class="node-sub" font-size="12">Tự động phân nhánh Git</text>
+  </g>
+  <g id="node-terminal_mux" data-graph-role="node" data-node-id="terminal_mux" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="500,140,680,206">
+  <rect x="500.0" y="140.0" width="180.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="590.0" y="158.0" text-anchor="middle" class="node-type">TERMINAL</text>
+  <text data-text-role="title" data-full-text="Ghostty Terminal" data-text-max-width="156.0" x="590.0" y="179.0" text-anchor="middle" class="node-title" font-size="16.91">Ghostty Terminal</text>
+  <text data-text-role="subtitle" data-full-text="Infinite Split Panes" data-text-max-width="156.0" x="590.0" y="201.0" text-anchor="middle" class="node-sub" font-size="12">Infinite Split Panes</text>
+  </g>
+  <g id="node-embedded_browser" data-graph-role="node" data-node-id="embedded_browser" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="720,140,900,206">
+  <rect x="720.0" y="140.0" width="180.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="810.0" y="158.0" text-anchor="middle" class="node-type">BROWSER</text>
+  <text data-text-role="title" data-full-text="Per-tree Browser" data-text-max-width="156.0" x="810.0" y="179.0" text-anchor="middle" class="node-title" font-size="15.94">Per-tree Browser</text>
+  <text data-text-role="subtitle" data-full-text="Design Mode và View" data-text-max-width="156.0" x="810.0" y="201.0" text-anchor="middle" class="node-sub" font-size="12">Design Mode và View</text>
+  </g>
+  <g id="node-wt_agent_1" data-graph-role="node" data-node-id="wt_agent_1" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="60,310,320,382">
+  <rect x="60.0" y="310.0" width="260.0" height="72.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="190.0" y="328.0" text-anchor="middle" class="node-type">WORKTREE A</text>
+  <text data-text-role="title" data-full-text="Worktree: Auth Flow" data-text-max-width="236.0" x="190.0" y="352.0" text-anchor="middle" class="node-title" font-size="18">Worktree: Auth Flow</text>
+  <text data-text-role="subtitle" data-full-text="Claude Code (Refactor Token)" data-text-max-width="236.0" x="190.0" y="374.0" text-anchor="middle" class="node-sub" font-size="12">Claude Code (Refactor Token)</text>
+  </g>
+  <g id="node-wt_agent_2" data-graph-role="node" data-node-id="wt_agent_2" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="350,310,610,382">
+  <rect x="350.0" y="310.0" width="260.0" height="72.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="480.0" y="328.0" text-anchor="middle" class="node-type">WORKTREE B</text>
+  <text data-text-role="title" data-full-text="Worktree: API Cache" data-text-max-width="236.0" x="480.0" y="352.0" text-anchor="middle" class="node-title" font-size="18">Worktree: API Cache</text>
+  <text data-text-role="subtitle" data-full-text="Codex CLI (Redis Optimization)" data-text-max-width="236.0" x="480.0" y="374.0" text-anchor="middle" class="node-sub" font-size="12">Codex CLI (Redis Optimization)</text>
+  </g>
+  <g id="node-wt_agent_3" data-graph-role="node" data-node-id="wt_agent_3" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="640,310,900,382">
+  <rect x="640.0" y="310.0" width="260.0" height="72.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="770.0" y="328.0" text-anchor="middle" class="node-type">WORKTREE C</text>
+  <text data-text-role="title" data-full-text="Worktree: UI Fix" data-text-max-width="236.0" x="770.0" y="352.0" text-anchor="middle" class="node-title" font-size="18">Worktree: UI Fix</text>
+  <text data-text-role="subtitle" data-full-text="Cursor CLI (Responsive Layout)" data-text-max-width="236.0" x="770.0" y="374.0" text-anchor="middle" class="node-sub" font-size="12">Cursor CLI (Responsive Layout)</text>
+  </g>
+  <g id="node-diff_review" data-graph-role="node" data-node-id="diff_review" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="100,490,320,556">
+  <rect x="100.0" y="490.0" width="220.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="210.0" y="508.0" text-anchor="middle" class="node-type">REVIEW</text>
+  <text data-text-role="title" data-full-text="AI Diff Reviewer" data-text-max-width="196.0" x="210.0" y="529.0" text-anchor="middle" class="node-title" font-size="18">AI Diff Reviewer</text>
+  <text data-text-role="subtitle" data-full-text="Annotate &amp; AI fix" data-text-max-width="196.0" x="210.0" y="551.0" text-anchor="middle" class="node-sub" font-size="12">Annotate &amp; AI fix</text>
+  </g>
+  <g id="node-test_verify" data-graph-role="node" data-node-id="test_verify" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="370,490,590,556">
+  <rect x="370.0" y="490.0" width="220.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="480.0" y="508.0" text-anchor="middle" class="node-type">VERIFY</text>
+  <text data-text-role="title" data-full-text="CI / Local Checks" data-text-max-width="196.0" x="480.0" y="529.0" text-anchor="middle" class="node-title" font-size="18">CI / Local Checks</text>
+  <text data-text-role="subtitle" data-full-text="Build và Run Tests" data-text-max-width="196.0" x="480.0" y="551.0" text-anchor="middle" class="node-sub" font-size="12">Build và Run Tests</text>
+  </g>
+  <g id="node-git_ship" data-graph-role="node" data-node-id="git_ship" data-semantic-role="rect" data-motion-role="" data-motion-stage="" data-motion-order="" data-parent="" data-deployment-id="" data-topic-id="" data-span-id="" data-station-order="" data-status="" data-start-ms="" data-duration-ms="" data-parent-span="" data-graph-bounds="640,490,860,556">
+  <rect x="640.0" y="490.0" width="220.0" height="66.0" rx="4.0" fill="#f9fafb" stroke="#27272a" stroke-width="1.8"/>
+  <text x="750.0" y="508.0" text-anchor="middle" class="node-type">MERGE</text>
+  <text data-text-role="title" data-full-text="Clean Commit &amp; PR" data-text-max-width="196.0" x="750.0" y="529.0" text-anchor="middle" class="node-title" font-size="18">Clean Commit &amp; PR</text>
+  <text data-text-role="subtitle" data-full-text="Merge vào Main Branch" data-text-max-width="196.0" x="750.0" y="551.0" text-anchor="middle" class="node-sub" font-size="12">Merge vào Main Branch</text>
+  </g>
+</svg>
