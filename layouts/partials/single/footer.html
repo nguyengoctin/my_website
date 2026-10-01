@@ -13,45 +13,39 @@
 
     {{- /* Share and Actions Bar */ -}}
     <div class="post-footer-actions">
-        <div class="post-footer-share">
-            <span class="share-label">Share:</span>
-            <button type="button" class="btn-copy-link" data-url="{{ .Permalink }}" title="Copy link to clipboard" aria-label="Copy post link">
-                <i class="ti ti-link"></i>
-                <span class="copy-text">Copy link</span>
-            </button>
-            <div class="share-icons">
-                <a href="https://x.com/intent/post?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share on X"
-                    aria-label="Share on X" class="share-icon-btn">
-                    <i class="ti ti-brand-x"></i>
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"
-                    aria-label="Share on LinkedIn" class="share-icon-btn">
-                    <i class="ti ti-brand-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}"
-                    target="_blank" rel="noopener noreferrer" title="Share on Facebook"
-                    aria-label="Share on Facebook" class="share-icon-btn">
-                    <i class="ti ti-brand-facebook"></i>
-                </a>
-            </div>
-        </div>
+        <span class="share-label">Share</span>
+        <button type="button" class="btn-copy-link" data-url="{{ .Permalink }}" title="Copy link to clipboard" aria-label="Copy post link">
+            <i class="ti ti-link"></i>
+            <span class="copy-text">Copy link</span>
+        </button>
+        <a href="https://x.com/intent/post?url={{ .Permalink | urlquery }}&text={{ .Title | urlquery }}"
+            target="_blank" rel="noopener noreferrer" title="Share on X"
+            aria-label="Share on X" class="share-icon-btn">
+            <i class="ti ti-brand-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}"
+            target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"
+            aria-label="Share on LinkedIn" class="share-icon-btn">
+            <i class="ti ti-brand-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}"
+            target="_blank" rel="noopener noreferrer" title="Share on Facebook"
+            aria-label="Share on Facebook" class="share-icon-btn">
+            <i class="ti ti-brand-facebook"></i>
+        </a>
 
-        <div class="post-footer-right-actions">
-            {{- with .RawContent -}}
-            <button type="button" class="btn-copy-markdown btn-copy-markdown-footer"
-                data-markdown="{{ . | base64Encode }}" title="Copy raw Markdown"
-                aria-label="Copy Markdown">
-                <i class="ti ti-markdown"></i>
-                <span>Markdown</span>
-            </button>
-            {{- end -}}
-            <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
-                <i class="ti ti-arrow-up"></i>
-                <span>Back to Top</span>
-            </button>
-        </div>
+        {{- with .RawContent -}}
+        <button type="button" class="btn-copy-markdown btn-copy-markdown-footer"
+            data-markdown="{{ . | base64Encode }}" title="Copy raw Markdown"
+            aria-label="Copy Markdown">
+            <i class="ti ti-markdown"></i>
+            <span>Markdown</span>
+        </button>
+        {{- end -}}
+        <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+            <i class="ti ti-arrow-up"></i>
+            <span>Top</span>
+        </button>
     </div>
 
     {{- /* Divider */ -}}
