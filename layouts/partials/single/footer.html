@@ -34,14 +34,6 @@
             <i class="ti ti-brand-facebook"></i>
         </a>
 
-        {{- with .RawContent -}}
-        <button type="button" class="btn-copy-markdown btn-copy-markdown-footer"
-            data-markdown="{{ . | base64Encode }}" title="Copy raw Markdown"
-            aria-label="Copy Markdown">
-            <i class="ti ti-markdown"></i>
-            <span>Markdown</span>
-        </button>
-        {{- end -}}
         <button id="back-to-top" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
             <i class="ti ti-arrow-up"></i>
             <span>Top</span>
