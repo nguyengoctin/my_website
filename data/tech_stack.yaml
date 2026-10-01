@@ -62,6 +62,8 @@ row_4:
     svg: "googleaistudio"
   - name: "Antigravity"
     svg: "antigravity"
+  - name: "Orca"
+    svg: "orca"
   - name: "Codex"
     svg: "codex"
   - name: "Ollama"
