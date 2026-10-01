@@ -1,5 +1,5 @@
 ---
-title: "Lập Trình Web Kỷ Nguyên AI: Đừng 'Vibe Code', Hãy Làm Chủ Spec-Driven Development!"
+title: "Phát triển web với spec-driven development thay vì vibe coding"
 date: 2026-07-24
 draft: false
 author: "Nguyen Ngoc Tin"

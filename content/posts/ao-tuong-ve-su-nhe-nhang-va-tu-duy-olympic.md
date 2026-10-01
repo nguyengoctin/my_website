@@ -1,5 +1,5 @@
 ---
-title: "Ảo Tưởng Về Sự Nhẹ Nhàng Và Bài Học Kỷ Luật Lạnh Lùng Từ Michael Phelps"
+title: "Ảo tưởng về sự nhẹ nhàng và kỷ luật của vận động viên đỉnh cao"
 date: 2026-07-29T16:30:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

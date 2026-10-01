@@ -1,5 +1,5 @@
 ---
-title: "Cẩm Nang Câu Hỏi Phỏng Vấn DSA Kèm Lời Giải"
+title: "Câu hỏi phỏng vấn DSA thường gặp"
 date: 2026-08-20T12:00:00+07:00
 draft: false
 description: "Cẩm nang tổng hợp các câu hỏi phỏng vấn về cấu trúc dữ liệu và giải thuật kèm lời giải chi tiết, ví dụ minh họa."

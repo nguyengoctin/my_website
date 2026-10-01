@@ -1,5 +1,5 @@
 ---
-title: "Lexi: Xây dựng AI English Speaking Tutor với Serverless Architecture và Amazon Bedrock"
+title: "Lexi: Gia sư tiếng Anh tương tác giọng nói với Amazon Bedrock"
 date: 2026-03-15T10:00:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

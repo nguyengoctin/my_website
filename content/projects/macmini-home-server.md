@@ -1,5 +1,5 @@
 ---
-title: "Mac mini Home Server: Tự Xây Dựng Homelab Cá Nhân từ Phần Cứng Cũ"
+title: "Mac mini Home Server: Dựng homelab từ máy tính cũ"
 date: 2026-09-29T18:00:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

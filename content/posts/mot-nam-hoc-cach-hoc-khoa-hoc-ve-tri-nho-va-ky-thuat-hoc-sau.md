@@ -1,5 +1,5 @@
 ---
-title: "Một Năm Học Cách Học: Nền Tảng Khoa Học Não Bộ Và Hệ Thống Học Sâu"
+title: "Một năm học cách học: Khoa học não bộ và phương pháp học sâu"
 date: 2026-09-29T18:55:00+07:00
 author: "Nguyen Ngoc Tin"
 description: "Đúc kết từ khoa học thần kinh nhận thức, Barbara Oakley, Make It Stick và Scott Young: giải mã cơ chế trí nhớ, phá vỡ ảo tưởng hiểu biết và thiết lập phương pháp học tập hiệu quả."

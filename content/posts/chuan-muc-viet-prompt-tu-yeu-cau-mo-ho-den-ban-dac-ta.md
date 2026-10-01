@@ -1,6 +1,6 @@
 ---
 pinned: true
-title: "Các Chuẩn Mực Khi Viết Prompt: Từ Yêu Cầu Mơ Hồ Đến Một Bản Đặc Tả Rõ Ràng"
+title: "Kỹ thuật viết prompt: Từ ý tưởng sơ khai đến bản đặc tả chi tiết"
 date: 2026-08-31T13:20:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

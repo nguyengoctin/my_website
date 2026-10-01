@@ -1,5 +1,5 @@
 ---
-title: "AI Agent: Hướng Dẫn Xây Dựng Tác Nhân AI"
+title: "Kiến trúc và các thành phần cốt lõi của AI Agent"
 date: 2026-08-20T12:00:00+07:00
 draft: false
 description: "Hướng dẫn từng bước xây dựng tác nhân AI, từ thiết kế prompt, kết nối công cụ đến triển khai agent thực tế."

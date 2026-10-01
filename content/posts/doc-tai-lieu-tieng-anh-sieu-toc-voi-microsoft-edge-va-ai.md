@@ -1,5 +1,5 @@
 ---
-title: "Luồng Đọc PDF Tiếng Anh Siêu Tốc Với Microsoft Edge Và AI"
+title: "Đọc tài liệu PDF tiếng Anh hiệu quả với Microsoft Edge và AI"
 date: 2026-07-29T15:45:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

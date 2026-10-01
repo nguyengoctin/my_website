@@ -1,5 +1,5 @@
 ---
-title: "Kỹ nghệ Phần mềm 2026: Tại sao Vibe Coding là chưa đủ và 5 Bài học Đắt giá để Làm chủ AI Agents"
+title: "Vượt qua vibe coding: 5 kinh nghiệm kiểm soát AI agent khi làm phần mềm"
 date: 2026-08-26T15:48:00+07:00
 description: "Phân tích toàn diện sự dịch chuyển từ Vibe Coding sang Kỹ nghệ Bản địa AI (AI-Native Engineering), kiến trúc SDD, ACI và 5 bài học đắt giá để làm chủ AI Agents năm 2026."
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "Nối Nốt: Nền tảng Context Chung Cho Hệ Sinh Thái Ứng Dụng Đa Miền"
+title: "Nối Nốt: Đồng bộ ngữ cảnh giữa các ứng dụng cá nhân"
 date: 2026-09-30T10:00:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

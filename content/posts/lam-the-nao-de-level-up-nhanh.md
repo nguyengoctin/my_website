@@ -1,5 +1,5 @@
 ---
-title: "Làm Thế Nào Để “Level Up” Nhanh Tới Mức Cảm Giác Như Đang Gian Lận?"
+title: "Chiến lược rút ngắn đường cong học tập trong ngành phần mềm"
 date: 2026-08-31T17:00:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

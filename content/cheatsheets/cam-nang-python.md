@@ -1,5 +1,5 @@
 ---
-title: "Cẩm Nang Python Căn Bản Đến Nâng Cao"
+title: "Ghi chép cú pháp Python từ cơ bản đến nâng cao"
 date: 2026-08-20T12:00:00+07:00
 draft: false
 description: "Cẩm nang Python tổng hợp kiến thức từ căn bản đến nâng cao, cú pháp, cấu trúc dữ liệu, hàm và các thư viện thông dụng cho lập trình viên."

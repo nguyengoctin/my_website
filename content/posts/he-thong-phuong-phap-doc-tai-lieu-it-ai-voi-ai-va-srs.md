@@ -1,5 +1,5 @@
 ---
-title: "Cách Đọc Tài Liệu Tiếng Anh IT và AI Không Bị Đứt Đoạn Tư Duy Bằng AI và SRS"
+title: "Đọc tài liệu kỹ thuật tiếng Anh liền mạch với AI và SRS"
 date: 2026-08-01T10:10:00+07:00
 author: "Nguyen Ngoc Tin"
 description: "Phương pháp đọc tài liệu kỹ thuật tiếng Anh liền mạch kết hợp AI song ngữ và hệ thống lặp lại ngắt quãng FSRS, giải quyết triệt để tình trạng đứt đoạn tư duy."

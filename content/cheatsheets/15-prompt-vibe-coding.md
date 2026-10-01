@@ -1,5 +1,5 @@
 ---
-title: "15 Prompt Vibe Coding: Bí Kíp Lập Trình Bằng Prompt"
+title: "15 prompt thông dụng cho vibe coding"
 date: 2026-08-20T12:00:00+07:00
 draft: false
 description: "Tổng hợp 15 kỹ thuật prompt giúp lập trình nhanh hơn với AI, từ viết code đến sửa lỗi và tối ưu dự án."

@@ -1,5 +1,5 @@
 ---
-title: "Top 30 Câu Hỏi Phỏng Vấn DSA Kèm Lời Giải C++ (Bản Tiếng Việt)"
+title: "30 câu hỏi phỏng vấn DSA bằng C++"
 date: 2026-08-18T08:50:00+07:00
 draft: false
 description: "Tổng hợp 30 câu hỏi phỏng vấn Cấu trúc dữ liệu và Giải thuật (DSA) thực chiến kèm lời giải mã nguồn C++ bản tiếng Việt chi tiết."

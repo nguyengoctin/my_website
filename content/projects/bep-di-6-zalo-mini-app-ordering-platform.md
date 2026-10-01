@@ -1,5 +1,5 @@
 ---
-title: "Bếp Dì 6: Xây dựng Hệ thống Đặt món Trực tuyến trên Zalo Mini App và Django REST API"
+title: "Bếp Dì 6: Hệ thống đặt món qua Zalo Mini App và Django API"
 date: 2026-08-26T15:00:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

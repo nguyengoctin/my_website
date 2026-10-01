@@ -1,6 +1,6 @@
 ---
 pinned: true
-title: "Kỷ Luật Kỹ Thuật Cùng Coding Friend: Tối Ưu Năng Suất Khi Lập Trình Với AI Agent"
+title: "Kỷ luật kỹ thuật khi lập trình cùng Coding Friend"
 date: 2026-09-30T19:50:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

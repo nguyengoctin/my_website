@@ -1,6 +1,6 @@
 ---
 pinned: true
-title: "Cách Tôi Tận Dụng Orca Trong Kỷ Nguyên Coding Agent: Từ Thợ Gõ Mã Đến Nhạc Trưởng Điều Phối"
+title: "Kinh nghiệm dùng Orca để điều phối coding agent"
 date: 2026-10-01T20:30:00+07:00
 draft: false
 author: "Nguyen Ngoc Tin"

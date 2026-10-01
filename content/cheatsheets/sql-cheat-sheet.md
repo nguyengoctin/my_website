@@ -1,5 +1,5 @@
 ---
-title: "SQL Cheat Sheet: Tra Cứu Câu Lệnh Và Truy Vấn Dữ Liệu"
+title: "Tra cứu câu lệnh SQL thông dụng"
 date: 2026-08-18T09:43:02+07:00
 draft: false
 description: "Cheat sheet tra cứu nhanh các câu lệnh SQL căn bản đến nâng cao, JOINs, Group By và hàm xử lý cơ sở dữ liệu."

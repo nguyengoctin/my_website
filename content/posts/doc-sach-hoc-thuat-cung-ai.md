@@ -1,5 +1,5 @@
 ---
-title: "Cách Đọc Hiểu Tài Liệu Dài Bằng AI: Vượt Qua Hiện Tượng Bỏ Sót Ngữ Cảnh Bằng Vòng Lặp Feynman"
+title: "Đọc tài liệu dài bằng AI kết hợp kỹ thuật Feynman"
 date: 2026-07-30T12:15:00+07:00
 author: "Nguyen Ngoc Tin"
 description: "Kỹ thuật kiểm soát cửa sổ ngữ cảnh và khắc phục hiện tượng Lost in the Middle khi xử lý tài liệu dài bằng AI kết hợp vòng lặp Feynman."
