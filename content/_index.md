@@ -7,7 +7,7 @@ title: "Nguyen Ngoc Tin"
 <div class="bio-container">
   <img src="/images/avatar.webp" alt="Nguyễn Ngọc Tín" class="bio-avatar" width="175" height="175">
   <div class="bio-text">
-    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình đam mê phát triển sản phẩm, tối ưu hệ thống và hiện thực hóa các ứng dụng thực tế của AI. Hầu hết những gì mình tích lũy được đều đến từ quá trình tự tay xây dựng dự án và giải quyết các bài toán kỹ thuật thực tế.</p>
+    <p>Mình là Nguyễn Ngọc Tín, tốt nghiệp kỹ sư Công nghệ Thông tin tại <a href="https://www.sgu.edu.vn/gioi-thieu-truong/" target="_blank" rel="noopener">Đại học Sài Gòn</a>. Mình đam mê phát triển phần mềm, tối ưu hệ thống và hiện thực hóa các ứng dụng thực tế của AI. Hầu hết những gì mình tích lũy được đều đến từ quá trình tự tay xây dựng dự án và giải quyết các bài toán kỹ thuật thực tế.</p>
     <p>Tại đây mình ghi lại các sản phẩm đang phát triển và những bài học rút ra trong quá trình làm việc. Bạn có thể xem chi tiết hồ sơ năng lực qua <a href="https://docs.google.com/document/d/1-K2y1sASCNhwXWVCrZb5tdeO7IzB4uZUN9Om09yadU8/preview" target="_blank" rel="noopener noreferrer">CV</a>, kết nối <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener">LinkedIn</a> hoặc gửi email cho mình tại <a href="mailto:ngoctin.work@gmail.com">ngoctin.work@gmail.com</a>.</p>
   </div>
 </div>
