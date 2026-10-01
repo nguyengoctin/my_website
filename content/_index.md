@@ -74,7 +74,7 @@ title: "Nguyen Ngoc Tin"
       <span class="timeline-time">2021 — Aug 2026</span>
     <h3 class="timeline-title"> <a href="https://fit.sgu.edu.vn/site/gioi-thieu-chung/" target="_blank" rel="noopener"> Kỹ sư Công nghệ Thông tin </a> </h3>
       <div class="timeline-desc">
-        Chuyên ngành Hệ thống Thông tin. Tập trung nghiên cứu cơ sở dữ liệu, kiến trúc hệ thống và phân tích dữ liệu nhằm xây dựng nền tảng vững chắc cho việc phát triển phần mềm và triển khai các giải pháp AI vào thực tiễn.
+        Chuyên ngành Hệ thống Thông tin. Được học về cơ sở dữ liệu, kiến trúc hệ thống và phân tích dữ liệu nhằm xây dựng nền tảng vững chắc cho việc phát triển phần mềm và triển khai các giải pháp AI vào thực tiễn.
       </div>
     </div>
   </div>
