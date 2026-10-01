@@ -6,14 +6,15 @@
 {{- partial "twitter_cards.html" . -}}
 
 
-<!-- Modern Tabler Icons (Replacement for FontAwesome) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+<!-- Modern Tabler Icons (Non-render-blocking, Pinned Version) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.24.0/dist/tabler-icons.min.css" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.24.0/dist/tabler-icons.min.css" /></noscript>
 
-<!-- Devicon Icons (Official Tech Stack & Brand Logos) -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-<!-- Font Awesome 6 Free (Brand Icons: GitHub, X, Facebook, LinkedIn, etc.) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Devicon Icons (Conditional Homepage/Tech-Marquee, Non-render-blocking, Pinned Version) -->
+{{- if or .IsHome (.HasShortcode "tech-marquee") -}}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" /></noscript>
+{{- end -}}
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">

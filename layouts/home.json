@@ -1,0 +1,31 @@
+{{- if .Site.Params.search -}}
+    {{- $index := slice -}}
+    {{- $pages := .Site.RegularPages -}}
+    {{- if .Site.Params.page.hiddenFromSearch -}}
+        {{- $pages = where $pages "Params.hiddenfromsearch" false -}}
+    {{- else -}}
+        {{- $pages = where $pages "Params.hiddenfromsearch" "!=" true -}}
+    {{- end -}}
+    {{- range $pages -}}
+        {{- $uri := .RelPermalink -}}
+        {{- if $.Site.Params.search.absoluteURL -}}
+            {{- $uri = .Permalink -}}
+        {{- end -}}
+        {{- $meta := dict "uri" $uri "title" .Title "tags" .Params.tags "categories" .Params.categories -}}
+        {{- $meta = $.Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format | dict "date" | merge $meta -}}
+        {{- with .Description -}}
+            {{- $meta = dict "description" . | merge $meta -}}
+        {{- end -}}
+        {{- $content := .Summary | default .Plain | plainify | htmlUnescape | replaceRE `[\n\t ]+` " " -}}
+        {{- $contentLength := $.Site.Params.search.contentLength | default 800 -}}
+        {{- if gt $contentLength 0 -}}
+            {{- $content = substr $content 0 $contentLength -}}
+        {{- end -}}
+        {{- if $content -}}
+            {{- $one := dict "content" $content "objectID" $uri | merge $meta -}}
+            {{- $index = $index | append $one -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- $index | jsonify | safeJS -}}
+{{- end -}}

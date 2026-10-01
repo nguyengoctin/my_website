@@ -95,6 +95,7 @@ enableEmoji = true
 
 # Parameters config for LoveIt theme
 [params]
+  fingerprint = "sha256"
   defaultTheme = "auto"
   dateFormat = "2006-01-02"
   title = "Nguyễn Ngọc Tín"

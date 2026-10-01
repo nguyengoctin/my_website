@@ -1,23 +1,49 @@
-{{- $image := .Page.Resources.GetMatch (printf "*%v*" .Destination) -}}
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+{{- $image := .Page.Resources.GetMatch (printf "*%v*" $src) -}}
 {{- if not $image -}}
-    {{- $image = resources.Get .Destination -}}
+    {{- $image = resources.Get $src -}}
 {{- end -}}
+
 {{- $width := "" -}}
 {{- $height := "" -}}
+{{- $srcset := "" -}}
+{{- $finalSrc := $src -}}
+
 {{- with $image -}}
-    {{- $width = .Width -}}
-    {{- $height = .Height -}}
-{{- end -}}
-{{- if .Title -}}
-    <figure class="markdown-image-figure">
-        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" decoding="async"{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }} />
-        <figcaption class="image-caption">{{ .Title }}</figcaption>
-    </figure>
-{{- else -}}
-    <figure class="markdown-image-figure">
-        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async"{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }} />
-        {{- if .Text -}}
-            <figcaption class="image-caption">{{ .Text }}</figcaption>
+    {{- if not (eq .MediaType.SubType "svg") -}}
+        {{- $width = .Width -}}
+        {{- $height = .Height -}}
+        {{- if gt .Width 1200 -}}
+            {{- $w480 := (.Resize "480x webp").RelPermalink -}}
+            {{- $w800 := (.Resize "800x webp").RelPermalink -}}
+            {{- $w1200 := (.Resize "1200x webp").RelPermalink -}}
+            {{- $srcset = printf "%s 480w, %s 800w, %s 1200w" $w480 $w800 $w1200 -}}
+            {{- $finalSrc = $w800 -}}
+        {{- else if gt .Width 700 -}}
+            {{- $w480 := (.Resize "480x webp").RelPermalink -}}
+            {{- $w800 := (.Resize "800x webp").RelPermalink -}}
+            {{- $srcset = printf "%s 480w, %s 800w" $w480 $w800 -}}
+            {{- $finalSrc = $w800 -}}
+        {{- else -}}
+            {{- $finalSrc = .RelPermalink -}}
         {{- end -}}
-    </figure>
+    {{- else -}}
+        {{- $finalSrc = .RelPermalink -}}
+    {{- end -}}
 {{- end -}}
+
+<figure class="markdown-image-figure">
+    <img src="{{ $finalSrc | safeURL }}"
+         {{ with $srcset }}srcset="{{ . }}" sizes="(max-width: 800px) 100vw, 800px"{{ end }}
+         alt="{{ $alt }}"
+         {{ with $title }}title="{{ . }}"{{ end }}
+         loading="lazy"
+         decoding="async"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }} />
+    {{- with $caption := $title | default $alt -}}
+        <figcaption class="image-caption">{{ $caption }}</figcaption>
+    {{- end -}}
+</figure>

@@ -18,6 +18,8 @@ $brand-pink-dark: #f472b6;          // Rose/Pink Accent (Dark mode)
 // ==========================================================
 // Modular CSS Import Architecture
 // ==========================================================
+@import "modules/fonts";
+@import "modules/animations";
 @import "modules/typography_and_nav";
 @import "modules/quotes_and_content";
 @import "modules/admonitions";

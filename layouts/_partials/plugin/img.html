@@ -44,35 +44,37 @@
 {{- if and $page .Linked -}}
     {{- $page.Scratch.SetInMap "this" "lightgallery" true -}}
 {{- end -}}
+{{- $loadingAttr := .Loading | default "lazy" -}}
+{{- $fetchpriorityAttr := .FetchPriority | default "" -}}
 {{- if .Linked -}}
     <a class="lightgallery" href="{{ $large | safeURL }}" title="{{ .Title | default $alt }}" data-thumbnail="{{ $small | safeURL }}"{{ with .Caption }} data-sub-html="<h2>{{ . }}</h2>{{ with $.Title }}<p>{{ . }}</p>{{ end }}"{{ end }}{{ with .Rel }} rel="{{ . }}"{{ end }}>
         <img
-            class="lazyload{{ with .Class }} {{ . }}{{ end }}"
-            src="{{ $loading.RelPermalink }}"
-            data-src="{{ $src | safeURL }}"
+            class="{{ with .Class }}{{ . }}{{ end }}"
+            src="{{ $src | safeURL }}"
             {{- if or (ne $small $src) (ne $large $src) }}
-            data-srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
-            data-sizes="auto"
+            srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
+            sizes="(max-width: 800px) 100vw, 800px"
             {{- end }}
             alt="{{ $alt }}"
-            loading="lazy"
+            loading="{{ $loadingAttr }}"
             decoding="async"
+            {{- with $fetchpriorityAttr }} fetchpriority="{{ . }}"{{ end }}
             {{- with $width }} width="{{ . }}"{{ end }}
             {{- with $height }} height="{{ . }}"{{ end }} />
     </a>
 {{- else -}}
     <img
-        class="lazyload{{ with .Class }} {{ . }}{{ end }}"
-        src="{{ $loading.RelPermalink }}"
-        data-src="{{ $src | safeURL }}"
+        class="{{ with .Class }}{{ . }}{{ end }}"
+        src="{{ $src | safeURL }}"
         {{- if or (ne $small $src) (ne $large $src) }}
-        data-srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
-        data-sizes="auto"
+        srcset="{{ $small | safeURL }} 480w, {{ $src | safeURL }} 800w, {{ $large | safeURL }} 1200w"
+        sizes="(max-width: 800px) 100vw, 800px"
         {{- end }}
         alt="{{ $alt }}"
         title="{{ .Title | default $alt }}"
-        loading="lazy"
+        loading="{{ $loadingAttr }}"
         decoding="async"
+        {{- with $fetchpriorityAttr }} fetchpriority="{{ . }}"{{ end }}
         {{- with $width }} width="{{ . }}"{{ end }}
         {{- with $height }} height="{{ . }}"{{ end }} />
 {{- end -}}

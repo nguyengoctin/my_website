@@ -34,10 +34,6 @@
     {{- end -}}
 {{- end -}}
 
-{{- /* lazysizes */ -}}
-{{- $source := $cdn.lazysizesJS | default "lib/lazysizes/lazysizes.min.js" -}}
-{{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-
 {{- /* twemoji */ -}}
 {{- if $params.twemoji -}}
     {{- $source := $cdn.twemojiJS | default "lib/twemoji/twemoji.min.js" -}}
@@ -203,10 +199,11 @@
 {{- $config | jsonify | printf "window.config=%s;" | dict "Content" | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
 {{- /* Theme script */ -}}
-{{- dict "Source" "js/theme.js" "JSBuild" true "Minify" true "TargetPath" "js/theme.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+{{- dict "Source" "js/theme.js" "JSBuild" true "Minify" true "TargetPath" "js/theme.js" "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- if .Site.Params.search | and .Site.Params.search.enable -}}
-    {{- dict "Source" "js/search-modal.js" "JSBuild" true "Minify" true "TargetPath" "js/search-modal.js" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- dict "Source" "js/search-modal.js" "JSBuild" true "Minify" true "TargetPath" "js/search-modal.js" "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
+{{- dict "Source" "js/clipboard.js" "JSBuild" true "Minify" true "TargetPath" "js/clipboard.js" "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
 {{- with (.Scratch.Get "this").scriptArr -}}
     {{- delimit . "\n" | dict "Content" | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}

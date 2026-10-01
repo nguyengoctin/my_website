@@ -1,12 +1,8 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
 
-{{- /* Keep only the minimal font hints needed for typography. */ -}}
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-{{- /* Google Fonts (Newsreader + IBM Plex Mono) with display=swap */ -}}
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+{{- /* Preconnect to CDN origins */ -}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
 {{- if not .Site.Params.app.noFavicon -}}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -36,7 +32,3 @@
 {{- partial "plugin/style.html" $options -}}
 
 
-{{- /* Animate.css */ -}}
-{{- $source := $cdn.animateCSS | default "lib/animate/animate.min.css" -}}
-{{- $options := dict "Source" $source "Fingerprint" $fingerprint "Preload" true -}}
-{{- partial "plugin/style.html" $options -}}
