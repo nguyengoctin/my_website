@@ -94,11 +94,8 @@
 
 
 
-        {{- /* Diagram Zoom Dialog Modal (Lightbox kính lúp) */ -}}
+        {{- /* Diagram Zoom Dialog Modal (Lightbox) */ -}}
         <dialog id="diagram-zoom-dialog" class="diagram-zoom-dialog" aria-label="Phóng to sơ đồ">
-            <button type="button" class="diagram-dialog-close" aria-label="Đóng" title="Đóng (ESC)">
-                <i class="ti ti-x" aria-hidden="true"></i>
-            </button>
             <div class="diagram-dialog-body">
                 <img id="diagram-zoom-img" src="" alt="" />
             </div>
@@ -132,13 +129,11 @@
               }
             });
 
-            dialog.addEventListener('click', function(e) {
-              if (e.target === dialog || e.target.closest('.diagram-dialog-close')) {
-                if (typeof dialog.close === 'function') {
-                  dialog.close();
-                } else {
-                  dialog.removeAttribute('open');
-                }
+            dialog.addEventListener('click', function() {
+              if (typeof dialog.close === 'function') {
+                dialog.close();
+              } else {
+                dialog.removeAttribute('open');
               }
             });
           })();

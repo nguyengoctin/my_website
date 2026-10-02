@@ -23,6 +23,18 @@ body.theme-transitioning *::after {
     --gutter-small: 0.75rem;
 }
 
+html,
+body {
+    overflow-x: clip;
+}
+
+@supports not (overflow-x: clip) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
 html[theme=dark],
 body[theme=dark] {
     --header-bg-glass: rgba(28, 29, 34, 0.85);
@@ -82,6 +94,9 @@ html {
 /* Button resets and keyboard focus indicators */
 button.menu-item,
 button.menu-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -90,6 +105,7 @@ button.menu-toggle {
     padding: 0;
     cursor: pointer;
     color: inherit;
+    box-sizing: border-box;
 }
 
 :focus-visible {
@@ -117,6 +133,12 @@ button.menu-toggle {
 }
 
 #header-mobile {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block !important;
+    }
+
     z-index: 150 !important;
     background-color: var(--header-bg-glass, rgba(253, 253, 253, 0.85)) !important;
     backdrop-filter: blur(12px) saturate(180%) !important;
@@ -148,6 +170,11 @@ button.menu-toggle {
     }
 
     .header-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: var(--header-height, 3.5rem) !important;
+        width: 100% !important;
         max-width: var(--shell-width, 750px) !important;
         margin: 0 auto !important;
         padding-left: var(--gutter-mobile, 1rem) !important;
@@ -155,18 +182,36 @@ button.menu-toggle {
         box-sizing: border-box !important;
         border-bottom: none !important;
 
-        .header-title a {
-            font-family: var(--font-serif, "Newsreader", serif) !important;
-            font-weight: 600 !important;
-            font-size: 1.15rem !important;
-            letter-spacing: -0.01em !important;
-            color: var(--clr-text, #111111) !important;
-            text-decoration: none !important;
+        .header-title {
+            display: flex !important;
+            align-items: center !important;
+            height: 100% !important;
+            line-height: normal !important;
+            flex: 1 1 auto !important;
+            min-width: 0 !important;
+            overflow: hidden !important;
+
+            a {
+                display: inline-flex !important;
+                align-items: center !important;
+                line-height: normal !important;
+                max-width: 100% !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                white-space: nowrap !important;
+                font-family: var(--font-serif, "Newsreader", serif) !important;
+                font-weight: 600 !important;
+                font-size: 1.15rem !important;
+                letter-spacing: -0.01em !important;
+                color: var(--clr-text, #111111) !important;
+                text-decoration: none !important;
+            }
         }
 
         .menu-toggle-wrapper {
             display: inline-flex !important;
             align-items: center !important;
+            flex-shrink: 0 !important;
             gap: 0.5rem !important;
 
             .theme-switch {
@@ -193,8 +238,8 @@ button.menu-toggle {
 
                 &:hover,
                 &:focus-visible {
-                    color: var(--brand-primary, #4d74eb) !important;
-                    background-color: var(--clr-surface-2, #f8fafc) !important;
+                    color: var(--clr-text, #111111) !important;
+                    background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.04)) !important;
                 }
 
                 [theme=dark] & {
@@ -202,13 +247,16 @@ button.menu-toggle {
 
                     &:hover,
                     &:focus-visible {
-                        color: var(--brand-primary, #60a5fa) !important;
-                        background-color: var(--clr-surface-2, #2b2e38) !important;
+                        color: var(--clr-text, #f1f5f9) !important;
+                        background-color: var(--clr-surface-2, rgba(255, 255, 255, 0.06)) !important;
                     }
                 }
             }
 
             .menu-toggle {
+                -webkit-appearance: none !important;
+                -moz-appearance: none !important;
+                appearance: none !important;
                 display: inline-flex !important;
                 flex-direction: column !important;
                 justify-content: center !important;
@@ -222,31 +270,43 @@ button.menu-toggle {
                 background: transparent !important;
                 border: none !important;
                 cursor: pointer !important;
+                flex-shrink: 0 !important;
+                box-sizing: border-box !important;
+                color: var(--clr-text, #111111) !important;
+                -webkit-tap-highlight-color: transparent !important;
+
+                [theme=dark] & {
+                    color: var(--clr-text, #f1f5f9) !important;
+                }
 
                 span {
                     display: block !important;
                     width: 1.35rem !important;
                     height: 2px !important;
+                    min-height: 2px !important;
+                    max-height: 2px !important;
                     border-radius: 2px !important;
-                    background: var(--clr-text, #111111) !important;
-                    transition: all 0.25s ease-in-out !important;
+                    background-color: var(--clr-text, #111111) !important;
+                    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out, background-color 0.2s ease !important;
+                    flex-shrink: 0 !important;
+                    box-sizing: border-box !important;
+
+                    &:nth-child(1) {
+                        margin-bottom: 5px !important;
+                    }
+
+                    &:nth-child(3) {
+                        margin-top: 5px !important;
+                    }
                 }
 
                 [theme=dark] & span {
-                    background: var(--clr-text, #f1f5f9) !important;
-                }
-
-                span:nth-child(1) {
-                    margin-bottom: 0.35rem !important;
-                }
-
-                span:nth-child(3) {
-                    margin-top: 0.35rem !important;
+                    background-color: var(--clr-text, #f1f5f9) !important;
                 }
 
                 &.active {
                     span:nth-child(1) {
-                        transform: rotate(45deg) translate(0.32rem, 0.32rem) !important;
+                        transform: rotate(45deg) translate(5px, 5px) !important;
                     }
 
                     span:nth-child(2) {
@@ -254,19 +314,19 @@ button.menu-toggle {
                     }
 
                     span:nth-child(3) {
-                        transform: rotate(-45deg) translate(0.32rem, -0.32rem) !important;
+                        transform: rotate(-45deg) translate(5px, -5px) !important;
                     }
                 }
 
                 &:hover,
                 &:focus-visible {
-                    background-color: var(--clr-surface-2, #f8fafc) !important;
+                    background-color: var(--clr-surface-2, rgba(0, 0, 0, 0.04)) !important;
                 }
 
                 [theme=dark] & {
                     &:hover,
                     &:focus-visible {
-                        background-color: var(--clr-surface-2, #2b2e38) !important;
+                        background-color: var(--clr-surface-2, rgba(255, 255, 255, 0.06)) !important;
                     }
                 }
             }
@@ -671,6 +731,10 @@ table:not(.lntable):not(.highlight table) {
    DESKTOP HEADER & SEARCH: BALANCED SPACING & VERTICAL DIVIDER
    ========================================================================== */
 #header-desktop {
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+
     background-color: var(--header-bg-glass, rgba(253, 253, 253, 0.85)) !important;
     backdrop-filter: blur(12px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
@@ -757,12 +821,16 @@ table:not(.lntable):not(.highlight table) {
             align-items: center !important;
             justify-content: center !important;
             border-radius: 6px !important;
-            color: var(--clr-text-2, #64748b) !important;
+            color: var(--clr-text, #111111) !important;
             background: transparent !important;
             box-shadow: none !important;
             border: none !important;
             cursor: pointer !important;
             transition: color 0.15s ease, background-color 0.15s ease !important;
+
+            [theme=dark] & {
+                color: var(--clr-text, #f1f5f9) !important;
+            }
 
             &:hover {
                 color: var(--clr-text, #111111) !important;
