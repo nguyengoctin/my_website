@@ -90,28 +90,111 @@ class Theme {
 
     initSwitchTheme() {
         Util.forEach(document.getElementsByClassName('theme-switch'), $themeSwitch => {
-            $themeSwitch.addEventListener('click', () => {
+            $themeSwitch.addEventListener('click', (event) => {
                 const cfgTheme = document.body.getAttribute('cfg-theme');
-                const theme = document.body.getAttribute('theme');
-
-                const themes = ['auto', 'light' ,'dark'];
+                const themes = ['auto', 'light', 'dark'];
                 const newTheme = themes[(themes.indexOf(cfgTheme) + 1) % themes.length];
 
                 this.isDark = newTheme === 'dark' || (newTheme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
                 const themeVal = this.isDark ? 'dark' : 'light';
-                document.body.classList.add('theme-transitioning');
-                document.documentElement.setAttribute('theme', themeVal);
-                document.documentElement.setAttribute('data-theme', themeVal);
-                document.documentElement.setAttribute('data-cfg-theme', newTheme);
-                document.documentElement.style.backgroundColor = this.isDark ? '#1c1d22' : '#fdfdfd';
-                document.documentElement.style.colorScheme = themeVal;
-                document.body.setAttribute('theme', themeVal);
-                document.body.setAttribute('cfg-theme', newTheme);
-                window.localStorage?.setItem('theme', newTheme);
-                setTimeout(() => {
-                    document.body.classList.remove('theme-transitioning');
-                }, 250);
-                for (let event of this.switchThemeEventSet) event();
+
+                // Hàm cập nhật trạng thái DOM cho theme
+                const updateDOMTheme = () => {
+                    document.documentElement.setAttribute('theme', themeVal);
+                    document.documentElement.setAttribute('data-theme', themeVal);
+                    document.documentElement.setAttribute('data-cfg-theme', newTheme);
+                    document.documentElement.style.backgroundColor = this.isDark ? '#1c1d22' : '#fdfdfd';
+                    document.documentElement.style.colorScheme = themeVal;
+                    document.body.setAttribute('theme', themeVal);
+                    document.body.setAttribute('cfg-theme', newTheme);
+                    window.localStorage?.setItem('theme', newTheme);
+                };
+
+                // Trì hoãn các tác vụ nặng (ECharts, Mapbox, Giscus) để không chặn luồng chính
+                const triggerDeferredEvents = () => {
+                    const runCallbacks = () => {
+                        for (let callback of this.switchThemeEventSet) {
+                            try {
+                                callback();
+                            } catch (err) {
+                                console.error('Lỗi khi cập nhật widget chuyển theme:', err);
+                            }
+                        }
+                    };
+
+                    if ('requestIdleCallback' in window) {
+                        window.requestIdleCallback(runCallbacks, { timeout: 1000 });
+                    } else {
+                        window.setTimeout(runCallbacks, 60);
+                    }
+                };
+
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                // TIER 1: View Transitions API với Circular Ripple Reveal
+                if (typeof document.startViewTransition === 'function' && !prefersReducedMotion) {
+                    let x = event.clientX;
+                    let y = event.clientY;
+
+                    // Nếu kích hoạt bằng bàn phím hoặc chạm không có tọa độ, lấy tâm nút bấm
+                    if (typeof x !== 'number' || typeof y !== 'number' || (x === 0 && y === 0)) {
+                        const rect = $themeSwitch.getBoundingClientRect();
+                        x = rect.left + rect.width / 2;
+                        y = rect.top + rect.height / 2;
+                    }
+
+                    const endRadius = Math.hypot(
+                        Math.max(x, window.innerWidth - x),
+                        Math.max(y, window.innerHeight - y)
+                    );
+
+                    const transition = document.startViewTransition(() => {
+                        updateDOMTheme();
+                    });
+
+                    transition.ready.then(() => {
+                        const clipPathKeyframes = [
+                            `circle(0px at ${x}px ${y}px)`,
+                            `circle(${endRadius}px at ${x}px ${y}px)`
+                        ];
+
+                        document.documentElement.animate(
+                            {
+                                clipPath: clipPathKeyframes
+                            },
+                            {
+                                duration: 380,
+                                easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                                pseudoElement: '::view-transition-new(root)'
+                            }
+                        );
+                    }).catch(err => {
+                        console.debug('View transition ready catch:', err);
+                    });
+
+                    transition.finished.then(() => {
+                        triggerDeferredEvents();
+                    }).catch(err => {
+                        console.debug('View transition finished catch:', err);
+                        triggerDeferredEvents();
+                    });
+
+                } else {
+                    // TIER 2: Fallback Scoped Container Transition
+                    if (!prefersReducedMotion) {
+                        document.documentElement.classList.add('theme-fallback-transition');
+                        updateDOMTheme();
+                        window.setTimeout(() => {
+                            document.documentElement.classList.remove('theme-fallback-transition');
+                        }, 220);
+                    } else {
+                        updateDOMTheme();
+                    }
+
+                    window.setTimeout(() => {
+                        triggerDeferredEvents();
+                    }, 50);
+                }
             }, false);
         });
     }

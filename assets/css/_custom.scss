@@ -1,12 +1,40 @@
 /* ==========================================================================
-   THEME TRANSITIONS OPTIMIZATION (Zero-Jank Scoped Dark Mode Switch)
+   SMOOTH THEME TRANSITION SYSTEM (60FPS Two-Tier Architecture)
    ========================================================================== */
-body.theme-transitioning,
-body.theme-transitioning *,
-body.theme-transitioning *::before,
-body.theme-transitioning *::after {
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, fill 0.2s ease, stroke 0.2s ease !important;
-    transition-delay: 0s !important;
+
+/* 1. TIER 1: View Transitions API Root Pseudo-Elements */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+    display: block;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root) {
+    z-index: 9999;
+}
+
+/* Tôn trọng cài đặt trợ năng prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}
+
+/* 2. TIER 2: Scoped Fallback Container Transition (Tuyệt đối không dùng selector universal) */
+html.theme-fallback-transition,
+html.theme-fallback-transition body,
+html.theme-fallback-transition #header-desktop,
+html.theme-fallback-transition #header-mobile,
+html.theme-fallback-transition .footer {
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* ==========================================================================

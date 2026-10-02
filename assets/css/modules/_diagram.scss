@@ -20,9 +20,9 @@
 
 .diagram-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-areas: "diagram-stack";
+  place-items: center;
   overflow-x: auto;
   background: transparent;
   padding: 0.5rem 0;
@@ -30,30 +30,43 @@
   border-radius: 8px;
 
   .diagram-img {
+    grid-area: diagram-stack;
     display: block;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
     border-radius: 6px;
-    transition: transform 0.2s ease;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.2s ease;
+    will-change: opacity;
   }
 }
 
-// Light / Dark switching logic
+// Light / Dark switching logic (CSS Grid Stacking - Zero Reflow)
 .themed-dark {
-  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .themed-light {
-  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-[theme=dark] {
+[theme=dark],
+[data-theme=dark] {
   .themed-dark {
-    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   .themed-light {
-    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
