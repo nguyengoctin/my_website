@@ -375,6 +375,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             // LRU Cache eviction: giới hạn 3 trang (giảm từ 5) để tiết kiệm bộ nhớ
             if (zoomCanvasCache.size >= 3) {
                 const oldestKey = zoomCanvasCache.keys().next().value;
+                const oldEntry = zoomCanvasCache.get(oldestKey);
+                if (oldEntry && oldEntry.canvas) {
+                    oldEntry.canvas.width = 0;
+                    oldEntry.canvas.height = 0;
+                }
                 zoomCanvasCache.delete(oldestKey);
             }
             zoomCanvasCache.set(pageNum, {
@@ -497,6 +502,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
             if (pdfDocInstance) {
                 try { pdfDocInstance.destroy(); } catch (e) { /* ignore */ }
+            }
+            for (const entry of zoomCanvasCache.values()) {
+                if (entry && entry.canvas) {
+                    entry.canvas.width = 0;
+                    entry.canvas.height = 0;
+                }
             }
             zoomCanvasCache.clear();
         });
