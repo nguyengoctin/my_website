@@ -1,0 +1,19 @@
+{{- $image := "" -}}
+{{- if .Params.images -}}
+  {{- $image = index .Params.images 0 -}}
+{{- else if .Params.featuredImage -}}
+  {{- $image = .Params.featuredImage -}}
+{{- else if .Site.Params.seo.image -}}
+  {{- $image = .Site.Params.seo.image -}}
+{{- else if .Site.Params.images -}}
+  {{- $image = index .Site.Params.images 0 -}}
+{{- else -}}
+  {{- $image = "/images/og-cover.png" -}}
+{{- end -}}
+{{- $imageURL := $image | absURL -}}
+{{- $desc := .Description | default .Summary | default .Site.Params.description | plainify | replaceRE "[\r\n\t ]+" " " | strings.TrimSpace -}}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title | default .Site.Title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+<meta name="twitter:image" content="{{ $imageURL }}" />

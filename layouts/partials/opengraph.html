@@ -12,10 +12,11 @@
 {{- end -}}
 {{- $imageURL := $image | absURL -}}
 
+{{- $desc := .Description | default .Summary | default .Site.Params.description | plainify | replaceRE "[\r\n\t ]+" " " | strings.TrimSpace -}}
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title | default .Site.Title }}" />
-<meta property="og:description" content="{{ .Description | default .Summary | default .Site.Params.description }}" />
+<meta property="og:description" content="{{ $desc }}" />
 <meta property="og:locale" content="{{ .Site.LanguageCode | default "en" }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 {{- if .IsPage -}}

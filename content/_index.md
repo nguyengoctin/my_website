@@ -1,5 +1,6 @@
 ---
 title: "Nguyen Ngoc Tin"
+description: "Nguyen Ngoc Tin | Software engineering, AI and tech notes."
 ---
 
 ## About
