@@ -49,6 +49,8 @@
     {{- end -}}
 </figure>
 
+{{- if not (.Page.Scratch.Get "youtubePlayerLoaded") -}}
+{{- .Page.Scratch.Set "youtubePlayerLoaded" true -}}
 <script>
 if (!window.initYoutubePlayer) {
     window.initYoutubePlayer = function(container) {
@@ -145,4 +147,5 @@ if (!window.initYoutubePlayer) {
     };
 }
 </script>
+{{- end -}}
 {{- end -}}

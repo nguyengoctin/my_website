@@ -38,8 +38,9 @@
             <span>{{ .ReadingTime }} min read</span>
             {{- $categories := slice -}}
             {{- range .Params.categories -}}
-                {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
-                {{- $categories = $categories | append (printf `<a href="%s" style="color: #828282;">%s</a>` ($category.RelPermalink | safeURL) ($category.Title | htmlEscape)) -}}
+                {{- with partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
+                    {{- $categories = $categories | append (printf `<a href="%s" style="color: #828282;">%s</a>` (.RelPermalink | safeURL) (.Title | htmlEscape)) -}}
+                {{- end -}}
             {{- end -}}
             {{- with delimit $categories ", " -}}
                 &nbsp;·&nbsp;in {{ . | safeHTML }}

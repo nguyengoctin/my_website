@@ -10,7 +10,7 @@ body:has(.cheatsheet-single) .footer {
     display: none !important;
 }
 
-body:has(.cheatsheet-single) {
+body:has(.cheatsheet-single:not(.has-content)) {
     overflow: hidden !important;
     height: 100vh !important;
     height: 100dvh !important;
@@ -18,7 +18,7 @@ body:has(.cheatsheet-single) {
     padding: 0 !important;
 }
 
-body:has(.cheatsheet-single) .wrapper {
+body:has(.cheatsheet-single:not(.has-content)) .wrapper {
     padding-top: 0 !important;
     margin-top: 0 !important;
     height: 100vh !important;
@@ -26,7 +26,7 @@ body:has(.cheatsheet-single) .wrapper {
     overflow: hidden !important;
 }
 
-body:has(.cheatsheet-single) main.main {
+body:has(.cheatsheet-single:not(.has-content)) main.main {
     margin-top: 0 !important;
     padding: 0 !important;
     height: 100vh !important;
@@ -34,17 +34,17 @@ body:has(.cheatsheet-single) main.main {
     box-sizing: border-box;
 }
 
-body:has(.cheatsheet-single) .container {
+body:has(.cheatsheet-single:not(.has-content)) .container {
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     height: 100% !important;
 }
 
-[data-header-mobile] .page.cheatsheet-single,
-[data-header-desktop] .page.cheatsheet-single,
-.page.cheatsheet-single,
-.cheatsheet-single {
+[data-header-mobile] .page.cheatsheet-single:not(.has-content),
+[data-header-desktop] .page.cheatsheet-single:not(.has-content),
+.page.cheatsheet-single:not(.has-content),
+.cheatsheet-single:not(.has-content) {
     max-width: 100% !important;
     padding: 0 !important;
     padding-top: 0 !important;
@@ -56,6 +56,28 @@ body:has(.cheatsheet-single) .container {
     flex-direction: column !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
+}
+
+.cheatsheet-single.has-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    min-height: 100vh !important;
+}
+
+.cheatsheet-single.has-content .cheatsheet-workspace {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 500px;
+}
+
+.cheatsheet-single.has-content .content {
+    max-width: var(--prose-width, 750px);
+    margin: 2.5rem auto 4rem auto !important;
+    padding: 0 1.5rem !important;
 }
 
 /* Master Layout: Workspace taking 100% viewport height without scroll */
@@ -486,7 +508,7 @@ body:has(.cheatsheet-single) .container {
 }
 </style>
 
-<div class="page single cheatsheet-single" data-pdf-url="{{ .Params.pdf_url | safeURL }}">
+<div class="page single cheatsheet-single{{ if .Content }} has-content{{ end }}" data-pdf-url="{{ .Params.pdf_url | safeURL }}">
 <!-- Load StPageFlip & PDF.js from reliable CDNs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>

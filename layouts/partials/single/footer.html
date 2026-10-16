@@ -5,8 +5,9 @@
     {{- with .Params.tags -}}
     <ul class="post-footer-tags">
         {{- range . -}}
-        {{- $tag := partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
-        <li><a href="{{ $tag.RelPermalink }}" class="tag-pill">#{{ $tag.Title }}</a></li>
+        {{- with partialCached "function/path.html" . . | printf "/tags/%v" | $.Site.GetPage -}}
+        <li><a href="{{ .RelPermalink }}" class="tag-pill">#{{ .Title }}</a></li>
+        {{- end -}}
         {{- end -}}
     </ul>
     {{- end -}}

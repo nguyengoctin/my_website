@@ -236,6 +236,8 @@
             const isSelected = idx === activeIndex;
             const titleHighlighted = highlightKeywords(item.title, queryTokens);
             const categoryText = item.categories.length > 0 ? item.categories[0] : '';
+            const categorySafe = categoryText ? escapeHtml(categoryText) : '';
+            const tagsSafe = item.tags.slice(0, 3).map(t => escapeHtml(t)).join(', ');
 
             html += `
                 <li class="search-result-item ${isSelected ? 'selected' : ''}" 
@@ -245,11 +247,11 @@
                     <div class="result-item-main">
                         <div class="result-item-header">
                             <span class="result-title">${titleHighlighted}</span>
-                            ${categoryText ? `<span class="result-cat-badge">${categoryText}</span>` : ''}
+                            ${categorySafe ? `<span class="result-cat-badge">${categorySafe}</span>` : ''}
                         </div>
                         <div class="result-item-meta">
-                            ${item.date ? `<span class="result-date"><i class="ti ti-calendar"></i> ${item.date}</span>` : ''}
-                            ${item.tags.length > 0 ? `<span class="result-tags"><i class="ti ti-tags"></i> ${item.tags.slice(0, 3).join(', ')}</span>` : ''}
+                            ${item.date ? `<span class="result-date"><i class="ti ti-calendar"></i> ${escapeHtml(item.date)}</span>` : ''}
+                            ${item.tags.length > 0 ? `<span class="result-tags"><i class="ti ti-tags"></i> ${tagsSafe}</span>` : ''}
                         </div>
                     </div>
                     <div class="result-item-arrow"><i class="ti ti-chevron-right"></i></div>
@@ -309,7 +311,7 @@
 
         if (tagsEl) {
             if (item.tags && item.tags.length > 0) {
-                tagsEl.innerHTML = item.tags.map(t => `<span class="preview-tag-badge">#${t}</span>`).join('');
+                tagsEl.innerHTML = item.tags.map(t => `<span class="preview-tag-badge">#${escapeHtml(t)}</span>`).join('');
                 tagsEl.style.display = 'flex';
             } else {
                 tagsEl.style.display = 'none';
