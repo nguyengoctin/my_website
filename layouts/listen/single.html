@@ -736,6 +736,7 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (e.code) {
             case "Space":
             case "KeyK":
+                if (e.ctrlKey || e.metaKey || e.altKey) return;
                 if (tag === "button" && e.code === "Space") return; /* native click */
                 e.preventDefault();
                 playPause();

@@ -472,24 +472,30 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         // Keyboard navigation inside Zoom Overlay (guard chống double-bind)
         if (!keydownBound) {
-        keydownBound = true;
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeSmartZoomModal();
-            } else if (e.key === 'ArrowLeft') {
-                if (zoomOverlay.classList.contains('show')) {
-                    if (zoomedPageNumber > 1) renderZoomCanvas(zoomedPageNumber - 1);
-                } else {
-                    pageFlipInstance.flipPrev();
+            keydownBound = true;
+            document.addEventListener('keydown', (e) => {
+                const tag = (e.target.tagName || '').toLowerCase();
+                const isTyping = tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable;
+                if (isTyping) return;
+
+                if (e.key === 'Escape') {
+                    closeSmartZoomModal();
+                } else if (e.key === 'ArrowLeft') {
+                    if (e.ctrlKey || e.metaKey || e.altKey) return;
+                    if (zoomOverlay.classList.contains('show')) {
+                        if (zoomedPageNumber > 1) renderZoomCanvas(zoomedPageNumber - 1);
+                    } else {
+                        pageFlipInstance.flipPrev();
+                    }
+                } else if (e.key === 'ArrowRight') {
+                    if (e.ctrlKey || e.metaKey || e.altKey) return;
+                    if (zoomOverlay.classList.contains('show')) {
+                        if (zoomedPageNumber < numPages) renderZoomCanvas(zoomedPageNumber + 1);
+                    } else {
+                        pageFlipInstance.flipNext();
+                    }
                 }
-            } else if (e.key === 'ArrowRight') {
-                if (zoomOverlay.classList.contains('show')) {
-                    if (zoomedPageNumber < numPages) renderZoomCanvas(zoomedPageNumber + 1);
-                } else {
-                    pageFlipInstance.flipNext();
-                }
-            }
-        });
+            });
         }
 
         // Cleanup instance on page unload according to official API docs

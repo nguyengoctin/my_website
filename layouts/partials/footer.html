@@ -12,15 +12,21 @@
 
         <div class="footer-right">
             <div class="footer-social-links">
-                <a href="https://github.com/ngoctinn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+                {{- with .Site.Params.social.GitHub -}}
+                <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
                     <i class="ti ti-brand-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/tin-nguyen-ngoc-2453372a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                {{- end -}}
+                {{- with .Site.Params.social.Linkedin -}}
+                <a href="https://www.linkedin.com/in/{{ . }}/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
                     <i class="ti ti-brand-linkedin"></i>
                 </a>
-                <a href="mailto:ngoctin.work@gmail.com" title="Email" aria-label="Email">
+                {{- end -}}
+                {{- with .Site.Params.social.Email | default .Site.Params.author.email -}}
+                <a href="mailto:{{ . }}" title="Email" aria-label="Email">
                     <i class="ti ti-mail"></i>
                 </a>
+                {{- end -}}
                 <a href="/index.xml" target="_blank" title="RSS Feed" aria-label="RSS Feed">
                     <i class="ti ti-rss"></i>
                 </a>
