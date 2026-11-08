@@ -369,7 +369,7 @@ h1,
     border-radius: 4px;
     cursor: pointer;
     line-height: 1.4;
-    transition: all 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     vertical-align: middle;
 
     [theme=dark] & {

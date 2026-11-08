@@ -10,7 +10,7 @@
   border-radius: 8px;
   padding: 0.75rem 1rem;
   margin: 0.8rem 0 1.2rem;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 
   [theme=dark] & {
     background: rgba(255, 255, 255, 0.03);
@@ -86,7 +86,7 @@
     border-radius: 8px !important;
     background: transparent !important;
     color: var(--clr-text-2, #64748b) !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 
     i {
       font-size: 1.25rem !important;
@@ -385,7 +385,7 @@
       border: 1px solid transparent !important;
       border-radius: 8px !important;
       height: 2.75rem !important;
-      transition: all 0.2s ease !important;
+      transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
 
       [theme=dark] & {
         background-color: rgba(255, 255, 255, 0.06) !important;
@@ -570,7 +570,7 @@
       font-size: 0.9rem !important;
       font-weight: 500 !important;
       text-decoration: none !important;
-      transition: all 0.2s ease !important;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
 
       [theme=dark] & {
         background: var(--clr-surface-2, #27272a) !important;

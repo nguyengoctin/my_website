@@ -157,7 +157,7 @@ body:has(.cheatsheet-single:not(.has-content)) .container {
     cursor: pointer;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: all 0.2s ease;
+    transition: color 0.15s ease, background-color 0.15s ease, opacity 0.15s ease, transform var(--duration-fast, 120ms) ease;
 }
 
 [theme=dark] .side-tool-btn {
@@ -167,7 +167,7 @@ body:has(.cheatsheet-single:not(.has-content)) .container {
 .side-tool-btn:hover,
 .side-tool-btn.active {
     opacity: 1;
-    color: #4d74eb;
+    color: var(--brand-primary, #4d74eb);
     background: rgba(77, 116, 235, 0.1);
 }
 
@@ -482,7 +482,7 @@ body:has(.cheatsheet-single:not(.has-content)) .container {
 }
 .zoom-action-btn:hover {
     background: rgba(255, 255, 255, 0.3);
-    color: #4d74eb;
+    color: var(--brand-primary, #4d74eb);
 }
 
 .zoom-stage-container {
@@ -505,6 +505,19 @@ body:has(.cheatsheet-single:not(.has-content)) .container {
     background: #ffffff;
     transform-origin: top center;
     transition: transform 0.1s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .side-tool-btn,
+    .mobile-bottom-footer,
+    #smart-zoom-overlay,
+    .zoom-action-btn,
+    #smart-zoom-canvas,
+    .skeleton-line,
+    .skeleton-box {
+        transition-duration: 0.01ms !important;
+        animation: none !important;
+    }
 }
 </style>
 
